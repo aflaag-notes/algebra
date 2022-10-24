@@ -13,6 +13,7 @@
   - $(S, m)$ **gruppo** $\iff$ è un monoide in cui **esiste l'inverso** per ogni elemento di $S$
     - $\exists x^{-1} \mid m(x, x^{-1}) =m(x^{-1}, x) =e \quad \forall x \in S$
     - se esiste, $x^{-1}$ è unico
+      - ⚠️ **MANCA DIMOSTRAZIONE**
   - $(S, m)$ **gruppo abeliano** $\iff$ è un gruppo in cui vale la **proprietà commutativa** in $m$ su $S$
     - $m(x, y) = m(y, x) \quad \forall x, y \in S$
 
@@ -155,10 +156,10 @@ $$
 
 # Sottogruppi
 
-- $H \subset G$ **sottogruppo** di un gruppo $(G, \cdot)\iff$
+- $H \subset G$ **sottogruppo** di un gruppo $(G, *)\iff$
     - $\exists e \in H \mid e$ è l'**elemento neutro**
-    - $H$ è **chiuso rispetto al prodotto**
-        - $\forall x, y \in H, \ x \cdot y \in H$
+    - $H$ è **chiuso rispetto all'operazione $*$**
+        - $\forall x, y \in H, \ x * y \in H$
     -  $H$ è **chiuso rispetto agli inversi**
         -  $\forall x \in H, \ \exists x^{-1} \in H$
 -  \( (\mathbb{Z},+) \subset(\mathbb{Q},+) \subset(\mathbb{R},+) \subset(\mathbb{C},+) \) tutti sottogruppi
@@ -226,8 +227,8 @@ $$
           - $I(a) = I(b) \implies a \in I(b)$ e $b \in I(a) \implies \exists p, q \in \mathbb{Z} \mid a = pb \wedge b = qa$, di conseguenza $b = q (pb) \implies b = (qp)b \implies pq = 1 \implies p = q = 1 \lor p = q = -1 \implies a = \pm b$
 - \( \forall a_{1}, \ldots a_{n} \in \mathbb{Z}, \quad \exists I\left(a_{1}, \ldots a_{n}\right) \mid \exists ! d \geq 0  : I\left(a_{1}, \ldots a_{n}\right)=I(d),   \ \ d:=\textrm{MCD}(a_{1}, \ldots a_{n}) \)
     - ⚠️ **MANCA DIMOSTRAZIONE**
-    - $\forall x \in I(a_1, \cdots, a_n), \ d \mid x$, dunque $d$ è *divisore comune*
-    - $d$ è il _massimo tra i divisori comuni_
+      - $\forall x \in I(a_1, \cdots, a_n), \ d \mid x$, dunque $d$ è *divisore comune*
+      - $d$ è il _massimo tra i divisori comuni_
   - **identità di Bézout**
     - \( \exists x, y \in \mathbb{Z} \mid a x+b y=d \quad \forall a, b \in \mathbb{Z} \)
 
@@ -239,9 +240,36 @@ $$
   - $I$ induce una relazione di equivalenza su $A$ detta **congruenza modulo $I$**
     - $a \equiv b \ (\bmod I) \iff b - a \in I$
 - $+: [x] + [y] = [x + y]$ e $*: [x] * [y] = [x * y]$, allora $(A/I, +, *)$ è un **anello**
-  - ⚠️ **MANCA DIMOSTRAZIONE**
+  - ⚠️ **MANCA DIMOSTRAZIONE** (non l'ha fatta)
+ 
+## Operazioni sugli ideali
 
- ****
+- su $I, J \subset A$ ideali in $A$ anello commutativo, è possibile definire $I + J$, $I \cap J$ e $I \cdot J$
+  - $I + J = \{i + j \mid i \in I, j \in J\}$
+    - $I + J$ **sottogruppo**
+      - \( 0 \in I, 0 \in J, 0+0=0 \implies 0 \in I + J \) per definizione
+      - la chiusura rispetto a $+$, implica che $\forall i_1, i_2 \in I, j_1, j_2 \in J \quad (i_1 + j_1) + (i_2 + j_2) \in I + J$, e poiché $(i_1 + j_1) + (i_2 + j_2) = (i_1 + i_2) + (j_1 + j_2)$, e $i_1 + i_2 \in I, j_1 + j_2 \in J$ , allora per definizione di $I + J$, $(i_1 + i_2) + (j_1 + j_2) \in I + J$
+      - $\forall i \in I, j \in J \quad i + j \in I + J$, l'opposto rispetto a $+$ di $i + j$ è $- (i + j) = (-i) + (-j)$, e $-i \in I, -j \in J \quad \forall i \in I, j \in J \implies (-i) + (-j) \in I + J$ per definizione
+    - $A \cdot I \subset I \implies \forall a \in A, i \in I, j \in J \quad a(i + j) \in I + J$
+      - $i + j \in I + J$ per definizione, e $a(i + j) = ai + aj$, e $ai \in I, aj \in J$ per definizione, quindi $ai + aj \in I + J$ per definizione
+  - $I \cap J = \{x \in I \land x \in J\}$
+    - ⚠️ **MANCA DIMOSTRAZIONE**
+  - $I \cdot J = \{i_1 j_1 + \ldots + i_k j_k \mid k \ge \ 1, i_1 , \ldots , i_k \in I, j_1 , \ldots , j_k \in J \}$
+    - ⚠️ **MANCA DIMOSTRAZIONE**
+- $\forall a, b \in \mathbb{Z} \quad I(a) + I(b) = I(d), \quad d:= \textrm{MCD}(a, b)$
+  - \( I(a)+I(b)=\{i+j \mid i \in I(a), J \in I(b) \} \), ma $i \in I(a) \implies \exists x \in \mathbb{Z} \mid i = ax$ e $j \in I(b) \implies \exists y \in \mathbb{Z} \mid j = by$, quindi $i + j = ax + by \implies$ \( I(a)+I(b)=\{a x+b y \mid x, y \in \mathbb{Z}\} = I(a, b) \) per definizione, e per l'identità di Bézout, $\exists x, y \in \mathbb{Z} \mid ax + by = d := \textrm{MCD}(a, b)$, e per teoremi precedenti, $I(a, b) = I(d)$
+- \( \forall a, b \in \mathbb{Z} \quad I(a) \cdot I(b)=I(a \cdot b) \)
+  - \( x \in I(a) \cdot I(b) \implies x \in I(a \cdot b) \)
+    - $x \in I(a) \cdot I(b) \implies x = i_1 j_1 + \ldots + i_k j_k$ con $i_1 , \ldots , i_k \in I(a), j_1 , \ldots , j_k \in I(b)$, ma per definizione, $i \in I(a) \implies \exists x \in \mathbb{Z} \mid i = ax$, e dunque $i_1, \ldots, i_k = ax_1, \ldots, ax_k$ con $x_1, \ldots, x_k \in \mathbb{Z}$, e analogamente $j_1, \ldots, j_k = by_1, \ldots, by_k$ con $y_1, \ldots, y_k \in \mathbb{Z}$
+    - segue che $x = (ax_1)(by_1),+\ldots+ (ax_k)(by_k) = ab\cdot(x_1y_1+ \ldots+ x_ky_k)$, e poiché $(x_1y_1+ \ldots+ x_ky_k) \in \mathbb{Z}$, per definizione segue che $x \in I(a\cdot b)$
+  - \( x \in I(a \cdot b)  \implies x \in I(a) \cdot I(b)\)
+    - $x \in I(a \cdot b) \implies \exists k \in \mathbb{Z} \mid x = ab \cdot k$, ma \( x=a b k \implies\left\{\begin{array}{l}x=a \cdot b k \implies \exists bk \in \mathbb{Z} \mid x = a \cdot bk \implies x \in I(a) \\ x=b \cdot a k \implies \exists ak \in \mathbb{Z} \mid x = b \cdot ak \implies x \in I(b)\end{array}\right. \) **INCOMPLETA**
+
+
+
+
+
+****
 
 # Invertibili e divisori dello $0$
 
