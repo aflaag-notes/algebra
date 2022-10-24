@@ -256,14 +256,15 @@ $$
     - ⚠️ **MANCA DIMOSTRAZIONE**
   - $I \cdot J = \{i_1 j_1 + \ldots + i_k j_k \mid k \ge \ 1, i_1 , \ldots , i_k \in I, j_1 , \ldots , j_k \in J \}$
     - ⚠️ **MANCA DIMOSTRAZIONE**
-- $\forall a, b \in \mathbb{Z} \quad I(a) + I(b) = I(d), \quad d:= \textrm{MCD}(a, b)$
-  - \( I(a)+I(b)=\{i+j \mid i \in I(a), J \in I(b) \} \), ma $i \in I(a) \implies \exists x \in \mathbb{Z} \mid i = ax$ e $j \in I(b) \implies \exists y \in \mathbb{Z} \mid j = by$, quindi $i + j = ax + by \implies$ \( I(a)+I(b)=\{a x+b y \mid x, y \in \mathbb{Z}\} = I(a, b) \) per definizione, e per l'identità di Bézout, $\exists x, y \in \mathbb{Z} \mid ax + by = d := \textrm{MCD}(a, b)$, e per teoremi precedenti, $I(a, b) = I(d)$
-- \( \forall a, b \in \mathbb{Z} \quad I(a) \cdot I(b)=I(a \cdot b) \)
-  - \( x \in I(a) \cdot I(b) \implies x \in I(a \cdot b) \)
-    - $x \in I(a) \cdot I(b) \implies x = i_1 j_1 + \ldots + i_k j_k$ con $i_1 , \ldots , i_k \in I(a), j_1 , \ldots , j_k \in I(b)$, ma per definizione, $i \in I(a) \implies \exists x \in \mathbb{Z} \mid i = ax$, e dunque $i_1, \ldots, i_k = ax_1, \ldots, ax_k$ con $x_1, \ldots, x_k \in \mathbb{Z}$, e analogamente $j_1, \ldots, j_k = by_1, \ldots, by_k$ con $y_1, \ldots, y_k \in \mathbb{Z}$
-    - segue che $x = (ax_1)(by_1),+\ldots+ (ax_k)(by_k) = ab\cdot(x_1y_1+ \ldots+ x_ky_k)$, e poiché $(x_1y_1+ \ldots+ x_ky_k) \in \mathbb{Z}$, per definizione segue che $x \in I(a\cdot b)$
-  - \( x \in I(a \cdot b)  \implies x \in I(a) \cdot I(b)\)
-    - $x \in I(a \cdot b) \implies \exists k \in \mathbb{Z} \mid x = ab \cdot k$, ma \( x=a b k \implies\left\{\begin{array}{l}x=a \cdot b k \implies \exists bk \in \mathbb{Z} \mid x = a \cdot bk \implies x \in I(a) \\ x=b \cdot a k \implies \exists ak \in \mathbb{Z} \mid x = b \cdot ak \implies x \in I(b)\end{array}\right. \) **INCOMPLETA**
+- $\mathbb{Z}$ è un **anello ad ideali principali**
+  - $\forall a, b \in \mathbb{Z} \quad I(a) + I(b) = I(d), \quad d:= \textrm{MCD}(a, b)$
+    - \( I(a)+I(b)=\{i+j \mid i \in I(a), J \in I(b) \} \), ma $i \in I(a) \implies \exists x \in \mathbb{Z} \mid i = ax$ e $j \in I(b) \implies \exists y \in \mathbb{Z} \mid j = by$, quindi $i + j = ax + by \implies$ \( I(a)+I(b)=\{a x+b y \mid x, y \in \mathbb{Z}\} = I(a, b) \) per definizione, e per l'identità di Bézout, $\exists x, y \in \mathbb{Z} \mid ax + by = d := \textrm{MCD}(a, b)$, e per teoremi precedenti, $I(a, b) = I(d)$
+  - \( \forall a, b \in \mathbb{Z} \quad I(a) \cdot I(b)=I(a \cdot b) \)
+    - \( x \in I(a) \cdot I(b) \implies x \in I(a \cdot b) \)
+      - $x \in I(a) \cdot I(b) \implies x = i_1 j_1 + \ldots + i_k j_k$ con $i_1 , \ldots , i_k \in I(a), j_1 , \ldots , j_k \in I(b)$, ma per definizione, $i \in I(a) \implies \exists x \in \mathbb{Z} \mid i = ax$, e dunque $i_1, \ldots, i_k = ax_1, \ldots, ax_k$ con $x_1, \ldots, x_k \in \mathbb{Z}$, e analogamente $j_1, \ldots, j_k = by_1, \ldots, by_k$ con $y_1, \ldots, y_k \in \mathbb{Z}$
+      - segue che $x = (ax_1)(by_1),+\ldots+ (ax_k)(by_k) = ab\cdot(x_1y_1+ \ldots+ x_ky_k)$, e poiché $(x_1y_1+ \ldots+ x_ky_k) \in \mathbb{Z}$, per definizione segue che $x \in I(a\cdot b)$
+    - \( x \in I(a \cdot b)  \implies x \in I(a) \cdot I(b)\)
+      - $x \in I(a \cdot b) \implies \exists k \in \mathbb{Z} \mid x = ab \cdot k$, ma \( x=a b k \implies\left\{\begin{array}{l}x=a \cdot b k \implies \exists bk \in \mathbb{Z} \mid x = a \cdot bk \implies x \in I(a) \\ x=b \cdot a k \implies \exists ak \in \mathbb{Z} \mid x = b \cdot ak \implies x \in I(b)\end{array}\right. \) **INCOMPLETA**
 
 
 
