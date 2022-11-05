@@ -1,0 +1,3 @@
+# algebra
+
+my notes 😊
