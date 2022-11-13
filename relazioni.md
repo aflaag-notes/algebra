@@ -4,7 +4,7 @@
 
 - **Relazioni**
 > - $S$ insieme
-> - ogni elemento $R \subseteq S \times S\) è una **relazione** su $S$
+> - ogni elemento $R \subseteq S \times S$ è una **relazione** su $S$
 
 - **Relazione riflessiva**
 > - $S$ insieme
@@ -34,7 +34,7 @@
 - **Relazione di equivalenza**
 > - $S$ insieme
 > - $R$ relazione in $S \times S$
-> - $R\) è una **relazione di equivalenza** $\iff R$ riflessiva, simmetrica e transitiva
+> - $R$ è una **relazione di equivalenza** $\iff R$ riflessiva, simmetrica e transitiva
 
 - **Ordine parziale**
 > - $S$ insieme
@@ -55,32 +55,32 @@
   - $\mid$ è ordine parziale
 - **Dim**
     - *riflessività*: $\forall x \in \mathbb{N} \quad x\mid x$
-      - $x\mid x \iff \exists p \in \mathbb{N} \mid  x p=x \iff p = 1 \in \mathbb{N}\)
-    - *transitività*: $\forall d, m, n \in \mathbb{N} \quad d \mid m \wedge m| n \implies d \mid n \)
-      -  $\left.\begin{array}{l}d \mid m \iff \exists p_{1} \in \mathbb{N}\mid d p_{1}=m \\ m\mid n \iff \exists p_{2} \in \mathbb{N}\mid m p_{2}=n\end{array}\right\} \implies d p_{1} p_{2}=n \implies d \mid n \) poiché $p_1 \in \mathbb{N} \land p_2 \in \mathbb{N} \implies p_1 p_2 \in \mathbb{N}\)
-    -  *antisimmetria*: $\forall m, n \in \mathbb{N}, \ m\mid n \wedge n\mid m \implies m=n \)
-       - $\left.\begin{array}{l}m\mid n \iff \exists p_{1} \in \mathbb{N}\mid m p_{1}=n \\ n\mid m \iff \exists p_{2} \in \mathbb{N}\mid n p_{2}=m\end{array}\right\} \implies m p_{1} p_{2}=m \iff p_1 p_2 = 1 \iff p_1 = p_2 = 1\), e dunque $m p_1 =n \iff m = n$
+      - $x\mid x \iff \exists p \in \mathbb{N} \mid  x p=x \iff p = 1 \in \mathbb{N}$
+    - *transitività*: $\forall d, m, n \in \mathbb{N} \quad d \mid m \wedge m| n \implies d \mid n$
+      -  $\left.\begin{array}{l}d \mid m \iff \exists p_{1} \in \mathbb{N}\mid d p_{1}=m \\ m\mid n \iff \exists p_{2} \in \mathbb{N}\mid m p_{2}=n\end{array}\right\} \implies d p_{1} p_{2}=n \implies d \mid n$ poiché $p_1 \in \mathbb{N} \land p_2 \in \mathbb{N} \implies p_1 p_2 \in \mathbb{N}$
+    -  *antisimmetria*: $\forall m, n \in \mathbb{N}, \ m\mid n \wedge n\mid m \implies m=n$
+       - $\left.\begin{array}{l}m\mid n \iff \exists p_{1} \in \mathbb{N}\mid m p_{1}=n \\ n\mid m \iff \exists p_{2} \in \mathbb{N}\mid n p_{2}=m\end{array}\right\} \implies m p_{1} p_{2}=m \iff p_1 p_2 = 1 \iff p_1 = p_2 = 1$, e dunque $m p_1 =n \iff m = n$
 
 ## Ex
 
 - **Hp**
   - $a, b \in \mathbb{Z}$
-  - $a \equiv b \ (\bmod n) \iff m \mid b-a \) è detta congruenza modulo $n$
+  - $a \equiv b \ (\bmod n) \iff m \mid b-a$ è detta congruenza modulo $n$
 - **Th**
   - $\equiv$ è una relazione di equivalenza
 - **Dim**
     - _riflessività_: $\forall a \in \mathbb{Z} \quad a \equiv a \ (\bmod n)$
       - $a \equiv a \ (\bmod n) \iff n \mid a - a \iff n \mid 0 \iff \exists p \in \mathbb{Z} \mid n p = 0 \iff p = 0 \in \mathbb{Z}$
-    - _simmetria_: $\forall a, b \in \mathbb{Z}\quad a \equiv b \ (\bmod n) \implies b \equiv a \ (\bmod n)\)
+    - _simmetria_: $\forall a, b \in \mathbb{Z}\quad a \equiv b \ (\bmod n) \implies b \equiv a \ (\bmod n)$
       - $a \equiv b \ (\bmod n) \iff n \mid b - a \iff \exists p_1 \in \mathbb{Z} \mid n  p_1 = b - a$
       - $b \equiv a \ (\bmod n) \iff n \mid a - b \iff \exists p_2 \in \mathbb{Z} \mid n  p_2 = a - b$
-       - $\left.\begin{array}{l}n p_{1}=b-a \implies b=n p_{1}+a \\ n p_{2}=a-b\end{array}\right\} \implies np_2 = a - np_1 - a = -np_1\), e dunque $np_2 = -np_1 \iff np_2+np_1 = 0 \iff n(p_2 + p_1)=0$
-       - $n \neq 0\implies n(p_2+p_1) 0 \iff p_{2}+p_{1}=0 \implies -p_{2}=p_{1} \)
+       - $\left.\begin{array}{l}n p_{1}=b-a \implies b=n p_{1}+a \\ n p_{2}=a-b\end{array}\right\} \implies np_2 = a - np_1 - a = -np_1$, e dunque $np_2 = -np_1 \iff np_2+np_1 = 0 \iff n(p_2 + p_1)=0$
+       - $n \neq 0\implies n(p_2+p_1) 0 \iff p_{2}+p_{1}=0 \implies -p_{2}=p_{1}$
        - $n\mid b -a \iff np_1= b - a \iff n(-p_2) = b - a \iff np_2 = a - b \iff n \mid a- b$
-    - _transitivtà_: $\forall a, b, c \in \mathbb{Z} \quad a \equiv b \ (\bmod n) \land b \equiv c \ (\bmod n) \implies a \equiv c \ (\bmod n)\)
+    - _transitivtà_: $\forall a, b, c \in \mathbb{Z} \quad a \equiv b \ (\bmod n) \land b \equiv c \ (\bmod n) \implies a \equiv c \ (\bmod n)$
       - $a \equiv b \ (\bmod n) \iff n \mid b - a \iff \exists p_1 \in \mathbb{Z} \mid n p_1 = b - a$
       - $b \equiv c \ (\bmod n) \iff n \mid c - b \iff \exists p_2 \in \mathbb{Z} \mid n p_2 = c - b$
-      - $\left.\begin{array}{l}n p_{1}=b-a \implies b=n p_{1}+a \\ n p_{2}=c-b\end{array}\right\} \implies np_2 = c - np_2 - a \iff np_2 + np_1 = c - a \implies n(p_2 + p_1)=c -a \)
+      - $\left.\begin{array}{l}n p_{1}=b-a \implies b=n p_{1}+a \\ n p_{2}=c-b\end{array}\right\} \implies np_2 = c - np_2 - a \iff np_2 + np_1 = c - a \implies n(p_2 + p_1)=c -a$
       - $p_{1}, p_{2} \in \mathbb{Z} \implies p_{1}+p_{2} \in \mathbb{Z}$, e qundue per la proposizione precedente $\exists p_1 + p_2 \in \mathbb{Z} \mid n(p_1 + p_2) = c - a \iff n \mid c - a$
 
 ## Ex
@@ -233,8 +233,8 @@
           - $(xy)(y^{-1}x^{-1})=x(yy^{-1})x^{-1}$ per associatività di $G$, e $xx^{-1} = 1$, dunque necessariamente $(xy)^{-1}=(y^{-1}x^{-1})$, e in particolare, $(x^{-1}y)^{-1}=(y^{-1}x)$
         - $h:=x^{-1}y \implies h^{-1} =y^{-1}x \in H$ perché $H$ sottogruppo $\iff h^{-1} \in H \iff y \sim x$
     - _transitività_: $x \sim y \land y \sim z \implies x \sim z$
-      - $\left.\begin{array}{l}h:=x^{-1} y \in H \\ k:=y^{-1} z \in H\end{array}\right\} \implies a:=h \cdot k=x^{-1} y \cdot y^{-1} z= x^{-1} z \)
-      - $a \in H$ perche $H$ sottogruppo, dunque chiuso su $\cdot$, e dunque $\implies a \in H \iff x^{-1}z \in H \iff x \sim z\)
+      - $\left.\begin{array}{l}h:=x^{-1} y \in H \\ k:=y^{-1} z \in H\end{array}\right\} \implies a:=h \cdot k=x^{-1} y \cdot y^{-1} z= x^{-1} z$
+      - $a \in H$ perche $H$ sottogruppo, dunque chiuso su $\cdot$, e dunque $\implies a \in H \iff x^{-1}z \in H \iff x \sim z$
         - quindi basta considerare il prodotto $h \cdot k$ per ottenere l'elemento di transitività
 
 ## Def 
@@ -273,9 +273,9 @@
   - $xH:= \{ xh \mid h \in H\} = [x]$
 - **Dim**
   - $[x] \subset xH$
-    - $y \in[x] \implies y \sim x \implies x \sim y \implies \exists h:= x^{-1}y \in H \) $\implies xh = x(x^{-1}y)=(xx^{-1})y=y \in H$ in quanto $H$ è sottogruppo, quindi $y \in [x] \implies \exists h \in H \mid y = xh \in H \implies y \in xH$
+    - $y \in[x] \implies y \sim x \implies x \sim y \implies \exists h:= x^{-1}y \in H$ $\implies xh = x(x^{-1}y)=(xx^{-1})y=y \in H$ in quanto $H$ è sottogruppo, quindi $y \in [x] \implies \exists h \in H \mid y = xh \in H \implies y \in xH$
   - $xH \subset [x]$
-    - $y \in x H \implies \exists h \in H \mid y=x h \implies x^{-1}y = x^{-1}xh= h\), quindi $h \in H \implies x^{-1}y \in H \implies x \sim y \implies y \in [x]$
+    - $y \in x H \implies \exists h \in H \mid y=x h \implies x^{-1}y = x^{-1}xh= h$, quindi $h \in H \implies x^{-1}y \in H \implies x \sim y \implies y \in [x]$
 
 ## Oss
 
@@ -301,16 +301,16 @@
   - $(G/H, +)$ è gruppo abeliano
 - **Dim**
   - bisogna dimostrare che $+$ è un operazione ben definita
-  - $+$ ben definita $\iff$$\left.\forall x, x^{\prime}, y, y' \in G \quad \begin{array}{l}{[x]=\left[x^{\prime}\right]} \\ {[y]=\left[y^{\prime}\right]}\end{array}\right\} \implies[x+y]=\left[x^{\prime}+y' \right] \)
-    - $\forall k, k' \in G \quad [k]=\left[k^{\prime}\right] \iff k \sim k^{\prime} \), dunque il sistema precedente è equivalente a $\left.\begin{array}{l}x \sim x^{\prime} \\ y \sim y^{\prime}\end{array}\right\} \implies x+y \sim x^{\prime}+y^{\prime} \)
+  - $+$ ben definita $\iff$$\left.\forall x, x^{\prime}, y, y' \in G \quad \begin{array}{l}{[x]=\left[x^{\prime}\right]} \\ {[y]=\left[y^{\prime}\right]}\end{array}\right\} \implies[x+y]=\left[x^{\prime}+y' \right]$
+    - $\forall k, k' \in G \quad [k]=\left[k^{\prime}\right] \iff k \sim k^{\prime}$, dunque il sistema precedente è equivalente a $\left.\begin{array}{l}x \sim x^{\prime} \\ y \sim y^{\prime}\end{array}\right\} \implies x+y \sim x^{\prime}+y^{\prime}$
     - $x \sim x' \iff (-x)+x' \in H \implies x' - x \in H$
     - $y \sim y' \iff (-y) +y' \in H \implies y' - y \in H$
     - $H$ è sottogruppo, di conseguenza $(x'-x)+(y'-y) \in H \implies -(x+y)+(x'+y') \in H \iff x +y \sim x'+y'$
   - $(G/H, +)$ gruppo abeliano
-    - $\forall [x], [y], [z] \in G/H \quad ([x]+[y])+[z]=[x+y]+[z]=[(x+y)+z]= [x+(y+z)]=[x]+[y+z]=[x]+([y]+[z]) \)
-    - $\forall [x] \in G/H \quad [x]+[0]=[0]+[x]=[x]\) e $[0] + [x] = [0 + x] = [x]$, e $[0] \in G/H$ perché $G$ gruppo
-    - $\forall [x] \in G/H \quad [x]+[-x]=[x+(-x)]=[0] \) e $[-x] +[x]=[-x +x]=[0]$$\implies -[x] = [-x]\)
-    - $[x]+[y]=[x+y]=[y+x]=[y]+[x] \)
+    - $\forall [x], [y], [z] \in G/H \quad ([x]+[y])+[z]=[x+y]+[z]=[(x+y)+z]= [x+(y+z)]=[x]+[y+z]=[x]+([y]+[z])$
+    - $\forall [x] \in G/H \quad [x]+[0]=[0]+[x]=[x]$ e $[0] + [x] = [0 + x] = [x]$, e $[0] \in G/H$ perché $G$ gruppo
+    - $\forall [x] \in G/H \quad [x]+[-x]=[x+(-x)]=[0]$ e $[-x] +[x]=[-x +x]=[0]$$\implies -[x] = [-x]$
+    - $[x]+[y]=[x+y]=[y+x]=[y]+[x]$
 
 ## Oss
 

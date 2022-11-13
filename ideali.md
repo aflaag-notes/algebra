@@ -28,9 +28,9 @@
 - **Hp**
   - $a, b \in \mathbb{Z} - \{0\}$
 - **Th**
-  - $I(a)=I(b) \iff a=\pm b \)
+  - $I(a)=I(b) \iff a=\pm b$
 - **Dim**
-    - $a=\pm b \implies I(a)=I(b) \)
+    - $a=\pm b \implies I(a)=I(b)$
       - $a = b \implies I(a)$ e $I(b)$ coincidono
       - $a = -b \implies I(-b) = \{ k(-b) \mid k \in \mathbb{Z}\} = \{(-k)b \mid (-k) \in \mathbb{Z}\} = I(b) = I(-b)=I(a)$
     - $I(a) = I(b) \implies a = \pm b$
@@ -73,21 +73,21 @@
   - $(A/I, \cdot)$ è monoide
     - $\cdot$ è un'operazione ben definita per dimostrazione analoga, dunque le proprietà di monoide sono rispettate per come l'operazione è definita
   - proprietà distributiva
-    - per come $+$ e $\cdot$ sono definite, segue che $\forall [x],[y],[z] \in A/I \quad [x]([y]+[z])=[x][y+z]=[x(y+z)]=[x y+x z]=[x y]+[x z] =[x][y]+[x][z]\)
+    - per come $+$ e $\cdot$ sono definite, segue che $\forall [x],[y],[z] \in A/I \quad [x]([y]+[z])=[x][y+z]=[x(y+z)]=[x y+x z]=[x y]+[x z] =[x][y]+[x][z]$
 
 ## Oss
 
 - **Hp**
   - $I \subset \mathbb{Z}$ ideale
 - **Th**
-  -  $\exists ! \ d \in \mathbb{Z}_{\ge 0} \mid I = I(d)\), o equivalentemente, $\mathbb{Z}$ è un anello a ideali principali
+  -  $\exists ! \ d \in \mathbb{Z}_{\ge 0} \mid I = I(d)$, o equivalentemente, $\mathbb{Z}$ è un anello a ideali principali
 - **Dim**
   - *esistenza*
       - $I = \{0\} \implies I = I(0)$ poiché i multipli di $0$ sono tutti pari a $0$
       - se invece $I \neq \{0\} \implies I \cap \mathbb{Z}_{>0} \neq \varnothing$, dunque $I$ contiene almeno un numero non nullo, in particolare positivo
-        - è possibile considerare solo il caso dei positivi in quanto$\forall x \in I - \{0\} \quad x < 0 \iff (-x)>0 \), e $(-x) \in I$ per definizione di $I$, dunque per valori negativi è sufficiente considerare il loro opposto, sicuramente contenuto in $I$
+        - è possibile considerare solo il caso dei positivi in quanto$\forall x \in I - \{0\} \quad x < 0 \iff (-x)>0$, e $(-x) \in I$ per definizione di $I$, dunque per valori negativi è sufficiente considerare il loro opposto, sicuramente contenuto in $I$
     - dunque, ha senso considerare $d:=\min(I \cap \mathbb{Z}_{\gt 0})$
-    - $I(d)=I \implies I(d) \subset I \wedge I \subset I(d) \)
+    - $I(d)=I \implies I(d) \subset I \wedge I \subset I(d)$
       - $I(d) \subset I$
         - $\forall x \in I(d) \quad \exists y \in \mathbb{Z} \mid x = dy$ per definizione
         - $\mathbb{Z}$ è anello commutativo
@@ -95,7 +95,7 @@
         - $d := \min(I \cap \mathbb{Z}_{\gt 0}) \implies d \in I \implies y \in \mathbb{Z} \land d \in I \implies dy \in I \implies x \in I \implies I(d) \subset I$
       - $I \subset I(d)$
         - $d := \min(I \cap \mathbb{Z}_{\gt 0}) \implies d \neq 0$
-        - per il teorema della divisione euclidea con il resto $\forall x \in I \quad \exists ! q,r \in \mathbb{Z} \mid x=d q+r \quad 0 \leq r<d \)
+        - per il teorema della divisione euclidea con il resto $\forall x \in I \quad \exists ! q,r \in \mathbb{Z} \mid x=d q+r \quad 0 \leq r<d$
           - $r = 0 \iff x = dq \implies x \in I(d)$ per definizione, dunque $I \subset I(d)$
           - ipotizzando $r \neq 0$
             - $dq \in I(d) \implies dq \in I$ per dimostrazione precedente
@@ -110,9 +110,9 @@
 ## Oss
 
 - **Hp**
-  - $a_{1}, \ldots a_{n} \in \mathbb{Z}\)
+  - $a_{1}, \ldots a_{n} \in \mathbb{Z}$
 - **Th**
-  - $\exists ! d=\textrm{MCD}(a_{1}, \ldots, a_{n})  \mid I\left(a_{1}, \ldots a_{n}\right)=I(d) \)
+  - $\exists ! d=\textrm{MCD}(a_{1}, \ldots, a_{n})  \mid I\left(a_{1}, \ldots a_{n}\right)=I(d)$
 - **Dim**
     - ⚠️ **MANCA DIMOSTRAZIONE**
         - $\forall x \in I(a_1, \cdots, a_n), \ d \mid x$, dunque $d$ è *divisore comune*
@@ -124,7 +124,7 @@
   - $a_1, \ldots, a_n \in \mathbb{Z}$
   - $d := \textrm{MCD}(a_1, \ldots, a_n)$
 - **Th**
-  - $\exists x_1, \ldots, x_n \in \mathbb{Z} \mid a_1 x_1 + \ldots + a_nx_n=d\), che prende il nome di _identità di Bézout_
+  - $\exists x_1, \ldots, x_n \in \mathbb{Z} \mid a_1 x_1 + \ldots + a_nx_n=d$, che prende il nome di _identità di Bézout_
 - **Dim**
   - per dimostrazione precedente, $I\left(a_{1}, \ldots a_{n}\right)=I(d)$, quindi $d \in I(a_1, \ldots, a_n) \implies \exists x_1, \ldots, x_n \in \mathbb{Z} \mid a_1x_1 + \ldots + a_n x_n = d$
 
@@ -151,7 +151,7 @@
 - **Th**
   - $I + J$ è un ideale
 - **Dim**
-  - $0 \in I, 0 \in J, 0+0=0 \implies 0 \in I + J \) per definizione
+  - $0 \in I, 0 \in J, 0+0=0 \implies 0 \in I + J$ per definizione
   - la chiusura rispetto a $+$ deve implicare che $\forall i_1, i_2 \in I, j_1, j_2 \in J \quad (i_1 + j_1) + (i_2 + j_2) \in I + J$
     - poiché $(i_1 + j_1) + (i_2 + j_2) = (i_1 + i_2) + (j_1 + j_2)$, e $i_1 + i_2 \in I, j_1 + j_2 \in J \implies (i_1 + i_2) + (j_1 + j_2) \in I + J$ per definizione di $I + J$
   - $\forall i \in I, j \in J \quad i + j \in I + J$, l'opposto rispetto a $+$ di $i + j$ è $- (i + j) = (-i) + (-j)$, e $\forall i \in I, j \in J \quad -i \in I, -j \in J  \implies (-i) + (-j) \in I + J$ per definizione
@@ -200,9 +200,9 @@
 - **Th**
   - $I(a) + I(b) = I(d)$
 - **Dim**
-   - per dimostrazione precedente $I(a)$ e $I(b)$ sono ideali, e poiché la somma tra ideali è ben definita, allora $I(a)+I(b)=\{i+j \mid i \in I(a), j \in I(b) \} \)
+   - per dimostrazione precedente $I(a)$ e $I(b)$ sono ideali, e poiché la somma tra ideali è ben definita, allora $I(a)+I(b)=\{i+j \mid i \in I(a), j \in I(b) \}$
    - $i \in I(a) \implies \exists x \in \mathbb{Z} \mid i = ax$ e $j \in I(b) \implies \exists y \in \mathbb{Z} \mid j = by$
-   - quindi $i + j = ax + by \implies$ $I(a)+I(b)=\{a x+b y \mid x, y \in \mathbb{Z}\} = I(a, b) \) per definizione
+   - quindi $i + j = ax + by \implies$ $I(a)+I(b)=\{a x+b y \mid x, y \in \mathbb{Z}\} = I(a, b)$ per definizione
    - in particolare, per dimostrazione precedente, $I(a, b) = I(d)$
 
 ## Oss
@@ -210,15 +210,15 @@
 - **Hp**
   - $a, b \in \mathbb{Z}$
 - **Th**
-  - $I(a) \cdot I(b)=I(a \cdot b) \)
+  - $I(a) \cdot I(b)=I(a \cdot b)$
 - **Dim**
-  - $x \in I(a) \cdot I(b) \implies x \in I(a \cdot b) \)
+  - $x \in I(a) \cdot I(b) \implies x \in I(a \cdot b)$
     - per dimostrazione precedente $I(a)$ e $I(b)$ sono ideali, e poiché il prodotto tra ideali è ben definito, allora $x \in I(a) \cdot I(b) \implies x = i_1 j_1 + \ldots + i_k j_k$ con $i_1 , \ldots , i_k \in I(a)$ e $j_1 , \ldots , j_k \in I(b)$
     - per definizione, $i \in I(a) \implies \exists x \in \mathbb{Z} \mid i = ax$, e dunque $i_1, \ldots, i_k = ax_1, \ldots, ax_k$ con $x_1, \ldots, x_k \in \mathbb{Z}$
     - analogamente $j_1, \ldots, j_k = by_1, \ldots, by_k$ con $y_1, \ldots, y_k \in \mathbb{Z}$
     - segue che $x = (ax_1)(by_1),+\ldots+ (ax_k)(by_k) = ab\cdot(x_1y_1+ \ldots+ x_ky_k)$
     - poiché $(x_1y_1+ \ldots+ x_ky_k) \in \mathbb{Z}$, segue che $ab \mid x \implies x \in I(a \cdot b)$
-  - $x \in I(a \cdot b)  \implies x \in I(a) \cdot I(b)\)
+  - $x \in I(a \cdot b)  \implies x \in I(a) \cdot I(b)$
     - $x \in I(a \cdot b) \implies \exists k \in \mathbb{Z} \mid x = ab \cdot k$
     - $x = abk$, ma $a \in I(a) \land bk \in I(b) \implies x \in I(a) \cdot I(b)$
    
@@ -228,9 +228,9 @@
 
 ## Esempi
 
-- $\forall g \in G\) gruppo, $I(g):=\left\{n \in \mathbb{Z} \mid g^{n}=e\right\} \) è un **ideale** $(I(g), +) \subset (\mathbb{Z}, +) \)
-  - $0 \in \mathbb{Z}, g^{0}=e \implies 0 \in I(g) \)
-  - $m, n \in I(g) \Rightarrow g^{m}=g^{n}=e \implies g^{m} \cdot g^{n}= g^{m + n} = e \cdot e = e \implies g^{m +n} \in I(g)\) per definizoine di $I(g) \implies I(g) + I(g) \subset I(g)$, poiché $\forall m, n \in \mathbb{Z} \quad m + n \in \mathbb{Z}$
+- $\forall g \in G$ gruppo, $I(g):=\left\{n \in \mathbb{Z} \mid g^{n}=e\right\}$ è un **ideale** $(I(g), +) \subset (\mathbb{Z}, +)$
+  - $0 \in \mathbb{Z}, g^{0}=e \implies 0 \in I(g)$
+  - $m, n \in I(g) \Rightarrow g^{m}=g^{n}=e \implies g^{m} \cdot g^{n}= g^{m + n} = e \cdot e = e \implies g^{m +n} \in I(g)$ per definizoine di $I(g) \implies I(g) + I(g) \subset I(g)$, poiché $\forall m, n \in \mathbb{Z} \quad m + n \in \mathbb{Z}$
   - $n \in I(g) \implies (g^n)^{-1} = e ^{-1 } = g^{-n} =e \implies -n \in I(g)$, poiché $\forall n \in \mathbb{Z} \quad -n \in \mathbb{Z}$
   - $n \in I(g), k \in \mathbb{Z} \implies g^{k \cdot n} = (g^n)^k = e^k = e \implies n \cdot k \in I(g)$
 

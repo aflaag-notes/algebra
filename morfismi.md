@@ -54,8 +54,8 @@
 - **Th**
   - $f ^{-1}: H \rightarrow G$ morfismo
 - **Dim**
-  - $\forall g \in G, h \in H \quad \exists !f^{-1} \mid \left\{\begin{array}{c}f^{-1}(f(g))=g \\ f\left(f^{-1}(h)\right)=h\end{array}\right.\)
-  - $\forall h, h^{\prime} \in H \quad f^{-1}\left(h h^{\prime}\right)=f^{-1}(h) \cdot f^{-1}\left(h^{\prime}\right) \iff f\left(f^{-1}\left(h h^{\prime})\right)=f(f^{-1}(h)\cdot f^{-1}(h^\prime)) = f(f^{-1}(h))\cdot f(f^{-1}(h^\prime))\right. \), dunque $hh^\prime =  f(f^{-1}(h))\cdot f(f^{-1}(h^\prime)) = hh^\prime$ ⚠️  **RIVEDI**
+  - $\forall g \in G, h \in H \quad \exists !f^{-1} \mid \left\{\begin{array}{c}f^{-1}(f(g))=g \\ f\left(f^{-1}(h)\right)=h\end{array}\right.$
+  - $\forall h, h^{\prime} \in H \quad f^{-1}\left(h h^{\prime}\right)=f^{-1}(h) \cdot f^{-1}\left(h^{\prime}\right) \iff f\left(f^{-1}\left(h h^{\prime})\right)=f(f^{-1}(h)\cdot f^{-1}(h^\prime)) = f(f^{-1}(h))\cdot f(f^{-1}(h^\prime))\right.$, dunque $hh^\prime =  f(f^{-1}(h))\cdot f(f^{-1}(h^\prime)) = hh^\prime$ ⚠️  **RIVEDI**
 
 ## Ex
 
@@ -107,10 +107,10 @@
 - **Hp**
   - $f: \mathbb{Z} \rightarrow \mathbb{Z}_n : k \rightarrow [k]$
 - **Th**
-  - $f$ morfismo di anelli $\left(\mathbb{Z},+, \cdot\right)$ e $\left(\mathbb{Z}_{n},+, \cdot\right) \)
+  - $f$ morfismo di anelli $\left(\mathbb{Z},+, \cdot\right)$ e $\left(\mathbb{Z}_{n},+, \cdot\right)$
 - **Dim**
-  - per come le operazioni $+$ e $\cdot$ sono state definite, $f([x+y])=f([x])+f([y]) \) e
-$f([x \cdot y])=f([x]) \cdot f([y]) \)
+  - per come le operazioni $+$ e $\cdot$ sono state definite, $f([x+y])=f([x])+f([y])$ e
+$f([x \cdot y])=f([x]) \cdot f([y])$
 
 ## Ex
 
@@ -145,7 +145,7 @@ $f([x \cdot y])=f([x]) \cdot f([y]) \)
 - **Th**
   - $f$ morfismo di gruppi $(G, \cdot)$ e $(G, \cdot)$
 - **Dim**
-  - $\forall h, h^\prime \in G \quad f(h) \cdot f\left(h^{\prime}\right)=\left(g h g^{-1}\right)\cdot \left(g h^{\prime} g^{-1}\right)=gh(g^{-1} \cdot g)h^\prime g^{-1}=g h h^{\prime} g^{-1}=f\left(h h^{\prime})\right. \)
+  - $\forall h, h^\prime \in G \quad f(h) \cdot f\left(h^{\prime}\right)=\left(g h g^{-1}\right)\cdot \left(g h^{\prime} g^{-1}\right)=gh(g^{-1} \cdot g)h^\prime g^{-1}=g h h^{\prime} g^{-1}=f\left(h h^{\prime})\right.$
 
 ****
 
