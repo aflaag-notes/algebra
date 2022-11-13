@@ -7,7 +7,7 @@
 - **Th**
   - $\exists x \in \mathbb{C} \mid x$ è soluzione dell'equazione $a\_{0}+a\_{1} x+a\_{2} x^{2}+\cdots+a\_{n} x^{n}=0$
 
-\*\*\*\*
+****
 
 # Teorema della divisione euclidea con il resto
 
@@ -22,9 +22,9 @@
     - $a \equiv m \ (\bmod \ n) \iff \exists p\_1 \in \mathbb{Z} \mid np\_1 = m - a$
     - $r:=\min(\{a \in \mathbb{Z} \mid a \in [m], a \ge 0\})$
     - $r \in [m] \iff \exists p\_2 \in \mathbb{Z} \mid np\_2 = m - r  \iff r = m - np\_2 \iff m = np\_2 +r$
-    - ⚠️ \*\*INCOMPLETA\*\*
+    - ⚠️ **INCOMPLETA**
 
-\*\*\*\*
+****
 
 # Teorema di Lagrange (teoria dei gruppi)
 
@@ -39,7 +39,7 @@
   - $G = X\_1 \coprod X\_2 \coprod \ldots \coprod X\_k \implies |G| = |X\_1| + |X\_2| + \ldots  + |X\_k|$ poiché ogni $X\_i$ è una partizione, e dunque disgiunta con le altre, e poiché sono tutte classi laterali sinistre hanno tutte cardinalità $|H|$
   - dunque, $|G| = k \cdot |H|$, dove $k$ corrisponde al numero di classi laterali, che è proprio $|G/H| \implies |G| = |H| \cdot |G/H|$
 
-\*\*\*\*
+****
 
 # Teorema fondamentale dell'aritmetica
 
@@ -62,7 +62,7 @@
       - $a = \min(a, b) \implies \max(a, b) = b$, e viceversa
     - $d \cdot m = \displaystyle{\prod\_{p \in \mathbb{P} }p ^{a\_p + b\_p}} = \displaystyle{\prod\_{p \in \mathbb{P}} p^{a\_p}} \cdot \displaystyle{\prod\_{p \in \mathbb{P}} p^{b\_p}} = a \cdot b$
 
-\*\*\*\*
+****
 
 # Teorema cinese dei resti
 
@@ -90,7 +90,7 @@
   - $\phi$ ben definita $\implies \phi$ non dipende dalla scelta di $[x] \in \mathbb{Z}\_m$
 - **Dim**
     - se $\phi$ è ben definita, allora $x\equiv x^{\prime} \ (\bmod m) \implies \left\{\begin{array}{c}x \equiv x^{\prime}\ \left(\bmod a\_{1}\right) \\ \vdots \\ x \equiv x^{\prime}\ \left(\bmod a\_{n}\right)\end{array}\right.$
-    - \*\*⚠️ BASTA DIMOSTRARE SOLO UNA DELLE DUE MA NON HO CAPITO PERCHÉ\*\*
+    - **⚠️ BASTA DIMOSTRARE SOLO UNA DELLE DUE MA NON HO CAPITO PERCHÉ**
     - se $\phi$ è iniettiva, allora vale anche l'implicazione opposta
       - $\left\{\begin{array}{c}x \equiv x^{\prime}\ \left(\bmod a\_{1}\right) \\ \vdots \\ x \equiv x^{\prime}\ \left(\bmod a\_{n}\right)\end{array}\right. \iff \left\{\begin{array}{c}x^{\prime}-x \in I\left(a\_{1}\right) \\ \vdots \\ x^{\prime}-x \in I\left(a\_{m}\right)\end{array}\right. \iff x - x^\prime \in I(a\_1) \cap \ldots \cap I(a\_n) = I(m)$, e per definizione $x - x^\prime \in I(m) \implies x \equiv x^\prime \ (\bmod m)$
 
@@ -109,12 +109,12 @@
     - $\mathbb{Z}\_n = \{[0],[1], \cdots,[n-1]\} \implies \left|\mathbb{Z}\_{n}\right|=n$, quindi $\left|\mathbb{Z}\_{a\_{1}}\right| \cdot\ldots\cdot\left|\mathbb{Z}\_{a\_{n}}\right|  = a\_1 \cdot \ldots \cdot a\_n = m = \left| \mathbb{Z}\_m \right|$ per ragionamento analogo
   - $|X|=|Y|<\infty \implies f: X \rightarrow Y$ iniettiva $\iff$ $f$ suriettiva
     - applicando questa osservazione, $\phi$ iniettiva $\implies \phi$ suriettiva, in quanto, per l'osservazione precedente, insieme di partenza e di arrivo di $\phi$ hanno la stessa cardinalità $\left| \mathbb{Z}\_m \right|$
-  - $\phi$ \*\*suriettiva\*\* $\implies$ $\exists x \mid x \ (\bmod m)$ è soluzione del sistema
-    - $\varphi(x \ (\bmod m))=\left(b\_{1}\ \left( \bmod  a\_{1}\right), \ldots, b\_{n} \ (\bmod a\_{n})\right)$, e poiché $\phi$ è suriettiva, allora ogni tupla di $n$ elementi dell'insieme di arrivo, che descrive un sistema come in ipotesi, ha una controimmagine $x \ (\bmod m)$, e $x \ (\bmod m)\in \mathbb{Z}\_m$ per definizione, dunque \*\*esiste sempre una soluzione\*\*
-  - $\phi$ \*\*iniettiva\*\* $\implies$ $\exists ! x \mid x \ (\bmod m)$ è soluzione del sistema
-    - poiché $\phi$ è iniettiva, $x \ (\bmod m) \in \mathbb{Z}\_m$ è unica, dunque \*\*la soluzione è sempre unica\*\*
+  - $\phi$ **suriettiva** $\implies$ $\exists x \mid x \ (\bmod m)$ è soluzione del sistema
+    - $\varphi(x \ (\bmod m))=\left(b\_{1}\ \left( \bmod  a\_{1}\right), \ldots, b\_{n} \ (\bmod a\_{n})\right)$, e poiché $\phi$ è suriettiva, allora ogni tupla di $n$ elementi dell'insieme di arrivo, che descrive un sistema come in ipotesi, ha una controimmagine $x \ (\bmod m)$, e $x \ (\bmod m)\in \mathbb{Z}\_m$ per definizione, dunque **esiste sempre una soluzione**
+  - $\phi$ **iniettiva** $\implies$ $\exists ! x \mid x \ (\bmod m)$ è soluzione del sistema
+    - poiché $\phi$ è iniettiva, $x \ (\bmod m) \in \mathbb{Z}\_m$ è unica, dunque **la soluzione è sempre unica**
 
-\*\*\*\*
+****
 
 # Piccolo teorema di Fermat
 
@@ -138,7 +138,7 @@
 - **Dim**
   - $[a] \neq [0] \implies [a]^p = [a] \iff [a]^p \cdot [a]^{-1} = [a] \cdot [a]^{-1}$, e dunque $[a]^{p -1} = [1] \implies [a] \cdot [a]^{p -2} = [1]\implies [a]^{-1} = [a]^{p-2}$
 
-\*\*\*\*
+****
 
 # Teorema fondamentale di isomorfismo
 
@@ -150,7 +150,7 @@
 - **Dim**
   - $\varphi$ è ben definita
     - $\varphi$ è ben definita $\iff [x] = [y] \implies f(x) = f(y) \quad \forall x, y \in A$
-    - $[x] = [y] \iff x \equiv y \ (\bmod \textrm{Ker}(f)) \implies y - x \in \textrm{Ker}(f) \implies f(y - x) = 0\_B$ per definizione, e inoltre $f(y-x) = f(y)-f(x)$ in quanto $f$ morfismo di anelli \*\*⚠️ PERCHE?\*\*, quindi $0\_B = f(y) - f(x) \implies f(y) = f(x)$
+    - $[x] = [y] \iff x \equiv y \ (\bmod \textrm{Ker}(f)) \implies y - x \in \textrm{Ker}(f) \implies f(y - x) = 0\_B$ per definizione, e inoltre $f(y-x) = f(y)-f(x)$ in quanto $f$ morfismo di anelli **⚠️ PERCHE?**, quindi $0\_B = f(y) - f(x) \implies f(y) = f(x)$
   - $\varphi$ morfismo di anelli
     - $\varphi$ morfismo di anelli $\iff \varphi([a]) \cdot \varphi([b]) = \varphi([a]\cdot [b])$ e $\varphi([a]) + \varphi([b]) = \varphi([a]+ [b])$
       - $\varphi([a]) \cdot \varphi([b]) = f(a) \cdot f(b)$ per definizione di $\varphi$
@@ -161,7 +161,7 @@
   - $\varphi$ isomorfismo di anelli $\iff \varphi$ iniettiva e suriettiva
     - $\varphi$ iniettiva
       - $\varphi$ iniettiva $\iff \textrm{Ker}(\varphi)=\{[0\_A]\}$ per dimostrazione precedente
-      - $x \in \textrm{Ker}(f) \iff x - 0\_A \in \textrm{Ker}(f) \implies x \equiv 0\_A \ (\bmod \textrm{Ker}(f)) \implies [x] = [0\_A] \implies \varphi([x]) = \varphi([0\_A])$, poiché $\varphi$ è ben definita, dunque $f(x) = 0\_B$ \*\*⚠️ NON HO CAPITO\*\*
+      - $x \in \textrm{Ker}(f) \iff x - 0\_A \in \textrm{Ker}(f) \implies x \equiv 0\_A \ (\bmod \textrm{Ker}(f)) \implies [x] = [0\_A] \implies \varphi([x]) = \varphi([0\_A])$, poiché $\varphi$ è ben definita, dunque $f(x) = 0\_B$ **⚠️ NON HO CAPITO**
     - $\varphi$ suriettiva
       - $\varphi : A / \textrm{Ker}(f) \rightarrow \textrm{Im}(f) \implies$ l'insieme di arrivo di $\varphi$ coincide è proprio l'insieme delle immagini di $f$, quindi $\varphi$ è suriettiva per costruzione
 
@@ -175,7 +175,7 @@
 - **Dim**
   - la dimostrazione è analoga al caso degli anelli
 
-\*\*\*\*
+****
 
 ## Teorema di Cayley
 
@@ -193,20 +193,20 @@
 - **Th**
   - $G \cong \mathbb{Z}\_4$ oppure $G \cong K\_4$
 - **Dim**
-  - ⚠️ \*\*L'HO SCRITTA MA NON HO CAPITO NIENTE IN QUESTA DIMOSTRAZIONE\*\*
+  - ⚠️ **L'HO SCRITTA MA NON HO CAPITO NIENTE IN QUESTA DIMOSTRAZIONE**
   - preso $a \in G \mid a \neq 1$, per dimostrazione precedente $o(a) \bigg\vert |G| \implies o(a)=1 \lor o(a) =2 \lor o(a) = 4$, ma $a \neq 1 \implies o(a) \neq 1$
   - 2 casi
-    - $\exists x \in G \mid o(x)=4 \implies G \cong \mathbb{Z}\_4$ \*\*⚠️ PERCHÉ?\*\*
+    - $\exists x \in G \mid o(x)=4 \implies G \cong \mathbb{Z}\_4$ **⚠️ PERCHÉ?**
     - $\nexists x \in G \mid o(x) =4$
-      - $|G| = 4 \implies G$ è della forma $\{1, a, b, c\}$ con $o(a)=o(b)=o(c)=2$ \*\*⚠️ PERCHÉ?\*\*
+      - $|G| = 4 \implies G$ è della forma $\{1, a, b, c\}$ con $o(a)=o(b)=o(c)=2$ **⚠️ PERCHÉ?**
         - $1 \in G$ perché $G$ gruppo in ipotesi
         - $a \neq b \neq c \neq 1$, altrimenti $|G| \lt 4$
       - $a^2=b^2=c^2=1 \implies$$\left\{\begin{array}{l}a=a^{-1} \\ b=b^{-1} \\ c=c^{-1}\end{array}\right.$
-      - $G$ abeliano $\iff$ presi i 3 elementi non neutri, moltiplicandone due tra loro si ottiene il terzo \*\*⚠️ PERCHÉ?\*\*
+      - $G$ abeliano $\iff$ presi i 3 elementi non neutri, moltiplicandone due tra loro si ottiene il terzo **⚠️ PERCHÉ?**
         - $ab = c$
           - $ab = 1 \implies b = a^{-1} = a \ \bot$
           - $ab = a \implies b = 1 \ \bot$
           - $ab = b \implies a = 1 \ \bot$
           - quindi necessariamente $ab = c$
           - il ragionamento è analogo per tutti gli altri prodotti
-      - quindi $G \cong K\_4$ \*\*⚠️ PERCHÉ? non mancano altre cose?\*\*
+      - quindi $G \cong K\_4$ **⚠️ PERCHÉ? non mancano altre cose?**

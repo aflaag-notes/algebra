@@ -2,7 +2,7 @@
 
 ## Def
 
-- \*\*Induzione\*\*
+- **Induzione**
 > - successione di proposizioni infinita $P\_{1}, P\_{2}, P\_{3}, \ldots$
 >  - $\left\{\begin{array}{l}P\_{1} \textrm{ vera}\\ P\_{1}, P\_{2}, P\_{3}, \ldots, P\_{n} \implies P\_{n+1} \quad \forall n \ge 1 \end{array}\right.$
 >  - allora $P\_n$ vera $\forall n$

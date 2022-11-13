@@ -2,9 +2,9 @@
 
 ## Def
 
-- \*\*Ideali\*\*
+- **Ideali**
 > - $(A, +, \cdot)$ anello
-> - $I \subset A$ \*\*ideale\*\* $\iff (I, +) \subset (A, +)$ è un sottogruppo e $A \cdot I \subset I$ e $I \cdot A \subset I$
+> - $I \subset A$ **ideale** $\iff (I, +) \subset (A, +)$ è un sottogruppo e $A \cdot I \subset I$ e $I \cdot A \subset I$
 
 ## Oss
 
@@ -53,10 +53,10 @@
 
 ## Def
 
-- \*\*Congruenza modulo di un ideale\*\*
+- **Congruenza modulo di un ideale**
 > - $(A, +, \cdot)$ anello
 > - $I \subset A$ ideale
-> - per definizione, $I$ ideale $\implies(I, +) \subset (A, +)$ sottogruppo, dunque ha senso definire $A/I$, e infatti $I$ induce una relazione di equivalenza su $A$ detta \*\*congruenza modulo $I$\*\*, dove $\forall a, b \in A \quad a \equiv b \ (\bmod I) \iff b - a \in I$
+> - per definizione, $I$ ideale $\implies(I, +) \subset (A, +)$ sottogruppo, dunque ha senso definire $A/I$, e infatti $I$ induce una relazione di equivalenza su $A$ detta **congruenza modulo $I$**, dove $\forall a, b \in A \quad a \equiv b \ (\bmod I) \iff b - a \in I$
 > - $b -a \in I \iff  (-a) + b \in I$, di conseguenza questa congruenza coincide con la classe laterale sinistra di $(A, +)$
 
 ## Oss
@@ -114,7 +114,7 @@
 - **Th**
   - $\exists ! d=\textrm{MCD}(a\_{1}, \ldots, a\_{n})  \mid I\left(a\_{1}, \ldots a\_{n}\right)=I(d)$
 - **Dim**
-    - ⚠️ \*\*MANCA DIMOSTRAZIONE\*\*
+    - ⚠️ **MANCA DIMOSTRAZIONE**
         - $\forall x \in I(a\_1, \cdots, a\_n), \ d \mid x$, dunque $d$ è \*divisore comune\*
         - $d$ è il \_massimo tra i divisori comuni\_
 
@@ -130,15 +130,15 @@
 
 ## Oss
 
-- ⚠️ \*\*MANCA DIMOSTRAZIONE SISTEMA DI IDENTITÀ DI BÉZOUT\*\*
+- ⚠️ **MANCA DIMOSTRAZIONE SISTEMA DI IDENTITÀ DI BÉZOUT**
 
-\*\*\*\*
+****
 
 # Operazioni sugli ideali
 
 ## Def
 
-- \*\*$+$ tra ideali\*\*
+- **$+$ tra ideali**
 > - $(A, +, \cdot)$ anello commutativo
 > - $I, J \subset A$ ideali
 > - $I + J = \{i + j \mid \forall i \in I, j \in J\}$
@@ -160,7 +160,7 @@
 
 ## Def
 
-- \*\*$\cap$ tra ideali\*\*
+- **$\cap$ tra ideali**
 > - $(A, +, \cdot)$ anello commutativo
 > - $I, J \subset A$ ideali
 > - $I \cap J = \{x \in I \land x \in J\}$
@@ -173,11 +173,11 @@
 - **Th**
   - $I \cap J$ è un ideale
 - **Dim**
-  - ⚠️ \*\*MANCA DIMOSTRAZIONE\*\*
+  - ⚠️ **MANCA DIMOSTRAZIONE**
 
 ## Def
 
-- \*\*$\cdot$ tra ideali\*\*
+- **$\cdot$ tra ideali**
 > - $(A, +, \cdot)$ anello commutativo
 > - $I, J \subset A$ ideali
 > - $I \cdot J = \{i\_1 j\_1 + \ldots + i\_k j\_k \mid k \ge  1, \forall i\_1 , \ldots , i\_k \in I, j\_1 , \ldots , j\_k \in J \}$
@@ -190,7 +190,7 @@
 - **Th**
   - $I \cdot J$ è un ideale
 - **Dim**
-  - ⚠️ \*\*MANCA DIMOSTRAZIONE\*\*
+  - ⚠️ **MANCA DIMOSTRAZIONE**
 
 ## Oss
 
@@ -228,7 +228,7 @@
 
 ## Esempi
 
-- $\forall g \in G$ gruppo, $I(g):=\left\{n \in \mathbb{Z} \mid g^{n}=e\right\}$ è un \*\*ideale\*\* $(I(g), +) \subset (\mathbb{Z}, +)$
+- $\forall g \in G$ gruppo, $I(g):=\left\{n \in \mathbb{Z} \mid g^{n}=e\right\}$ è un **ideale** $(I(g), +) \subset (\mathbb{Z}, +)$
   - $0 \in \mathbb{Z}, g^{0}=e \implies 0 \in I(g)$
   - $m, n \in I(g) \Rightarrow g^{m}=g^{n}=e \implies g^{m} \cdot g^{n}= g^{m + n} = e \cdot e = e \implies g^{m +n} \in I(g)$ per definizoine di $I(g) \implies I(g) + I(g) \subset I(g)$, poiché $\forall m, n \in \mathbb{Z} \quad m + n \in \mathbb{Z}$
   - $n \in I(g) \implies (g^n)^{-1} = e ^{-1 } = g^{-n} =e \implies -n \in I(g)$, poiché $\forall n \in \mathbb{Z} \quad -n \in \mathbb{Z}$

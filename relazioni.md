@@ -2,49 +2,49 @@
 
 ## Def
 
-- \*\*Relazioni\*\*
+- **Relazioni**
 > - $S$ insieme
-> - ogni elemento $R \subseteq S \times S$ è una \*\*relazione\*\* su $S$
+> - ogni elemento $R \subseteq S \times S$ è una **relazione** su $S$
 
-- \*\*Relazione riflessiva\*\*
+- **Relazione riflessiva**
 > - $S$ insieme
 > - $R$ relazione in $S \times S$
-> - $R$ \*\*riflessiva\*\* $\iff \forall x \in R \quad (x, x) \in R$
+> - $R$ **riflessiva** $\iff \forall x \in R \quad (x, x) \in R$
 
-- \*\*Relazione simmetrica\*\*
+- **Relazione simmetrica**
 > - $S$ insieme
 > - $R$ relazione in $S \times S$
-> - $R$ \*\*simmetrica\*\* $\iff \forall x, y \in R \quad (x, y) \in R \implies (y, x) \in R$
+> - $R$ **simmetrica** $\iff \forall x, y \in R \quad (x, y) \in R \implies (y, x) \in R$
 
-- \*\*Relazione transitiva\*\*
+- **Relazione transitiva**
 > - $S$ insieme
 > - $R$ relazione in $S \times S$
-> - $R$ \*\*transitiva\*\* $\iff \forall x, y, z \in R \quad (x, y) \in R \land (y, z) \in R \implies (x, z) \in R$
+> - $R$ **transitiva** $\iff \forall x, y, z \in R \quad (x, y) \in R \land (y, z) \in R \implies (x, z) \in R$
 
-- \*\*Relazione antisimmetrica\*\*
+- **Relazione antisimmetrica**
 > - $S$ insieme
 > - $R$ relazione in $S \times S$
-> - $R$ \*\*transitiva\*\* $\iff \forall x, y \in R \quad (x, y) \in R \land (y, x) \in R \implies x = y$
+> - $R$ **transitiva** $\iff \forall x, y \in R \quad (x, y) \in R \land (y, x) \in R \implies x = y$
 
-- \*\*Relazione totale\*\*
+- **Relazione totale**
 > - $S$ insieme
 > - $R$ relazione in $S \times S$
-> - $R$ \*\*totale\*\* $\iff \forall x, y \in R \quad (x, y) \in R \lor (y, x) \in R$
+> - $R$ **totale** $\iff \forall x, y \in R \quad (x, y) \in R \lor (y, x) \in R$
 
-- \*\*Relazione di equivalenza\*\*
+- **Relazione di equivalenza**
 > - $S$ insieme
 > - $R$ relazione in $S \times S$
-> - $R$ è una \*\*relazione di equivalenza\*\* $\iff R$ riflessiva, simmetrica e transitiva
+> - $R$ è una **relazione di equivalenza** $\iff R$ riflessiva, simmetrica e transitiva
 
-- \*\*Ordine parziale\*\*
+- **Ordine parziale**
 > - $S$ insieme
 > - $R$ relazione in $S \times S$
-> - $R$ \*\*ordine parziale\*\* $\iff R$ riflessiva, transitiva e antisimmetrica
+> - $R$ **ordine parziale** $\iff R$ riflessiva, transitiva e antisimmetrica
 
-- \*\*Ordine totale\*\*
+- **Ordine totale**
 > - $S$ insieme
 > - $R$ relazione in $S \times S$
-> - $R$ \*\*ordine totale\*\* $\iff R$ ordine parziale in cui vale la totalità
+> - $R$ **ordine totale** $\iff R$ ordine parziale in cui vale la totalità
 
 ## Ex
 
@@ -85,10 +85,10 @@
 
 ## Ex
 
-- ⚠️ \*\*DA RILEGGERE\*\*
-  - $G$ gruppo $g, h \in G$, \*\*$g$ coniugato ad $h$\*\*  $\iff \exists a \in G \mid h = a\cdot g \cdot a^{-1}$
+- ⚠️ **DA RILEGGERE**
+  - $G$ gruppo $g, h \in G$, **$g$ coniugato ad $h$**  $\iff \exists a \in G \mid h = a\cdot g \cdot a^{-1}$
   - $G$ abeliano $\iff a \cdot g\cdot a^{-1} = g$
-  - la relazione di coniugio è una \*\*relazione di equivalenza\*\*
+  - la relazione di coniugio è una **relazione di equivalenza**
     - \_riflessività\_: $g \sim g$
       - $g = 1 \cdot g \cdot 1^{-1} \implies g \sim g$
     - \_simmetria\_: $g \sim h \implies h \sim g$
@@ -99,13 +99,13 @@
       - $c:= b \cdot a \implies c^{-1} = a^{-1} \cdot b^{-1}$
         - $k = c \cdot g \cdot c^{-1} \implies g \sim k$
 
-\*\*\*\*
+****
 
 # Partizione
 
 ## Def
 
-- \*\*Partizione\*\*
+- **Partizione**
 > - $X$ insieme
 > - $I$ insieme di indici
 > - $\forall i \in I \quad X\_i \subset X$
@@ -133,15 +133,15 @@
 - **Th**
   - $\sim$ induce una partizione di $G$, dunque $\displaystyle G = \coprod\_{[x] \in X/\sim}[x]$
 - **Dim**
-  - ⚠️ \*\*MANCA DIMOSTRAZIONE, NON C'HO VOGLIA MO\*\*
+  - ⚠️ **MANCA DIMOSTRAZIONE, NON C'HO VOGLIA MO**
 
-\*\*\*\*
+****
 
 # Insieme quoziente
 
 ## Def
 
-- \*\*Insieme quoziente $\mathbb{Z}\_n$\*\*
+- **Insieme quoziente $\mathbb{Z}\_n$**
 > - $(\mathbb{Z}, +, \cdot)$ anello, in particolare $(\mathbb{Z}, +)$ gruppo
 > - $n \in \mathbb{Z}$
 > - $\mathbb{Z}/\equiv$ è l'insieme delle classi di equivalenza definite dalla relazione di equivalenza $\equiv$
@@ -171,7 +171,7 @@
     - è possibile riscrivere l'implicazione come $\neg (n$ primo$) \implies\neg( \mathbb{Z}\_n$ dominio di integrità$)$
     - dunque, equivalentemente, $n$ non primo $\implies \mathbb{Z}\_n$ ammette divisori dello $0$ diversi da $0$
     - $n \notin \mathbb{P} \implies \exists a, b \in \mathbb{Z} \mid n = ab \quad 0 \lt a, b \lt n$
-    - $n = ab \iff [n] = [ab]$ ⚠️ \*\*MANCA DIMOSTRAZIONE\*\*
+    - $n = ab \iff [n] = [ab]$ ⚠️ **MANCA DIMOSTRAZIONE**
   - $n$ primo $\implies \mathbb{Z}\_n$ dominio di integrità
     - ipotizziamo che $\mathbb{Z}\_n$ non sia dominio di integrità, e dunque $\exists[a] \in \mathbb{Z}\_n : [a] \neq [0], a \mid 0$
     - $a \mid 0 \implies \exists b \in \mathbb{Z} \mid [a][b] = [0] \quad b \neq 0$
@@ -212,7 +212,7 @@
   - per dimostrazione precedente, allora tutti gli elementi di $\mathbb{Z}\_p$ sono invertibili, tranne $[0]$ in quanto $[0]$ non ha inversi
   - allora $\mathbb{Z}\_p^\* = \mathbb{Z}\_p - \{[0]\}$, che per definizione implica che $\mathbb{Z}\_p$ campo
      
-\*\*\*\*
+****
 
 # Classi laterali
 
@@ -239,15 +239,15 @@
 
 ## Def 
 
-- \*\*Classi laterali\*\*
+- **Classi laterali**
 > - $(G, \cdot)$ gruppo
 > - $(H, \cdot) \subset (G, \cdot)$ sottogruppo
 > - $\forall x,y \in G \quad x \sim\_S y \iff x^{-1}y \in H$ è una relazione di equivalenza
 > - $\forall x, y \in G \quad x \sim\_D y \iff xy^{-1} \in H$ è una relazione di equivalenza
 > - $x \in G$
-> - $[x] = \{y \in G \mid y \sim\_S x\}$ è detta \*\*classe laterale sinistra\*\*
-> - $[x] = \{y \in G \mid y \sim\_D x\}$ è detta \*\*classe laterale destra\*\*
-> - $G/H := \{[x] \mid x \in G\}$ è l'\*\*insieme delle classi laterali sinistre o destre\*\*
+> - $[x] = \{y \in G \mid y \sim\_S x\}$ è detta **classe laterale sinistra**
+> - $[x] = \{y \in G \mid y \sim\_D x\}$ è detta **classe laterale destra**
+> - $G/H := \{[x] \mid x \in G\}$ è l'**insieme delle classi laterali sinistre o destre**
 
 ## Oss
 

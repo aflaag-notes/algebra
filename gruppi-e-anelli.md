@@ -2,25 +2,25 @@
 
 ## Def
 
-- \*\*Semigruppo\*\*
+- **Semigruppo**
 > - $S$ insieme
 > - $m: S \times S \rightarrow S$
-> - $(S, m)$ \*\*semigruppo\*\* $\iff  m(x, m(y, z))=m(m(x, y),z) \quad \forall x, y, z \in S$
+> - $(S, m)$ **semigruppo** $\iff  m(x, m(y, z))=m(m(x, y),z) \quad \forall x, y, z \in S$
 
-- \*\*Monoide\*\*
+- **Monoide**
 > - $S$ insieme
 > - $m: S \times S \rightarrow S$
-> - $(S, m)$ \*\*monoide\*\* $\iff (S, m)$ semigruppo e $\exists e \in S  \mid m(x, e) = m(e, x) = x \quad \forall x \in S$
+> - $(S, m)$ **monoide** $\iff (S, m)$ semigruppo e $\exists e \in S  \mid m(x, e) = m(e, x) = x \quad \forall x \in S$
 
-- \*\*Gruppo\*\*
+- **Gruppo**
 > - $S$ insieme
 > - $m: S \times S \rightarrow S$
-> - $(S, m)$ \*\*gruppo\*\* $\iff (S, m)$ monoide e $\exists x^{-1} \in S \mid m(x, x^{-1}) =m(x^{-1}, x) =e \quad \forall x \in S$
+> - $(S, m)$ **gruppo** $\iff (S, m)$ monoide e $\exists x^{-1} \in S \mid m(x, x^{-1}) =m(x^{-1}, x) =e \quad \forall x \in S$
 
-- \*\*Gruppo abeliano\*\*
+- **Gruppo abeliano**
 > - $S$ insieme
 > - $m: S \times S \rightarrow S$
-> - $(S, m)$ \*\*gruppo abeliano\*\* $\iff (S,m)$ gruppo e $m(x, y) = m(y, x) \quad \forall x, y \in S$
+> - $(S, m)$ **gruppo abeliano** $\iff (S,m)$ gruppo e $m(x, y) = m(y, x) \quad \forall x, y \in S$
 
 ## Oss
 
@@ -49,7 +49,7 @@
   - $X, Y$ insiemi,
   - $Y^X = \{f \mid f:X \rightarrow Y\}$
 - **Th**
-  - $(X^X, \circ)$ è \*\*monoide\*\*
+  - $(X^X, \circ)$ è **monoide**
 - **Dim**
     - $\forall f, g, h \in Y^X \quad (f \circ g) \circ h=f \circ(g \circ h)$. poiché la composizione di funzioni è associativa
     - $\forall X \quad \exists \textrm{id}\_X \mid \textrm{id}\_X : X \rightarrow X : x \rightarrow x$, che costituisce dunque l'elemento neutro, mappando ogni elemento in sé stesso
@@ -61,7 +61,7 @@
 - **Th**
   - $\left| Y^X \right| = \left| Y \right| ^ {|X|}$
 - **Dim**
-  - ⚠️ \*\*MANCA DIMOSTRAZIONE\*\*
+  - ⚠️ **MANCA DIMOSTRAZIONE**
 
 ## Oss
 
@@ -78,35 +78,35 @@
     - $\rm \sigma \circ id = id \circ \sigma = \sigma$
     - $\rm \sigma \circ \sigma = id$ per costruzione
   - quindi $|X| = 2 \implies S\_X$ è abeliano, mentre $|X| = 1 \implies S\_X$ è abeliano perché contiene un solo elemento
-  - ⚠️ \*\*perche >= 3 non è abeliano?\*\*
+  - ⚠️ **perche >= 3 non è abeliano?**
 
 ## Oss
 
-⚠️ \*\*MANCA OSSERVAZIONE, non capisco che cosa ho scritto\*\*
+⚠️ **MANCA OSSERVAZIONE, non capisco che cosa ho scritto**
 
-\*\*\*\*
+****
 
 # Anelli
 
 ## Def
 
-- \*\*Anello\*\*
+- **Anello**
 > - $A$ insieme
 > - $+: A \times A \implies A$
 > - $\*: A \times A \implies A$
-> - $(A, +, \*)$ \*\*anello\*\* $\iff (A, +)$ gruppo abeliano, $(A, \*)$ monoide e  $a\*(b + c) = a \* b + a \* c \quad \forall a, b, c \in A$
-> - $a \* b=b \* a \quad \forall a, b \in A \implies   (A, \*, +)$ è un \*\*anello commutativo\*\*
+> - $(A, +, \*)$ **anello** $\iff (A, +)$ gruppo abeliano, $(A, \*)$ monoide e  $a\*(b + c) = a \* b + a \* c \quad \forall a, b, c \in A$
+> - $a \* b=b \* a \quad \forall a, b \in A \implies   (A, \*, +)$ è un **anello commutativo**
 
-- \*\*Campo\*\*
+- **Campo**
 > - $(A, +, \*)$ anello
-> - $(A, +, \*)$ è un \*\*campo\*\* $\iff \forall x \in A \quad \exists x^{-1}$ rispetto a $\*$
+> - $(A, +, \*)$ è un **campo** $\iff \forall x \in A \quad \exists x^{-1}$ rispetto a $\*$
 
 ## Def
 
-- \*\*Invertibili\*\*
+- **Invertibili**
 > - $(A, +, \cdot)$ anello commutativo
-> - $a \in A$ \*\*invertibile\*\* $\iff \exists a^{-1} \in A \mid a \cdot a^{-1}=e$, dove $e$ è l'elemento neutro dell'anello rispetto a $\cdot$
-> - $A^\* := \{a \in A \mid a$ invertibile$\}$ è l'\*\*insieme degli invertibili di $A$\*\*
+> - $a \in A$ **invertibile** $\iff \exists a^{-1} \in A \mid a \cdot a^{-1}=e$, dove $e$ è l'elemento neutro dell'anello rispetto a $\cdot$
+> - $A^\* := \{a \in A \mid a$ invertibile$\}$ è l'**insieme degli invertibili di $A$**
 
 ## Oss
 
@@ -132,13 +132,13 @@
 
 ## Def
 
-- \*\*Divisori dello $0$\*\*
+- **Divisori dello $0$**
 > - $(A, + , \cdot)$ anello commutativo
-> - $a \in A$ \*\*divisore dello $0$\*\* $\iff \exists b \in A - \{0\} \mid a \cdot b = 0$
+> - $a \in A$ **divisore dello $0$** $\iff \exists b \in A - \{0\} \mid a \cdot b = 0$
 
-- \*\*Dominio di integrità\*\*
+- **Dominio di integrità**
 > - $(A, +, \cdot)$ anello commutativo
-> - $A$ \*\*dominio di integrità\*\* $\iff \nexists x : x \mid 0$, oltre a $x = 0$
+> - $A$ **dominio di integrità** $\iff \nexists x : x \mid 0$, oltre a $x = 0$
 > - alternativamente, $A$ è dominio di integrità $\iff$ in $A$ vale la legge di annullamento del prodotto
 
 
@@ -166,29 +166,29 @@
 
 ## Def
 
-- \*\*Sottoanello\*\*
+- **Sottoanello**
 > - $(A, +, \cdot)$ anello
-> - $(B, + , \cdot) \subset (A, +, \cdot)$ \*\*sottoanello\*\* $\iff (B, +) \subset (A, +)$ sottogruppo e $B \cdot B \subset B$
+> - $(B, + , \cdot) \subset (A, +, \cdot)$ **sottoanello** $\iff (B, +) \subset (A, +)$ sottogruppo e $B \cdot B \subset B$
 
-\*\*\*\*
+****
 
 # Sottogruppi
 
 ## Def
 
-- \*\*Sottogruppo\*\*
+- **Sottogruppo**
 > - $(G, \*)$ gruppo 
-> - $(H, \*) \subset (G, \*)$ \*\*sottogruppo\*\* $\iff \exists e \in H \mid e$ è l'elemento neutro,$H \* H \subset H$ e $\exists x^{-1} \in H \quad \forall x \in H$
+> - $(H, \*) \subset (G, \*)$ **sottogruppo** $\iff \exists e \in H \mid e$ è l'elemento neutro,$H \* H \subset H$ e $\exists x^{-1} \in H \quad \forall x \in H$
 
 ## Def
 
-- \*\*Sottogruppo normale\*\*
+- **Sottogruppo normale**
 > - $(G, \*)$ gruppo
 > - $(H, \*) \subset (G, \*)$ sottogruppo
 > - $x \in G$
 > - $xH := \{xh \mid h \in H\}$
 > - $Hx := \{hx \mid h \in H\}$
-> - $H$ \*\*sottogruppo normale\*\* $\iff xH = Hx \quad \forall x \in G$
+> - $H$ **sottogruppo normale** $\iff xH = Hx \quad \forall x \in G$
 
 ## Oss
 
@@ -230,25 +230,25 @@
     - in particolare, $[x]=[x'] \land [x]= xH \land [x'] = x'H \implies xH = x'H$, e in particolare $xH \subset x'H \implies \exists h \in H \mid xh = x'$
     - inoltre, in particolare $[y] = [y'] \land [y] = yH \land [y'] = y'H \implies yH = y'H$, e in particolare $\forall hy' \in Hy' \quad hy' \in Hy$, e $Hy' = yH \implies \exists k \in H \mid yk = hy'$
     - $x'=xh \implies x'y' = xh\cdot y'$, e $yk = hy' \implies xhy' = x \cdot yk$, e in particolare $xyk \in xyH$ per definizione, quindi $x'y' \in xyH$, dunque $[x' \cdot y'] = [x \cdot y]$
-    - ⚠️ \*\*RIVEDI\*\*
-    - ⚠️ \*\*PERCHÉ NON SERVE L'IMPLICAZIONE AL CONTRARIO?\*\*
+    - ⚠️ **RIVEDI**
+    - ⚠️ **PERCHÉ NON SERVE L'IMPLICAZIONE AL CONTRARIO?**
   - $(G/H, \cdot)$
     - $\forall [x], [y], [z] \in G/H \quad ([x][y])[z] = [x y][z] = [x y z] = [x][y z]=[x]([y][z])$, quindi l'operazione è associativa
     - $1\_G \in G$ poiché $G$ gruppo $\implies [1\_G] \in G/H$, l'elemento neutro
     - $\forall [x], [x^{-1}] \in G/H \quad [x][x^{-1}]=[x \cdot x^{-1}] = [1\_G] \implies [x^{-1}] = [x]^{-1}$
 
-\*\*\*\*
+****
 
 # Ordine
 
-- $\forall g \in G$ gruppo, $H(g):=\left\{g^{n} \mid n \in \mathbb{Z}\right\}$ è un \*\*sottogruppo\*\* $(H(g), \cdot) \subset (G, \cdot)$ 
+- $\forall g \in G$ gruppo, $H(g):=\left\{g^{n} \mid n \in \mathbb{Z}\right\}$ è un **sottogruppo** $(H(g), \cdot) \subset (G, \cdot)$ 
   - $e=g^{0} \implies e \in H(g)$
   - $g^m \cdot g^n = g^{m + n} \in H(g)$ per definizione di $H(g)$, quindi $H(g) \cdot Hg(g) \subset H(g)$, poiché $\forall m, n \in \mathbb{Z} \quad m + n \in \mathbb{Z}$
   - $(g^n)^{-1} = g^{-n} \in H(g)$ per definizione di $H(g)$, poiché $\forall n \in \mathbb{Z} \quad -n \in \mathbb{Z}$
-- $o(g) :=  | H(g) |$ è detto \*\*ordine di $g \in G$\*\*
+- $o(g) :=  | H(g) |$ è detto **ordine di $g \in G$**
 - $\exists! d \geq 0 \mid I(g)=I(d)$
   - $d = 0 \implies o(g) = |H(g)| = |\mathbb{Z}|$, dunque infinito
   - $d>0 \implies d = o(g)$
- - ⚠️ \*\*MANCA DIMOSTRAZIONE\*\*
+ - ⚠️ **MANCA DIMOSTRAZIONE**
 
 

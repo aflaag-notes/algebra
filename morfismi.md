@@ -2,15 +2,15 @@
 
 ## Def 
 
-- \*\*Morfismo di gruppi\*\*
+- **Morfismo di gruppi**
 > - $(G, \cdot), (H, \cdot)$ gruppi
 > - $f: G \rightarrow H$
-> - $f$ \*\*morfismo di gruppi\*\* $\iff f(x\cdot y)=f(x)\cdot f(y) \quad \forall x, y \in G$
+> - $f$ **morfismo di gruppi** $\iff f(x\cdot y)=f(x)\cdot f(y) \quad \forall x, y \in G$
 
-- \*\*Morfismo di anelli\*\*
+- **Morfismo di anelli**
 > - $(A, +, \cdot), (B, +, \cdot)$ anelli
 > - $f: A \rightarrow B$
-> - $f$ \*\*morfismo di anelli\*\* $\iff f(x+ y) = f(x) + f(y)$ e $f(x \cdot y) = f(x) \cdot f(y) \quad \forall x, y \in A$
+> - $f$ **morfismo di anelli** $\iff f(x+ y) = f(x) + f(y)$ e $f(x \cdot y) = f(x) \cdot f(y) \quad \forall x, y \in A$
 >     -   la stessa definizione si applica per morfismo di campi
 
 ## Oss
@@ -38,13 +38,13 @@
 - **Dim**
   - per dimostrazione precedente, $1\_H = f(1\_G) = f(g \cdot g^{-1})=f(g) \cdot f(g^{-1}) \implies 1\_H = f(g) \cdot f(g^{-1}) \implies f(g)^{-1} = f(g^{-1})$
 
-\*\*\*\*
+****
 
 # Isomorfismi
 
 ## Def
 
-- \*\*Isomorfismo\*\*
+- **Isomorfismo**
 > - $f$ isomorfismo $\iff f$ morfismo e $f$ biiettiva
 
 ## Oss
@@ -55,7 +55,7 @@
   - $f ^{-1}: H \rightarrow G$ morfismo
 - **Dim**
   - $\forall g \in G, h \in H \quad \exists !f^{-1} \mid \left\{\begin{array}{c}f^{-1}(f(g))=g \\ f\left(f^{-1}(h)\right)=h\end{array}\right.$
-  - $\forall h, h^{\prime} \in H \quad f^{-1}\left(h h^{\prime}\right)=f^{-1}(h) \cdot f^{-1}\left(h^{\prime}\right) \iff f\left(f^{-1}\left(h h^{\prime})\right)=f(f^{-1}(h)\cdot f^{-1}(h^\prime)) = f(f^{-1}(h))\cdot f(f^{-1}(h^\prime))\right.$, dunque $hh^\prime =  f(f^{-1}(h))\cdot f(f^{-1}(h^\prime)) = hh^\prime$ ⚠️  \*\*RIVEDI\*\*
+  - $\forall h, h^{\prime} \in H \quad f^{-1}\left(h h^{\prime}\right)=f^{-1}(h) \cdot f^{-1}\left(h^{\prime}\right) \iff f\left(f^{-1}\left(h h^{\prime})\right)=f(f^{-1}(h)\cdot f^{-1}(h^\prime)) = f(f^{-1}(h))\cdot f(f^{-1}(h^\prime))\right.$, dunque $hh^\prime =  f(f^{-1}(h))\cdot f(f^{-1}(h^\prime)) = hh^\prime$ ⚠️  **RIVEDI**
 
 ## Ex
 
@@ -98,7 +98,7 @@
 ## Oss
 
 - **Hp**
-  - ⚠️ \*\*MANCA UN TEOREMA CHE NON HO CAPITO NIENTE\*\*
+  - ⚠️ **MANCA UN TEOREMA CHE NON HO CAPITO NIENTE**
 - **Th**
 - **Dim**
 
@@ -135,7 +135,7 @@ $f([x \cdot y])=f([x]) \cdot f([y])$
 - **Th**
   - $f$ morfismo di gruppi $(\textrm{Bij}(G), \circ)$ e $(G, \cdot)$
 - **Dim**
-  - \*\*⚠️ MANCA DIMOSTRAZIONE\*\*
+  - **⚠️ MANCA DIMOSTRAZIONE**
 
 ## Ex
 
@@ -147,19 +147,19 @@ $f([x \cdot y])=f([x]) \cdot f([y])$
 - **Dim**
   - $\forall h, h^\prime \in G \quad f(h) \cdot f\left(h^{\prime}\right)=\left(g h g^{-1}\right)\cdot \left(g h^{\prime} g^{-1}\right)=gh(g^{-1} \cdot g)h^\prime g^{-1}=g h h^{\prime} g^{-1}=f\left(h h^{\prime})\right.$
 
-\*\*\*\*
+****
 
 # Kernel e Immagine
 
 ## Def
 
-- \*\*Kernel e Immagine di gruppi\*\*
+- **Kernel e Immagine di gruppi**
 > - $G, H$ gruppi
 > - $f: G \rightarrow H$ morfismo
 > - $\textrm{Ker}(f):=\{g \in G \mid f(g) = 1\_H\}$
 > - $\textrm{Im}(f):=\{h \in H \mid \exists g \in G : f(g) = h\}$
 
- -  \*\*Kernel e Immagine di anelli\*\*
+ -  **Kernel e Immagine di anelli**
 > - $A, B$ gruppi
 > - $f: A \rightarrow B$ morfismo
 > - $\textrm{Ker}(f):=\{a \in A \mid f(a)= 0\_B\}$
@@ -232,7 +232,7 @@ $f([x \cdot y])=f([x]) \cdot f([y])$
 - **Hp**
   - $f: \mathbb{Z} \in \mathbb{C} - \{0\} : k \rightarrow \zeta^k$
   - $f$ morfismo di gruppi $(\mathbb{Z}, +)$ e $(\mathbb{C} - \{0\}, \cdot)$
-  - $I(n)$ ideale generato da $n$ \*\*⚠️ CHI È N\*\*
+  - $I(n)$ ideale generato da $n$ **⚠️ CHI È N**
 - **Th**
   - $\textrm{Ker}(f) = I(n)$
 - **Dim**
@@ -240,7 +240,7 @@ $f([x \cdot y])=f([x]) \cdot f([y])$
 
 ## Oss
 
-- ⚠️ \*\*coso finale su H che non ho capito niente\*\*
+- ⚠️ **coso finale su H che non ho capito niente**
 
 ## Oss
 

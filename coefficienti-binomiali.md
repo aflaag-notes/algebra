@@ -7,16 +7,16 @@
 - $\left(\begin{array}{l}n \\ k\end{array}\right)=\left(\begin{array}{l}n-1 \\ k+1\end{array}\right)+\left(\begin{array}{c}n-1 \\ k\end{array}\right)$
    - $\binom{n - 1}{k +1}+ \binom{n - 1}{k}=$$\frac{(n-1) !}{(k+1) !(n-1-(k+1)) !}+\frac{(n-1) !}{k !(n-1-k) !}$ $=\frac{(n-1) !}{(k+1) k !(n-2-k) !}+\frac{(n-1) !}{k !(n-1-k) !} =$ $\frac{(n-1-k)(n-1) !+(k+1)(n-1) !}{(k+1) !(n-k-1) !}=$ $\frac{(n-1) !(n-1-k+k+1)}{(k+1) !(n-1-k) !}=$ $\frac{(n-1) ! \cdot n}{(n+1) !(n-1-k) !} =$ $\frac{n !}{(k+1) !(n-k-1) !}=\binom{n}{k + 1}$
 
-\*\*\*\*
+****
 
 # Teorema del binomio di newton
 
 - $\forall a, b \in A$ anello commutativo, $\forall n \in \mathbb{N} \quad (a+b )^n = \displaystyle{\sum\_{k = 0}^{n}{\binom{n}{k} a^k b ^{n - k}}}$
   - $n = 0 \implies (a+b)^0 = \displaystyle{\sum\_{k = 0}^{0}{\binom{0}{k}a^kb^{0 - k}}} = \binom{0}{0}a^0b^0=1$
   - $(a+ b)^{n + 1} = (a+b)^{n }\cdot (a+b)$
-  - ⚠️ \*\*INCOMPLETA\*\*
+  - ⚠️ **INCOMPLETA**
 
-\*\*\*\*
+****
 
 ## Lemma
 

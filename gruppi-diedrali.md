@@ -2,9 +2,9 @@
 
 ## Def
 
-- \*\*Gruppo diedrale\*\*
+- **Gruppo diedrale**
 > - $n \in \mathbb{N}\_{\ge 2}$
-> - $D\_n$ è l'\*\*insieme delle simmetrie dell'$n$-gono regolare\*\*
+> - $D\_n$ è l'**insieme delle simmetrie dell'$n$-gono regolare**
 >   - l'insieme delle rotazioni che lasciano l'$n$-gono invariato, e delle riflessioni rispetto agli assi di simmetria
 > - $\rho :=$ rotazione di $\frac{360°}{n}$ gradi di un $n$-gono regolare
 > - $\sigma\_i :=$ riflessione rispetto all'$i$-esimo asse di simmetria dell'$n$-gono regolare
@@ -74,7 +74,7 @@
         - $f(a) = \sigma\_a$
       - $b: v\_j \rightarrow v\_k$ è la simmetria che manda $v\_j$ in $v\_k$, che corrisponde a $\sigma\_b: j \rightarrow k$ attraverso $f$
         - $f(b) = \sigma\_b$
-      - $f$ morfismo $\iff b \cdot a = v\_{\sigma\_b \cdot \sigma\_{a}}$ ⚠️ \*\*RIVEDI, PERCHÉ\*\*
+      - $f$ morfismo $\iff b \cdot a = v\_{\sigma\_b \cdot \sigma\_{a}}$ ⚠️ **RIVEDI, PERCHÉ**
           - $\left.\begin{array}{l}a(v\_i) = v\_j \\ b(v\_j) = v\_k\end{array}\right\} \implies b \cdot a = b(a(v\_i)) = v\_k$
           - $\left.\begin{array}{l}\sigma\_a(i) = j \\ \sigma\_b(j) = k\end{array}\right\} \implies \sigma\_b \cdot \sigma\_a =\sigma\_b(\sigma\_a(i)) = k$
           - quinidi $b \cdot a = b(a(v\_i)) = v\_k = v\_{\sigma\_b(\sigma\_a(i))} = v\_{\sigma\_b \cdot \sigma\_a}$
@@ -83,7 +83,7 @@
 
 ## Def
 
-- \*\*Gruppo di Klein\*\*
+- **Gruppo di Klein**
 > - $K\_4 := \{1, a, b, c\}$
 > - $a^2=b^2=c^2=1$
 > - $ab=c=ba$
