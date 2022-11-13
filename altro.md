@@ -6,7 +6,7 @@
 
 - $[a] \in \mathbb{Z}_n^\*, \quad \varphi(n) := \mid \mathbb{Z}_n^\* \mid = \{0 \lt a \lt n \mid \textrm{MCD}(a, n) = 1\}$
   - $\textrm{MCD}(m, n) = 1 \implies \varphi(m \cdot n) = \varphi(m) \cdot \varphi(n)$
-    - $[a]  \in \mathbb{Z}_{m n}^{\*} \iff [a] \in \mathbb{Z}_{m}^{\*} \land [a] \in \mathbb{Z}^\*_{n}$
+    - $[a] \in \mathbb{Z}_{m n}^{*} \iff [a] \in \mathbb{Z}_{m}^{\*} \land [a] \in \mathbb{Z}^*_{n}$
       - _prima implicazione_
         - $a \ (\bmod n) \in \mathbb{Z}_{mn}^\* \implies \exists x \in \mathbb{Z} \mid ax \equiv 1 \ (\bmod mn)$
         - $\left.\begin{array}{l}a \mid b \\ x \equiv y \ (\bmod b)\end{array}\right\} x \equiv y \ (\bmod a) \implies \left\{\begin{array}{l}m, n \mid m n \\ a x \equiv 1\ (\bmod m n)\end{array}\iff\left\{\begin{array}{l}a x \equiv 1\ (\bmod m) \\ a x \equiv 1 \ ( \bmod n)\end{array}\right.\right.$ $\implies\left\{\begin{array}{l}{[a] \in \mathbb{Z}_{m}^{\*}} \\ {[a] \in \mathbb{Z}_{n}^{\*}}\end{array}\right.$
