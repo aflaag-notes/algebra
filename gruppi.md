@@ -6,7 +6,7 @@
   - $(S, m)$ \*\*monoide\*\* $\iff$ è un semigruppo in cui \*\*esiste l'elemento neutro\*\* rispetto a $m$
     - $\exists e  \mid m(x, e) = m(e, x) = x \quad \forall x \in S$
     - se esiste, $e$ è unico
-        - per assurdo, $\exists e_1, e_2 \mid e_1 \neq e_2$ elementi neutri, allora $\left.\begin{array}{l}m\left(x, e_{1}\right)=m\left(e_{1}, x\right)=x \\ m\left(x, e_{2}\right)=m\left(e_{2}, x\right)=x\end{array}\right\} \Rightarrow m\left(e_{1}, x\right)=m\left(e_{2}, x\right) \implies e_1=e_2$ necessariamente
+        - per assurdo, $\exists e\_1, e\_2 \mid e\_1 \neq e\_2$ elementi neutri, allora $\left.\begin{array}{l}m\left(x, e\_{1}\right)=m\left(e\_{1}, x\right)=x \\ m\left(x, e\_{2}\right)=m\left(e\_{2}, x\right)=x\end{array}\right\} \Rightarrow m\left(e\_{1}, x\right)=m\left(e\_{2}, x\right) \implies e\_1=e\_2$ necessariamente
 
   - $(S, m)$ \*\*gruppo\*\* $\iff$ è un monoide in cui \*\*esiste l'inverso\*\* per ogni elemento di $S$
     - $\exists x^{-1} \mid m(x, x^{-1}) =m(x^{-1}, x) =e \quad \forall x \in S$
@@ -22,10 +22,10 @@
       - ⚠️ \*\*MANCA DIMOSTRAZIONE\*\*
   - $(X^X, \circ)$ è \*\*monoide\*\*
     - $(f \circ g) \circ h=f \circ(g \circ h)$
-    - $\forall X, \ \exists \textrm{id}_X \mid \textrm{id}_X : X \rightarrow X : x \rightarrow x$, che costituisce dunque l'elemento neutro, mappando ogni elemento in sé stesso
-  - $S_X = \{f \mid f : X \rightarrow Y \ \textrm{biiettiva}\}$ è detto \*\*gruppo simmetrico di $X$\*\*
-    - $|S_X|$ = $|X|!$
-    - $(S_X, \circ)$ è un \*\*gruppo\*\*, non commutativo se $|X| \ge 3$
+    - $\forall X, \ \exists \textrm{id}\_X \mid \textrm{id}\_X : X \rightarrow X : x \rightarrow x$, che costituisce dunque l'elemento neutro, mappando ogni elemento in sé stesso
+  - $S\_X = \{f \mid f : X \rightarrow Y \ \textrm{biiettiva}\}$ è detto \*\*gruppo simmetrico di $X$\*\*
+    - $|S\_X|$ = $|X|!$
+    - $(S\_X, \circ)$ è un \*\*gruppo\*\*, non commutativo se $|X| \ge 3$
 
 \*\*\*\*
 

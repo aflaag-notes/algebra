@@ -11,8 +11,8 @@
 
 # Teorema del binomio di newton
 
-- $\forall a, b \in A$ anello commutativo, $\forall n \in \mathbb{N} \quad (a+b )^n = \displaystyle{\sum_{k = 0}^{n}{\binom{n}{k} a^k b ^{n - k}}}$
-  - $n = 0 \implies (a+b)^0 = \displaystyle{\sum_{k = 0}^{0}{\binom{0}{k}a^kb^{0 - k}}} = \binom{0}{0}a^0b^0=1$
+- $\forall a, b \in A$ anello commutativo, $\forall n \in \mathbb{N} \quad (a+b )^n = \displaystyle{\sum\_{k = 0}^{n}{\binom{n}{k} a^k b ^{n - k}}}$
+  - $n = 0 \implies (a+b)^0 = \displaystyle{\sum\_{k = 0}^{0}{\binom{0}{k}a^kb^{0 - k}}} = \binom{0}{0}a^0b^0=1$
   - $(a+ b)^{n + 1} = (a+b)^{n }\cdot (a+b)$
   - ⚠️ \*\*INCOMPLETA\*\*
 
@@ -25,20 +25,20 @@
   - poiché $p$ è primo in ipotesi, non è possibile semplificarlo con nessun fattore del denominatore
     - $k \lt p \implies p$ non può essere nella fattorizzazione di $k!$
     - $p - k \lt p \implies p$ non può essere nella fattorizzazione di $(p - k)!$
-- $\forall n \in \mathbb{Z}, p \in \mathbb{P},[a] \in \mathbb{Z}_{p} \quad p \mid n \implies n \cdot [a] = [0]$
+- $\forall n \in \mathbb{Z}, p \in \mathbb{P},[a] \in \mathbb{Z}\_{p} \quad p \mid n \implies n \cdot [a] = [0]$
   - $p \mid n \implies \exists k \in \mathbb{Z} | pk = n$
   - $n \cdot[a]=[a]+\ldots+[a] = [n \cdot a]$
-    - $[pk \cdot a] = p \cdot [ka] \implies [pka]$ è multiplo di $p$, e quindi $n \cdot[a] = [pka] = [0]$ in $\mathbb{Z}_p$
-  - per il lemma precedente, $\displaystyle{p \ \bigg\vert \binom{p}{k}}$, quindi $\displaystyle{\binom{p}{k} \cdot [a] = [0]} \quad \forall [a] \in \mathbb{Z}_p, k \in \mathbb{Z} \mid 0 \lt k \lt p$
+    - $[pk \cdot a] = p \cdot [ka] \implies [pka]$ è multiplo di $p$, e quindi $n \cdot[a] = [pka] = [0]$ in $\mathbb{Z}\_p$
+  - per il lemma precedente, $\displaystyle{p \ \bigg\vert \binom{p}{k}}$, quindi $\displaystyle{\binom{p}{k} \cdot [a] = [0]} \quad \forall [a] \in \mathbb{Z}\_p, k \in \mathbb{Z} \mid 0 \lt k \lt p$
 
 ## Corollario
 
-- $\forall p \in \mathbb{P} \quad ([a]+[b])^{p}=[a]^{p}+[b]^{p} \$ in $\mathbb{Z}_p$
-  - $([a]+[b])^{p}=$$\displaystyle \sum_{k=0}^{p}\left(\begin{array}{l}p \\ k\end{array}\right)[a]^{k}\cdot[b]^{p-k}=\sum_{k=0}^{p}\left(\begin{array}{l}p \\ k\end{array}\right)\left[a^{k} \cdot b^{p-k}\right]$
+- $\forall p \in \mathbb{P} \quad ([a]+[b])^{p}=[a]^{p}+[b]^{p} \$ in $\mathbb{Z}\_p$
+  - $([a]+[b])^{p}=$$\displaystyle \sum\_{k=0}^{p}\left(\begin{array}{l}p \\ k\end{array}\right)[a]^{k}\cdot[b]^{p-k}=\sum\_{k=0}^{p}\left(\begin{array}{l}p \\ k\end{array}\right)\left[a^{k} \cdot b^{p-k}\right]$
     - $p \in \mathbb{P} \implies \displaystyle{p \ \bigg\vert \left(\begin{array}{l}p \\ k\end{array}\right)} \implies \left(\begin{array}{l}p \\ k\end{array}\right)\left[\begin{array}{l}a^{k} \cdot b^{p-k}\end{array}\right]= [0] \quad \forall k \in \mathbb{Z} \mid 0 \lt k \lt p$
-      - di conseguenza, nella sommatoria tutti i termini con $k \in (0, p)$ si annullano, in quanto congruenti a $[0]$ in $\mathbb{Z}_p$
-      - $\displaystyle ([a]+[b])^{p}=\sum_{k=0}^{p}\left(\begin{array}{l}p \\ k\end{array}\right)\left[a^{k} \cdot b^{p-k}\right]= \left(\begin{array}{l}p \\ 0\end{array}\right)[b]^{p}+\left(\begin{array}{l}p \\ p\end{array}\right)[a]^{p}=[a]^{p}+[b]^{p}$
-- $\left(\left[a_{1}\right]+\ldots+\left[a_{n}\right]\right)^{p}=\left[a_{1}\right]^{p}+\ldots+\left[a_{n}\right]^{p}$
-  - $n = 1 \implies$ $\left[a_{1}\right]^{p}=\left[a_{1}\right]^{p}$
-  - $n>1 \implies\left(\left[a_{1}\right]+\ldots+\left[a_{n}\right]+\left[a_{n+1}\right]\right)^{p}=  \left[a_{1}\right]^{p}+\ldots+\left[a_{n}\right]^{p}+\left[a_{n+1}\right]^{p}$
-    - per ipotesi induttiva, $\left[a_{1}\right]^{p}+\ldots+\left[a_{n}\right]^{p}+\left[a_{n+1}\right]^{p}=  \left(\left[a_{1}\right]+\ldots+\left[a_{n}\right]\right)^{p}+\left[a_{n+1}\right]^{p}=  \left(\left[a_{1}\right]+\ldots+\left[a_{n+1}\right]\right)^{p}$
+      - di conseguenza, nella sommatoria tutti i termini con $k \in (0, p)$ si annullano, in quanto congruenti a $[0]$ in $\mathbb{Z}\_p$
+      - $\displaystyle ([a]+[b])^{p}=\sum\_{k=0}^{p}\left(\begin{array}{l}p \\ k\end{array}\right)\left[a^{k} \cdot b^{p-k}\right]= \left(\begin{array}{l}p \\ 0\end{array}\right)[b]^{p}+\left(\begin{array}{l}p \\ p\end{array}\right)[a]^{p}=[a]^{p}+[b]^{p}$
+- $\left(\left[a\_{1}\right]+\ldots+\left[a\_{n}\right]\right)^{p}=\left[a\_{1}\right]^{p}+\ldots+\left[a\_{n}\right]^{p}$
+  - $n = 1 \implies$ $\left[a\_{1}\right]^{p}=\left[a\_{1}\right]^{p}$
+  - $n>1 \implies\left(\left[a\_{1}\right]+\ldots+\left[a\_{n}\right]+\left[a\_{n+1}\right]\right)^{p}=  \left[a\_{1}\right]^{p}+\ldots+\left[a\_{n}\right]^{p}+\left[a\_{n+1}\right]^{p}$
+    - per ipotesi induttiva, $\left[a\_{1}\right]^{p}+\ldots+\left[a\_{n}\right]^{p}+\left[a\_{n+1}\right]^{p}=  \left(\left[a\_{1}\right]+\ldots+\left[a\_{n}\right]\right)^{p}+\left[a\_{n+1}\right]^{p}=  \left(\left[a\_{1}\right]+\ldots+\left[a\_{n+1}\right]\right)^{p}$
