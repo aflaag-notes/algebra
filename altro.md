@@ -1,38 +1,3 @@
-# Invertibili e divisori dello $0$
-
-- $(A, +, \cdot)$ anello commutativo
-  - $a \in A$ è detto **invertibile** \( \iff \exists a^{-1} \in A \mid a \cdot a^{-1}=e \)
-    - $A^* := \{a \in A \mid a \ \textrm{invertibile}\} \subset A$
-    - $(A^*, \cdot)$ è un **sottogruppo** di $(A, \cdot)$
-      - $1^{-1} = 1 \implies 1$ invertibile $\implies 1 \in A^*$ per definizione di $A^* \implies \exists e \in A^*$
-      - \( \forall x, y \in A^{*} \quad x \cdot y \in A^{*} \)
-      - \( \forall x \in A^{*} \quad \exists x^{-1} \) per definizione di $A^*$, ma poiché $x^{-1}$ è inverso di $x$, allora $x^{-1} \in A^*$ per definizione
-    - $(A^*, \cdot)$ è un **gruppo**
-      - $(xy)z = x(yz)$
-      - $\exists e$ ed è $1 \in A^*$
-      - \( \forall x \in A^{*} \quad \exists x^{-1}\) per definizione
-
-  - $a \in A$ è detto **divisore dello $0$** \( \iff \exists b \in A, b \neq 0 \mid a \cdot b=0 \)
-    - $A$ è detto **dominio di integrità** $\iff \nexists x \mid x \textrm{  divisore dello 0}$ oltre a $x = 0$
-    - $A$ è dominio di integrità $\iff$ in $A$ vale la legge di annullamento del prodotto
-      - un divisore dello $0$ non è invertibile
-
-*****
-
-# Insiemi quoziente $\mathbb{Z}_n$
-
-- $\mathbb{Z}_n$ dominio $\iff$ $n$ primo
-      - ⚠️ **MANCA DIMOSTRAZIONE**
-- $\forall [x] \in \mathbb{Z}_n, \ \textrm{MCD}(x, n) = 1 \iff [x] \in \mathbb{Z}^*_n$
-      - ⚠️ **MANCA DIMOSTRAZIONE**
-    - $p$ primo $\implies \mathbb{Z}_p^* = \{[x] \in \mathbb{Z}_p \mid  0 \lt x \lt p\} = \mathbb{Z}_p - \{0\}$
-        - $p$ primo $\implies$ ogni numero è coprimo con $p$
-          - $\nexists x \mid [0]$ invertibile
-          - $[p] \notin \mathbb{Z}_p$ per definizione di $\mathbb{Z}_p$
-        - di conseguenza, $p$ primo $\implies \mathbb{Z}_p$ campo, per definizione di campo in quanto $\mathbb{Z}^*_p = \mathbb{Z} - \{0\}$
-
-****
-
 # Criteri di divisibilità
 
 ****
@@ -41,21 +6,21 @@
 
 - $[a] \in \mathbb{Z}_n^*, \quad \varphi(n) := \mid \mathbb{Z}_n^* \mid = \{0 \lt a \lt n \mid \textrm{MCD}(a, n) = 1\}$
   - $\textrm{MCD}(m, n) = 1 \implies \varphi(m \cdot n) = \varphi(m) \cdot \varphi(n)$
-    - \( [a]  \in \mathbb{Z}_{m n}^{*} \iff[a] \in \mathbb{Z}_{m}^{*} \land [a] \in \mathbb{Z}^*_{n}\)
+    - $[a]  \in \mathbb{Z}_{m n}^{*} \iff[a] \in \mathbb{Z}_{m}^{*} \land [a] \in \mathbb{Z}^*_{n}\)
       - _prima implicazione_
         - $a \ (\bmod n) \in \mathbb{Z}_{mn}^* \implies \exists x \in \mathbb{Z} \mid ax \equiv 1 \ (\bmod mn)$
-        - \( \left.\begin{array}{l}a \mid b \\ x \equiv y \ (\bmod b)\end{array}\right\} x \equiv y \ (\bmod a) \implies \left\{\begin{array}{l}m, n \mid m n \\ a x \equiv 1\ (\bmod m n)\end{array}\iff\left\{\begin{array}{l}a x \equiv 1\ (\bmod m) \\ a x \equiv 1 \ ( \bmod n)\end{array}\right.\right. \) \( \implies\left\{\begin{array}{l}{[a] \in \mathbb{Z}_{m}^{*}} \\ {[a] \in \mathbb{Z}_{n}^{*}}\end{array}\right. \)
+        - $\left.\begin{array}{l}a \mid b \\ x \equiv y \ (\bmod b)\end{array}\right\} x \equiv y \ (\bmod a) \implies \left\{\begin{array}{l}m, n \mid m n \\ a x \equiv 1\ (\bmod m n)\end{array}\iff\left\{\begin{array}{l}a x \equiv 1\ (\bmod m) \\ a x \equiv 1 \ ( \bmod n)\end{array}\right.\right. \) $\implies\left\{\begin{array}{l}{[a] \in \mathbb{Z}_{m}^{*}} \\ {[a] \in \mathbb{Z}_{n}^{*}}\end{array}\right. \)
       - _seconda implicazione_
-        - \( [a] \in \mathbb{Z}_{m}^{*} \wedge[a] \in \mathbb{Z}_{n}^{*} \Longrightarrow \exists y, z \mid\left\{\begin{array}{l}a y \equiv 1 \ (\bmod m) \\ a z \equiv 1\ (\bmod n )\end{array}\right. \), e per il teorema cinese dei resti $\exists ! [x] \in \mathbb{Z}_{mn}$, che troviamo ponendo \( \left\{\begin{array}{l}x \equiv y\ (\bmod m) \\ x \equiv z\ (\bmod n)\end{array}\right. \implies \left\{\begin{array}{l}a x \equiv a y\ (\bmod m) \\ a x \equiv a z\ (\bmod n)\end{array}\right. \) moltiplicando entrambe le equazioni per $a$, e per il sistema precedente \( \left\{\begin{array}{ll}a x\equiv1 \ (\bmod m) \\ a x\equiv1 \ (\bmod n)\end{array}\right. \), e poiché $m$ e $n$ sono coprimi in ipotesi, per il teorema cinese dei resti \( ax \equiv 1 \ (\bmod mn) \implies [a ] \in \mathbb{Z}_{mn}^*\)
-    - allora, esiste una biezione definita come \( \mathbb{Z}_{m n}^{*} \rightarrow \mathbb{Z}_{m}^{*} \times \mathbb{Z}_{n}^{*} \)
-      - \( \varphi(m \cdot n):=\left|\mathbb{Z}_{m n}^{*}\right|=\left|\mathbb{Z}_{m}^{*} \times \mathbb{Z}_{n}^{*}\right| \) perché è una biezione, e dunque è pari a \( \left|\mathbb{Z}_{m}^{*}\right| \cdot\left|\mathbb{Z}_{n}^{*}\right|=\varphi(m) \cdot \varphi(n) \)
+        - $[a] \in \mathbb{Z}_{m}^{*} \wedge[a] \in \mathbb{Z}_{n}^{*} \Longrightarrow \exists y, z \mid\left\{\begin{array}{l}a y \equiv 1 \ (\bmod m) \\ a z \equiv 1\ (\bmod n )\end{array}\right. \), e per il teorema cinese dei resti $\exists ! [x] \in \mathbb{Z}_{mn}$, che troviamo ponendo $\left\{\begin{array}{l}x \equiv y\ (\bmod m) \\ x \equiv z\ (\bmod n)\end{array}\right. \implies \left\{\begin{array}{l}a x \equiv a y\ (\bmod m) \\ a x \equiv a z\ (\bmod n)\end{array}\right. \) moltiplicando entrambe le equazioni per $a$, e per il sistema precedente $\left\{\begin{array}{ll}a x\equiv1 \ (\bmod m) \\ a x\equiv1 \ (\bmod n)\end{array}\right. \), e poiché $m$ e $n$ sono coprimi in ipotesi, per il teorema cinese dei resti $ax \equiv 1 \ (\bmod mn) \implies [a ] \in \mathbb{Z}_{mn}^*\)
+    - allora, esiste una biezione definita come $\mathbb{Z}_{m n}^{*} \rightarrow \mathbb{Z}_{m}^{*} \times \mathbb{Z}_{n}^{*} \)
+      - $\varphi(m \cdot n):=\left|\mathbb{Z}_{m n}^{*}\right|=\left|\mathbb{Z}_{m}^{*} \times \mathbb{Z}_{n}^{*}\right| \) perché è una biezione, e dunque è pari a $\left|\mathbb{Z}_{m}^{*}\right| \cdot\left|\mathbb{Z}_{n}^{*}\right|=\varphi(m) \cdot \varphi(n) \)
 
 - $p \in \mathbb{P}, k \ge 1 \implies \phi(p^k) = p^{k -1}(p-1)$
   - $0 \le a \lt p^k \in \mathbb{Z}_{p^k}^* \iff \textrm{MCD}(a, p^k)=1$, che è vero quando $p \nmid a$ poiché $p \in \mathbb{P}$
   - simmetricamente, $0 \le a \lt p^k \notin \mathbb{Z}_{p^k}^* \iff \exists n \in \mathbb{Z} \mid a = np$
-    - i multipli di $p$ sono tutti \( 0 \leq n p<p^{k} \implies 0 \leq n \lt p ^{k - 1}\) **⚠️ INCOMPLETA**
-  - \( \varphi \left( p^{k}\right):=\left|\mathbb{Z}_{p^{k}}^{*}\right|= \)\( \left| \mathbb{Z}_{p^{k}}-\left\{[a] \in \mathbb{Z}_{p^{k}} \mid\nexists[a]^{-1} \in \mathbb{Z}_{p^{k}}\right\} \right|\) = $p^k - p^{k - 1} = p^{k - 1}(p - 1)$
-- dato \( n=p_{1}^{i_{1}} \cdot \ldots \cdot p_{k}^{i_k} \mid p_1, \ldots, p_k \in \mathbb{P}, i_1, \ldots, i_k \ge 1\) scomposto in fattori primi, \(\varphi(n) =\varphi\left(p_{1}^{i_{1}}\right) \cdot \ldots \cdot \varphi\left(p_{k}^{i_{k}}\right)= p_1^{i_1 - 1}(p_1 - 1) \cdot \ldots \cdot p_k^{i_k - 1}(p_k -1) = p_1^{i_1} \cdot \ldots \cdot p_k^{i_k} \cdot \dfrac{p_1 - 1}{p_1} \cdot \ldots \cdot \dfrac{p_k - 1}{p_k}= n \cdot \dfrac{p_1 - 1}{p_1} \cdot \ldots \cdot \dfrac{p_k - 1}{p_k} \implies\) \(\displaystyle{ \varphi(n)=n \cdot \prod_{p \mid n}\left(1-\frac{1}{p}\right) }\)
+    - i multipli di $p$ sono tutti $0 \leq n p<p^{k} \implies 0 \leq n \lt p ^{k - 1}\) **⚠️ INCOMPLETA**
+  - $\varphi \left( p^{k}\right):=\left|\mathbb{Z}_{p^{k}}^{*}\right|= \)$\left| \mathbb{Z}_{p^{k}}-\left\{[a] \in \mathbb{Z}_{p^{k}} \mid\nexists[a]^{-1} \in \mathbb{Z}_{p^{k}}\right\} \right|\) = $p^k - p^{k - 1} = p^{k - 1}(p - 1)$
+- dato $n=p_{1}^{i_{1}} \cdot \ldots \cdot p_{k}^{i_k} \mid p_1, \ldots, p_k \in \mathbb{P}, i_1, \ldots, i_k \ge 1\) scomposto in fattori primi, $\varphi(n) =\varphi\left(p_{1}^{i_{1}}\right) \cdot \ldots \cdot \varphi\left(p_{k}^{i_{k}}\right)= p_1^{i_1 - 1}(p_1 - 1) \cdot \ldots \cdot p_k^{i_k - 1}(p_k -1) = p_1^{i_1} \cdot \ldots \cdot p_k^{i_k} \cdot \dfrac{p_1 - 1}{p_1} \cdot \ldots \cdot \dfrac{p_k - 1}{p_k}= n \cdot \dfrac{p_1 - 1}{p_1} \cdot \ldots \cdot \dfrac{p_k - 1}{p_k} \implies\) $\displaystyle{ \varphi(n)=n \cdot \prod_{p \mid n}\left(1-\frac{1}{p}\right) }\)
 
 ## Teorema di Eulero
 
@@ -83,5 +48,5 @@
   - $d:= e^{-1} \ (\bmod \lambda(n))$ viene calcolato tramite l'algoritmo di Euclide
   - $n, e$ **pubbliche**, $d$ **privata**
       - $n, d, e$ sono tali che $(a^e)^d \equiv a  \ (\bmod n), \ \textrm{MCD}(a, n)=1$
-        - \( \left\{\begin{array}{l}e d \equiv 1\ (\bmod \lambda(n)) \\ a^{\lambda(n)} \equiv 1\ (\bmod n)\end{array}\right. \)
+        - $\left\{\begin{array}{l}e d \equiv 1\ (\bmod \lambda(n)) \\ a^{\lambda(n)} \equiv 1\ (\bmod n)\end{array}\right. \)
         - **⚠️ NON HO CAPITO NIENTE**
