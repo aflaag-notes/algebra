@@ -9,13 +9,13 @@
 
 ## Ex
 
-- \*\*Hp\*\*
+- **Hp**
   - $\left\{\begin{array}{l}F\_0 = 0 \\ F\_1 = 1 \\ F\_n = F\_{n - 1} + F\_{n - 2} \quad \forall n \ge 2\end{array}\right.$ è detta \_sequenza di Fibonacci\_
 
   - $x^2 -x -1 = 0$ ha come soluzioni $\left\{\begin{array}{l}\phi := \dfrac{1+\sqrt{5}}{2} \\ \psi := \dfrac{1 - \sqrt{5}}{2}\end{array}\right.$
-- \*\*Th\*\*
+- **Th**
   - la formula chiusa della serie di Fibonacci è $F\_{n}=\dfrac{\varphi^{n}-\psi^{n}}{\varphi-\psi}=\dfrac{\varphi^{n}-\psi^{n}}{\sqrt{5}}$
-- \*\*Dim\*\*
+- **Dim**
   - $n = 0 \implies F\_0 = \dfrac{\phi^0 - \psi^0}{\sqrt 5} = \dfrac{1 - 1}{\sqrt 5} = 0$
   - $n = 1 \implies F\_1 = \dfrac{\phi^1 - \psi^1}{\phi - \psi} = 1$
   - per il passo induttivo, al posto di trovare il caso $n$ nel caso $n+ 1$, si trova il caso $n - 1$ nel caso $n$

@@ -8,13 +8,13 @@
 
 ## Oss
 
-- \*\*Hp\*\*
+- **Hp**
   - $(A, +, \cdot)$ anello
   - $a \in \mathbb{Z}$
   - $I(a) := \{ax \mid x \in A\}$
-- \*\*Th\*\*
+- **Th**
   - $I(a)$ è un ideale, e prende il nome di \_ideale di $A$ generato da $a \in A$\_
-- \*\*Dim\*\*
+- **Dim**
   - $(I(a), + ) \subset(A, +)$ sottogruppo
     -  $0$ multiplo di $a \implies 0 \in I(a)$
     - $\forall ax, ay \in I(a) \quad ax + ay = a(x + y) \implies ax + ay \in I(a)$ per definizione
@@ -25,11 +25,11 @@
 
 ## Oss
 
-- \*\*Hp\*\*
+- **Hp**
   - $a, b \in \mathbb{Z} - \{0\}$
-- \*\*Th\*\*
+- **Th**
   - $I(a)=I(b) \iff a=\pm b$
-- \*\*Dim\*\*
+- **Dim**
     - $a=\pm b \implies I(a)=I(b)$
       - $a = b \implies I(a)$ e $I(b)$ coincidono
       - $a = -b \implies I(-b) = \{ k(-b) \mid k \in \mathbb{Z}\} = \{(-k)b \mid (-k) \in \mathbb{Z}\} = I(b) = I(-b)=I(a)$
@@ -38,13 +38,13 @@
 
 ## Oss
 
-- \*\*Hp\*\*
+- **Hp**
   - $(A, +, \cdot)$ anello
   - $a\_1, \ldots, a\_n \in\mathbb{Z}$
   - $I(a\_1, \ldots, a\_n) := \{ a\_1b\_1 + \ldots +a\_nb\_n \mid b\_1, \ldots, b\_n \in A\}$
-- \*\*Th\*\*
+- **Th**
   - $I(a\_1, \ldots, a\_n)$ è un ideale, e prende il nome di \_ideale di $A$ generato dagli $a\_1, \ldots, a\_n \in A$\_
-- \*\*Dim\*\*
+- **Dim**
   - $(I(a\_1, \ldots, a\_n) , +) \subset (A, +)$ sottogruppo
     - $0 = a\_1 \cdot 0  + \ldots + a\_n \cdot 0 \in I(a\_1, \ldots a\_n)$, dunque $0$ è l'elemento neutro
     - $\forall x, y \in I(a\_1, \ldots, a\_n) \quad x = a\_1b\_1 + \ldots +a\_nb\_n \land y = a\_1c\_1 + \ldots+ a\_nc\_n \implies x+ y = a\_1b\_1 + \ldots + a\_nb\_n + a\_1c\_1 + \ldots +a\_nc\_n$, che è possibile riscrivere come $x + y = a\_1(b\_1 + c\_1) + \ldots + a\_n(b\_n + c\_n)$, che per definizione implica che $x + y \in I(a\_1, \ldots, a\_n)$
@@ -61,13 +61,13 @@
 
 ## Oss
 
-- \*\*Hp\*\*
+- **Hp**
   - $(A, +, \cdot)$ anello
   - $+: A/I \times A/I \rightarrow A/I$
   - $\cdot : A/I \times A/I \rightarrow A/I$
-- \*\*Th\*\*
+- **Th**
   - $(A/I, +, \cdot)$ è un anello
-- \*\*Dim\*\*
+- **Dim**
   - $(A/I, +)$ è un gruppo abeliano
     - $+$ è un'operazione ben definita per dimostrazione precedente, dunque le proprietà di gruppo abeliano sono rispettate per come l'operazione è definita
   - $(A/I, \cdot)$ è monoide
@@ -77,11 +77,11 @@
 
 ## Oss
 
-- \*\*Hp\*\*
+- **Hp**
   - $I \subset \mathbb{Z}$ ideale
-- \*\*Th\*\*
+- **Th**
   -  $\exists ! \ d \in \mathbb{Z}\_{\ge 0} \mid I = I(d)$, o equivalentemente, $\mathbb{Z}$ è un anello a ideali principali
-- \*\*Dim\*\*
+- **Dim**
   - \*esistenza\*
       - $I = \{0\} \implies I = I(0)$ poiché i multipli di $0$ sono tutti pari a $0$
       - se invece $I \neq \{0\} \implies I \cap \mathbb{Z}\_{>0} \neq \varnothing$, dunque $I$ contiene almeno un numero non nullo, in particolare positivo
@@ -109,23 +109,23 @@
 
 ## Oss
 
-- \*\*Hp\*\*
+- **Hp**
   - $a\_{1}, \ldots a\_{n} \in \mathbb{Z}$
-- \*\*Th\*\*
+- **Th**
   - $\exists ! d=\textrm{MCD}(a\_{1}, \ldots, a\_{n})  \mid I\left(a\_{1}, \ldots a\_{n}\right)=I(d)$
-- \*\*Dim\*\*
+- **Dim**
     - ⚠️ \*\*MANCA DIMOSTRAZIONE\*\*
         - $\forall x \in I(a\_1, \cdots, a\_n), \ d \mid x$, dunque $d$ è \*divisore comune\*
         - $d$ è il \_massimo tra i divisori comuni\_
 
 ## Oss
 
-- \*\*Hp\*\*
+- **Hp**
   - $a\_1, \ldots, a\_n \in \mathbb{Z}$
   - $d := \textrm{MCD}(a\_1, \ldots, a\_n)$
-- \*\*Th\*\*
+- **Th**
   - $\exists x\_1, \ldots, x\_n \in \mathbb{Z} \mid a\_1 x\_1 + \ldots + a\_nx\_n=d$, che prende il nome di \_identità di Bézout\_
-- \*\*Dim\*\*
+- **Dim**
   - per dimostrazione precedente, $I\left(a\_{1}, \ldots a\_{n}\right)=I(d)$, quindi $d \in I(a\_1, \ldots, a\_n) \implies \exists x\_1, \ldots, x\_n \in \mathbb{Z} \mid a\_1x\_1 + \ldots + a\_n x\_n = d$
 
 ## Oss
@@ -145,12 +145,12 @@
 
 ## Oss
 
-- \*\*Hp\*\*
+- **Hp**
   - $(A, +, \cdot)$ anello commutativo
   - $I, J \subset A$ ideali
-- \*\*Th\*\*
+- **Th**
   - $I + J$ è un ideale
-- \*\*Dim\*\*
+- **Dim**
   - $0 \in I, 0 \in J, 0+0=0 \implies 0 \in I + J$ per definizione
   - la chiusura rispetto a $+$ deve implicare che $\forall i\_1, i\_2 \in I, j\_1, j\_2 \in J \quad (i\_1 + j\_1) + (i\_2 + j\_2) \in I + J$
     - poiché $(i\_1 + j\_1) + (i\_2 + j\_2) = (i\_1 + i\_2) + (j\_1 + j\_2)$, e $i\_1 + i\_2 \in I, j\_1 + j\_2 \in J \implies (i\_1 + i\_2) + (j\_1 + j\_2) \in I + J$ per definizione di $I + J$
@@ -167,12 +167,12 @@
 
 ## Oss
 
-- \*\*Hp\*\*
+- **Hp**
   - $(A, +, \cdot)$ anello commutativo
   - $I, J \subset A$ ideali
-- \*\*Th\*\*
+- **Th**
   - $I \cap J$ è un ideale
-- \*\*Dim\*\*
+- **Dim**
   - ⚠️ \*\*MANCA DIMOSTRAZIONE\*\*
 
 ## Def
@@ -184,22 +184,22 @@
 
 ## Oss
 
-- \*\*Hp\*\*
+- **Hp**
   - $(A, +, \cdot)$ anello commutativo
   - $I, J \subset A$ ideali
-- \*\*Th\*\*
+- **Th**
   - $I \cdot J$ è un ideale
-- \*\*Dim\*\*
+- **Dim**
   - ⚠️ \*\*MANCA DIMOSTRAZIONE\*\*
 
 ## Oss
 
-- \*\*Hp\*\*
+- **Hp**
   - $a, b \in \mathbb{Z}$
   - $d:= \textrm{MCD}(a, b)$
-- \*\*Th\*\*
+- **Th**
   - $I(a) + I(b) = I(d)$
-- \*\*Dim\*\*
+- **Dim**
    - per dimostrazione precedente $I(a)$ e $I(b)$ sono ideali, e poiché la somma tra ideali è ben definita, allora $I(a)+I(b)=\{i+j \mid i \in I(a), j \in I(b) \}$
    - $i \in I(a) \implies \exists x \in \mathbb{Z} \mid i = ax$ e $j \in I(b) \implies \exists y \in \mathbb{Z} \mid j = by$
    - quindi $i + j = ax + by \implies$ $I(a)+I(b)=\{a x+b y \mid x, y \in \mathbb{Z}\} = I(a, b)$ per definizione
@@ -207,11 +207,11 @@
 
 ## Oss
 
-- \*\*Hp\*\*
+- **Hp**
   - $a, b \in \mathbb{Z}$
-- \*\*Th\*\*
+- **Th**
   - $I(a) \cdot I(b)=I(a \cdot b)$
-- \*\*Dim\*\*
+- **Dim**
   - $x \in I(a) \cdot I(b) \implies x \in I(a \cdot b)$
     - per dimostrazione precedente $I(a)$ e $I(b)$ sono ideali, e poiché il prodotto tra ideali è ben definito, allora $x \in I(a) \cdot I(b) \implies x = i\_1 j\_1 + \ldots + i\_k j\_k$ con $i\_1 , \ldots , i\_k \in I(a)$ e $j\_1 , \ldots , j\_k \in I(b)$
     - per definizione, $i \in I(a) \implies \exists x \in \mathbb{Z} \mid i = ax$, e dunque $i\_1, \ldots, i\_k = ax\_1, \ldots, ax\_k$ con $x\_1, \ldots, x\_k \in \mathbb{Z}$

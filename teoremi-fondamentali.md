@@ -1,22 +1,22 @@
 # Teorema fondamentale dell'algebra
 
-- \*\*Hp\*\*
+- **Hp**
   - $a\_{0}, \ldots, a\_{n} \in \mathbb{C}$
   - $n \in \mathbb{N}\_{\geq 1}$
   - $a\_n \neq 0$
-- \*\*Th\*\*
+- **Th**
   - $\exists x \in \mathbb{C} \mid x$ è soluzione dell'equazione $a\_{0}+a\_{1} x+a\_{2} x^{2}+\cdots+a\_{n} x^{n}=0$
 
 \*\*\*\*
 
 # Teorema della divisione euclidea con il resto
 
-- \*\*Hp\*\*
+- **Hp**
   - $m \in \mathbb{Z}$
   - $n \in \mathbb{Z} - \{0\}$
-- \*\*Th\*\*
+- **Th**
   - $\exists !  \ q, r \in \mathbb{Z} \mid m=n q+r \quad 0 \leq r<n$
-- \*\*Dim\*\*
+- **Dim**
   - \_esistenza\_
     - sia $[m] \in \mathbb{Z}\_n$
     - $a \equiv m \ (\bmod \ n) \iff \exists p\_1 \in \mathbb{Z} \mid np\_1 = m - a$
@@ -28,12 +28,12 @@
 
 # Teorema di Lagrange (teoria dei gruppi)
 
-- \*\*Hp\*\*
+- **Hp**
   - $G$ gruppo finito
   - $H \subset G$ sottogruppo finito
-- \*\*Th\*\*
+- **Th**
   - $|G| = |H| \cdot |G / H|$
-- \*\*Dim\*\*
+- **Dim**
   - $G$ è decomponibile attraverso l'unione disgiunta delle sue classi laterali sinistre, poiché ogni relazione di equivalenza induce una partizione per dimostrazione precedente
   - in particolare, ogni classe laterale sinistra è equivalente a $xH$ per opportuni $x \in G$, e hanno tutte cardinalità $|H|$ per dimostrazione precedente
   - $G = X\_1 \coprod X\_2 \coprod \ldots \coprod X\_k \implies |G| = |X\_1| + |X\_2| + \ldots  + |X\_k|$ poiché ogni $X\_i$ è una partizione, e dunque disgiunta con le altre, e poiché sono tutte classi laterali sinistre hanno tutte cardinalità $|H|$
@@ -43,11 +43,11 @@
 
 # Teorema fondamentale dell'aritmetica
 
-- \*\*Hp\*\*
+- **Hp**
   - $a, b \in \mathbb{N}$
-- \*\*Th\*\*
+- **Th**
   - $\textrm{mcm}(a, b) \cdot \textrm{MCD}(a, b) = a \cdot b$
-- \*\*Dim\*\*
+- **Dim**
   - $a = 0 \lor b = 0 \lor a = b = 0 \implies \textrm{mcm}(a, b) = 0$
   - $a, b \gt 0$
     - $\mathbb{P} := \{p \in \mathbb{N} \mid p \textrm{ primo}\}$
@@ -68,11 +68,11 @@
 
 ## Lem
 
-- \*\*Hp\*\*
+- **Hp**
   - $a\_1, \ldots, a\_n \ge 2 \in \mathbb{Z}  \mid \textrm{MCD}(a\_i, a\_j) = 1 \quad \forall i, j \in [1, n] : i \neq j$
-- \*\*Th\*\*
+- **Th**
   - $m := \textrm{mcm}(a\_1, \ldots, a\_n)= a\_1 \cdot \ldots \cdot a\_n$
-- \*\*Dim\*\*
+- **Dim**
   - $\textrm{MCD}(a\_i, a\_j) = 1 \implies \forall p \in \mathbb{P} \quad p \mid a\_i \implies p \nmid a\_j$, poiché altrimenti $p \mid \textrm{MCD}(a\_i, a\_j)$
     - prese le fattorizzazioni $\displaystyle a\_1 = \prod\_{p \in \mathbb{P}}{p^{a\_{1\_p}}} \ \ldots \ a\_n = \prod\_{p \in \mathbb{P}}{p^{a\_{n\_p}}}$, allora $\forall p \in \mathbb{P} \quad a\_{i\_p} \gt 0 \implies a\_{j\_p} = 0 \quad \forall i \neq j$, dunque ogni fattore è presente solo in una delle fattorizzazioni degli $n$ interi, poiché coprimi
       - $a\_{k\_p} = 0 \implies p^{a\_{k\_p}} = 1 \implies$ non compare nella fattorizzazione
@@ -81,14 +81,14 @@
     
 ## Lem
 
-- \*\*Hp\*\*
+- **Hp**
   - $a\_1, \ldots, a\_n \ge 2 \in \mathbb{Z}$
   - $m:= \textrm{mcm}(a\_1, \ldots, a\_n)$
-- \*\*Th\*\*
+- **Th**
   - $\exists \phi \mid \phi: \mathbb{Z}\_m \rightarrow \mathbb{Z}\_{a\_1} \times \ldots \times \mathbb{Z}\_{a\_n}: x \ (\bmod m) \rightarrow (x \ (\bmod a\_1), \ldots, x \ (\bmod a\_n))$
   - $\phi$ è una funzione ben definita, ed è iniettiva
   - $\phi$ ben definita $\implies \phi$ non dipende dalla scelta di $[x] \in \mathbb{Z}\_m$
-- \*\*Dim\*\*
+- **Dim**
     - se $\phi$ è ben definita, allora $x\equiv x^{\prime} \ (\bmod m) \implies \left\{\begin{array}{c}x \equiv x^{\prime}\ \left(\bmod a\_{1}\right) \\ \vdots \\ x \equiv x^{\prime}\ \left(\bmod a\_{n}\right)\end{array}\right.$
     - \*\*⚠️ BASTA DIMOSTRARE SOLO UNA DELLE DUE MA NON HO CAPITO PERCHÉ\*\*
     - se $\phi$ è iniettiva, allora vale anche l'implicazione opposta
@@ -96,13 +96,13 @@
 
 ## Teorema
 
-- \*\*Hp\*\*
+- **Hp**
   - $a\_1, \ldots, a\_n \ge 2 \in \mathbb{Z} \mid \textrm{MCD}(a\_i, a\_j) = 1 \quad \forall i, j \in [1, n] \mid i \neq j$
   - $b\_1, \ldots, b\_n \in \mathbb{Z} \mid 0 \leq b\_{1}<a\_{1}, \ldots 0 \leq b\_n \lt a\_n$
   - $m := \textrm{mcm}(a\_1, \ldots, a\_n) = a\_1 \cdot \ldots \cdot a\_n$
-- \*\*Th\*\*
+- **Th**
   - $\exists ! x \ (\bmod m) \mid$ $\left\{\begin{array}{c}x \equiv b\_{1}\ \left(\bmod a\_{1}\right) \\ \vdots \\ x \equiv b\_{n}\ \left(\bmod a\_{n}\right)\end{array}\right.$
-- \*\*Dim\*\*
+- **Dim**
   - per il primo lemma $m = a\_1 \cdot \ldots \cdot a\_n$ poiché coprimi in ipotesi
   - per il secondo lemma $m = \textrm{mcm}(a\_1, \ldots, a\_n) \implies \exists \phi : \mathbb{Z}\_m \rightarrow \mathbb{Z}\_ {a\_1} \times \cdots \times \mathbb{Z}\_{a\_m}$ ben definita e iniettiva
   - $\left|X\_{1} \times \cdots \times X\_{n}\right|=\left|X\_{1}\right| \cdot\ldots\cdot\left|X\_{n}\right| \implies$ $\left|\mathbb{Z}\_{a\_{1}} \times \ldots \times \mathbb{Z}\_{a\_{n}}\right|=\left|\mathbb{Z}\_{a\_{1}}\right| \cdot\ldots\cdot\left|\mathbb{Z}\_{a\_{n}}\right|$
@@ -118,36 +118,36 @@
 
 # Piccolo teorema di Fermat
 
-- \*\*Hp\*\*
+- **Hp**
   - $p \in \mathbb{P}$
   - $a \in \mathbb{Z}$
-- \*\*Th\*\*
+- **Th**
   - $a^{p} \equiv a \ (\bmod p)$
-- \*\*Dim\*\*
+- **Dim**
   - $a=0 \implies [0]^{p} =[0]$
   - $a \gt 0 \implies$ $[a+1]^{p}=[a+1] \implies[a]^{p}+[1]^{p}=[a+1] \implies [a]^p + [1] = [a + 1]$
     - per ipotesi induttiva, $[a]^p = [a]$, dunque $[a] + [1] = [a + 1]$
    
 ## Cor
 
-- \*\*Hp\*\*
+- **Hp**
   - $[a] \in \mathbb{Z}\_{p}-\{0\}$
   - $p \in \mathbb{P}$
-- \*\*Th\*\*
+- **Th**
   - $[a]^{-1}=\left[a^{p-2}\right]$
-- \*\*Dim\*\*
+- **Dim**
   - $[a] \neq [0] \implies [a]^p = [a] \iff [a]^p \cdot [a]^{-1} = [a] \cdot [a]^{-1}$, e dunque $[a]^{p -1} = [1] \implies [a] \cdot [a]^{p -2} = [1]\implies [a]^{-1} = [a]^{p-2}$
 
 \*\*\*\*
 
 # Teorema fondamentale di isomorfismo
 
-- \*\*Hp\*\*
+- **Hp**
   - $A, B$ anelli
   - $f: A \rightarrow B$ morfismo di anelli
-- \*\*Th\*\*
+- **Th**
   - $A / \textrm{Ker}(f) \cong \textrm{Im}(f)$, o alternativamente $\exists \varphi \mid \varphi : A / \textrm{Ker}(f) \rightarrow \textrm{Im}(f): [a] \rightarrow f(a)$ isomorfismo di anelli
-- \*\*Dim\*\*
+- **Dim**
   - $\varphi$ è ben definita
     - $\varphi$ è ben definita $\iff [x] = [y] \implies f(x) = f(y) \quad \forall x, y \in A$
     - $[x] = [y] \iff x \equiv y \ (\bmod \textrm{Ker}(f)) \implies y - x \in \textrm{Ker}(f) \implies f(y - x) = 0\_B$ per definizione, e inoltre $f(y-x) = f(y)-f(x)$ in quanto $f$ morfismo di anelli \*\*⚠️ PERCHE?\*\*, quindi $0\_B = f(y) - f(x) \implies f(y) = f(x)$
@@ -167,32 +167,32 @@
 
 ## Oss
 
-- \*\*Hp\*\*
+- **Hp**
   - $G, H$ gruppi
   - $f: G \rightarrow H$ morfismo di gruppi
-- \*\*Th\*\*
+- **Th**
   - $G / \textrm{Ker}(f) \cong \textrm{Im}(f)$, o alternativamente $\exists \varphi \mid \varphi : G / \textrm{Ker}(f) \rightarrow \textrm{Im}(f): [g] \rightarrow f(g)$ isomorfismo di gruppi
-- \*\*Dim\*\*
+- **Dim**
   - la dimostrazione è analoga al caso degli anelli
 
 \*\*\*\*
 
 ## Teorema di Cayley
 
-- \*\*Hp\*\*
+- **Hp**
   - $G$ gruppo finito
   - $p \in \mathbb{P}$
   - $p \bigg\vert |G|$
-- \*\*Th\*\*
+- **Th**
   - $\exists g \in G \mid o(g) = p$
 
 ## Oss
 
-- \*\*Hp\*\*
+- **Hp**
   - $G$ gruppo $\bigg\vert |G|=4$
-- \*\*Th\*\*
+- **Th**
   - $G \cong \mathbb{Z}\_4$ oppure $G \cong K\_4$
-- \*\*Dim\*\*
+- **Dim**
   - ⚠️ \*\*L'HO SCRITTA MA NON HO CAPITO NIENTE IN QUESTA DIMOSTRAZIONE\*\*
   - preso $a \in G \mid a \neq 1$, per dimostrazione precedente $o(a) \bigg\vert |G| \implies o(a)=1 \lor o(a) =2 \lor o(a) = 4$, ma $a \neq 1 \implies o(a) \neq 1$
   - 2 casi

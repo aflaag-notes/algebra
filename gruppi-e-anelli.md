@@ -24,52 +24,52 @@
 
 ## Oss
 
-- \*\*Hp\*\*
+- **Hp**
   - $G$ monoide
   - $\exists e \in G$ elemento neutro
-- \*\*Th\*\*
+- **Th**
   - $e$ è unico in $G$
-- \*\*Dim\*\*
+- **Dim**
   - per assurdo, $\exists e\_1, e\_2 \mid e\_1 \neq e\_2$ elementi neutri, allora $\left.\begin{array}{l}m\left(x, e\_{1}\right)=m\left(e\_{1}, x\right)=x \\ m\left(x, e\_{2}\right)=m\left(e\_{2}, x\right)=x\end{array}\right\} \implies m\left(e\_{1}, x\right)=m\left(e\_{2}, x\right) \implies e\_1=e\_2$ necessariamente, quindi è unico
 
 ## Oss
 
-- \*\*Hp\*\*
+- **Hp**
   - $(G, m)$ gruppo
   - $x \in G$
   - $\exists x^{-1} \in G$ inverso di $x$ rispetto ad $m$
-- \*\*Th\*\*
+- **Th**
   - $x^{-1}$ è unico in $G$ per $x$ rispetto a $m$
-- \*\*Dim\*\*
+- **Dim**
   - per assurdo, per un certo $x \in G \quad \exists x^{-1}\_1, x^{-1}\_2 \mid x^{-1}\_1 \neq x^{-1}\_2$, allora $\left.\begin{array}{l}m\left(x, x\_{1}^{-1}\right)=m\left(x\_{1}^{-1}, x\right)=e \\ m\left(x, x\_{2}^{-1}\right)=m\left(x\_{2}^{-1}, x\right)=e \end{array}\right\} \implies m\left(e\_{1}^{-1}, x\right)=m\left(x\_{2}^{-1}, x\right) \implies x\_1^{-1}=x\_2^{-1}$ necessariamente, quindi è unico
 
 ## Ex
 
-- \*\*Hp\*\*
+- **Hp**
   - $X, Y$ insiemi,
   - $Y^X = \{f \mid f:X \rightarrow Y\}$
-- \*\*Th\*\*
+- **Th**
   - $(X^X, \circ)$ è \*\*monoide\*\*
-- \*\*Dim\*\*
+- **Dim**
     - $\forall f, g, h \in Y^X \quad (f \circ g) \circ h=f \circ(g \circ h)$. poiché la composizione di funzioni è associativa
     - $\forall X \quad \exists \textrm{id}\_X \mid \textrm{id}\_X : X \rightarrow X : x \rightarrow x$, che costituisce dunque l'elemento neutro, mappando ogni elemento in sé stesso
 
 ## Oss
 
-- \*\*Hp\*\*
+- **Hp**
   - $X, Y$ insiemi finiti
-- \*\*Th\*\*
+- **Th**
   - $\left| Y^X \right| = \left| Y \right| ^ {|X|}$
-- \*\*Dim\*\*
+- **Dim**
   - ⚠️ \*\*MANCA DIMOSTRAZIONE\*\*
 
 ## Oss
 
-- \*\*Hp\*\*
+- **Hp**
   - $S\_X := \{f \mid f : X \rightarrow Y$ biiettiva $\}$
-- \*\*Th\*\*
+- **Th**
   - $(S\_X, \circ)$ è un gruppo, non commutativo se $|X| \ge 3$
-- \*\*Dim\*\*
+- **Dim**
   - la composizione di funzioni è associativa
   - $\textrm{id}$ è biiettiva $\implies \textrm{id} \in S\_X$ per definizione, e costituisce l'elemento neutro
   - $\forall f:X \rightarrow Y \in S\_X \quad \exists f^{-1}: Y \rightarrow X$, poiché $f \in S\_X \implies f$ biiettiva, e ogni funzione biiettiva è invertibile
@@ -110,22 +110,22 @@
 
 ## Oss
 
-- \*\*Hp\*\*
+- **Hp**
   - $(A, +, \cdot)$ anello commutativo
-- \*\*Th\*\*
+- **Th**
   - $(A^\*, \cdot)$ è un gruppo
-- \*\*Dim\*\*
+- **Dim**
     - $(xy)z = x(yz)$
     - $1^{-1} = 1 \implies 1$ invertibile $\implies 1 \in A^\*$ per definizione di $A^\* \implies \exists e \in A^\*$
     - $\forall x \in A^{\*} \quad \exists x^{-1}$ per definizione di $A^\*$, ma poiché $x^{-1}$ è inverso di $x$, allora $x^{-1} \in A^\*$ per definizione
 
 ## Oss
 
-- \*\*Hp\*\*
+- **Hp**
   - $(A, +, \cdot)$ anello commutativo
-- \*\*Th\*\*
+- **Th**
     - $(A^\*, \cdot) \subset (A, \cdot)$ è un sottogruppo
-- \*\*Dim\*\*
+- **Dim**
   - esiste il neutro per dimostrazione precedente
   - $\forall x, y \in A^{\*} \quad \exists x^{-1}, y^{-1}$, e in particolare $y^{-1}x^{-1} = (xy)^{-1} \implies xy \in A^\*$ per definizione
   - è chiuso rispetto agli inversi per dimostrazione precedente
@@ -144,21 +144,21 @@
 
 ## Oss
 
-- \*\*Hp\*\*
+- **Hp**
   - $(A, +, \cdot)$ anello commutativo
-- \*\*Th\*\*
+- **Th**
   - $x \mid 0 \iff x \notin A^\*$
-- \*\*Dim\*\*
+- **Dim**
   - ipotizziamo che $\exists a \in A \mid a$ invertibile e divisore dello $0$, allora $\exists a^{-1} \in A, b \in A - \{0\} \mid a^{-1}a = 1 \land ab = 0$
   - $b = 1 \cdot b = (a^{-1} a)\cdot b = a^{-1}\cdot(ab)=a^{-1}\cdot 0= 0 \ \bot$
 
 ## Oss
 
-- \*\*Hp\*\*
+- **Hp**
   - $A$ campo
-- \*\*Th\*\*
+- **Th**
   - $A$ dominio di integrità
-- \*\*Dim\*\*
+- **Dim**
    - $A$ campo $\implies$ ogni elemento non nullo è invertibile, dunque $A^\*=A - \{0\}$
      - $0$ è l'unico elemento non invertibile
      - $0 \notin A^\* \iff 0 \mid 0$ per dimostrazione precedente
@@ -192,13 +192,13 @@
 
 ## Oss
 
-- \*\*Hp\*\*
+- **Hp**
   1) $H$ è sottogruppo normale
   2) $\forall g \in G, h \in H \quad g \cdot h \cdot g^{-1} \in H$
   3) $\forall g \in G, h \in H \quad \exists k \in H \mid g \cdot h = k \cdot g$
-- \*\*Th\*\*
+- **Th**
   - le tre formulazioni sono equivalenti
-- \*\*Dim\*\*
+- **Dim**
   - 1 $\implies$ 3
     - $gH = Hg$ per ipotesi 1  $\implies \forall gh \in gH = Hg = \{kg \mid k \in H\} \implies \exists k \in H \mid gh = kg$ per definizione di $Hg$
   - 3 $\implies$ 2
@@ -217,14 +217,14 @@
 
 ## Oss
 
-- \*\*Hp\*\*
+- **Hp**
   - $G$ gruppo
   - $H \subset$ sottogruppo normale
   - $G/H := \{[x] \mid x \in H\}$, che per 
   - $\cdot$ è l'operazione di prodotto definita tra classi laterali sinistre in $G/H$, tale che $\forall [x], [y] \in G/H$
-- \*\*Th\*\*
+- **Th**
   - $(G/H, \cdot)$ è un gruppo
-- \*\*Dim\*\*
+- **Dim**
   - l'operazione $\cdot$ è ben definita $\iff$ $\left.\begin{array}{c}{[x]=[x']} \\ {[y]=[y']}\end{array}\right\} \implies [x\cdot y]=[x' \cdot y']$
     - $H$ è un sottogruppo normale, dunque $\left\{\begin{array}{c}{[x]=xH=Hx} \\ {[x']=x'H =Hx'} \\ {[y]=yH=Hy} \\ {[y'] = y'H = Hy'} \\ {[x\cdot y]=x yH = H xy} \\ {[x'\cdot y']=x' y'H = H x'y'}\end{array}\right.$
     - in particolare, $[x]=[x'] \land [x]= xH \land [x'] = x'H \implies xH = x'H$, e in particolare $xH \subset x'H \implies \exists h \in H \mid xh = x'$

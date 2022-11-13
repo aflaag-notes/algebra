@@ -48,12 +48,12 @@
 
 ## Ex
 
-- \*\*Hp\*\*
+- **Hp**
   - $m, n \in \mathbb{N}$
   - $m \mid n \iff \exists p \in \mathbb{N} \mid mp = n$
-- \*\*Th\*\*
+- **Th**
   - $\mid$ è ordine parziale
-- \*\*Dim\*\*
+- **Dim**
     - \*riflessività\*: $\forall x \in \mathbb{N} \quad x\mid x$
       - $x\mid x \iff \exists p \in \mathbb{N} \mid  x p=x \iff p = 1 \in \mathbb{N}$
     - \*transitività\*: $\forall d, m, n \in \mathbb{N} \quad d \mid m \wedge m| n \implies d \mid n$
@@ -63,12 +63,12 @@
 
 ## Ex
 
-- \*\*Hp\*\*
+- **Hp**
   - $a, b \in \mathbb{Z}$
   - $a \equiv b \ (\bmod n) \iff m \mid b-a$ è detta congruenza modulo $n$
-- \*\*Th\*\*
+- **Th**
   - $\equiv$ è una relazione di equivalenza
-- \*\*Dim\*\*
+- **Dim**
     - \_riflessività\_: $\forall a \in \mathbb{Z} \quad a \equiv a \ (\bmod n)$
       - $a \equiv a \ (\bmod n) \iff n \mid a - a \iff n \mid 0 \iff \exists p \in \mathbb{Z} \mid n p = 0 \iff p = 0 \in \mathbb{Z}$
     - \_simmetria\_: $\forall a, b \in \mathbb{Z}\quad a \equiv b \ (\bmod n) \implies b \equiv a \ (\bmod n)$
@@ -113,11 +113,11 @@
 
 ## Oss
 
-- \*\*Hp\*\*
+- **Hp**
   - $G$ gruppo
-- \*\*Th\*\*
+- **Th**
   - $\forall x, y \in G \quad x \nsim y \iff [x] \cap [y] = \varnothing \lor x \sim y \iff [x] = [y]$
-- \*\*Dim\*\*
+- **Dim**
   - $x \sim y \iff [x] = [y]$
       - $\forall x, y \in G \mid x \sim y$, sia $z \in [x] \implies z \sim x \land x \sim y \implies z \sim y$ per transitività di $\sim \implies z \in [y]$
       - $\forall x, y \in G \mid y \sim x$, sia $z \in [y] \implies z \sim y \land y \sim x \implies z \sim x$ per transitività si $\sim \implies z \in [x]$
@@ -127,12 +127,12 @@
 
 ## Oss
 
-- \*\*Hp\*\*
+- **Hp**
   - $G$ gruppo
   - $\sim$ è una relazione di equivalenza in $G$
-- \*\*Th\*\*
+- **Th**
   - $\sim$ induce una partizione di $G$, dunque $\displaystyle G = \coprod\_{[x] \in X/\sim}[x]$
-- \*\*Dim\*\*
+- **Dim**
   - ⚠️ \*\*MANCA DIMOSTRAZIONE, NON C'HO VOGLIA MO\*\*
 
 \*\*\*\*
@@ -150,23 +150,23 @@
 
 ## Lemma
 
-- \*\*Hp\*\*
+- **Hp**
   - $p \in \mathbb{P}$
   - $a, b \in \mathbb{Z}$
   - $p \mid ab$
-- \*\*Th\*\*
+- **Th**
   - $p \mid a \lor p \mid b$
-- \*\*Dim\*\*
+- **Dim**
   - $p \mid ab \implies p$ compare nella fattorizzazione in numeri primi di $ab$
   - allora $p$ è nella fattorizzazione di $a$, e quindi $p \mid a$, oppure $p$ è nella fattorizzazione di $b$, e quindi $p \mid b$
 
 ## Oss
 
-- \*\*Hp\*\*
+- **Hp**
   - $n \in \mathbb{Z}$
-- \*\*Th\*\*
+- **Th**
   - $\mathbb{Z}\_n$ dominio di integrità $\iff n$ primo
-- \*\*Dim\*\*
+- **Dim**
   - $\mathbb{Z}\_n$ dominio di integrità $\implies n$ primo
     - è possibile riscrivere l'implicazione come $\neg (n$ primo$) \implies\neg( \mathbb{Z}\_n$ dominio di integrità$)$
     - dunque, equivalentemente, $n$ non primo $\implies \mathbb{Z}\_n$ ammette divisori dello $0$ diversi da $0$
@@ -182,11 +182,11 @@
 
 ## Oss
 
-- \*\*Hp\*\*
+- **Hp**
   - $n \in \mathbb{Z}$
-- \*\*Th\*\*
+- **Th**
   - $\forall [a] \in \mathbb{Z}\_n \quad \textrm{MCD}(a, n) = 1 \iff [a] \in \mathbb{Z}^\*\_n$
-- \*\*Dim\*\*
+- **Dim**
   - $[a] \in \mathbb{Z}^\*\_n \implies \textrm{MCD}(a, n) = 1$
     - $[a] \in \mathbb{Z}\_n^\* \implies \exists b \in \mathbb{Z} \mid [a][b] = [1] \quad 0 \lt b \lt n \iff ab \equiv 1 \ (\bmod n) \iff n \mid 1 - ab \iff \exists k \in \mathbb{Z} \mid nk = 1 - ab$
     - allora $\exists b, k \in \mathbb{Z} \mid n k = 1 - ab \iff 1 = nk + ab$
@@ -202,11 +202,11 @@
 
 ## Oss
 
-- \*\*Hp\*\*
+- **Hp**
   - $p \in \mathbb{P}$
-- \*\*Th\*\*
+- **Th**
   - $\mathbb{Z}\_p$ campo
-- \*\*Dim\*\*
+- **Dim**
   - $\mathbb{Z}\_p^\* := \{[x] \in \mathbb{Z}\_p \mid \exists[x]^{-1} \in \mathbb{Z}\_p\}$
   - $p \in \mathbb{P} \implies$ ogni numero è coprimo con $p$
   - per dimostrazione precedente, allora tutti gli elementi di $\mathbb{Z}\_p$ sono invertibili, tranne $[0]$ in quanto $[0]$ non ha inversi
@@ -218,13 +218,13 @@
 
 ## Oss
 
-- \*\*Hp\*\*
+- **Hp**
   - $G$ gruppo
   - $H \subset G$ sottogruppo
   - $x, y \in G$
-- \*\*Th\*\*
+- **Th**
   - $x \sim\_S y \iff x^{-1}y \in H$ è una relazione di equivalenza
-- \*\*Dim\*\*
+- **Dim**
     - \_riflessività\_: $x \sim x$
       - $x^{-1}x \in H \quad \forall x$ perché $H$ sottogruppo, dunque chiuso rispetto a prodotto ed inversi, e $x^{-1}x = 1 \in H$
     - \_simmetria\_: $x \sim y \implies y \sim x$
@@ -251,27 +251,27 @@
 
 ## Oss
 
-- \*\*Hp\*\*
+- **Hp**
   - $(\mathbb{Z}, +)$ anello
   - $n \in \mathbb{N}\_{\ge 2}$
   - $I(n) := \{n k \mid k \in \mathbb{Z}\}$
   - $a, b \in \mathbb{Z}$
-- \*\*Th\*\*
+- **Th**
   - $a \sim\_S b \iff a \equiv b \ (\bmod \ n)$
-- \*\*Dim\*\*
+- **Dim**
   - $a \equiv b \ (\bmod \ n) \iff n \mid b - a \iff \exists p \in \mathbb{Z} \mid n p = b - a$, ma allora $b - a$ è un multiplo di $n$, quindi $b - a \in I(n)$ per definizione
   - $I(n)$ è un sottogruppo per dimostrazione precedente, dunque $b - a = (-a) + b \in I(n) \iff a \sim\_S b$
 
 ## Oss
 
-- \*\*Hp\*\*
+- **Hp**
   - $G$ gruppo
   - $H \subset G$ sottogruppo
   - $x \in G$
   - $[x] = \{y \in G \mid y \sim\_S x\}$
-- \*\*Th\*\*
+- **Th**
   - $xH:= \{ xh \mid h \in H\} = [x]$
-- \*\*Dim\*\*
+- **Dim**
   - $[x] \subset xH$
     - $y \in[x] \implies y \sim x \implies x \sim y \implies \exists h:= x^{-1}y \in H$ $\implies xh = x(x^{-1}y)=(xx^{-1})y=y \in H$ in quanto $H$ è sottogruppo, quindi $y \in [x] \implies \exists h \in H \mid y = xh \in H \implies y \in xH$
   - $xH \subset [x]$
@@ -279,13 +279,13 @@
 
 ## Oss
 
-- \*\*Hp\*\*
+- **Hp**
   - $G$ gruppo
   - $H \subset G$ sottogruppo
   - $x \in G$
-- \*\*Th\*\*
+- **Th**
   - $| xH |= |H|$
-- \*\*Dim\*\*
+- **Dim**
   - $\forall h, k \in H \quad h \neq k \iff xh \neq xk$, quindi simmetricamente $h = k \iff xh = xk$, di conseguenza è possibile definire una funzione $H \rightarrow xH : h \rightarrow xh$
     - la funzione è suriettiva per costruzione, perché $\forall h \quad \exists xh$
     - la funzione è iniettiva perché $xh$ è univoco $\forall x, h$
@@ -293,13 +293,13 @@
 
 ## Oss
 
-- \*\*Hp\*\*
+- **Hp**
   - $G$ gruppo
   - $H \subset G$ sottogruppo
   - $+: G/H \times G/H \rightarrow G/H$
-- \*\*Th\*\*
+- **Th**
   - $(G/H, +)$ è gruppo abeliano
-- \*\*Dim\*\*
+- **Dim**
   - bisogna dimostrare che $+$ è un operazione ben definita
   - $+$ ben definita $\iff$$\left.\forall x, x^{\prime}, y, y' \in G \quad \begin{array}{l}{[x]=\left[x^{\prime}\right]} \\ {[y]=\left[y^{\prime}\right]}\end{array}\right\} \implies[x+y]=\left[x^{\prime}+y' \right]$
     - $\forall k, k' \in G \quad [k]=\left[k^{\prime}\right] \iff k \sim k^{\prime}$, dunque il sistema precedente è equivalente a $\left.\begin{array}{l}x \sim x^{\prime} \\ y \sim y^{\prime}\end{array}\right\} \implies x+y \sim x^{\prime}+y^{\prime}$
@@ -314,12 +314,12 @@
 
 ## Oss
 
-- \*\*Hp\*\*
+- **Hp**
   - $n \in \mathbb{Z}$
   - $I(n) := \{nk \mid k \in \mathbb{Z}\}$
-- \*\*Th\*\*
+- **Th**
   - $(\mathbb{Z}\_n, +)$ è un gruppo
-- \*\*Dim\*\*
+- **Dim**
   - per dimostrazione precedente, $I(n)$ è un sottogruppo, quindi ha senso definire $\mathbb{Z}/I(n)$, che conterrà le classi laterali sinistre definite in $\mathbb{Z}$ rispetto a $I(n)$, che per dimostrazione precedente corrispondono alle classi di equivalenza definite da $\equiv$
   - di conseguenza, $\mathbb{Z}/I(n) = \mathbb{Z}/ \equiv \textrm{} = \mathbb{Z}\_n$ per definizione precedente
   - per dimostrazione precedente, la somma tra classi di equivalenza è ben definita, di conseguenza è possibile definire la struttura di gruppo $(\mathbb{Z}\_n, +)$

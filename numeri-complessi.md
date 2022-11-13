@@ -44,11 +44,11 @@
 
 ## Oss
 
-- \*\*Hp\*\*
+- **Hp**
   - $(\mathbb{C}, +, \cdot)$ è un gruppo
-- \*\*Th\*\*
+- **Th**
   - $(\mathbb{C}, +, \cdot )$ è un campo
-- \*\*Dim\*\*
+- **Dim**
   - $
 \left.\begin{array}{l}
 z \cdot \bar{z}=(a+i b)(a-i b)=a^{2}-(i b)^{2} \\

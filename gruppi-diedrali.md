@@ -11,48 +11,48 @@
 
 ## Oss
 
-- \*\*Hp\*\*
+- **Hp**
   - $n \in \mathbb{N}\_{\ge 2}$
   - $D\_n$ insieme delle simmetrie dell'$n$-gono regolare
-- \*\*Th\*\*
+- **Th**
   - $|D\_n| = 2n$
-- \*\*Dim\*\*
+- **Dim**
   - $\rho := \frac{360°}{n} \implies$le rotazioni che lasciano l'$n$-gono invariato sono esattamente $n$
   - gli assi di simmetria di un $n$-gono sono $n$, dunque si hanno esattamente $n$ possibili riflessioni
   - $D\_n := \{\rho^0, \ldots, \rho^{n - 1}, \sigma\_0, \ldots, \sigma\_{n-1}\} \implies |D\_n| = 2n$
 
 ## Oss
 
-- \*\*Hp\*\*
+- **Hp**
   - $n \in \mathbb{N}\_{\ge 2}$
   - $D\_n$ insieme delle simmetrie dell'$n$-gono regolare
   - $\cdot$ è l'operazione di composizione delle simmetrie
-- \*\*Th\*\*
+- **Th**
   - $(D\_n, \cdot)$ è un gruppo
-- \*\*Dim\*\*
+- **Dim**
   - la composizione di funzioni è associativa
   - $\rho^0 = 1 = \textrm{id}$ è l'elemento neutro
   - $\left\{\begin{array}{l}\rho^{i} \cdot \rho^{j}=\rho^{i+j \ (\bmod \ n)} \\ \sigma\_{i} \cdot \sigma\_{j}=\rho^{i-j \ (\bmod \ n)} \\ \rho^{i} \cdot \sigma\_{j}=\sigma\_{i+j \ (\bmod \ n)} \\ \sigma\_{i} \cdot \rho^{j}=\sigma\_{i-j \ (\bmod \ n)}\end{array}\right.$, dunque è possibile trovare l'inverso per ogni permutazione e simmetria utilizzando queste regole
 
 ## Oss
 
-- \*\*Hp\*\*
+- **Hp**
   - $D\_2$ gruppo diedrale
-- \*\*Th\*\*
+- **Th**
   - $(D\_2, \cdot)$ è l'unico gruppo diedrale abeliano
-- \*\*Dim\*\*
+- **Dim**
   - $D\_2 = \{1, \rho, \sigma\_0, \sigma\_1\} \implies$ per le regole di composizione definite precedentemente $\left\{\begin{array}{l}\rho^{0} \cdot \sigma\_{0}=\sigma\_{0+0 \ (\bmod \ 2)}=\sigma\_{0}=\sigma\_{0-0 \ (\bmod \ 2)}=\sigma\_{0} \cdot \rho^{0} \quad i=j=0 \\ \rho^{0} \cdot \sigma\_{1}=\sigma\_{0+1 \ (\bmod \ 2)}=\sigma\_{1}=\sigma\_{1-0 \ (\bmod \ 2)}=\sigma\_{1} \cdot \rho^{0} \quad i = 0, j = 1 \\ \rho^{1} \cdot \sigma\_{0}=\sigma\_{1+0 \ (\bmod \ 2 )}=\sigma\_{1}=\sigma\_{0-1 \ (\bmod \ 2 )}=\sigma\_{0} \cdot \rho^1 \quad i = 1, j = 0 \\ \rho^{1} \cdot \sigma\_{1}= \sigma\_{1 + 1 \ (\bmod \ 2)} = \sigma\_0 = \sigma\_{1-1 \ (\bmod\  2)} = \sigma\_1 \cdot \rho ^1 \quad i = j = 1\end{array}\right.$, quindi il gruppo è commutativo, e dunque abeliano
   - per le regole di composizione definite precedentemente, per $n \ge 3$ la commutatività non è sempre rispettata, quindi $(D\_2, \cdot)$ è anche l'unico gruppo abeliano
 
 ## Oss
 
-- \*\*Hp\*\*
+- **Hp**
   - $D\_n$ gruppo diedrale
-- \*\*Th\*\*
+- **Th**
   - $D\_n \hookrightarrow S\_n$
   - $\exists X \subset S\_n$ sottogruppo di $S\_n$ $\mid D\_n \cong X$
     - $D\_3 \cong S\_3$
-- \*\*Dim\*\*
+- **Dim**
   - per ogni simmetria in $D\_n$, è possibile trovare l'unica permutazione equivalente in $S\_n$
     - ad esempio, con $n = 3$, numerando ogni vertice del triangolo equilatero, partendo dal vertice in basso a destra, si ottiene
       - $\rho^0=$$\left(\begin{array}{lll}1 & 2 & 3 \\ 1&2&3\end{array}\right)$$=\textrm{id}$
@@ -92,10 +92,10 @@
 
 ## Oss
 
-- \*\*Hp\*\*
+- **Hp**
   - $K\_4$ è il gruppo di Klein
-- \*\*Th\*\*
+- **Th**
   - $K\_4 \cong D\_2$
-- \*\*Dim\*\*
+- **Dim**
   - $K\_4:=\{1, a, b, c\}$
   - $D\_2 = \{1, \rho, \sigma\_0, \sigma\_1\}$, quindi associando gli elementi $a=\rho, b= \sigma\_0, c= \sigma\_1$ otteniamo lo stesso gruppo
