@@ -4,7 +4,7 @@
 
 # Funzione (totiente) $\varphi$ di Eulero
 
-- $[a] \in \mathbb{Z}_n^*, \quad \varphi(n) := \mid \mathbb{Z}_n^* \mid = \{0 \lt a \lt n \mid \textrm{MCD}(a, n) = 1\}$
+- $[a] \in \mathbb{Z}\_n^*, \quad \varphi(n) := \mid \mathbb{Z}\_n^* \mid = \{0 \lt a \lt n \mid \textrm{MCD}(a, n) = 1\}$
   - $\textrm{MCD}(m, n) = 1 \implies \varphi(m \cdot n) = \varphi(m) \cdot \varphi(n)$
     - $[a]  \in \mathbb{Z}_{m n}^{*} \iff[a] \in \mathbb{Z}_{m}^{*} \land [a] \in \mathbb{Z}^*_{n}$
       - _prima implicazione_
