@@ -2,19 +2,19 @@
 
 ## Def
 
-- **Ideali**
+- \*\*Ideali\*\*
 > - $(A, +, \cdot)$ anello
-> - $I \subset A$ **ideale** $\iff (I, +) \subset (A, +)$ è un sottogruppo e $A \cdot I \subset I$ e $I \cdot A \subset I$
+> - $I \subset A$ \*\*ideale\*\* $\iff (I, +) \subset (A, +)$ è un sottogruppo e $A \cdot I \subset I$ e $I \cdot A \subset I$
 
 ## Oss
 
-- **Hp**
+- \*\*Hp\*\*
   - $(A, +, \cdot)$ anello
   - $a \in \mathbb{Z}$
   - $I(a) := \{ax \mid x \in A\}$
-- **Th**
+- \*\*Th\*\*
   - $I(a)$ è un ideale, e prende il nome di _ideale di $A$ generato da $a \in A$_
-- **Dim**
+- \*\*Dim\*\*
   - $(I(a), + ) \subset(A, +)$ sottogruppo
     -  $0$ multiplo di $a \implies 0 \in I(a)$
     - $\forall ax, ay \in I(a) \quad ax + ay = a(x + y) \implies ax + ay \in I(a)$ per definizione
@@ -25,11 +25,11 @@
 
 ## Oss
 
-- **Hp**
+- \*\*Hp\*\*
   - $a, b \in \mathbb{Z} - \{0\}$
-- **Th**
+- \*\*Th\*\*
   - $I(a)=I(b) \iff a=\pm b$
-- **Dim**
+- \*\*Dim\*\*
     - $a=\pm b \implies I(a)=I(b)$
       - $a = b \implies I(a)$ e $I(b)$ coincidono
       - $a = -b \implies I(-b) = \{ k(-b) \mid k \in \mathbb{Z}\} = \{(-k)b \mid (-k) \in \mathbb{Z}\} = I(b) = I(-b)=I(a)$
@@ -38,13 +38,13 @@
 
 ## Oss
 
-- **Hp**
+- \*\*Hp\*\*
   - $(A, +, \cdot)$ anello
   - $a_1, \ldots, a_n \in\mathbb{Z}$
   - $I(a_1, \ldots, a_n) := \{ a_1b_1 + \ldots +a_nb_n \mid b_1, \ldots, b_n \in A\}$
-- **Th**
+- \*\*Th\*\*
   - $I(a_1, \ldots, a_n)$ è un ideale, e prende il nome di _ideale di $A$ generato dagli $a_1, \ldots, a_n \in A$_
-- **Dim**
+- \*\*Dim\*\*
   - $(I(a_1, \ldots, a_n) , +) \subset (A, +)$ sottogruppo
     - $0 = a_1 \cdot 0  + \ldots + a_n \cdot 0 \in I(a_1, \ldots a_n)$, dunque $0$ è l'elemento neutro
     - $\forall x, y \in I(a_1, \ldots, a_n) \quad x = a_1b_1 + \ldots +a_nb_n \land y = a_1c_1 + \ldots+ a_nc_n \implies x+ y = a_1b_1 + \ldots + a_nb_n + a_1c_1 + \ldots +a_nc_n$, che è possibile riscrivere come $x + y = a_1(b_1 + c_1) + \ldots + a_n(b_n + c_n)$, che per definizione implica che $x + y \in I(a_1, \ldots, a_n)$
@@ -53,21 +53,21 @@
 
 ## Def
 
-- **Congruenza modulo di un ideale**
+- \*\*Congruenza modulo di un ideale\*\*
 > - $(A, +, \cdot)$ anello
 > - $I \subset A$ ideale
-> - per definizione, $I$ ideale $\implies(I, +) \subset (A, +)$ sottogruppo, dunque ha senso definire $A/I$, e infatti $I$ induce una relazione di equivalenza su $A$ detta **congruenza modulo $I$**, dove $\forall a, b \in A \quad a \equiv b \ (\bmod I) \iff b - a \in I$
+> - per definizione, $I$ ideale $\implies(I, +) \subset (A, +)$ sottogruppo, dunque ha senso definire $A/I$, e infatti $I$ induce una relazione di equivalenza su $A$ detta \*\*congruenza modulo $I$\*\*, dove $\forall a, b \in A \quad a \equiv b \ (\bmod I) \iff b - a \in I$
 > - $b -a \in I \iff  (-a) + b \in I$, di conseguenza questa congruenza coincide con la classe laterale sinistra di $(A, +)$
 
 ## Oss
 
-- **Hp**
+- \*\*Hp\*\*
   - $(A, +, \cdot)$ anello
   - $+: A/I \times A/I \rightarrow A/I$
   - $\cdot : A/I \times A/I \rightarrow A/I$
-- **Th**
+- \*\*Th\*\*
   - $(A/I, +, \cdot)$ è un anello
-- **Dim**
+- \*\*Dim\*\*
   - $(A/I, +)$ è un gruppo abeliano
     - $+$ è un'operazione ben definita per dimostrazione precedente, dunque le proprietà di gruppo abeliano sono rispettate per come l'operazione è definita
   - $(A/I, \cdot)$ è monoide
@@ -77,12 +77,12 @@
 
 ## Oss
 
-- **Hp**
+- \*\*Hp\*\*
   - $I \subset \mathbb{Z}$ ideale
-- **Th**
+- \*\*Th\*\*
   -  $\exists ! \ d \in \mathbb{Z}_{\ge 0} \mid I = I(d)$, o equivalentemente, $\mathbb{Z}$ è un anello a ideali principali
-- **Dim**
-  - *esistenza*
+- \*\*Dim\*\*
+  - \*esistenza\*
       - $I = \{0\} \implies I = I(0)$ poiché i multipli di $0$ sono tutti pari a $0$
       - se invece $I \neq \{0\} \implies I \cap \mathbb{Z}_{>0} \neq \varnothing$, dunque $I$ contiene almeno un numero non nullo, in particolare positivo
         - è possibile considerare solo il caso dei positivi in quanto$\forall x \in I - \{0\} \quad x < 0 \iff (-x)>0$, e $(-x) \in I$ per definizione di $I$, dunque per valori negativi è sufficiente considerare il loro opposto, sicuramente contenuto in $I$
@@ -103,54 +103,54 @@
             - $r \neq 0 \implies r \in I \cap \mathbb{Z}_{\gt 0}$
             - per definizione, $0 \le r \lt d$, ma $d:=\min(I \cap \mathbb{Z}_{\gt 0})$, quindi il minimo numero che $d$ può assumere è $1$, e poiché $r < d \implies r = 0$ necessariamente, dunque segue la dimostrazione precedente
 
-  - *unicità*
+  - \*unicità\*
       - l'unicità deriva dal fatto che $d:=\min(I \cap \mathbb{Z}_{\gt 0})$, e dunque nella dimostrazione $d > 0$, ma vale il ragionamento analogo per $d < 0$ considerando $I(-d)$, in quanto $I(d) = I(-d)$ per dimostrazione precedente
   - quindi, ogni ideale in $\mathbb{Z}$ è generato dall'insieme dei multipli di un certo $d \ge 0$, che esiste sempre ed è unico, e di conseguenza $\mathbb{Z}$ è un anello ad ideali principali
 
 ## Oss
 
-- **Hp**
+- \*\*Hp\*\*
   - $a_{1}, \ldots a_{n} \in \mathbb{Z}$
-- **Th**
+- \*\*Th\*\*
   - $\exists ! d=\textrm{MCD}(a_{1}, \ldots, a_{n})  \mid I\left(a_{1}, \ldots a_{n}\right)=I(d)$
-- **Dim**
-    - ⚠️ **MANCA DIMOSTRAZIONE**
-        - $\forall x \in I(a_1, \cdots, a_n), \ d \mid x$, dunque $d$ è *divisore comune*
+- \*\*Dim\*\*
+    - ⚠️ \*\*MANCA DIMOSTRAZIONE\*\*
+        - $\forall x \in I(a_1, \cdots, a_n), \ d \mid x$, dunque $d$ è \*divisore comune\*
         - $d$ è il _massimo tra i divisori comuni_
 
 ## Oss
 
-- **Hp**
+- \*\*Hp\*\*
   - $a_1, \ldots, a_n \in \mathbb{Z}$
   - $d := \textrm{MCD}(a_1, \ldots, a_n)$
-- **Th**
+- \*\*Th\*\*
   - $\exists x_1, \ldots, x_n \in \mathbb{Z} \mid a_1 x_1 + \ldots + a_nx_n=d$, che prende il nome di _identità di Bézout_
-- **Dim**
+- \*\*Dim\*\*
   - per dimostrazione precedente, $I\left(a_{1}, \ldots a_{n}\right)=I(d)$, quindi $d \in I(a_1, \ldots, a_n) \implies \exists x_1, \ldots, x_n \in \mathbb{Z} \mid a_1x_1 + \ldots + a_n x_n = d$
 
 ## Oss
 
-- ⚠️ **MANCA DIMOSTRAZIONE SISTEMA DI IDENTITÀ DI BÉZOUT**
+- ⚠️ \*\*MANCA DIMOSTRAZIONE SISTEMA DI IDENTITÀ DI BÉZOUT\*\*
 
-****
+\*\*\*\*
 
 # Operazioni sugli ideali
 
 ## Def
 
-- **$+$ tra ideali**
+- \*\*$+$ tra ideali\*\*
 > - $(A, +, \cdot)$ anello commutativo
 > - $I, J \subset A$ ideali
 > - $I + J = \{i + j \mid \forall i \in I, j \in J\}$
 
 ## Oss
 
-- **Hp**
+- \*\*Hp\*\*
   - $(A, +, \cdot)$ anello commutativo
   - $I, J \subset A$ ideali
-- **Th**
+- \*\*Th\*\*
   - $I + J$ è un ideale
-- **Dim**
+- \*\*Dim\*\*
   - $0 \in I, 0 \in J, 0+0=0 \implies 0 \in I + J$ per definizione
   - la chiusura rispetto a $+$ deve implicare che $\forall i_1, i_2 \in I, j_1, j_2 \in J \quad (i_1 + j_1) + (i_2 + j_2) \in I + J$
     - poiché $(i_1 + j_1) + (i_2 + j_2) = (i_1 + i_2) + (j_1 + j_2)$, e $i_1 + i_2 \in I, j_1 + j_2 \in J \implies (i_1 + i_2) + (j_1 + j_2) \in I + J$ per definizione di $I + J$
@@ -160,46 +160,46 @@
 
 ## Def
 
-- **$\cap$ tra ideali**
+- \*\*$\cap$ tra ideali\*\*
 > - $(A, +, \cdot)$ anello commutativo
 > - $I, J \subset A$ ideali
 > - $I \cap J = \{x \in I \land x \in J\}$
 
 ## Oss
 
-- **Hp**
+- \*\*Hp\*\*
   - $(A, +, \cdot)$ anello commutativo
   - $I, J \subset A$ ideali
-- **Th**
+- \*\*Th\*\*
   - $I \cap J$ è un ideale
-- **Dim**
-  - ⚠️ **MANCA DIMOSTRAZIONE**
+- \*\*Dim\*\*
+  - ⚠️ \*\*MANCA DIMOSTRAZIONE\*\*
 
 ## Def
 
-- **$\cdot$ tra ideali**
+- \*\*$\cdot$ tra ideali\*\*
 > - $(A, +, \cdot)$ anello commutativo
 > - $I, J \subset A$ ideali
 > - $I \cdot J = \{i_1 j_1 + \ldots + i_k j_k \mid k \ge  1, \forall i_1 , \ldots , i_k \in I, j_1 , \ldots , j_k \in J \}$
 
 ## Oss
 
-- **Hp**
+- \*\*Hp\*\*
   - $(A, +, \cdot)$ anello commutativo
   - $I, J \subset A$ ideali
-- **Th**
+- \*\*Th\*\*
   - $I \cdot J$ è un ideale
-- **Dim**
-  - ⚠️ **MANCA DIMOSTRAZIONE**
+- \*\*Dim\*\*
+  - ⚠️ \*\*MANCA DIMOSTRAZIONE\*\*
 
 ## Oss
 
-- **Hp**
+- \*\*Hp\*\*
   - $a, b \in \mathbb{Z}$
   - $d:= \textrm{MCD}(a, b)$
-- **Th**
+- \*\*Th\*\*
   - $I(a) + I(b) = I(d)$
-- **Dim**
+- \*\*Dim\*\*
    - per dimostrazione precedente $I(a)$ e $I(b)$ sono ideali, e poiché la somma tra ideali è ben definita, allora $I(a)+I(b)=\{i+j \mid i \in I(a), j \in I(b) \}$
    - $i \in I(a) \implies \exists x \in \mathbb{Z} \mid i = ax$ e $j \in I(b) \implies \exists y \in \mathbb{Z} \mid j = by$
    - quindi $i + j = ax + by \implies$ $I(a)+I(b)=\{a x+b y \mid x, y \in \mathbb{Z}\} = I(a, b)$ per definizione
@@ -207,11 +207,11 @@
 
 ## Oss
 
-- **Hp**
+- \*\*Hp\*\*
   - $a, b \in \mathbb{Z}$
-- **Th**
+- \*\*Th\*\*
   - $I(a) \cdot I(b)=I(a \cdot b)$
-- **Dim**
+- \*\*Dim\*\*
   - $x \in I(a) \cdot I(b) \implies x \in I(a \cdot b)$
     - per dimostrazione precedente $I(a)$ e $I(b)$ sono ideali, e poiché il prodotto tra ideali è ben definito, allora $x \in I(a) \cdot I(b) \implies x = i_1 j_1 + \ldots + i_k j_k$ con $i_1 , \ldots , i_k \in I(a)$ e $j_1 , \ldots , j_k \in I(b)$
     - per definizione, $i \in I(a) \implies \exists x \in \mathbb{Z} \mid i = ax$, e dunque $i_1, \ldots, i_k = ax_1, \ldots, ax_k$ con $x_1, \ldots, x_k \in \mathbb{Z}$
@@ -228,7 +228,7 @@
 
 ## Esempi
 
-- $\forall g \in G$ gruppo, $I(g):=\left\{n \in \mathbb{Z} \mid g^{n}=e\right\}$ è un **ideale** $(I(g), +) \subset (\mathbb{Z}, +)$
+- $\forall g \in G$ gruppo, $I(g):=\left\{n \in \mathbb{Z} \mid g^{n}=e\right\}$ è un \*\*ideale\*\* $(I(g), +) \subset (\mathbb{Z}, +)$
   - $0 \in \mathbb{Z}, g^{0}=e \implies 0 \in I(g)$
   - $m, n \in I(g) \Rightarrow g^{m}=g^{n}=e \implies g^{m} \cdot g^{n}= g^{m + n} = e \cdot e = e \implies g^{m +n} \in I(g)$ per definizoine di $I(g) \implies I(g) + I(g) \subset I(g)$, poiché $\forall m, n \in \mathbb{Z} \quad m + n \in \mathbb{Z}$
   - $n \in I(g) \implies (g^n)^{-1} = e ^{-1 } = g^{-n} =e \implies -n \in I(g)$, poiché $\forall n \in \mathbb{Z} \quad -n \in \mathbb{Z}$

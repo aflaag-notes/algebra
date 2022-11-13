@@ -2,8 +2,8 @@
 
 ## Def
 
-- **Insieme dei complessi**
-> - $\mathbb{C}:=\left\{a+i b \mid a, b \in \mathbb{R}, \  i : i^{2}=-1\right\}$ è l'**insieme dei complessi**
+- \*\*Insieme dei complessi\*\*
+> - $\mathbb{C}:=\left\{a+i b \mid a, b \in \mathbb{R}, \  i : i^{2}=-1\right\}$ è l'\*\*insieme dei complessi\*\*
 > - $z \in \mathbb{C} \implies\left\{\begin{array}{l}a:=\operatorname{Re}(z) \\ b:=\operatorname{Im}(z)\end{array}\right.$
 
 ## Oss
@@ -12,10 +12,10 @@
 
 ## Def
 
-- **Coniugato**
+- \*\*Coniugato\*\*
 
 > - $z=a+i b$
-> - $\bar{z}:=a-i b$ è il **coniugato** di $z$
+> - $\bar{z}:=a-i b$ è il \*\*coniugato\*\* di $z$
 
 ## Oss
 
@@ -28,9 +28,9 @@
 
 ## Def
 
-- **Raggio**
+- \*\*Raggio\*\*
 > - $z = a+ib$
-> - $|z|:=\sqrt{a^{2}+b^{2}}$ è il **raggio** di $z$
+> - $|z|:=\sqrt{a^{2}+b^{2}}$ è il \*\*raggio\*\* di $z$
 >   - è la distanza di $z$ dall'origine nel piano di Gauss
 
 ## Forma polare
@@ -39,16 +39,16 @@
 
 ## Def
 
-> - $\arg(z) \subset \mathbb{R}$ è l'**insieme delle soluzioni** del sistema $\left\{\begin{array}{l}\cos \theta=\frac{a}{|z|} \\ \sin \theta=\frac{b}{|z|}\end{array}\right.$
-> - per definizione, $\textrm{arg}(z) \implies \exists ! \theta \mid 0 \leq \theta \le 2 \pi$ tale che $\theta$ sia soluzione del sistema, e questo prende il nome di $\textrm{Arg}(z)$, detta **soluzione principale**
+> - $\arg(z) \subset \mathbb{R}$ è l'\*\*insieme delle soluzioni\*\* del sistema $\left\{\begin{array}{l}\cos \theta=\frac{a}{|z|} \\ \sin \theta=\frac{b}{|z|}\end{array}\right.$
+> - per definizione, $\textrm{arg}(z) \implies \exists ! \theta \mid 0 \leq \theta \le 2 \pi$ tale che $\theta$ sia soluzione del sistema, e questo prende il nome di $\textrm{Arg}(z)$, detta \*\*soluzione principale\*\*
 
 ## Oss
 
-- **Hp**
+- \*\*Hp\*\*
   - $(\mathbb{C}, +, \cdot)$ è un gruppo
-- **Th**
+- \*\*Th\*\*
   - $(\mathbb{C}, +, \cdot )$ è un campo
-- **Dim**
+- \*\*Dim\*\*
   - $
 \left.\begin{array}{l}
 z \cdot \bar{z}=(a+i b)(a-i b)=a^{2}-(i b)^{2} \\

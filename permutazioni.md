@@ -1,8 +1,8 @@
 # Permutazioni
 
-- ⚠️ **MANCA UN PEZZO**
+- ⚠️ \*\*MANCA UN PEZZO\*\*
 
-- $\sigma \in S_n$, un **ciclo di $\sigma$** è una sequenza di interi distinti $1 \leq i_1, \ldots, i_d \leq n$ tali che  $\left\{\begin{array}{l}
+- $\sigma \in S_n$, un \*\*ciclo di $\sigma$\*\* è una sequenza di interi distinti $1 \leq i_1, \ldots, i_d \leq n$ tali che  $\left\{\begin{array}{l}
 \sigma\left(i_{1}\right)=i_{2} \\
 \sigma\left(i_{2}\right)=i_{3} \\
 \vdots \\
@@ -10,27 +10,27 @@
 \sigma\left(i_{d}\right)=i_{1}
 \end{array}\right.$
 
-- $\sigma \in S_n, \forall 1 \leq i \leq n \quad I(\sigma, i):=\left\{n \in \mathbb{Z} \mid \sigma^{n}(i)=i\right\}$, allora $(I(\sigma, i), +) \subset (\mathbb{Z}, +)$ è **ideale** in $\mathbb{Z}$
+- $\sigma \in S_n, \forall 1 \leq i \leq n \quad I(\sigma, i):=\left\{n \in \mathbb{Z} \mid \sigma^{n}(i)=i\right\}$, allora $(I(\sigma, i), +) \subset (\mathbb{Z}, +)$ è \*\*ideale\*\* in $\mathbb{Z}$
   - $\sigma ^0 = \textrm{id} \implies \sigma ^0(i) = \textrm{id}(i) = i \implies 0 \in I(\sigma, i)$
   - $m, n \in I(\sigma, i) \implies \sigma^m (i) = \sigma^n(i) = i$, ma $\sigma^{m+n}(i)=\sigma^{m}\left(\sigma^{n}(i)\right) = \sigma^m(i)=i \implies m + n \in I(\sigma, i)$
   - $n \in I(\sigma, i) \implies \sigma ^n (i) = i$, ma per simmetria della permutazione $\sigma^ {-n} (i) = i \implies -n \in I(\sigma, i)$
   - $\forall \tau \in S_n \mid \tau (i) = i \implies \tau ^k (i) = i \quad \forall k \in \mathbb{Z}$, ma allora $\forall n \in I(\sigma, i) \quad \sigma^n(i) = i$ si può riscrivere come $(\sigma^n)^k(i) = i \quad \forall k \in \mathbb{Z} \implies \sigma^{nk}(i) = i \implies nk \in I(\sigma, i)$
-- $I(g, i)$ è **ideale principale** in $\mathbb{Z}$ generato da $I(d)$, dove $d$ è la lunghezza del ciclo di $i$, quindi $I(\sigma, i) = I(d)$
+- $I(g, i)$ è \*\*ideale principale\*\* in $\mathbb{Z}$ generato da $I(d)$, dove $d$ è la lunghezza del ciclo di $i$, quindi $I(\sigma, i) = I(d)$
   - $I(\sigma, i) = I(d) \implies d \in I(\sigma, i)$
-  - ⚠️ **MANCA DIMOSTRAZIONE**
+  - ⚠️ \*\*MANCA DIMOSTRAZIONE\*\*
 
 - $\sigma \in S_n$ tale che la sua decomposizione in cicli sia $\sigma := \gamma_1 \ldots \gamma_k, d_j$ definito pari alla lunghezza di $\gamma_j, j \in [1, k] \implies o(\sigma) = m := \textrm{mcm}(d_1, \ldots, d_k)$
   - $I(\sigma):=\left\{n \in \mathbb{Z} \mid \sigma^{n}=\textrm{id}\right\}$
   - $n \in I(\sigma) \implies \sigma^{n}=\textrm{id} \iff \sigma^{n}(i)=i \quad 1 \leq i \leq n \iff n \in I(\sigma, i) \quad 1 \leq i \leq n \iff n \in I(\sigma, 1) \cap \ldots \cap I(\sigma, n)$
   - $d := o(\sigma) \implies I(d) = I(\sigma) = I(\sigma, 1) \cap \ldots \cap I(\sigma, n) = I(d_1) \cap \ldots \cap I(d_k) = I(m)$
 
-****
+\*\*\*\*
 
 # Trasposizioni
 
 - $\forall i, j \mid 1 \leq i \lt j \leq n \quad \tau_{i, j} :=$ $\left\{\begin{array}{ll}j & k=i \\ i & k=j \\ k & k \neq i, j\end{array}\right.$
   - $\tau_{i, j}^2 = \textrm{id} \implies \tau_{i, j} = \tau_{i, j} ^{-1}$
-  - se $j = i + 1$, allora $\tau_{i, j}=\tau_{i, i+1}$ è detta **trasposizione adiacente**
+  - se $j = i + 1$, allora $\tau_{i, j}=\tau_{i, i+1}$ è detta \*\*trasposizione adiacente\*\*
 - $\forall \sigma \in S_n \quad \exists 1 \leq i_1, \ldots, i_k \lt n \mid \sigma = \tau_{i_1, i_1 + 1} \ldots \tau_{i_k, i_k + 1}$, quindi ogni permutazione può essere riscritta come composizione di trasposizioni adiacenti
   - $\tau_{i, j}=\left(\begin{array}{ccccccc}1 & \cdots & i & \cdots & j & \cdots & n \\ 1 & \cdots & j & \cdots & i & \cdots & n\end{array}\right)$ è una trasposizione qualsiasi
   - $\sigma=\left(\begin{array}{ccccccc}1 & \cdots & i & \cdots & j & \cdots & n \\ \sigma(1) & \cdots & \sigma(i) & \cdots & \sigma(j) & \cdots & \sigma(n) \end{array}\right)$ è una permutazione
@@ -39,11 +39,11 @@
     - _esempio_
       - $\sigma=\left(\begin{array}{llll}1 & 2 & 3 & 4 \\ 2 & 4 & 3 & 1\end{array}\right) \implies \sigma \tau_{34}\left(\begin{array}{llll}1 & 2 & 3 & 4 \\ 2 & 4 & 1 & 3\end{array}\right) \implies$ $\sigma \tau_{3 4} \tau_{23}=\left(\begin{array}{llll}1 & 2 & 3 & 4 \\ 2 & 1 & 4 & 3\end{array}\right) \implies$$\sigma \tau_{3 4} \tau_{23} \tau_{12}=\left(\begin{array}{llll}1 & 2 & 3 & 4 \\ 1 & 2 & 4 & 3\end{array}\right) \implies$$\sigma \tau_{34} \tau_{23} \tau_{12} \tau_{34}=\left(\begin{array}{llll}1 & 2 & 3 & 4 \\ 1 & 2 & 3 & 4\end{array}\right) = \textrm{id}$, ma allora $\textrm{id} = \sigma \tau_{34} \tau_{23} \tau_{12} \tau_{34} \iff \sigma =\tau_{34} \tau_{12} \tau_{23} \tau_{34}$
      
-****
+\*\*\*\*
 
 # Segno
 
-- $\sigma \in S_n, \ \textrm{Inv}(\sigma) := \{ (i, j) \mid 1 \leq i \lt j \lt n : \sigma(i) \gt \sigma(j)\}, \ \textrm{sgn}(\sigma) := (-1)^{|\textrm{Inv}(\sigma)|} =$$\left\{\begin{array}{ll}+1 & |\operatorname{Inv}(\sigma)| \equiv 0 \ (\bmod 2) \\ -1 & |\operatorname{Inv}(\sigma)| \equiv 1 \ (\bmod 2)\end{array}\right. \implies \sigma$ **pari** $\iff \textrm{sgn}(\sigma) = +1$
+- $\sigma \in S_n, \ \textrm{Inv}(\sigma) := \{ (i, j) \mid 1 \leq i \lt j \lt n : \sigma(i) \gt \sigma(j)\}, \ \textrm{sgn}(\sigma) := (-1)^{|\textrm{Inv}(\sigma)|} =$$\left\{\begin{array}{ll}+1 & |\operatorname{Inv}(\sigma)| \equiv 0 \ (\bmod 2) \\ -1 & |\operatorname{Inv}(\sigma)| \equiv 1 \ (\bmod 2)\end{array}\right. \implies \sigma$ \*\*pari\*\* $\iff \textrm{sgn}(\sigma) = +1$
   - $\textrm{sgn}(\textrm{id}) = (-1)^0 = 1$, in quando la funzione identità non ha inversioni
 
 - $\sigma \in S_{n} \mid \sigma:=\tau_{1} \ldots \tau_{k}, \quad \tau_{j} = \tau_{j, j + 1} \quad \forall j \in [1, k]$, dunque se tutte le trasposizioni sono adiacenti, allora $\textrm{sgn}(\sigma)= (-1)^k$
@@ -64,9 +64,9 @@
   - $\sigma \sigma^\prime = \tau_1 \ldots \tau_k \cdot \tau_1^\prime \ldots \tau_h^\prime \implies \textrm{sgn}(\sigma \sigma^\prime) = (-1)^ {k + h} = (-1)^k \cdot (-1)^h = \textrm{sgn}(\sigma) \cdot \textrm{sgn}(\sigma^\prime)$
 - $\forall \sigma \in S_n \quad \textrm{sgn}(\sigma^{-1})=\textrm{sgn}(\sigma)$
   - $\left.\begin{array}{l}\operatorname{sgn}(\textrm{id})=1 \\ \sigma \sigma^{-1}=\textrm{id} \implies \operatorname{sgn}\left(\sigma \sigma^{-1}\right)=\textrm{sgn}(\textrm{id}) \\ \operatorname{sgn}\left(\sigma \sigma^{-1}\right)=\operatorname{sgn}(\sigma) \cdot \operatorname{sgn}\left(\sigma^{-1}\right)\end{array}\right\} \implies \textrm{sgn}(\sigma) \cdot \textrm{sgn}(\sigma^{-1})= 1\implies \textrm{sgn}(\sigma)= \textrm{sgn}(\sigma^{-1})$
-- $A_n := \{\sigma \in S_n \mid \sigma$ pari$\}$, è un **sottogruppo** di $S_n$, detto **gruppo alterno di ordine $n$**
-  - ⚠️ **MANCA DIMOSTRAZIONE**
-- **permutazioni coniugate hanno lo stesso segno**
+- $A_n := \{\sigma \in S_n \mid \sigma$ pari$\}$, è un \*\*sottogruppo\*\* di $S_n$, detto \*\*gruppo alterno di ordine $n$\*\*
+  - ⚠️ \*\*MANCA DIMOSTRAZIONE\*\*
+- \*\*permutazioni coniugate hanno lo stesso segno\*\*
   - $\forall \sigma, \sigma^\prime \in S_n \quad \sigma \sim \sigma ^\prime \iff \exists\alpha \in S_n \mid \sigma^\prime = \alpha \sigma \alpha^{-1} \implies \textrm{sgn}(\sigma^\prime) = \textrm{sgn}(\alpha)\cdot \textrm{sgn}(\sigma)\cdot \textrm{sgn}(\alpha^{-1})$
   - $\forall \alpha \quad \textrm{sgn}(\alpha)= \textrm{sgn}(\alpha^{-1}) \implies$ entrambe $1$ o entrambe $-1 \implies \textrm{sgn}(\alpha) \cdot \textrm{sgn}(\alpha^{-1}) = 1 \implies \textrm{sgn}(\sigma^\prime) = \textrm{sgn}(\sigma)$
 - $\forall \sigma, \sigma^\prime \in S_n \mid  \sigma := \gamma_1 \ldots \gamma_k, \sigma^\prime := \gamma_1^\prime \ldots \gamma_h^\prime \implies \sigma \sim \sigma ^\prime \iff$$\left\{\begin{array}{c}k=h \\ d=d_{1}^{\prime} \\ \vdots \\ d_{k}=d_{h}^{\prime}=d_{k}^{\prime}\end{array}\right.$, dove $d_j$ è la lunghezza del ciclo $\gamma_j$ e $d_j^\prime$ è la lunghezza del ciclo $\gamma_j^\prime$
@@ -75,7 +75,7 @@
       - $(i_1 \ldots i_d)$ un certo ciclo in $\sigma \implies (\alpha(i_1) \ldots \alpha(i_d))$ è un ciclo in $\sigma^\prime$
         - $\sigma^\prime(\alpha(i_j))=(\alpha \sigma \alpha^{-1})(\alpha(i_j)) \implies (\alpha\sigma)(i_j)=$$\left\{\begin{array}{ll}\alpha\left(i_{j}+1\right) & j<d \\ \alpha\left(i_{1}\right) & j=d\end{array}\right.$ perché $\sigma(i) = i_{j + 1} \quad \forall j \lt d$ perché $i_j \in (i_1 \ldots i_d)$ ciclo di $\sigma$
         - quindi la relazione di coniugio determina un ciclo in $\sigma^\prime$ della forma $(\alpha(i_1) \ldots \alpha(i_d))$
-        - ⚠️ **PERCHÉ È BIUNIVOCA?**
+        - ⚠️ \*\*PERCHÉ È BIUNIVOCA?\*\*
       - corrispondenza biunivoca tra cicli di $\sigma$ e $\sigma^\prime \implies h = k$ (devono avere lo stesso numero di cicli), e inoltre implica $\left\{\begin{array}{c}k=h \\ d=d_{1}^{\prime} \\ \vdots \\ d_{k}=d_{h}^{\prime}=d_{k}^{\prime}\end{array}\right.$, ovvero i cicli hanno la stessa lunghezza
   - _seconda implicazione_
     - $\sigma = (i_1 \ldots i_{d_1}) \ldots (j_1 \ldots j_{d_k})$
