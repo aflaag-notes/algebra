@@ -50,11 +50,10 @@
 - **Dim**
   - $a = 0 \lor b = 0 \lor a = b = 0 \implies \textrm{mcm}(a, b) = 0$
   - $a, b \gt 0$
-    - $\mathbb{P} := \{p \in \mathbb{N} \mid p \textrm{ primo}\}$
+    - $\mathbb{P} := \{p \in \mathbb{N} \mid p$ primo$\}$
     - $\forall n \in \mathbb{N} - \{0\} \quad \exists ! n\_2, n\_3, n\_5, \ldots, n\_p \in \mathbb{N} \mid p \in \mathbb{P} : n = 2^{n\_2} \cdot 3 ^ {n\_3} \cdot \ldots \cdot p ^ {n\_p}$
       - $p \nmid n \implies n\_p = 0 \implies p ^  {n\_p} = 1$, dunque non influisce nella produttoria
-    - $\displaystyle{n = \prod\_{p \in \mathbb{P}}^{} p ^{n\_p}}$, quindi possiamo riscrivere anche $a$ e $b$ tramite i loro fattori primi
-      - $\displaystyle{a=\prod\_{p \in \mathbb{P}} p^{a\_{p}}}$ e $\displaystyle{b=\prod\_{p \in \mathbb{P}} p^{b\_{p}} }$
+    - $\displaystyle{n = \prod\_{p \in \mathbb{P}}^{} p ^{n\_p}}$, quindi possiamo riscrivere anche $a$ e $b$ tramite i loro fattori primi come  $\displaystyle{a=\prod\_{p \in \mathbb{P}} p^{a\_{p}}}$ e $\displaystyle{b=\prod\_{p \in \mathbb{P}} p^{b\_{p}} }$
     - $d:= \textrm{MCD}(a, b)$ e $m:=\textrm{mcm}(a, b)$
       - per definizione di $d$ ed $m$, e attraverso le regole che permettono di trovarli tramite le fattorizzazioni di $a$ e $b$, è possibile riscrivere $d$ ed $m$ come $\displaystyle{d = \prod\_{p \in \mathbb{P}} p^{\min(a\_p, b\_p)}}$ e $\displaystyle{m = \prod\_{p \in \mathbb{P}} p^{\max(a\_p, b\_p)}}$
       - $d \cdot m =\displaystyle{\prod\_{p \in \mathbb{P}} p^{\min(a\_p, b\_p)}} \cdot \displaystyle{\prod\_{p \in \mathbb{P}} p^{\max(a\_p, b\_p)}} = \displaystyle{\prod\_{p \in \mathbb{P}} p^{\min(a\_p, b\_p) + \max(a\_p, b\_p)}}$
@@ -69,15 +68,16 @@
 ## Lem
 
 - **Hp**
-  - $a\_1, \ldots, a\_n \ge 2 \in \mathbb{Z}  \mid \textrm{MCD}(a\_i, a\_j) = 1 \quad \forall i, j \in [1, n] : i \neq j$
+  - $a\_1, \ldots, a\_n \ge 2 \in \mathbb{Z}  \mid \textrm{MCD}(a\_i, a\_j) = 1 \quad \forall i, j \in [1, n] : i \neq j
+  - $m := \textrm{mcm}(a\_1, \ldots, a\_n)$
 - **Th**
-  - $m := \textrm{mcm}(a\_1, \ldots, a\_n)= a\_1 \cdot \ldots \cdot a\_n$
+  - $m = a\_1 \cdot \ldots \cdot a\_n$
 - **Dim**
   - $\textrm{MCD}(a\_i, a\_j) = 1 \implies \forall p \in \mathbb{P} \quad p \mid a\_i \implies p \nmid a\_j$, poiché altrimenti $p \mid \textrm{MCD}(a\_i, a\_j)$
-    - prese le fattorizzazioni $\displaystyle a\_1 = \prod\_{p \in \mathbb{P}}{p^{a\_{1\_p}}} \ \ldots \ a\_n = \prod\_{p \in \mathbb{P}}{p^{a\_{n\_p}}}$, allora $\forall p \in \mathbb{P} \quad a\_{i\_p} \gt 0 \implies a\_{j\_p} = 0 \quad \forall i \neq j$, dunque ogni fattore è presente solo in una delle fattorizzazioni degli $n$ interi, poiché coprimi
-      - $a\_{k\_p} = 0 \implies p^{a\_{k\_p}} = 1 \implies$ non compare nella fattorizzazione
-      - di conseguenza, la somma degli esponenti di $p$ su tutte le fattorizzazioni degli $n$ interi, sarà il numero stesso, poiché nelle altre fattorizzazioni varrà $0$, e quindi $\forall p \in \mathbb{P} \quad a\_{1\_p} + \ldots + a\_{n\_p} = \max(a\_{1\_p}, \ldots, a\_{n\_p})$
-    - allora $m = \displaystyle \prod\_{p \in \mathbb{P}}{p^{\max(a\_{1\_p}, \ldots, a\_{n\_p})}}=\prod\_{p \in \mathbb{P}}{p^{a\_{1\_p} + \ldots + a\_{n\_p}}} = \prod\_{p \in \mathbb{P}}{p^{a\_{1\_p}}} \cdot \ldots \cdot \prod\_{p \in \mathbb{P}}{p^{a\_{n\_p}}} = a\_1 \cdot \ldots \cdot a\_n$
+  - prese le fattorizzazioni $\displaystyle a\_1 = \prod\_{p \in \mathbb{P}}{p^{a\_{1\_p}}} \ \ldots \ a\_n = \prod\_{p \in \mathbb{P}}{p^{a\_{n\_p}}}$, allora $\forall p \in \mathbb{P} \quad a\_{i\_p} \gt 0 \implies a\_{j\_p} = 0 \quad \forall i \neq j$, dunque ogni fattore è presente solo in una delle fattorizzazioni degli $n$ interi, poiché coprimi
+    - $a\_{k\_p} = 0 \implies p^{a\_{k\_p}} = 1 \implies$ non compare nella fattorizzazione
+  - di conseguenza, la somma degli esponenti di $p$ su tutte le fattorizzazioni degli $n$ interi, sarà il numero stesso, poiché nelle altre fattorizzazioni varrà $0$, e quindi $\forall p \in \mathbb{P} \quad a\_{1\_p} + \ldots + a\_{n\_p} = \max(a\_{1\_p}, \ldots, a\_{n\_p})$
+  - allora $m = \displaystyle \prod\_{p \in \mathbb{P}}{p^{\max(a\_{1\_p}, \ldots, a\_{n\_p})}}=\prod\_{p \in \mathbb{P}}{p^{a\_{1\_p} + \ldots + a\_{n\_p}}} = \prod\_{p \in \mathbb{P}}{p^{a\_{1\_p}}} \cdot \ldots \cdot \prod\_{p \in \mathbb{P}}{p^{a\_{n\_p}}} = a\_1 \cdot \ldots \cdot a\_n$
     
 ## Lem
 
@@ -87,32 +87,47 @@
 - **Th**
   - $\exists \phi \mid \phi: \mathbb{Z}\_m \rightarrow \mathbb{Z}\_{a\_1} \times \ldots \times \mathbb{Z}\_{a\_n}: x \ (\bmod m) \rightarrow (x \ (\bmod a\_1), \ldots, x \ (\bmod a\_n))$
   - $\phi$ è una funzione ben definita, ed è iniettiva
-  - $\phi$ ben definita $\implies \phi$ non dipende dalla scelta di $[x] \in \mathbb{Z}\_m$
 - **Dim**
-    - se $\phi$ è ben definita, allora $x\equiv x^{\prime} \ (\bmod m) \implies \left\{\begin{array}{c}x \equiv x^{\prime}\ \left(\bmod a\_{1}\right) \\ \vdots \\ x \equiv x^{\prime}\ \left(\bmod a\_{n}\right)\end{array}\right.$
-    - **⚠️ BASTA DIMOSTRARE SOLO UNA DELLE DUE MA NON HO CAPITO PERCHÉ**
-    - se $\phi$ è iniettiva, allora vale anche l'implicazione opposta
-      - $\left\{\begin{array}{c}x \equiv x^{\prime}\ \left(\bmod a\_{1}\right) \\ \vdots \\ x \equiv x^{\prime}\ \left(\bmod a\_{n}\right)\end{array}\right. \iff \left\{\begin{array}{c}x^{\prime}-x \in I\left(a\_{1}\right) \\ \vdots \\ x^{\prime}-x \in I\left(a\_{m}\right)\end{array}\right. \iff x - x^\prime \in I(a\_1) \cap \ldots \cap I(a\_n) = I(m)$, e per definizione $x - x^\prime \in I(m) \implies x \equiv x^\prime \ (\bmod m)$
+  - $\phi$ ben definita $\implies \phi$ non dipende dalla scelta di $[x] \in \mathbb{Z}\_m$
+  - se $\phi$ è ben definita, allora $x\equiv x^{\prime} \ (\bmod m) \implies \left\{\begin{array}{c}x \equiv x^{\prime}\ \left(\bmod a\_{1}\right) \\ \vdots \\ x \equiv x^{\prime}\ \left(\bmod a\_{n}\right)\end{array}\right.$
+  - **⚠️ BASTA DIMOSTRARE SOLO UNA DELLE DUE MA NON HO CAPITO PERCHÉ**
+  - se $\phi$ è iniettiva, allora vale anche l'implicazione opposta
+    - $\left\{\begin{array}{c}x \equiv x^{\prime}\ \left(\bmod a\_{1}\right) \\ \vdots \\ x \equiv x^{\prime}\ \left(\bmod a\_{n}\right)\end{array}\right. \iff \left\{\begin{array}{c}x^{\prime}-x \in I\left(a\_{1}\right) \\ \vdots \\ x^{\prime}-x \in I\left(a\_{m}\right)\end{array}\right. \iff x - x^\prime \in I(a\_1) \cap \ldots \cap I(a\_n) = I(m)$, e per definizione $x - x^\prime \in I(m) \implies x \equiv x^\prime \ (\bmod m)$
 
 ## Teorema
 
 - **Hp**
   - $a\_1, \ldots, a\_n \ge 2 \in \mathbb{Z} \mid \textrm{MCD}(a\_i, a\_j) = 1 \quad \forall i, j \in [1, n] \mid i \neq j$
-  - $b\_1, \ldots, b\_n \in \mathbb{Z} \mid 0 \leq b\_{1}<a\_{1}, \ldots 0 \leq b\_n \lt a\_n$
-  - $m := \textrm{mcm}(a\_1, \ldots, a\_n) = a\_1 \cdot \ldots \cdot a\_n$
+  - $b\_1, \ldots, b\_n \in \mathbb{Z} \mid 0 \leq b\_{1}<a\_{1}, \ldots, 0 \leq b\_n \lt a\_n$
+  - $m := \textrm{mcm}(a\_1, \ldots, a\_n)$
 - **Th**
   - $\exists ! x \ (\bmod m) \mid$ $\left\{\begin{array}{c}x \equiv b\_{1}\ \left(\bmod a\_{1}\right) \\ \vdots \\ x \equiv b\_{n}\ \left(\bmod a\_{n}\right)\end{array}\right.$
 - **Dim**
   - per il primo lemma $m = a\_1 \cdot \ldots \cdot a\_n$ poiché coprimi in ipotesi
-  - per il secondo lemma $m = \textrm{mcm}(a\_1, \ldots, a\_n) \implies \exists \phi : \mathbb{Z}\_m \rightarrow \mathbb{Z}\_ {a\_1} \times \cdots \times \mathbb{Z}\_{a\_m}$ ben definita e iniettiva
+  - per il secondo lemma $m = \textrm{mcm}(a\_1, \ldots, a\_n) \implies \exists \phi : \mathbb{Z}\_m \rightarrow \mathbb{Z}\_ {a\_1} \times \cdots \times \mathbb{Z}\_{a\_n}$ ben definita e iniettiva
   - $\left|X\_{1} \times \cdots \times X\_{n}\right|=\left|X\_{1}\right| \cdot\ldots\cdot\left|X\_{n}\right| \implies$ $\left|\mathbb{Z}\_{a\_{1}} \times \ldots \times \mathbb{Z}\_{a\_{n}}\right|=\left|\mathbb{Z}\_{a\_{1}}\right| \cdot\ldots\cdot\left|\mathbb{Z}\_{a\_{n}}\right|$
-    - $\mathbb{Z}\_n = \{[0],[1], \cdots,[n-1]\} \implies \left|\mathbb{Z}\_{n}\right|=n$, quindi $\left|\mathbb{Z}\_{a\_{1}}\right| \cdot\ldots\cdot\left|\mathbb{Z}\_{a\_{n}}\right|  = a\_1 \cdot \ldots \cdot a\_n = m = \left| \mathbb{Z}\_m \right|$ per ragionamento analogo
+    - $\mathbb{Z}\_n := \{[0],[1], \cdots,[n-1]\} \implies \left|\mathbb{Z}\_{n}\right|=n$, quindi $\left|\mathbb{Z}\_{a\_{1}}\right| \cdot\ldots\cdot\left|\mathbb{Z}\_{a\_{n}}\right|  = a\_1 \cdot \ldots \cdot a\_n = m = \left| \mathbb{Z}\_m \right|$ per ragionamento analogo
   - $|X|=|Y|<\infty \implies f: X \rightarrow Y$ iniettiva $\iff$ $f$ suriettiva
     - applicando questa osservazione, $\phi$ iniettiva $\implies \phi$ suriettiva, in quanto, per l'osservazione precedente, insieme di partenza e di arrivo di $\phi$ hanno la stessa cardinalità $\left| \mathbb{Z}\_m \right|$
-  - $\phi$ **suriettiva** $\implies$ $\exists x \mid x \ (\bmod m)$ è soluzione del sistema
-    - $\varphi(x \ (\bmod m))=\left(b\_{1}\ \left( \bmod  a\_{1}\right), \ldots, b\_{n} \ (\bmod a\_{n})\right)$, e poiché $\phi$ è suriettiva, allora ogni tupla di $n$ elementi dell'insieme di arrivo, che descrive un sistema come in ipotesi, ha una controimmagine $x \ (\bmod m)$, e $x \ (\bmod m)\in \mathbb{Z}\_m$ per definizione, dunque **esiste sempre una soluzione**
-  - $\phi$ **iniettiva** $\implies$ $\exists ! x \mid x \ (\bmod m)$ è soluzione del sistema
-    - poiché $\phi$ è iniettiva, $x \ (\bmod m) \in \mathbb{Z}\_m$ è unica, dunque **la soluzione è sempre unica**
+  - $\phi$ \_suriettiva\_ $\implies$ $\exists x \mid x \ (\bmod m)$ è soluzione del sistema
+    - $\varphi(x \ (\bmod m))=\left(b\_{1}\ \left( \bmod  a\_{1}\right), \ldots, b\_{n} \ (\bmod a\_{n})\right)$, e poiché $\phi$ è suriettiva, allora ogni tupla di $n$ elementi dell'insieme di arrivo, che descrive un sistema come in ipotesi, ha una controimmagine $x \ (\bmod m)$, e $x \ (\bmod m)\in \mathbb{Z}\_m$ per definizione, dunque \_esiste sempre una soluzione\_
+  - $\phi$ \_iniettiva\_ $\implies$ $\exists ! x \mid x \ (\bmod m)$ è soluzione del sistema
+    - poiché $\phi$ è iniettiva, $x \ (\bmod m) \in \mathbb{Z}\_m$ è unica, dunque \_la soluzione è sempre unica\_
+
+****
+
+# Teorema del binomio di newton
+
+- **Hp**
+  - $A$ anello commutativo
+  - $a, b \in A$
+  - $n \in \mathbb{N}$
+- **Th**
+  - $(a+b )^n = \displaystyle{\sum\_{k = 0}^{n}{\binom{n}{k} a^k b ^{n - k}}}$
+- **Dim**
+  - $n = 0 \implies (a+b)^0 = \displaystyle{\sum\_{k = 0}^{0}{\binom{0}{k}a^kb^{0 - k}}} = \binom{0}{0}a^0b^0=1$
+  - $(a+ b)^{n + 1} = (a+b)^{n }\cdot (a+b)$
+  - ⚠️ **INCOMPLETA**
 
 ****
 
@@ -124,19 +139,23 @@
 - **Th**
   - $a^{p} \equiv a \ (\bmod p)$
 - **Dim**
+- ⚠️ **INCOMPLETA**
   - $a=0 \implies [0]^{p} =[0]$
-  - $a \gt 0 \implies$ $[a+1]^{p}=[a+1] \implies[a]^{p}+[1]^{p}=[a+1] \implies [a]^p + [1] = [a + 1]$
-    - per ipotesi induttiva, $[a]^p = [a]$, dunque $[a] + [1] = [a + 1]$
+  - $a \gt 0 \implies$ $[a+1]^{p}=[a+1]$
+    - per definizione di $+$, si ottiene che $[a +1] = [a] + [1] \iff [a+1]^p = ([a] + [1])^p$, e per dimostrazione precedente, $([a]+[1])^p = [a]^p +[1]^p$ in $\mathbb{Z}\_p$
+    - $[a+1]^{p}=[a+1] \iff [a]^{p}+[1]^{p}=[a+1] \implies [a]^p + [1] = [a + 1]$
+    - per ipotesi induttiva, $[a]^p = [a]$, dunque $[a] + [1] = [a + 1]$, che è vero per definizione di $+$
    
 ## Cor
 
 - **Hp**
-  - $[a] \in \mathbb{Z}\_{p}-\{0\}$
   - $p \in \mathbb{P}$
+  - $[a] \in \mathbb{Z}\_{p}-\{0\}$
 - **Th**
-  - $[a]^{-1}=\left[a^{p-2}\right]$
+  - $[a]^{-1}=\left[a\right]^{p-2}$
 - **Dim**
-  - $[a] \neq [0] \implies [a]^p = [a] \iff [a]^p \cdot [a]^{-1} = [a] \cdot [a]^{-1}$, e dunque $[a]^{p -1} = [1] \implies [a] \cdot [a]^{p -2} = [1]\implies [a]^{-1} = [a]^{p-2}$
+  - $[a] \neq [0] \implies \exists[a]^{-1} \in \mathbb{Z}\_p$, poiché, per dimostrazione precedente $\mathbb{Z}\_p^\* = \mathbb{Z\_p} - \{0\}$
+  -  per il teorema di Fermat $[a]^p = [a] \iff [a]^p \cdot [a]^{-1} = [a] \cdot [a]^{-1} \iff [a]^{p -1} = [1] \iff [a] \cdot [a]^{p -2} = [1]\iff [a]^{-1} = [a]^{p-2}$
 
 ****
 

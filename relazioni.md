@@ -83,6 +83,18 @@
       - $\left.\begin{array}{l}n p\_{1}=b-a \implies b=n p\_{1}+a \\ n p\_{2}=c-b\end{array}\right\} \implies np\_2 = c - np\_2 - a \iff np\_2 + np\_1 = c - a \implies n(p\_2 + p\_1)=c -a$
       - $p\_{1}, p\_{2} \in \mathbb{Z} \implies p\_{1}+p\_{2} \in \mathbb{Z}$, e qundue per la proposizione precedente $\exists p\_1 + p\_2 \in \mathbb{Z} \mid n(p\_1 + p\_2) = c - a \iff n \mid c - a$
 
+## Oss
+
+- **Hp**
+  - $x, y \in \mathbb{Z} \mid x \equiv y \ (\bmod n)$
+  - $d \in \mathbb{Z} : d\mid n$
+- **Th**
+  - $x \equiv y \ (\bmod d)$
+- **Dim**
+  - $x \equiv y \ (\bmod n) \iff n \mid y - x \iff \exists p \in \mathbb{Z} \mid np = y - x$
+  - $d \mid n \iff \exists k \in \mathbb{Z} \mid dk = n$
+  - allora, $np = y - x \iff dkp = y -x \implies \exists kp \in \mathbb{Z} : d \mid y - x \iff x \equiv y \ (\bmod d)$
+
 ## Ex
 
 - ⚠️ **DA RILEGGERE**

@@ -217,6 +217,7 @@
 
 ## Oss
 
+- ⚠️ **CONTROLLA, MA IN TEORIA QUESTA ROBA È DA BUTTARE**
 - **Hp**
   - $G$ gruppo
   - $H \subset$ sottogruppo normale
@@ -241,11 +242,27 @@
 
 # Ordine
 
-- $\forall g \in G$ gruppo, $H(g):=\left\{g^{n} \mid n \in \mathbb{Z}\right\}$ è un **sottogruppo** $(H(g), \cdot) \subset (G, \cdot)$ 
-  - $e=g^{0} \implies e \in H(g)$
-  - $g^m \cdot g^n = g^{m + n} \in H(g)$ per definizione di $H(g)$, quindi $H(g) \cdot Hg(g) \subset H(g)$, poiché $\forall m, n \in \mathbb{Z} \quad m + n \in \mathbb{Z}$
-  - $(g^n)^{-1} = g^{-n} \in H(g)$ per definizione di $H(g)$, poiché $\forall n \in \mathbb{Z} \quad -n \in \mathbb{Z}$
-- $o(g) :=  | H(g) |$ è detto **ordine di $g \in G$**
+## Def
+
+- **Ordine di un elemento in un gruppo**
+> - $G$ gruppo
+> - $g \in G$
+> - $H(g):=\left\{g^{n} \mid n \in \mathbb{Z}\right\}$
+> - $o(g):= |H(g)|$ è detto **ordine di $g \in G$**
+
+## Oss
+
+- **Hp** 
+  - $G$ gruppo
+  - $g \in G$
+- **Th**
+  - $(H(g), \cdot) \subset (G, \cdot)$  è sottogruppo
+- **Dim**
+  - $e=g^{0} \implies e \in H(g)$ per definizione di $H(g)$
+  - $\forall m, n \in \mathbb{Z} \quad m + n \in \mathbb{Z} \implies g^m \cdot g^n = g^{m + n} \in H(g)$ per definizione di $H(g)$, quindi $H(g) \cdot Hg(g) \subset H(g)$
+  - $\forall n \in \mathbb{Z} \quad -n \in \mathbb{Z} \implies (g^n)^{-1} = g^{-n} \in H(g)$ per definizione di $H(g)$
+  ****
+   ⚠️ **CONTINUA DA QUA**
 - $\exists! d \geq 0 \mid I(g)=I(d)$
   - $d = 0 \implies o(g) = |H(g)| = |\mathbb{Z}|$, dunque infinito
   - $d>0 \implies d = o(g)$
