@@ -1,3 +1,6 @@
 # algebra
 
-my notes, WIP :blush:
+## :warning: WARNING
+
+WIP
+
