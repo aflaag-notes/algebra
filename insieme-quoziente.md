@@ -42,7 +42,7 @@
     - $n \notin \mathbb{P} \implies \exists a, b \in \mathbb{Z} \mid n = ab \quad 0 \lt a, b \lt n$
     - $n = ab \iff [n] = [ab]$ ⚠️ **MANCA DIMOSTRAZIONE**
   - $n$ primo $\implies \mathbb{Z}_n$ dominio di integrità
-    - ipotizziamo che $\mathbb{Z}_n$ non sia dominio di integrità, e dunque $\exists[a] \in \mathbb{Z}_n : [a] \neq [0], a \mid 0$
+    - ipotizzando che $\mathbb{Z}_n$ non sia dominio di integrità, e dunque $\exists[a] \in \mathbb{Z}_n : [a] \neq [0], a \mid 0$
     - $a \mid 0 \implies \exists b \in \mathbb{Z} \mid [a][b] = [0] \quad b \neq 0$
     - $[0]=[a][b] \iff [0]=[ab] \iff 0 \equiv ab \ (\bmod \ \ n) \iff n \mid ab - 0 \iff n \mid ab$
     - $n$ primo, allora $n \mid ab \implies n \mid a \lor n \mid b$ per dimostrazione precedente

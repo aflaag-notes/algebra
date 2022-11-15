@@ -26,6 +26,28 @@
 ## Oss
 
 - **Hp**
+    - $A$ dominio di integrità
+    - $a, b \in A$
+- **Th**
+    - $I(a)=I(b) \iff \exists c \in A^* \mid a = bc$
+- **Dim**
+    - _prima implicazione_
+        - $I(a) = I(b)$ in ipotesi
+            - $a \in I(a) = I(b) \implies b \mid a \implies \exists c \in A \mid a = bc$
+            - $b \in I(b) = I(a) \implies a \mid b \implies \exists d \in A \mid b = da$
+        - allora $a = bc \iff a = da \cdot c = a \cdot cd \iff a - acd = 0 \iff a(1 - cd) = 0$
+        - $A$ dominio $\implies$ in $A$ vale la legge di annullamento del prodotto, dunque $a(1 - cd) = 0 \iff a = 0 \lor 1 - cd = 0$
+            - $a = 0 \implies b = da = 0$, ma allora $a, b = 0 \implies a = 0 = 0 \cdot 1 = b \cdot 1$, e ponendo $c:= 1$ è vero che $a = bc$
+                - in particolare, $c := 1 \implies \exists c^{-1} = 1^{-1} = 1$
+            - $1 - cd = 0 \iff -cd = -1 \iff cd = 1$, dunque $d$ è l'inverso di $c$
+    - _seconda implicazione_
+        - $\exists c \in A^* \mid a= bc \implies b \mid a \implies a \in I(b) \implies I(a) \subset I(b)$
+        - $c \in A^* \implies \exists c^{-1} \in A$, dunque $a = bc \iff a \cdot c^{-1} = b \implies a \mid b \implies b \in I(a) \implies I(b) \subset I(a)$
+        - dunque $I(a) = I(b)$ per doppia inclusione
+
+## Oss
+
+- **Hp**
   - $a, b \in \mathbb{Z} - \{0\}$
 - **Th**
   - $I(a)=I(b) \iff a=\pm b$
