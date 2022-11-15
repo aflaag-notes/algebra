@@ -60,25 +60,6 @@
   - $X, Y$ insiemi finiti
 - **Th**
   - $\left| Y^X \right| = \left| Y \right| ^ {|X|}$
-- **Dim**
-  - ⚠️ **MANCA DIMOSTRAZIONE**
-
-## Oss
-
-- **Hp**
-  - $S_X := \{f \mid f : X \rightarrow Y$ biiettiva $\}$
-- **Th**
-  - $(S_X, \circ)$ è un gruppo, non commutativo se $|X| \ge 3$
-- **Dim**
-  - la composizione di funzioni è associativa
-  - $\textrm{id}$ è biiettiva $\implies \textrm{id} \in S_X$ per definizione, e costituisce l'elemento neutro
-  - $\forall f:X \rightarrow Y \in S_X \quad \exists f^{-1}: Y \rightarrow X$, poiché $f \in S_X \implies f$ biiettiva, e ogni funzione biiettiva è invertibile
-  - $|X| = 2 \implies X$ è della forma $X = \{a, b\}$, quindi $S_X =\left\{\begin{array}{l}a \rightarrow a \\ b \rightarrow b\end{array}\right. \ ,\ \left.\begin{array}{l}a \rightarrow b \\ b \rightarrow a\end{array}\right\}$, dove uno dei due elementi è $\rm id$
-    - $\rm id \circ id = id$
-    - $\rm \sigma \circ id = id \circ \sigma = \sigma$
-    - $\rm \sigma \circ \sigma = id$ per costruzione
-  - quindi $|X| = 2 \implies S_X$ è abeliano, mentre $|X| = 1 \implies S_X$ è abeliano perché contiene un solo elemento
-  - ⚠️ **perche >= 3 non è abeliano?**
 
 ## Oss
 
@@ -214,29 +195,7 @@
       -  $G$ gruppo $\implies \forall g \in G \quad \exists g^{-1} \in G$
       -  $\forall g^{-1} \in G \quad h:= g^{-1}k(g^{-1})^{-1} \in H$ per ipotesi
       -  $h = g^{-1}kg \iff gh = gg^{-1}kg \iff gh = kg$, ma $$
-
-## Oss
-
-- ⚠️ **CONTROLLA, MA IN TEORIA QUESTA ROBA È DA BUTTARE**
-- **Hp**
-  - $G$ gruppo
-  - $H \subset$ sottogruppo normale
-  - $G/H := \{[x] \mid x \in H\}$, che per 
-  - $\cdot$ è l'operazione di prodotto definita tra classi laterali sinistre in $G/H$, tale che $\forall [x], [y] \in G/H$
-- **Th**
-  - $(G/H, \cdot)$ è un gruppo
-- **Dim**
-  - l'operazione $\cdot$ è ben definita $\iff$ $\left.\begin{array}{c}{[x]=[x']} \\ {[y]=[y']}\end{array}\right\} \implies [x\cdot y]=[x' \cdot y']$
-    - $H$ è un sottogruppo normale, dunque $\left\{\begin{array}{c}{[x]=xH=Hx} \\ {[x']=x'H =Hx'} \\ {[y]=yH=Hy} \\ {[y'] = y'H = Hy'} \\ {[x\cdot y]=x yH = H xy} \\ {[x'\cdot y']=x' y'H = H x'y'}\end{array}\right.$
-    - in particolare, $[x]=[x'] \land [x]= xH \land [x'] = x'H \implies xH = x'H$, e in particolare $xH \subset x'H \implies \exists h \in H \mid xh = x'$
-    - inoltre, in particolare $[y] = [y'] \land [y] = yH \land [y'] = y'H \implies yH = y'H$, e in particolare $\forall hy' \in Hy' \quad hy' \in Hy$, e $Hy' = yH \implies \exists k \in H \mid yk = hy'$
-    - $x'=xh \implies x'y' = xh\cdot y'$, e $yk = hy' \implies xhy' = x \cdot yk$, e in particolare $xyk \in xyH$ per definizione, quindi $x'y' \in xyH$, dunque $[x' \cdot y'] = [x \cdot y]$
-    - ⚠️ **RIVEDI**
-    - ⚠️ **PERCHÉ NON SERVE L'IMPLICAZIONE AL CONTRARIO?**
-  - $(G/H, \cdot)$
-    - $\forall [x], [y], [z] \in G/H \quad ([x][y])[z] = [x y][z] = [x y z] = [x][y z]=[x]([y][z])$, quindi l'operazione è associativa
-    - $1_G \in G$ poiché $G$ gruppo $\implies [1_G] \in G/H$, l'elemento neutro
-    - $\forall [x], [x^{-1}] \in G/H \quad [x][x^{-1}]=[x \cdot x^{-1}] = [1_G] \implies [x^{-1}] = [x]^{-1}$
+      - ⚠️ **INCOMPLETA**
 
 ****
 

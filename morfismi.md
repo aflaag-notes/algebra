@@ -116,13 +116,13 @@ $f([x \cdot y])=f([x]) \cdot f([y])$
 
 - **Hp**
   - $n \mid m$
-  - $f : \mathbb{Z}_m \rightarrow \mathbb{Z}_n: x \ (\bmod m) \rightarrow x \ (\bmod n)$
+  - $f : \mathbb{Z}_m \rightarrow \mathbb{Z}_n: x \ (\bmod \ m) \rightarrow x \ (\bmod\ n)$
 - **Th**
   - $f$ morfismo di anelli $\left(\mathbb{Z}_{m},+, \cdot\right)$ e $\left(\mathbb{Z}_{n},+, \cdot\right)$
 - **Dim**
-  - $x \ (\bmod m) + y \ (\bmod m) = x +y \ (\bmod m)$
-  - $f(x + y \ (\bmod m)) = x +y \ (\bmod n)$
-  - $x +y \ (\bmod n) = x \ (\bmod n)+ y \ (\bmod n)$
+  - $x \ (\bmod \ m) + y \ (\bmod \ m) = x +y \ (\bmod \ m)$
+  - $f(x + y \ (\bmod \ m)) = x +y \ (\bmod \ n)$
+  - $x +y \ (\bmod \ n) = x \ (\bmod \ n)+ y \ (\bmod \ n)$
   - il ragionamento è analogo per l'operazione $\cdot$, e dunque segue la tesi
  
 ## Ex

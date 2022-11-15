@@ -7,6 +7,24 @@
 > - $S_X := \{f \mid f:X \rightarrow X$ biiettiva $\}$ è l'**insieme delle permutazioni di $X$**
 > - $X = \{1, \ldots, n\} \implies S_n$ è detto **gruppo simmetrico di $n$**
 
+## Oss
+
+- **Hp**
+  - $S_X := \{f \mid f : X \rightarrow Y$ biiettiva $\}$
+- **Th**
+  - $(S_X, \circ)$ è un gruppo, non abeliano se $|X| \ge 3$
+- **Dim**
+  - la composizione di funzioni è associativa
+  - $\textrm{id}$ è biiettiva $\implies \textrm{id} \in S_X$ per definizione, e costituisce l'elemento neutro
+  - $\forall f:X \rightarrow Y \in S_X \quad \exists f^{-1}: Y \rightarrow X$, poiché $f \in S_X \implies f$ biiettiva, e ogni funzione biiettiva è invertibile
+  - $|X| = 2 \implies X$ è della forma $X = \{a, b\}$, quindi $S_X =\left\{\begin{array}{l}a \rightarrow a \\ b \rightarrow b\end{array}\right. \ ,\ \left.\begin{array}{l}a \rightarrow b \\ b \rightarrow a\end{array}\right\}$, dove uno dei due elementi è $\rm id$
+    - $\rm id \circ id = id$
+    - $\rm \sigma \circ id = id \circ \sigma = \sigma$
+    - $\rm \sigma \circ \sigma = id$ per costruzione
+  - quindi $|X| = 2 \implies S_X$ è abeliano, mentre $|X| = 1 \implies S_X$ è abeliano perché contiene un solo elemento
+  - ⚠️ **perche >= 3 non è abeliano?**
+
+## Def
 - **Ciclo di una permutazione**
 > - $n \in \mathbb{N}$
 > - $\sigma \in S_n$
@@ -17,6 +35,7 @@
 \sigma\left(i_{d-1}\right)=i_{d} \\
 \sigma\left(i_{d}\right)=i_{1}
 \end{array}\right. \implies i_1, \ldots, i_n$ costituiscono un **ciclo di $\sigma$**
+
 
 ## Oss
 
@@ -164,7 +183,14 @@
 
 ## Oss
 
-- $\forall \sigma, \sigma^\prime \in S_n \mid  \sigma := \gamma_1 \ldots \gamma_k, \sigma^\prime := \gamma_1^\prime \ldots \gamma_h^\prime \implies \sigma \sim \sigma ^\prime \iff$$\left\{\begin{array}{c}k=h \\ d=d_{1}^{\prime} \\ \vdots \\ d_{k}=d_{h}^{\prime}=d_{k}^{\prime}\end{array}\right.$, dove $d_j$ è la lunghezza del ciclo $\gamma_j$ e $d_j^\prime$ è la lunghezza del ciclo $\gamma_j^\prime$
+- **Hp**
+    - $\sigma, \sigma^\prime \in S_n \mid \sigma := \gamma_1 \ldots \gamma_k, \sigma^\prime := \gamma_1^\prime \ldots \gamma_h^\prime$
+    - $\sigma \sim \sigma ^\prime \iff \exists\alpha \in S_n \mid \sigma^\prime = \alpha \sigma \alpha^{-1}$
+- **Th**
+    - $\sigma \sim \sigma ^\prime \iff$$\left\{\begin{array}{c}k=h \\ d=d_{1}^{\prime} \\ \vdots \\ d_{k}=d_{h}^{\prime}=d_{k}^{\prime}\end{array}\right.$, dove $d_j$ è la lunghezza del ciclo $\gamma_j$ e $d_j^\prime$ è la lunghezza del ciclo $\gamma_j^\prime$
+- **Dim**
+
+- ⚠️ **RIPRENDI DA QUA**
   - _prima implicazione_
     - $\sigma \sim \sigma^\prime \implies \exists\alpha \in S_n \mid \sigma^\prime = \alpha \sigma \alpha^{-1}$
       - $(i_1 \ldots i_d)$ un certo ciclo in $\sigma \implies (\alpha(i_1) \ldots \alpha(i_d))$ è un ciclo in $\sigma^\prime$
@@ -183,6 +209,9 @@
       - ad esempio, prendendo $i_p$ in $\sigma \implies i_p = \alpha^{-1}(a_p)$ per definizione di $\alpha$, allora $\alpha \sigma \alpha^{-1} (a_p) = \alpha \sigma (i_p) =$$\left\{\begin{array}{ll}\alpha\left(i_{p+1}\right) & p<d_1 \\ \alpha\left(i_{1}\right) & p=d_{1}\end{array}\right.$ perché $\sigma(i_p) = i_{p +1} \quad \forall p \lt d_1$ perche $i_p \in (i_1 \ldots i_{d_1})$ ciclo di $\sigma$
       - ma per definizione di $\alpha$, $\left\{\begin{array}{ll}\alpha\left(i_{p+1}\right) & p<d_1 \\ \alpha\left(i_{1}\right) & p=d_{1}\end{array}\right. \iff$ $\left\{\begin{array}{ll}a_{p+1} & p<d_{1} \\ a_{1} & p=d_{1}\end{array}\right. = \sigma^\prime(a_p)$ per definizione di $\sigma^\prime$
     - poiché $\alpha$ è tale che la relazione $\sigma^\prime = \alpha \sigma \alpha ^{-1}$ sia rispettata, allora per definizione $\sigma \sim \sigma ^\prime$ 
+
+    ***
+
 - $\forall \sigma \in S_n \mid \sigma = \gamma_1 \ldots \gamma_k \implies \textrm{sgn}(\sigma)=(-1)^{n - k}$
   - $\sigma = (i_1 \ldots i_{d_1}) \ldots (j_1 \ldots j_{d_k})$
   - $\sigma^\prime := (1 \ldots d_1)(d_1 + 1 \ldots d_1 + d_2) \ldots (n -d_k + 1 \ldots n)$ (poiché $n - d_k + d_k = n$)

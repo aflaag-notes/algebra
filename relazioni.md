@@ -86,30 +86,32 @@
 ## Oss
 
 - **Hp**
-  - $x, y \in \mathbb{Z} \mid x \equiv y \ (\bmod n)$
+  - $x, y \in \mathbb{Z} \mid x \equiv y \ (\bmod \ n)$
   - $d \in \mathbb{Z} : d\mid n$
 - **Th**
-  - $x \equiv y \ (\bmod d)$
+  - $x \equiv y \ (\bmod \  d)$
 - **Dim**
-  - $x \equiv y \ (\bmod n) \iff n \mid y - x \iff \exists p \in \mathbb{Z} \mid np = y - x$
+  - $x \equiv y \ (\bmod  \ n) \iff n \mid y - x \iff \exists p \in \mathbb{Z} \mid np = y - x$
   - $d \mid n \iff \exists k \in \mathbb{Z} \mid dk = n$
-  - allora, $np = y - x \iff dkp = y -x \implies \exists kp \in \mathbb{Z} : d \mid y - x \iff x \equiv y \ (\bmod d)$
+  - allora, $np = y - x \iff dkp = y -x \implies \exists kp \in \mathbb{Z} : d \mid y - x \iff x \equiv y \ (\bmod \ d)$
 
 ## Ex
 
-- ⚠️ **DA RILEGGERE**
-  - $G$ gruppo $g, h \in G$, **$g$ coniugato ad $h$**  $\iff \exists a \in G \mid h = a\cdot g \cdot a^{-1}$
-  - $G$ abeliano $\iff a \cdot g\cdot a^{-1} = g$
-  - la relazione di coniugio è una **relazione di equivalenza**
-    - _riflessività_: $g \sim g$
+- **Hp**
+  - $G$ gruppo
+  - $g, h \in G$
+  - $g \sim h \iff \exists a \in G \mid h = a\cdot g \cdot a^{-1}$ è detta _relazione di coniugio_
+- **Th**
+  - $\sim$ è una relazione di equivalenza
+- **Dim***
+    - _riflessività_: $\forall g \in G \quad g \sim g$
       - $g = 1 \cdot g \cdot 1^{-1} \implies g \sim g$
-    - _simmetria_: $g \sim h \implies h \sim g$
-      - $g \sim h \implies h = a \cdot g \cdot a^{-1} \implies a^{-1} \cdot h = a^{-1} \cdot a \cdot g \cdot a^{-1} \implies a^{-1} \cdot h = g \cdot a^{-1}\implies$ $a^{-1} \cdot h \cdot a = g \cdot a^{-1} \cdot a \implies a ^{-1} \cdot h \cdot a = g$
+    - _simmetria_: $\forall g, h \in G \quad g \sim h \implies h \sim g$
+      - $g \sim h \implies \exists a \in G \mid h = a \cdot g \cdot a^{-1} \iff a^{-1} \cdot h = a^{-1} \cdot a \cdot g \cdot a^{-1} \iff a^{-1} \cdot h = g \cdot a^{-1}\iff a^{-1} \cdot h \cdot a = g \cdot a^{-1} \cdot a \iff a ^{-1} \cdot h \cdot a = g$
       - $b := a^{-1} \implies b \cdot h \cdot b^{-1} = g \implies h \sim g$
-    - _transitività_: $g \sim h \land h \sim k \implies g \sim k$
+    - _transitività_: $\forall g, h, k \in G \quad g \sim h \land h \sim k \implies g \sim k$
       - $g \sim h \land h \sim k \implies \exists a, b \mid h = a \cdot g \cdot a^{-1} \land k = b \cdot h \cdot b^{-1} \implies k = b \cdot a \cdot g \cdot a ^{-1} \cdot b^{-1}$
-      - $c:= b \cdot a \implies c^{-1} = a^{-1} \cdot b^{-1}$
-        - $k = c \cdot g \cdot c^{-1} \implies g \sim k$
+      - $c:= b \cdot a \implies c^{-1} = a^{-1} \cdot b^{-1} \implies k = c \cdot g \cdot c^{-1} \implies g \sim k$
 
 ****
 
@@ -249,12 +251,24 @@
 
 ## Oss
 
+- ⚠️ **CONTROLLA, MA IN TEORIA QUESTA ROBA È DA BUTTARE**
 - **Hp**
-  - $n \in \mathbb{Z}$
-  - $I(n) := \{nk \mid k \in \mathbb{Z}\}$
+  - $G$ gruppo
+  - $H \subset$ sottogruppo normale
+  - $G/H := \{[x] \mid x \in H\}$, che per 
+  - $\cdot$ è l'operazione di prodotto definita tra classi laterali sinistre in $G/H$, tale che $\forall [x], [y] \in G/H$
 - **Th**
-  - $(\mathbb{Z}_n, +)$ è un gruppo
+  - $(G/H, \cdot)$ è un gruppo
 - **Dim**
-  - per dimostrazione precedente, $I(n)$ è un sottogruppo, quindi ha senso definire $\mathbb{Z}/I(n)$, che conterrà le classi laterali sinistre definite in $\mathbb{Z}$ rispetto a $I(n)$, che per dimostrazione precedente corrispondono alle classi di equivalenza definite da $\equiv$
-  - di conseguenza, $\mathbb{Z}/I(n) = \mathbb{Z}/ \equiv \textrm{} = \mathbb{Z}_n$ per definizione precedente
-  - per dimostrazione precedente, la somma tra classi di equivalenza è ben definita, di conseguenza è possibile definire la struttura di gruppo $(\mathbb{Z}_n, +)$
+  - l'operazione $\cdot$ è ben definita $\iff$ $\left.\begin{array}{c}{[x]=[x']} \\ {[y]=[y']}\end{array}\right\} \implies [x\cdot y]=[x' \cdot y']$
+    - $H$ è un sottogruppo normale, dunque $\left\{\begin{array}{c}{[x]=xH=Hx} \\ {[x']=x'H =Hx'} \\ {[y]=yH=Hy} \\ {[y'] = y'H = Hy'} \\ {[x\cdot y]=x yH = H xy} \\ {[x'\cdot y']=x' y'H = H x'y'}\end{array}\right.$
+    - in particolare, $[x]=[x'] \land [x]= xH \land [x'] = x'H \implies xH = x'H$, e in particolare $xH \subset x'H \implies \exists h \in H \mid xh = x'$
+    - inoltre, in particolare $[y] = [y'] \land [y] = yH \land [y'] = y'H \implies yH = y'H$, e in particolare $\forall hy' \in Hy' \quad hy' \in Hy$, e $Hy' = yH \implies \exists k \in H \mid yk = hy'$
+    - $x'=xh \implies x'y' = xh\cdot y'$, e $yk = hy' \implies xhy' = x \cdot yk$, e in particolare $xyk \in xyH$ per definizione, quindi $x'y' \in xyH$, dunque $[x' \cdot y'] = [x \cdot y]$
+    - ⚠️ **RIVEDI**
+    - ⚠️ **PERCHÉ NON SERVE L'IMPLICAZIONE AL CONTRARIO?**
+  - $(G/H, \cdot)$
+    - $\forall [x], [y], [z] \in G/H \quad ([x][y])[z] = [x y][z] = [x y z] = [x][y z]=[x]([y][z])$, quindi l'operazione è associativa
+    - $1_G \in G$ poiché $G$ gruppo $\implies [1_G] \in G/H$, l'elemento neutro
+    - $\forall [x], [x^{-1}] \in G/H \quad [x][x^{-1}]=[x \cdot x^{-1}] = [1_G] \implies [x^{-1}] = [x]^{-1}$
+
