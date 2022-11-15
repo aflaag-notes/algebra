@@ -165,7 +165,7 @@
 
 ****
 
-## Teorema di Eulero
+# Teorema di Eulero
 
 - **Hp**
     - $a, n \in \mathbb{N} \mid \textrm{MCD}(a, n) = 1$

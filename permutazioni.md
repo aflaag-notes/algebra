@@ -104,7 +104,6 @@
 > - $\textrm{sgn}(\sigma) := (-1)^{|\textrm{Inv}(\sigma)|} =$$\left\{\begin{array}{ll}+1 & |\operatorname{Inv}(\sigma)| \equiv 0 \ (\bmod 2) \\ -1 & |\operatorname{Inv}(\sigma)| \equiv 1 \ (\bmod 2)\end{array}\right. \implies \sigma$ **pari** $\iff \textrm{sgn}(\sigma) = +1$
 >   - $\textrm{sgn}(\textrm{id}) = (-1)^0 = 1$, in quando la funzione identità non ha inversioni
 
-
 ## Oss
 
 - **Hp**
@@ -116,25 +115,55 @@
   - $\sigma=\left(\begin{array}{ccccccc}1 & \cdots & i &  & i + 1 & \cdots & n \\ \sigma(1) & \cdots & \sigma(i) &  & \sigma(i + 1) & \cdots & \sigma(n) \end{array}\right)$ è una permutazione
   - allora $\sigma \tau_{i, i + 1}=\left(\begin{array}{ccccccc}1 & \cdots & i &  & i + 1 & \cdots & n \\ \sigma(1) & \cdots & \sigma(i + 1) &  & \sigma(i) & \cdots & \sigma(n) \end{array}\right)$
   - di conseguenza $\textrm{Inv}(\sigma \tau_{i, i + 1})=$$\left\{\begin{array}{ll}\operatorname{Inv}(\sigma) \cup\{(i, i+1)\} & (i, i+1) \notin \operatorname{Inv}(\sigma) \\ \operatorname{Inv}(\sigma)-\{(i, i+1)\} & (i, i+1) \in \operatorname{Inv}(\sigma)\end{array}\right.$
-    - $(i, i + 1) \in \textrm{Inv}(\sigma) \implies \sigma(i) \gt \sigma(i + 1)$ (poiché $i \lt i + 1 \quad \forall i$)
-    - di conseguenza, in $\sigma \tau_{i, i + 1}$, poiché sto invertendo le colonne $i$ e $i + 1$, $\sigma \tau_{i, i + 1}(i) \lt \sigma \tau_{i, i + 1}(i +1) \implies (i, i + 1) \notin \textrm{Inv}(\sigma \tau_{i, i + 1})$ per definizione (vale il ragionamento opposto per il caso $(i, i + 1) \in \textrm{Inv}(\sigma)$)
-  - dunque $\mid \textrm{Inv}(\sigma \tau_{i, i + 1}) \mid = \mid \textrm{Inv}(\sigma) \mid \pm 1 \implies (-1)^{\mid \textrm{Inv}(\sigma \tau_{i, i + 1})\mid} = (-1)^{\mid \textrm{Inv}(\sigma) \mid \pm 1} \implies \textrm{sgn}(\sigma \tau_{i, i + 1}) = - \textrm{sgn}(\sigma)$ poiché $\pm 1$ all'esponente di $(-1)$ invertirà il segno
+      - $\forall i \mid i \lt i + 1 \quad (i, i + 1) \in \textrm{Inv}(\sigma) \iff \sigma(i) \gt \sigma(i + 1)$
+    - in $\sigma \tau_{i, i + 1}$ le colonne $i$ e $i + 1$ si invertono, e di conseguenza $\sigma \tau_{i, i + 1}(i) \lt \sigma \tau_{i, i + 1}(i +1) \implies (i, i + 1) \notin \textrm{Inv}(\sigma \tau_{i, i + 1})$ per definizione
+  - dunque $|\textrm{Inv}(\sigma \tau_{i, i + 1}) | = | \textrm{Inv}(\sigma) | \pm 1 \implies (-1)^{\mid \textrm{Inv}(\sigma \tau_{i, i + 1})\mid} = (-1)^{\mid \textrm{Inv}(\sigma) \mid \pm 1} \implies \textrm{sgn}(\sigma \tau_{i, i + 1}) = - \textrm{sgn}(\sigma)$ poiché $\pm 1$ all'esponente di $(-1)$ ne invertirà il segno
     - dunque aggiungendo o togliendo una trasposizione adiacente ad una permutazione, si inverte il segno della composizione
-  - $\sigma =\tau_{1} \ldots \tau_{k} \implies \textrm{id} = \sigma \tau_k \ldots \tau_1 \implies \textrm{sgn}(\textrm{id}) = 1 = \textrm{sgn}(\sigma \tau_k \ldots \tau_1)$ poiché se sono uguali, saranno uguali anche i loro segni
-    - $\textrm{sgn}(\sigma \tau_k \ldots \tau_1) = -\textrm{sgn}(\sigma \tau_k \ldots \tau_2) = \textrm{sgn}(\sigma \tau_k \ldots \tau_3) = \ldots = (-1)^k \cdot \textrm{sgn}(\sigma)$ poiché ho rimosso esattamente $k$ trasposizioni adiacenti
-  - $(-1)^k \cdot \textrm{sgn}(\sigma) = \textrm{sgn}(\textrm{id}) = 1 \implies \textrm{sgn}(\sigma) = (-1)^k$
-****
-- $\forall \sigma, \sigma^{\prime} \in S_{n} \quad \operatorname{sgn}\left(\sigma \sigma^{\prime}\right)=\operatorname{sgn}(\sigma)\cdot \textrm{sgn}(\sigma ')$
-  - $\sigma = \tau_1 \ldots \tau_k$
-  - $\sigma ' = \tau_1^{\prime} \ldots \tau_h^{\prime}$
-  - $\sigma \sigma^\prime = \tau_1 \ldots \tau_k \cdot \tau_1^\prime \ldots \tau_h^\prime \implies \textrm{sgn}(\sigma \sigma^\prime) = (-1)^ {k + h} = (-1)^k \cdot (-1)^h = \textrm{sgn}(\sigma) \cdot \textrm{sgn}(\sigma^\prime)$
-- $\forall \sigma \in S_n \quad \textrm{sgn}(\sigma^{-1})=\textrm{sgn}(\sigma)$
-  - $\left.\begin{array}{l}\operatorname{sgn}(\textrm{id})=1 \\ \sigma \sigma^{-1}=\textrm{id} \implies \operatorname{sgn}\left(\sigma \sigma^{-1}\right)=\textrm{sgn}(\textrm{id}) \\ \operatorname{sgn}\left(\sigma \sigma^{-1}\right)=\operatorname{sgn}(\sigma) \cdot \operatorname{sgn}\left(\sigma^{-1}\right)\end{array}\right\} \implies \textrm{sgn}(\sigma) \cdot \textrm{sgn}(\sigma^{-1})= 1\implies \textrm{sgn}(\sigma)= \textrm{sgn}(\sigma^{-1})$
+  - $\sigma =\tau_{1} \ldots \tau_{k} \implies \textrm{id} = \sigma \tau_k \ldots \tau_1$ poiché ogni trasposizione è l'inversa di sé stessa, e dunque $\textrm{sgn}(\textrm{id}) = 1 = \textrm{sgn}(\sigma \tau_k \ldots \tau_1)$ poiché se sono uguali, saranno uguali anche i loro segni
+  - $\textrm{sgn}(\sigma \tau_k \ldots \tau_1) = -\textrm{sgn}(\sigma \tau_k \ldots \tau_2) = \textrm{sgn}(\sigma \tau_k \ldots \tau_3) = \ldots = (-1)^k \cdot \textrm{sgn}(\sigma)$ poiché sono state rimosse esattamente $k$ trasposizioni adiacenti
+  - allora $(-1)^k \cdot \textrm{sgn}(\sigma) = \textrm{sgn}(\textrm{id}) = 1$
+  - $\textrm{sgn}(\sigma) = \pm 1$, e poiché $(-1)^k \cdot \textrm{sgn}(\sigma)  = 1$, allora necessariamente $\textrm{sgn}(\sigma) = (-1)^k$
+
+## Oss
+
+- **Hp**
+    - $\sigma, \sigma^{\prime} \in S_{n} | \left\{\begin{array}{l}\sigma = \tau_1 \ldots \tau_k \\ \sigma ' = \tau_1^{\prime} \ldots \tau_h^{\prime}\end{array}\right.$, dove ogni trasposizione è adiacente
+- **Th**
+    - $\operatorname{sgn}\left(\sigma \sigma^{\prime}\right)=\operatorname{sgn}(\sigma)\cdot \textrm{sgn}(\sigma ')$
+- **Dim**
+  - $\sigma \sigma^\prime = \tau_1 \ldots \tau_k \cdot \tau_1^\prime \ldots \tau_h^\prime$, dunque il numero di trasposizioni adiacenti di $\sigma \sigma^\prime$ è $k + h$
+  - per dimostrazione precedente $\textrm{sgn}(\sigma \sigma^\prime) = (-1)^ {k + h} = (-1)^k \cdot (-1)^h = \textrm{sgn}(\sigma) \cdot \textrm{sgn}(\sigma^\prime)$
+
+## Oss
+
+- **Hp**
+    - $\sigma \in S_n$
+- **Th**
+    - $\textrm{sgn}(\sigma^{-1})=\textrm{sgn}(\sigma)$
+- **Dim**
+  - $\left.\begin{array}{l}\operatorname{sgn}(\textrm{id})=1 \\ \sigma \sigma^{-1}=\textrm{id} \implies \operatorname{sgn}\left(\sigma \sigma^{-1}\right)=\textrm{sgn}(\textrm{id}) \\ \operatorname{sgn}\left(\sigma \sigma^{-1}\right)=\operatorname{sgn}(\sigma) \cdot \operatorname{sgn}\left(\sigma^{-1}\right)\end{array}\right\} \implies \textrm{sgn}(\sigma) \cdot \textrm{sgn}(\sigma^{-1})= 1$
+      - $\forall \sigma \in S_n \quad \textrm{sgn}(\sigma) = \pm 1$, di conseguenza se esistono due permutazioni $\alpha, \beta \in S_n \mid \textrm{sgn}(\alpha) \cdot \textrm{sgn}(\beta) = 1$, allora necessariamente i due segni devono essere o entrambi $1$ o entrambi $-1$, e dunque i segni coincidono
+  - dunque $\textrm{sgn}(\sigma) \cdot \textrm{sgn}(\sigma^{-1})= 1 \implies \textrm{sgn}(\sigma)= \textrm{sgn}(\sigma^{-1})$
+
+## Oss
+
 - $A_n := \{\sigma \in S_n \mid \sigma$ pari$\}$, è un **sottogruppo** di $S_n$, detto **gruppo alterno di ordine $n$**
   - ⚠️ **MANCA DIMOSTRAZIONE**
-- **permutazioni coniugate hanno lo stesso segno**
-  - $\forall \sigma, \sigma^\prime \in S_n \quad \sigma \sim \sigma ^\prime \iff \exists\alpha \in S_n \mid \sigma^\prime = \alpha \sigma \alpha^{-1} \implies \textrm{sgn}(\sigma^\prime) = \textrm{sgn}(\alpha)\cdot \textrm{sgn}(\sigma)\cdot \textrm{sgn}(\alpha^{-1})$
-  - $\forall \alpha \quad \textrm{sgn}(\alpha)= \textrm{sgn}(\alpha^{-1}) \implies$ entrambe $1$ o entrambe $-1 \implies \textrm{sgn}(\alpha) \cdot \textrm{sgn}(\alpha^{-1}) = 1 \implies \textrm{sgn}(\sigma^\prime) = \textrm{sgn}(\sigma)$
+
+## Oss
+
+- **Hp**
+  - $\sigma, \sigma^\prime \in S_n$
+  - $\sigma \sim \sigma ^\prime \iff \exists\alpha \in S_n \mid \sigma^\prime = \alpha \sigma \alpha^{-1}$
+- **Th**
+    - $\textrm{sgn}(\sigma^\prime) = \textrm{sgn}(\sigma)$
+- **Dim**
+  - $\sigma \sim \sigma' \implies \textrm{sgn}(\sigma^\prime) = \textrm{sgn}(\alpha)\cdot \textrm{sgn}(\sigma)\cdot \textrm{sgn}(\alpha^{-1})$
+  - per dimostrazione precedente $\forall \alpha \in S_n \quad \textrm{sgn}(\alpha)= \textrm{sgn}(\alpha^{-1})$, dunque entrambe $1$ o entrambe $-1
+  - quindi $\textrm{sgn}(\alpha) \cdot \textrm{sgn}(\alpha^{-1}) = 1 \implies \textrm{sgn}(\sigma^\prime) = \textrm{sgn}(\sigma)$
+
+## Oss
+
 - $\forall \sigma, \sigma^\prime \in S_n \mid  \sigma := \gamma_1 \ldots \gamma_k, \sigma^\prime := \gamma_1^\prime \ldots \gamma_h^\prime \implies \sigma \sim \sigma ^\prime \iff$$\left\{\begin{array}{c}k=h \\ d=d_{1}^{\prime} \\ \vdots \\ d_{k}=d_{h}^{\prime}=d_{k}^{\prime}\end{array}\right.$, dove $d_j$ è la lunghezza del ciclo $\gamma_j$ e $d_j^\prime$ è la lunghezza del ciclo $\gamma_j^\prime$
   - _prima implicazione_
     - $\sigma \sim \sigma^\prime \implies \exists\alpha \in S_n \mid \sigma^\prime = \alpha \sigma \alpha^{-1}$
