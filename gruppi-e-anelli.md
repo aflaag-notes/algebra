@@ -30,7 +30,7 @@
 - **Th**
   - $e$ è unico in $G$
 - **Dim**
-  - per assurdo, $\exists e\_1, e\_2 \mid e\_1 \neq e\_2$ elementi neutri, allora $\left.\begin{array}{l}m\left(x, e\_{1}\right)=m\left(e\_{1}, x\right)=x \\ m\left(x, e\_{2}\right)=m\left(e\_{2}, x\right)=x\end{array}\right\} \implies m\left(e\_{1}, x\right)=m\left(e\_{2}, x\right) \implies e\_1=e\_2$ necessariamente, quindi è unico
+  - per assurdo, $\exists e_1, e_2 \mid e_1 \neq e_2$ elementi neutri, allora $\left.\begin{array}{l}m\left(x, e_{1}\right)=m\left(e_{1}, x\right)=x \\ m\left(x, e_{2}\right)=m\left(e_{2}, x\right)=x\end{array}\right\} \implies m\left(e_{1}, x\right)=m\left(e_{2}, x\right) \implies e_1=e_2$ necessariamente, quindi è unico
 
 ## Oss
 
@@ -41,7 +41,7 @@
 - **Th**
   - $x^{-1}$ è unico in $G$ per $x$ rispetto a $m$
 - **Dim**
-  - per assurdo, per un certo $x \in G \quad \exists x^{-1}\_1, x^{-1}\_2 \mid x^{-1}\_1 \neq x^{-1}\_2$, allora $\left.\begin{array}{l}m\left(x, x\_{1}^{-1}\right)=m\left(x\_{1}^{-1}, x\right)=e \\ m\left(x, x\_{2}^{-1}\right)=m\left(x\_{2}^{-1}, x\right)=e \end{array}\right\} \implies m\left(e\_{1}^{-1}, x\right)=m\left(x\_{2}^{-1}, x\right) \implies x\_1^{-1}=x\_2^{-1}$ necessariamente, quindi è unico
+  - per assurdo, per un certo $x \in G \quad \exists x^{-1}_1, x^{-1}_2 \mid x^{-1}_1 \neq x^{-1}_2$, allora $\left.\begin{array}{l}m\left(x, x_{1}^{-1}\right)=m\left(x_{1}^{-1}, x\right)=e \\ m\left(x, x_{2}^{-1}\right)=m\left(x_{2}^{-1}, x\right)=e \end{array}\right\} \implies m\left(e_{1}^{-1}, x\right)=m\left(x_{2}^{-1}, x\right) \implies x_1^{-1}=x_2^{-1}$ necessariamente, quindi è unico
 
 ## Ex
 
@@ -52,7 +52,7 @@
   - $(X^X, \circ)$ è **monoide**
 - **Dim**
     - $\forall f, g, h \in Y^X \quad (f \circ g) \circ h=f \circ(g \circ h)$. poiché la composizione di funzioni è associativa
-    - $\forall X \quad \exists \textrm{id}\_X \mid \textrm{id}\_X : X \rightarrow X : x \rightarrow x$, che costituisce dunque l'elemento neutro, mappando ogni elemento in sé stesso
+    - $\forall X \quad \exists \textrm{id}_X \mid \textrm{id}_X : X \rightarrow X : x \rightarrow x$, che costituisce dunque l'elemento neutro, mappando ogni elemento in sé stesso
 
 ## Oss
 
@@ -66,18 +66,18 @@
 ## Oss
 
 - **Hp**
-  - $S\_X := \{f \mid f : X \rightarrow Y$ biiettiva $\}$
+  - $S_X := \{f \mid f : X \rightarrow Y$ biiettiva $\}$
 - **Th**
-  - $(S\_X, \circ)$ è un gruppo, non commutativo se $|X| \ge 3$
+  - $(S_X, \circ)$ è un gruppo, non commutativo se $|X| \ge 3$
 - **Dim**
   - la composizione di funzioni è associativa
-  - $\textrm{id}$ è biiettiva $\implies \textrm{id} \in S\_X$ per definizione, e costituisce l'elemento neutro
-  - $\forall f:X \rightarrow Y \in S\_X \quad \exists f^{-1}: Y \rightarrow X$, poiché $f \in S\_X \implies f$ biiettiva, e ogni funzione biiettiva è invertibile
-  - $|X| = 2 \implies X$ è della forma $X = \{a, b\}$, quindi $S\_X =\left\{\begin{array}{l}a \rightarrow a \\ b \rightarrow b\end{array}\right. \ ,\ \left.\begin{array}{l}a \rightarrow b \\ b \rightarrow a\end{array}\right\}$, dove uno dei due elementi è $\rm id$
+  - $\textrm{id}$ è biiettiva $\implies \textrm{id} \in S_X$ per definizione, e costituisce l'elemento neutro
+  - $\forall f:X \rightarrow Y \in S_X \quad \exists f^{-1}: Y \rightarrow X$, poiché $f \in S_X \implies f$ biiettiva, e ogni funzione biiettiva è invertibile
+  - $|X| = 2 \implies X$ è della forma $X = \{a, b\}$, quindi $S_X =\left\{\begin{array}{l}a \rightarrow a \\ b \rightarrow b\end{array}\right. \ ,\ \left.\begin{array}{l}a \rightarrow b \\ b \rightarrow a\end{array}\right\}$, dove uno dei due elementi è $\rm id$
     - $\rm id \circ id = id$
     - $\rm \sigma \circ id = id \circ \sigma = \sigma$
     - $\rm \sigma \circ \sigma = id$ per costruzione
-  - quindi $|X| = 2 \implies S\_X$ è abeliano, mentre $|X| = 1 \implies S\_X$ è abeliano perché contiene un solo elemento
+  - quindi $|X| = 2 \implies S_X$ è abeliano, mentre $|X| = 1 \implies S_X$ è abeliano perché contiene un solo elemento
   - ⚠️ **perche >= 3 non è abeliano?**
 
 ## Oss
@@ -93,41 +93,41 @@
 - **Anello**
 > - $A$ insieme
 > - $+: A \times A \implies A$
-> - $\*: A \times A \implies A$
-> - $(A, +, \*)$ **anello** $\iff (A, +)$ gruppo abeliano, $(A, \*)$ monoide e  $a\*(b + c) = a \* b + a \* c \quad \forall a, b, c \in A$
-> - $a \* b=b \* a \quad \forall a, b \in A \implies   (A, \*, +)$ è un **anello commutativo**
+> - $*: A \times A \implies A$
+> - $(A, +, *)$ **anello** $\iff (A, +)$ gruppo abeliano, $(A, *)$ monoide e  $a*(b + c) = a * b + a * c \quad \forall a, b, c \in A$
+> - $a * b=b * a \quad \forall a, b \in A \implies   (A, *, +)$ è un **anello commutativo**
 
 - **Campo**
-> - $(A, +, \*)$ anello
-> - $(A, +, \*)$ è un **campo** $\iff \forall x \in A \quad \exists x^{-1}$ rispetto a $\*$
+> - $(A, +, *)$ anello
+> - $(A, +, *)$ è un **campo** $\iff \forall x \in A \quad \exists x^{-1}$ rispetto a $*$
 
 ## Def
 
 - **Invertibili**
 > - $(A, +, \cdot)$ anello commutativo
 > - $a \in A$ **invertibile** $\iff \exists a^{-1} \in A \mid a \cdot a^{-1}=e$, dove $e$ è l'elemento neutro dell'anello rispetto a $\cdot$
-> - $A^\* := \{a \in A \mid a$ invertibile$\}$ è l'**insieme degli invertibili di $A$**
+> - $A^* := \{a \in A \mid a$ invertibile$\}$ è l'**insieme degli invertibili di $A$**
 
 ## Oss
 
 - **Hp**
   - $(A, +, \cdot)$ anello commutativo
 - **Th**
-  - $(A^\*, \cdot)$ è un gruppo
+  - $(A^*, \cdot)$ è un gruppo
 - **Dim**
     - $(xy)z = x(yz)$
-    - $1^{-1} = 1 \implies 1$ invertibile $\implies 1 \in A^\*$ per definizione di $A^\* \implies \exists e \in A^\*$
-    - $\forall x \in A^{\*} \quad \exists x^{-1}$ per definizione di $A^\*$, ma poiché $x^{-1}$ è inverso di $x$, allora $x^{-1} \in A^\*$ per definizione
+    - $1^{-1} = 1 \implies 1$ invertibile $\implies 1 \in A^*$ per definizione di $A^* \implies \exists e \in A^*$
+    - $\forall x \in A^{*} \quad \exists x^{-1}$ per definizione di $A^*$, ma poiché $x^{-1}$ è inverso di $x$, allora $x^{-1} \in A^*$ per definizione
 
 ## Oss
 
 - **Hp**
   - $(A, +, \cdot)$ anello commutativo
 - **Th**
-    - $(A^\*, \cdot) \subset (A, \cdot)$ è un sottogruppo
+    - $(A^*, \cdot) \subset (A, \cdot)$ è un sottogruppo
 - **Dim**
   - esiste il neutro per dimostrazione precedente
-  - $\forall x, y \in A^{\*} \quad \exists x^{-1}, y^{-1}$, e in particolare $y^{-1}x^{-1} = (xy)^{-1} \implies xy \in A^\*$ per definizione
+  - $\forall x, y \in A^{*} \quad \exists x^{-1}, y^{-1}$, e in particolare $y^{-1}x^{-1} = (xy)^{-1} \implies xy \in A^*$ per definizione
   - è chiuso rispetto agli inversi per dimostrazione precedente
 
 ## Def
@@ -147,7 +147,7 @@
 - **Hp**
   - $(A, +, \cdot)$ anello commutativo
 - **Th**
-  - $x \mid 0 \iff x \notin A^\*$
+  - $x \mid 0 \iff x \notin A^*$
 - **Dim**
   - ipotizziamo che $\exists a \in A \mid a$ invertibile e divisore dello $0$, allora $\exists a^{-1} \in A, b \in A - \{0\} \mid a^{-1}a = 1 \land ab = 0$
   - $b = 1 \cdot b = (a^{-1} a)\cdot b = a^{-1}\cdot(ab)=a^{-1}\cdot 0= 0 \ \bot$
@@ -159,9 +159,9 @@
 - **Th**
   - $A$ dominio di integrità
 - **Dim**
-   - $A$ campo $\implies$ ogni elemento non nullo è invertibile, dunque $A^\*=A - \{0\}$
+   - $A$ campo $\implies$ ogni elemento non nullo è invertibile, dunque $A^*=A - \{0\}$
      - $0$ è l'unico elemento non invertibile
-     - $0 \notin A^\* \iff 0 \mid 0$ per dimostrazione precedente
+     - $0 \notin A^* \iff 0 \mid 0$ per dimostrazione precedente
    - quindi $A$ è dominio di integrità poiché $0$ è l'unico divisore dello $0$
 
 ## Def
@@ -177,14 +177,14 @@
 ## Def
 
 - **Sottogruppo**
-> - $(G, \*)$ gruppo 
-> - $(H, \*) \subset (G, \*)$ **sottogruppo** $\iff \exists e \in H \mid e$ è l'elemento neutro,$H \* H \subset H$ e $\exists x^{-1} \in H \quad \forall x \in H$
+> - $(G, *)$ gruppo 
+> - $(H, *) \subset (G, *)$ **sottogruppo** $\iff \exists e \in H \mid e$ è l'elemento neutro,$H * H \subset H$ e $\exists x^{-1} \in H \quad \forall x \in H$
 
 ## Def
 
 - **Sottogruppo normale**
-> - $(G, \*)$ gruppo
-> - $(H, \*) \subset (G, \*)$ sottogruppo
+> - $(G, *)$ gruppo
+> - $(H, *) \subset (G, *)$ sottogruppo
 > - $x \in G$
 > - $xH := \{xh \mid h \in H\}$
 > - $Hx := \{hx \mid h \in H\}$
@@ -235,8 +235,8 @@
     - ⚠️ **PERCHÉ NON SERVE L'IMPLICAZIONE AL CONTRARIO?**
   - $(G/H, \cdot)$
     - $\forall [x], [y], [z] \in G/H \quad ([x][y])[z] = [x y][z] = [x y z] = [x][y z]=[x]([y][z])$, quindi l'operazione è associativa
-    - $1\_G \in G$ poiché $G$ gruppo $\implies [1\_G] \in G/H$, l'elemento neutro
-    - $\forall [x], [x^{-1}] \in G/H \quad [x][x^{-1}]=[x \cdot x^{-1}] = [1\_G] \implies [x^{-1}] = [x]^{-1}$
+    - $1_G \in G$ poiché $G$ gruppo $\implies [1_G] \in G/H$, l'elemento neutro
+    - $\forall [x], [x^{-1}] \in G/H \quad [x][x^{-1}]=[x \cdot x^{-1}] = [1_G] \implies [x^{-1}] = [x]^{-1}$
 
 ****
 
@@ -261,11 +261,63 @@
   - $e=g^{0} \implies e \in H(g)$ per definizione di $H(g)$
   - $\forall m, n \in \mathbb{Z} \quad m + n \in \mathbb{Z} \implies g^m \cdot g^n = g^{m + n} \in H(g)$ per definizione di $H(g)$, quindi $H(g) \cdot Hg(g) \subset H(g)$
   - $\forall n \in \mathbb{Z} \quad -n \in \mathbb{Z} \implies (g^n)^{-1} = g^{-n} \in H(g)$ per definizione di $H(g)$
-  ****
-   ⚠️ **CONTINUA DA QUA**
-- $\exists! d \geq 0 \mid I(g)=I(d)$
-  - $d = 0 \implies o(g) = |H(g)| = |\mathbb{Z}|$, dunque infinito
+
+## Oss
+
+- **Hp**
+  - $G$ gruppo
+  - $g \in G$
+  - $I(g):=\{n \in \mathbb{Z} \mid g^n = e\}$
+- **Th**
+  - $I(g)$ è un ideale
+- **Dim**
+  - $(I(g), +) \subset (\mathbb{Z}, +)$ è sottogruppo
+    - $0 \in \mathbb{Z} \land g^{0}=e \implies 0 \in I(g)$ per definizione di $I(g)$
+    - $m, n \in \mathbb{Z} \mid  g^{m}=g^{n}=e \implies g^{m} \cdot g^{n}= g^{m + n} \iff e \cdot e = e \implies m +n \in I(g)$ per definizoine di $I(g)$, quindi $I(g) + I(g) \subset I(g)$
+    - $n \in I(g) \mid g^n = e \iff (g^n)^{-1} = e ^{-1 } \iff g^{-n} =e \implies -n \in I(g)$ per definizione di $I(g)$
+  - $\forall n \in I(g), k \in \mathbb{Z} \quad g^{n \cdot k} = (g^n)^k = e^k = e \implies n \cdot k \in I(g)$
+
+## Oss
+
+- **Hp**
+  - $G$ gruppo
+  - $g \in G$
+  - $\exists! d \geq 0 \mid I(g)=I(d)$
+- **Th**
+  - $d = 0 \implies o(g) := |H(g)| = |\mathbb{Z}|$, dunque infinito
   - $d>0 \implies d = o(g)$
- - ⚠️ **MANCA DIMOSTRAZIONE**
+- **Dim**
+  - $d = 0$
+    - la funzione $f: \mathbb{Z} \rightarrow H(g) : n \rightarrow g^n$ è biiettiva
+      - $f$ iniettività $\iff \forall m, n \in \mathbb{Z} \quad g^n =g^m \implies n = m$
+        - $m, n \in \mathbb{Z} \mid g^m = g^n \implies g^{-m} \cdot g^m=g^{-m} \cdot g^n \iff e = g^{n - m} \implies n - m \in I(g) = I(d) \implies d \mid n - m$
+        - $d = 0 \implies 0 \mid n - m \iff n -m = 0 \iff n = m$, di conseguenza $g^m = g^n \implies n = m$
+      - $f$ suriettività è data al fatto che l'immagine di $f$ coincide con $H(g)$ per definizione di $H(g)$
+    - $f$ è biiettiva $\implies |\mathbb{Z} | = |H(g)| = o(g)$, dunque infinito
+  - $d \gt 0$
+    - $I(g) = I(d) \land d \in I(d) \implies d \in I(g) \implies g^d = e$
+    - ⚠️ **QUESTA IPOTESI SOTTO L'HO AGGIUNTA IO, NON SO SE È GIUSTA PENSO DI SI**
+    - $d \gt 0 \implies \forall n \in I(g) \quad \exists q, r \mid n = dq + r \quad 0 \le r \lt d$ per il teorema della divisione euclidea con il resto, dunque $g^n = g^{dq +r}=(g^d)^q \cdot g^r=e^q \cdot g^r =e \cdot g^r = g^r$
+    - ⚠️ **NON HO CAPITO UN CAZZO**
+    - ⚠️ **PER QUALCHE COSA CHE NON HO CAPITO** allora $H(g) = \{g^0, g^1, \ldots, g^{d-1}\} \implies |H(g)|=d$
 
+## Oss
 
+- **Hp**
+  - $G$ gruppo finito
+  - $g \in G$
+- **Th**
+  - $H(g)$ sottogruppo finito
+- **Dim**
+  - per il teorema di Lagrange $|H(g)| \bigg\vert |G|$, e dunque $G$ finito $\implies H(g)$ finito necessariamente
+
+## Oss
+
+- **Hp**
+  - $G$ gruppo finito
+  - $g \in G$
+- **Th**
+  - $g^{|G|}=e$
+- **Dim**
+  - $\exists ! d = o(g) \mid I(d) = I(g)$ per dimostrazione precedente, e dunque $d \in I(d) \implies d \in  I(g) \implies g^d = e$
+  - $d = o(g) = |H(g)| \bigg\vert |G|$ per il teorema di Lagrange, e dunque $\exists k \in \mathbb{Z} \quad |G|=d \cdot k \implies g^{|G|} = g^{d \cdot k} = (g^d)^k = e^k = e$

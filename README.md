@@ -1,3 +1,3 @@
 # algebra
 
-my notes 😊
+my notes, WIP :blush:

@@ -17,26 +17,26 @@
 
 - **Hp**
   - $(G, \cdot), (H, \cdot)$ gruppi
-  - $1\_G$ neutro per $G$
-  - $1\_H$ neutro per $H$
+  - $1_G$ neutro per $G$
+  - $1_H$ neutro per $H$
   - $f: G \rightarrow H$ morfismo
 - **Th**
-  - $f(1\_G) = 1\_H$
+  - $f(1_G) = 1_H$
 - **Dim**
-  - $\forall g \in G \quad f(g) = f(1\_G \cdot g) = f(1\_G) \cdot f(g)$ poiché $f$ morfismo
-  - quindi $f(g) = f(1\_G) \cdot f(g) \implies f(g) \cdot f(g)^{-1} = f(1\_G) \cdot f(g) \cdot f(g)^{-1} \implies 1\_H = f(1\_G) \cdot 1\_H \implies 1\_H = f(1\_G)$ (poiché $f(g), f(g)^{-1} \in H$ per definizione di $f$)
+  - $\forall g \in G \quad f(g) = f(1_G \cdot g) = f(1_G) \cdot f(g)$ poiché $f$ morfismo
+  - quindi $f(g) = f(1_G) \cdot f(g) \implies f(g) \cdot f(g)^{-1} = f(1_G) \cdot f(g) \cdot f(g)^{-1} \implies 1_H = f(1_G) \cdot 1_H \implies 1_H = f(1_G)$ (poiché $f(g), f(g)^{-1} \in H$ per definizione di $f$)
  
 ## Oss
 
 - **Hp**
   - $(G, \cdot), (H, \cdot)$ gruppi
-  - $1\_G$ neutro per $G$
-  - $1\_H$ neutro per $H$
+  - $1_G$ neutro per $G$
+  - $1_H$ neutro per $H$
   - $f: G \rightarrow H$ morfismo
 - **Th**
   - $f(g^{-1}) = f(g)^{-1}$
 - **Dim**
-  - per dimostrazione precedente, $1\_H = f(1\_G) = f(g \cdot g^{-1})=f(g) \cdot f(g^{-1}) \implies 1\_H = f(g) \cdot f(g^{-1}) \implies f(g)^{-1} = f(g^{-1})$
+  - per dimostrazione precedente, $1_H = f(1_G) = f(g \cdot g^{-1})=f(g) \cdot f(g^{-1}) \implies 1_H = f(g) \cdot f(g^{-1}) \implies f(g)^{-1} = f(g^{-1})$
 
 ****
 
@@ -73,14 +73,14 @@
 ## Ex
 
 - **Hp**
-  - $f: \mathbb{Z}\_n \rightarrow H : [k] \rightarrow \zeta^k$
+  - $f: \mathbb{Z}_n \rightarrow H : [k] \rightarrow \zeta^k$
 - **Th**
-  - $f$ morfismo di gruppi $(\mathbb{Z}\_n , +)$ e $(H, \cdot)$
+  - $f$ morfismo di gruppi $(\mathbb{Z}_n , +)$ e $(H, \cdot)$
 - **Dim**
-  - $f$ è biiettiva per costruzione di $\mathbb{Z}\_n := \{[0], [1], \ldots, [n - 1]\}$ e $H := \{\zeta ^0, \zeta^1, \ldots, \zeta^{n-1}\}$
+  - $f$ è biiettiva per costruzione di $\mathbb{Z}_n := \{[0], [1], \ldots, [n - 1]\}$ e $H := \{\zeta ^0, \zeta^1, \ldots, \zeta^{n-1}\}$
   - $f$ morfismo
     - $f([i]+[j])=f([i]) \cdot f([j])$
-      - $[i] + [j] = [k]$ per un certo $k \in \mathbb{Z}\_n \implies \exists h \in \mathbb{Z} \mid i + j = k + hn$
+      - $[i] + [j] = [k]$ per un certo $k \in \mathbb{Z}_n \implies \exists h \in \mathbb{Z} \mid i + j = k + hn$
       - $f([i]+[j])= f([k]) = \zeta^k$
       - $f([i]) \cdot f([j]) = \zeta^i \cdot \zeta ^j = \zeta ^{i + j}$, ma per osservazione precedente $\zeta^{i + j} = \zeta^{k + nh} = \zeta^{k} \cdot (\zeta^n)^h$
       - $\zeta^n = 1$ per definzione di $\zeta \implies$ entrambe i membri dell'equazione sono pari a $\zeta^k$
@@ -105,9 +105,9 @@
 ## Ex
 
 - **Hp**
-  - $f: \mathbb{Z} \rightarrow \mathbb{Z}\_n : k \rightarrow [k]$
+  - $f: \mathbb{Z} \rightarrow \mathbb{Z}_n : k \rightarrow [k]$
 - **Th**
-  - $f$ morfismo di anelli $\left(\mathbb{Z},+, \cdot\right)$ e $\left(\mathbb{Z}\_{n},+, \cdot\right)$
+  - $f$ morfismo di anelli $\left(\mathbb{Z},+, \cdot\right)$ e $\left(\mathbb{Z}_{n},+, \cdot\right)$
 - **Dim**
   - per come le operazioni $+$ e $\cdot$ sono state definite, $f([x+y])=f([x])+f([y])$ e
 $f([x \cdot y])=f([x]) \cdot f([y])$
@@ -116,9 +116,9 @@ $f([x \cdot y])=f([x]) \cdot f([y])$
 
 - **Hp**
   - $n \mid m$
-  - $f : \mathbb{Z}\_m \rightarrow \mathbb{Z}\_n: x \ (\bmod m) \rightarrow x \ (\bmod n)$
+  - $f : \mathbb{Z}_m \rightarrow \mathbb{Z}_n: x \ (\bmod m) \rightarrow x \ (\bmod n)$
 - **Th**
-  - $f$ morfismo di anelli $\left(\mathbb{Z}\_{m},+, \cdot\right)$ e $\left(\mathbb{Z}\_{n},+, \cdot\right)$
+  - $f$ morfismo di anelli $\left(\mathbb{Z}_{m},+, \cdot\right)$ e $\left(\mathbb{Z}_{n},+, \cdot\right)$
 - **Dim**
   - $x \ (\bmod m) + y \ (\bmod m) = x +y \ (\bmod m)$
   - $f(x + y \ (\bmod m)) = x +y \ (\bmod n)$
@@ -130,8 +130,8 @@ $f([x \cdot y])=f([x]) \cdot f([y])$
 - **Hp**
   - $(G, \cdot)$ gruppo
   - $\textrm{Bij}(G) := \{f \mid f: G \rightarrow G\}$
-  - $\textrm{L}\_g \in G \mid \textrm{L}\_g: G \rightarrow G:g \rightarrow gh$
-  - $f: G \rightarrow \textrm{Bij}(G): g \rightarrow \textrm{L}\_g$
+  - $\textrm{L}_g \in G \mid \textrm{L}_g: G \rightarrow G:g \rightarrow gh$
+  - $f: G \rightarrow \textrm{Bij}(G): g \rightarrow \textrm{L}_g$
 - **Th**
   - $f$ morfismo di gruppi $(\textrm{Bij}(G), \circ)$ e $(G, \cdot)$
 - **Dim**
@@ -156,13 +156,13 @@ $f([x \cdot y])=f([x]) \cdot f([y])$
 - **Kernel e Immagine di gruppi**
 > - $G, H$ gruppi
 > - $f: G \rightarrow H$ morfismo
-> - $\textrm{Ker}(f):=\{g \in G \mid f(g) = 1\_H\}$
+> - $\textrm{Ker}(f):=\{g \in G \mid f(g) = 1_H\}$
 > - $\textrm{Im}(f):=\{h \in H \mid \exists g \in G : f(g) = h\}$
 
  -  **Kernel e Immagine di anelli**
 > - $A, B$ gruppi
 > - $f: A \rightarrow B$ morfismo
-> - $\textrm{Ker}(f):=\{a \in A \mid f(a)= 0\_B\}$
+> - $\textrm{Ker}(f):=\{a \in A \mid f(a)= 0_B\}$
 > - $\textrm{Im}(f):=\{b \in B \mid \exists a \in A : f(a) = b\}$
 
 ## Oss
@@ -173,9 +173,9 @@ $f([x \cdot y])=f([x]) \cdot f([y])$
 - **Th**
   - $\textrm{Ker}(f) \subset G$ è sottogruppo
 - **Dim**
-  - per dimostrazione precedente, $f(1\_G) = 1\_H \implies 1\_G \in \textrm{Ker}(f)$ per definizione
-  - $x, y \in \textrm{Ker}(f) \implies f(x) = f(y ) = 1\_H$ per definizione, dunque $f(x) \cdot f(y) = 1\_H \cdot 1\_H = 1\_H$, e $f(x) \cdot f(y) = f(x \cdot y) = 1\_H$ perché $f$ morfismo, quindi $x \cdot y \in \textrm{Ker}(f)$ per definizione
-  - $g \in \textrm{Ker}(f) \implies f(g) =1\_H \implies f(g)^{-1} = 1\_H^{-1} = 1\_H$, ma poiché per dimostrazione precedente $f(g)^{-1} = f(g^{-1}) \implies f(g^{-1})= 1\_H \implies g^{-1} \in \textrm{Ker}(f)$ per definizione
+  - per dimostrazione precedente, $f(1_G) = 1_H \implies 1_G \in \textrm{Ker}(f)$ per definizione
+  - $x, y \in \textrm{Ker}(f) \implies f(x) = f(y ) = 1_H$ per definizione, dunque $f(x) \cdot f(y) = 1_H \cdot 1_H = 1_H$, e $f(x) \cdot f(y) = f(x \cdot y) = 1_H$ perché $f$ morfismo, quindi $x \cdot y \in \textrm{Ker}(f)$ per definizione
+  - $g \in \textrm{Ker}(f) \implies f(g) =1_H \implies f(g)^{-1} = 1_H^{-1} = 1_H$, ma poiché per dimostrazione precedente $f(g)^{-1} = f(g^{-1}) \implies f(g^{-1})= 1_H \implies g^{-1} \in \textrm{Ker}(f)$ per definizione
  
 ## Oss
 
@@ -185,7 +185,7 @@ $f([x \cdot y])=f([x]) \cdot f([y])$
 - **Th**
   - $\textrm{Im}(f) \subset G$ è sottogruppo
 - **Dim**
-  - per dimostrazione precedente $f(1\_G)= 1\_H \implies 1\_H \in \textrm{Im}(f)$ per definizione
+  - per dimostrazione precedente $f(1_G)= 1_H \implies 1_H \in \textrm{Im}(f)$ per definizione
   - $x, y \in \textrm{Im}(f) \implies \exists g, g^\prime \in G \mid x = f(g) \land y = f(g^\prime) \implies x \cdot y = f(g) \cdot f(g^\prime) = f(g\cdot g^\prime)$ perché $f$ morfismo, quindi $x \cdot y \in \textrm{Im}(f)$ per definizione
   - $x \in \textrm{Im}(f) \implies \exists g \in G \mid f(g) = x \implies x^{-1} = f(g)^{-1} = f(g^{-1})$ per dimostrazione precedente, quindi $x ^{-1} \in \textrm{Im}(f)$ per definizione
  
@@ -195,14 +195,14 @@ $f([x \cdot y])=f([x]) \cdot f([y])$
   - $G, H$ gruppi
   - $f: G \rightarrow H$ morfismo
 - **Th**
-  - $f$ iniettiva $\iff \textrm{Ker}(f) = \{1\_G\}$
+  - $f$ iniettiva $\iff \textrm{Ker}(f) = \{1_G\}$
 - **Dim**
-  - $f$ iniettiva $\implies \textrm{Ker}(f) = \{1\_G\}$
-    - $f(1\_G) = 1\_H$ per dimostrazione precedente, dunque $1\_G \in \textrm{Ker}(f)$ per definizione
-    - $f$ iniettiva $\implies \nexists x, y \in G \mid x \neq y \implies f(x) = f(y)$, di conseguenza è unico $1\_G \in G \mid f(1\_G) = 1\_H$, dunque $\textrm{Ker}(f)$ conterrà esclusivamente $1\_G$ per definizione
-  - $f$ iniettiva $\impliedby \textrm{Ker}(f) = \{1\_G\}$
-    - $\forall g, g^\prime \in G \quad f(g) = f(g^\prime) \iff f(g)^{-1} \cdot f(g) = f(g)^{-1} \cdot f(g^\prime) \iff 1\_H = f(g) \cdot f(g^\prime) = f(g \cdot g^\prime)$
-    - $\textrm{Ker}(f) = \{1\_G\} \implies f(1\_G)=1\_H$ per definizione, allora $f(g\cdot g^\prime) = 1\_H \implies g \cdot g^\prime = 1\_G$ necessariamente, e $g \cdot g^\prime = 1\_G \iff g= g^\prime \implies f(g) = f(g^\prime) \implies g = g^\prime \implies f$ iniettiva
+  - $f$ iniettiva $\implies \textrm{Ker}(f) = \{1_G\}$
+    - $f(1_G) = 1_H$ per dimostrazione precedente, dunque $1_G \in \textrm{Ker}(f)$ per definizione
+    - $f$ iniettiva $\implies \nexists x, y \in G \mid x \neq y \implies f(x) = f(y)$, di conseguenza è unico $1_G \in G \mid f(1_G) = 1_H$, dunque $\textrm{Ker}(f)$ conterrà esclusivamente $1_G$ per definizione
+  - $f$ iniettiva $\impliedby \textrm{Ker}(f) = \{1_G\}$
+    - $\forall g, g^\prime \in G \quad f(g) = f(g^\prime) \iff f(g)^{-1} \cdot f(g) = f(g)^{-1} \cdot f(g^\prime) \iff 1_H = f(g) \cdot f(g^\prime) = f(g \cdot g^\prime)$
+    - $\textrm{Ker}(f) = \{1_G\} \implies f(1_G)=1_H$ per definizione, allora $f(g\cdot g^\prime) = 1_H \implies g \cdot g^\prime = 1_G$ necessariamente, e $g \cdot g^\prime = 1_G \iff g= g^\prime \implies f(g) = f(g^\prime) \implies g = g^\prime \implies f$ iniettiva
 
 ## Oss
 
@@ -213,8 +213,8 @@ $f([x \cdot y])=f([x]) \cdot f([y])$
   - $\textrm{Ker}(f)$ ideale
 - **Dim**
   - $(\textrm{Ker}(f), +) \subset (A, +)$ sottogruppo per dimostrazione precedente
-  - per analogia con dimostrazione precedente, $f(0\_A) = 0\_B$
-  - $x \in \textrm{Ker}(f) \implies f(x) = 0\_B$ per definizione, quindi $\forall x \in \textrm{Ker}(f), y \in A \quad f(x \cdot y )= f(x) \cdot f(y) )= 0\_B \cdot f(y) = 0\_B \implies x \cdot y \in \textrm{Ker}(f)$ per definizione, quindi $\textrm{Ker}(f) \cdot A \subset \textrm{Ker}(f)$
+  - per analogia con dimostrazione precedente, $f(0_A) = 0_B$
+  - $x \in \textrm{Ker}(f) \implies f(x) = 0_B$ per definizione, quindi $\forall x \in \textrm{Ker}(f), y \in A \quad f(x \cdot y )= f(x) \cdot f(y) )= 0_B \cdot f(y) = 0_B \implies x \cdot y \in \textrm{Ker}(f)$ per definizione, quindi $\textrm{Ker}(f) \cdot A \subset \textrm{Ker}(f)$
 
 ## Oss
 
@@ -252,6 +252,6 @@ $f([x \cdot y])=f([x]) \cdot f([y])$
 - **Dim**
   - per la formulazione 2 della definizione di sottogruppo normale, $\forall g \in G, h \in \textrm{Ker}(f) \implies g h g^{-1} \in \textrm{Ker}(f)$
   - $f(ghg^{-1}) = f(g) \cdot f(h) \cdot f(g^{-1})$
-  - $h \in \textrm{Ker}(f) \implies f(h) = 1\_H$ per definizione
+  - $h \in \textrm{Ker}(f) \implies f(h) = 1_H$ per definizione
   - per dimostrazione precedente $f(g^{-1}) = f(g)^{-1}$
-  - $f(ghg^{-1})= f(g) \cdot 1\_H \cdot f(g)^{-1} = 1\_H \implies ghg ^{-1} \in \textrm{Ker}(f)$ per definizione
+  - $f(ghg^{-1})= f(g) \cdot 1_H \cdot f(g)^{-1} = 1_H \implies ghg ^{-1} \in \textrm{Ker}(f)$ per definizione

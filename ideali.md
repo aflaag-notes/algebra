@@ -13,7 +13,7 @@
   - $a \in \mathbb{Z}$
   - $I(a) := \{ax \mid x \in A\}$
 - **Th**
-  - $I(a)$ è un ideale, e prende il nome di \_ideale di $A$ generato da $a \in A$\_
+  - $I(a)$ è un ideale, e prende il nome di _ideale di $A$ generato da $a \in A$_
 - **Dim**
   - $(I(a), + ) \subset(A, +)$ sottogruppo
     -  $0$ multiplo di $a \implies 0 \in I(a)$
@@ -40,16 +40,16 @@
 
 - **Hp**
   - $(A, +, \cdot)$ anello
-  - $a\_1, \ldots, a\_n \in\mathbb{Z}$
-  - $I(a\_1, \ldots, a\_n) := \{ a\_1b\_1 + \ldots +a\_nb\_n \mid b\_1, \ldots, b\_n \in A\}$
+  - $a_1, \ldots, a_n \in\mathbb{Z}$
+  - $I(a_1, \ldots, a_n) := \{ a_1b_1 + \ldots +a_nb_n \mid b_1, \ldots, b_n \in A\}$
 - **Th**
-  - $I(a\_1, \ldots, a\_n)$ è un ideale, e prende il nome di \_ideale di $A$ generato dagli $a\_1, \ldots, a\_n \in A$\_
+  - $I(a_1, \ldots, a_n)$ è un ideale, e prende il nome di _ideale di $A$ generato dagli $a_1, \ldots, a_n \in A$_
 - **Dim**
-  - $(I(a\_1, \ldots, a\_n) , +) \subset (A, +)$ sottogruppo
-    - $0 = a\_1 \cdot 0  + \ldots + a\_n \cdot 0 \in I(a\_1, \ldots a\_n)$, dunque $0$ è l'elemento neutro
-    - $\forall x, y \in I(a\_1, \ldots, a\_n) \quad x = a\_1b\_1 + \ldots +a\_nb\_n \land y = a\_1c\_1 + \ldots+ a\_nc\_n \implies x+ y = a\_1b\_1 + \ldots + a\_nb\_n + a\_1c\_1 + \ldots +a\_nc\_n$, che è possibile riscrivere come $x + y = a\_1(b\_1 + c\_1) + \ldots + a\_n(b\_n + c\_n)$, che per definizione implica che $x + y \in I(a\_1, \ldots, a\_n)$
-    - $\forall x \in I(a\_1, \ldots, a\_n) \quad x = a\_1b\_1 + \ldots + a\_nb\_n \iff -x = -a\_1b\_1 - \ldots - a\_nb\_n \iff -x = a\_1(-b\_1) + \ldots + a\_n(-b\_n)$, che per definizione implica che $-x \in I(a\_1, \ldots, a\_n)$
-  - $\forall x \in I(a\_1, \ldots, a\_n), c \in A \quad x = a\_1b\_1 + \ldots + a\_nb\_n \implies c \cdot x = a\_1 (b\_1c)+ \ldots + a\_n(b\_nc)$, che per definizione implica che $cx \in I(a\_1, \ldots, a\_n)$
+  - $(I(a_1, \ldots, a_n) , +) \subset (A, +)$ sottogruppo
+    - $0 = a_1 \cdot 0  + \ldots + a_n \cdot 0 \in I(a_1, \ldots a_n)$, dunque $0$ è l'elemento neutro
+    - $\forall x, y \in I(a_1, \ldots, a_n) \quad x = a_1b_1 + \ldots +a_nb_n \land y = a_1c_1 + \ldots+ a_nc_n \implies x+ y = a_1b_1 + \ldots + a_nb_n + a_1c_1 + \ldots +a_nc_n$, che è possibile riscrivere come $x + y = a_1(b_1 + c_1) + \ldots + a_n(b_n + c_n)$, che per definizione implica che $x + y \in I(a_1, \ldots, a_n)$
+    - $\forall x \in I(a_1, \ldots, a_n) \quad x = a_1b_1 + \ldots + a_nb_n \iff -x = -a_1b_1 - \ldots - a_nb_n \iff -x = a_1(-b_1) + \ldots + a_n(-b_n)$, che per definizione implica che $-x \in I(a_1, \ldots, a_n)$
+  - $\forall x \in I(a_1, \ldots, a_n), c \in A \quad x = a_1b_1 + \ldots + a_nb_n \implies c \cdot x = a_1 (b_1c)+ \ldots + a_n(b_nc)$, che per definizione implica che $cx \in I(a_1, \ldots, a_n)$
 
 ## Def
 
@@ -80,53 +80,53 @@
 - **Hp**
   - $I \subset \mathbb{Z}$ ideale
 - **Th**
-  -  $\exists ! \ d \in \mathbb{Z}\_{\ge 0} \mid I = I(d)$, o equivalentemente, $\mathbb{Z}$ è un anello a ideali principali
+  -  $\exists ! \ d \in \mathbb{Z}_{\ge 0} \mid I = I(d)$, o equivalentemente, $\mathbb{Z}$ è un anello a ideali principali
 - **Dim**
-  - \*esistenza\*
+  - *esistenza*
       - $I = \{0\} \implies I = I(0)$ poiché i multipli di $0$ sono tutti pari a $0$
-      - se invece $I \neq \{0\} \implies I \cap \mathbb{Z}\_{>0} \neq \varnothing$, dunque $I$ contiene almeno un numero non nullo, in particolare positivo
+      - se invece $I \neq \{0\} \implies I \cap \mathbb{Z}_{>0} \neq \varnothing$, dunque $I$ contiene almeno un numero non nullo, in particolare positivo
         - è possibile considerare solo il caso dei positivi in quanto$\forall x \in I - \{0\} \quad x < 0 \iff (-x)>0$, e $(-x) \in I$ per definizione di $I$, dunque per valori negativi è sufficiente considerare il loro opposto, sicuramente contenuto in $I$
-    - dunque, ha senso considerare $d:=\min(I \cap \mathbb{Z}\_{\gt 0})$
+    - dunque, ha senso considerare $d:=\min(I \cap \mathbb{Z}_{\gt 0})$
     - $I(d)=I \implies I(d) \subset I \wedge I \subset I(d)$
       - $I(d) \subset I$
         - $\forall x \in I(d) \quad \exists y \in \mathbb{Z} \mid x = dy$ per definizione
         - $\mathbb{Z}$ è anello commutativo
         - $I \subset \mathbb{Z}$ ideale, e dunque $I \cdot \mathbb{Z} \subset I$ 
-        - $d := \min(I \cap \mathbb{Z}\_{\gt 0}) \implies d \in I \implies y \in \mathbb{Z} \land d \in I \implies dy \in I \implies x \in I \implies I(d) \subset I$
+        - $d := \min(I \cap \mathbb{Z}_{\gt 0}) \implies d \in I \implies y \in \mathbb{Z} \land d \in I \implies dy \in I \implies x \in I \implies I(d) \subset I$
       - $I \subset I(d)$
-        - $d := \min(I \cap \mathbb{Z}\_{\gt 0}) \implies d \neq 0$
+        - $d := \min(I \cap \mathbb{Z}_{\gt 0}) \implies d \neq 0$
         - per il teorema della divisione euclidea con il resto $\forall x \in I \quad \exists ! q,r \in \mathbb{Z} \mid x=d q+r \quad 0 \leq r<d$
           - $r = 0 \iff x = dq \implies x \in I(d)$ per definizione, dunque $I \subset I(d)$
           - ipotizzando $r \neq 0$
             - $dq \in I(d) \implies dq \in I$ per dimostrazione precedente
             - quindi $x = dq + r \implies r = x - dq \in I$ poiché $I$ è un ideale
-            - $r \neq 0 \implies r \in I \cap \mathbb{Z}\_{\gt 0}$
-            - per definizione, $0 \le r \lt d$, ma $d:=\min(I \cap \mathbb{Z}\_{\gt 0})$, quindi il minimo numero che $d$ può assumere è $1$, e poiché $r < d \implies r = 0$ necessariamente, dunque segue la dimostrazione precedente
+            - $r \neq 0 \implies r \in I \cap \mathbb{Z}_{\gt 0}$
+            - per definizione, $0 \le r \lt d$, ma $d:=\min(I \cap \mathbb{Z}_{\gt 0})$, quindi il minimo numero che $d$ può assumere è $1$, e poiché $r < d \implies r = 0$ necessariamente, dunque segue la dimostrazione precedente
 
-  - \*unicità\*
-      - l'unicità deriva dal fatto che $d:=\min(I \cap \mathbb{Z}\_{\gt 0})$, e dunque nella dimostrazione $d > 0$, ma vale il ragionamento analogo per $d < 0$ considerando $I(-d)$, in quanto $I(d) = I(-d)$ per dimostrazione precedente
+  - *unicità*
+      - l'unicità deriva dal fatto che $d:=\min(I \cap \mathbb{Z}_{\gt 0})$, e dunque nella dimostrazione $d > 0$, ma vale il ragionamento analogo per $d < 0$ considerando $I(-d)$, in quanto $I(d) = I(-d)$ per dimostrazione precedente
   - quindi, ogni ideale in $\mathbb{Z}$ è generato dall'insieme dei multipli di un certo $d \ge 0$, che esiste sempre ed è unico, e di conseguenza $\mathbb{Z}$ è un anello ad ideali principali
 
 ## Oss
 
 - **Hp**
-  - $a\_{1}, \ldots a\_{n} \in \mathbb{Z}$
+  - $a_{1}, \ldots a_{n} \in \mathbb{Z}$
 - **Th**
-  - $\exists ! d=\textrm{MCD}(a\_{1}, \ldots, a\_{n})  \mid I\left(a\_{1}, \ldots a\_{n}\right)=I(d)$
+  - $\exists ! d=\textrm{MCD}(a_{1}, \ldots, a_{n})  \mid I\left(a_{1}, \ldots a_{n}\right)=I(d)$
 - **Dim**
     - ⚠️ **MANCA DIMOSTRAZIONE**
-        - $\forall x \in I(a\_1, \cdots, a\_n), \ d \mid x$, dunque $d$ è \*divisore comune\*
-        - $d$ è il \_massimo tra i divisori comuni\_
+        - $\forall x \in I(a_1, \cdots, a_n), \ d \mid x$, dunque $d$ è *divisore comune*
+        - $d$ è il _massimo tra i divisori comuni_
 
 ## Oss
 
 - **Hp**
-  - $a\_1, \ldots, a\_n \in \mathbb{Z}$
-  - $d := \textrm{MCD}(a\_1, \ldots, a\_n)$
+  - $a_1, \ldots, a_n \in \mathbb{Z}$
+  - $d := \textrm{MCD}(a_1, \ldots, a_n)$
 - **Th**
-  - $\exists x\_1, \ldots, x\_n \in \mathbb{Z} \mid a\_1 x\_1 + \ldots + a\_nx\_n=d$, che prende il nome di \_identità di Bézout\_
+  - $\exists x_1, \ldots, x_n \in \mathbb{Z} \mid a_1 x_1 + \ldots + a_nx_n=d$, che prende il nome di _identità di Bézout_
 - **Dim**
-  - per dimostrazione precedente, $I\left(a\_{1}, \ldots a\_{n}\right)=I(d)$, quindi $d \in I(a\_1, \ldots, a\_n) \implies \exists x\_1, \ldots, x\_n \in \mathbb{Z} \mid a\_1x\_1 + \ldots + a\_n x\_n = d$
+  - per dimostrazione precedente, $I\left(a_{1}, \ldots a_{n}\right)=I(d)$, quindi $d \in I(a_1, \ldots, a_n) \implies \exists x_1, \ldots, x_n \in \mathbb{Z} \mid a_1x_1 + \ldots + a_n x_n = d$
 
 ## Oss
 
@@ -152,8 +152,8 @@
   - $I + J$ è un ideale
 - **Dim**
   - $0 \in I, 0 \in J, 0+0=0 \implies 0 \in I + J$ per definizione
-  - la chiusura rispetto a $+$ deve implicare che $\forall i\_1, i\_2 \in I, j\_1, j\_2 \in J \quad (i\_1 + j\_1) + (i\_2 + j\_2) \in I + J$
-    - poiché $(i\_1 + j\_1) + (i\_2 + j\_2) = (i\_1 + i\_2) + (j\_1 + j\_2)$, e $i\_1 + i\_2 \in I, j\_1 + j\_2 \in J \implies (i\_1 + i\_2) + (j\_1 + j\_2) \in I + J$ per definizione di $I + J$
+  - la chiusura rispetto a $+$ deve implicare che $\forall i_1, i_2 \in I, j_1, j_2 \in J \quad (i_1 + j_1) + (i_2 + j_2) \in I + J$
+    - poiché $(i_1 + j_1) + (i_2 + j_2) = (i_1 + i_2) + (j_1 + j_2)$, e $i_1 + i_2 \in I, j_1 + j_2 \in J \implies (i_1 + i_2) + (j_1 + j_2) \in I + J$ per definizione di $I + J$
   - $\forall i \in I, j \in J \quad i + j \in I + J$, l'opposto rispetto a $+$ di $i + j$ è $- (i + j) = (-i) + (-j)$, e $\forall i \in I, j \in J \quad -i \in I, -j \in J  \implies (-i) + (-j) \in I + J$ per definizione
   - $A \cdot I \subset I \implies \forall a \in A, i \in I, j \in J \quad a(i + j) \in I + J$
     - $i + j \in I + J$ per definizione, e $a(i + j) = ai + aj$, e $ai \in I, aj \in J$ per definizione, quindi $ai + aj \in I + J$ per definizione
@@ -180,7 +180,7 @@
 - **$\cdot$ tra ideali**
 > - $(A, +, \cdot)$ anello commutativo
 > - $I, J \subset A$ ideali
-> - $I \cdot J = \{i\_1 j\_1 + \ldots + i\_k j\_k \mid k \ge  1, \forall i\_1 , \ldots , i\_k \in I, j\_1 , \ldots , j\_k \in J \}$
+> - $I \cdot J = \{i_1 j_1 + \ldots + i_k j_k \mid k \ge  1, \forall i_1 , \ldots , i_k \in I, j_1 , \ldots , j_k \in J \}$
 
 ## Oss
 
@@ -213,24 +213,16 @@
   - $I(a) \cdot I(b)=I(a \cdot b)$
 - **Dim**
   - $x \in I(a) \cdot I(b) \implies x \in I(a \cdot b)$
-    - per dimostrazione precedente $I(a)$ e $I(b)$ sono ideali, e poiché il prodotto tra ideali è ben definito, allora $x \in I(a) \cdot I(b) \implies x = i\_1 j\_1 + \ldots + i\_k j\_k$ con $i\_1 , \ldots , i\_k \in I(a)$ e $j\_1 , \ldots , j\_k \in I(b)$
-    - per definizione, $i \in I(a) \implies \exists x \in \mathbb{Z} \mid i = ax$, e dunque $i\_1, \ldots, i\_k = ax\_1, \ldots, ax\_k$ con $x\_1, \ldots, x\_k \in \mathbb{Z}$
-    - analogamente $j\_1, \ldots, j\_k = by\_1, \ldots, by\_k$ con $y\_1, \ldots, y\_k \in \mathbb{Z}$
-    - segue che $x = (ax\_1)(by\_1),+\ldots+ (ax\_k)(by\_k) = ab\cdot(x\_1y\_1+ \ldots+ x\_ky\_k)$
-    - poiché $(x\_1y\_1+ \ldots+ x\_ky\_k) \in \mathbb{Z}$, segue che $ab \mid x \implies x \in I(a \cdot b)$
+    - per dimostrazione precedente $I(a)$ e $I(b)$ sono ideali, e poiché il prodotto tra ideali è ben definito, allora $x \in I(a) \cdot I(b) \implies x = i_1 j_1 + \ldots + i_k j_k$ con $i_1 , \ldots , i_k \in I(a)$ e $j_1 , \ldots , j_k \in I(b)$
+    - per definizione, $i \in I(a) \implies \exists x \in \mathbb{Z} \mid i = ax$, e dunque $i_1, \ldots, i_k = ax_1, \ldots, ax_k$ con $x_1, \ldots, x_k \in \mathbb{Z}$
+    - analogamente $j_1, \ldots, j_k = by_1, \ldots, by_k$ con $y_1, \ldots, y_k \in \mathbb{Z}$
+    - segue che $x = (ax_1)(by_1),+\ldots+ (ax_k)(by_k) = ab\cdot(x_1y_1+ \ldots+ x_ky_k)$
+    - poiché $(x_1y_1+ \ldots+ x_ky_k) \in \mathbb{Z}$, segue che $ab \mid x \implies x \in I(a \cdot b)$
   - $x \in I(a \cdot b)  \implies x \in I(a) \cdot I(b)$
     - $x \in I(a \cdot b) \implies \exists k \in \mathbb{Z} \mid x = ab \cdot k$
     - $x = abk$, ma $a \in I(a) \land bk \in I(b) \implies x \in I(a) \cdot I(b)$
    
 ## Minimo comune multiplo
 
-- $\displaystyle{\forall a\_{1}, \ldots, a\_{n} \in \mathbb{Z}  \quad \exists ! m  \in \mathbb{N} \mid m:= \textrm{mcm}(a\_1, \ldots, a\_n) : I(m) = I(a\_1) \cap \ldots \cap I(a\_n) = \bigcap\_{i=1}^{n}{I(a\_i)}}$
-
-## Esempi
-
-- $\forall g \in G$ gruppo, $I(g):=\left\{n \in \mathbb{Z} \mid g^{n}=e\right\}$ è un **ideale** $(I(g), +) \subset (\mathbb{Z}, +)$
-  - $0 \in \mathbb{Z}, g^{0}=e \implies 0 \in I(g)$
-  - $m, n \in I(g) \Rightarrow g^{m}=g^{n}=e \implies g^{m} \cdot g^{n}= g^{m + n} = e \cdot e = e \implies g^{m +n} \in I(g)$ per definizoine di $I(g) \implies I(g) + I(g) \subset I(g)$, poiché $\forall m, n \in \mathbb{Z} \quad m + n \in \mathbb{Z}$
-  - $n \in I(g) \implies (g^n)^{-1} = e ^{-1 } = g^{-n} =e \implies -n \in I(g)$, poiché $\forall n \in \mathbb{Z} \quad -n \in \mathbb{Z}$
-  - $n \in I(g), k \in \mathbb{Z} \implies g^{k \cdot n} = (g^n)^k = e^k = e \implies n \cdot k \in I(g)$
-
+- ⚠️ **RISCRIVI**
+- $\displaystyle{\forall a_{1}, \ldots, a_{n} \in \mathbb{Z}  \quad \exists ! m  \in \mathbb{N} \mid m:= \textrm{mcm}(a_1, \ldots, a_n) : I(m) = I(a_1) \cap \ldots \cap I(a_n) = \bigcap_{i=1}^{n}{I(a_i)}}$
