@@ -2,7 +2,7 @@
 
 - **Hp**
   - $a_{0}, \ldots, a_{n} \in \mathbb{C}$
-  - $n \in \mathbb{N}_{\geq 1}$
+  - $n \in \mathbb{N} - \{0\}$
   - $a_n \neq 0$
 - **Th**
   - $\exists x \in \mathbb{C} \mid x$ è soluzione dell'equazione $a_{0}+a_{1} x+a_{2} x^{2}+\cdots+a_{n} x^{n}=0$
@@ -248,3 +248,4 @@
           - quindi necessariamente $ab = c$
           - il ragionamento è analogo per tutti gli altri prodotti
       - quindi $G \cong K_4$ **⚠️ PERCHÉ? non mancano altre cose?**
+

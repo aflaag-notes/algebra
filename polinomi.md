@@ -79,6 +79,14 @@
         - $\mathbb{K}^* \subset \mathbb{K} \subset \mathbb{K}[x]$
         - per dimostrazione precedente, gli unici elementi invertibili in $\mathbb{K}[x]$ sono i polinomi costanti, che costituiscono un sottoinsieme di $\mathbb{K}[x]$, che coincide proprio con $\mathbb{K}$ poiché i polinomi costanti si identificano con un singolo coefficiente
 
+## Oss
+
+- **Hp**
+    - $\mathbb{K}$ campo
+    - $a(x), b(x) \in \mathbb{K}[x] \mid b(x) \neq 0$
+- **Th**
+    - $\exists ! q(x), r(x) \in \mathbb{K}[x] \mid a(x) = b(x) \cdot q(x) + r(x) \quad \deg(r(x)) \lt \deg(b(x))$, che è detto _teorema della divisione con il resto tra polinomi_
+
 ## Def
 
 - **Radici di un polinomio**
@@ -96,9 +104,42 @@
     - $p(c) = 0 \iff x - c \mid p(x)$
 - **Hp**
     - _prima implicazione_
-        - per il teorema della divisione con il resto tra polinomi, dividendo $p(x)$ per $(x - c)$ si ottiene che $\exists q(x), r(x) \in \mathbb{K}[x] \mid p(x) = q(x) \cdot (x - c) + r(x)$
+        - per il teorema della divisione con il resto tra polinomi, dividendo $p(x)$ per $(x - c)$ si ottiene che $\exists!q(x), r(x) \in \mathbb{K}[x] \mid p(x) = q(x) \cdot (x - c) + r(x)$
         - $r_0 := r(x)$
         - $p(c) = q(c) (c - c) + r_0 = r_0$, ma $p(c) = 0$ in ipotesi, e dunque $r_0 = 0$
         - $r_0 = 0 \implies p(x) = q(x)(x - c) \implies x- c \mid p(x)$
     - _seconda implicazione_
         - $x - c \mid p(x) \implies \exists p(x) \in \mathbb{K}[x] : p(x) = q(x)\cdot (x - c)$, allora $p(c) = q(c) \cdot (c - c) = 0 \implies c$ radice di $p(x)$
+
+## Oss
+
+- **Hp**
+    - $\mathbb{K}$ campo
+    - $p(x) \in \mathbb{K}[x]$
+    - $n := \deg(p(x))$
+- **Th**
+    - $|\{c \in \mathbb{K} \mid p(c) = 0\}| \le n$
+- **Dim**
+    - ipotizzando $N :=|\{c \in \mathbb{K} \mid p(c) = 0\}| \gt n \implies \{c_1, \ldots, c_N\}$ sia l'insieme delle radici
+    - per dimostrazione precedente $\left.\begin{array}{c} x - c_1 \mid p(x) \\ \vdots \\ x-c_N \mid p(x) \end{array}\right\} \implies (x - c_1) \cdot \ldots \cdot (x - c_N) \mid p(x)$ ⚠️  **NON SI SA PERCHÉ**, ma $\deg\left((x - c_1) \cdot \ldots \cdot (x - c_N)\right) = N$, mentre $\deg(p(x)) = n$, dove $M \gt n \ \bot$
+
+## Oss
+
+- **Hp**
+    - $\mathbb{K}$ campo
+    - $I \subset \mathbb{K}[x]$ ideale
+- **Th**
+    - $I$ ideale principale
+- **Dim**
+    - _unicità_
+        - $I = \{0\} \implies I = I(0)$, ovvero l'ideale principale generato da $0$
+        - preso $p(x) \in I - \{0\} \mid \deg(p(x))$ sia il minore possibile, allora $\forall q(x) \in I \mid \deg(q(x)) \lt \deg(p(x)) \implies q(x) \in I(0) \implies q(x) = 0$, di conseguenza è unico in quanto l'elemento minore in $I - \{0\}$ è unico
+    - _esistenza_
+        - $\exists p(x) \in I - \{0\} \mid I = I(p(x))$, dove $p(x)$ è il polinomio di grado minore in $I - \{0\}$
+            - $I \subset I(p(x))$
+                - per il teorema della divisione con il resto tra polinomi $\forall a(x) \in I \quad \exists ! q(x), r(x) \mid a(x) = p(x) \cdot q(x) + r(x) \quad \deg(r(x)) \lt \deg(p(x)) \implies r(x) = a(x) - p(x) \cdot q(x)$
+                - $\left.\begin{array}{l} a(x) \in I \\ p(x) \in I - \{0\} \implies p(x) \cdot q(x) \in I \end{array}\right\} \implies r(x) \in I$
+                - ma poiché $\deg(r(x)) \lt \deg(p(x))$, e $p(x)$ è stato preso con il grado minore possibile, per osservazione precedente segue necessariamente che $r(x) = 0$, e dunque $a(x) = p(x) \cdot q(x) \implies a(x) \in I(p(x)) \implies I \subset I(p(x))$
+            - $I(p(x)) \subset I$
+                - $p(x) \in I - \{0\}$ e $I$ è un ideale per ipotesi, dunque in particolare $\mathbb{K}[x] \cdot I \subset I$, quindi $\forall q(x) \in \mathbb{K}[x] \quad q(x) \cdot p(x) \in I$
+                - $\forall a(x) \in I(p(x)) \quad \exists q(x) \in \mathbb{K}[x] \mid q(x)\cdot p(x) = a(x)$, dunque $a(x) \in I$ per osservazione precedente, allora $I(p(x)) \subset I$
