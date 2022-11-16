@@ -82,12 +82,17 @@
 > - $(A, +, *)$ anello
 > - $(A, +, *)$ è un **campo** $\iff \forall x \in A \quad \exists x^{-1}$ rispetto a $*$
 
+- **Sottoanello**
+> - $(A, +, \cdot)$ anello
+> - $(B, + , \cdot) \subset (A, +, \cdot)$ **sottoanello** $\iff (B, +) \subset (A, +)$ sottogruppo e $B \cdot B \subset B$
+
 ## Def
 
 - **Invertibili**
 > - $(A, +, \cdot)$ anello commutativo
 > - $a \in A$ **invertibile** $\iff \exists a^{-1} \in A \mid a \cdot a^{-1}=e$, dove $e$ è l'elemento neutro dell'anello rispetto a $\cdot$
 > - $A^* := \{a \in A \mid a$ invertibile$\}$ è l'**insieme degli invertibili di $A$**
+
 
 ## Oss
 
@@ -108,7 +113,7 @@
     - $(A^*, \cdot) \subset (A, \cdot)$ è un sottogruppo
 - **Dim**
   - esiste il neutro per dimostrazione precedente
-  - $\forall x, y \in A^{*} \quad \exists x^{-1}, y^{-1}$, e in particolare $y^{-1}x^{-1} = (xy)^{-1} \implies xy \in A^*$ per definizione
+  - $\forall x, y \in A^{*} \quad \exists x^{-1}, y^{-1} \in A^*$, e in particolare $y^{-1}x^{-1} = (xy)^{-1} \implies xy \in A^*$ per definizione
   - è chiuso rispetto agli inversi per dimostrazione precedente
 
 ## Def
@@ -147,9 +152,30 @@
 
 ## Def
 
-- **Sottoanello**
-> - $(A, +, \cdot)$ anello
-> - $(B, + , \cdot) \subset (A, +, \cdot)$ **sottoanello** $\iff (B, +) \subset (A, +)$ sottogruppo e $B \cdot B \subset B$
+- **Elementi irriducibili**
+> - $A$ anello commutativo
+> - $a \in A - \{0\} \mid a \in A^*$
+> - $a$ **irriducibile** $\iff \exists b, c \in A \mid a = b c \implies b \in A^* \lor c \in A^*$
+
+- **Elementi primi**
+> - $A$ anello commutativo
+> - $a \in A - \{0\} \mid a \in A^*$
+> - $a$ **primo** $\iff \exists b, c \in A : a \mid bc \implies a \mid b \lor a \mid c$
+
+## Oss
+
+- **Hp**
+    - $A$ dominio di integrità
+- **Th**
+    - $a$ primo $\implies a$ irriducibile
+- **Dim**
+    - si supponga $\exists b, c \in A \mid a = bc$
+    - $\forall a \in A \quad a \mid a$ per riflessività
+    - per ipotesi $a$ primo, dunque per definizione $\exists b, c \in A : a \mid bc \implies a \mid b \lor a \mid c$, ma poiché $a \mid a = bc$, allora i coefficienti moltiplicativi sono proprio li stessi che compongono $a$
+    - prendendo ad esempio $a \mid b \implies \exists d \in A \mid ad = b \implies a = bc \iff a = adc \iff a \cdot( 1 - dc ) = 0$
+    - $A$ dominio di integrità per ipotesi, e dunque in esso vale la legge di annullamento del prodotto
+    - per definizione $a$ primo $\implies a \neq 0 \implies 1 - cd = 0 \iff -cd = -1 \iff cd = 1$, che per definizione implica che $d$ è l'inverso di $c$, e dunque $c \in A^*$
+    - dunque, avendo preso un numero primo in ipotesi che si potesse scrivere come prodotto di altri due numeri nel dominio, si è ottenuta la definizione di irriducibilità di un elemento
 
 ****
 
@@ -159,7 +185,7 @@
 
 - **Sottogruppo**
 > - $(G, *)$ gruppo 
-> - $(H, *) \subset (G, *)$ **sottogruppo** $\iff \exists e \in H \mid e$ è l'elemento neutro,$H * H \subset H$ e $\exists x^{-1} \in H \quad \forall x \in H$
+> - $(H, *) \subset (G, *)$ **sottogruppo** $\iff \exists e \in H \mid e$ è l'elemento neutro, $H * H \subset H$ e $\exists x^{-1} \in H \quad \forall x \in H$
 
 ## Def
 

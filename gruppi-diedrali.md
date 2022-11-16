@@ -98,4 +98,4 @@
   - $K_4 \cong D_2$
 - **Dim**
   - $K_4:=\{1, a, b, c\}$
-  - $D_2 = \{1, \rho, \sigma_0, \sigma_1\}$, quindi associando gli elementi $a=\rho, b= \sigma_0, c= \sigma_1$ otteniamo lo stesso gruppo
+  - $D_2 = \{1, \rho, \sigma_0, \sigma_1\}$, quindi associando gli elementi $a=\rho, b= \sigma_0, c= \sigma_1$ si ottiene lo stesso gruppo

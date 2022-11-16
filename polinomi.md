@@ -5,7 +5,8 @@
 - **Polinomi**
 > - $\mathbb{K}$ campo
 > - $a(x) := \displaystyle{\sum_{k = 0}^na_kx^k} = a_0x^0 + \ldots + a_nx^n$ è un **polinomio**
-> - $\mathbb{K}[x] := \{a_0x^0 + \ldots + a_n x^n \mid a_0, \ldots a_n \in \mathbb{K}\}$ è l'**insieme dei polinomi a coefficienti in $\mathbb{K}$**
+> - $\mathbb{K}[x] := \{a_0x^0 + \ldots + a_n x^n \mid a_0, \ldots, a_n \in \mathbb{K}\}$ è l'**insieme dei polinomi a coefficienti in $\mathbb{K}$**
+> - $p(x) = a_0x^0 + \ldots + a_nx^n \in \mathbb{K}[x]$ è detto **polinomio monico** $\iff a_n = 1$
 
 ## Oss
 
@@ -87,6 +88,16 @@
 - **Th**
     - $\exists ! q(x), r(x) \in \mathbb{K}[x] \mid a(x) = b(x) \cdot q(x) + r(x) \quad \deg(r(x)) \lt \deg(b(x))$, che è detto _teorema della divisione con il resto tra polinomi_
 
+## Oss
+
+- **Hp**
+    - $\mathbb{K}$ campo
+- **Th**
+    - $\mathbb{K}[x]$ è un dominio
+- **Dim**
+    - ⚠️  **MANCA UNA DIMOSTRAZIONE**
+
+
 ## Def
 
 - **Radici di un polinomio**
@@ -122,7 +133,7 @@
 - **Dim**
     - ipotizzando $N :=|\{c \in \mathbb{K} \mid p(c) = 0\}| \gt n \implies \{c_1, \ldots, c_N\}$ sia l'insieme delle radici
     - per dimostrazione precedente $\left.\begin{array}{c} x - c_1 \mid p(x) \\ \vdots \\ x-c_N \mid p(x) \end{array}\right\} \implies (x - c_1) \cdot \ldots \cdot (x - c_N) \mid p(x)$
-    - ⚠️  **MANCA UNA DIMOSTRAZIONE**
+    - ⚠️  **MANCA LA DIMOSTRAZIONE**
     - ma $\deg\left((x - c_1) \cdot \ldots \cdot (x - c_N)\right) = N$, mentre $\deg(p(x)) = n$, dove $M \gt n \ \bot$
 
 ## Oss
@@ -145,3 +156,88 @@
             - $I(p(x)) \subset I$
                 - $p(x) \in I - \{0\}$ e $I$ è un ideale per ipotesi, dunque in particolare $\mathbb{K}[x] \cdot I \subset I$, quindi $\forall q(x) \in \mathbb{K}[x] \quad q(x) \cdot p(x) \in I$
                 - $\forall a(x) \in I(p(x)) \quad \exists q(x) \in \mathbb{K}[x] \mid q(x)\cdot p(x) = a(x)$, dunque $a(x) \in I$ per osservazione precedente, allora $I(p(x)) \subset I$
+
+## Oss
+
+- **Hp**
+    - $\mathbb{K}$ campo
+    - $I(a_1(x)), \ldots, I(a_n(x)) \subset \mathbb{K}[x]$ ideali
+    - $\exists d(x) \in \mathbb{K}[x]\mid I(a_1(x), \ldots, a_n(x)) = I(d(x))$
+- **Th**
+    - $d(x)=\textrm{MCD}(a_1(x), \ldots, a_n(x))$
+- **Dim**
+    - la dimostrazione è analoga al caso di $\mathbb{Z}$
+    - in particolare, $\textrm{MCD}(a_1(x), \ldots, a_n(x))$ è ben definito in quanto, per dimostrazione precedente, la divisione con il resto tra polinomi è ben definita, ed è dunque possibile calcolare il massimo comun divisore attraverso, ad esempio, l'algoritmo di Euclide
+    - inoltre, $d(x)$ è ben definito a meno di una costante moltiplicativa non nulla
+        - ad esempio $d(x) = x + 1$, allora $\forall a \in \mathbb{K} \quad a(x + 1)$ è ancora divisore
+
+## Oss
+
+- **Hp**
+    - $\mathbb{K}$ campo
+    - $I(a_1(x)), \ldots, I(a_n(x)) \subset \mathbb{K}[x]$ ideali
+    - $\exists m(x) \in \mathbb{K}[x] \mid I(a_1(x)) \cap \ldots \cap I(a_1(x)) = I(m(x))$
+- **Th**
+    - $m(x)=\textrm{mcm}(a_1(x), \ldots, a_n(x))$
+- **Dim**
+    - la dimostrazione è analoga al caso in $\mathbb{Z}$
+    - in particolare, $\textrm{mcm}(a_1(x), \ldots, a_n(x))$ è ben definito in quanto il teorema fondamentale dell'aritmetica è applicabile anche ai polinomi
+    - inoltre, $m(x)$ è ben definito a meno di una costante moltiplicativa non nulla
+        - ad esempio $m(x) = x + 1$, allora $\forall a \in \mathbb{K} \quad a(x + 1)$ è ancora multiplo
+
+## Oss
+
+- **Hp**
+    - $\mathbb{K}$ campo
+    - $a_1(x), \ldots ,a_n(x) \in \mathbb{K}[x]$
+    - $c \in \mathbb{K}$
+    - $d(x):= \textrm{MCD}(a_1(x), \ldots, a_n(x))$
+- **Th**
+    - $a_1(c) = \ldots = a_n(c) = 0 \iff d(c) = 0$
+- **Dim**
+    - _prima implicazione_
+        - ⚠️  **MANCA LA DIMOSTRAZIONE**
+    - _seconda implicazione_
+        - per definizione $\forall i \in [1, n] \quad d(x) \mid a_i(x)$
+        - per dimostrazione precedente $d(c) = 0 \iff (x - c) \mid d(x)$
+        - per dimostrazione precedente, $\mid$ è un ordine parziale, e in particolare transitiva, e dunque $\forall i \in [1, n] \quad (x - c) \mid d(x) \land d(x) \mid a_i(x) \implies (x - c) \mid a_i(x)$, e riapplicando lo stesso teorema $\forall i \in [1, n]\quad (x - c) \mid a_i(x) \iff a(c) = 0$
+
+## Oss
+
+- **Hp**
+    - $\mathbb{K}$ campo
+    - $p(x) \in \mathbb{K}[x]$
+- **Th**
+    - $p(x) \in \mathbb{K}[x]$ irriducibile $\iff p(x)$ primo
+- **Dim**
+    - _prima implicazione_
+        - $p(x) \in \mathbb{K}[x]$ irriducibile$
+        - si supponga $\exists d(x) \in \mathbb{K}[x] : d(x) \mid p(x) \implies \exists e(x) \in \mathbb{K}[x] \mid p(x) = p(x) \cdot e(x)$
+        - ⚠️  **NON HO CAPITO NULLA QUI C'È UN BUCO**
+        - $p(x) \nmid a(x) \implies \textrm{MCD}(a(x), p(x))= 1$ ⚠️  **NON SO IL PERCHÉ**
+            - per l'identità di Bézout $\exists f(x), g(x) \in \mathbb{K}[x] \mid 1 = f(x)a(x) + g(x)p(x) \iff b(x) = a(x)b(x)f(x) + p(x)g(x)b(x)$
+        - ⚠️  **NON HO CAPITO NULLA QUI C'È UN BUCO**
+    - _seconda implicazione_
+        - per dimostrazione precedente $\mathbb{K}[x]$ è un dominio di integrità, e dunque, per dimostrazione precedente, implica che ogni elemento primo è anche irriducibile
+
+## Oss
+
+- **Hp**
+    - $\mathbb{K}$ campo
+    - $p(x) \in \mathbb{K}[x] - \{0\}$
+- **Th**
+    - $\exists ! q_1(x), \ldots ,q_k(x) \in \mathbb{K}[x]$ irriducibili e monici$, c \in \mathbb{K} - \{0\} \mid p(x) = c \cdot q_1(x) \cdot \ldots \cdot q_k(x)$
+    - in particolare, i polinomi sono unici a meno di un riordinamento
+- **Dim**:
+    - _esistenza_:
+        - $\deg(p(x)) = 1$
+            - ⚠️  **NON HO CAPITO NULLA**
+        - $\deg(p(x)) \gt 1$
+            - ⚠️  **NON HO CAPITO NULLA**
+    - _unicità_
+        - ⚠️  **NON HO CAPITO SU COS'È L'INDUZIONE**
+        - $\deg(p(x)) = 0$
+            - ⚠️  **NON HO CAPITO NULLA**
+        - $\deg(p(x)) \gt 0$
+            - si supponga $\exists q_1(x), \ldots q_k(x), q_1'(x), \ldots, q_j'(x) \in \mathbb{K}[x], c, c' \in \mathbb{K} \mid c \cdot q_1(x) \cdot \ldots \cdot q_i(x) = p(x) = c'\cdot q_1'(x) \cdot \ldots \cdot q_j'(x)$ dove $c \neq c', \forall k \in [1, i] \quad q_k(x) \neq q_k'(x)$
+            - ⚠️  **DOVE HA DIMOSTRATO CHE $i = k$????**
