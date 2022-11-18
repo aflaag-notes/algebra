@@ -1,6 +1,7 @@
 # algebra
 
-## :warning: WARNING
+## TODO list
 
-WIP
+- cambiare il formato delle definizioni
+- fixare l'errore di "too deeply nested"
 

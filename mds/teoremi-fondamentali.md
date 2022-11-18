@@ -68,7 +68,7 @@
 ## Lem
 
 - **Hp**
-  - $a_1, \ldots, a_n \ge 2 \in \mathbb{Z}  \mid \textrm{MCD}(a_i, a_j) = 1 \quad \forall i, j \in [1, n] : i \neq j
+  - $a_1, \ldots, a_n \ge 2 \in \mathbb{Z}  \mid \textrm{MCD}(a_i, a_j) = 1 \quad \forall i, j \in [1, n] : i \neq j$
   - $m := \textrm{mcm}(a_1, \ldots, a_n)$
 - **Th**
   - $m = a_1 \cdot \ldots \cdot a_n$

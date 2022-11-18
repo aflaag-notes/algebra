@@ -49,12 +49,7 @@
 - **Th**
   - $(\mathbb{C}, +, \cdot )$ è un campo
 - **Dim**
-  - $
-\left.\begin{array}{l}
-z \cdot \bar{z}=(a+i b)(a-i b)=a^{2}-(i b)^{2} \\
-i^{2}=-1
-\end{array} \right \} \implies a^{2}-i^{2} b^{2}=a^{2}+b^{2}=|z|^{2} 
-$
+  - $\left.\begin{array}{l} z \cdot \bar{z}=(a+i b)(a-i b)=a^{2}-(i b)^{2} \\ i^{2}=-1 \end{array} \right \} \implies a^{2}-i^{2} b^{2}=a^{2}+b^{2}=|z|^{2}$
   - $z \cdot \bar{z}=|z|^{2} \iff z=\dfrac{|z|^{2}}{\bar{z}} \iff z^{-1}=\dfrac{z}{|z|^{2}} = \dfrac{a}{a^2+b^2}- i \dfrac{b}{a^2+b^2} \implies \mathbb{C}$ ammette inversi moltiplicativi $\implies (\mathbb{C}, +, \cdot)$ è un campo
 
 ## Oss
@@ -65,4 +60,4 @@ $
 - $\left|\dfrac{z}{w}\right|=\dfrac{|z|}{|w|} \quad \arg\left(\dfrac{z}{w}\right)=\arg(z) - \arg(w)$
 
 ## Formula di de Moivre
-  - $z^{n}=|z|^{n} e^{i n \theta} \quad \arg \left(z^{n}\right)=n \arg (z)$
+  - $z^{n}=|z|^{n} e^{i n \theta} \quad \arg \left( z^{n} \right)=n \arg (z)$
