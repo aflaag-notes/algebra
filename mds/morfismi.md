@@ -52,10 +52,10 @@
 - **Hp**
   - $f: G \rightarrow H$ isomorfismo
 - **Th**
-  - $f ^{-1}: H \rightarrow G$ morfismo
+  - $f ^{-1}: H \rightarrow G$ isomorfismo
 - **Dim**
   - $\forall g \in G, h \in H \quad \exists !f^{-1} \mid \left\{\begin{array}{c}f^{-1}(f(g))=g \\ f\left(f^{-1}(h)\right)=h\end{array}\right.$
-  - $\forall h, h^{\prime} \in H \quad f^{-1}\left(h h^{\prime}\right)=f^{-1}(h) \cdot f^{-1}\left(h^{\prime}\right) \iff f\left(f^{-1}\left(h h^{\prime})\right)=f(f^{-1}(h)\cdot f^{-1}(h^\prime)) = f(f^{-1}(h))\cdot f(f^{-1}(h^\prime))\right.$, dunque $hh^\prime =  f(f^{-1}(h))\cdot f(f^{-1}(h^\prime)) = hh^\prime$ ⚠️  **RIVEDI**
+  - $\forall h, h^{\prime} \in H \quad f^{-1}\left(h h^{\prime}\right)=f^{-1}(h) \cdot f^{-1}\left(h^{\prime}\right) \iff hh'=f\left(f^{-1}\left(h h^{\prime})\right)=f(f^{-1}(h)\cdot f^{-1}(h^\prime)) = f(f^{-1}(h))\cdot f(f^{-1}(h^\prime))\right. = hh'$, e dunque $f^{-1}$ è un morfismo, e poiché è invertibile è un isomorfismo
 
 ## Ex
 
@@ -75,7 +75,7 @@
 - **Hp**
   - $f: \mathbb{Z}_n \rightarrow H : [k] \rightarrow \zeta^k$
 - **Th**
-  - $f$ morfismo di gruppi $(\mathbb{Z}_n , +)$ e $(H, \cdot)$
+  - $f$ isomorfismo di gruppi $(\mathbb{Z}_n , +)$ e $(H, \cdot)$
 - **Dim**
   - $f$ è biiettiva per costruzione di $\mathbb{Z}_n := \{[0], [1], \ldots, [n - 1]\}$ e $H := \{\zeta ^0, \zeta^1, \ldots, \zeta^{n-1}\}$
   - $f$ morfismo
@@ -125,18 +125,6 @@ $f([x \cdot y])=f([x]) \cdot f([y])$
   - $x +y \ (\bmod \ n) = x \ (\bmod \ n)+ y \ (\bmod \ n)$
   - il ragionamento è analogo per l'operazione $\cdot$, e dunque segue la tesi
  
-## Ex
-
-- **Hp**
-  - $(G, \cdot)$ gruppo
-  - $\textrm{Bij}(G) := \{f \mid f: G \rightarrow G\}$
-  - $\textrm{L}_g \in G \mid \textrm{L}_g: G \rightarrow G:g \rightarrow gh$
-  - $f: G \rightarrow \textrm{Bij}(G): g \rightarrow \textrm{L}_g$
-- **Th**
-  - $f$ morfismo di gruppi $(\textrm{Bij}(G), \circ)$ e $(G, \cdot)$
-- **Dim**
-  - **⚠️ MANCA DIMOSTRAZIONE**
-
 ## Ex
 
 - **Hp**
@@ -230,7 +218,7 @@ $f([x \cdot y])=f([x]) \cdot f([y])$
 ## Oss
 
 - **Hp**
-  - $f: \mathbb{Z} \in \mathbb{C} - \{0\} : k \rightarrow \zeta^k$
+  - $f: \mathbb{Z} \rightarrow \mathbb{C} - \{0\} : k \rightarrow \zeta^k$
   - $f$ morfismo di gruppi $(\mathbb{Z}, +)$ e $(\mathbb{C} - \{0\}, \cdot)$
   - $I(n)$ ideale generato da $n$ **⚠️ CHI È N**
 - **Th**

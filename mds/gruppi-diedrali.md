@@ -74,7 +74,7 @@
         - $f(a) = \sigma_a$
       - $b: v_j \rightarrow v_k$ è la simmetria che manda $v_j$ in $v_k$, che corrisponde a $\sigma_b: j \rightarrow k$ attraverso $f$
         - $f(b) = \sigma_b$
-      - $f$ morfismo $\iff b \cdot a = v_{\sigma_b \cdot \sigma_{a}}$ ⚠️ **RIVEDI, PERCHÉ**
+      - $f$ morfismo $\iff b \cdot a = v_{\sigma_b \cdot \sigma_{a}}$
           - $\left.\begin{array}{l}a(v_i) = v_j \\ b(v_j) = v_k\end{array}\right\} \implies b \cdot a = b(a(v_i)) = v_k$
           - $\left.\begin{array}{l}\sigma_a(i) = j \\ \sigma_b(j) = k\end{array}\right\} \implies \sigma_b \cdot \sigma_a =\sigma_b(\sigma_a(i)) = k$
           - quinidi $b \cdot a = b(a(v_i)) = v_k = v_{\sigma_b(\sigma_a(i))} = v_{\sigma_b \cdot \sigma_a}$

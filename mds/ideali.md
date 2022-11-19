@@ -197,6 +197,9 @@
 - **Dim**
   - ⚠️ **MANCA DIMOSTRAZIONE**
 
+- ⚠️ **RISCRIVI**
+- $\displaystyle{\forall a_{1}, \ldots, a_{n} \in \mathbb{Z}  \quad \exists ! m  \in \mathbb{N} \mid m:= \textrm{mcm}(a_1, \ldots, a_n) : I(m) = I(a_1) \cap \ldots \cap I(a_n) = \bigcap_{i=1}^{n}{I(a_i)}}$
+
 ## Def
 
 - **$\cdot$ tra ideali**
@@ -226,6 +229,7 @@
    - $i \in I(a) \implies \exists x \in \mathbb{Z} \mid i = ax$ e $j \in I(b) \implies \exists y \in \mathbb{Z} \mid j = by$
    - quindi $i + j = ax + by \implies$ $I(a)+I(b)=\{a x+b y \mid x, y \in \mathbb{Z}\} = I(a, b)$ per definizione
    - in particolare, per dimostrazione precedente, $I(a, b) = I(d)$
+   - questa dimostrazione si può estendere per un numero arbitrario di ideali, ottenendo $I(a_1) + \ldots + I(a_n) = I(\textrm{MCD}(a_1, \ldots, a_n))$
 
 ## Oss
 
@@ -243,8 +247,4 @@
   - $x \in I(a \cdot b)  \implies x \in I(a) \cdot I(b)$
     - $x \in I(a \cdot b) \implies \exists k \in \mathbb{Z} \mid x = ab \cdot k$
     - $x = abk$, ma $a \in I(a) \land bk \in I(b) \implies x \in I(a) \cdot I(b)$
-   
-## Minimo comune multiplo
 
-- ⚠️ **RISCRIVI**
-- $\displaystyle{\forall a_{1}, \ldots, a_{n} \in \mathbb{Z}  \quad \exists ! m  \in \mathbb{N} \mid m:= \textrm{mcm}(a_1, \ldots, a_n) : I(m) = I(a_1) \cap \ldots \cap I(a_n) = \bigcap_{i=1}^{n}{I(a_i)}}$

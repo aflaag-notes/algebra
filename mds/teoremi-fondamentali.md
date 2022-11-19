@@ -1,5 +1,6 @@
 # Teorema fondamentale dell'algebra
 
+- ⚠️ **INCOMPLETA**
 - **Hp**
   - $a_{0}, \ldots, a_{n} \in \mathbb{C}$
   - $n \in \mathbb{N} - \{0\}$
@@ -26,7 +27,7 @@
 
 ****
 
-# Teorema di Lagrange (teoria dei gruppi)
+# Teorema di Lagrange
 
 - **Hp**
   - $G$ gruppo finito
@@ -85,14 +86,13 @@
   - $a_1, \ldots, a_n \ge 2 \in \mathbb{Z}$
   - $m:= \textrm{mcm}(a_1, \ldots, a_n)$
 - **Th**
-  - $\exists \phi \mid \phi: \mathbb{Z}_m \rightarrow \mathbb{Z}_{a_1} \times \ldots \times \mathbb{Z}_{a_n}: x \ (\bmod m) \rightarrow (x \ (\bmod a_1), \ldots, x \ (\bmod a_n))$
+  - $\exists \phi \mid \phi: \mathbb{Z}_m \rightarrow \mathbb{Z}_{a_1} \times \ldots \times \mathbb{Z}_{a_n}: x \ (\bmod \ m) \rightarrow (x \ (\bmod \ a_1), \ldots, x \ (\bmod \ a_n))$
   - $\phi$ è una funzione ben definita, ed è iniettiva
 - **Dim**
   - $\phi$ ben definita $\implies \phi$ non dipende dalla scelta di $[x] \in \mathbb{Z}_m$
-  - se $\phi$ è ben definita, allora $x\equiv x^{\prime} \ (\bmod m) \implies \left\{\begin{array}{c}x \equiv x^{\prime}\ \left(\bmod a_{1}\right) \\ \vdots \\ x \equiv x^{\prime}\ \left(\bmod a_{n}\right)\end{array}\right.$
-  - **⚠️ BASTA DIMOSTRARE SOLO UNA DELLE DUE MA NON HO CAPITO PERCHÉ**
-  - se $\phi$ è iniettiva, allora vale anche l'implicazione opposta
-    - $\left\{\begin{array}{c}x \equiv x^{\prime}\ \left(\bmod a_{1}\right) \\ \vdots \\ x \equiv x^{\prime}\ \left(\bmod a_{n}\right)\end{array}\right. \iff \left\{\begin{array}{c}x^{\prime}-x \in I\left(a_{1}\right) \\ \vdots \\ x^{\prime}-x \in I\left(a_{m}\right)\end{array}\right. \iff x - x^\prime \in I(a_1) \cap \ldots \cap I(a_n) = I(m)$, e per definizione $x - x^\prime \in I(m) \implies x \equiv x^\prime \ (\bmod m)$
+  - se $\phi$ è ben definita, allora $x\equiv x^{\prime} \ (\bmod \ m) \implies \left\{\begin{array}{c}x \equiv x^{\prime}\ \left(\bmod \ a_{1}\right) \\ \vdots \\ x \equiv x^{\prime}\ \left(\bmod \ a_{n}\right)\end{array}\right.$
+  - $\left\{\begin{array}{c}x \equiv x^{\prime}\ \left(\bmod \ a_{1}\right) \\ \vdots \\ x \equiv x^{\prime}\ \left(\bmod \ a_{n}\right)\end{array}\right. \iff \left\{\begin{array}{c}x^{\prime}-x \in I\left(a_{1}\right) \\ \vdots \\ x^{\prime}-x \in I\left(a_{n}\right)\end{array}\right. \iff x - x^\prime \in I(a_1) \cap \ldots \cap I(a_n) = I(m)$, e per definizione $x - x^\prime \in I(m) \implies x \equiv x^\prime \ (\bmod \ m)$
+  - poiché tale osservazione è valida in entrambe i versi dell'implicazione, $\phi$ risulta essere iniettiva
 
 ## Teorema
 
@@ -140,12 +140,10 @@
   - $a^{p} \equiv a \ (\bmod p)$
 - **Dim**
   - _prima dimostrazione_
-    - ⚠️ **NON L'HO CAPITA**
     - $a=0 \implies [0]^{p} =[0]$
     - $a \gt 0 \implies$ $[a+1]^{p}=[a+1]$
       - per definizione di $+$, si ottiene che $[a +1] = [a] + [1] \iff [a+1]^p = ([a] + [1])^p$, e per dimostrazione precedente, $([a]+[1])^p = [a]^p +[1]^p$ in $\mathbb{Z}_p$
-      - $[a+1]^{p}=[a+1] \iff [a]^{p}+[1]^{p}=[a+1] \implies [a]^p + [1] = [a + 1]$
-      - per ipotesi induttiva, $[a]^p = [a]$, dunque $[a] + [1] = [a + 1]$, che è vero per definizione di $+$
+      - $[a+1]^{p}=[a+1] \iff [a]^{p}+[1]^{p}=[a+1] \implies [a]^p + [1] = [a + 1] \iff [a]^p = [a + 1] -[1] = [a]$, che coincide con l'ipotesi induttiva
   - _seconda dimostrazione_
     - $p \in \mathbb{P} \implies \mathbb{Z}_p^* = \mathbb{Z} - \{[0]\}$ per dimostrazione precedente, e dunque $|\mathbb{Z}_p^*| = p - 1$
     - $[a] \in \mathbb{Z}_p \mid [a] = [0] \implies [0^p]=[0]$, che è vero $\forall p \in \mathbb{P}$
@@ -184,11 +182,14 @@
   - $A, B$ anelli
   - $f: A \rightarrow B$ morfismo di anelli
 - **Th**
-  - $A / \textrm{Ker}(f) \cong \textrm{Im}(f)$, o alternativamente $\exists \varphi \mid \varphi : A / \textrm{Ker}(f) \rightarrow \textrm{Im}(f): [a] \rightarrow f(a)$ isomorfismo di anelli
+  - $A / \textrm{Ker}(f) \cong \textrm{Im}(f)$, ovvero $\exists \varphi \mid \varphi : A / \textrm{Ker}(f) \rightarrow \textrm{Im}(f): [a] \rightarrow f(a)$ isomorfismo di anelli
 - **Dim**
   - $\varphi$ è ben definita
     - $\varphi$ è ben definita $\iff [x] = [y] \implies f(x) = f(y) \quad \forall x, y \in A$
-    - $[x] = [y] \iff x \equiv y \ (\bmod \textrm{Ker}(f)) \implies y - x \in \textrm{Ker}(f) \implies f(y - x) = 0_B$ per definizione, e inoltre $f(y-x) = f(y)-f(x)$ in quanto $f$ morfismo di anelli **⚠️ PERCHE?**, quindi $0_B = f(y) - f(x) \implies f(y) = f(x)$
+    - $[x] = [y] \iff x \equiv y \ (\bmod \ \textrm{Ker}(f)) \implies y - x \in \textrm{Ker}(f) \implies f(y - x) = 0_B$ per definizione
+    - $f(y - x) = f(y + (-x))$, e $-x \in A$ perche $A$ è un anello
+    - per dimostrazione precedente $f$ morfismo $\implies f(x^{-1}) = f(x)^{-1}$, e dunque rispetto a $+$ in $A$ si ottiene che $\forall x \in A \quad f(-x) = -f(x)$
+    - dunque, $f(y-x) = f(y)-f(x) \iff 0_B = f(y) - f(x) \iff f(y) = f(x)$
   - $\varphi$ morfismo di anelli
     - $\varphi$ morfismo di anelli $\iff \varphi([a]) \cdot \varphi([b]) = \varphi([a]\cdot [b])$ e $\varphi([a]) + \varphi([b]) = \varphi([a]+ [b])$
       - $\varphi([a]) \cdot \varphi([b]) = f(a) \cdot f(b)$ per definizione di $\varphi$
@@ -199,7 +200,7 @@
   - $\varphi$ isomorfismo di anelli $\iff \varphi$ iniettiva e suriettiva
     - $\varphi$ iniettiva
       - $\varphi$ iniettiva $\iff \textrm{Ker}(\varphi)=\{[0_A]\}$ per dimostrazione precedente
-      - $x \in \textrm{Ker}(f) \iff x - 0_A \in \textrm{Ker}(f) \implies x \equiv 0_A \ (\bmod \textrm{Ker}(f)) \implies [x] = [0_A] \implies \varphi([x]) = \varphi([0_A])$, poiché $\varphi$ è ben definita, dunque $f(x) = 0_B$ **⚠️ NON HO CAPITO**
+      - $x \in \textrm{Ker}(f) \iff x - 0_A \in \textrm{Ker}(f) \implies x \equiv 0_A \ (\bmod \ \textrm{Ker}(f)) \implies [x] = [0_A] \implies \varphi([x]) = \varphi([0_A])$, poiché $\varphi$ è ben definita, dunque $f(x) = 0_B$
     - $\varphi$ suriettiva
       - $\varphi : A / \textrm{Ker}(f) \rightarrow \textrm{Im}(f) \implies$ l'insieme di arrivo di $\varphi$ coincide è proprio l'insieme delle immagini di $f$, quindi $\varphi$ è suriettiva per costruzione
 
@@ -215,7 +216,7 @@
 
 ****
 
-## Teorema di Cayley
+## Teorema di Cauchy
 
 - **Hp**
   - $G$ gruppo finito

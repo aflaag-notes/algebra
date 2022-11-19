@@ -61,10 +61,6 @@
 - **Th**
   - $\left| Y^X \right| = \left| Y \right| ^ {|X|}$
 
-## Oss
-
-⚠️ **MANCA OSSERVAZIONE, non capisco che cosa ho scritto**
-
 ****
 
 # Anelli
@@ -219,9 +215,9 @@
       - $k = ghg^{-1} \iff k g= ghg^{-1}g \iff kg = gh$, e $kg \in Hg$ e $gh \in gH$, quindi $gH \subset Hg$
     - $Hg \subset gH$
       -  $G$ gruppo $\implies \forall g \in G \quad \exists g^{-1} \in G$
-      -  $\forall g^{-1} \in G \quad h:= g^{-1}k(g^{-1})^{-1} \in H$ per ipotesi
-      -  $h = g^{-1}kg \iff gh = gg^{-1}kg \iff gh = kg$, ma $$
-      - ⚠️ **INCOMPLETA**
+      -  $\forall g^{-1} \in G \quad \exists h \in H \mid h:= g^{-1}k(g^{-1})^{-1} \in H$ per ipotesi
+      - $g^{-1}kg = h \iff gg^{-1}kg = gh \iff kg = gh$, ma $h \in H \implies gh \in gH$
+      - $k \in H \implies kg \in Hg$, ma $kg = gh \implies kg \in gH$
 
 ****
 

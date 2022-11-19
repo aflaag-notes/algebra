@@ -22,7 +22,6 @@
     - $\rm \sigma \circ id = id \circ \sigma = \sigma$
     - $\rm \sigma \circ \sigma = id$ per costruzione
   - quindi $|X| = 2 \implies S_X$ è abeliano, mentre $|X| = 1 \implies S_X$ è abeliano perché contiene un solo elemento
-  - ⚠️ **perche >= 3 non è abeliano?**
 
 ## Def
 - **Ciclo di una permutazione**
