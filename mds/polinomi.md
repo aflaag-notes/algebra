@@ -84,14 +84,6 @@
 
 - **Hp**
     - $\mathbb{K}$ campo
-    - $a(x), b(x) \in \mathbb{K}[x] \mid b(x) \neq 0$
-- **Th**
-    - $\exists ! q(x), r(x) \in \mathbb{K}[x] \mid a(x) = b(x) \cdot q(x) + r(x) \quad \deg(r(x)) \lt \deg(b(x))$, che è detto _teorema della divisione con il resto tra polinomi_
-
-## Oss
-
-- **Hp**
-    - $\mathbb{K}$ campo
 - **Th**
     - $\mathbb{K}[x]$ è un dominio
 - **Dim**
@@ -142,7 +134,7 @@
     - $\mathbb{K}$ campo
     - $I \subset \mathbb{K}[x]$ ideale
 - **Th**
-    - $I$ ideale principale
+    - $I$ è un ideale principale
 - **Dim**
     - _unicità_
         - $I = \{0\} \implies I = I(0)$, ovvero l'ideale principale generato da $0$
@@ -241,3 +233,57 @@
         - $\deg(p(x)) \gt 0$
             - si supponga $\exists q_1(x), \ldots q_k(x), q_1'(x), \ldots, q_j'(x) \in \mathbb{K}[x], c, c' \in \mathbb{K} \mid c \cdot q_1(x) \cdot \ldots \cdot q_i(x) = p(x) = c'\cdot q_1'(x) \cdot \ldots \cdot q_j'(x)$ dove $c \neq c', \forall k \in [1, i] \quad q_k(x) \neq q_k'(x)$
             - ⚠️  **DOVE HA DIMOSTRATO CHE $i = k$????**
+
+## Oss
+
+- **Hp**
+    - $\mathbb{K}$ campo
+    - $p(x) \in \mathbb{K}[x]$
+- **Th**
+    - $p(x)$ irriducibile $\iff \deg(p(x)) = 1$
+- **Dim**
+    - _prima implicazione_    
+        - ipotizzando che $\deg(p(x)) \gt 1 \implies \exists z \in \mathbb{C} \mid p(z) = 0$ per il teorema fondamentale dell'algebra
+        - per dimostrazione precedente $p(z) = 0 \iff x - z \mid p(x) \implies \exists q(x) \in \mathbb{K}[x] \mid p(x) = (x - z) \cdot q(x)$
+        - poiché $\deg(x - z) = 1$, allora necessariamente $\deg(q(x)) = \deg(p(x)) - 1$
+        - $\deg(p(x)) \gt 1 \implies \deg(q(x)) = \deg(p(x)) - 1 \gt 0 \implies p(x)$ non è irriducibile $\bot$
+    - _seconda implicazione_
+        - per dimostrazione precedente $\forall a(x), b(x), c(x) \in \mathbb{K}[x] \quad a(x) = b(x) \cdot c(x) \implies \deg(a(x)) = \deg(b(x)) + \deg(c(x))$
+        - $\deg(p(x)) = 1$, se $\exists a(x), b(x) \in \mathbb{K}[x] \mid p(x) = a(x) \cdot b(x)$, allora $\deg(p(x)) = \deg(a(x))+\deg(b(x)) \implies \deg(a(x)) = 1 \land \deg(b(x)) = 0$ oppure $\deg(a(x)) = 0 \land \deg(b(x)) = 1$
+        - dunque, ad esempio se $\deg(a(x)) = 1 \land \deg(b(x)) = 0 \implies b(x) \in \mathbb{K}[x]^*$, e dunque $p(x)$ è dato dal prodotto di un polinomio irriducibile e una costante, e dunque $p(x)$ è irriducibile
+
+## Def
+
+- ⚠️  **MOLTEPLICITÀ (?)**
+
+## Oss
+
+- **Hp**
+    - $p(x) \in \mathbb{R}[x]$
+- **Th**
+    - $p(x)$ irriducibile $\iff \deg(p(x)) = 1$ oppure $\deg(p(x)) = 2 \land \Delta \lt 0$
+- **Dim**
+    - per dimostrazione precedente $\mathbb{R}$ campo $\implies \forall p(x) \in \mathbb{R}[x]$ irriducibile $\iff \deg(p(x)) = 1$, dunque segue la prima tesi
+    - $p(x)$ irriducibile $\iff \deg(p(x)) = 2 \land \Delta \lt 0$
+        - _prima implicazione_
+        - _seconda implicazione_
+            - ipotizzando $p(x)$ non irriducibile $\exists a(x), b(x) \in \mathbb{R}[x] \mid p(x) = a(x) \cdot b(x) \implies \deg(a(x)) = \deg(b(x)) = 1$ per dimostrazione precedente
+            - dunque $a(x)$ e $b(x)$ sono della forma $a(x) = cx + d \quad c \in R - \{0\}$, ma allora $x' := -c^{-1}d$ è radice di $a(x)$, e dunque necessariamente è anche radice di $p(x)$
+            - $\deg(p(x)) = 2 \land \exists x' \in \mathbb{R} \mid p(x') = 0 \implies p(x)$ non è irriducibile $\bot$
+
+## Oss
+
+- **Hp**
+    - $a_0, \ldots, a_n \in \mathbb{Z} \mid a_0, a_n \neq 0$
+    - $p(x) \in \mathbb{Z}[x] \mid p(x) = a_0 + \ldots + a_nx^n$
+    - $a, b \in \mathbb{Z} \mid \textrm{MCD}(a, b) = 1$
+    - $p(\frac{a}{b}) = 0$
+- **Th**
+    - $a \mid a_0 \land b \mid a_n$
+- **Dim**
+    - $0 = p(\frac{a}{b}) = a_n(\frac{a}{b})^n + a_{n - 1}\left(\frac{a^{n - 1}}{b^{n - 1}}\right) + \ldots + a_0$
+    - moltiplicando entrambe i membri dell'equazione per $b^n$ si ottiene $0 = a_na^n + a_{n -1}a^{n - 1}b + \ldots + a_1a^1b^{n -1 } + a_0b^n$
+    - allora $a_na^n = - a_{n - 1} a^{n - 1}b - \ldots - a_1a^1 b^{n - 1}- a_0b^n$
+    - poiché ogni sottraendo del secondo membro di tale equazione è un multiplo di $b$, mettendo in evidenza $b$ si ottiene che $b \mid a_na^n$
+    - $\textrm{MCD}(a, b) = 1 \implies \textrm{MCD}(a^n, b) = 1$, ma allora $b \mid a_na^n \implies b \mid a_n$
+    - è possibile ripetere il ragionamento analogo per $a_0b^n$, e dall'equazione ottenuta si noterà che $a \mid a_0b^n$, che per ragionamento analogo all'osservazione precedente deve necessariamente implicare che $a \mid a_0$

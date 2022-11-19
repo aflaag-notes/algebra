@@ -1,12 +1,10 @@
 # Teorema fondamentale dell'algebra
 
-- ⚠️ **INCOMPLETA**
 - **Hp**
-  - $a_{0}, \ldots, a_{n} \in \mathbb{C}$
-  - $n \in \mathbb{N} - \{0\}$
-  - $a_n \neq 0$
+  - $\mathbb{K}$ campo
+  - $p(x) \in \mathbb{K}[x] \mid p(x) = a_{0}x^0 + \ldots +a_{n} x^{n}$
 - **Th**
-  - $\exists x \in \mathbb{C} \mid x$ è soluzione dell'equazione $a_{0}+a_{1} x+a_{2} x^{2}+\cdots+a_{n} x^{n}=0$
+  - $\exists z \in \mathbb{C} \mid p(z) = 0$
 
 ****
 
@@ -25,6 +23,13 @@
     - $r \in [m] \iff \exists p_2 \in \mathbb{Z} \mid np_2 = m - r  \iff r = m - np_2 \iff m = np_2 +r$
     - ⚠️ **INCOMPLETA**
 
+## Oss
+
+- **Hp**
+    - $\mathbb{K}$ campo
+    - $a(x), b(x) \in \mathbb{K}[x] \mid b(x) \neq 0$
+- **Th**
+    - $\exists ! q(x), r(x) \in \mathbb{K}[x] \mid a(x) = b(x) \cdot q(x) + r(x) \quad \deg(r(x)) \lt \deg(b(x))$, che è detto _teorema della divisione con il resto tra polinomi_
 ****
 
 # Teorema di Lagrange

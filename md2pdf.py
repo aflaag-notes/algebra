@@ -16,6 +16,7 @@ for file in os.listdir("mds"):
         NF.write(content)
 
     print("Processing " + name_no_ext + ".md")
-    os.system("pandoc temp/" + name_no_ext + ".md -t pdf -o pdfs/" + name_no_ext + ".pdf")
+
+    os.system("pandoc temp/" + name_no_ext + ".md -t pdf -V geometry:a4paper -o pdfs/" + name_no_ext + ".pdf")
 
 os.system("rm -rf ./temp")
