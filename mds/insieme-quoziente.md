@@ -94,6 +94,16 @@
   - per dimostrazione precedente, allora tutti gli elementi di $\mathbb{Z}_p$ sono invertibili, tranne $[0]$ in quanto $[0]$ non ha inversi
   - allora $\mathbb{Z}_p^* = \mathbb{Z}_p - \{[0]\}$, che per definizione implica che $\mathbb{Z}_p$ campo
  
+## Oss
+
+- **Hp**
+    - $p \in \mathbb{P}$
+- **Th**
+    - $(\mathbb{Z}_p^*, \cdot)$ è ciclico
+- **Dim**
+    - **⚠️  MANCA QUALSIASI TEOREMA**
+
+
 ****
 
 # Funzione totiente di Eulero

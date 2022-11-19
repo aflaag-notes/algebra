@@ -106,7 +106,7 @@
   - $b_1, \ldots, b_n \in \mathbb{Z} \mid 0 \leq b_{1}<a_{1}, \ldots, 0 \leq b_n \lt a_n$
   - $m := \textrm{mcm}(a_1, \ldots, a_n)$
 - **Th**
-  - $\exists ! x \ (\bmod m) \mid$ $\left\{\begin{array}{c}x \equiv b_{1}\ \left(\bmod a_{1}\right) \\ \vdots \\ x \equiv b_{n}\ \left(\bmod a_{n}\right)\end{array}\right.$
+  - $\exists ! x \ (\bmod \ m) \mid$ $\left\{\begin{array}{c}x \equiv b_{1}\ \left(\bmod  \ a_{1}\right) \\ \vdots \\ x \equiv b_{n}\ \left(\bmod  \ a_{n}\right)\end{array}\right.$
 - **Dim**
   - per il primo lemma $m = a_1 \cdot \ldots \cdot a_n$ poiché coprimi in ipotesi
   - per il secondo lemma $m = \textrm{mcm}(a_1, \ldots, a_n) \implies \exists \phi : \mathbb{Z}_m \rightarrow \mathbb{Z}_ {a_1} \times \cdots \times \mathbb{Z}_{a_n}$ ben definita e iniettiva
@@ -134,6 +134,10 @@
   - $(a+ b)^{n + 1} = (a+b)^{n }\cdot (a+b)$
   - ⚠️ **INCOMPLETA**
 
+## Cor
+
+- ⚠️ **NON HO CAPITO UN CAZZO**
+
 ****
 
 # Piccolo teorema di Fermat
@@ -142,7 +146,7 @@
   - $p \in \mathbb{P}$
   - $a \in \mathbb{Z}$
 - **Th**
-  - $a^{p} \equiv a \ (\bmod p)$
+  - $a^{p} \equiv a \ (\bmod \ p)$
 - **Dim**
   - _prima dimostrazione_
     - $a=0 \implies [0]^{p} =[0]$
@@ -165,6 +169,21 @@
 - **Dim**
   - $[a] \neq [0] \implies \exists[a]^{-1} \in \mathbb{Z}_p$, poiché, per dimostrazione precedente $\mathbb{Z}_p^* = \mathbb{Z_p} - \{0\}$
   -  per il teorema di Fermat $[a]^p = [a] \iff [a]^p \cdot [a]^{-1} = [a] \cdot [a]^{-1} \iff [a]^{p -1} = [1] \iff [a] \cdot [a]^{p -2} = [1]\iff [a]^{-1} = [a]^{p-2}$
+
+## Cor
+
+- **Hp**
+    - $p \in \mathbb{P}$
+- **Th**
+    - $\displaystyle \prod_{0 \lt a \lt p} (x - a) \equiv x^{p - 1} - 1 \ (\bmod \ p)$
+- **Dim**
+    - per il piccolo teorema di Fermat $a^p \equiv a \iff a^{p - 1} \equiv 1  \iff a^{p - 1} - 1 \equiv 0\ (\bmod \ p)$, che è equivalente a dire che $[a]$ è radice del polinomio $x^{p -1 } - [1] \in \mathbb{Z}_p[x]$
+    - per dimostrazione precedente $\forall 0 \lt a \lt p \quad [a]^{p - 1} - 1 = [0] \implies x - [a] \mid x^{p -1} - [1]$, ovvero $\displaystyle \prod_{0 \lt a \lt p} (x - [a]) \mid x^{p - 1} - [1] \implies \exists c \in \mathbb{N} \mid x^{p - 1} - [1] = c \cdot \displaystyle \prod_{0 \lt a \lt p} (x - [a])$
+    - poiché $x^{p- 1}-[1]$ e $\displaystyle \prod_{0 \lt a \lt p} (x - [a])$ sono due polinomi il cui coefficiente direttore è $1$, allora necessariamente $c = 1$, per cui segue la tesi
+
+## Cor
+
+- ⚠️ **NON HO CAPITO UN CAZZO**
 
 ****
 

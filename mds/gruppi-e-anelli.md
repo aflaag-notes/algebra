@@ -228,7 +228,7 @@
 - **Ordine di un elemento in un gruppo**
 > - $G$ gruppo
 > - $g \in G$
-> - $H(g):=\left\{g^{n} \mid n \in \mathbb{Z}\right\}$
+> - $H(g):=\left\{g^{n} \mid n \in \mathbb{Z}\right\}$ è detto **sottogruppo ciclico**
 > - $o(g):= |H(g)|$ è detto **ordine di $g \in G$**
 
 ## Oss
