@@ -302,3 +302,40 @@
 - **Dim**
   - per dimostrazione precedente $I(d) = I(g)$, allora $d \in I(d) \implies d \in  I(g) \implies g^d = e$
   - $d = o(g) = |H(g)| \bigg\vert |G|$ per il teorema di Lagrange, e dunque $\exists k \in \mathbb{Z} : |G|=d \cdot k \implies g^{|G|} = g^{d \cdot k} = (g^d)^k = e^k = e$
+
+## Oss
+
+- **Hp**
+    - $G$ gruppo finito
+    - $g \in G$
+- **Th**
+    - $o(g) = o(g^{-1})$
+- **Dim**
+    - $H(g) \subset H(g^{-1})$
+        - $\forall g^n \in H(g) \quad g^n = (g^{-1})^{-n} \implies g^n \in H(g^{-1})$
+    - $H(g^{-1}) \subset H(g)$
+        - $\forall (g^{-1})^n \in H(g^{-1}) \quad (g^{-1})^n=g^{-n} \implies (g^{-1})^n \in H(g)$
+    - dunque $H(g) = H(g^n) \implies o(g) = |H(g)| = |H(g^{-1})| = o(g^{-1})$
+
+## Oss
+
+- **Hp**
+    - $G$ gruppo finito
+    - $k \in \mathbb{Z}$
+- **Th**
+    - $\forall g \in G \quad o(g^k) \mid o(g)$
+- **Dim**
+    - $\forall (g^k)^n \in H(g^k) \quad (g^k)^n = g^{nk} \implies g^{nk} \in H(g) \implies H(g^k) \subset H(g)$
+    - per dimostrazione precedente $H(g^k) \subset H(g) \subset G$ sottogruppi, allora in particolare, per il teorema di Lagrange $o(g^k) = | H(g^k)| \bigg\vert |H(g)| = o(g)$
+
+## Oss
+
+- **Hp**
+    - $G$ gruppo finito
+    - $g, h \in G \mid gh = hg$
+    - $d := \textrm{MCD}(o(g), o(h))$
+    - $m := \textrm{mcm}(o(g), o(h))$
+- **Th**
+    - $\dfrac{m}{d} \mid o(gh) \land o(gh) \mid m$
+- **Dim**
+    - ⚠️ **frate c'ho veramente 0 sbatta**
