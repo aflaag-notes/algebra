@@ -65,21 +65,21 @@
 
 - **Hp**
   - $a, b \in \mathbb{Z}$
-  - $a \equiv b \ (\bmod n) \iff m \mid b-a$ è detta congruenza modulo $n$
+  - $a \equiv b \ (\bmod \ n) \iff m \mid b-a$ è detta congruenza modulo $n$
 - **Th**
   - $\equiv$ è una relazione di equivalenza
 - **Dim**
-    - _riflessività_: $\forall a \in \mathbb{Z} \quad a \equiv a \ (\bmod n)$
-      - $a \equiv a \ (\bmod n) \iff n \mid a - a \iff n \mid 0 \iff \exists p \in \mathbb{Z} \mid n p = 0 \iff p = 0 \in \mathbb{Z}$
-    - _simmetria_: $\forall a, b \in \mathbb{Z}\quad a \equiv b \ (\bmod n) \implies b \equiv a \ (\bmod n)$
-      - $a \equiv b \ (\bmod n) \iff n \mid b - a \iff \exists p_1 \in \mathbb{Z} \mid n  p_1 = b - a$
-      - $b \equiv a \ (\bmod n) \iff n \mid a - b \iff \exists p_2 \in \mathbb{Z} \mid n  p_2 = a - b$
+    - _riflessività_: $\forall a \in \mathbb{Z} \quad a \equiv a \ (\bmod \ n)$
+      - $a \equiv a \ (\bmod \ n) \iff n \mid a - a \iff n \mid 0 \iff \exists p \in \mathbb{Z} \mid n p = 0 \iff p = 0 \in \mathbb{Z}$
+    - _simmetria_: $\forall a, b \in \mathbb{Z}\quad a \equiv b \ (\bmod \ n) \implies b \equiv a \ (\bmod \ n)$
+      - $a \equiv b \ (\bmod \ n) \iff n \mid b - a \iff \exists p_1 \in \mathbb{Z} \mid n  p_1 = b - a$
+      - $b \equiv a \ (\bmod \ n) \iff n \mid a - b \iff \exists p_2 \in \mathbb{Z} \mid n  p_2 = a - b$
        - $\left.\begin{array}{l}n p_{1}=b-a \implies b=n p_{1}+a \\ n p_{2}=a-b\end{array}\right\} \implies np_2 = a - np_1 - a = -np_1$, e dunque $np_2 = -np_1 \iff np_2+np_1 = 0 \iff n(p_2 + p_1)=0$
        - $n \neq 0\implies n(p_2+p_1) 0 \iff p_{2}+p_{1}=0 \implies -p_{2}=p_{1}$
        - $n\mid b -a \iff np_1= b - a \iff n(-p_2) = b - a \iff np_2 = a - b \iff n \mid a- b$
-    - _transitivtà_: $\forall a, b, c \in \mathbb{Z} \quad a \equiv b \ (\bmod n) \land b \equiv c \ (\bmod n) \implies a \equiv c \ (\bmod n)$
-      - $a \equiv b \ (\bmod n) \iff n \mid b - a \iff \exists p_1 \in \mathbb{Z} \mid n p_1 = b - a$
-      - $b \equiv c \ (\bmod n) \iff n \mid c - b \iff \exists p_2 \in \mathbb{Z} \mid n p_2 = c - b$
+    - _transitivtà_: $\forall a, b, c \in \mathbb{Z} \quad a \equiv b \ (\bmod \ n) \land b \equiv c \ (\bmod \ n) \implies a \equiv c \ (\bmod \ n)$
+      - $a \equiv b \ (\bmod \ n) \iff n \mid b - a \iff \exists p_1 \in \mathbb{Z} \mid n p_1 = b - a$
+      - $b \equiv c \ (\bmod \ n) \iff n \mid c - b \iff \exists p_2 \in \mathbb{Z} \mid n p_2 = c - b$
       - $\left.\begin{array}{l}n p_{1}=b-a \implies b=n p_{1}+a \\ n p_{2}=c-b\end{array}\right\} \implies np_2 = c - np_2 - a \iff np_2 + np_1 = c - a \implies n(p_2 + p_1)=c -a$
       - $p_{1}, p_{2} \in \mathbb{Z} \implies p_{1}+p_{2} \in \mathbb{Z}$, e qundue per la proposizione precedente $\exists p_1 + p_2 \in \mathbb{Z} \mid n(p_1 + p_2) = c - a \iff n \mid c - a$
 
@@ -89,11 +89,28 @@
   - $x, y \in \mathbb{Z} \mid x \equiv y \ (\bmod \ n)$
   - $d \in \mathbb{Z} : d\mid n$
 - **Th**
-  - $x \equiv y \ (\bmod \  d)$
+  - $x \equiv y \ (\bmod  \ d)$
 - **Dim**
   - $x \equiv y \ (\bmod  \ n) \iff n \mid y - x \iff \exists p \in \mathbb{Z} \mid np = y - x$
   - $d \mid n \iff \exists k \in \mathbb{Z} \mid dk = n$
   - allora, $np = y - x \iff dkp = y -x \implies \exists kp \in \mathbb{Z} : d \mid y - x \iff x \equiv y \ (\bmod \ d)$
+
+## Oss
+
+- **Hp**
+    - $n \in \mathbb{N}$
+    - $[a], [b] \in \mathbb{Z}_n$
+    - $d:= \textrm{MCD}(a, n)$
+- **Th**
+    - $d \nmid b \implies \nexists [x] \in \mathbb{Z}_n \mid ax \equiv b \ (\bmod \ n)$
+    - $d \mid b \implies \forall [x] \in \mathbb{Z}_n \mid ax \equiv b \ (\bmod \ n) \quad x$ è anche tale che $\dfrac{a}{d}x \equiv \dfrac{b}{d} \ \left(\bmod \ \dfrac{n}{d}\right)$
+- **Dim**
+    - _prima tesi_
+        - $ax \equiv b \ (\bmod \ n) \implies \exists k \in \mathbb{Z} \mid ax - b = nk \iff b = ax - nk$
+        - per definizione $d \mid a \land d \mid n$
+        - ⚠️ **NON HO CAPITO CHE COSA HA SCRITTO**
+    - _seconda tesi_
+        - ⚠️ **NON HO VOGLIA**
 
 ## Ex
 
