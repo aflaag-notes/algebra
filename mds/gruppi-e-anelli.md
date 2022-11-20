@@ -5,22 +5,22 @@
 - **Semigruppo**
 > - $S$ insieme
 > - $m: S \times S \rightarrow S$
-> - $(S, m)$ **semigruppo** $\iff  m(x, m(y, z))=m(m(x, y),z) \quad \forall x, y, z \in S$
+> - $(S, m)$ **semigruppo** $\iff \forall x, y, z \in S \quad m(x, m(y, z))=m(m(x, y),z) \quad$
 
 - **Monoide**
 > - $S$ insieme
 > - $m: S \times S \rightarrow S$
-> - $(S, m)$ **monoide** $\iff (S, m)$ semigruppo e $\exists e \in S  \mid m(x, e) = m(e, x) = x \quad \forall x \in S$
+> - $(S, m)$ **monoide** $\iff (S, m)$ semigruppo e $\forall x \in S \quad \exists e \in S  \mid m(x, e) = m(e, x) = x$
 
 - **Gruppo**
 > - $S$ insieme
 > - $m: S \times S \rightarrow S$
-> - $(S, m)$ **gruppo** $\iff (S, m)$ monoide e $\exists x^{-1} \in S \mid m(x, x^{-1}) =m(x^{-1}, x) =e \quad \forall x \in S$
+> - $(S, m)$ **gruppo** $\iff (S, m)$ monoide e $\forall x \in S \quad \exists x^{-1} \in S \mid m(x, x^{-1}) =m(x^{-1}, x) =e$
 
 - **Gruppo abeliano**
 > - $S$ insieme
 > - $m: S \times S \rightarrow S$
-> - $(S, m)$ **gruppo abeliano** $\iff (S,m)$ gruppo e $m(x, y) = m(y, x) \quad \forall x, y \in S$
+> - $(S, m)$ **gruppo abeliano** $\iff (S,m)$ gruppo e $\forall x, y \in S \quad m(x, y) = m(y, x)$
 
 ## Oss
 
@@ -69,14 +69,22 @@
 
 - **Anello**
 > - $A$ insieme
-> - $+: A \times A \implies A$
-> - $*: A \times A \implies A$
-> - $(A, +, *)$ **anello** $\iff (A, +)$ gruppo abeliano, $(A, *)$ monoide e  $a*(b + c) = a * b + a * c \quad \forall a, b, c \in A$
+> - $+: A \times A \rightarrow A$
+> - $*: A \times A \rightarrow A$
+> - $(A, +, *)$ **anello** $\iff (A, +)$ gruppo abeliano, $(A, *)$ monoide e  $\forall a, b, c \in A \quad a*(b + c) = a * b + a * c$
 > - $a * b=b * a \quad \forall a, b \in A \implies   (A, *, +)$ è un **anello commutativo**
 
 - **Campo**
 > - $(A, +, *)$ anello
 > - $(A, +, *)$ è un **campo** $\iff \forall x \in A \quad \exists x^{-1}$ rispetto a $*$
+
+- **Semianello commutativo**
+> - $A$ insieme
+
+> - $A$ insieme
+> - $+: A \times A \rightarrow A$
+> - $*: A \times A \rightarrow A$
+> - $(A, +, *)$ **semianello commutativo** $\iff (A, +)$ monide commutativo, $(A, *)$ monoide commutativo e $\forall a, b, c \in A \quad a*(b + c) = a*b + a*c$
 
 - **Sottoanello**
 > - $(A, +, \cdot)$ anello
@@ -229,7 +237,9 @@
 > - $G$ gruppo
 > - $g \in G$
 > - $H(g):=\left\{g^{n} \mid n \in \mathbb{Z}\right\}$ è detto **sottogruppo ciclico**
+>   - prende il nome di _sottogruppo ciclico_ poiché, a seconda del gruppo, le potenze di $g$ possono essere infinite o finite, ma quest'ultimo caso si verifica esclusivamente quando le potenze ciclano su loro stesse
 > - $o(g):= |H(g)|$ è detto **ordine di $g \in G$**
+>   - tale valore può dunque essere infinito o finito, e in quest'ultimo caso l'ordine costituisce il valore più piccolo, non nullo, per cui $g^{o(g)} = e$, poiché per valori maggiori le potenze ricicleranno infinitamente
 
 ## Oss
 
@@ -270,10 +280,10 @@
 - **Dim**
   - $d = 0$
     - la funzione $f: \mathbb{Z} \rightarrow H(g) : n \rightarrow g^n$ è biiettiva
-      - $f$ iniettività $\iff \forall m, n \in \mathbb{Z} \quad g^n =g^m \implies n = m$
+      - $f$ iniettiva $\iff \forall m, n \in \mathbb{Z} \quad g^n =g^m \implies n = m$
         - $m, n \in \mathbb{Z} \mid g^m = g^n \implies g^{-m} \cdot g^m=g^{-m} \cdot g^n \iff e = g^{n - m} \implies n - m \in I(g) = I(d) \implies d \mid n - m$
         - $d = 0 \implies 0 \mid n - m \iff n -m = 0 \iff n = m$, di conseguenza $g^m = g^n \implies n = m$
-      - $f$ suriettività è data al fatto che l'immagine di $f$ coincide con $H(g)$ per definizione di $H(g)$
+      - la suriettività di $f$ è data al fatto che l'immagine di $f$ coincide con $H(g)$ per definizione di $H(g)$
     - $f$ è biiettiva $\implies |\mathbb{Z} | = |H(g)| = o(g)$, dunque infinito
   - $d \gt 0$
     - $I(g) = I(d) \land d \in I(d) \implies d \in I(g) \implies g^d = e$
@@ -286,19 +296,9 @@
 
 - **Hp**
   - $G$ gruppo finito
-  - $g \in G$
-- **Th**
-  - $H(g)$ sottogruppo finito
-- **Dim**
-  - per il teorema di Lagrange $|H(g)| \bigg\vert |G|$, e dunque $G$ finito $\implies H(g)$ finito necessariamente
-
-## Oss
-
-- **Hp**
-  - $G$ gruppo finito
-  - $g \in G$
+  - $g \in G \mid d := o(g)$ finito
 - **Th**
   - $g^{|G|}=e$
 - **Dim**
-  - $\exists ! d = o(g) \mid I(d) = I(g)$ per dimostrazione precedente, e dunque $d \in I(d) \implies d \in  I(g) \implies g^d = e$
-  - $d = o(g) = |H(g)| \bigg\vert |G|$ per il teorema di Lagrange, e dunque $\exists k \in \mathbb{Z} \quad |G|=d \cdot k \implies g^{|G|} = g^{d \cdot k} = (g^d)^k = e^k = e$
+  - per dimostrazione precedente $I(d) = I(g)$, allora $d \in I(d) \implies d \in  I(g) \implies g^d = e$
+  - $d = o(g) = |H(g)| \bigg\vert |G|$ per il teorema di Lagrange, e dunque $\exists k \in \mathbb{Z} : |G|=d \cdot k \implies g^{|G|} = g^{d \cdot k} = (g^d)^k = e^k = e$

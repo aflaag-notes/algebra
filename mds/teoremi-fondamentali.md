@@ -88,7 +88,8 @@
 ## Lem
 
 - **Hp**
-  - $a_1, \ldots, a_n \ge 2 \in \mathbb{Z}$
+  - $n \in \mathbb{N}$
+  - $a_1, \ldots, a_n \in \mathbb{Z}_{n \ge 2}$
   - $m:= \textrm{mcm}(a_1, \ldots, a_n)$
 - **Th**
   - $\exists \phi \mid \phi: \mathbb{Z}_m \rightarrow \mathbb{Z}_{a_1} \times \ldots \times \mathbb{Z}_{a_n}: x \ (\bmod \ m) \rightarrow (x \ (\bmod \ a_1), \ldots, x \ (\bmod \ a_n))$
@@ -102,13 +103,14 @@
 ## Teorema
 
 - **Hp**
-  - $a_1, \ldots, a_n \ge 2 \in \mathbb{Z} \mid \textrm{MCD}(a_i, a_j) = 1 \quad \forall i, j \in [1, n] \mid i \neq j$
+  - $n \in \mathbb{N}$
+  - $a_1, \ldots, a_n \in \mathbb{Z}_{\ge 2} \mid \forall i, j \in [1, n] \quad i \neq j \implies \textrm{MCD}(a_i, a_j) = 1$
   - $b_1, \ldots, b_n \in \mathbb{Z} \mid 0 \leq b_{1}<a_{1}, \ldots, 0 \leq b_n \lt a_n$
   - $m := \textrm{mcm}(a_1, \ldots, a_n)$
 - **Th**
   - $\exists ! x \ (\bmod \ m) \mid$ $\left\{\begin{array}{c}x \equiv b_{1}\ \left(\bmod  \ a_{1}\right) \\ \vdots \\ x \equiv b_{n}\ \left(\bmod  \ a_{n}\right)\end{array}\right.$
 - **Dim**
-  - per il primo lemma $m = a_1 \cdot \ldots \cdot a_n$ poiché coprimi in ipotesi
+  - per il primo lemma $m = a_1 \cdot \ldots \cdot a_n$ poiché coprimi a due a due in ipotesi
   - per il secondo lemma $m = \textrm{mcm}(a_1, \ldots, a_n) \implies \exists \phi : \mathbb{Z}_m \rightarrow \mathbb{Z}_ {a_1} \times \cdots \times \mathbb{Z}_{a_n}$ ben definita e iniettiva
   - $\left|X_{1} \times \cdots \times X_{n}\right|=\left|X_{1}\right| \cdot\ldots\cdot\left|X_{n}\right| \implies$ $\left|\mathbb{Z}_{a_{1}} \times \ldots \times \mathbb{Z}_{a_{n}}\right|=\left|\mathbb{Z}_{a_{1}}\right| \cdot\ldots\cdot\left|\mathbb{Z}_{a_{n}}\right|$
     - $\mathbb{Z}_n := \{[0],[1], \cdots,[n-1]\} \implies \left|\mathbb{Z}_{n}\right|=n$, quindi $\left|\mathbb{Z}_{a_{1}}\right| \cdot\ldots\cdot\left|\mathbb{Z}_{a_{n}}\right|  = a_1 \cdot \ldots \cdot a_n = m = \left| \mathbb{Z}_m \right|$ per ragionamento analogo
@@ -118,6 +120,27 @@
     - $\varphi(x \ (\bmod m))=\left(b_{1}\ \left( \bmod  a_{1}\right), \ldots, b_{n} \ (\bmod a_{n})\right)$, e poiché $\phi$ è suriettiva, allora ogni tupla di $n$ elementi dell'insieme di arrivo, che descrive un sistema come in ipotesi, ha una controimmagine $x \ (\bmod m)$, e $x \ (\bmod m)\in \mathbb{Z}_m$ per definizione, dunque _esiste sempre una soluzione_
   - $\phi$ _iniettiva_ $\implies$ $\exists ! x \mid x \ (\bmod m)$ è soluzione del sistema
     - poiché $\phi$ è iniettiva, $x \ (\bmod m) \in \mathbb{Z}_m$ è unica, dunque _la soluzione è sempre unica_
+
+## Cor
+
+- **Hp**
+    - $k \in \mathbb{N}$
+    - $n_1, \ldots, n_k \in \mathbb{N} - \{0\} \mid \forall i, j \in [1, k] \quad i \neq j \implies \textrm{MCD}(n_i, n_j) = 1$
+    - $N := \textrm{mcm}(n_1, \ldots, n_k)$
+    - $[a] \in \mathbb{Z}_N^*$
+    - $o := o([a])$ in $\mathbb{Z}_N^*$
+    - $\forall h \in [1, k] \quad o_h := o([a])$ in $\mathbb{Z}_{n_h}^*$
+- **Th**
+    - $o = \textrm{mcm}(o_1, \ldots, o_k)$
+- **Dim**
+    - per il primo lemma del teorema cinese dei resti $N = n_1 \cdot \ldots \cdot n_k$ poiché coprimi a due a due in ipotesi
+    - per il teorema cinese dei resti $a^o \equiv 1 \ (\bmod \ N) \implies \left\{\begin{array}{c}a^o \equiv 1 \ (\bmod \ n_1) \\ \vdots \\ a^o \equiv 1 \ (\bmod \ n_k)\end{array}\right.$ poiché $n_1, \ldots, n_k$ coprimi a due a due in ipotesi
+    - per dimostrazione precedente, $o_1$ è il più piccolo esponente di $[a]$ per cui $[a]^{o_1} = 1$ in $\mathbb{Z}_{n_1}^*$, ma questo implica che $\forall k \in \mathbb{Z} \quad ([a]^{o_1})^k = 1$ in $\mathbb{Z}_{n_1}^*$, e allora necessariamente $a^o \equiv 1 \ (\bmod \ n_1)$ implica che $o$ sia un multiplo di $o_1$
+    - per ragionamento analogo, vale il seguente sistema $\left\{\begin{array}{c}o_1 \mid o \\ \vdots \\ o_k \mid o \end{array}\right. \implies \textrm{mcm}(o_1, \ldots, o_k) \mid o$
+    - sia $m := \textrm{mcm}(o_1, \ldots, o_k)$
+    - per definizione $\left\{\begin{array}{c}o_1 \mid m \\ \vdots \\ o_k \mid m \end{array}\right.$
+    - per ragionamento analogo all'osservazione precedente, si ottiene che $\left\{\begin{array}{c}a^m \equiv 1 \ (\bmod \ n_1) \\ \vdots \\ a^m \equiv  1 \ (\bmod \ n_k)\end{array}\right. \implies a^m \equiv 1 \ (\bmod \ N) \implies o \mid m$
+    - $m \mid o \land o \mid m \implies o = m$
 
 ****
 

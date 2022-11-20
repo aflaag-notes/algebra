@@ -287,3 +287,7 @@
     - poiché ogni sottraendo del secondo membro di tale equazione è un multiplo di $b$, mettendo in evidenza $b$ si ottiene che $b \mid a_na^n$
     - $\textrm{MCD}(a, b) = 1 \implies \textrm{MCD}(a^n, b) = 1$, ma allora $b \mid a_na^n \implies b \mid a_n$
     - è possibile ripetere il ragionamento analogo per $a_0b^n$, e dall'equazione ottenuta si noterà che $a \mid a_0b^n$, che per ragionamento analogo all'osservazione precedente deve necessariamente implicare che $a \mid a_0$
+
+## Oss
+
+- ⚠️  **MANCA UN TEOREMA ENORME**
