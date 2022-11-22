@@ -49,7 +49,7 @@
   - $X, Y$ insiemi,
   - $Y^X = \{f \mid f:X \rightarrow Y\}$
 - **Th**
-  - $(X^X, \circ)$ è **monoide**
+  - $(X^X, \circ)$ è monoide
 - **Dim**
     - $\forall f, g, h \in Y^X \quad (f \circ g) \circ h=f \circ(g \circ h)$. poiché la composizione di funzioni è associativa
     - $\forall X \quad \exists \textrm{id}_X \mid \textrm{id}_X : X \rightarrow X : x \rightarrow x$, che costituisce dunque l'elemento neutro, mappando ogni elemento in sé stesso

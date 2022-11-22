@@ -31,7 +31,7 @@ for file in os.listdir("mds/"):
 
                         i += 1
 
-            out += "****\n"
+            out += "\n\n****\n"
 
 with open("mds/everything.md", "w+") as f:
     f.write(out)

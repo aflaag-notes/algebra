@@ -60,6 +60,8 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, esemp
 
   - $z^{n}=|z|^{n} e^{i n \theta} \quad \arg \left( z^{n} \right)=n \arg (z)$
 
+
+
 ****
 # Permutazioni
 
@@ -177,6 +179,8 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, esemp
     - $\sigma \in S_n \mid \sigma := \gamma_1 \ldots \gamma_k$
 - **Th**
     - $\textrm{sgn}(\sigma)=(-1)^{n - k}$
+
+
 ****
 # Ideali
 
@@ -308,6 +312,8 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, esemp
   - $a, b \in \mathbb{Z}$
 - **Th**
   - $I(a) \cdot I(b)=I(a \cdot b)$
+
+
 ****
 # Polinomi
 
@@ -467,6 +473,8 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, esemp
 
 - ⚠️  **MANCA UN TEOREMA ENORME**
 
+
+
 ****
 # Coefficienti binomiali
 
@@ -535,6 +543,8 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, esemp
   - $[a_1], \ldots, [a_n] \in \mathbb{Z}_p$
 - **Th**
   - $\left(\left[a_{1}\right]+\ldots+\left[a_{n}\right]\right)^{p}=\left[a_{1}\right]^{p}+\ldots+\left[a_{n}\right]^{p}$ in $\mathbb{Z}_p$
+
+
 ****
 # Gruppi
 
@@ -566,7 +576,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, esemp
   - $X, Y$ insiemi,
   - $Y^X = \{f \mid f:X \rightarrow Y\}$
 - **Th**
-  - $(X^X, \circ)$ è **monoide**
+  - $(X^X, \circ)$ è monoide
 
 ## Teorema 60
 
@@ -710,6 +720,8 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, esemp
     - $m := \textrm{mcm}(o(g), o(h))$
 - **Th**
     - $o(gh) = o(hg) = m$
+
+
 ****
 # Insieme quoziente
 
@@ -801,6 +813,8 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, esemp
     - $n \in \mathbb{N} \mid n = p_1^{i_1} \cdot \ldots \cdot p_k^{i_k}$ 
 - **Th**
     - $\displaystyle\varphi(n)=n \cdot \prod_{p \mid n}\left(1-\frac{1}{p}\right)$
+
+
 ****
 # Induzione
 
@@ -815,6 +829,8 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, esemp
   - $x^2 -x -1 = 0$ ha come soluzioni $\left\{\begin{array}{l}\phi := \dfrac{1+\sqrt{5}}{2} \\ \psi := \dfrac{1 - \sqrt{5}}{2}\end{array}\right.$
 - **Th**
   - la formula chiusa della serie di Fibonacci è $F_{n}=\dfrac{\varphi^{n}-\psi^{n}}{\varphi-\psi}=\dfrac{\varphi^{n}-\psi^{n}}{\sqrt{5}}$
+
+
 ****
 # Teorema fondamentale dell'algebra
 
@@ -842,6 +858,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, esemp
     - $a(x), b(x) \in \mathbb{K}[x] \mid b(x) \neq 0$
 - **Th**
     - $\exists ! q(x), r(x) \in \mathbb{K}[x] \mid a(x) = b(x) \cdot q(x) + r(x) \quad \deg(r(x)) \lt \deg(b(x))$, che è detto _teorema della divisione con il resto tra polinomi_
+
 ****
 
 # Teorema di Lagrange
@@ -947,6 +964,8 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, esemp
   - $G$ gruppo $\bigg\vert |G|=4$
 - **Th**
   - $G \cong \mathbb{Z}_4$ oppure $G \cong K_4$
+
+
 ****
 # Relazioni
 
@@ -1068,6 +1087,8 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, esemp
   - $+: G/H \times G/H \rightarrow G/H$
 - **Th**
   - $(G/H, +)$ è gruppo abeliano
+
+
 ****
 # Morfismi
 
@@ -1233,6 +1254,8 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, esemp
   - $f: G \rightarrow H$ morfismo
 - **Th**
   - $\textrm{Ker}(f)$ è sottogruppo normale
+
+
 ****
 # Gruppi diedrali
 
@@ -1282,4 +1305,6 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, esemp
   - $K_4$ è il gruppo di Klein
 - **Th**
   - $K_4 \cong D_2$
+
+
 ****

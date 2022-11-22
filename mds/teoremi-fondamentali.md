@@ -30,6 +30,7 @@
     - $a(x), b(x) \in \mathbb{K}[x] \mid b(x) \neq 0$
 - **Th**
     - $\exists ! q(x), r(x) \in \mathbb{K}[x] \mid a(x) = b(x) \cdot q(x) + r(x) \quad \deg(r(x)) \lt \deg(b(x))$, che è detto _teorema della divisione con il resto tra polinomi_
+
 ****
 
 # Teorema di Lagrange
