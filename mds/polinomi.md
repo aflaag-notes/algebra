@@ -87,7 +87,7 @@
 - **Th**
     - $\mathbb{K}[x]$ è un dominio
 - **Dim**
-    - ⚠️  **MANCA UNA DIMOSTRAZIONE**
+    - ⚠️  **MANCA LA DIMOSTRAZIONE**
 
 
 ## Def
@@ -105,7 +105,7 @@
     - $c \in \mathbb{K}$
 - **Th**
     - $p(c) = 0 \iff x - c \mid p(x)$
-- **Hp**
+- **Dim**
     - _prima implicazione_
         - per il teorema della divisione con il resto tra polinomi, dividendo $p(x)$ per $(x - c)$ si ottiene che $\exists!q(x), r(x) \in \mathbb{K}[x] \mid p(x) = q(x) \cdot (x - c) + r(x)$
         - $r_0 := r(x)$
@@ -125,7 +125,7 @@
 - **Dim**
     - ipotizzando $N :=|\{c \in \mathbb{K} \mid p(c) = 0\}| \gt n \implies \{c_1, \ldots, c_N\}$ sia l'insieme delle radici
     - per dimostrazione precedente $\left.\begin{array}{c} x - c_1 \mid p(x) \\ \vdots \\ x-c_N \mid p(x) \end{array}\right\} \implies (x - c_1) \cdot \ldots \cdot (x - c_N) \mid p(x)$
-    - ⚠️  **MANCA LA DIMOSTRAZIONE**
+        - ⚠️  **manca la dimostrazione di questo passaggio**
     - ma $\deg\left((x - c_1) \cdot \ldots \cdot (x - c_N)\right) = N$, mentre $\deg(p(x)) = n$, dove $M \gt n \ \bot$
 
 ## Oss
@@ -227,7 +227,7 @@
 - **Th**
     - $\exists ! q_1(x), \ldots ,q_k(x) \in \mathbb{K}[x]$ irriducibili e monici$, c \in \mathbb{K} - \{0\} \mid p(x) = c \cdot q_1(x) \cdot \ldots \cdot q_k(x)$
     - in particolare, i polinomi sono unici a meno di un riordinamento
-- **Dim**:
+- **Dim**
     - _esistenza_:
         - $\deg(p(x)) = 1$
             - ⚠️  **NON HO CAPITO NULLA**
@@ -258,10 +258,6 @@
         - per dimostrazione precedente $\forall a(x), b(x), c(x) \in \mathbb{K}[x] \quad a(x) = b(x) \cdot c(x) \implies \deg(a(x)) = \deg(b(x)) + \deg(c(x))$
         - $\deg(p(x)) = 1$, se $\exists a(x), b(x) \in \mathbb{K}[x] \mid p(x) = a(x) \cdot b(x)$, allora $\deg(p(x)) = \deg(a(x))+\deg(b(x)) \implies \deg(a(x)) = 1 \land \deg(b(x)) = 0$ oppure $\deg(a(x)) = 0 \land \deg(b(x)) = 1$
         - dunque, ad esempio se $\deg(a(x)) = 1 \land \deg(b(x)) = 0 \implies b(x) \in \mathbb{K}[x]^*$, e dunque $p(x)$ è dato dal prodotto di un polinomio irriducibile e una costante, e dunque $p(x)$ è irriducibile
-
-## Def
-
-- ⚠️  **MOLTEPLICITÀ (?)**
 
 ## Oss
 

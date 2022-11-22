@@ -8,7 +8,12 @@
 
 ## Oss
 
-- $\left\{\begin{array}{l}z=a+i b \\ w=c+i d \end{array}\right. \implies \left\{\begin{array}{l}z + w = (a+b)+i (c +d)\\ z\cdot w=(a c-b d)+i(ad+ bc) \end{array}\right.$
+- **Hp**
+    - $a, b \in \mathbb{R}, z \in \mathbb{C} \mid z=a+i b$
+    - $c, d \in \mathbb{R}, w \in \mathbb{C} \mid w=c+i d$
+- **Th**
+    - $z + w = (a+b)+i (c +d)$
+    - $z\cdot w=(a c-b d)+i(ad+ bc)$
 
 ## Def
 
@@ -19,8 +24,12 @@
 
 ## Oss
 
-- $\overline{z}+\overline{w}=\overline{z+w}$
-- $\overline{z} \cdot \overline{w}=\overline{z \cdot w}$
+- **Hp**
+    - $a, b \in \mathbb{R}, z \in \mathbb{C} \mid z=a+i b$
+    - $c, d \in \mathbb{R}, w \in \mathbb{C} \mid w=c+i d$
+- **Th**
+    - $\overline{z}+\overline{w}=\overline{z+w}$
+    - $\overline{z} \cdot \overline{w}=\overline{z \cdot w}$
 
 ## Formula di Eulero
 

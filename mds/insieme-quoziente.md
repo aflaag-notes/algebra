@@ -46,19 +46,19 @@
 - **Hp**
   - $n \in \mathbb{Z}$
 - **Th**
-  - $\mathbb{Z}_n$ dominio di integrità $\iff n$ primo
+  - $\mathbb{Z}_n$ dominio di integrità $\iff n \in \mathbb{P}$
 - **Dim**
-  - $\mathbb{Z}_n$ dominio di integrità $\implies n$ primo
+  - _prima implicazione_
     - ipotizzando che $n \notin \mathbb{P} \implies \exists a, b \in \mathbb{Z} \mid n = ab \quad 0 \lt a, b \lt n$ per definizione
         - in particolare $a, b \neq 0$
     - $n = ab \iff [n] = [ab]$ in $\mathbb{Z}_n$
     - $[n] = [0]$ in $\mathbb{Z}_n$, dunque $[ab] = [0]$
     - $\mathbb{Z}_n$ dominio di integrità $\implies$ in $\mathbb{Z}_n$ vale la legge di annullamento del prodotto, e dunque $[ab] = [0] \iff [a] = 0 \lor [b] = [0] \ \bot$
-  - $n$ primo $\implies \mathbb{Z}_n$ dominio di integrità
+  - _seconda implicazione_
     - ipotizzando che $\mathbb{Z}_n$ non sia dominio di integrità, e dunque $\exists[a] \in \mathbb{Z}_n : [a] \neq [0], a \mid 0$
     - $a \mid 0 \implies \exists b \in \mathbb{Z} \mid [a][b] = [0] \quad b \neq 0$
     - $[0]=[a][b] \iff [0]=[ab] \iff 0 \equiv ab \ (\bmod \  n) \iff n \mid ab - 0 \iff n \mid ab$
-    - $n$ primo, allora $n \mid ab \implies n \mid a \lor n \mid b$ per dimostrazione precedente
+    - $n \in \mathbb{P}$, allora $n \mid ab \implies n \mid a \lor n \mid b$ per dimostrazione precedente
       - $n \mid a \implies [a] = [n] = [0]$ in $\mathbb{Z}_n \ \bot$
       - $n \mid b \implies [b] = [n] = [0]$ in $\mathbb{Z}_n$, ma $b \neq 0$ in ipotesi, dunque necessariamente $[a] =[0] \ \bot$
 

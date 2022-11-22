@@ -287,10 +287,13 @@
     - $f$ è biiettiva $\implies |\mathbb{Z} | = |H(g)| = o(g)$, dunque infinito
   - $d \gt 0$
     - $I(g) = I(d) \land d \in I(d) \implies d \in I(g) \implies g^d = e$
-    - ⚠️ **QUESTA IPOTESI SOTTO L'HO AGGIUNTA IO, NON SO SE È GIUSTA PENSO DI SI**
-    - $d \gt 0 \implies \forall n \in I(g) \quad \exists q, r \mid n = dq + r \quad 0 \le r \lt d$ per il teorema della divisione euclidea con il resto, dunque $g^n = g^{dq +r}=(g^d)^q \cdot g^r=e^q \cdot g^r =e \cdot g^r = g^r$
-    - ⚠️ **NON HO CAPITO UN CAZZO**
-    - ⚠️ **PER QUALCHE COSA CHE NON HO CAPITO** allora $H(g) = \{g^0, g^1, \ldots, g^{d-1}\} \implies |H(g)|=d$
+    - $d \gt 0 \implies \forall n \in \mathbb{Z} \quad \exists q, r \mid n = dq + r \quad 0 \le r \lt d$ per il teorema della divisione euclidea con il resto, dunque $g^n = g^{dq +r}=(g^d)^q \cdot g^r=e^q \cdot g^r =e \cdot g^r = g^r$
+    - $g^n = g^r \iff n = r$, e inoltre $0 \le r \lt d \implies 0 \le n \lt d$
+    - poiché è stato scelto $n \in \mathbb{Z}$ senza restrizioni, allora il fatto che $0 \le n \lt d$ implica necessariamente che ogni esponente di $g$ deve essere un valore intero compreso tra $0$ e $d - 1$, dunque il numero di potenze di $g$ è al massimo $d$
+    - $\forall x, y \in \mathbb{Z} \mid 0 \le x, y \lt d \quad g^x = g^y \iff g^x \cdot g^{-y} = e \iff g^{x - y} = e$, ma per osservazione precedente $\forall k \in \mathbb{Z} \quad e = (g^d)^k = g^{dk}$
+    - $0 \le x, y \lt d \implies -d \lt x, y \lt d \implies -d \lt x - y \lt d$ poiché la differenza non può uscire mai dall'intervallo
+    - allora, segue che $g^{x-y} = g^{dk} \iff x - y = dk \iff d \mid x- y$, ma poiché $-d \lt x - y \lt d$, allora necessariamente $x - y =0 \iff x = y$, e dunque $g^x$ e $g^y$ sono la stessa potenza, e dunque le potenze di $g$ non sono meno di $d$
+    - di conseguenza, si ottiene che $H(g) = \{g^0, g^1, \ldots, g^{d-1}\} \implies |H(g)|=d$
 
 ## Oss
 
@@ -339,3 +342,15 @@
     - $\dfrac{m}{d} \mid o(gh) \land o(gh) \mid m$
 - **Dim**
     - ⚠️ **frate c'ho veramente 0 sbatta**
+
+## Oss
+
+- **Hp**
+    - $G$ gruppo finito
+    - $g, h \in G \mid gh = hg$
+    - $d := \textrm{MCD}(o(g), o(h)) = 1$
+    - $m := \textrm{mcm}(o(g), o(h))$
+- **Th**
+    - $o(gh) = o(hg) = m$
+- **Dim**
+    - per dimostrazione precedente, $d = 1 \implies m \mid o(gh) \land o(gh) \mid m \implies m = o(gh)$

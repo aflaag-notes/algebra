@@ -120,7 +120,7 @@
   - $g \sim h \iff \exists a \in G \mid h = a\cdot g \cdot a^{-1}$ è detta _relazione di coniugio_
 - **Th**
   - $\sim$ è una relazione di equivalenza
-- **Dim***
+- **Dim**
     - _riflessività_: $\forall g \in G \quad g \sim g$
       - $g = 1 \cdot g \cdot 1^{-1} \implies g \sim g$
     - _simmetria_: $\forall g, h \in G \quad g \sim h \implies h \sim g$
@@ -265,27 +265,4 @@
     - $\forall [x] \in G/H \quad [x]+[0]=[0]+[x]=[x]$ e $[0] + [x] = [0 + x] = [x]$, e $[0] \in G/H$ perché $G$ gruppo
     - $\forall [x] \in G/H \quad [x]+[-x]=[x+(-x)]=[0]$ e $[-x] +[x]=[-x +x]=[0]$$\implies -[x] = [-x]$
     - $[x]+[y]=[x+y]=[y+x]=[y]+[x]$
-
-## Oss
-
-- ⚠️ **CONTROLLA, MA IN TEORIA QUESTA ROBA È DA BUTTARE**
-- **Hp**
-  - $G$ gruppo
-  - $H \subset$ sottogruppo normale
-  - $G/H := \{[x] \mid x \in H\}$, che per 
-  - $\cdot$ è l'operazione di prodotto definita tra classi laterali sinistre in $G/H$, tale che $\forall [x], [y] \in G/H$
-- **Th**
-  - $(G/H, \cdot)$ è un gruppo
-- **Dim**
-  - l'operazione $\cdot$ è ben definita $\iff$ $\left.\begin{array}{c}{[x]=[x']} \\ {[y]=[y']}\end{array}\right\} \implies [x\cdot y]=[x' \cdot y']$
-    - $H$ è un sottogruppo normale, dunque $\left\{\begin{array}{c}{[x]=xH=Hx} \\ {[x']=x'H =Hx'} \\ {[y]=yH=Hy} \\ {[y'] = y'H = Hy'} \\ {[x\cdot y]=x yH = H xy} \\ {[x'\cdot y']=x' y'H = H x'y'}\end{array}\right.$
-    - in particolare, $[x]=[x'] \land [x]= xH \land [x'] = x'H \implies xH = x'H$, e in particolare $xH \subset x'H \implies \exists h \in H \mid xh = x'$
-    - inoltre, in particolare $[y] = [y'] \land [y] = yH \land [y'] = y'H \implies yH = y'H$, e in particolare $\forall hy' \in Hy' \quad hy' \in Hy$, e $Hy' = yH \implies \exists k \in H \mid yk = hy'$
-    - $x'=xh \implies x'y' = xh\cdot y'$, e $yk = hy' \implies xhy' = x \cdot yk$, e in particolare $xyk \in xyH$ per definizione, quindi $x'y' \in xyH$, dunque $[x' \cdot y'] = [x \cdot y]$
-    - ⚠️ **RIVEDI**
-    - ⚠️ **PERCHÉ NON SERVE L'IMPLICAZIONE AL CONTRARIO?**
-  - $(G/H, \cdot)$
-    - $\forall [x], [y], [z] \in G/H \quad ([x][y])[z] = [x y][z] = [x y z] = [x][y z]=[x]([y][z])$, quindi l'operazione è associativa
-    - $1_G \in G$ poiché $G$ gruppo $\implies [1_G] \in G/H$, l'elemento neutro
-    - $\forall [x], [x^{-1}] \in G/H \quad [x][x^{-1}]=[x \cdot x^{-1}] = [1_G] \implies [x^{-1}] = [x]^{-1}$
 

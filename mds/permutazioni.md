@@ -54,9 +54,11 @@
 
 ## Oss
 
-⚠️ **CHE CAZZO HO SCRITTO**
-- $I(\sigma, i)$ è **ideale principale** in $\mathbb{Z}$ generato da $I(d)$, dove $d$ è la lunghezza del ciclo di $i$, quindi $I(\sigma, i) = I(d)$
+- **Hp**
+    - ⚠️ **RISCRIVI TUTTO**
+    - $I(\sigma, i)$ è **ideale principale** in $\mathbb{Z}$ generato da $I(d)$, dove $d$ è la lunghezza del ciclo di $i$, quindi $I(\sigma, i) = I(d)$
   - $I(\sigma, i) = I(d) \implies d \in I(\sigma, i)$
+- **Dim**
   - ⚠️ **MANCA DIMOSTRAZIONE**
 
 ## Cor
@@ -168,9 +170,13 @@
 
 ## Oss
 
-- $n \in \mathbb{N}$
-- $A_n := \{\sigma \in S_n \mid \sigma$ pari$\}$, è un **sottogruppo** di $S_n$, detto **gruppo alterno di ordine $n$**
-  - ⚠️ **MANCA DIMOSTRAZIONE**
+- **Hp**
+    - $n \in \mathbb{N}$
+    - $A_n := \{\sigma \in S_n \mid \sigma$ pari$\}$
+- **Th**
+    - $A_n \subset S_n$ è un sottogruppo, detto _gruppo alterno di ordine $n$_
+- **Dim**
+    - ⚠️ **MANCA DIMOSTRAZIONE**
 
 ## Oss
 

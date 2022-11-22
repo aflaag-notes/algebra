@@ -5,23 +5,23 @@
 - **Coefficiente binomiale**
 > - $0! := 1$
 > - $n, k \in \mathbb{N}$
-> - $\left(\begin{array}{l}n \\ k\end{array}\right):=\left\{\begin{array}{ll}\frac{n !}{n !(n-k) !} & k \leqslant n \\ 0 & k>n\end{array}\right.$
+> - $\displaystyle \binom{n}{k}:=\left\{\begin{array}{ll}\frac{n !}{n !(n-k) !} & k \leqslant n \\ 0 & k>n\end{array}\right.$
 
 ## Oss
 
 - **Hp**
   - $n, k \in \mathbb{N}$
 - **Th**
-  - $\left(\begin{array}{l}n \\ k\end{array}\right)=\left(\begin{array}{c}n \\ n-k\end{array}\right)$
+  - $\displaystyle \binom{n}{k} = \binom{n}{n-k}$
 - **Dim**
-  - $\left(\begin{array}{c}n \\ n-k\end{array}\right)=\dfrac{n !}{(n-k) !(n-(n-k)) !}=\dfrac{n !}{(n-k) ! k !}= \left(\begin{array}{l}n \\ n\end{array}\right)$
+  - $\displaystyle \binom{n}{n-k}=\dfrac{n !}{(n-k) !(n-(n-k)) !}=\dfrac{n !}{(n-k) ! k !}= \binom{n}{k}$
 
 ## Oss
 
 - **Hp**
   - $n, k \in \mathbb{N}$
 - **Th**
-  - $\left(\begin{array}{c}n \\ k+1\end{array}\right)=\left(\begin{array}{l}n-1 \\ k+1\end{array}\right)+\left(\begin{array}{c}n-1 \\ k\end{array}\right)$
+  - $\displaystyle \binom{n}{k + 1} = \binom{n - 1}{k + 1} \binom{n - 1}{ k}$
 - **Dim**
    - $\binom{n - 1}{k +1}+ \binom{n - 1}{k}=$$\frac{(n-1) !}{(k+1) !(n-1-(k+1)) !}+\frac{(n-1) !}{k !(n-1-k) !}$ $=\frac{(n-1) !}{(k+1) k !(n-2-k) !}+\frac{(n-1) !}{k !(n-1-k) !} =$ $\frac{(n-1-k)(n-1) !+(k+1)(n-1) !}{(k+1) !(n-k-1) !}=$ $\frac{(n-1) !(n-1-k+k+1)}{(k+1) !(n-1-k) !}=$ $\frac{(n-1) ! \cdot n}{(n+1) !(n-1-k) !} =$ $\frac{n !}{(k+1) !(n-k-1) !}=\binom{n}{k + 1}$
 
@@ -31,13 +31,13 @@
   - $p \in \mathbb{P}$
   - $k \in \mathbb{N} \mid 0 \lt k \lt p$
 - **Th**
-  - $p \ \bigg\vert  \left(\begin{array}{l}p \\ k\end{array}\right)$
+  - $p \ \bigg\vert \displaystyle \binom{p}{k}$
 - **Dim**
   - $\displaystyle{\binom{p}{k}=\frac{p !}{k !(p-k) !} = \frac{p \cdot (p - 1) !}{k!(p - k)!} = p \cdot \frac{(p - 1)!}{k!(p- k)!}} \implies p$ è nella fattorizzazione di $\displaystyle{\binom{p}{k}}$
   - poiché $p$ è primo in ipotesi, non è possibile semplificarlo con nessun fattore del denominatore
     - $k \lt p \implies p$ non può essere nella fattorizzazione di $k!$
     - $p - k \lt p \implies p$ non può essere nella fattorizzazione di $(p - k)!$
-  - quindi necessariamente $p \ \bigg\vert  \left(\begin{array}{l}p \\ k\end{array}\right)$
+  - quindi necessariamente $p \ \bigg\vert \displaystyle \binom{p}{k}$
 
 ## Oss
 
@@ -62,8 +62,8 @@
 - **Th**
   - $\displaystyle \binom{p}{k} \cdot [a] = [0]$ in $\mathbb{Z}_p$
 - **Dim**
-  - $\left(\begin{array}{l}p \\ k\end{array}\right) \cdot[a]=\left[\left(\begin{array}{l}p \\ k\end{array}\right) \cdot a\right]$
-  - per il dimostrazione precedente, $\displaystyle{p \ \bigg\vert \binom{p}{k}}$, quindi $\left(\begin{array}{l}p \\ k\end{array}\right) \cdot a$ è anch'esso multiplo di $p$, e di conseguenza  $\left[\left(\begin{array}{l}p \\ k\end{array}\right) \cdot a\right] = [0]$ in $\mathbb{Z}_p$
+  - $\displaystyle \binom{p}{k} \cdot[a]=\left[\displaystyle{\binom{p}{k}} \cdot a\right]$
+  - per il dimostrazione precedente, $\displaystyle{p \ \bigg\vert \binom{p}{k}}$, quindi $\displaystyle \binom{p}{k} \cdot a$ è anch'esso multiplo di $p$, e di conseguenza $\left[\displaystyle \binom{p}{k} \cdot a\right] = [0]$ in $\mathbb{Z}_p$
 
 ## Cor
 
@@ -73,10 +73,10 @@
 - **Th**
   - $([a]+[b])^{p}=[a]^{p}+[b]^{p}$ in $\mathbb{Z}_p$
 - **Dim**
-  - per il teorema del binomio di Newton $([a]+[b])^{p}=$$\displaystyle \sum_{k=0}^{p}\left(\begin{array}{l}p \\ k\end{array}\right)[a]^{k}\cdot[b]^{p-k}=\sum_{k=0}^{p}\left(\begin{array}{l}p \\ k\end{array}\right)\left[a^{k} \cdot b^{p-k}\right]$
-  -  per dimostrazione precedente $p \in \mathbb{P} \implies \left(\begin{array}{l}p \\ k\end{array}\right)\left[\begin{array}{l}a^{k} \cdot b^{p-k}\end{array}\right]= [0] \quad \forall k \in \mathbb{Z} \mid 0 \lt k \lt p$
+  - per il teorema del binomio di Newton $([a]+[b])^{p}=$$\displaystyle \sum_{k=0}^{p}\binom{p}{k}[a]^{k}\cdot[b]^{p-k}=\sum_{k=0}^{p}\binom{p}{k}\left[a^{k} \cdot b^{p-k}\right]$
+  -  per dimostrazione precedente $p \in \mathbb{P} \implies \displaystyle{\binom{p}{k}}\left[a^{k} \cdot b^{p-k}\right]= [0] \quad \forall k \in \mathbb{Z} \mid 0 \lt k \lt p$
     - di conseguenza, nella sommatoria del binomio di Newton tutti i termini con $k \in (0, p)$ si annullano, in quanto congruenti a $[0]$ in $\mathbb{Z}_p$
-    - $\displaystyle ([a]+[b])^{p}=\sum_{k=0}^{p}\left(\begin{array}{l}p \\ k\end{array}\right)\left[a^{k} \cdot b^{p-k}\right]= \left(\begin{array}{l}p \\ 0\end{array}\right)[b]^{p}+\left(\begin{array}{l}p \\ p\end{array}\right)[a]^{p}=[a]^{p}+[b]^{p}$
+    - $\displaystyle ([a]+[b])^{p}=\sum_{k=0}^{p}\binom{p}{k}\left[a^{k} \cdot b^{p-k}\right]= \binom{p}{0}[b]^{p}+\binom{p}{p}[a]^{p}=[a]^{p}+[b]^{p}$
 
 ## Cor
 
