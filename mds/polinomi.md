@@ -188,7 +188,14 @@
     - $a_1(c) = \ldots = a_n(c) = 0 \iff d(c) = 0$
 - **Dim**
     - _prima implicazione_
-        - ⚠️  **MANCA LA DIMOSTRAZIONE**
+        - in ipotesi $\forall i \in [i, n] \quad \exists c \in \mathbb{K} \mid a_i(c) = 0$
+        - per dimostrazione precedente $\forall i \in [1, n] \quad a_i(c) = 0 \iff (x - c) \mid a_i(x)$
+            - ad esempio, per $i = 1$ si ha che $\exists k \in \mathbb{K} \mid (x - c) \cdot k = a_1(x)$
+        - per definizione $\forall i \in [1, n] \quad d(x) \mid a_i(x)$
+            - ad esempio, per $i = 1$ si ha che $\exists h \in \mathbb{K} \mid d(x) \cdot h = a_1(x)$
+        - allora sostituendo, si ha che $d(x) \cdot h = (x - c) \cdot k$
+        - $h \in \mathbb{K} \implies \exists h^{-1} \in \mathbb{K}$ poiché $\mathbb{K}$ è un campo
+        - allora $d(x) = (x- c) \cdot kh^{-1}$, dove $kh^{-1} \in \mathbb{K}$ poiché $\mathbb{K}$ è un campo, e dunque $\exists kh^{-1} \in \mathbb{K} \mid (x - c) \mid d(x)$, che per dimostrazione precedente implica che $d(c) = 0$
     - _seconda implicazione_
         - per definizione $\forall i \in [1, n] \quad d(x) \mid a_i(x)$
         - per dimostrazione precedente $d(c) = 0 \iff (x - c) \mid d(x)$
