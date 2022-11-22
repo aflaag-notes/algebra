@@ -129,20 +129,20 @@ $f([x \cdot y])=f([x]) \cdot f([y])$
 
 ****
 
-# Kernel e Immagine
+# kernel e Immagine
 
 ## Def
 
-- **Kernel e Immagine di gruppi**
+- **kernel e Immagine di gruppi**
 > - $G, H$ gruppi
 > - $f: G \rightarrow H$ morfismo
-> - $\textrm{Ker}(f):=\{g \in G \mid f(g) = 1_H\}$
+> - $\textrm{ker}(f):=\{g \in G \mid f(g) = 1_H\}$
 > - $\textrm{Im}(f):=\{h \in H \mid \exists g \in G : f(g) = h\}$
 
- -  **Kernel e Immagine di anelli**
+ -  **kernel e Immagine di anelli**
 > - $A, B$ gruppi
 > - $f: A \rightarrow B$ morfismo
-> - $\textrm{Ker}(f):=\{a \in A \mid f(a)= 0_B\}$
+> - $\textrm{ker}(f):=\{a \in A \mid f(a)= 0_B\}$
 > - $\textrm{Im}(f):=\{b \in B \mid \exists a \in A : f(a) = b\}$
 
 ## Oss
@@ -151,11 +151,11 @@ $f([x \cdot y])=f([x]) \cdot f([y])$
   - $G, H$ gruppi
   - $f: G \rightarrow H$ morfismo
 - **Th**
-  - $\textrm{Ker}(f) \subset G$ è sottogruppo
+  - $\textrm{ker}(f) \subset G$ è sottogruppo
 - **Dim**
-  - per dimostrazione precedente, $f(1_G) = 1_H \implies 1_G \in \textrm{Ker}(f)$ per definizione
-  - $x, y \in \textrm{Ker}(f) \implies f(x) = f(y ) = 1_H$ per definizione, dunque $f(x) \cdot f(y) = 1_H \cdot 1_H = 1_H$, e $f(x) \cdot f(y) = f(x \cdot y) = 1_H$ perché $f$ morfismo, quindi $x \cdot y \in \textrm{Ker}(f)$ per definizione
-  - $g \in \textrm{Ker}(f) \implies f(g) =1_H \implies f(g)^{-1} = 1_H^{-1} = 1_H$, ma poiché per dimostrazione precedente $f(g)^{-1} = f(g^{-1}) \implies f(g^{-1})= 1_H \implies g^{-1} \in \textrm{Ker}(f)$ per definizione
+  - per dimostrazione precedente, $f(1_G) = 1_H \implies 1_G \in \textrm{ker}(f)$ per definizione
+  - $x, y \in \textrm{ker}(f) \implies f(x) = f(y ) = 1_H$ per definizione, dunque $f(x) \cdot f(y) = 1_H \cdot 1_H = 1_H$, e $f(x) \cdot f(y) = f(x \cdot y) = 1_H$ perché $f$ morfismo, quindi $x \cdot y \in \textrm{ker}(f)$ per definizione
+  - $g \in \textrm{ker}(f) \implies f(g) =1_H \implies f(g)^{-1} = 1_H^{-1} = 1_H$, ma poiché per dimostrazione precedente $f(g)^{-1} = f(g^{-1}) \implies f(g^{-1})= 1_H \implies g^{-1} \in \textrm{ker}(f)$ per definizione
  
 ## Oss
 
@@ -175,14 +175,14 @@ $f([x \cdot y])=f([x]) \cdot f([y])$
   - $G, H$ gruppi
   - $f: G \rightarrow H$ morfismo
 - **Th**
-  - $f$ iniettiva $\iff \textrm{Ker}(f) = \{1_G\}$
+  - $f$ iniettiva $\iff \textrm{ker}(f) = \{1_G\}$
 - **Dim**
-  - $f$ iniettiva $\implies \textrm{Ker}(f) = \{1_G\}$
-    - $f(1_G) = 1_H$ per dimostrazione precedente, dunque $1_G \in \textrm{Ker}(f)$ per definizione
-    - $f$ iniettiva $\implies \nexists x, y \in G \mid x \neq y \implies f(x) = f(y)$, di conseguenza è unico $1_G \in G \mid f(1_G) = 1_H$, dunque $\textrm{Ker}(f)$ conterrà esclusivamente $1_G$ per definizione
-  - $f$ iniettiva $\impliedby \textrm{Ker}(f) = \{1_G\}$
+  - $f$ iniettiva $\implies \textrm{ker}(f) = \{1_G\}$
+    - $f(1_G) = 1_H$ per dimostrazione precedente, dunque $1_G \in \textrm{ker}(f)$ per definizione
+    - $f$ iniettiva $\implies \nexists x, y \in G \mid x \neq y \implies f(x) = f(y)$, di conseguenza è unico $1_G \in G \mid f(1_G) = 1_H$, dunque $\textrm{ker}(f)$ conterrà esclusivamente $1_G$ per definizione
+  - $f$ iniettiva $\impliedby \textrm{ker}(f) = \{1_G\}$
     - $\forall g, g^\prime \in G \quad f(g) = f(g^\prime) \iff f(g)^{-1} \cdot f(g) = f(g)^{-1} \cdot f(g^\prime) \iff 1_H = f(g) \cdot f(g^\prime) = f(g \cdot g^\prime)$
-    - $\textrm{Ker}(f) = \{1_G\} \implies f(1_G)=1_H$ per definizione, allora $f(g\cdot g^\prime) = 1_H \implies g \cdot g^\prime = 1_G$ necessariamente, e $g \cdot g^\prime = 1_G \iff g= g^\prime \implies f(g) = f(g^\prime) \implies g = g^\prime \implies f$ iniettiva
+    - $\textrm{ker}(f) = \{1_G\} \implies f(1_G)=1_H$ per definizione, allora $f(g\cdot g^\prime) = 1_H \implies g \cdot g^\prime = 1_G$ necessariamente, e $g \cdot g^\prime = 1_G \iff g= g^\prime \implies f(g) = f(g^\prime) \implies g = g^\prime \implies f$ iniettiva
 
 ## Oss
 
@@ -190,11 +190,11 @@ $f([x \cdot y])=f([x]) \cdot f([y])$
   - $A, B$ anelli
   - $f: A \rightarrow B$ morfismo di anelli
 - **Th**
-  - $\textrm{Ker}(f)$ ideale
+  - $\textrm{ker}(f)$ ideale
 - **Dim**
-  - $(\textrm{Ker}(f), +) \subset (A, +)$ sottogruppo per dimostrazione precedente
+  - $(\textrm{ker}(f), +) \subset (A, +)$ sottogruppo per dimostrazione precedente
   - per analogia con dimostrazione precedente, $f(0_A) = 0_B$
-  - $x \in \textrm{Ker}(f) \implies f(x) = 0_B$ per definizione, quindi $\forall x \in \textrm{Ker}(f), y \in A \quad f(x \cdot y )= f(x) \cdot f(y) )= 0_B \cdot f(y) = 0_B \implies x \cdot y \in \textrm{Ker}(f)$ per definizione, quindi $\textrm{Ker}(f) \cdot A \subset \textrm{Ker}(f)$
+  - $x \in \textrm{ker}(f) \implies f(x) = 0_B$ per definizione, quindi $\forall x \in \textrm{ker}(f), y \in A \quad f(x \cdot y )= f(x) \cdot f(y) )= 0_B \cdot f(y) = 0_B \implies x \cdot y \in \textrm{ker}(f)$ per definizione, quindi $\textrm{ker}(f) \cdot A \subset \textrm{ker}(f)$
 
 ## Oss
 
@@ -214,7 +214,7 @@ $f([x \cdot y])=f([x]) \cdot f([y])$
   - $f$ morfismo di gruppi $(\mathbb{Z}, +)$ e $(\mathbb{C} - \{0\}, \cdot)$
   - $I(n)$ ideale generato da $n$ **⚠️ CONTROLLA SE SERVE QUESTA COSA**
 - **Th**
-  - $\textrm{Ker}(f) = I(n)$
+  - $\textrm{ker}(f) = I(n)$
 - **Dim**
   - pass
 
@@ -224,10 +224,10 @@ $f([x \cdot y])=f([x]) \cdot f([y])$
   - $G, H$ gruppi
   - $f: G \rightarrow H$ morfismo
 - **Th**
-  - $\textrm{Ker}(f)$ è sottogruppo normale
+  - $\textrm{ker}(f)$ è sottogruppo normale
 - **Dim**
-  - per la formulazione 2 della definizione di sottogruppo normale, $\forall g \in G, h \in \textrm{Ker}(f) \implies g h g^{-1} \in \textrm{Ker}(f)$
+  - per la formulazione 2 della definizione di sottogruppo normale, $\forall g \in G, h \in \textrm{ker}(f) \implies g h g^{-1} \in \textrm{ker}(f)$
   - $f(ghg^{-1}) = f(g) \cdot f(h) \cdot f(g^{-1})$
-  - $h \in \textrm{Ker}(f) \implies f(h) = 1_H$ per definizione
+  - $h \in \textrm{ker}(f) \implies f(h) = 1_H$ per definizione
   - per dimostrazione precedente $f(g^{-1}) = f(g)^{-1}$
-  - $f(ghg^{-1})= f(g) \cdot 1_H \cdot f(g)^{-1} = 1_H \implies ghg ^{-1} \in \textrm{Ker}(f)$ per definizione
+  - $f(ghg^{-1})= f(g) \cdot 1_H \cdot f(g)^{-1} = 1_H \implies ghg ^{-1} \in \textrm{ker}(f)$ per definizione

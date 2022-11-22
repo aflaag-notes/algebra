@@ -958,7 +958,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, esemp
   - $G, H$ gruppi
   - $f: G \rightarrow H$ morfismo di gruppi
 - **Th**
-  - $G / \textrm{Ker}(f) \cong \textrm{Im}(f)$, o alternativamente $\exists \varphi \mid \varphi : G / \textrm{Ker}(f) \rightarrow \textrm{Im}(f): [g] \rightarrow f(g)$ isomorfismo di gruppi
+  - $G / \textrm{ker}(f) \cong \textrm{Im}(f)$, o alternativamente $\exists \varphi \mid \varphi : G / \textrm{ker}(f) \rightarrow \textrm{Im}(f): [g] \rightarrow f(g)$ isomorfismo di gruppi
 
 ## Teorema 95
 
@@ -1189,7 +1189,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, esemp
   - $G, H$ gruppi
   - $f: G \rightarrow H$ morfismo
 - **Th**
-  - $\textrm{Ker}(f) \subset G$ è sottogruppo
+  - $\textrm{ker}(f) \subset G$ è sottogruppo
 
 ## Teorema 118
 
@@ -1207,7 +1207,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, esemp
   - $G, H$ gruppi
   - $f: G \rightarrow H$ morfismo
 - **Th**
-  - $f$ iniettiva $\iff \textrm{Ker}(f) = \{1_G\}$
+  - $f$ iniettiva $\iff \textrm{ker}(f) = \{1_G\}$
 
 ## Teorema 120
 
@@ -1216,7 +1216,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, esemp
   - $A, B$ anelli
   - $f: A \rightarrow B$ morfismo di anelli
 - **Th**
-  - $\textrm{Ker}(f)$ ideale
+  - $\textrm{ker}(f)$ ideale
 
 ## Teorema 121
 
@@ -1235,7 +1235,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, esemp
   - $f$ morfismo di gruppi $(\mathbb{Z}, +)$ e $(\mathbb{C} - \{0\}, \cdot)$
   - $I(n)$ ideale generato da $n$ **⚠️ CONTROLLA SE SERVE QUESTA COSA**
 - **Th**
-  - $\textrm{Ker}(f) = I(n)$
+  - $\textrm{ker}(f) = I(n)$
 
 ## Teorema 123
 
@@ -1244,7 +1244,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, esemp
   - $G, H$ gruppi
   - $f: G \rightarrow H$ morfismo
 - **Th**
-  - $\textrm{Ker}(f)$ è sottogruppo normale
+  - $\textrm{ker}(f)$ è sottogruppo normale
 
 
 ****
