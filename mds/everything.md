@@ -1,6 +1,6 @@
 # DISCLAIMER
 
-Questo è un file che contiene una lista di tutti i teoremi, osservazioni, esempi, lemmi, corollari, formule e proposizioni **senza alcuna dimostrazione né definizione**, di conseguenza molte informazioni risulteranno essere senza alcun contesto se già non si conosce la materia. Detto questo, buona lettura
+Questo è un file che contiene una lista di tutti i teoremi, osservazioni, esempi, lemmi, corollari, formule e proposizioni **senza alcuna dimostrazione né definizione**, di conseguenza molte informazioni risulteranno essere senza alcun contesto se già non si conosce la materia. Detto questo, buona lettura.
 
 ****
 # Numeri complessi
@@ -120,11 +120,22 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, esemp
 
 - **Hp**
     - $n \in \mathbb{N}$
+    - $A_n := \{\sigma \in S_n \mid \sigma$ pari$\}$
+- **Th**
+    - $A_n \subset S_n$ è un sottogruppo, detto _gruppo alterno di ordine $n$_
+
+
+
+## Teorema 13
+
+
+- **Hp**
+    - $n \in \mathbb{N}$
     - $\sigma \in S_{n} \mid \sigma=\tau_{1} \ldots \tau_{k}$ dove $\forall j \in [1, k] \quad \tau_{j} = \tau_{j, j + 1}$, dunque tutte le trasposizioni sono adiacenti
 - **Th**
     - $\textrm{sgn}(\sigma)= (-1)^k$
 
-## Teorema 13
+## Teorema 14
 
 
 - **Hp**
@@ -133,7 +144,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, esemp
 - **Th**
     - $\operatorname{sgn}\left(\sigma \sigma^{\prime}\right)=\operatorname{sgn}(\sigma)\cdot \textrm{sgn}(\sigma ')$
 
-## Teorema 14
+## Teorema 15
 
 
 - **Hp**
@@ -141,15 +152,6 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, esemp
     - $\sigma \in S_n$
 - **Th**
     - $\textrm{sgn}(\sigma^{-1})=\textrm{sgn}(\sigma)$
-
-## Teorema 15
-
-
-- **Hp**
-    - $n \in \mathbb{N}$
-    - $A_n := \{\sigma \in S_n \mid \sigma$ pari$\}$
-- **Th**
-    - $A_n \subset S_n$ è un sottogruppo, detto _gruppo alterno di ordine $n$_
 
 ## Teorema 16
 
@@ -239,15 +241,16 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, esemp
 - **Hp**
   - $I \subset \mathbb{Z}$ ideale
 - **Th**
-  -  $\exists ! \ d \in \mathbb{Z}_{\ge 0} \mid I = I(d)$, o equivalentemente, $\mathbb{Z}$ è un anello a ideali principali
+  -  $\exists ! \ d \in \mathbb{N} \mid I = I(d)$, o equivalentemente, in $\mathbb{Z}$ ogni ideale è principale
 
 ## Teorema 25
 
 
 - **Hp**
-  - $a_{1}, \ldots a_{n} \in \mathbb{Z}$
+    - $a_1, \ldots, a_n \in \mathbb{Z}$
+    - $\exists ! d \in \mathbb{N} \mid I(a_1, \ldots, a_n) = I(d)$
 - **Th**
-  - $\exists ! d=\textrm{MCD}(a_{1}, \ldots, a_{n})  \mid I\left(a_{1}, \ldots a_{n}\right)=I(d)$
+    - $d = \textrm{MCD}(a_1, \ldots, a_n)$
 
 ## Teorema 26
 
@@ -282,10 +285,10 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, esemp
 
 
 - **Hp**
-  - $(A, +, \cdot)$ anello commutativo
-  - $I, J \subset A$ ideali
+    - $(A, +, \cdot)$ anello commutativo
+    - $I, J \subset A$ ideali
 - **Th**
-  - $I \cap J$ è un ideale
+    - $I \cap J$ è un ideale
 
 ## Teorema 30
 
@@ -1009,6 +1012,8 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, esemp
     - $d \nmid b \implies \nexists [x] \in \mathbb{Z}_n \mid ax \equiv b \ (\bmod \ n)$
     - $d \mid b \implies \forall [x] \in \mathbb{Z}_n \mid ax \equiv b \ (\bmod \ n) \quad x$ è anche tale che $\dfrac{a}{d}x \equiv \dfrac{b}{d} \ \left(\bmod \ \dfrac{n}{d}\right)$
 
+
+
 ## Teorema 100
 
 
@@ -1128,7 +1133,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, esemp
 
 
 - **Hp**
-  - $z \in \mathbb{C} \mid z^n = 1$ sono le radici $n$ -esime di $1$
+  - $z \in \mathbb{C} \mid z^n = 1$ sono le radici $n$-esime di $1$
   - $\zeta := e^{i \frac{2 \pi}{n}}$
   - $H := \{\zeta ^0, \zeta^1, \zeta^k, \ldots, \zeta^{n-1}\}$ è l'insieme delle radici $n$-esime di $1$
 - **Th**
@@ -1155,27 +1160,20 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, esemp
 
 
 - **Hp**
-  - ⚠️ **MANCA UN TEOREMA CHE NON HO CAPITO NIENTE**
+  - $f: \mathbb{Z} \rightarrow \mathbb{Z}_n : k \rightarrow [k]$
 - **Th**
+  - $f$ morfismo di anelli $\left(\mathbb{Z},+, \cdot\right)$ e $\left(\mathbb{Z}_{n},+, \cdot\right)$
 
 ## Teorema 115
 
 
 - **Hp**
-  - $f: \mathbb{Z} \rightarrow \mathbb{Z}_n : k \rightarrow [k]$
-- **Th**
-  - $f$ morfismo di anelli $\left(\mathbb{Z},+, \cdot\right)$ e $\left(\mathbb{Z}_{n},+, \cdot\right)$
-
-## Teorema 116
-
-
-- **Hp**
-  - $n \mid m$
+  - $n, m \in \mathbb{Z} : n \mid m$
   - $f : \mathbb{Z}_m \rightarrow \mathbb{Z}_n: x \ (\bmod \ m) \rightarrow x \ (\bmod\ n)$
 - **Th**
   - $f$ morfismo di anelli $\left(\mathbb{Z}_{m},+, \cdot\right)$ e $\left(\mathbb{Z}_{n},+, \cdot\right)$
 
-## Teorema 117
+## Teorema 116
 
 
 - **Hp**
@@ -1184,7 +1182,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, esemp
 - **Th**
   - $f$ morfismo di gruppi $(G, \cdot)$ e $(G, \cdot)$
 
-## Teorema 118
+## Teorema 117
 
 
 - **Hp**
@@ -1193,7 +1191,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, esemp
 - **Th**
   - $\textrm{Ker}(f) \subset G$ è sottogruppo
 
-## Teorema 119
+## Teorema 118
 
 
 - **Hp**
@@ -1202,7 +1200,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, esemp
 - **Th**
   - $\textrm{Im}(f) \subset G$ è sottogruppo
 
-## Teorema 120
+## Teorema 119
 
 
 - **Hp**
@@ -1211,7 +1209,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, esemp
 - **Th**
   - $f$ iniettiva $\iff \textrm{Ker}(f) = \{1_G\}$
 
-## Teorema 121
+## Teorema 120
 
 
 - **Hp**
@@ -1220,7 +1218,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, esemp
 - **Th**
   - $\textrm{Ker}(f)$ ideale
 
-## Teorema 122
+## Teorema 121
 
 
 - **Hp**
@@ -1229,24 +1227,17 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, esemp
 - **Th**
   - $\textrm{Im}(f)$ sottoanello
 
-## Teorema 123
+## Teorema 122
 
 
 - **Hp**
   - $f: \mathbb{Z} \rightarrow \mathbb{C} - \{0\} : k \rightarrow \zeta^k$
   - $f$ morfismo di gruppi $(\mathbb{Z}, +)$ e $(\mathbb{C} - \{0\}, \cdot)$
-  - $I(n)$ ideale generato da $n$ **⚠️ CHI È N**
+  - $I(n)$ ideale generato da $n$ **⚠️ CONTROLLA SE SERVE QUESTA COSA**
 - **Th**
   - $\textrm{Ker}(f) = I(n)$
 
-## Teorema 124
-
-
-- ⚠️ **coso finale su H che non ho capito niente**
-
-
-
-## Teorema 125
+## Teorema 123
 
 
 - **Hp**
@@ -1261,7 +1252,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, esemp
 
 
 
-## Teorema 126
+## Teorema 124
 
 
 - **Hp**
@@ -1270,7 +1261,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, esemp
 - **Th**
   - $|D_n| = 2n$
 
-## Teorema 127
+## Teorema 125
 
 
 - **Hp**
@@ -1280,7 +1271,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, esemp
 - **Th**
   - $(D_n, \cdot)$ è un gruppo
 
-## Teorema 128
+## Teorema 126
 
 
 - **Hp**
@@ -1288,7 +1279,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, esemp
 - **Th**
   - $(D_2, \cdot)$ è l'unico gruppo diedrale abeliano
 
-## Teorema 129
+## Teorema 127
 
 
 - **Hp**
@@ -1298,7 +1289,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, esemp
   - $\exists X \subset S_n$ sottogruppo di $S_n$ $\mid D_n \cong X$
     - $D_3 \cong S_3$
 
-## Teorema 130
+## Teorema 128
 
 
 - **Hp**

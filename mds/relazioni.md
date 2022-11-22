@@ -104,13 +104,6 @@
 - **Th**
     - $d \nmid b \implies \nexists [x] \in \mathbb{Z}_n \mid ax \equiv b \ (\bmod \ n)$
     - $d \mid b \implies \forall [x] \in \mathbb{Z}_n \mid ax \equiv b \ (\bmod \ n) \quad x$ è anche tale che $\dfrac{a}{d}x \equiv \dfrac{b}{d} \ \left(\bmod \ \dfrac{n}{d}\right)$
-- **Dim**
-    - _prima tesi_
-        - $ax \equiv b \ (\bmod \ n) \implies \exists k \in \mathbb{Z} \mid ax - b = nk \iff b = ax - nk$
-        - per definizione $d \mid a \land d \mid n$
-        - ⚠️ **NON HO CAPITO CHE COSA HA SCRITTO**
-    - _seconda tesi_
-        - ⚠️ **NON HO VOGLIA**
 
 ## Ex
 
@@ -164,7 +157,7 @@
 - **Th**
   - $\sim$ induce una partizione di $G$, dunque $\displaystyle G = \coprod_{[x] \in X/\sim}[x]$
 - **Dim**
-  - ⚠️ **MANCA DIMOSTRAZIONE, NON C'HO VOGLIA MO**
+  - ⚠️ **MANCA LA DIMOSTRAZIONE**
      
 ****
 

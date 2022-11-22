@@ -76,7 +76,7 @@
   - di conseguenza $n \in I(\sigma) \iff n \in I(\sigma, 1) \cap \ldots \cap I(\sigma, n)$ e dunque $I(\sigma) =I(\sigma, 1) \cap \ldots \cap I(\sigma, n)$
   - inoltre, per dimostrazione precedente $I(\sigma) = I(\sigma, 1) \cap \ldots \cap I(\sigma, n) = I(d_1) \cap \ldots \cap I(d_k)$
   - per dimostrazione precedente $I(d_1) \cap \ldots \cap I(d_k) = I(m) = I(\sigma)$
-  - ⚠️ **MANCA LA CONCLUSIONE FINALE**
+  - dato $d := o(\sigma)$, per dimostrazione precedente $I(m) = I(\sigma) = I(d) \implies m = d$
 
 ****
 
@@ -91,7 +91,7 @@
 > - $\tau_{i, j} \in S_n \mid \tau_{i, j} =$$\left\{\begin{array}{ll}j & k=i \\ i & k=j \\ k & k \neq i, j\end{array}\right.$ è detta **trasposizione**, ovvero una permutazione che inverte esclusivamente due elementi tra loro
 >   - $\tau_{i, j}^2 = \textrm{id} \iff \tau_{i, j} = \tau_{i, j} ^{-1}$
 
-- **Trasposizioni adiacente**
+- **Trasposizione adiacente**
 > - $n \in \mathbb{N}$
 > - $i, j \in \mathbb{N} \mid 1 \le i \lt j \le  n \land  j = i + 1$
 > - $\tau_{i, j}=\tau_{i, i+1}$ è detta **trasposizione adiacente**, poiché inverte esclusivamente due elementi, adiacenti, tra loro
@@ -123,6 +123,15 @@
 > - $\textrm{Inv}(\sigma) := \{ (i, j) \mid 1 \leq i \lt j \lt n : \sigma(i) \gt \sigma(j)\}$ è l'**insieme delle inversioni di $\sigma$**
 > - $\textrm{sgn}(\sigma) := (-1)^{|\textrm{Inv}(\sigma)|} =$$\left\{\begin{array}{ll}+1 & |\operatorname{Inv}(\sigma)| \equiv 0 \ (\bmod 2) \\ -1 & |\operatorname{Inv}(\sigma)| \equiv 1 \ (\bmod 2)\end{array}\right. \implies \sigma$ **pari** $\iff \textrm{sgn}(\sigma) = +1$
 >   - $\textrm{sgn}(\textrm{id}) = (-1)^0 = 1$, in quando la funzione identità non ha inversioni
+
+
+## Oss
+
+- **Hp**
+    - $n \in \mathbb{N}$
+    - $A_n := \{\sigma \in S_n \mid \sigma$ pari$\}$
+- **Th**
+    - $A_n \subset S_n$ è un sottogruppo, detto _gruppo alterno di ordine $n$_
 
 ## Oss
 
@@ -172,16 +181,6 @@
 
 - **Hp**
     - $n \in \mathbb{N}$
-    - $A_n := \{\sigma \in S_n \mid \sigma$ pari$\}$
-- **Th**
-    - $A_n \subset S_n$ è un sottogruppo, detto _gruppo alterno di ordine $n$_
-- **Dim**
-    - ⚠️ **MANCA DIMOSTRAZIONE**
-
-## Oss
-
-- **Hp**
-    - $n \in \mathbb{N}$
   - $\sigma, \sigma^\prime \in S_n$
   - $\sigma \sim \sigma ^\prime \iff \exists\alpha \in S_n \mid \sigma^\prime = \alpha \sigma \alpha^{-1}$
 - **Th**
@@ -214,7 +213,6 @@
     - poiché in ipotesi $\sigma$ e $\sigma'$ hanno stesso numero di cicli, e cicli di stessa lunghezza, allora $\exists \alpha \in S_n \mid$$\left\{\begin{array}{c}\alpha\left(i_{p}\right)=a_{p} \\ \vdots \\ \alpha\left(j_{q}\right)=b_{q}\end{array}\right.$
 
       - _esempio_
-        - ⚠️ **se po fa meglio in latex sta merda?**
         - $\begin{aligned} \sigma\ =\ &(13)(254)(876) \\ & \ \downarrow  \downarrow \ \  \downarrow   \downarrow \downarrow \  \ \ \downarrow \downarrow  \downarrow \\ \sigma^{\prime}=\ &(25)(184)(376) \end{aligned}$ $\implies$$\alpha=\left(\begin{array}{llllllll}1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 \\ 2 & 1 & 5 & 4 & 8 & 6 & 7 & 3\end{array}\right)$
     - scelto $\alpha \in S_n$ in questo modo, allora ad esempio $\forall i_p \in (i_1 \ldots i_{d_1})$ primo ciclo di $\sigma \implies i_p = \alpha^{-1}(a_p)$ per definizione di $\alpha \implies \alpha \sigma \alpha^{-1} (a_p) = \alpha \sigma (i_p) =$$\left\{\begin{array}{ll}\alpha\left(i_{p+1}\right) & p<d_1 \\ \alpha\left(i_{1}\right) & p=d_{1}\end{array}\right. \iff \left\{\begin{array}{ll}a_{p+1} & p<d_{1} \\ a_{1} & p=d_{1}\end{array}\right. = \sigma^\prime(a_p)$ per definizione di $\sigma^\prime$
         - poiché in questa osservazione non è stato fatto uso dell'ipotesi per cui $i_p$ fosse stato scelto all'interno del primo ciclo, il ragionamento vale analogamente per ogni altro elemento in ogni altro ciclo

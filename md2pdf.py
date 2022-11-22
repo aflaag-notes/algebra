@@ -9,6 +9,7 @@ for file in os.listdir("mds"):
 
     with open("mds/" + file) as F:
         content = re.sub("⚠️", "!!!", F.read())
+        content = re.sub("✅", "", content)
         content = re.sub("\\\\lt", "<", content)
         content = re.sub("\\\\gt", ">", content)
 

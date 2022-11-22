@@ -102,7 +102,7 @@
 - **Hp**
   - $I \subset \mathbb{Z}$ ideale
 - **Th**
-  -  $\exists ! \ d \in \mathbb{Z}_{\ge 0} \mid I = I(d)$, o equivalentemente, $\mathbb{Z}$ è un anello a ideali principali
+  -  $\exists ! \ d \in \mathbb{N} \mid I = I(d)$, o equivalentemente, in $\mathbb{Z}$ ogni ideale è principale
 - **Dim**
   - *esistenza*
       - $I = \{0\} \implies I = I(0)$ poiché i multipli di $0$ sono tutti pari a $0$
@@ -132,13 +132,29 @@
 ## Oss
 
 - **Hp**
-  - $a_{1}, \ldots a_{n} \in \mathbb{Z}$
+    - $a_1, \ldots, a_n \in \mathbb{Z}$
+    - $\exists ! d \in \mathbb{N} \mid I(a_1, \ldots, a_n) = I(d)$
 - **Th**
-  - $\exists ! d=\textrm{MCD}(a_{1}, \ldots, a_{n})  \mid I\left(a_{1}, \ldots a_{n}\right)=I(d)$
+    - $d = \textrm{MCD}(a_1, \ldots, a_n)$
 - **Dim**
-    - ⚠️ **MANCA DIMOSTRAZIONE**
-        - $\forall x \in I(a_1, \cdots, a_n), \ d \mid x$, dunque $d$ è *divisore comune*
-        - $d$ è il _massimo tra i divisori comuni_
+    - $d$ è *divisore comune*
+        - $I(d) = I(a_1, \ldots, a_n) \implies \forall x \in I(a_1, \ldots, a_n) \quad x \in I(d) \implies d \mid x$ per definizione di $I(d)$
+        - preso ad esempio $a_1$, è possibile riscriverlo come $a_1 = a_1 \cdot 1 + a_2 \cdot 0 + \ldots + a_n \cdot 0$, di conseguenza $a_1 \in I(a_1, \ldots, a_n)$, dunque $d \mid a_1$
+        - vale il ragionamento analogo per ogni $a_1, \ldots , a_n$, dunque $d \mid a_1, \ldots, a_n$
+    - $d$ è il _massimo tra i divisori comuni_
+        - ⚠️ **QUI MANCA QUALCOSA ✅**
+        - $d$ è il massimo tra i divisori comuni quando $e \mid a_1, \ldots, a_n \implies e \mid d$
+        - sia $e$ l'elemento neutro, allora sicuramente $e \mid a_1 \ldots, a_n$
+        - in generale $\forall i \in [1, n] \quad e \mid a_i \implies \exists x_i \in \mathbb{Z} \mid ex_i = a_i$
+        - $d \in I(d) = I(a_1, \ldots, a_n) \iff d \in I(a_1, \ldots, a_n) \implies \exists b_1, \ldots b_n \in \mathbb{Z} \mid d = a_1 b_1 + \ldots + a_n b_n$, e per osservazione precedente si ottiene che $d = ex_1b_1 + \ldots + ex_nb_n = e(b_1x_1 + \ldots + b_nx_n) \implies e \mid d$
+
+
+## Def
+
+- **Massimo Comun Divisore**
+> - $a_{1}, \ldots , a_{n} \in \mathbb{Z}$
+> - $\exists !d \in \mathbb{N}  \mid I\left(a_{1}, \ldots , a_{n}\right)=I(d)$, ed è detto **massimo comun divisore degli $a_1, \ldots, a_n$**
+>    - per dimostrazione precedente $I(a_1, \ldots, a_n)$ è un ideale, e per dimostrazione precedente ogni ideale in $\mathbb{Z}$ è principale, dunque per un certo $d$ coincide con $I(d)$, e in particolare $d$ è proprio il massimo comun divisore degli $a_1, \ldots, a_n$ per dimostrazione precedente
 
 ## Oss
 
@@ -174,8 +190,7 @@
   - $I + J$ è un ideale
 - **Dim**
   - $0 \in I, 0 \in J, 0+0=0 \implies 0 \in I + J$ per definizione
-  - la chiusura rispetto a $+$ deve implicare che $\forall i_1, i_2 \in I, j_1, j_2 \in J \quad (i_1 + j_1) + (i_2 + j_2) \in I + J$
-    - poiché $(i_1 + j_1) + (i_2 + j_2) = (i_1 + i_2) + (j_1 + j_2)$, e $i_1 + i_2 \in I, j_1 + j_2 \in J \implies (i_1 + i_2) + (j_1 + j_2) \in I + J$ per definizione di $I + J$
+  - la chiusura rispetto a $+$ deve implicare che $\forall i_1, i_2 \in I, j_1, j_2 \in J \quad (i_1 + j_1) + (i_2 + j_2) \in I + J$, allora si ottiene che $(i_1 + j_1) + (i_2 + j_2) = (i_1 + i_2) + (j_1 + j_2)$, e $i_1 + i_2 \in I, j_1 + j_2 \in J \implies (i_1 + i_2) + (j_1 + j_2) \in I + J$ per definizione di $I + J$
   - $\forall i \in I, j \in J \quad i + j \in I + J$, l'opposto rispetto a $+$ di $i + j$ è $- (i + j) = (-i) + (-j)$, e $\forall i \in I, j \in J \quad -i \in I, -j \in J  \implies (-i) + (-j) \in I + J$ per definizione
   - $A \cdot I \subset I \implies \forall a \in A, i \in I, j \in J \quad a(i + j) \in I + J$
     - $i + j \in I + J$ per definizione, e $a(i + j) = ai + aj$, e $ai \in I, aj \in J$ per definizione, quindi $ai + aj \in I + J$ per definizione
@@ -190,15 +205,21 @@
 ## Oss
 
 - **Hp**
-  - $(A, +, \cdot)$ anello commutativo
-  - $I, J \subset A$ ideali
+    - $(A, +, \cdot)$ anello commutativo
+    - $I, J \subset A$ ideali
 - **Th**
-  - $I \cap J$ è un ideale
+    - $I \cap J$ è un ideale
 - **Dim**
-  - ⚠️ **MANCA DIMOSTRAZIONE**
+    - $0 \in I \land 0 \in J \implies 0 \in I \cap J$
+    - $\forall x, y \in I \cap J \quad x, y \in I \land x, y \in J \implies x + y \in I \land x + y \in J \implies x + y \in I \cap J$ per definizione
+    - $\forall x \in I \cap J \quad x \in I \land x \in J \implies x^{-1} \in I \land x ^{-1} \in J \implies x^{-1} \in I \cap J$ per definizione
+    - $\forall a \in A, x \in I \cap J \quad x \in I \land x \in J \implies ax \in I \land ax \in J \implies ax \in I \cap J$
 
-- ⚠️ **RISCRIVI**
-- $\displaystyle{\forall a_{1}, \ldots, a_{n} \in \mathbb{Z}  \quad \exists ! m  \in \mathbb{N} \mid m:= \textrm{mcm}(a_1, \ldots, a_n) : I(m) = I(a_1) \cap \ldots \cap I(a_n) = \bigcap_{i=1}^{n}{I(a_i)}}$
+## Def
+
+- **Minimo Comune Multiplo**
+> - $a_{1}, \ldots, a_{n} \in \mathbb{Z}$
+> - $\displaystyle \exists ! m  \in \mathbb{N} \mid I(m) = I(a_1) \cap \ldots \cap I(a_n) = \bigcap_{i=1}^{n}{I(a_i)}$, ed è detto **minimo comune multiplo degli $a_1, \ldots, a_n$**
 
 ## Def
 

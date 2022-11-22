@@ -60,7 +60,7 @@
 ## Ex
 
 - **Hp**
-  - $z \in \mathbb{C} \mid z^n = 1$ sono le radici $n$ -esime di $1$
+  - $z \in \mathbb{C} \mid z^n = 1$ sono le radici $n$-esime di $1$
   - $\zeta := e^{i \frac{2 \pi}{n}}$
   - $H := \{\zeta ^0, \zeta^1, \zeta^k, \ldots, \zeta^{n-1}\}$ è l'insieme delle radici $n$-esime di $1$
 - **Th**
@@ -95,13 +95,6 @@
 - **Dim**
   - $f(n + m ) = g^{n + m} = g^m \cdot g^n = f(m) \cdot f(n) \implies f$ morfismo
 
-## Oss
-
-- **Hp**
-  - ⚠️ **MANCA UN TEOREMA CHE NON HO CAPITO NIENTE**
-- **Th**
-- **Dim**
-
 ## Ex
 
 - **Hp**
@@ -115,14 +108,13 @@ $f([x \cdot y])=f([x]) \cdot f([y])$
 ## Ex
 
 - **Hp**
-  - $n \mid m$
+  - $n, m \in \mathbb{Z} : n \mid m$
   - $f : \mathbb{Z}_m \rightarrow \mathbb{Z}_n: x \ (\bmod \ m) \rightarrow x \ (\bmod\ n)$
 - **Th**
   - $f$ morfismo di anelli $\left(\mathbb{Z}_{m},+, \cdot\right)$ e $\left(\mathbb{Z}_{n},+, \cdot\right)$
 - **Dim**
-  - $x \ (\bmod \ m) + y \ (\bmod \ m) = x +y \ (\bmod \ m)$
-  - $f(x + y \ (\bmod \ m)) = x +y \ (\bmod \ n)$
-  - $x +y \ (\bmod \ n) = x \ (\bmod \ n)+ y \ (\bmod \ n)$
+  - $\forall [x], [y] \in \mathbb{Z}_m \quad x \ (\bmod \ m) + y \ (\bmod \ m) = x +y \ (\bmod \ m)$
+  - $f(x + y \ (\bmod \ m)) = x +y \ (\bmod \ n) = x \ (\bmod \ n)+ y \ (\bmod \ n) = f(x \ (\bmod \ m)) + f(y \ (\bmod \ m))$
   - il ragionamento è analogo per l'operazione $\cdot$, e dunque segue la tesi
  
 ## Ex
@@ -220,15 +212,11 @@ $f([x \cdot y])=f([x]) \cdot f([y])$
 - **Hp**
   - $f: \mathbb{Z} \rightarrow \mathbb{C} - \{0\} : k \rightarrow \zeta^k$
   - $f$ morfismo di gruppi $(\mathbb{Z}, +)$ e $(\mathbb{C} - \{0\}, \cdot)$
-  - $I(n)$ ideale generato da $n$ **⚠️ CHI È N**
+  - $I(n)$ ideale generato da $n$ **⚠️ CONTROLLA SE SERVE QUESTA COSA**
 - **Th**
   - $\textrm{Ker}(f) = I(n)$
 - **Dim**
   - pass
-
-## Oss
-
-- ⚠️ **coso finale su H che non ho capito niente**
 
 ## Oss
 
