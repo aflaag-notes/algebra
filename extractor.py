@@ -18,19 +18,20 @@ out = "# DISCLAIMER\n\nQuesto è un file che contiene una lista di tutti i teore
 i = 1
 
 for file in os.listdir("mds/"):
-    with open("mds/" + file) as md:
-        parts = re.split("## Ex|## Oss|## Def|## Lem|## Cor|## Formula di de Moivre|## Formula di Eulero", md.read())
-        
-        for y, part in enumerate(parts):
-            if (s := filter_content(part)):
-                out += s
+    if file != "everything.md":
+        with open("mds/" + file) as md:
+            parts = re.split("## Ex|## Oss|## Def|## Lem|## Cor|## Formula di de Moivre|## Formula di Eulero", md.read())
+            
+            for y, part in enumerate(parts):
+                if (s := filter_content(part)):
+                    out += s
 
-                if y != len(parts) - 1:
-                    out += "\n## Teorema " + str(i) + "\n"
+                    if y != len(parts) - 1:
+                        out += "\n## Teorema " + str(i) + "\n"
 
-                    i += 1
+                        i += 1
 
-        out += "****\n"
+            out += "****\n"
 
-with open("output.md", "w+") as f:
+with open("mds/everything.md", "w+") as f:
     f.write(out)
