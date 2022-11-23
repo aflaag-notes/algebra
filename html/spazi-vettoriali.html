@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Spazi Vettoriali</title>
+  <style>
+    html {
+      line-height: 1.5;
+      font-family: Georgia, serif;
+      font-size: 20px;
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 1em;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, 'Lucida Console', Consolas, monospace;
+      font-size: 85%;
+      margin: 0;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+  </style>
+  <script
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js"
+  type="text/javascript"></script>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Spazi Vettoriali</h1>
+</header>
+<h1 id="spazi-vettoriali">Spazi Vettoriali</h1>
+<h2 id="def">Def</h2>
+<ul>
+<li><strong>Spazio vettoriale</strong> &gt; - <span
+class="math inline">\(\mathbb{K}\)</span> campo &gt; - <span
+class="math inline">\(x \in \mathbb{K}\)</span> è detto
+<strong>scalare</strong> &gt; - <span class="math inline">\(V\)</span> è
+<strong>spazio vettoriale su <span
+class="math inline">\(\mathbb{K}\)</span></strong> <span
+class="math inline">\(\iff (V, +)\)</span> gruppo abeliano, è ben
+definita un’operazione di <span class="math inline">\(\cdot: K \times V
+\rightarrow V\)</span> che ammetta elemento neutro, inoltre <span
+class="math inline">\(\forall s, t \in \mathbb{K}, v \in V \quad s\cdot
+(t \cdot v) = (s \cdot t) \cdot v, (s + t) \cdot v = s\cdot v + t \cdot
+v\)</span> e infine <span class="math inline">\(\forall s \in
+\mathbb{K}, v, w \in V \quad s \cdot (v + w) = s \cdot v + s \cdot
+w\)</span> &gt; - <span class="math inline">\(x \in V\)</span> è detto
+<strong>vettore</strong></li>
+</ul>
+<h2 id="ex">Ex</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\(\mathbb{K}\)</span> campo</li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\(\mathbb{K}^n\)</span> spazio vettoriale
+su <span class="math inline">\(\mathbb{K}\)</span></li>
+</ul></li>
+<li><strong>Dim</strong>
+<ul>
+<li>è possibile definire operazioni <span
+class="math inline">\(+\)</span> e <span
+class="math inline">\(\cdot\)</span> tra scalari e vettori che
+verificano gli assiomi per spazi vettoriali</li>
+<li><span class="math inline">\(\forall v \in \mathbb{K}^n \quad \exists
+t_1, \ldots, t_n \in \mathbb{K}^n \mid v = (t_1, \ldots, t_n)\)</span>
+per definizione</li>
+<li><span class="math inline">\(\forall w \in \mathbb{K}^n \quad \exists
+s_1, \ldots, s_n \in \mathbb{K}^n \mid v = (s_1, \ldots, s_n)\)</span>
+per definizione</li>
+<li><span class="math inline">\(\forall \lambda \in \mathbb{K} \quad
+\lambda \cdot v := (\lambda \cdot t_1, \ldots, \lambda \cdot
+t_n)\)</span></li>
+<li><span class="math inline">\(v + w := (s_1 + t_1, \ldots, s_n +
+t_n)\)</span></li>
+<li>con queste definizioni, segue che gli assiomi per gli spazi
+vettoriali sono necessariamente rispettati</li>
+</ul></li>
+</ul>
+<h2 id="def-1">Def</h2>
+<ul>
+<li><strong>Sottospazio vettoriale</strong> &gt; - <span
+class="math inline">\(\mathbb{K} campo\)</span> &gt; - <span
+class="math inline">\(V\)</span> spazio vettoriale su <span
+class="math inline">\(\mathbb{K}\)</span> &gt; - <span
+class="math inline">\(W\)</span> è <strong>sottospazio vettoriale di
+<span class="math inline">\(V\)</span></strong> <span
+class="math inline">\(\iff (W, +) \subset (V, +)\)</span> sottogruppo, e
+<span class="math inline">\(\forall w \in W, \lambda \in \mathbb{K}
+\quad \lambda \cdot w \in W\)</span></li>
+</ul>
+<h2 id="def-2">Def</h2>
+<ul>
+<li><strong>Span di vettori</strong> &gt; - <span
+class="math inline">\(\mathbb{K} campo\)</span> &gt; - <span
+class="math inline">\(V\)</span> spazio vettoriale su <span
+class="math inline">\(\mathbb{K}\)</span> &gt; - <span
+class="math inline">\(v_1, \ldots, v_n \in V\)</span> &gt; - <span
+class="math inline">\(\textrm{span}(v_1, \ldots, v_n) := \{\lambda_1 v_1
++ \ldots + \lambda_n v_n \mid \lambda_1, \ldots , \lambda_n \in
+\mathbb{K}\}\)</span>, ovvero l’insieme delle combinazioni lineari degli
+<span class="math inline">\(v_1, \ldots, v_n\)</span></li>
+</ul>
+<h2 id="oss">Oss</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\(\mathbb{K} campo\)</span></li>
+<li><span class="math inline">\(V\)</span> spazio vettoriale su <span
+class="math inline">\(\mathbb{K}\)</span></li>
+<li><span class="math inline">\(v_1, \ldots, v_n \in V\)</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\(\textrm{span}(v_1, \ldots, v_n)\)</span>
+è un sottospazio vettoriale di <span
+class="math inline">\(V\)</span></li>
+</ul></li>
+<li><strong>Dim</strong>
+<ul>
+<li><strong>⚠️ APPUNTO SU <span class="math inline">\(0\)</span> bla bla
+bla</strong></li>
+<li><span class="math inline">\((\textrm{span}(v_1, \ldots, v_n), +)
+\subset (V, +)\)</span> sottogruppo
+<ul>
+<li><span class="math inline">\(0_V = 0v_1 + \ldots + 0v_n \implies 0
+\in \textrm{span}(v_1, \ldots, v_n)\)</span></li>
+<li><span class="math inline">\(\forall u, v \in \textrm{span}(v_1,
+\ldots, v_n) \quad \exists \lambda_1, \ldots , \lambda_n, \mu_1 \ldots
+\mu_n \in \mathbb{K} \mid u= \lambda_1v_1 + \ldots + \lambda_n v_n \land
+w = \mu_1 v_1+ \ldots + \mu_1v_1 \implies v + w = (\lambda_1 \mu_1) v_1
++ \ldots + (\lambda_n \mu_n) v_n \implies v + w \in \textrm{span}(v_1,
+\ldots, v_n)\)</span></li>
+<li><span class="math inline">\(\forall u \in \textrm{span}(v_1, \ldots,
+v_n) \quad \exists \lambda_1 , \ldots \lambda_n \in \mathbb{K} \mid u =
+\lambda_1 v_1 + \ldots + \lambda_n v_n \iff - u = (-\lambda _1) v_1 +
+\ldots + (- \lambda_n) v_n \implies -u \in \textrm{span}(v_1, \ldots,
+v_n)\)</span></li>
+</ul></li>
+<li><span class="math inline">\(\forall w \in \textrm{span}(v_1, \ldots,
+v_n) \quad \exists \lambda_1 , \ldots , \lambda_n \in \mathbb{K} \mid w
+= \lambda_1 v_1 + \ldots + \lambda_n v_n \implies \forall c \in
+\mathbb{K} \quad c\cdot w = c \cdot (\lambda_1v_1 + \ldots + \lambda_n
+v_n) =(c\lambda_1) v_1 + \ldots + (c\lambda_n) v_n \implies c\cdot w \in
+\textrm{span}(v_1, \ldots, v_n)\)</span></li>
+</ul></li>
+</ul>
+<h2 id="def-3">Def</h2>
+<ul>
+<li><p><strong>Vettori generatori</strong> &gt; - <span
+class="math inline">\(\mathbb{K}\)</span> campo &gt; - <span
+class="math inline">\(V\)</span> spazio vettoriale su <span
+class="math inline">\(\mathbb{K}\)</span> &gt; - <span
+class="math inline">\(v_1, \ldots, v_n \in V\)</span> &gt; - <span
+class="math inline">\(v_1, \ldots, v_n\)</span> sono <strong>generatori
+di <span class="math inline">\(V\)</span></strong> <span
+class="math inline">\(\iff \textrm{span}(v_1, \ldots, v_n) = V\)</span>
+&gt; - equivalentemente, ogni altro vettore in <span
+class="math inline">\(V\)</span> è una combinazione lineare degli <span
+class="math inline">\(v_1, \ldots, v_n\)</span></p></li>
+<li><p><strong>Indipendenza lineare</strong> &gt; - <span
+class="math inline">\(\mathbb{K}\)</span> campo &gt; - <span
+class="math inline">\(V\)</span> spazio vettoriale su <span
+class="math inline">\(\mathbb{K}\)</span> &gt; - <span
+class="math inline">\(v_1, \ldots, v_n \in V\)</span> &gt; - <span
+class="math inline">\(v_1, \ldots, v_n\)</span> sono <strong>linearmente
+indipendenti</strong> se e solo se <span class="math inline">\(\lambda_1
+v_1 + \ldots + \lambda_n v_n = 0_V \iff \lambda_1 = \ldots = \lambda_n =
+0_V\)</span> &gt; - equivalentemente, nessuno degli <span
+class="math inline">\(v_1, \ldots, v_n\)</span> è combinazione lineare
+degli altri</p></li>
+<li><p><strong>Base di uno spazio vettoriale</strong> &gt; - <span
+class="math inline">\(\mathbb{K}\)</span> campo &gt; - <span
+class="math inline">\(V\)</span> spazio vettoriale su <span
+class="math inline">\(\mathbb{K}\)</span> &gt; - <span
+class="math inline">\(v_1, \ldots, v_n \in V\)</span> &gt; - <span
+class="math inline">\(v_1, \ldots, v_n\)</span> sono una <strong>base di
+<span class="math inline">\(V\)</span></strong> <span
+class="math inline">\(\iff\)</span> <span class="math inline">\(v_1,
+\ldots, v_n\)</span> sono generatori di <span
+class="math inline">\(V\)</span> e linearmente indipendenti</p></li>
+</ul>
+<h2 id="ex-1">Ex</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\(\mathbb{K}\)</span> campo</li>
+<li><span class="math inline">\(e_1 := (1, 0, \ldots, 0), \ldots, e_n
+:=(0, \ldots, 0, 1) \in \mathbb{K}^n\)</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\(e_1, \ldots, e_n\)</span> sono una base
+di <span class="math inline">\(\mathbb{K}^n\)</span></li>
+</ul></li>
+<li><strong>Dim</strong>
+<ul>
+<li><span class="math inline">\(\forall v \in \mathbb{K}^n \quad \exists
+t_1, \ldots, t_n \in \mathbb{K} \mid v = (t_1, \ldots, t_n) \implies v =
+(t_1, 0, \ldots, 0) + \ldots + (0, \ldots, 0, t_n) = t_1 \cdot e_1 +
+\ldots + t_n \cdot e_n\)</span></li>
+</ul></li>
+</ul>
+</body>
+</html>
