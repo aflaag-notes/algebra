@@ -11,6 +11,7 @@
 ## Ex
 
 - **Hp**
+    - $n \in \mathbb{N}$
     - $\mathbb{K}$ campo
 - **Th**
     - $\mathbb{K}^n$ spazio vettoriale su $\mathbb{K}$
@@ -25,14 +26,15 @@
 ## Def
 
 - **Sottospazio vettoriale**
-> - $\mathbb{K} campo$
+> - $\mathbb{K}$ campo
 > - $V$ spazio vettoriale su $\mathbb{K}$
 > - $W$ è **sottospazio vettoriale di $V$** $\iff (W, +) \subset (V, +)$ sottogruppo, e $\forall w \in W, \lambda \in \mathbb{K} \quad \lambda \cdot w \in W$
 
 ## Def
 
 - **Span di vettori**
-> - $\mathbb{K} campo$
+> - $n \in \mathbb{N}$
+> - $\mathbb{K}$ campo
 > - $V$ spazio vettoriale su $\mathbb{K}$
 > - $v_1, \ldots, v_n \in V$
 > - $\textrm{span}(v_1, \ldots, v_n) := \{\lambda_1 v_1 + \ldots + \lambda_n v_n \mid \lambda_1, \ldots , \lambda_n \in \mathbb{K}\}$, ovvero l'insieme delle combinazioni lineari degli $v_1, \ldots, v_n$
@@ -41,7 +43,8 @@
 ## Oss
 
 - **Hp**
-    - $\mathbb{K} campo$
+    - $n \in \mathbb{N}$
+    - $\mathbb{K}$ campo
     - $V$ spazio vettoriale su $\mathbb{K}$
     - $v_1, \ldots, v_n \in V$
 - **Th**
@@ -57,6 +60,7 @@
 ## Def
 
 - **Vettori generatori**
+> - $n \in \mathbb{N}$
 > - $\mathbb{K}$ campo
 > - $V$ spazio vettoriale su $\mathbb{K}$
 > - $v_1, \ldots, v_n \in V$
@@ -64,24 +68,98 @@
 >     - equivalentemente, ogni altro vettore in $V$ è una combinazione lineare degli $v_1, \ldots, v_n$
 
 - **Indipendenza lineare**
+> - $n \in \mathbb{N}$
 > - $\mathbb{K}$ campo
 > - $V$ spazio vettoriale su $\mathbb{K}$
 > - $v_1, \ldots, v_n \in V$
-> - $v_1, \ldots, v_n$ sono **linearmente indipendenti** se e solo se $\lambda_1 v_1 + \ldots + \lambda_n v_n = 0_V \iff \lambda_1 = \ldots = \lambda_n = 0_V$
+> - $v_1, \ldots, v_n$ sono **linearmente indipendenti** se e solo se $\lambda_1 v_1 + \ldots + \lambda_n v_n = 0_V \iff \lambda_1 = \ldots = \lambda_n = 0_{\mathbb{K}}$
 >    - equivalentemente, nessuno degli $v_1, \ldots, v_n$ è combinazione lineare degli altri
 
 - **Base di uno spazio vettoriale**
+> - $n \in \mathbb{N}$
 > - $\mathbb{K}$ campo
 > - $V$ spazio vettoriale su $\mathbb{K}$
 > - $v_1, \ldots, v_n \in V$
 > - $v_1, \ldots, v_n$ sono una **base di $V$** $\iff$ $v_1, \ldots, v_n$ sono generatori di $V$ e linearmente indipendenti
+> - $n$ è detta **cardinalità della base di $V$**
 
 ## Ex
 
 - **Hp**
+    - $n \in \mathbb{N}$
     - $\mathbb{K}$ campo
     - $e_1 := (1, 0, \ldots, 0), \ldots, e_n :=(0, \ldots, 0, 1) \in \mathbb{K}^n$
 - **Th**
-    - $e_1, \ldots, e_n$ sono una base di $\mathbb{K}^n$
+    - $e_1, \ldots, e_n$ sono una base di $\mathbb{K}^n$, ed è detta _base canonica_
 - **Dim**
-    - $\forall v \in \mathbb{K}^n \quad \exists t_1, \ldots, t_n \in \mathbb{K} \mid v = (t_1, \ldots, t_n) \implies v = (t_1, 0, \ldots, 0) + \ldots + (0, \ldots, 0, t_n) = t_1 \cdot e_1 + \ldots + t_n \cdot e_n$
+    - $e_1, \ldots, e_n$ sono generatori di $\mathbb{K}^n$
+        - $\forall v \in \mathbb{K}^n \quad \exists t_1, \ldots, t_n \in \mathbb{K} \mid v = (t_1, \ldots, t_n) \implies v = (t_1, 0, \ldots, 0) + \ldots + (0, \ldots, 0, t_n) = t_1 \cdot e_1 + \ldots + t_n \cdot e_n \implies v \in \textrm{span}(e_1, \ldots, e_n)$
+    - $e_1, \ldots, e_n$ sono linearmente indipententi
+        - $\forall \lambda_1, \ldots, \lambda_n \in \mathbb{K} \quad \lambda_1e_1=(\lambda_1, 0, \ldots, 0), \ldots, \lambda_n e_n = (0, \ldots, 0, \lambda_n) \implies \lambda_1 e_1 + \ldots + \lambda_n e_n = (\lambda_1, \ldots , \lambda_n)$, e questo vettore è pari al vettore nullo $0_{\mathbb{K}^n}$ solamente quando $\lambda _1 = \ldots = \lambda_n = 0_{\mathbb{K}}$
+        - $\forall v_1, \ldots, v_n \in \mathbb{K}^n \quad \lambda _1 = \ldots = \lambda_n = 0_{\mathbb{K}} \implies \lambda_1v_1 + \ldots + \lambda_nv_n = 0_{\mathbb{K}^n}$, e in particolare questa osservazione vale per $e_1, \ldots, e_n$
+
+## Lem
+
+- **Hp**
+    - $n \in \mathbb{N}$
+    - $\mathbb{K}$ campo
+    - $V$ spazio vettoriale su $\mathbb{K}$
+    - $v_1, \ldots, v_n \in V$
+- **Th**
+    - $v_1, \ldots, v_n$ linearmente indipendenti $\iff v_1, \ldots, v_{n - 1}$ linearmente indipendenti $\land v_n \notin \textrm{span}(v_1, \ldots, v_{n - 1})$
+- **Dim**
+    - _prima implicazione_
+        - è stata omessa dal professore, se stai leggendo questa frase sappi che hai bei piedi
+    - _seconda implicazione_
+        - ⚠️ **MANCA LA DIMOSTRAZIONE**
+
+## Oss
+
+- **Hp**
+    - $m, k \in \mathbb{N}$
+    - $\mathbb{K}$ campo
+    - $V$ spazio vettoriale su $\mathbb{K}$
+    - $w_1, \ldots, w_m \in V$
+    - $v_1, \ldots, v_k \in \textrm{span}(w_1, \ldots, w_m) \mid v_1, \ldots, v_k$ linearmente indipendenti
+- **Th**
+    - $k \le m$
+- **Dim**
+    - ⚠️ **MANCA LA DIMOSTRAZIONE, È NOIOSISSIMA TE GIURO**
+
+## Cor
+
+- **Hp**
+    - $n, m \in \mathbb{N}$
+    - $\mathbb{K}$ campo
+    - $V$ spazio vettoriale su $\mathbb{K}$
+    - $w_1, \ldots, w_m \in V \mid w_1, \ldots, w_m$ base di $V$
+    - $v_1, \ldots, v_n \in V \mid v_1, \ldots, v_n$ base di $V$
+- **Th**
+    - $n = m$, il che implica che la cardinalità delle basi di uno spazio vettoriale è unica
+- **Dim**
+    - $v_1, \ldots, v_n$ e $w_1, \ldots, w_m$ basi di $V \implies \textrm{span}(v_1, \ldots, v_n) = \textrm{span}(w_1, \ldots, w_m) = V$ poiché generatori di $V$
+    - $v_1, \ldots, v_n$ e $w_1, \ldots, w_m$ basi di $V \implies v_1, \ldots, v_n$ e $w_1, \ldots w_m$ linearmente indipendenti
+        - $v_1, \ldots , v_n \in V = \textrm{span}(w_1, \ldots, w_m) \implies n \le m$ per dimostrazione precedente
+        - $w_1, \ldots, w_m \in V = \textrm{span}(v_1, \ldots, v_n) \implies m \le n$ per dimostrazione precedente
+    - dunque $n \le m \land m \le n \implies n = m$
+
+## Def
+
+- **Dimensione di uno spazio vettoriale**
+> - $\mathbb{K}$ campo
+> - $V$ spazio vettoriale su $\mathbb{K}$
+> - $\dim(V)$ è detta **dimensione di $V$**, ed è la cardinalità delle basi di $V$
+
+## Oss
+
+- **Hp**
+    - $n \in \mathbb{N}$
+    - $\mathbb{K}$ campo
+    - $V$ spazio vettoriale su $\mathbb{K}$
+    - $v_1, \ldots, v_n \in V$
+- **Th**
+    - $v_1, \ldots, v_n$ base di $V \iff \forall v \in V \quad \exists ! \lambda_1, \ldots, \lambda_n \in \mathbb{K} \mid v = \lambda_1 v_1 + \ldots + \lambda_n v_n$
+- **Dim**
+    - ⚠️ **INCOMPLETA**
+    - _prima implicazione_
+    - _seconda implicazione_

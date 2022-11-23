@@ -192,6 +192,7 @@ w\)</span> &gt; - <span class="math inline">\(x \in V\)</span> è detto
 <ul>
 <li><strong>Hp</strong>
 <ul>
+<li><span class="math inline">\(n \in \mathbb{N}\)</span></li>
 <li><span class="math inline">\(\mathbb{K}\)</span> campo</li>
 </ul></li>
 <li><strong>Th</strong>
@@ -223,7 +224,7 @@ vettoriali sono necessariamente rispettati</li>
 <h2 id="def-1">Def</h2>
 <ul>
 <li><strong>Sottospazio vettoriale</strong> &gt; - <span
-class="math inline">\(\mathbb{K} campo\)</span> &gt; - <span
+class="math inline">\(\mathbb{K}\)</span> campo &gt; - <span
 class="math inline">\(V\)</span> spazio vettoriale su <span
 class="math inline">\(\mathbb{K}\)</span> &gt; - <span
 class="math inline">\(W\)</span> è <strong>sottospazio vettoriale di
@@ -235,7 +236,8 @@ class="math inline">\(\iff (W, +) \subset (V, +)\)</span> sottogruppo, e
 <h2 id="def-2">Def</h2>
 <ul>
 <li><strong>Span di vettori</strong> &gt; - <span
-class="math inline">\(\mathbb{K} campo\)</span> &gt; - <span
+class="math inline">\(n \in \mathbb{N}\)</span> &gt; - <span
+class="math inline">\(\mathbb{K}\)</span> campo &gt; - <span
 class="math inline">\(V\)</span> spazio vettoriale su <span
 class="math inline">\(\mathbb{K}\)</span> &gt; - <span
 class="math inline">\(v_1, \ldots, v_n \in V\)</span> &gt; - <span
@@ -248,7 +250,8 @@ class="math inline">\(\textrm{span}(v_1, \ldots, v_n) := \{\lambda_1 v_1
 <ul>
 <li><strong>Hp</strong>
 <ul>
-<li><span class="math inline">\(\mathbb{K} campo\)</span></li>
+<li><span class="math inline">\(n \in \mathbb{N}\)</span></li>
+<li><span class="math inline">\(\mathbb{K}\)</span> campo</li>
 <li><span class="math inline">\(V\)</span> spazio vettoriale su <span
 class="math inline">\(\mathbb{K}\)</span></li>
 <li><span class="math inline">\(v_1, \ldots, v_n \in V\)</span></li>
@@ -291,6 +294,7 @@ v_n) =(c\lambda_1) v_1 + \ldots + (c\lambda_n) v_n \implies c\cdot w \in
 <h2 id="def-3">Def</h2>
 <ul>
 <li><p><strong>Vettori generatori</strong> &gt; - <span
+class="math inline">\(n \in \mathbb{N}\)</span> &gt; - <span
 class="math inline">\(\mathbb{K}\)</span> campo &gt; - <span
 class="math inline">\(V\)</span> spazio vettoriale su <span
 class="math inline">\(\mathbb{K}\)</span> &gt; - <span
@@ -302,6 +306,7 @@ class="math inline">\(\iff \textrm{span}(v_1, \ldots, v_n) = V\)</span>
 class="math inline">\(V\)</span> è una combinazione lineare degli <span
 class="math inline">\(v_1, \ldots, v_n\)</span></p></li>
 <li><p><strong>Indipendenza lineare</strong> &gt; - <span
+class="math inline">\(n \in \mathbb{N}\)</span> &gt; - <span
 class="math inline">\(\mathbb{K}\)</span> campo &gt; - <span
 class="math inline">\(V\)</span> spazio vettoriale su <span
 class="math inline">\(\mathbb{K}\)</span> &gt; - <span
@@ -309,10 +314,11 @@ class="math inline">\(v_1, \ldots, v_n \in V\)</span> &gt; - <span
 class="math inline">\(v_1, \ldots, v_n\)</span> sono <strong>linearmente
 indipendenti</strong> se e solo se <span class="math inline">\(\lambda_1
 v_1 + \ldots + \lambda_n v_n = 0_V \iff \lambda_1 = \ldots = \lambda_n =
-0_V\)</span> &gt; - equivalentemente, nessuno degli <span
+0_{\mathbb{K}}\)</span> &gt; - equivalentemente, nessuno degli <span
 class="math inline">\(v_1, \ldots, v_n\)</span> è combinazione lineare
 degli altri</p></li>
 <li><p><strong>Base di uno spazio vettoriale</strong> &gt; - <span
+class="math inline">\(n \in \mathbb{N}\)</span> &gt; - <span
 class="math inline">\(\mathbb{K}\)</span> campo &gt; - <span
 class="math inline">\(V\)</span> spazio vettoriale su <span
 class="math inline">\(\mathbb{K}\)</span> &gt; - <span
@@ -321,12 +327,15 @@ class="math inline">\(v_1, \ldots, v_n\)</span> sono una <strong>base di
 <span class="math inline">\(V\)</span></strong> <span
 class="math inline">\(\iff\)</span> <span class="math inline">\(v_1,
 \ldots, v_n\)</span> sono generatori di <span
-class="math inline">\(V\)</span> e linearmente indipendenti</p></li>
+class="math inline">\(V\)</span> e linearmente indipendenti &gt; - <span
+class="math inline">\(n\)</span> è detta <strong>cardinalità della base
+di <span class="math inline">\(V\)</span></strong></p></li>
 </ul>
 <h2 id="ex-1">Ex</h2>
 <ul>
 <li><strong>Hp</strong>
 <ul>
+<li><span class="math inline">\(n \in \mathbb{N}\)</span></li>
 <li><span class="math inline">\(\mathbb{K}\)</span> campo</li>
 <li><span class="math inline">\(e_1 := (1, 0, \ldots, 0), \ldots, e_n
 :=(0, \ldots, 0, 1) \in \mathbb{K}^n\)</span></li>
@@ -334,14 +343,165 @@ class="math inline">\(V\)</span> e linearmente indipendenti</p></li>
 <li><strong>Th</strong>
 <ul>
 <li><span class="math inline">\(e_1, \ldots, e_n\)</span> sono una base
-di <span class="math inline">\(\mathbb{K}^n\)</span></li>
+di <span class="math inline">\(\mathbb{K}^n\)</span>, ed è detta
+<em>base canonica</em></li>
 </ul></li>
 <li><strong>Dim</strong>
+<ul>
+<li><span class="math inline">\(e_1, \ldots, e_n\)</span> sono
+generatori di <span class="math inline">\(\mathbb{K}^n\)</span>
 <ul>
 <li><span class="math inline">\(\forall v \in \mathbb{K}^n \quad \exists
 t_1, \ldots, t_n \in \mathbb{K} \mid v = (t_1, \ldots, t_n) \implies v =
 (t_1, 0, \ldots, 0) + \ldots + (0, \ldots, 0, t_n) = t_1 \cdot e_1 +
-\ldots + t_n \cdot e_n\)</span></li>
+\ldots + t_n \cdot e_n \implies v \in \textrm{span}(e_1, \ldots,
+e_n)\)</span></li>
+</ul></li>
+<li><span class="math inline">\(e_1, \ldots, e_n\)</span> sono
+linearmente indipententi
+<ul>
+<li><span class="math inline">\(\forall \lambda_1, \ldots, \lambda_n \in
+\mathbb{K} \quad \lambda_1e_1=(\lambda_1, 0, \ldots, 0), \ldots,
+\lambda_n e_n = (0, \ldots, 0, \lambda_n) \implies \lambda_1 e_1 +
+\ldots + \lambda_n e_n = (\lambda_1, \ldots , \lambda_n)\)</span>, e
+questo vettore è pari al vettore nullo <span
+class="math inline">\(0_{\mathbb{K}^n}\)</span> solamente quando <span
+class="math inline">\(\lambda _1 = \ldots = \lambda_n =
+0_{\mathbb{K}}\)</span></li>
+<li><span class="math inline">\(\forall v_1, \ldots, v_n \in
+\mathbb{K}^n \quad \lambda _1 = \ldots = \lambda_n = 0_{\mathbb{K}}
+\implies \lambda_1v_1 + \ldots + \lambda_nv_n =
+0_{\mathbb{K}^n}\)</span>, e in particolare questa osservazione vale per
+<span class="math inline">\(e_1, \ldots, e_n\)</span></li>
+</ul></li>
+</ul></li>
+</ul>
+<h2 id="lem">Lem</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\(n \in \mathbb{N}\)</span></li>
+<li><span class="math inline">\(\mathbb{K}\)</span> campo</li>
+<li><span class="math inline">\(V\)</span> spazio vettoriale su <span
+class="math inline">\(\mathbb{K}\)</span></li>
+<li><span class="math inline">\(v_1, \ldots, v_n \in V\)</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\(v_1, \ldots, v_n\)</span> linearmente
+indipendenti <span class="math inline">\(\iff v_1, \ldots, v_{n -
+1}\)</span> linearmente indipendenti <span class="math inline">\(\land
+v_n \notin \textrm{span}(v_1, \ldots, v_{n - 1})\)</span></li>
+</ul></li>
+<li><strong>Dim</strong>
+<ul>
+<li><em>prima implicazione</em>
+<ul>
+<li>è stata omessa dal professore, se stai leggendo questa frase sappi
+che hai bei piedi</li>
+</ul></li>
+<li><em>seconda implicazione</em>
+<ul>
+<li>⚠️ <strong>MANCA LA DIMOSTRAZIONE</strong></li>
+</ul></li>
+</ul></li>
+</ul>
+<h2 id="oss-1">Oss</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\(m, k \in \mathbb{N}\)</span></li>
+<li><span class="math inline">\(\mathbb{K}\)</span> campo</li>
+<li><span class="math inline">\(V\)</span> spazio vettoriale su <span
+class="math inline">\(\mathbb{K}\)</span></li>
+<li><span class="math inline">\(w_1, \ldots, w_m \in V\)</span></li>
+<li><span class="math inline">\(v_1, \ldots, v_k \in \textrm{span}(w_1,
+\ldots, w_m) \mid v_1, \ldots, v_k\)</span> linearmente
+indipendenti</li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\(k \le m\)</span></li>
+</ul></li>
+<li><strong>Dim</strong>
+<ul>
+<li>⚠️ <strong>MANCA LA DIMOSTRAZIONE, È NOIOSISSIMA TE
+GIURO</strong></li>
+</ul></li>
+</ul>
+<h2 id="cor">Cor</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\(n, m \in \mathbb{N}\)</span></li>
+<li><span class="math inline">\(\mathbb{K}\)</span> campo</li>
+<li><span class="math inline">\(V\)</span> spazio vettoriale su <span
+class="math inline">\(\mathbb{K}\)</span></li>
+<li><span class="math inline">\(w_1, \ldots, w_m \in V \mid w_1, \ldots,
+w_m\)</span> base di <span class="math inline">\(V\)</span></li>
+<li><span class="math inline">\(v_1, \ldots, v_n \in V \mid v_1, \ldots,
+v_n\)</span> base di <span class="math inline">\(V\)</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\(n = m\)</span>, il che implica che la
+cardinalità delle basi di uno spazio vettoriale è unica</li>
+</ul></li>
+<li><strong>Dim</strong>
+<ul>
+<li><span class="math inline">\(v_1, \ldots, v_n\)</span> e <span
+class="math inline">\(w_1, \ldots, w_m\)</span> basi di <span
+class="math inline">\(V \implies \textrm{span}(v_1, \ldots, v_n) =
+\textrm{span}(w_1, \ldots, w_m) = V\)</span> poiché generatori di <span
+class="math inline">\(V\)</span></li>
+<li><span class="math inline">\(v_1, \ldots, v_n\)</span> e <span
+class="math inline">\(w_1, \ldots, w_m\)</span> basi di <span
+class="math inline">\(V \implies v_1, \ldots, v_n\)</span> e <span
+class="math inline">\(w_1, \ldots w_m\)</span> linearmente indipendenti
+<ul>
+<li><span class="math inline">\(v_1, \ldots , v_n \in V =
+\textrm{span}(w_1, \ldots, w_m) \implies n \le m\)</span> per
+dimostrazione precedente</li>
+<li><span class="math inline">\(w_1, \ldots, w_m \in V =
+\textrm{span}(v_1, \ldots, v_n) \implies m \le n\)</span> per
+dimostrazione precedente</li>
+</ul></li>
+<li>dunque <span class="math inline">\(n \le m \land m \le n \implies n
+= m\)</span></li>
+</ul></li>
+</ul>
+<h2 id="def-4">Def</h2>
+<ul>
+<li><strong>Dimensione di uno spazio vettoriale</strong> &gt; - <span
+class="math inline">\(\mathbb{K}\)</span> campo &gt; - <span
+class="math inline">\(V\)</span> spazio vettoriale su <span
+class="math inline">\(\mathbb{K}\)</span> &gt; - <span
+class="math inline">\(\dim(V)\)</span> è detta <strong>dimensione di
+<span class="math inline">\(V\)</span></strong>, ed è la cardinalità
+delle basi di <span class="math inline">\(V\)</span></li>
+</ul>
+<h2 id="oss-2">Oss</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\(n \in \mathbb{N}\)</span></li>
+<li><span class="math inline">\(\mathbb{K}\)</span> campo</li>
+<li><span class="math inline">\(V\)</span> spazio vettoriale su <span
+class="math inline">\(\mathbb{K}\)</span></li>
+<li><span class="math inline">\(v_1, \ldots, v_n \in V\)</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\(v_1, \ldots, v_n\)</span> base di <span
+class="math inline">\(V \iff \forall v \in V \quad \exists ! \lambda_1,
+\ldots, \lambda_n \in \mathbb{K} \mid v = \lambda_1 v_1 + \ldots +
+\lambda_n v_n\)</span></li>
+</ul></li>
+<li><strong>Dim</strong>
+<ul>
+<li>⚠️ <strong>INCOMPLETA</strong></li>
+<li><em>prima implicazione</em></li>
+<li><em>seconda implicazione</em></li>
 </ul></li>
 </ul>
 </body>

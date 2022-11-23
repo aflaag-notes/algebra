@@ -1,8 +1,6 @@
 # algebra
 
-Questi sono i miei appunti di algebra 😃
-
-Se siete qui solamente per la lista di teoremi, ecco [il link](https://raw.githubusercontent.com/ph04/algebra/main/everything.pdf).
+Questi sono i miei appunti di algebra 😃. Se siete qui solamente per la lista di teoremi, ecco [il link](https://raw.githubusercontent.com/ph04/algebra/main/everything.pdf) 😄.
 
 ## TODO list
 
