@@ -129,7 +129,7 @@ $f([x \cdot y])=f([x]) \cdot f([y])$
 
 ****
 
-# kernel e Immagine
+# Kernel e Immagine
 
 ## Def
 

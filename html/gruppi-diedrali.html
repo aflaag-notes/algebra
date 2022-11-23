@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Gruppi Diedrali</title>
+  <style>
+    html {
+      line-height: 1.5;
+      font-family: Georgia, serif;
+      font-size: 20px;
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 1em;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, 'Lucida Console', Consolas, monospace;
+      font-size: 85%;
+      margin: 0;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+  </style>
+  <script
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js"
+  type="text/javascript"></script>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Gruppi Diedrali</h1>
+</header>
+<h1 id="gruppi-diedrali">Gruppi diedrali</h1>
+<h2 id="def">Def</h2>
+<ul>
+<li><strong>Gruppo diedrale</strong> &gt; - <span
+class="math inline">\(n \in \mathbb{N}_{\ge 2}\)</span> &gt; - <span
+class="math inline">\(D_n\)</span> è l’<strong>insieme delle simmetrie
+dell’<span class="math inline">\(n\)</span>-gono regolare</strong> &gt;
+- l’insieme delle rotazioni che lasciano l’<span
+class="math inline">\(n\)</span>-gono invariato, e delle riflessioni
+rispetto agli assi di simmetria &gt; - <span class="math inline">\(\rho
+:=\)</span> rotazione di <span
+class="math inline">\(\frac{360°}{n}\)</span> gradi di un <span
+class="math inline">\(n\)</span>-gono regolare &gt; - <span
+class="math inline">\(\sigma_i :=\)</span> riflessione rispetto
+all’<span class="math inline">\(i\)</span>-esimo asse di simmetria
+dell’<span class="math inline">\(n\)</span>-gono regolare</li>
+</ul>
+<h2 id="oss">Oss</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\(n \in \mathbb{N}_{\ge 2}\)</span></li>
+<li><span class="math inline">\(D_n\)</span> insieme delle simmetrie
+dell’<span class="math inline">\(n\)</span>-gono regolare</li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\(|D_n| = 2n\)</span></li>
+</ul></li>
+<li><strong>Dim</strong>
+<ul>
+<li><span class="math inline">\(\rho := \frac{360°}{n}
+\implies\)</span>le rotazioni che lasciano l’<span
+class="math inline">\(n\)</span>-gono invariato sono esattamente <span
+class="math inline">\(n\)</span></li>
+<li>gli assi di simmetria di un <span
+class="math inline">\(n\)</span>-gono sono <span
+class="math inline">\(n\)</span>, dunque si hanno esattamente <span
+class="math inline">\(n\)</span> possibili riflessioni</li>
+<li><span class="math inline">\(D_n := \{\rho^0, \ldots, \rho^{n - 1},
+\sigma_0, \ldots, \sigma_{n-1}\} \implies |D_n| = 2n\)</span></li>
+</ul></li>
+</ul>
+<h2 id="oss-1">Oss</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\(n \in \mathbb{N}_{\ge 2}\)</span></li>
+<li><span class="math inline">\(D_n\)</span> insieme delle simmetrie
+dell’<span class="math inline">\(n\)</span>-gono regolare</li>
+<li><span class="math inline">\(\cdot\)</span> è l’operazione di
+composizione delle simmetrie</li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\((D_n, \cdot)\)</span> è un gruppo</li>
+</ul></li>
+<li><strong>Dim</strong>
+<ul>
+<li>la composizione di funzioni è associativa</li>
+<li><span class="math inline">\(\rho^0 = 1 = \textrm{id}\)</span> è
+l’elemento neutro</li>
+<li><span class="math inline">\(\left\{\begin{array}{l}\rho^{i} \cdot
+\rho^{j}=\rho^{i+j \ (\bmod \ n)} \\ \sigma_{i} \cdot
+\sigma_{j}=\rho^{i-j \ (\bmod \ n)} \\ \rho^{i} \cdot
+\sigma_{j}=\sigma_{i+j \ (\bmod \ n)} \\ \sigma_{i} \cdot
+\rho^{j}=\sigma_{i-j \ (\bmod \ n)}\end{array}\right.\)</span>, dunque è
+possibile trovare l’inverso per ogni permutazione e simmetria
+utilizzando queste regole</li>
+</ul></li>
+</ul>
+<h2 id="oss-2">Oss</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\(D_2\)</span> gruppo diedrale</li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\((D_2, \cdot)\)</span> è l’unico gruppo
+diedrale abeliano</li>
+</ul></li>
+<li><strong>Dim</strong>
+<ul>
+<li><span class="math inline">\(D_2 = \{1, \rho, \sigma_0, \sigma_1\}
+\implies\)</span> per le regole di composizione definite precedentemente
+<span class="math inline">\(\left\{\begin{array}{l}\rho^{0} \cdot
+\sigma_{0}=\sigma_{0+0 \ (\bmod \ 2)}=\sigma_{0}=\sigma_{0-0 \ (\bmod \
+2)}=\sigma_{0} \cdot \rho^{0} \quad i=j=0 \\ \rho^{0} \cdot
+\sigma_{1}=\sigma_{0+1 \ (\bmod \ 2)}=\sigma_{1}=\sigma_{1-0 \ (\bmod \
+2)}=\sigma_{1} \cdot \rho^{0} \quad i = 0, j = 1 \\ \rho^{1} \cdot
+\sigma_{0}=\sigma_{1+0 \ (\bmod \ 2 )}=\sigma_{1}=\sigma_{0-1 \ (\bmod \
+2 )}=\sigma_{0} \cdot \rho^1 \quad i = 1, j = 0 \\ \rho^{1} \cdot
+\sigma_{1}= \sigma_{1 + 1 \ (\bmod \ 2)} = \sigma_0 = \sigma_{1-1 \
+(\bmod\  2)} = \sigma_1 \cdot \rho ^1 \quad i = j =
+1\end{array}\right.\)</span>, quindi il gruppo è commutativo, e dunque
+abeliano</li>
+<li>per le regole di composizione definite precedentemente, per <span
+class="math inline">\(n \ge 3\)</span> la commutatività non è sempre
+rispettata, quindi <span class="math inline">\((D_2, \cdot)\)</span> è
+anche l’unico gruppo abeliano</li>
+</ul></li>
+</ul>
+<h2 id="oss-3">Oss</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\(D_n\)</span> gruppo diedrale</li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\(D_n \hookrightarrow S_n\)</span></li>
+<li><span class="math inline">\(\exists X \subset S_n\)</span>
+sottogruppo di <span class="math inline">\(S_n\)</span> <span
+class="math inline">\(\mid D_n \cong X\)</span>
+<ul>
+<li><span class="math inline">\(D_3 \cong S_3\)</span></li>
+</ul></li>
+</ul></li>
+<li><strong>Dim</strong>
+<ul>
+<li><p>per ogni simmetria in <span class="math inline">\(D_n\)</span>, è
+possibile trovare l’unica permutazione equivalente in <span
+class="math inline">\(S_n\)</span></p>
+<ul>
+<li>ad esempio, con <span class="math inline">\(n = 3\)</span>,
+numerando ogni vertice del triangolo equilatero, partendo dal vertice in
+basso a destra, si ottiene
+<ul>
+<li><span class="math inline">\(\rho^0=\)</span><span
+class="math inline">\(\left(\begin{array}{lll}1 &amp; 2 &amp; 3 \\
+1&amp;2&amp;3\end{array}\right)\)</span><span
+class="math inline">\(=\textrm{id}\)</span></li>
+<li><span class="math inline">\(\rho^1=\)</span><span
+class="math inline">\(\left(\begin{array}{lll}1 &amp; 2 &amp; 3 \\ 2
+&amp; 3 &amp; 1\end{array}\right)\)</span></li>
+<li><span class="math inline">\(\rho^2=\)</span><span
+class="math inline">\(\left(\begin{array}{lll}1 &amp; 2 &amp; 3 \\
+3&amp;1&amp;2\end{array}\right)\)</span></li>
+<li><span class="math inline">\(\sigma_0=\)</span><span
+class="math inline">\(\left(\begin{array}{lll}1 &amp; 2 &amp; 3 \\
+1&amp;3&amp;2\end{array}\right)\)</span></li>
+<li><span class="math inline">\(\sigma_1=\)</span><span
+class="math inline">\(\left(\begin{array}{lll}1 &amp; 2 &amp; 3 \\
+2&amp;1&amp;3\end{array}\right)\)</span></li>
+<li><span class="math inline">\(\sigma_2=\)</span><span
+class="math inline">\(\left(\begin{array}{lll}1 &amp; 2 &amp; 3 \\
+3&amp;2&amp;1\end{array}\right)\)</span></li>
+</ul></li>
+</ul></li>
+<li><p>poiché la permutazione equivalente è unica, funzione che manda
+una simmetria in <span class="math inline">\(D_n\)</span> nella
+corrispondente permutazione in <span class="math inline">\(S_n\)</span>
+è iniettiva</p></li>
+<li><p>allora <span class="math inline">\(D_n \hookrightarrow
+S_n\)</span>, ovvero, l’inclusione è iniettiva ma non suriettiva in
+generale</p>
+<ul>
+<li><span class="math inline">\(|D_n| \le |S_n|\)</span>, poiché in
+generale <span class="math inline">\(S_n\)</span> contiene più
+permutazioni di <span class="math inline">\(D_n\)</span></li>
+</ul></li>
+<li><p>ma per ragionamento analogo, è sempre possibile trovare un
+sottogruppo <span class="math inline">\(X \subset S_n \mid |X| = |D_n|
+\implies\)</span> l’inclusione è biiettiva</p>
+<ul>
+<li>dunque, <span class="math inline">\(D_3\)</span> risulta essere il
+caso particolare in cui <span class="math inline">\(X =
+S_n\)</span></li>
+</ul></li>
+<li><p><span class="math inline">\(|D_n| \cong X\)</span></p>
+<ul>
+<li><span class="math inline">\(f: D_n \rightarrow S_n : a \rightarrow
+\sigma_a\)</span> è un morfismo
+<ul>
+<li><span class="math inline">\(v_i\)</span> vertice <span
+class="math inline">\(i\)</span>-esimo</li>
+<li><span class="math inline">\(a: v_i \rightarrow v_j\)</span> è la
+simmetria che manda <span class="math inline">\(v_i\)</span> in <span
+class="math inline">\(v_j\)</span>, che corrisponde a <span
+class="math inline">\(\sigma_a: i \rightarrow j\)</span> attraverso
+<span class="math inline">\(f\)</span>
+<ul>
+<li><span class="math inline">\(f(a) = \sigma_a\)</span></li>
+</ul></li>
+<li><span class="math inline">\(b: v_j \rightarrow v_k\)</span> è la
+simmetria che manda <span class="math inline">\(v_j\)</span> in <span
+class="math inline">\(v_k\)</span>, che corrisponde a <span
+class="math inline">\(\sigma_b: j \rightarrow k\)</span> attraverso
+<span class="math inline">\(f\)</span>
+<ul>
+<li><span class="math inline">\(f(b) = \sigma_b\)</span></li>
+</ul></li>
+<li><span class="math inline">\(f\)</span> morfismo <span
+class="math inline">\(\iff b \cdot a = v_{\sigma_b \cdot
+\sigma_{a}}\)</span>
+<ul>
+<li><span class="math inline">\(\left.\begin{array}{l}a(v_i) = v_j \\
+b(v_j) = v_k\end{array}\right\} \implies b \cdot a = b(a(v_i)) =
+v_k\)</span></li>
+<li><span class="math inline">\(\left.\begin{array}{l}\sigma_a(i) = j \\
+\sigma_b(j) = k\end{array}\right\} \implies \sigma_b \cdot \sigma_a
+=\sigma_b(\sigma_a(i)) = k\)</span></li>
+<li>quinidi <span class="math inline">\(b \cdot a = b(a(v_i)) = v_k =
+v_{\sigma_b(\sigma_a(i))} = v_{\sigma_b \cdot \sigma_a}\)</span></li>
+</ul></li>
+</ul></li>
+<li>poiché <span class="math inline">\(|D_n| = |X|\)</span>, allora
+l’inclusione data da <span class="math inline">\(f\)</span> è anche
+suriettiva, e quindi biiettiva, dunque <span
+class="math inline">\(f\)</span> è un isomorfismo</li>
+</ul></li>
+<li><p>in particolare, <span class="math inline">\(D_3 \cong
+S_3\)</span>, poiché <span class="math inline">\(X\)</span> è tutto
+<span class="math inline">\(S_3\)</span></p></li>
+</ul></li>
+</ul>
+<h2 id="def-1">Def</h2>
+<ul>
+<li><strong>Gruppo di Klein</strong> &gt; - <span
+class="math inline">\(K_4 := \{1, a, b, c\}\)</span> &gt; - <span
+class="math inline">\(a^2=b^2=c^2=1\)</span> &gt; - <span
+class="math inline">\(ab=c=ba\)</span> &gt; - <span
+class="math inline">\(ac=b=ca\)</span> &gt; - <span
+class="math inline">\(cb=a=bc\)</span></li>
+</ul>
+<h2 id="oss-4">Oss</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\(K_4\)</span> è il gruppo di Klein</li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\(K_4 \cong D_2\)</span></li>
+</ul></li>
+<li><strong>Dim</strong>
+<ul>
+<li><span class="math inline">\(K_4:=\{1, a, b, c\}\)</span></li>
+<li><span class="math inline">\(D_2 = \{1, \rho, \sigma_0,
+\sigma_1\}\)</span>, quindi associando gli elementi <span
+class="math inline">\(a=\rho, b= \sigma_0, c= \sigma_1\)</span> si
+ottiene lo stesso gruppo</li>
+</ul></li>
+</ul>
+</body>
+</html>

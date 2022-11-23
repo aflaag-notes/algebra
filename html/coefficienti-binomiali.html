@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Coefficienti Binomiali</title>
+  <style>
+    html {
+      line-height: 1.5;
+      font-family: Georgia, serif;
+      font-size: 20px;
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 1em;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, 'Lucida Console', Consolas, monospace;
+      font-size: 85%;
+      margin: 0;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+  </style>
+  <script
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js"
+  type="text/javascript"></script>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Coefficienti Binomiali</h1>
+</header>
+<h1 id="coefficienti-binomiali">Coefficienti binomiali</h1>
+<h2 id="def">Def</h2>
+<ul>
+<li><strong>Coefficiente binomiale</strong> &gt; - <span
+class="math inline">\(0! := 1\)</span> &gt; - <span
+class="math inline">\(n, k \in \mathbb{N}\)</span> &gt; - <span
+class="math inline">\(\displaystyle
+\binom{n}{k}:=\left\{\begin{array}{ll}\frac{n !}{n !(n-k) !} &amp; k
+\leqslant n \\ 0 &amp; k&gt;n\end{array}\right.\)</span></li>
+</ul>
+<h2 id="oss">Oss</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\(n, k \in \mathbb{N}\)</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\(\displaystyle \binom{n}{k} =
+\binom{n}{n-k}\)</span></li>
+</ul></li>
+<li><strong>Dim</strong>
+<ul>
+<li><span class="math inline">\(\displaystyle \binom{n}{n-k}=\dfrac{n
+!}{(n-k) !(n-(n-k)) !}=\dfrac{n !}{(n-k) ! k !}=
+\binom{n}{k}\)</span></li>
+</ul></li>
+</ul>
+<h2 id="oss-1">Oss</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\(n, k \in \mathbb{N}\)</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\(\displaystyle \binom{n}{k + 1} =
+\binom{n - 1}{k + 1} \binom{n - 1}{ k}\)</span></li>
+</ul></li>
+<li><strong>Dim</strong>
+<ul>
+<li><span class="math inline">\(\binom{n - 1}{k +1}+ \binom{n -
+1}{k}=\)</span><span class="math inline">\(\frac{(n-1) !}{(k+1)
+!(n-1-(k+1)) !}+\frac{(n-1) !}{k !(n-1-k) !}\)</span> <span
+class="math inline">\(=\frac{(n-1) !}{(k+1) k !(n-2-k) !}+\frac{(n-1)
+!}{k !(n-1-k) !} =\)</span> <span
+class="math inline">\(\frac{(n-1-k)(n-1) !+(k+1)(n-1) !}{(k+1) !(n-k-1)
+!}=\)</span> <span class="math inline">\(\frac{(n-1) !(n-1-k+k+1)}{(k+1)
+!(n-1-k) !}=\)</span> <span class="math inline">\(\frac{(n-1) ! \cdot
+n}{(n+1) !(n-1-k) !} =\)</span> <span class="math inline">\(\frac{n
+!}{(k+1) !(n-k-1) !}=\binom{n}{k + 1}\)</span></li>
+</ul></li>
+</ul>
+<h2 id="lem">Lem</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\(p \in \mathbb{P}\)</span></li>
+<li><span class="math inline">\(k \in \mathbb{N} \mid 0 \lt k \lt
+p\)</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\(p \ \bigg\vert \displaystyle
+\binom{p}{k}\)</span></li>
+</ul></li>
+<li><strong>Dim</strong>
+<ul>
+<li><span class="math inline">\(\displaystyle{\binom{p}{k}=\frac{p !}{k
+!(p-k) !} = \frac{p \cdot (p - 1) !}{k!(p - k)!} = p \cdot \frac{(p -
+1)!}{k!(p- k)!}} \implies p\)</span> è nella fattorizzazione di <span
+class="math inline">\(\displaystyle{\binom{p}{k}}\)</span></li>
+<li>poiché <span class="math inline">\(p\)</span> è primo in ipotesi,
+non è possibile semplificarlo con nessun fattore del denominatore
+<ul>
+<li><span class="math inline">\(k \lt p \implies p\)</span> non può
+essere nella fattorizzazione di <span
+class="math inline">\(k!\)</span></li>
+<li><span class="math inline">\(p - k \lt p \implies p\)</span> non può
+essere nella fattorizzazione di <span class="math inline">\((p -
+k)!\)</span></li>
+</ul></li>
+<li>quindi necessariamente <span class="math inline">\(p \ \bigg\vert
+\displaystyle \binom{p}{k}\)</span></li>
+</ul></li>
+</ul>
+<h2 id="oss-2">Oss</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\(n \in \mathbb{Z}\)</span></li>
+<li><span class="math inline">\(p \in \mathbb{P} : p \mid
+n\)</span></li>
+<li><span class="math inline">\([a] \in \mathbb{Z}_{p}\)</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\(n \cdot [a] = [0]\)</span> in <span
+class="math inline">\(\mathbb{Z}_p\)</span></li>
+</ul></li>
+<li><strong>Dim</strong>
+<ul>
+<li><span class="math inline">\(p \mid n \implies \exists k \in
+\mathbb{Z} \mid pk = n\)</span></li>
+<li><span class="math inline">\(n \cdot[a]=[a]+\ldots+[a] = [n \cdot a]
+= [pk \cdot a] = p \cdot [ka]\)</span></li>
+<li><span class="math inline">\([pka]\)</span> è multiplo di <span
+class="math inline">\(p\)</span> per definizione, e quindi <span
+class="math inline">\([pka] = [0]\)</span> in <span
+class="math inline">\(\mathbb{Z}_p\)</span>, quindi <span
+class="math inline">\(n \cdot [a] = [pka] = [0]\)</span> in <span
+class="math inline">\(\mathbb{Z}_p\)</span></li>
+</ul></li>
+</ul>
+<h2 id="oss-3">Oss</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\(n \in \mathbb{Z}\)</span></li>
+<li><span class="math inline">\(p \in \mathbb{P} : p \mid
+n\)</span></li>
+<li><span class="math inline">\([a] \in \mathbb{Z}_{p}\)</span></li>
+<li><span class="math inline">\(k \in \mathbb{N} \mid 0 \lt k \lt
+p\)</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\(\displaystyle \binom{p}{k} \cdot [a] =
+[0]\)</span> in <span class="math inline">\(\mathbb{Z}_p\)</span></li>
+</ul></li>
+<li><strong>Dim</strong>
+<ul>
+<li><span class="math inline">\(\displaystyle \binom{p}{k}
+\cdot[a]=\left[\displaystyle{\binom{p}{k}} \cdot a\right]\)</span></li>
+<li>per il dimostrazione precedente, <span
+class="math inline">\(\displaystyle{p \ \bigg\vert
+\binom{p}{k}}\)</span>, quindi <span class="math inline">\(\displaystyle
+\binom{p}{k} \cdot a\)</span> è anch’esso multiplo di <span
+class="math inline">\(p\)</span>, e di conseguenza <span
+class="math inline">\(\left[\displaystyle \binom{p}{k} \cdot a\right] =
+[0]\)</span> in <span class="math inline">\(\mathbb{Z}_p\)</span></li>
+</ul></li>
+</ul>
+<h2 id="cor">Cor</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\(p \in \mathbb{P}\)</span></li>
+<li><span class="math inline">\([a], [b] \in \mathbb{Z}_p\)</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\(([a]+[b])^{p}=[a]^{p}+[b]^{p}\)</span>
+in <span class="math inline">\(\mathbb{Z}_p\)</span></li>
+</ul></li>
+<li><strong>Dim</strong>
+<ul>
+<li>per il teorema del binomio di Newton <span
+class="math inline">\(([a]+[b])^{p}=\)</span><span
+class="math inline">\(\displaystyle
+\sum_{k=0}^{p}\binom{p}{k}[a]^{k}\cdot[b]^{p-k}=\sum_{k=0}^{p}\binom{p}{k}\left[a^{k}
+\cdot b^{p-k}\right]\)</span></li>
+<li>per dimostrazione precedente <span class="math inline">\(p \in
+\mathbb{P} \implies \displaystyle{\binom{p}{k}}\left[a^{k} \cdot
+b^{p-k}\right]= [0] \quad \forall k \in \mathbb{Z} \mid 0 \lt k \lt
+p\)</span></li>
+<li>di conseguenza, nella sommatoria del binomio di Newton tutti i
+termini con <span class="math inline">\(k \in (0, p)\)</span> si
+annullano, in quanto congruenti a <span
+class="math inline">\([0]\)</span> in <span
+class="math inline">\(\mathbb{Z}_p\)</span></li>
+<li><span class="math inline">\(\displaystyle
+([a]+[b])^{p}=\sum_{k=0}^{p}\binom{p}{k}\left[a^{k} \cdot
+b^{p-k}\right]=
+\binom{p}{0}[b]^{p}+\binom{p}{p}[a]^{p}=[a]^{p}+[b]^{p}\)</span></li>
+</ul></li>
+</ul>
+<h2 id="cor-1">Cor</h2>
+<ul>
+<li><p><strong>Hp</strong></p>
+<ul>
+<li><span class="math inline">\(p \in \mathbb{P}\)</span></li>
+<li><span class="math inline">\([a_1], \ldots, [a_n] \in
+\mathbb{Z}_p\)</span></li>
+</ul></li>
+<li><p><strong>Th</strong></p>
+<ul>
+<li><span
+class="math inline">\(\left(\left[a_{1}\right]+\ldots+\left[a_{n}\right]\right)^{p}=\left[a_{1}\right]^{p}+\ldots+\left[a_{n}\right]^{p}\)</span>
+in <span class="math inline">\(\mathbb{Z}_p\)</span></li>
+</ul></li>
+<li><p><strong>Dim</strong></p>
+<ul>
+<li><span class="math inline">\(n = 1 \implies\)</span> <span
+class="math inline">\(\left[a_{1}\right]^{p}=\left[a_{1}\right]^{p}\)</span>
+per dimostrazione precedente</li>
+<li><span class="math inline">\(n&gt;1
+\implies\left(\left[a_{1}\right]+\ldots+\left[a_{n}\right]+\left[a_{n+1}\right]\right)^{p}=
+\left[a_{1}\right]^{p}+\ldots+\left[a_{n}\right]^{p}+\left[a_{n+1}\right]^{p}\)</span>
+<ul>
+<li>per ipotesi induttiva, <span
+class="math inline">\(\left[a_{1}\right]^{p}+\ldots+\left[a_{n}\right]^{p}+\left[a_{n+1}\right]^{p}=
+\left(\left[a_{1}\right]+\ldots+\left[a_{n}\right]\right)^{p}+\left[a_{n+1}\right]^{p}\)</span></li>
+<li>allora, ancora per ipotesi induttiva <span
+class="math inline">\(\left(\left[a_{1}\right]+\ldots+\left[a_{n}\right]\right)^{p}+\left[a_{n+1}\right]^{p}=
+\left(\left[a_{1}\right]+\ldots+\left[a_{n+1}\right]\right)^{p}\)</span></li>
+</ul></li>
+</ul></li>
+</ul>
+</body>
+</html>

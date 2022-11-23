@@ -1,0 +1,917 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Teoremi Fondamentali</title>
+  <style>
+    html {
+      line-height: 1.5;
+      font-family: Georgia, serif;
+      font-size: 20px;
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 1em;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, 'Lucida Console', Consolas, monospace;
+      font-size: 85%;
+      margin: 0;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+  </style>
+  <script
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js"
+  type="text/javascript"></script>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Teoremi Fondamentali</h1>
+</header>
+<h1 id="teorema-fondamentale-dellalgebra">Teorema fondamentale
+dell’algebra</h1>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\(\mathbb{K}\)</span> campo</li>
+<li><span class="math inline">\(p(x) \in \mathbb{K}[x] \mid p(x) =
+a_{0}x^0 + \ldots +a_{n} x^{n}\)</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\(\exists z \in \mathbb{C} \mid p(z) =
+0\)</span></li>
+</ul></li>
+</ul>
+<hr />
+<h1 id="teorema-della-divisione-euclidea-con-il-resto">Teorema della
+divisione euclidea con il resto</h1>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\(m \in \mathbb{Z}\)</span></li>
+<li><span class="math inline">\(n \in \mathbb{Z} - \{0\}\)</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\(\exists ! \ q, r \in \mathbb{Z} \mid m=n
+q+r \quad 0 \leq r&lt;n\)</span></li>
+</ul></li>
+<li><strong>Dim</strong>
+<ul>
+<li><em>esistenza</em>
+<ul>
+<li>sia <span class="math inline">\([m] \in \mathbb{Z}_n\)</span></li>
+<li><span class="math inline">\(a \equiv m \ (\bmod \ n) \iff \exists
+p_1 \in \mathbb{Z} \mid np_1 = m - a\)</span></li>
+<li><span class="math inline">\(r:=\min(\{a \in \mathbb{Z} \mid a \in
+[m], a \ge 0\})\)</span></li>
+<li><span class="math inline">\(r \in [m] \iff \exists p_2 \in
+\mathbb{Z} \mid np_2 = m - r \iff r = m - np_2 \iff m = np_2
++r\)</span></li>
+<li>⚠️ <strong>INCOMPLETA</strong></li>
+</ul></li>
+</ul></li>
+</ul>
+<h2 id="oss">Oss</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\(\mathbb{K}\)</span> campo</li>
+<li><span class="math inline">\(a(x), b(x) \in \mathbb{K}[x] \mid b(x)
+\neq 0\)</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\(\exists ! q(x), r(x) \in \mathbb{K}[x]
+\mid a(x) = b(x) \cdot q(x) + r(x) \quad \deg(r(x)) \lt
+\deg(b(x))\)</span>, che è detto <em>teorema della divisione con il
+resto tra polinomi</em></li>
+</ul></li>
+</ul>
+<hr />
+<h1 id="teorema-di-lagrange">Teorema di Lagrange</h1>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\(G\)</span> gruppo finito</li>
+<li><span class="math inline">\(H \subset G\)</span> sottogruppo
+finito</li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\(|G| = |H| \cdot |G / H|\)</span></li>
+</ul></li>
+<li><strong>Dim</strong>
+<ul>
+<li><span class="math inline">\(G\)</span> è decomponibile attraverso
+l’unione disgiunta delle sue classi laterali sinistre, poiché ogni
+relazione di equivalenza induce una partizione per dimostrazione
+precedente</li>
+<li>in particolare, ogni classe laterale sinistra è equivalente a <span
+class="math inline">\(xH\)</span> per opportuni <span
+class="math inline">\(x \in G\)</span>, e hanno tutte cardinalità <span
+class="math inline">\(|H|\)</span> per dimostrazione precedente</li>
+<li><span class="math inline">\(G = X_1 \coprod X_2 \coprod \ldots
+\coprod X_k \implies |G| = |X_1| + |X_2| + \ldots + |X_k|\)</span>
+poiché ogni <span class="math inline">\(X_i\)</span> è una partizione, e
+dunque disgiunta con le altre, e poiché sono tutte classi laterali
+sinistre hanno tutte cardinalità <span
+class="math inline">\(|H|\)</span></li>
+<li>dunque, <span class="math inline">\(|G| = k \cdot |H|\)</span>, dove
+<span class="math inline">\(k\)</span> corrisponde al numero di classi
+laterali, che è proprio <span class="math inline">\(|G/H| \implies |G| =
+|H| \cdot |G/H|\)</span></li>
+</ul></li>
+</ul>
+<hr />
+<h1 id="teorema-fondamentale-dellaritmetica">Teorema fondamentale
+dell’aritmetica</h1>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\(a, b \in \mathbb{N}\)</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\(\textrm{mcm}(a, b) \cdot \textrm{MCD}(a,
+b) = a \cdot b\)</span></li>
+</ul></li>
+<li><strong>Dim</strong>
+<ul>
+<li><span class="math inline">\(a = 0 \lor b = 0 \lor a = b = 0 \implies
+\textrm{mcm}(a, b) = 0\)</span></li>
+<li><span class="math inline">\(a, b \gt 0\)</span>
+<ul>
+<li><span class="math inline">\(\mathbb{P} := \{p \in \mathbb{N} \mid
+p\)</span> primo<span class="math inline">\(\}\)</span></li>
+<li><span class="math inline">\(\forall n \in \mathbb{N} - \{0\} \quad
+\exists ! n_2, n_3, n_5, \ldots, n_p \in \mathbb{N} \mid p \in
+\mathbb{P} : n = 2^{n_2} \cdot 3 ^ {n_3} \cdot \ldots \cdot p ^
+{n_p}\)</span>
+<ul>
+<li><span class="math inline">\(p \nmid n \implies n_p = 0 \implies p ^
+{n_p} = 1\)</span>, dunque non influisce nella produttoria</li>
+</ul></li>
+<li><span class="math inline">\(\displaystyle{n = \prod_{p \in
+\mathbb{P}}^{} p ^{n_p}}\)</span>, quindi è possibile riscrivere anche
+<span class="math inline">\(a\)</span> e <span
+class="math inline">\(b\)</span> tramite i loro fattori primi come <span
+class="math inline">\(\displaystyle{a=\prod_{p \in \mathbb{P}}
+p^{a_{p}}}\)</span> e <span
+class="math inline">\(\displaystyle{b=\prod_{p \in \mathbb{P}} p^{b_{p}}
+}\)</span></li>
+<li><span class="math inline">\(d:= \textrm{MCD}(a, b)\)</span> e <span
+class="math inline">\(m:=\textrm{mcm}(a, b)\)</span>
+<ul>
+<li>per definizione di <span class="math inline">\(d\)</span> ed <span
+class="math inline">\(m\)</span>, e attraverso le regole che permettono
+di trovarli tramite le fattorizzazioni di <span
+class="math inline">\(a\)</span> e <span
+class="math inline">\(b\)</span>, è possibile riscrivere <span
+class="math inline">\(d\)</span> ed <span
+class="math inline">\(m\)</span> come <span
+class="math inline">\(\displaystyle{d = \prod_{p \in \mathbb{P}}
+p^{\min(a_p, b_p)}}\)</span> e <span
+class="math inline">\(\displaystyle{m = \prod_{p \in \mathbb{P}}
+p^{\max(a_p, b_p)}}\)</span></li>
+<li><span class="math inline">\(d \cdot m =\displaystyle{\prod_{p \in
+\mathbb{P}} p^{\min(a_p, b_p)}} \cdot \displaystyle{\prod_{p \in
+\mathbb{P}} p^{\max(a_p, b_p)}} = \displaystyle{\prod_{p \in \mathbb{P}}
+p^{\min(a_p, b_p) + \max(a_p, b_p)}}\)</span></li>
+</ul></li>
+<li><span class="math inline">\(\forall a, b \in \mathbb{N} \quad a + b
+= \min(a, b) + \max(a, b)\)</span>
+<ul>
+<li><span class="math inline">\(a = \min(a, b) \implies \max(a, b) =
+b\)</span>, e viceversa</li>
+</ul></li>
+<li><span class="math inline">\(d \cdot m = \displaystyle{\prod_{p \in
+\mathbb{P} }p ^{a_p + b_p}} = \displaystyle{\prod_{p \in \mathbb{P}}
+p^{a_p}} \cdot \displaystyle{\prod_{p \in \mathbb{P}} p^{b_p}} = a \cdot
+b\)</span></li>
+</ul></li>
+</ul></li>
+</ul>
+<hr />
+<h1 id="teorema-cinese-dei-resti">Teorema cinese dei resti</h1>
+<h2 id="lem">Lem</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\(a_1, \ldots, a_n \ge 2 \in \mathbb{Z}
+\mid \textrm{MCD}(a_i, a_j) = 1 \quad \forall i, j \in [1, n] : i \neq
+j\)</span></li>
+<li><span class="math inline">\(m := \textrm{mcm}(a_1, \ldots,
+a_n)\)</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\(m = a_1 \cdot \ldots \cdot
+a_n\)</span></li>
+</ul></li>
+<li><strong>Dim</strong>
+<ul>
+<li><span class="math inline">\(\textrm{MCD}(a_i, a_j) = 1 \implies
+\forall p \in \mathbb{P} \quad p \mid a_i \implies p \nmid a_j\)</span>,
+poiché altrimenti <span class="math inline">\(p \mid \textrm{MCD}(a_i,
+a_j)\)</span></li>
+<li>prese le fattorizzazioni <span class="math inline">\(\displaystyle
+a_1 = \prod_{p \in \mathbb{P}}{p^{a_{1_p}}} \ \ldots \ a_n = \prod_{p
+\in \mathbb{P}}{p^{a_{n_p}}}\)</span>, allora <span
+class="math inline">\(\forall p \in \mathbb{P} \quad a_{i_p} \gt 0
+\implies a_{j_p} = 0 \quad \forall i \neq j\)</span>, dunque ogni
+fattore è presente solo in una delle fattorizzazioni degli <span
+class="math inline">\(n\)</span> interi, poiché coprimi
+<ul>
+<li><span class="math inline">\(a_{k_p} = 0 \implies p^{a_{k_p}} = 1
+\implies\)</span> non compare nella fattorizzazione</li>
+</ul></li>
+<li>di conseguenza, la somma degli esponenti di <span
+class="math inline">\(p\)</span> su tutte le fattorizzazioni degli <span
+class="math inline">\(n\)</span> interi, sarà il numero stesso, poiché
+nelle altre fattorizzazioni varrà <span
+class="math inline">\(0\)</span>, e quindi <span
+class="math inline">\(\forall p \in \mathbb{P} \quad a_{1_p} + \ldots +
+a_{n_p} = \max(a_{1_p}, \ldots, a_{n_p})\)</span></li>
+<li>allora <span class="math inline">\(m = \displaystyle \prod_{p \in
+\mathbb{P}}{p^{\max(a_{1_p}, \ldots, a_{n_p})}}=\prod_{p \in
+\mathbb{P}}{p^{a_{1_p} + \ldots + a_{n_p}}} = \prod_{p \in
+\mathbb{P}}{p^{a_{1_p}}} \cdot \ldots \cdot \prod_{p \in
+\mathbb{P}}{p^{a_{n_p}}} = a_1 \cdot \ldots \cdot a_n\)</span></li>
+</ul></li>
+</ul>
+<h2 id="lem-1">Lem</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\(n \in \mathbb{N}\)</span></li>
+<li><span class="math inline">\(a_1, \ldots, a_n \in \mathbb{Z}_{n \ge
+2}\)</span></li>
+<li><span class="math inline">\(m:= \textrm{mcm}(a_1, \ldots,
+a_n)\)</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\(\exists \phi \mid \phi: \mathbb{Z}_m
+\rightarrow \mathbb{Z}_{a_1} \times \ldots \times \mathbb{Z}_{a_n}: x \
+(\bmod \ m) \rightarrow (x \ (\bmod \ a_1), \ldots, x \ (\bmod \
+a_n))\)</span></li>
+<li><span class="math inline">\(\phi\)</span> è una funzione ben
+definita, ed è iniettiva</li>
+</ul></li>
+<li><strong>Dim</strong>
+<ul>
+<li><span class="math inline">\(\phi\)</span> ben definita <span
+class="math inline">\(\implies \phi\)</span> non dipende dalla scelta di
+<span class="math inline">\([x] \in \mathbb{Z}_m\)</span></li>
+<li>se <span class="math inline">\(\phi\)</span> è ben definita, allora
+<span class="math inline">\(x\equiv x^{\prime} \ (\bmod \ m) \implies
+\left\{\begin{array}{c}x \equiv x^{\prime}\ \left(\bmod \ a_{1}\right)
+\\ \vdots \\ x \equiv x^{\prime}\ \left(\bmod \
+a_{n}\right)\end{array}\right.\)</span></li>
+<li><span class="math inline">\(\left\{\begin{array}{c}x \equiv
+x^{\prime}\ \left(\bmod \ a_{1}\right) \\ \vdots \\ x \equiv x^{\prime}\
+\left(\bmod \ a_{n}\right)\end{array}\right. \iff
+\left\{\begin{array}{c}x^{\prime}-x \in I\left(a_{1}\right) \\ \vdots \\
+x^{\prime}-x \in I\left(a_{n}\right)\end{array}\right. \iff x - x^\prime
+\in I(a_1) \cap \ldots \cap I(a_n) = I(m)\)</span>, e per definizione
+<span class="math inline">\(x - x^\prime \in I(m) \implies x \equiv
+x^\prime \ (\bmod \ m)\)</span></li>
+<li>poiché tale osservazione è valida in entrambe i versi
+dell’implicazione, <span class="math inline">\(\phi\)</span> risulta
+essere iniettiva</li>
+</ul></li>
+</ul>
+<h2 id="teorema">Teorema</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\(n \in \mathbb{N}\)</span></li>
+<li><span class="math inline">\(a_1, \ldots, a_n \in \mathbb{Z}_{\ge 2}
+\mid \forall i, j \in [1, n] \quad i \neq j \implies \textrm{MCD}(a_i,
+a_j) = 1\)</span></li>
+<li><span class="math inline">\(b_1, \ldots, b_n \in \mathbb{Z} \mid 0
+\leq b_{1}&lt;a_{1}, \ldots, 0 \leq b_n \lt a_n\)</span></li>
+<li><span class="math inline">\(m := \textrm{mcm}(a_1, \ldots,
+a_n)\)</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\(\exists ! x \ (\bmod \ m) \mid\)</span>
+<span class="math inline">\(\left\{\begin{array}{c}x \equiv b_{1}\
+\left(\bmod \ a_{1}\right) \\ \vdots \\ x \equiv b_{n}\ \left(\bmod \
+a_{n}\right)\end{array}\right.\)</span></li>
+</ul></li>
+<li><strong>Dim</strong>
+<ul>
+<li>per il primo lemma <span class="math inline">\(m = a_1 \cdot \ldots
+\cdot a_n\)</span> poiché coprimi a due a due in ipotesi</li>
+<li>per il secondo lemma <span class="math inline">\(m =
+\textrm{mcm}(a_1, \ldots, a_n) \implies \exists \phi : \mathbb{Z}_m
+\rightarrow \mathbb{Z}_ {a_1} \times \cdots \times
+\mathbb{Z}_{a_n}\)</span> ben definita e iniettiva</li>
+<li><span class="math inline">\(\left|X_{1} \times \cdots \times
+X_{n}\right|=\left|X_{1}\right| \cdot\ldots\cdot\left|X_{n}\right|
+\implies\)</span> <span class="math inline">\(\left|\mathbb{Z}_{a_{1}}
+\times \ldots \times
+\mathbb{Z}_{a_{n}}\right|=\left|\mathbb{Z}_{a_{1}}\right|
+\cdot\ldots\cdot\left|\mathbb{Z}_{a_{n}}\right|\)</span>
+<ul>
+<li><span class="math inline">\(\mathbb{Z}_n := \{[0],[1],
+\cdots,[n-1]\} \implies \left|\mathbb{Z}_{n}\right|=n\)</span>, quindi
+<span class="math inline">\(\left|\mathbb{Z}_{a_{1}}\right|
+\cdot\ldots\cdot\left|\mathbb{Z}_{a_{n}}\right| = a_1 \cdot \ldots \cdot
+a_n = m = \left| \mathbb{Z}_m \right|\)</span> per ragionamento
+analogo</li>
+</ul></li>
+<li><span class="math inline">\(|X|=|Y|&lt;\infty \implies f: X
+\rightarrow Y\)</span> iniettiva <span
+class="math inline">\(\iff\)</span> <span
+class="math inline">\(f\)</span> suriettiva
+<ul>
+<li>applicando questa osservazione, <span
+class="math inline">\(\phi\)</span> iniettiva <span
+class="math inline">\(\implies \phi\)</span> suriettiva, in quanto, per
+l’osservazione precedente, insieme di partenza e di arrivo di <span
+class="math inline">\(\phi\)</span> hanno la stessa cardinalità <span
+class="math inline">\(\left| \mathbb{Z}_m \right|\)</span></li>
+</ul></li>
+<li><span class="math inline">\(\phi\)</span> <em>suriettiva</em> <span
+class="math inline">\(\implies\)</span> <span
+class="math inline">\(\exists x \mid x \ (\bmod m)\)</span> è soluzione
+del sistema
+<ul>
+<li><span class="math inline">\(\varphi(x \ (\bmod m))=\left(b_{1}\
+\left( \bmod a_{1}\right), \ldots, b_{n} \ (\bmod
+a_{n})\right)\)</span>, e poiché <span
+class="math inline">\(\phi\)</span> è suriettiva, allora ogni tupla di
+<span class="math inline">\(n\)</span> elementi dell’insieme di arrivo,
+che descrive un sistema come in ipotesi, ha una controimmagine <span
+class="math inline">\(x \ (\bmod m)\)</span>, e <span
+class="math inline">\(x \ (\bmod m)\in \mathbb{Z}_m\)</span> per
+definizione, dunque <em>esiste sempre una soluzione</em></li>
+</ul></li>
+<li><span class="math inline">\(\phi\)</span> <em>iniettiva</em> <span
+class="math inline">\(\implies\)</span> <span
+class="math inline">\(\exists ! x \mid x \ (\bmod m)\)</span> è
+soluzione del sistema
+<ul>
+<li>poiché <span class="math inline">\(\phi\)</span> è iniettiva, <span
+class="math inline">\(x \ (\bmod m) \in \mathbb{Z}_m\)</span> è unica,
+dunque <em>la soluzione è sempre unica</em></li>
+</ul></li>
+</ul></li>
+</ul>
+<h2 id="cor">Cor</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\(k \in \mathbb{N}\)</span></li>
+<li><span class="math inline">\(n_1, \ldots, n_k \in \mathbb{N} - \{0\}
+\mid \forall i, j \in [1, k] \quad i \neq j \implies \textrm{MCD}(n_i,
+n_j) = 1\)</span></li>
+<li><span class="math inline">\(N := \textrm{mcm}(n_1, \ldots,
+n_k)\)</span></li>
+<li><span class="math inline">\([a] \in \mathbb{Z}_N^*\)</span></li>
+<li><span class="math inline">\(o := o([a])\)</span> in <span
+class="math inline">\(\mathbb{Z}_N^*\)</span></li>
+<li><span class="math inline">\(\forall h \in [1, k] \quad o_h :=
+o([a])\)</span> in <span
+class="math inline">\(\mathbb{Z}_{n_h}^*\)</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\(o = \textrm{mcm}(o_1, \ldots,
+o_k)\)</span></li>
+</ul></li>
+<li><strong>Dim</strong>
+<ul>
+<li>per il primo lemma del teorema cinese dei resti <span
+class="math inline">\(N = n_1 \cdot \ldots \cdot n_k\)</span> poiché
+coprimi a due a due in ipotesi</li>
+<li>per il teorema cinese dei resti <span class="math inline">\(a^o
+\equiv 1 \ (\bmod \ N) \implies \left\{\begin{array}{c}a^o \equiv 1 \
+(\bmod \ n_1) \\ \vdots \\ a^o \equiv 1 \ (\bmod \
+n_k)\end{array}\right.\)</span> poiché <span class="math inline">\(n_1,
+\ldots, n_k\)</span> coprimi a due a due in ipotesi</li>
+<li>per dimostrazione precedente, <span
+class="math inline">\(o_1\)</span> è il più piccolo esponente di <span
+class="math inline">\([a]\)</span> per cui <span
+class="math inline">\([a]^{o_1} = 1\)</span> in <span
+class="math inline">\(\mathbb{Z}_{n_1}^*\)</span>, ma questo implica che
+<span class="math inline">\(\forall k \in \mathbb{Z} \quad ([a]^{o_1})^k
+= 1\)</span> in <span class="math inline">\(\mathbb{Z}_{n_1}^*\)</span>,
+e allora necessariamente <span class="math inline">\(a^o \equiv 1 \
+(\bmod \ n_1)\)</span> implica che <span
+class="math inline">\(o\)</span> sia un multiplo di <span
+class="math inline">\(o_1\)</span></li>
+<li>per ragionamento analogo, vale il seguente sistema <span
+class="math inline">\(\left\{\begin{array}{c}o_1 \mid o \\ \vdots \\ o_k
+\mid o \end{array}\right. \implies \textrm{mcm}(o_1, \ldots, o_k) \mid
+o\)</span></li>
+<li>sia <span class="math inline">\(m := \textrm{mcm}(o_1, \ldots,
+o_k)\)</span></li>
+<li>per definizione <span
+class="math inline">\(\left\{\begin{array}{c}o_1 \mid m \\ \vdots \\ o_k
+\mid m \end{array}\right.\)</span></li>
+<li>per ragionamento analogo all’osservazione precedente, si ottiene che
+<span class="math inline">\(\left\{\begin{array}{c}a^m \equiv 1 \ (\bmod
+\ n_1) \\ \vdots \\ a^m \equiv 1 \ (\bmod \ n_k)\end{array}\right.
+\implies a^m \equiv 1 \ (\bmod \ N) \implies o \mid m\)</span></li>
+<li><span class="math inline">\(m \mid o \land o \mid m \implies o =
+m\)</span></li>
+</ul></li>
+</ul>
+<hr />
+<h1 id="teorema-del-binomio-di-newton">Teorema del binomio di
+newton</h1>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\(A\)</span> anello commutativo</li>
+<li><span class="math inline">\(a, b \in A\)</span></li>
+<li><span class="math inline">\(n \in \mathbb{N}\)</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\((a+b )^n = \displaystyle{\sum_{k =
+0}^{n}{\binom{n}{k} a^k b ^{n - k}}}\)</span></li>
+</ul></li>
+<li><strong>Dim</strong>
+<ul>
+<li><span class="math inline">\(n = 0 \implies (a+b)^0 =
+\displaystyle{\sum_{k = 0}^{0}{\binom{0}{k}a^kb^{0 - k}}} =
+\binom{0}{0}a^0b^0=1\)</span></li>
+<li><span class="math inline">\((a+ b)^{n + 1} = (a+b)^{n }\cdot
+(a+b)\)</span></li>
+<li>⚠️ <strong>INCOMPLETA</strong></li>
+</ul></li>
+</ul>
+<h2 id="cor-1">Cor</h2>
+<ul>
+<li>⚠️ <strong>NON HO CAPITO UN CAZZO</strong></li>
+</ul>
+<hr />
+<h1 id="piccolo-teorema-di-fermat">Piccolo teorema di Fermat</h1>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\(p \in \mathbb{P}\)</span></li>
+<li><span class="math inline">\(a \in \mathbb{Z}\)</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\(a^{p} \equiv a \ (\bmod \
+p)\)</span></li>
+</ul></li>
+<li><strong>Dim</strong>
+<ul>
+<li><em>prima dimostrazione</em>
+<ul>
+<li><span class="math inline">\(a=0 \implies [0]^{p} =[0]\)</span></li>
+<li><span class="math inline">\(a \gt 0 \implies\)</span> <span
+class="math inline">\([a+1]^{p}=[a+1]\)</span>
+<ul>
+<li>per definizione di <span class="math inline">\(+\)</span>, si
+ottiene che <span class="math inline">\([a +1] = [a] + [1] \iff [a+1]^p
+= ([a] + [1])^p\)</span>, e per dimostrazione precedente, <span
+class="math inline">\(([a]+[1])^p = [a]^p +[1]^p\)</span> in <span
+class="math inline">\(\mathbb{Z}_p\)</span></li>
+<li><span class="math inline">\([a+1]^{p}=[a+1] \iff
+[a]^{p}+[1]^{p}=[a+1] \implies [a]^p + [1] = [a + 1] \iff [a]^p = [a +
+1] -[1] = [a]\)</span>, che coincide con l’ipotesi induttiva</li>
+</ul></li>
+</ul></li>
+<li><em>seconda dimostrazione</em>
+<ul>
+<li><span class="math inline">\(p \in \mathbb{P} \implies \mathbb{Z}_p^*
+= \mathbb{Z} - \{[0]\}\)</span> per dimostrazione precedente, e dunque
+<span class="math inline">\(|\mathbb{Z}_p^*| = p - 1\)</span></li>
+<li><span class="math inline">\([a] \in \mathbb{Z}_p \mid [a] = [0]
+\implies [0^p]=[0]\)</span>, che è vero <span
+class="math inline">\(\forall p \in \mathbb{P}\)</span></li>
+<li><span class="math inline">\([a] \in \mathbb{Z}_p \mid [a] \neq [0]
+\implies [a] \in \mathbb{Z}_p^*\)</span> per osservazione precedente
+<ul>
+<li>per dimostrazione precedente, <span
+class="math inline">\([a]^{|\mathbb{Z}_p^*|}=[1] \iff [a]^{p - 1} = [1]
+\iff [a]^p \cdot [a]^{-1} = [1] \iff [a]^p = [a]\)</span></li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul>
+<h2 id="cor-2">Cor</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\(p \in \mathbb{P}\)</span></li>
+<li><span class="math inline">\([a] \in
+\mathbb{Z}_{p}-\{0\}\)</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span
+class="math inline">\([a]^{-1}=\left[a\right]^{p-2}\)</span></li>
+</ul></li>
+<li><strong>Dim</strong>
+<ul>
+<li><span class="math inline">\([a] \neq [0] \implies \exists[a]^{-1}
+\in \mathbb{Z}_p\)</span>, poiché, per dimostrazione precedente <span
+class="math inline">\(\mathbb{Z}_p^* = \mathbb{Z_p} -
+\{0\}\)</span></li>
+<li>per il teorema di Fermat <span class="math inline">\([a]^p = [a]
+\iff [a]^p \cdot [a]^{-1} = [a] \cdot [a]^{-1} \iff [a]^{p -1} = [1]
+\iff [a] \cdot [a]^{p -2} = [1]\iff [a]^{-1} = [a]^{p-2}\)</span></li>
+</ul></li>
+</ul>
+<h2 id="cor-3">Cor</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\(p \in \mathbb{P}\)</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\(\displaystyle \prod_{0 \lt a \lt p} (x -
+a) \equiv x^{p - 1} - 1 \ (\bmod \ p)\)</span></li>
+</ul></li>
+<li><strong>Dim</strong>
+<ul>
+<li>per il piccolo teorema di Fermat <span class="math inline">\(a^p
+\equiv a \iff a^{p - 1} \equiv 1 \iff a^{p - 1} - 1 \equiv 0\ (\bmod \
+p)\)</span>, che è equivalente a dire che <span
+class="math inline">\([a]\)</span> è radice del polinomio <span
+class="math inline">\(x^{p -1 } - [1] \in \mathbb{Z}_p[x]\)</span></li>
+<li>per dimostrazione precedente <span class="math inline">\(\forall 0
+\lt a \lt p \quad [a]^{p - 1} - 1 = [0] \implies x - [a] \mid x^{p -1} -
+[1]\)</span>, ovvero <span class="math inline">\(\displaystyle \prod_{0
+\lt a \lt p} (x - [a]) \mid x^{p - 1} - [1] \implies \exists c \in
+\mathbb{N} \mid x^{p - 1} - [1] = c \cdot \displaystyle \prod_{0 \lt a
+\lt p} (x - [a])\)</span></li>
+<li>poiché <span class="math inline">\(x^{p- 1}-[1]\)</span> e <span
+class="math inline">\(\displaystyle \prod_{0 \lt a \lt p} (x -
+[a])\)</span> sono due polinomi il cui coefficiente direttore è <span
+class="math inline">\(1\)</span>, allora necessariamente <span
+class="math inline">\(c = 1\)</span>, per cui segue la tesi</li>
+</ul></li>
+</ul>
+<h2 id="cor-4">Cor</h2>
+<ul>
+<li>⚠️ <strong>NON HO CAPITO UN CAZZO</strong></li>
+</ul>
+<hr />
+<h1 id="teorema-di-eulero">Teorema di Eulero</h1>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\(a, n \in \mathbb{N} \mid \textrm{MCD}(a,
+n) = 1\)</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\(a^{\varphi(n)} \equiv 1 \ (\bmod \
+n)\)</span></li>
+</ul></li>
+<li><strong>Dim</strong>
+<ul>
+<li>per dimostrazione precedente <span
+class="math inline">\(\textrm{MCD}(a, n) = 1 \implies [a] \in
+\mathbb{Z}_n^*\)</span></li>
+<li>per dimostrazione precedente <span class="math inline">\([a] ^
+{|\mathbb{Z}_n^*|} = [1]\)</span></li>
+<li>per definizione <span class="math inline">\(\varphi(n) :=
+|\mathbb{Z}_n^*|\)</span>, e dunque <span class="math inline">\(a
+^{\varphi(n)} \equiv 1 \ (\bmod \ n)\)</span></li>
+</ul></li>
+</ul>
+<hr />
+<h1 id="teorema-fondamentale-di-isomorfismo">Teorema fondamentale di
+isomorfismo</h1>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\(A, B\)</span> anelli</li>
+<li><span class="math inline">\(f: A \rightarrow B\)</span> morfismo di
+anelli</li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\(A / \textrm{ker}(f) \cong
+\textrm{Im}(f)\)</span>, ovvero <span class="math inline">\(\exists
+\varphi \mid \varphi : A / \textrm{ker}(f) \rightarrow \textrm{Im}(f):
+[a] \rightarrow f(a)\)</span> isomorfismo di anelli</li>
+</ul></li>
+<li><strong>Dim</strong>
+<ul>
+<li><span class="math inline">\(\varphi\)</span> è ben definita
+<ul>
+<li><span class="math inline">\(\varphi\)</span> è ben definita <span
+class="math inline">\(\iff [x] = [y] \implies f(x) = f(y) \quad \forall
+x, y \in A\)</span></li>
+<li><span class="math inline">\([x] = [y] \iff x \equiv y \ (\bmod \
+\textrm{ker}(f)) \implies y - x \in \textrm{ker}(f) \implies f(y - x) =
+0_B\)</span> per definizione</li>
+<li><span class="math inline">\(f(y - x) = f(y + (-x))\)</span>, e <span
+class="math inline">\(-x \in A\)</span> perche <span
+class="math inline">\(A\)</span> è un anello</li>
+<li>per dimostrazione precedente <span class="math inline">\(f\)</span>
+morfismo <span class="math inline">\(\implies f(x^{-1}) =
+f(x)^{-1}\)</span>, e dunque rispetto a <span
+class="math inline">\(+\)</span> in <span
+class="math inline">\(A\)</span> si ottiene che <span
+class="math inline">\(\forall x \in A \quad f(-x) = -f(x)\)</span></li>
+<li>dunque, <span class="math inline">\(f(y-x) = f(y)-f(x) \iff 0_B =
+f(y) - f(x) \iff f(y) = f(x)\)</span></li>
+</ul></li>
+<li><span class="math inline">\(\varphi\)</span> morfismo di anelli
+<ul>
+<li><span class="math inline">\(\varphi\)</span> morfismo di anelli
+<span class="math inline">\(\iff \varphi([a]) \cdot \varphi([b]) =
+\varphi([a]\cdot [b])\)</span> e <span
+class="math inline">\(\varphi([a]) + \varphi([b]) = \varphi([a]+
+[b])\)</span>
+<ul>
+<li><span class="math inline">\(\varphi([a]) \cdot \varphi([b]) = f(a)
+\cdot f(b)\)</span> per definizione di <span
+class="math inline">\(\varphi\)</span></li>
+<li><span class="math inline">\(f(a) \cdot f(b) = f(a\cdot b)\)</span>
+per morfismo di <span class="math inline">\(f\)</span></li>
+<li><span class="math inline">\(f(a \cdot b ) = \varphi([a \cdot
+b])\)</span> per definizione di <span
+class="math inline">\(\varphi\)</span></li>
+<li><span class="math inline">\(\varphi([a \cdot b]) = \varphi([a] \cdot
+[b])\)</span> per definizione di <span
+class="math inline">\(\cdot\)</span></li>
+<li>per <span class="math inline">\(+\)</span> vale il ragionamento
+analogo</li>
+</ul></li>
+</ul></li>
+<li><span class="math inline">\(\varphi\)</span> isomorfismo di anelli
+<span class="math inline">\(\iff \varphi\)</span> iniettiva e suriettiva
+<ul>
+<li><span class="math inline">\(\varphi\)</span> iniettiva
+<ul>
+<li><span class="math inline">\(\varphi\)</span> iniettiva <span
+class="math inline">\(\iff \textrm{ker}(\varphi)=\{[0_A]\}\)</span> per
+dimostrazione precedente</li>
+<li><span class="math inline">\(x \in \textrm{ker}(f) \iff x - 0_A \in
+\textrm{ker}(f) \implies x \equiv 0_A \ (\bmod \ \textrm{ker}(f))
+\implies [x] = [0_A] \implies \varphi([x]) = \varphi([0_A])\)</span>,
+poiché <span class="math inline">\(\varphi\)</span> è ben definita,
+dunque <span class="math inline">\(f(x) = 0_B\)</span></li>
+</ul></li>
+<li><span class="math inline">\(\varphi\)</span> suriettiva
+<ul>
+<li><span class="math inline">\(\varphi : A / \textrm{ker}(f)
+\rightarrow \textrm{Im}(f) \implies\)</span> l’insieme di arrivo di
+<span class="math inline">\(\varphi\)</span> coincide è proprio
+l’insieme delle immagini di <span class="math inline">\(f\)</span>,
+quindi <span class="math inline">\(\varphi\)</span> è suriettiva per
+costruzione</li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul>
+<h2 id="oss-1">Oss</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\(G, H\)</span> gruppi</li>
+<li><span class="math inline">\(f: G \rightarrow H\)</span> morfismo di
+gruppi</li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\(G / \textrm{ker}(f) \cong
+\textrm{Im}(f)\)</span>, o alternativamente <span
+class="math inline">\(\exists \varphi \mid \varphi : G / \textrm{ker}(f)
+\rightarrow \textrm{Im}(f): [g] \rightarrow f(g)\)</span> isomorfismo di
+gruppi</li>
+</ul></li>
+<li><strong>Dim</strong>
+<ul>
+<li>la dimostrazione è analoga al caso degli anelli</li>
+</ul></li>
+</ul>
+<hr />
+<h2 id="teorema-di-cauchy">Teorema di Cauchy</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\(G\)</span> gruppo finito</li>
+<li><span class="math inline">\(p \in \mathbb{P}\)</span></li>
+<li><span class="math inline">\(p \bigg\vert |G|\)</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\(\exists g \in G \mid o(g) =
+p\)</span></li>
+</ul></li>
+</ul>
+<h2 id="oss-2">Oss</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\(G\)</span> gruppo <span
+class="math inline">\(\bigg\vert |G|=4\)</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\(G \cong \mathbb{Z}_4\)</span> oppure
+<span class="math inline">\(G \cong K_4\)</span></li>
+</ul></li>
+<li><strong>Dim</strong>
+<ul>
+<li>⚠️ <strong>L’HO SCRITTA MA NON HO CAPITO NIENTE IN QUESTA
+DIMOSTRAZIONE</strong></li>
+<li>preso <span class="math inline">\(a \in G \mid a \neq 1\)</span>,
+per dimostrazione precedente <span class="math inline">\(o(a) \bigg\vert
+|G| \implies o(a)=1 \lor o(a) =2 \lor o(a) = 4\)</span>, ma <span
+class="math inline">\(a \neq 1 \implies o(a) \neq 1\)</span></li>
+<li>2 casi
+<ul>
+<li><span class="math inline">\(\exists x \in G \mid o(x)=4 \implies G
+\cong \mathbb{Z}_4\)</span> <strong>⚠️ PERCHÉ?</strong></li>
+<li><span class="math inline">\(\nexists x \in G \mid o(x) =4\)</span>
+<ul>
+<li><span class="math inline">\(|G| = 4 \implies G\)</span> è della
+forma <span class="math inline">\(\{1, a, b, c\}\)</span> con <span
+class="math inline">\(o(a)=o(b)=o(c)=2\)</span> <strong>⚠️
+PERCHÉ?</strong>
+<ul>
+<li><span class="math inline">\(1 \in G\)</span> perché <span
+class="math inline">\(G\)</span> gruppo in ipotesi</li>
+<li><span class="math inline">\(a \neq b \neq c \neq 1\)</span>,
+altrimenti <span class="math inline">\(|G| \lt 4\)</span></li>
+</ul></li>
+<li><span class="math inline">\(a^2=b^2=c^2=1 \implies\)</span><span
+class="math inline">\(\left\{\begin{array}{l}a=a^{-1} \\ b=b^{-1} \\
+c=c^{-1}\end{array}\right.\)</span></li>
+<li><span class="math inline">\(G\)</span> abeliano <span
+class="math inline">\(\iff\)</span> presi i 3 elementi non neutri,
+moltiplicandone due tra loro si ottiene il terzo <strong>⚠️
+PERCHÉ?</strong>
+<ul>
+<li><span class="math inline">\(ab = c\)</span>
+<ul>
+<li><span class="math inline">\(ab = 1 \implies b = a^{-1} = a \
+\bot\)</span></li>
+<li><span class="math inline">\(ab = a \implies b = 1 \
+\bot\)</span></li>
+<li><span class="math inline">\(ab = b \implies a = 1 \
+\bot\)</span></li>
+<li>quindi necessariamente <span class="math inline">\(ab =
+c\)</span></li>
+<li>il ragionamento è analogo per tutti gli altri prodotti</li>
+</ul></li>
+</ul></li>
+<li>quindi <span class="math inline">\(G \cong K_4\)</span> <strong>⚠️
+PERCHÉ? non mancano altre cose?</strong></li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul>
+</body>
+</html>

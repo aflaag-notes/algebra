@@ -1,0 +1,817 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Permutazioni</title>
+  <style>
+    html {
+      line-height: 1.5;
+      font-family: Georgia, serif;
+      font-size: 20px;
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 1em;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, 'Lucida Console', Consolas, monospace;
+      font-size: 85%;
+      margin: 0;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+  </style>
+  <script
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js"
+  type="text/javascript"></script>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Permutazioni</h1>
+</header>
+<h1 id="permutazioni">Permutazioni</h1>
+<h2 id="def">Def</h2>
+<ul>
+<li><strong>Permutazioni</strong> &gt; - <span
+class="math inline">\(X\)</span> insieme &gt; - <span
+class="math inline">\(S_X := \{f \mid f:X \rightarrow X\)</span>
+biiettiva <span class="math inline">\(\}\)</span> è l’<strong>insieme
+delle permutazioni di <span class="math inline">\(X\)</span></strong>
+&gt; - <span class="math inline">\(X = \{1, \ldots, n\} \implies
+S_n\)</span> è detto <strong>gruppo simmetrico di <span
+class="math inline">\(n\)</span></strong></li>
+</ul>
+<h2 id="oss">Oss</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\(S_X := \{f \mid f : X \rightarrow
+Y\)</span> biiettiva <span class="math inline">\(\}\)</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\((S_X, \circ)\)</span> è un gruppo, non
+abeliano se <span class="math inline">\(|X| \ge 3\)</span></li>
+</ul></li>
+<li><strong>Dim</strong>
+<ul>
+<li>la composizione di funzioni è associativa</li>
+<li><span class="math inline">\(\textrm{id}\)</span> è biiettiva <span
+class="math inline">\(\implies \textrm{id} \in S_X\)</span> per
+definizione, e costituisce l’elemento neutro</li>
+<li><span class="math inline">\(\forall f:X \rightarrow Y \in S_X \quad
+\exists f^{-1}: Y \rightarrow X\)</span>, poiché <span
+class="math inline">\(f \in S_X \implies f\)</span> biiettiva, e ogni
+funzione biiettiva è invertibile</li>
+<li><span class="math inline">\(|X| = 2 \implies X\)</span> è della
+forma <span class="math inline">\(X = \{a, b\}\)</span>, quindi <span
+class="math inline">\(S_X =\left\{\begin{array}{l}a \rightarrow a \\ b
+\rightarrow b\end{array}\right. \ ,\ \left.\begin{array}{l}a \rightarrow
+b \\ b \rightarrow a\end{array}\right\}\)</span>, dove uno dei due
+elementi è <span class="math inline">\(\rm id\)</span>
+<ul>
+<li><span class="math inline">\(\rm id \circ id = id\)</span></li>
+<li><span class="math inline">\(\rm \sigma \circ id = id \circ \sigma =
+\sigma\)</span></li>
+<li><span class="math inline">\(\rm \sigma \circ \sigma = id\)</span>
+per costruzione</li>
+</ul></li>
+<li>quindi <span class="math inline">\(|X| = 2 \implies S_X\)</span> è
+abeliano, mentre <span class="math inline">\(|X| = 1 \implies
+S_X\)</span> è abeliano perché contiene un solo elemento</li>
+</ul></li>
+</ul>
+<h2 id="def-1">Def</h2>
+<ul>
+<li><strong>Ciclo di una permutazione</strong> &gt; - <span
+class="math inline">\(n \in \mathbb{N}\)</span> &gt; - <span
+class="math inline">\(\sigma \in S_n\)</span> &gt; - <span
+class="math inline">\(\exists 1 \leq i_1, \ldots, i_d \leq n \in
+\mathbb{N} \mid \left\{\begin{array}{c} \sigma\left(i_{1}\right)=i_{2}
+\\ \sigma\left(i_{2}\right)=i_{3} \\ \vdots \\
+\sigma\left(i_{d-1}\right)=i_{d} \\ \sigma\left(i_{d}\right)=i_{1}
+\end{array}\right. \implies i_1, \ldots, i_n\)</span> costituiscono un
+<strong>ciclo di <span
+class="math inline">\(\sigma\)</span></strong></li>
+</ul>
+<h2 id="oss-1">Oss</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\(n \in \mathbb{N}\)</span></li>
+<li><span class="math inline">\(\sigma \in S_n\)</span></li>
+<li><span class="math inline">\(1 \le i \lt n \in
+\mathbb{N}\)</span></li>
+<li><span class="math inline">\(I(\sigma, i):=\left\{n \in \mathbb{Z}
+\mid \sigma^{n}(i)=i\right\}\)</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\((I(\sigma, i), +) \subset (\mathbb{Z},
++)\)</span> è un ideale</li>
+</ul></li>
+<li><strong>Dim</strong>
+<ul>
+<li><span class="math inline">\((I(\sigma, i), +) \subset (\mathbb{Z},
++)\)</span> è un sottogruppo
+<ul>
+<li><span class="math inline">\(\sigma ^0 = \textrm{id} \implies \forall
+i \quad \sigma ^0(i) = \textrm{id}(i) = i \implies 0 \in I(\sigma,
+i)\)</span></li>
+<li><span class="math inline">\(m, n \in I(\sigma, i) \implies \sigma^m
+(i) = \sigma^n(i) = i\)</span>, ma <span
+class="math inline">\(\sigma^{m+n}(i)=\sigma^{m}\left(\sigma^{n}(i)\right)
+= \sigma^m(i)=i \implies m + n \in I(\sigma, i)\)</span></li>
+<li><span class="math inline">\(n \in I(\sigma, i) \implies \sigma ^n
+(i) = i\)</span>, ma per simmetria della permutazione <span
+class="math inline">\(\sigma^ {-n} (i) = i \implies -n \in I(\sigma,
+i)\)</span></li>
+</ul></li>
+<li><span class="math inline">\(\forall \tau \in S_n \mid \tau (i) = i
+\implies \forall k \in \mathbb{Z} \quad \tau ^k (i) = i\)</span>, ma
+allora <span class="math inline">\(\forall n \in I(\sigma, i) \quad
+\sigma^n(i) = i\)</span> si può riscrivere come <span
+class="math inline">\((\sigma^n)^k(i) = i \quad \forall k \in \mathbb{Z}
+\implies \sigma^{nk}(i) = i \implies nk \in I(\sigma, i)\)</span></li>
+</ul></li>
+</ul>
+<h2 id="oss-2">Oss</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li>⚠️ <strong>RISCRIVI TUTTO</strong></li>
+<li><span class="math inline">\(I(\sigma, i)\)</span> è <strong>ideale
+principale</strong> in <span class="math inline">\(\mathbb{Z}\)</span>
+generato da <span class="math inline">\(I(d)\)</span>, dove <span
+class="math inline">\(d\)</span> è la lunghezza del ciclo di <span
+class="math inline">\(i\)</span>, quindi <span
+class="math inline">\(I(\sigma, i) = I(d)\)</span></li>
+<li><span class="math inline">\(I(\sigma, i) = I(d) \implies d \in
+I(\sigma, i)\)</span></li>
+</ul></li>
+<li><strong>Dim</strong>
+<ul>
+<li>⚠️ <strong>MANCA DIMOSTRAZIONE</strong></li>
+</ul></li>
+</ul>
+<h2 id="cor">Cor</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\(n \in \mathbb{N}\)</span></li>
+<li><span class="math inline">\(\sigma \in S_n \mid \sigma = \gamma_1
+\ldots \gamma_k\)</span> sia la sua decomposizione in cicli</li>
+<li><span class="math inline">\(d_j:=\)</span> lunghezza di <span
+class="math inline">\(\gamma_j \quad \forall j \in [1, k]\)</span></li>
+<li><span class="math inline">\(m := \textrm{mcm}(d_1, \ldots,
+d_k)\)</span></li>
+<li><span class="math inline">\(I(\sigma):=\left\{n \in \mathbb{Z} \mid
+\sigma^{n}=\textrm{id}\right\}\)</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\(o(\sigma) = m\)</span></li>
+</ul></li>
+<li><strong>Dim</strong>
+<ul>
+<li><span class="math inline">\(n \in I(\sigma) \iff
+\sigma^{n}=\textrm{id} \iff \forall 1 \leq i \leq n \quad
+\sigma^{n}(i)=i \iff \forall 1 \leq i \leq n \quad n \in I(\sigma, i)
+\iff n \in I(\sigma, 1) \cap \ldots \cap I(\sigma, n)\)</span></li>
+<li>di conseguenza <span class="math inline">\(n \in I(\sigma) \iff n
+\in I(\sigma, 1) \cap \ldots \cap I(\sigma, n)\)</span> e dunque <span
+class="math inline">\(I(\sigma) =I(\sigma, 1) \cap \ldots \cap I(\sigma,
+n)\)</span></li>
+<li>inoltre, per dimostrazione precedente <span
+class="math inline">\(I(\sigma) = I(\sigma, 1) \cap \ldots \cap
+I(\sigma, n) = I(d_1) \cap \ldots \cap I(d_k)\)</span></li>
+<li>per dimostrazione precedente <span class="math inline">\(I(d_1) \cap
+\ldots \cap I(d_k) = I(m) = I(\sigma)\)</span></li>
+<li>dato <span class="math inline">\(d := o(\sigma)\)</span>, per
+dimostrazione precedente <span class="math inline">\(I(m) = I(\sigma) =
+I(d) \implies m = d\)</span></li>
+</ul></li>
+</ul>
+<hr />
+<h1 id="trasposizioni">Trasposizioni</h1>
+<h2 id="def-2">Def</h2>
+<ul>
+<li><p><strong>Trasposizione</strong> &gt; - <span
+class="math inline">\(n \in \mathbb{N}\)</span> &gt; - <span
+class="math inline">\(i, j \in \mathbb{N} \mid 1 \leq i \lt j \leq n
+\quad\)</span> &gt; - <span class="math inline">\(k \in [1, n]\)</span>
+&gt; - <span class="math inline">\(\tau_{i, j} \in S_n \mid \tau_{i, j}
+=\)</span><span class="math inline">\(\left\{\begin{array}{ll}j &amp;
+k=i \\ i &amp; k=j \\ k &amp; k \neq i, j\end{array}\right.\)</span> è
+detta <strong>trasposizione</strong>, ovvero una permutazione che
+inverte esclusivamente due elementi tra loro &gt; - <span
+class="math inline">\(\tau_{i, j}^2 = \textrm{id} \iff \tau_{i, j} =
+\tau_{i, j} ^{-1}\)</span></p></li>
+<li><p><strong>Trasposizione adiacente</strong> &gt; - <span
+class="math inline">\(n \in \mathbb{N}\)</span> &gt; - <span
+class="math inline">\(i, j \in \mathbb{N} \mid 1 \le i \lt j \le n \land
+j = i + 1\)</span> &gt; - <span class="math inline">\(\tau_{i,
+j}=\tau_{i, i+1}\)</span> è detta <strong>trasposizione
+adiacente</strong>, poiché inverte esclusivamente due elementi,
+adiacenti, tra loro</p></li>
+</ul>
+<h2 id="oss-3">Oss</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\(n \in \mathbb{N}\)</span></li>
+<li><span class="math inline">\(\sigma \in S_n\)</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\(\exists 1 \leq i_1, \ldots, i_k \lt n
+\mid \sigma = \tau_{i_1, i_1 + 1} \ldots \tau_{i_k, i_k + 1}\)</span>,
+quindi ogni permutazione può essere riscritta come composizione di
+trasposizioni adiacenti</li>
+</ul></li>
+<li><strong>Dim</strong>
+<ul>
+<li><span class="math inline">\(\tau_{i,
+j}=\left(\begin{array}{ccccccc}1 &amp; \cdots &amp; i &amp; \cdots &amp;
+j &amp; \cdots &amp; n \\ 1 &amp; \cdots &amp; j &amp; \cdots &amp; i
+&amp; \cdots &amp; n\end{array}\right)\)</span> è una trasposizione
+qualsiasi</li>
+<li><span class="math inline">\(\sigma=\left(\begin{array}{ccccccc}1
+&amp; \cdots &amp; i &amp; \cdots &amp; j &amp; \cdots &amp; n \\
+\sigma(1) &amp; \cdots &amp; \sigma(i) &amp; \cdots &amp; \sigma(j)
+&amp; \cdots &amp; \sigma(n) \end{array}\right)\)</span> è una
+permutazione</li>
+<li>allora <span class="math inline">\(\sigma \tau_{i,
+j}=\left(\begin{array}{ccccccc}1 &amp; \cdots &amp; i &amp; \cdots &amp;
+j &amp; \cdots &amp; n \\ \sigma(1) &amp; \cdots &amp; \sigma(j) &amp;
+\cdots &amp; \sigma(i) &amp; \cdots &amp; \sigma(n)
+\end{array}\right)\)</span></li>
+<li>in particolare, se le trasposizioni devono essere adiacenti, allora
+ogni trasposizione invertirà due colonne adiacenti alla volta</li>
+<li><em>esempio</em>
+<ul>
+<li><span class="math inline">\(\sigma=\left(\begin{array}{llll}1 &amp;
+2 &amp; 3 &amp; 4 \\ 2 &amp; 4 &amp; 3 &amp; 1\end{array}\right)
+\implies \sigma \tau_{34}\left(\begin{array}{llll}1 &amp; 2 &amp; 3
+&amp; 4 \\ 2 &amp; 4 &amp; 1 &amp; 3\end{array}\right) \implies\)</span>
+<span class="math inline">\(\sigma \tau_{3 4}
+\tau_{23}=\left(\begin{array}{llll}1 &amp; 2 &amp; 3 &amp; 4 \\ 2 &amp;
+1 &amp; 4 &amp; 3\end{array}\right) \implies\)</span><span
+class="math inline">\(\sigma \tau_{3 4} \tau_{23}
+\tau_{12}=\left(\begin{array}{llll}1 &amp; 2 &amp; 3 &amp; 4 \\ 1 &amp;
+2 &amp; 4 &amp; 3\end{array}\right) \implies\)</span><span
+class="math inline">\(\sigma \tau_{34} \tau_{23} \tau_{12}
+\tau_{34}=\left(\begin{array}{llll}1 &amp; 2 &amp; 3 &amp; 4 \\ 1 &amp;
+2 &amp; 3 &amp; 4\end{array}\right) = \textrm{id}\)</span>, ma allora
+<span class="math inline">\(\textrm{id} = \sigma \tau_{34} \tau_{23}
+\tau_{12} \tau_{34} \iff \sigma =\tau_{34} \tau_{12} \tau_{23}
+\tau_{34}\)</span></li>
+</ul></li>
+</ul></li>
+</ul>
+<hr />
+<h1 id="segno">Segno</h1>
+<h2 id="def-3">Def</h2>
+<ul>
+<li><strong>Segno di una permutazione</strong> &gt; - <span
+class="math inline">\(n \in \mathbb{N}\)</span> &gt; - <span
+class="math inline">\(\sigma \in S_n\)</span> &gt; - <span
+class="math inline">\(\textrm{Inv}(\sigma) := \{ (i, j) \mid 1 \leq i
+\lt j \lt n : \sigma(i) \gt \sigma(j)\}\)</span> è l’<strong>insieme
+delle inversioni di <span class="math inline">\(\sigma\)</span></strong>
+&gt; - <span class="math inline">\(\textrm{sgn}(\sigma) :=
+(-1)^{|\textrm{Inv}(\sigma)|} =\)</span><span
+class="math inline">\(\left\{\begin{array}{ll}+1 &amp;
+|\operatorname{Inv}(\sigma)| \equiv 0 \ (\bmod 2) \\ -1 &amp;
+|\operatorname{Inv}(\sigma)| \equiv 1 \ (\bmod 2)\end{array}\right.
+\implies \sigma\)</span> <strong>pari</strong> <span
+class="math inline">\(\iff \textrm{sgn}(\sigma) = +1\)</span> &gt; -
+<span class="math inline">\(\textrm{sgn}(\textrm{id}) = (-1)^0 =
+1\)</span>, in quando la funzione identità non ha inversioni</li>
+</ul>
+<h2 id="oss-4">Oss</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\(n \in \mathbb{N}\)</span></li>
+<li><span class="math inline">\(A_n := \{\sigma \in S_n \mid
+\sigma\)</span> pari<span class="math inline">\(\}\)</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\(A_n \subset S_n\)</span> è un
+sottogruppo, detto <em>gruppo alterno di ordine <span
+class="math inline">\(n\)</span></em></li>
+</ul></li>
+</ul>
+<h2 id="oss-5">Oss</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\(n \in \mathbb{N}\)</span></li>
+<li><span class="math inline">\(\sigma \in S_{n} \mid \sigma=\tau_{1}
+\ldots \tau_{k}\)</span> dove <span class="math inline">\(\forall j \in
+[1, k] \quad \tau_{j} = \tau_{j, j + 1}\)</span>, dunque tutte le
+trasposizioni sono adiacenti</li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\(\textrm{sgn}(\sigma)=
+(-1)^k\)</span></li>
+</ul></li>
+<li><strong>Dim</strong>
+<ul>
+<li><span class="math inline">\(\tau_{i, i +
+1}=\left(\begin{array}{ccccccc}1 &amp; \cdots &amp; i &amp; &amp; i + 1
+&amp; \cdots &amp; n \\ 1 &amp; \cdots &amp; i + 1 &amp; &amp; i &amp;
+\cdots &amp; n\end{array}\right)\)</span> è una trasposizione
+adiacente</li>
+<li><span class="math inline">\(\sigma=\left(\begin{array}{ccccccc}1
+&amp; \cdots &amp; i &amp; &amp; i + 1 &amp; \cdots &amp; n \\ \sigma(1)
+&amp; \cdots &amp; \sigma(i) &amp; &amp; \sigma(i + 1) &amp; \cdots
+&amp; \sigma(n) \end{array}\right)\)</span> è una permutazione</li>
+<li>allora <span class="math inline">\(\sigma \tau_{i, i +
+1}=\left(\begin{array}{ccccccc}1 &amp; \cdots &amp; i &amp; &amp; i + 1
+&amp; \cdots &amp; n \\ \sigma(1) &amp; \cdots &amp; \sigma(i + 1) &amp;
+&amp; \sigma(i) &amp; \cdots &amp; \sigma(n)
+\end{array}\right)\)</span></li>
+<li>di conseguenza <span class="math inline">\(\textrm{Inv}(\sigma
+\tau_{i, i + 1})=\)</span><span
+class="math inline">\(\left\{\begin{array}{ll}\operatorname{Inv}(\sigma)
+\cup\{(i, i+1)\} &amp; (i, i+1) \notin \operatorname{Inv}(\sigma) \\
+\operatorname{Inv}(\sigma)-\{(i, i+1)\} &amp; (i, i+1) \in
+\operatorname{Inv}(\sigma)\end{array}\right.\)</span>
+<ul>
+<li><span class="math inline">\(\forall i \mid i \lt i + 1 \quad (i, i +
+1) \in \textrm{Inv}(\sigma) \iff \sigma(i) \gt \sigma(i +
+1)\)</span></li>
+<li>in <span class="math inline">\(\sigma \tau_{i, i + 1}\)</span> le
+colonne <span class="math inline">\(i\)</span> e <span
+class="math inline">\(i + 1\)</span> si invertono, e di conseguenza
+<span class="math inline">\(\sigma \tau_{i, i + 1}(i) \lt \sigma
+\tau_{i, i + 1}(i +1) \implies (i, i + 1) \notin \textrm{Inv}(\sigma
+\tau_{i, i + 1})\)</span> per definizione</li>
+</ul></li>
+<li>dunque <span class="math inline">\(|\textrm{Inv}(\sigma \tau_{i, i +
+1}) | = | \textrm{Inv}(\sigma) | \pm 1 \implies (-1)^{\mid
+\textrm{Inv}(\sigma \tau_{i, i + 1})\mid} = (-1)^{\mid
+\textrm{Inv}(\sigma) \mid \pm 1} \implies \textrm{sgn}(\sigma \tau_{i, i
++ 1}) = - \textrm{sgn}(\sigma)\)</span> poiché <span
+class="math inline">\(\pm 1\)</span> all’esponente di <span
+class="math inline">\((-1)\)</span> ne invertirà il segno
+<ul>
+<li>dunque aggiungendo o togliendo una trasposizione adiacente ad una
+permutazione, si inverte il segno della composizione</li>
+</ul></li>
+<li><span class="math inline">\(\sigma =\tau_{1} \ldots \tau_{k}
+\implies \textrm{id} = \sigma \tau_k \ldots \tau_1\)</span> poiché ogni
+trasposizione è l’inversa di sé stessa, e dunque <span
+class="math inline">\(\textrm{sgn}(\textrm{id}) = 1 =
+\textrm{sgn}(\sigma \tau_k \ldots \tau_1)\)</span> poiché se sono
+uguali, saranno uguali anche i loro segni</li>
+<li><span class="math inline">\(\textrm{sgn}(\sigma \tau_k \ldots
+\tau_1) = -\textrm{sgn}(\sigma \tau_k \ldots \tau_2) =
+\textrm{sgn}(\sigma \tau_k \ldots \tau_3) = \ldots = (-1)^k \cdot
+\textrm{sgn}(\sigma)\)</span> poiché sono state rimosse esattamente
+<span class="math inline">\(k\)</span> trasposizioni adiacenti</li>
+<li>allora <span class="math inline">\((-1)^k \cdot \textrm{sgn}(\sigma)
+= \textrm{sgn}(\textrm{id}) = 1\)</span></li>
+<li><span class="math inline">\(\textrm{sgn}(\sigma) = \pm 1\)</span>, e
+poiché <span class="math inline">\((-1)^k \cdot \textrm{sgn}(\sigma) =
+1\)</span>, allora necessariamente <span
+class="math inline">\(\textrm{sgn}(\sigma) = (-1)^k\)</span></li>
+</ul></li>
+</ul>
+<h2 id="oss-6">Oss</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\(n \in \mathbb{N}\)</span></li>
+<li><span class="math inline">\(\sigma, \sigma^{\prime} \in S_{n} |
+\left\{\begin{array}{l}\sigma = \tau_1 \ldots \tau_k \\ \sigma &#39; =
+\tau_1^{\prime} \ldots \tau_h^{\prime}\end{array}\right.\)</span>, dove
+ogni trasposizione è adiacente</li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\(\operatorname{sgn}\left(\sigma
+\sigma^{\prime}\right)=\operatorname{sgn}(\sigma)\cdot
+\textrm{sgn}(\sigma &#39;)\)</span></li>
+</ul></li>
+<li><strong>Dim</strong>
+<ul>
+<li><span class="math inline">\(\sigma \sigma^\prime = \tau_1 \ldots
+\tau_k \cdot \tau_1^\prime \ldots \tau_h^\prime\)</span>, dunque il
+numero di trasposizioni adiacenti di <span class="math inline">\(\sigma
+\sigma^\prime\)</span> è <span class="math inline">\(k + h\)</span></li>
+<li>per dimostrazione precedente <span
+class="math inline">\(\textrm{sgn}(\sigma \sigma^\prime) = (-1)^ {k + h}
+= (-1)^k \cdot (-1)^h = \textrm{sgn}(\sigma) \cdot
+\textrm{sgn}(\sigma^\prime)\)</span></li>
+</ul></li>
+</ul>
+<h2 id="oss-7">Oss</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\(n \in \mathbb{N}\)</span></li>
+<li><span class="math inline">\(\sigma \in S_n\)</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span
+class="math inline">\(\textrm{sgn}(\sigma^{-1})=\textrm{sgn}(\sigma)\)</span></li>
+</ul></li>
+<li><strong>Dim</strong>
+<ul>
+<li><span
+class="math inline">\(\left.\begin{array}{l}\operatorname{sgn}(\textrm{id})=1
+\\ \sigma \sigma^{-1}=\textrm{id} \implies
+\operatorname{sgn}\left(\sigma
+\sigma^{-1}\right)=\textrm{sgn}(\textrm{id}) \\
+\operatorname{sgn}\left(\sigma
+\sigma^{-1}\right)=\operatorname{sgn}(\sigma) \cdot
+\operatorname{sgn}\left(\sigma^{-1}\right)\end{array}\right\} \implies
+\textrm{sgn}(\sigma) \cdot \textrm{sgn}(\sigma^{-1})= 1\)</span>
+<ul>
+<li><span class="math inline">\(\forall \sigma \in S_n \quad
+\textrm{sgn}(\sigma) = \pm 1\)</span>, di conseguenza se esistono due
+permutazioni <span class="math inline">\(\alpha, \beta \in S_n \mid
+\textrm{sgn}(\alpha) \cdot \textrm{sgn}(\beta) = 1\)</span>, allora
+necessariamente i due segni devono essere o entrambi <span
+class="math inline">\(1\)</span> o entrambi <span
+class="math inline">\(-1\)</span>, e dunque i segni coincidono</li>
+</ul></li>
+<li>dunque <span class="math inline">\(\textrm{sgn}(\sigma) \cdot
+\textrm{sgn}(\sigma^{-1})= 1 \implies \textrm{sgn}(\sigma)=
+\textrm{sgn}(\sigma^{-1})\)</span></li>
+</ul></li>
+</ul>
+<h2 id="oss-8">Oss</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\(n \in \mathbb{N}\)</span></li>
+<li><span class="math inline">\(\sigma, \sigma^\prime \in
+S_n\)</span></li>
+<li><span class="math inline">\(\sigma \sim \sigma ^\prime \iff
+\exists\alpha \in S_n \mid \sigma^\prime = \alpha \sigma
+\alpha^{-1}\)</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\(\textrm{sgn}(\sigma^\prime) =
+\textrm{sgn}(\sigma)\)</span></li>
+</ul></li>
+<li><strong>Dim</strong>
+<ul>
+<li><span class="math inline">\(\sigma \sim \sigma&#39; \implies
+\textrm{sgn}(\sigma^\prime) = \textrm{sgn}(\alpha)\cdot
+\textrm{sgn}(\sigma)\cdot \textrm{sgn}(\alpha^{-1})\)</span></li>
+<li>per dimostrazione precedente <span class="math inline">\(\forall
+\alpha \in S_n \quad \textrm{sgn}(\alpha)=
+\textrm{sgn}(\alpha^{-1})\)</span>, dunque entrambe <span
+class="math inline">\(1\)</span> o entrambe $-1</li>
+<li>quindi <span class="math inline">\(\textrm{sgn}(\alpha) \cdot
+\textrm{sgn}(\alpha^{-1}) = 1 \implies \textrm{sgn}(\sigma^\prime) =
+\textrm{sgn}(\sigma)\)</span></li>
+</ul></li>
+</ul>
+<h2 id="oss-9">Oss</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\(n \in \mathbb{N}\)</span></li>
+<li><span class="math inline">\(\sigma, \sigma^\prime \in S_n \mid
+\sigma := \gamma_1 \ldots \gamma_k, \sigma^\prime := \gamma_1^\prime
+\ldots \gamma_h^\prime\)</span></li>
+<li><span class="math inline">\(\sigma \sim \sigma ^\prime \iff
+\exists\alpha \in S_n \mid \sigma^\prime = \alpha \sigma
+\alpha^{-1}\)</span>, che costituisce dunque la relazione di
+coniugio</li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\(\sigma \sim \sigma ^\prime
+\iff\)</span><span class="math inline">\(\left\{\begin{array}{c}k=h \\
+d=d_{1}^{\prime} \\ \vdots \\
+d_{k}=d_{h}^{\prime}=d_{k}^{\prime}\end{array}\right.\)</span>, dove
+<span class="math inline">\(d_j\)</span> è la lunghezza del ciclo <span
+class="math inline">\(\gamma_j\)</span> e <span
+class="math inline">\(d_j^\prime\)</span> è la lunghezza del ciclo <span
+class="math inline">\(\gamma_j^\prime\)</span></li>
+</ul></li>
+<li><strong>Dim</strong>
+<ul>
+<li><em>prima implicazione</em>
+<ul>
+<li>⚠️ <strong>NIENTE HA SENSO DI QUELLO CHE C’È SCRITTO IN QUESTA
+IMPLICAZIONE</strong></li>
+<li>per definizione <span class="math inline">\(\sigma \sim
+\sigma^\prime \implies \exists\alpha \in S_n \mid \sigma^\prime = \alpha
+\sigma \alpha^{-1}\)</span></li>
+<li><span class="math inline">\(\forall i_1, \ldots, i_d \mid (i_1
+\ldots i_d)\)</span> è un ciclo di <span
+class="math inline">\(\sigma\)</span>, per la relazione di coniugio si
+ottiene che <span
+class="math inline">\(\sigma^\prime(\alpha(i_j))=(\alpha \sigma
+\alpha^{-1})(\alpha(i_j)) \implies (\alpha\sigma)(i_j)=\)</span><span
+class="math inline">\(\left\{\begin{array}{ll}\alpha\left(i_{j}+1\right)
+&amp; j&lt;d \\ \alpha\left(i_{1}\right) &amp;
+j=d\end{array}\right.\)</span> perché <span
+class="math inline">\(\sigma(i) = i_{j + 1} \quad \forall j \lt
+d\)</span> perché <span class="math inline">\(i_j \in (i_1 \ldots
+i_d)\)</span> ciclo di <span class="math inline">\(\sigma\)</span></li>
+<li>quindi la relazione di coniugio determina un ciclo in <span
+class="math inline">\(\sigma^\prime\)</span> della forma <span
+class="math inline">\((\alpha(i_1) \ldots \alpha(i_d))\)</span></li>
+<li>⚠️ <strong>PERCHÉ È BIUNIVOCA?</strong></li>
+<li><span class="math inline">\((i_1 \ldots i_d)\)</span> un certo ciclo
+in <span class="math inline">\(\sigma \implies (\alpha(i_1) \ldots
+\alpha(i_d))\)</span> è un ciclo in <span
+class="math inline">\(\sigma^\prime\)</span>
+<ul>
+<li>corrispondenza biunivoca tra cicli di <span
+class="math inline">\(\sigma\)</span> e <span
+class="math inline">\(\sigma^\prime \implies h = k\)</span> (devono
+avere lo stesso numero di cicli), e inoltre implica <span
+class="math inline">\(\left\{\begin{array}{c}k=h \\ d=d_{1}^{\prime} \\
+\vdots \\
+d_{k}=d_{h}^{\prime}=d_{k}^{\prime}\end{array}\right.\)</span>, ovvero i
+cicli hanno la stessa lunghezza</li>
+</ul></li>
+</ul></li>
+<li><em>seconda implicazione</em>
+<ul>
+<li><p><span class="math inline">\(\sigma = (i_1 \ldots i_{d_1}) \ldots
+(j_1 \ldots j_{d_k})\)</span> è la decomposizione in cicli di <span
+class="math inline">\(\sigma\)</span></p></li>
+<li><p><span class="math inline">\(\sigma^\prime =(a_1 \ldots a_{d_1})
+\ldots (b_1 \ldots b_{d_k})\)</span> è la decomposizione in cicli di
+<span class="math inline">\(\sigma&#39;\)</span></p></li>
+<li><p>poiché in ipotesi <span class="math inline">\(\sigma\)</span> e
+<span class="math inline">\(\sigma&#39;\)</span> hanno stesso numero di
+cicli, e cicli di stessa lunghezza, allora <span
+class="math inline">\(\exists \alpha \in S_n \mid\)</span><span
+class="math inline">\(\left\{\begin{array}{c}\alpha\left(i_{p}\right)=a_{p}
+\\ \vdots \\
+\alpha\left(j_{q}\right)=b_{q}\end{array}\right.\)</span></p>
+<ul>
+<li><em>esempio</em>
+<ul>
+<li><span class="math inline">\(\begin{aligned} \sigma\ =\
+&amp;(13)(254)(876) \\ &amp; \ \downarrow \downarrow \ \  \downarrow
+\downarrow \downarrow \  \ \ \downarrow \downarrow \downarrow \\
+\sigma^{\prime}=\ &amp;(25)(184)(376) \end{aligned}\)</span> <span
+class="math inline">\(\implies\)</span><span
+class="math inline">\(\alpha=\left(\begin{array}{llllllll}1 &amp; 2
+&amp; 3 &amp; 4 &amp; 5 &amp; 6 &amp; 7 &amp; 8 \\ 2 &amp; 1 &amp; 5
+&amp; 4 &amp; 8 &amp; 6 &amp; 7 &amp; 3\end{array}\right)\)</span></li>
+</ul></li>
+</ul></li>
+<li><p>scelto <span class="math inline">\(\alpha \in S_n\)</span> in
+questo modo, allora ad esempio <span class="math inline">\(\forall i_p
+\in (i_1 \ldots i_{d_1})\)</span> primo ciclo di <span
+class="math inline">\(\sigma \implies i_p = \alpha^{-1}(a_p)\)</span>
+per definizione di <span class="math inline">\(\alpha \implies \alpha
+\sigma \alpha^{-1} (a_p) = \alpha \sigma (i_p) =\)</span><span
+class="math inline">\(\left\{\begin{array}{ll}\alpha\left(i_{p+1}\right)
+&amp; p&lt;d_1 \\ \alpha\left(i_{1}\right) &amp;
+p=d_{1}\end{array}\right. \iff \left\{\begin{array}{ll}a_{p+1} &amp;
+p&lt;d_{1} \\ a_{1} &amp; p=d_{1}\end{array}\right. =
+\sigma^\prime(a_p)\)</span> per definizione di <span
+class="math inline">\(\sigma^\prime\)</span></p>
+<ul>
+<li>poiché in questa osservazione non è stato fatto uso dell’ipotesi per
+cui <span class="math inline">\(i_p\)</span> fosse stato scelto
+all’interno del primo ciclo, il ragionamento vale analogamente per ogni
+altro elemento in ogni altro ciclo</li>
+</ul></li>
+<li><p>allora, <span class="math inline">\(\alpha\)</span> è proprio
+scelto tale che <span class="math inline">\(\sigma^\prime = \alpha
+\sigma \alpha ^{-1}\)</span>, che per definizione implica che <span
+class="math inline">\(\sigma \sim \sigma&#39;\)</span></p></li>
+</ul></li>
+</ul></li>
+</ul>
+<h2 id="oss-10">Oss</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\(n \in \mathbb{N}\)</span></li>
+<li><span class="math inline">\(\sigma \in S_n \mid \sigma := \gamma_1
+\ldots \gamma_k\)</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\(\textrm{sgn}(\sigma)=(-1)^{n -
+k}\)</span></li>
+</ul></li>
+<li><strong>Dim</strong>
+<ul>
+<li><span class="math inline">\(\sigma = (i_1 \ldots i_{d_1}) \ldots
+(j_1 \ldots j_{d_k})\)</span></li>
+<li><span class="math inline">\(\forall \sigma \in S_n \quad \exists
+\sigma&#39; \in S_n \mid \sigma^\prime := (1 \ldots d_1)(d_1 + 1 \ldots
+d_1 + d_2) \ldots (n -d_k + 1 \ldots n)\)</span>
+<ul>
+<li>dunque <span class="math inline">\(\sigma^\prime\)</span> è composta
+da cicli lunghi esattamente come i cicli di <span
+class="math inline">\(\sigma\)</span>, ma ha i numeri da <span
+class="math inline">\(1\)</span> a <span
+class="math inline">\(n\)</span> in sequenza nei cicli</li>
+<li><span
+class="math inline">\(\sigma^{\prime}=\left(\begin{array}{cccccccc}1
+&amp; 2 &amp; \cdots &amp; d_{1} &amp; d_{1}+1 &amp; \cdots &amp;
+d_{1}+d_{2} &amp; \cdots \\ 2 &amp; 3 &amp; \cdots &amp; 1 &amp; d_{1}+2
+&amp; \cdots &amp; d_{1}+1 &amp; \cdots \end{array}\right)\)</span></li>
+</ul></li>
+<li>per portare <span class="math inline">\(1\)</span> nella prima
+colonna, devo applicare <span class="math inline">\(d_1 - 1\)</span>
+trasposizioni adiacenti
+<ul>
+<li><em>esempio</em>
+<ul>
+<li>in <span class="math inline">\((2 \ 3 \ 4\ 5\ 6\ 1)\)</span> devo
+applicare <span class="math inline">\(5\)</span> trasposizioni adiacenti
+per ottenere <span class="math inline">\((1\ 2\ 3\ 4\ 5)\)</span></li>
+</ul></li>
+</ul></li>
+<li>per portare <span class="math inline">\(d_1 + 1\)</span> nella
+colonna corretta, devo applicare <span class="math inline">\(d_2 -
+1\)</span> trasposizioni adiacenti, e vale il ragionamento analogo per
+ogni altro ciclo</li>
+<li>allora, per ottenere <span
+class="math inline">\(\textrm{id}\)</span> a partire da <span
+class="math inline">\(\sigma^\prime\)</span>, devo applicare <span
+class="math inline">\((d_1 -1) + (d_2 - 1) + \ldots + (d_k - 1)\)</span>
+trasposizioni adiacenti, ovvero <span class="math inline">\(d_1 + \ldots
++ d_k - 1 \cdot k = n - k\)</span>
+<ul>
+<li><span class="math inline">\(d_1 + \ldots + d_k\)</span> è il numero
+di colonne di <span class="math inline">\(\sigma^\prime \in
+S_n\)</span>, dunque è pari a <span
+class="math inline">\(n\)</span></li>
+<li><span class="math inline">\(k\)</span> è il numero di cicli, quindi
+nell’equazione <span class="math inline">\(-1\)</span> appare
+esattamente <span class="math inline">\(k\)</span> volte</li>
+</ul></li>
+<li>di conseguenza, <span class="math inline">\(\textrm{id} =
+\sigma^\prime \tau_1 \ldots \tau_{n -k} \iff \sigma^\prime = \tau_{n -
+k} \ldots \tau_1 \iff \textrm{sgn}(\sigma^\prime) =
+\textrm{sgn}(\tau_{n-k} \ldots \tau_1)\)</span>, e dunque rimuovendo
+ogni trasposizione adiacente si ottiene che <span
+class="math inline">\(\textrm{sgn}(\sigma^\prime) = (-1)^{n -k}\)</span>
+per osservazione in dimostrazione precedente</li>
+<li>poiché <span class="math inline">\(\sigma\)</span> e <span
+class="math inline">\(\sigma^\prime\)</span> hanno lo stesso numero di
+cicli, e i cicli hanno la stessa lunghezza, allora per dimostrazione
+precedente <span class="math inline">\(\sigma \sim \sigma^\prime
+\implies \textrm{sgn}(\sigma^\prime)=\textrm{sgn}(\sigma)\)</span> per
+dimostrazione precedente, e dunque <span
+class="math inline">\(\textrm{sgn}(\sigma&#39;) =
+\textrm{sgn}(\sigma)=(-1)^{n - k}\)</span></li>
+</ul></li>
+</ul>
+</body>
+</html>

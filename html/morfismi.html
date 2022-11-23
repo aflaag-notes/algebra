@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Morfismi</title>
+  <style>
+    html {
+      line-height: 1.5;
+      font-family: Georgia, serif;
+      font-size: 20px;
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 1em;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, 'Lucida Console', Consolas, monospace;
+      font-size: 85%;
+      margin: 0;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+  </style>
+  <script
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js"
+  type="text/javascript"></script>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Morfismi</h1>
+</header>
+<h1 id="morfismi">Morfismi</h1>
+<h2 id="def">Def</h2>
+<ul>
+<li><p><strong>Morfismo di gruppi</strong> &gt; - <span
+class="math inline">\((G, \cdot), (H, \cdot)\)</span> gruppi &gt; -
+<span class="math inline">\(f: G \rightarrow H\)</span> &gt; - <span
+class="math inline">\(f\)</span> <strong>morfismo di gruppi</strong>
+<span class="math inline">\(\iff f(x\cdot y)=f(x)\cdot f(y) \quad
+\forall x, y \in G\)</span></p></li>
+<li><p><strong>Morfismo di anelli</strong> &gt; - <span
+class="math inline">\((A, +, \cdot), (B, +, \cdot)\)</span> anelli &gt;
+- <span class="math inline">\(f: A \rightarrow B\)</span> &gt; - <span
+class="math inline">\(f\)</span> <strong>morfismo di anelli</strong>
+<span class="math inline">\(\iff f(x+ y) = f(x) + f(y)\)</span> e <span
+class="math inline">\(f(x \cdot y) = f(x) \cdot f(y) \quad \forall x, y
+\in A\)</span> &gt; - la stessa definizione si applica per morfismo di
+campi</p></li>
+</ul>
+<h2 id="oss">Oss</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\((G, \cdot), (H, \cdot)\)</span>
+gruppi</li>
+<li><span class="math inline">\(1_G\)</span> neutro per <span
+class="math inline">\(G\)</span></li>
+<li><span class="math inline">\(1_H\)</span> neutro per <span
+class="math inline">\(H\)</span></li>
+<li><span class="math inline">\(f: G \rightarrow H\)</span>
+morfismo</li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\(f(1_G) = 1_H\)</span></li>
+</ul></li>
+<li><strong>Dim</strong>
+<ul>
+<li><span class="math inline">\(\forall g \in G \quad f(g) = f(1_G \cdot
+g) = f(1_G) \cdot f(g)\)</span> poiché <span
+class="math inline">\(f\)</span> morfismo</li>
+<li>quindi <span class="math inline">\(f(g) = f(1_G) \cdot f(g) \implies
+f(g) \cdot f(g)^{-1} = f(1_G) \cdot f(g) \cdot f(g)^{-1} \implies 1_H =
+f(1_G) \cdot 1_H \implies 1_H = f(1_G)\)</span> (poiché <span
+class="math inline">\(f(g), f(g)^{-1} \in H\)</span> per definizione di
+<span class="math inline">\(f\)</span>)</li>
+</ul></li>
+</ul>
+<h2 id="oss-1">Oss</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\((G, \cdot), (H, \cdot)\)</span>
+gruppi</li>
+<li><span class="math inline">\(1_G\)</span> neutro per <span
+class="math inline">\(G\)</span></li>
+<li><span class="math inline">\(1_H\)</span> neutro per <span
+class="math inline">\(H\)</span></li>
+<li><span class="math inline">\(f: G \rightarrow H\)</span>
+morfismo</li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\(f(g^{-1}) = f(g)^{-1}\)</span></li>
+</ul></li>
+<li><strong>Dim</strong>
+<ul>
+<li>per dimostrazione precedente, <span class="math inline">\(1_H =
+f(1_G) = f(g \cdot g^{-1})=f(g) \cdot f(g^{-1}) \implies 1_H = f(g)
+\cdot f(g^{-1}) \implies f(g)^{-1} = f(g^{-1})\)</span></li>
+</ul></li>
+</ul>
+<hr />
+<h1 id="isomorfismi">Isomorfismi</h1>
+<h2 id="def-1">Def</h2>
+<ul>
+<li><strong>Isomorfismo</strong> &gt; - <span
+class="math inline">\(f\)</span> isomorfismo <span
+class="math inline">\(\iff f\)</span> morfismo e <span
+class="math inline">\(f\)</span> biiettiva</li>
+</ul>
+<h2 id="oss-2">Oss</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\(f: G \rightarrow H\)</span>
+isomorfismo</li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\(f ^{-1}: H \rightarrow G\)</span>
+isomorfismo</li>
+</ul></li>
+<li><strong>Dim</strong>
+<ul>
+<li><span class="math inline">\(\forall g \in G, h \in H \quad \exists
+!f^{-1} \mid \left\{\begin{array}{c}f^{-1}(f(g))=g \\
+f\left(f^{-1}(h)\right)=h\end{array}\right.\)</span></li>
+<li><span class="math inline">\(\forall h, h^{\prime} \in H \quad
+f^{-1}\left(h h^{\prime}\right)=f^{-1}(h) \cdot
+f^{-1}\left(h^{\prime}\right) \iff hh&#39;=f\left(f^{-1}\left(h
+h^{\prime})\right)=f(f^{-1}(h)\cdot f^{-1}(h^\prime)) =
+f(f^{-1}(h))\cdot f(f^{-1}(h^\prime))\right. = hh&#39;\)</span>, e
+dunque <span class="math inline">\(f^{-1}\)</span> è un morfismo, e
+poiché è invertibile è un isomorfismo</li>
+</ul></li>
+</ul>
+<h2 id="ex">Ex</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\(z \in \mathbb{C} \mid z^n = 1\)</span>
+sono le radici <span class="math inline">\(n\)</span>-esime di <span
+class="math inline">\(1\)</span></li>
+<li><span class="math inline">\(\zeta := e^{i \frac{2
+\pi}{n}}\)</span></li>
+<li><span class="math inline">\(H := \{\zeta ^0, \zeta^1, \zeta^k,
+\ldots, \zeta^{n-1}\}\)</span> è l’insieme delle radici <span
+class="math inline">\(n\)</span>-esime di <span
+class="math inline">\(1\)</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\((H, \cdot) \subset (\mathbb{C}-\{0\},
+\cdot)\)</span> è un sottogruppo</li>
+</ul></li>
+<li><strong>Dim</strong>
+<ul>
+<li><span class="math inline">\(\zeta ^0 = 1 \implies 1 \in
+H\)</span></li>
+<li><span class="math inline">\(z, w \in H \iff z^n=w^n = 1\)</span>,
+allora <span class="math inline">\(1 = z^n \cdot w^n = (z \cdot w)^n = 1
+\implies z \cdot w \in H\)</span> per definizione di <span
+class="math inline">\(H\)</span></li>
+<li><span class="math inline">\(z^n = 1 \implies \dfrac{1}{z^n} = 1 \iff
+(z^{-1})^n = 1 \implies z^{-1} \in H\)</span> per definizione di <span
+class="math inline">\(H\)</span></li>
+</ul></li>
+</ul>
+<h2 id="ex-1">Ex</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\(f: \mathbb{Z}_n \rightarrow H : [k]
+\rightarrow \zeta^k\)</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\(f\)</span> isomorfismo di gruppi <span
+class="math inline">\((\mathbb{Z}_n , +)\)</span> e <span
+class="math inline">\((H, \cdot)\)</span></li>
+</ul></li>
+<li><strong>Dim</strong>
+<ul>
+<li><span class="math inline">\(f\)</span> è biiettiva per costruzione
+di <span class="math inline">\(\mathbb{Z}_n := \{[0], [1], \ldots, [n -
+1]\}\)</span> e <span class="math inline">\(H := \{\zeta ^0, \zeta^1,
+\ldots, \zeta^{n-1}\}\)</span></li>
+<li><span class="math inline">\(f\)</span> morfismo
+<ul>
+<li><span class="math inline">\(f([i]+[j])=f([i]) \cdot f([j])\)</span>
+<ul>
+<li><span class="math inline">\([i] + [j] = [k]\)</span> per un certo
+<span class="math inline">\(k \in \mathbb{Z}_n \implies \exists h \in
+\mathbb{Z} \mid i + j = k + hn\)</span></li>
+<li><span class="math inline">\(f([i]+[j])= f([k]) =
+\zeta^k\)</span></li>
+<li><span class="math inline">\(f([i]) \cdot f([j]) = \zeta^i \cdot
+\zeta ^j = \zeta ^{i + j}\)</span>, ma per osservazione precedente <span
+class="math inline">\(\zeta^{i + j} = \zeta^{k + nh} = \zeta^{k} \cdot
+(\zeta^n)^h\)</span></li>
+<li><span class="math inline">\(\zeta^n = 1\)</span> per definzione di
+<span class="math inline">\(\zeta \implies\)</span> entrambe i membri
+dell’equazione sono pari a <span
+class="math inline">\(\zeta^k\)</span></li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul>
+<h2 id="ex-2">Ex</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\((G, \cdot)\)</span> gruppo</li>
+<li><span class="math inline">\(f: \mathbb{Z} \rightarrow G: n
+\rightarrow g^n\)</span> per qualche <span class="math inline">\(g \in
+G\)</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\(f\)</span> morfismo di gruppi <span
+class="math inline">\((\mathbb{Z}, +)\)</span> e <span
+class="math inline">\((G, \cdot)\)</span></li>
+</ul></li>
+<li><strong>Dim</strong>
+<ul>
+<li><span class="math inline">\(f(n + m ) = g^{n + m} = g^m \cdot g^n =
+f(m) \cdot f(n) \implies f\)</span> morfismo</li>
+</ul></li>
+</ul>
+<h2 id="ex-3">Ex</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\(f: \mathbb{Z} \rightarrow \mathbb{Z}_n :
+k \rightarrow [k]\)</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\(f\)</span> morfismo di anelli <span
+class="math inline">\(\left(\mathbb{Z},+, \cdot\right)\)</span> e <span
+class="math inline">\(\left(\mathbb{Z}_{n},+, \cdot\right)\)</span></li>
+</ul></li>
+<li><strong>Dim</strong>
+<ul>
+<li>per come le operazioni <span class="math inline">\(+\)</span> e
+<span class="math inline">\(\cdot\)</span> sono state definite, <span
+class="math inline">\(f([x+y])=f([x])+f([y])\)</span> e <span
+class="math inline">\(f([x \cdot y])=f([x]) \cdot f([y])\)</span></li>
+</ul></li>
+</ul>
+<h2 id="ex-4">Ex</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\(n, m \in \mathbb{Z} : n \mid
+m\)</span></li>
+<li><span class="math inline">\(f : \mathbb{Z}_m \rightarrow
+\mathbb{Z}_n: x \ (\bmod \ m) \rightarrow x \ (\bmod\ n)\)</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\(f\)</span> morfismo di anelli <span
+class="math inline">\(\left(\mathbb{Z}_{m},+, \cdot\right)\)</span> e
+<span class="math inline">\(\left(\mathbb{Z}_{n},+,
+\cdot\right)\)</span></li>
+</ul></li>
+<li><strong>Dim</strong>
+<ul>
+<li><span class="math inline">\(\forall [x], [y] \in \mathbb{Z}_m \quad
+x \ (\bmod \ m) + y \ (\bmod \ m) = x +y \ (\bmod \ m)\)</span></li>
+<li><span class="math inline">\(f(x + y \ (\bmod \ m)) = x +y \ (\bmod \
+n) = x \ (\bmod \ n)+ y \ (\bmod \ n) = f(x \ (\bmod \ m)) + f(y \
+(\bmod \ m))\)</span></li>
+<li>il ragionamento è analogo per l’operazione <span
+class="math inline">\(\cdot\)</span>, e dunque segue la tesi</li>
+</ul></li>
+</ul>
+<h2 id="ex-5">Ex</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\(G\)</span> gruppo</li>
+<li><span class="math inline">\(f: G \rightarrow G : h \rightarrow g
+\cdot h \cdot g^{-1}\)</span> per qualche <span class="math inline">\(g
+\in G\)</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\(f\)</span> morfismo di gruppi <span
+class="math inline">\((G, \cdot)\)</span> e <span
+class="math inline">\((G, \cdot)\)</span></li>
+</ul></li>
+<li><strong>Dim</strong>
+<ul>
+<li><span class="math inline">\(\forall h, h^\prime \in G \quad f(h)
+\cdot f\left(h^{\prime}\right)=\left(g h g^{-1}\right)\cdot \left(g
+h^{\prime} g^{-1}\right)=gh(g^{-1} \cdot g)h^\prime g^{-1}=g h
+h^{\prime} g^{-1}=f\left(h h^{\prime})\right.\)</span></li>
+</ul></li>
+</ul>
+<hr />
+<h1 id="kernel-e-immagine">Kernel e Immagine</h1>
+<h2 id="def-2">Def</h2>
+<ul>
+<li><p><strong>kernel e Immagine di gruppi</strong> &gt; - <span
+class="math inline">\(G, H\)</span> gruppi &gt; - <span
+class="math inline">\(f: G \rightarrow H\)</span> morfismo &gt; - <span
+class="math inline">\(\textrm{ker}(f):=\{g \in G \mid f(g) =
+1_H\}\)</span> &gt; - <span class="math inline">\(\textrm{Im}(f):=\{h
+\in H \mid \exists g \in G : f(g) = h\}\)</span></p></li>
+<li><p><strong>kernel e Immagine di anelli</strong> &gt; - <span
+class="math inline">\(A, B\)</span> gruppi &gt; - <span
+class="math inline">\(f: A \rightarrow B\)</span> morfismo &gt; - <span
+class="math inline">\(\textrm{ker}(f):=\{a \in A \mid f(a)=
+0_B\}\)</span> &gt; - <span class="math inline">\(\textrm{Im}(f):=\{b
+\in B \mid \exists a \in A : f(a) = b\}\)</span></p></li>
+</ul>
+<h2 id="oss-3">Oss</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\(G, H\)</span> gruppi</li>
+<li><span class="math inline">\(f: G \rightarrow H\)</span>
+morfismo</li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\(\textrm{ker}(f) \subset G\)</span> è
+sottogruppo</li>
+</ul></li>
+<li><strong>Dim</strong>
+<ul>
+<li>per dimostrazione precedente, <span class="math inline">\(f(1_G) =
+1_H \implies 1_G \in \textrm{ker}(f)\)</span> per definizione</li>
+<li><span class="math inline">\(x, y \in \textrm{ker}(f) \implies f(x) =
+f(y ) = 1_H\)</span> per definizione, dunque <span
+class="math inline">\(f(x) \cdot f(y) = 1_H \cdot 1_H = 1_H\)</span>, e
+<span class="math inline">\(f(x) \cdot f(y) = f(x \cdot y) =
+1_H\)</span> perché <span class="math inline">\(f\)</span> morfismo,
+quindi <span class="math inline">\(x \cdot y \in
+\textrm{ker}(f)\)</span> per definizione</li>
+<li><span class="math inline">\(g \in \textrm{ker}(f) \implies f(g) =1_H
+\implies f(g)^{-1} = 1_H^{-1} = 1_H\)</span>, ma poiché per
+dimostrazione precedente <span class="math inline">\(f(g)^{-1} =
+f(g^{-1}) \implies f(g^{-1})= 1_H \implies g^{-1} \in
+\textrm{ker}(f)\)</span> per definizione</li>
+</ul></li>
+</ul>
+<h2 id="oss-4">Oss</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\(G, H\)</span> gruppi</li>
+<li><span class="math inline">\(f: G \rightarrow H\)</span>
+morfismo</li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\(\textrm{Im}(f) \subset G\)</span> è
+sottogruppo</li>
+</ul></li>
+<li><strong>Dim</strong>
+<ul>
+<li>per dimostrazione precedente <span class="math inline">\(f(1_G)= 1_H
+\implies 1_H \in \textrm{Im}(f)\)</span> per definizione</li>
+<li><span class="math inline">\(x, y \in \textrm{Im}(f) \implies \exists
+g, g^\prime \in G \mid x = f(g) \land y = f(g^\prime) \implies x \cdot y
+= f(g) \cdot f(g^\prime) = f(g\cdot g^\prime)\)</span> perché <span
+class="math inline">\(f\)</span> morfismo, quindi <span
+class="math inline">\(x \cdot y \in \textrm{Im}(f)\)</span> per
+definizione</li>
+<li><span class="math inline">\(x \in \textrm{Im}(f) \implies \exists g
+\in G \mid f(g) = x \implies x^{-1} = f(g)^{-1} = f(g^{-1})\)</span> per
+dimostrazione precedente, quindi <span class="math inline">\(x ^{-1} \in
+\textrm{Im}(f)\)</span> per definizione</li>
+</ul></li>
+</ul>
+<h2 id="oss-5">Oss</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\(G, H\)</span> gruppi</li>
+<li><span class="math inline">\(f: G \rightarrow H\)</span>
+morfismo</li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\(f\)</span> iniettiva <span
+class="math inline">\(\iff \textrm{ker}(f) = \{1_G\}\)</span></li>
+</ul></li>
+<li><strong>Dim</strong>
+<ul>
+<li><span class="math inline">\(f\)</span> iniettiva <span
+class="math inline">\(\implies \textrm{ker}(f) = \{1_G\}\)</span>
+<ul>
+<li><span class="math inline">\(f(1_G) = 1_H\)</span> per dimostrazione
+precedente, dunque <span class="math inline">\(1_G \in
+\textrm{ker}(f)\)</span> per definizione</li>
+<li><span class="math inline">\(f\)</span> iniettiva <span
+class="math inline">\(\implies \nexists x, y \in G \mid x \neq y
+\implies f(x) = f(y)\)</span>, di conseguenza è unico <span
+class="math inline">\(1_G \in G \mid f(1_G) = 1_H\)</span>, dunque <span
+class="math inline">\(\textrm{ker}(f)\)</span> conterrà esclusivamente
+<span class="math inline">\(1_G\)</span> per definizione</li>
+</ul></li>
+<li><span class="math inline">\(f\)</span> iniettiva <span
+class="math inline">\(\impliedby \textrm{ker}(f) = \{1_G\}\)</span>
+<ul>
+<li><span class="math inline">\(\forall g, g^\prime \in G \quad f(g) =
+f(g^\prime) \iff f(g)^{-1} \cdot f(g) = f(g)^{-1} \cdot f(g^\prime) \iff
+1_H = f(g) \cdot f(g^\prime) = f(g \cdot g^\prime)\)</span></li>
+<li><span class="math inline">\(\textrm{ker}(f) = \{1_G\} \implies
+f(1_G)=1_H\)</span> per definizione, allora <span
+class="math inline">\(f(g\cdot g^\prime) = 1_H \implies g \cdot g^\prime
+= 1_G\)</span> necessariamente, e <span class="math inline">\(g \cdot
+g^\prime = 1_G \iff g= g^\prime \implies f(g) = f(g^\prime) \implies g =
+g^\prime \implies f\)</span> iniettiva</li>
+</ul></li>
+</ul></li>
+</ul>
+<h2 id="oss-6">Oss</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\(A, B\)</span> anelli</li>
+<li><span class="math inline">\(f: A \rightarrow B\)</span> morfismo di
+anelli</li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\(\textrm{ker}(f)\)</span> ideale</li>
+</ul></li>
+<li><strong>Dim</strong>
+<ul>
+<li><span class="math inline">\((\textrm{ker}(f), +) \subset (A,
++)\)</span> sottogruppo per dimostrazione precedente</li>
+<li>per analogia con dimostrazione precedente, <span
+class="math inline">\(f(0_A) = 0_B\)</span></li>
+<li><span class="math inline">\(x \in \textrm{ker}(f) \implies f(x) =
+0_B\)</span> per definizione, quindi <span class="math inline">\(\forall
+x \in \textrm{ker}(f), y \in A \quad f(x \cdot y )= f(x) \cdot f(y) )=
+0_B \cdot f(y) = 0_B \implies x \cdot y \in \textrm{ker}(f)\)</span> per
+definizione, quindi <span class="math inline">\(\textrm{ker}(f) \cdot A
+\subset \textrm{ker}(f)\)</span></li>
+</ul></li>
+</ul>
+<h2 id="oss-7">Oss</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\(A, B\)</span> anelli</li>
+<li><span class="math inline">\(f: A \rightarrow B\)</span> morfismo di
+anelli</li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\(\textrm{Im}(f)\)</span> sottoanello</li>
+</ul></li>
+<li><strong>Dim</strong>
+<ul>
+<li><span class="math inline">\((\textrm{Im}(f), +) \subset (A,
++)\)</span> sottogruppo per dimostrazione precedente</li>
+<li><span class="math inline">\(x, y \in \textrm{Im}(f) \implies \exists
+a, a^\prime \mid x = f(a) \land y = f(a^\prime) \implies x \cdot y =
+f(a) \cdot f(a^\prime) = f(a\cdot a^\prime)\)</span> perche <span
+class="math inline">\(f\)</span> morfismo, quindi <span
+class="math inline">\(\exists a \cdot a^\prime \mid x \cdot y = f(a
+\cdot a^\prime) \implies x\cdot y \in \textrm{Im}(f) \implies
+\textrm{Im}(f) \cdot \textrm{Im}(f) \subset \textrm{Im}(f)\)</span></li>
+</ul></li>
+</ul>
+<h2 id="oss-8">Oss</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\(f: \mathbb{Z} \rightarrow \mathbb{C} -
+\{0\} : k \rightarrow \zeta^k\)</span></li>
+<li><span class="math inline">\(f\)</span> morfismo di gruppi <span
+class="math inline">\((\mathbb{Z}, +)\)</span> e <span
+class="math inline">\((\mathbb{C} - \{0\}, \cdot)\)</span></li>
+<li><span class="math inline">\(I(n)\)</span> ideale generato da <span
+class="math inline">\(n\)</span> <strong>⚠️ CONTROLLA SE SERVE QUESTA
+COSA</strong></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\(\textrm{ker}(f) = I(n)\)</span></li>
+</ul></li>
+<li><strong>Dim</strong>
+<ul>
+<li>pass</li>
+</ul></li>
+</ul>
+<h2 id="oss-9">Oss</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\(G, H\)</span> gruppi</li>
+<li><span class="math inline">\(f: G \rightarrow H\)</span>
+morfismo</li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\(\textrm{ker}(f)\)</span> è sottogruppo
+normale</li>
+</ul></li>
+<li><strong>Dim</strong>
+<ul>
+<li>per la formulazione 2 della definizione di sottogruppo normale,
+<span class="math inline">\(\forall g \in G, h \in \textrm{ker}(f)
+\implies g h g^{-1} \in \textrm{ker}(f)\)</span></li>
+<li><span class="math inline">\(f(ghg^{-1}) = f(g) \cdot f(h) \cdot
+f(g^{-1})\)</span></li>
+<li><span class="math inline">\(h \in \textrm{ker}(f) \implies f(h) =
+1_H\)</span> per definizione</li>
+<li>per dimostrazione precedente <span class="math inline">\(f(g^{-1}) =
+f(g)^{-1}\)</span></li>
+<li><span class="math inline">\(f(ghg^{-1})= f(g) \cdot 1_H \cdot
+f(g)^{-1} = 1_H \implies ghg ^{-1} \in \textrm{ker}(f)\)</span> per
+definizione</li>
+</ul></li>
+</ul>
+</body>
+</html>

@@ -1,0 +1,816 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Ideali</title>
+  <style>
+    html {
+      line-height: 1.5;
+      font-family: Georgia, serif;
+      font-size: 20px;
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 1em;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, 'Lucida Console', Consolas, monospace;
+      font-size: 85%;
+      margin: 0;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+  </style>
+  <script
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js"
+  type="text/javascript"></script>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Ideali</h1>
+</header>
+<h1 id="ideali">Ideali</h1>
+<h2 id="def">Def</h2>
+<ul>
+<li><strong>Ideali</strong> &gt; - <span class="math inline">\((A, +,
+\cdot)\)</span> anello &gt; - <span class="math inline">\(I \subset
+A\)</span> <strong>ideale</strong> <span class="math inline">\(\iff (I,
++) \subset (A, +)\)</span> è un sottogruppo e <span
+class="math inline">\(A \cdot I \subset I\)</span> e <span
+class="math inline">\(I \cdot A \subset I\)</span></li>
+</ul>
+<h2 id="oss">Oss</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\((A, +, \cdot)\)</span> anello</li>
+<li><span class="math inline">\(a \in \mathbb{Z}\)</span></li>
+<li><span class="math inline">\(I(a) := \{ax \mid x \in
+A\}\)</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\(I(a)\)</span> è un ideale, e prende il
+nome di <em>ideale di <span class="math inline">\(A\)</span> generato da
+<span class="math inline">\(a \in A\)</span></em></li>
+</ul></li>
+<li><strong>Dim</strong>
+<ul>
+<li><span class="math inline">\((I(a), + ) \subset(A, +)\)</span>
+sottogruppo
+<ul>
+<li><span class="math inline">\(0\)</span> multiplo di <span
+class="math inline">\(a \implies 0 \in I(a)\)</span></li>
+<li><span class="math inline">\(\forall ax, ay \in I(a) \quad ax + ay =
+a(x + y) \implies ax + ay \in I(a)\)</span> per definizione</li>
+<li><span class="math inline">\(\forall ax \in I(a) \quad a(-x) \in
+I(a)\)</span> poiché <span class="math inline">\(-x\)</span> è un
+multiplo di <span class="math inline">\(a\)</span>, e <span
+class="math inline">\(a(-x) = -ax \in I(a)\)</span>, che corrisponde
+all’opposto di <span class="math inline">\(ax\)</span> rispetto a <span
+class="math inline">\(+\)</span></li>
+</ul></li>
+<li><span class="math inline">\(A \cdot I \subset I \iff \forall x \in
+I(a), b \in A \quad bx \in I(a)\)</span>
+<ul>
+<li><span class="math inline">\(x \in I(a) \iff \exists c \in A \mid x =
+ac \implies bx = b (ac) = a(bc)\)</span>, poiché il prodotto è
+commutativo, e dunque <span class="math inline">\(bx \in I(a)\)</span>
+per definizione</li>
+</ul></li>
+<li>poiché il prodotto è commutativo, <span class="math inline">\(A
+\cdot I \subset I \implies I \cdot A \subset I\)</span></li>
+</ul></li>
+</ul>
+<h2 id="oss-1">Oss</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\(A\)</span> dominio di integrità</li>
+<li><span class="math inline">\(a, b \in A\)</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\(I(a)=I(b) \iff \exists c \in A^* \mid a
+= bc\)</span></li>
+</ul></li>
+<li><strong>Dim</strong>
+<ul>
+<li><em>prima implicazione</em>
+<ul>
+<li><span class="math inline">\(I(a) = I(b)\)</span> in ipotesi
+<ul>
+<li><span class="math inline">\(a \in I(a) = I(b) \implies b \mid a
+\implies \exists c \in A \mid a = bc\)</span></li>
+<li><span class="math inline">\(b \in I(b) = I(a) \implies a \mid b
+\implies \exists d \in A \mid b = da\)</span></li>
+</ul></li>
+<li>allora <span class="math inline">\(a = bc \iff a = da \cdot c = a
+\cdot cd \iff a - acd = 0 \iff a(1 - cd) = 0\)</span></li>
+<li><span class="math inline">\(A\)</span> dominio <span
+class="math inline">\(\implies\)</span> in <span
+class="math inline">\(A\)</span> vale la legge di annullamento del
+prodotto, dunque <span class="math inline">\(a(1 - cd) = 0 \iff a = 0
+\lor 1 - cd = 0\)</span>
+<ul>
+<li><span class="math inline">\(a = 0 \implies b = da = 0\)</span>, ma
+allora <span class="math inline">\(a, b = 0 \implies a = 0 = 0 \cdot 1 =
+b \cdot 1\)</span>, e ponendo <span class="math inline">\(c:= 1\)</span>
+è vero che <span class="math inline">\(a = bc\)</span>
+<ul>
+<li>in particolare, <span class="math inline">\(c := 1 \implies \exists
+c^{-1} = 1^{-1} = 1\)</span></li>
+</ul></li>
+<li><span class="math inline">\(1 - cd = 0 \iff -cd = -1 \iff cd =
+1\)</span>, dunque <span class="math inline">\(d\)</span> è l’inverso di
+<span class="math inline">\(c\)</span></li>
+</ul></li>
+</ul></li>
+<li><em>seconda implicazione</em>
+<ul>
+<li><span class="math inline">\(\exists c \in A^* \mid a= bc \implies b
+\mid a \implies a \in I(b) \implies I(a) \subset I(b)\)</span></li>
+<li><span class="math inline">\(c \in A^* \implies \exists c^{-1} \in
+A\)</span>, dunque <span class="math inline">\(a = bc \iff a \cdot
+c^{-1} = b \implies a \mid b \implies b \in I(a) \implies I(b) \subset
+I(a)\)</span></li>
+<li>dunque <span class="math inline">\(I(a) = I(b)\)</span> per doppia
+inclusione</li>
+</ul></li>
+</ul></li>
+</ul>
+<h2 id="oss-2">Oss</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\(a, b \in \mathbb{Z} -
+\{0\}\)</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\(I(a)=I(b) \iff a=\pm b\)</span></li>
+</ul></li>
+<li><strong>Dim</strong>
+<ul>
+<li><span class="math inline">\(a=\pm b \implies I(a)=I(b)\)</span>
+<ul>
+<li><span class="math inline">\(a = b \implies I(a)\)</span> e <span
+class="math inline">\(I(b)\)</span> coincidono</li>
+<li><span class="math inline">\(a = -b \implies I(-b) = \{ k(-b) \mid k
+\in \mathbb{Z}\} = \{(-k)b \mid (-k) \in \mathbb{Z}\} = I(b) =
+I(-b)=I(a)\)</span></li>
+</ul></li>
+<li><span class="math inline">\(I(a) = I(b) \implies a = \pm b\)</span>
+<ul>
+<li><span class="math inline">\(I(a) = I(b) \iff a \in I(b) \land b \in
+I(a) \implies \exists p, q \in \mathbb{Z} \mid a = pb \wedge b =
+qa\)</span>, di conseguenza <span class="math inline">\(b = q (pb)
+\implies b = (qp)b \implies pq = 1 \iff p = q = 1 \lor p = q = -1
+\implies a = \pm b\)</span></li>
+</ul></li>
+</ul></li>
+</ul>
+<h2 id="oss-3">Oss</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\((A, +, \cdot)\)</span> anello</li>
+<li><span class="math inline">\(a_1, \ldots, a_n
+\in\mathbb{Z}\)</span></li>
+<li><span class="math inline">\(I(a_1, \ldots, a_n) := \{ a_1b_1 +
+\ldots +a_nb_n \mid b_1, \ldots, b_n \in A\}\)</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\(I(a_1, \ldots, a_n)\)</span> è un
+ideale, e prende il nome di <em>ideale di <span
+class="math inline">\(A\)</span> generato dagli <span
+class="math inline">\(a_1, \ldots, a_n \in A\)</span></em></li>
+</ul></li>
+<li><strong>Dim</strong>
+<ul>
+<li><span class="math inline">\((I(a_1, \ldots, a_n) , +) \subset (A,
++)\)</span> sottogruppo
+<ul>
+<li><span class="math inline">\(0 = a_1 \cdot 0 + \ldots + a_n \cdot 0
+\in I(a_1, \ldots a_n)\)</span>, dunque <span
+class="math inline">\(0\)</span> è l’elemento neutro</li>
+<li><span class="math inline">\(\forall x, y \in I(a_1, \ldots, a_n)
+\quad x = a_1b_1 + \ldots +a_nb_n \land y = a_1c_1 + \ldots+ a_nc_n
+\implies x+ y = a_1b_1 + \ldots + a_nb_n + a_1c_1 + \ldots
++a_nc_n\)</span>, che è possibile riscrivere come <span
+class="math inline">\(x + y = a_1(b_1 + c_1) + \ldots + a_n(b_n +
+c_n)\)</span>, che per definizione implica che <span
+class="math inline">\(x + y \in I(a_1, \ldots, a_n)\)</span></li>
+<li><span class="math inline">\(\forall x \in I(a_1, \ldots, a_n) \quad
+x = a_1b_1 + \ldots + a_nb_n \iff -x = -a_1b_1 - \ldots - a_nb_n \iff -x
+= a_1(-b_1) + \ldots + a_n(-b_n)\)</span>, che per definizione implica
+che <span class="math inline">\(-x \in I(a_1, \ldots, a_n)\)</span></li>
+</ul></li>
+<li><span class="math inline">\(\forall x \in I(a_1, \ldots, a_n), c \in
+A \quad x = a_1b_1 + \ldots + a_nb_n \implies c \cdot x = a_1 (b_1c)+
+\ldots + a_n(b_nc)\)</span>, che per definizione implica che <span
+class="math inline">\(cx \in I(a_1, \ldots, a_n)\)</span></li>
+</ul></li>
+</ul>
+<h2 id="def-1">Def</h2>
+<ul>
+<li><strong>Congruenza modulo di un ideale</strong> &gt; - <span
+class="math inline">\((A, +, \cdot)\)</span> anello &gt; - <span
+class="math inline">\(I \subset A\)</span> ideale &gt; - per
+definizione, <span class="math inline">\(I\)</span> ideale <span
+class="math inline">\(\implies(I, +) \subset (A, +)\)</span>
+sottogruppo, dunque ha senso definire <span
+class="math inline">\(A/I\)</span>, e infatti <span
+class="math inline">\(I\)</span> induce una relazione di equivalenza su
+<span class="math inline">\(A\)</span> detta <strong>congruenza modulo
+<span class="math inline">\(I\)</span></strong>, dove <span
+class="math inline">\(\forall a, b \in A \quad a \equiv b \ (\bmod I)
+\iff b - a \in I\)</span> &gt; - <span class="math inline">\(b -a \in I
+\iff (-a) + b \in I\)</span>, di conseguenza questa congruenza coincide
+con la classe laterale sinistra di <span class="math inline">\((A,
++)\)</span></li>
+</ul>
+<h2 id="oss-4">Oss</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\((A, +, \cdot)\)</span> anello</li>
+<li><span class="math inline">\(+: A/I \times A/I \rightarrow
+A/I\)</span></li>
+<li><span class="math inline">\(\cdot : A/I \times A/I \rightarrow
+A/I\)</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\((A/I, +, \cdot)\)</span> è un
+anello</li>
+</ul></li>
+<li><strong>Dim</strong>
+<ul>
+<li><span class="math inline">\((A/I, +)\)</span> è un gruppo abeliano
+<ul>
+<li><span class="math inline">\(+\)</span> è un’operazione ben definita
+per dimostrazione precedente, dunque le proprietà di gruppo abeliano
+sono rispettate per come l’operazione è definita</li>
+</ul></li>
+<li><span class="math inline">\((A/I, \cdot)\)</span> è monoide
+<ul>
+<li><span class="math inline">\(\cdot\)</span> è un’operazione ben
+definita per dimostrazione analoga, dunque le proprietà di monoide sono
+rispettate per come l’operazione è definita</li>
+</ul></li>
+<li>proprietà distributiva
+<ul>
+<li>per come <span class="math inline">\(+\)</span> e <span
+class="math inline">\(\cdot\)</span> sono definite, segue che <span
+class="math inline">\(\forall [x],[y],[z] \in A/I \quad
+[x]([y]+[z])=[x][y+z]=[x(y+z)]=[x y+x z]=[x y]+[x z]
+=[x][y]+[x][z]\)</span></li>
+</ul></li>
+</ul></li>
+</ul>
+<h2 id="oss-5">Oss</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\(I \subset \mathbb{Z}\)</span>
+ideale</li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\(\exists ! \ d \in \mathbb{N} \mid I =
+I(d)\)</span>, o equivalentemente, in <span
+class="math inline">\(\mathbb{Z}\)</span> ogni ideale è principale</li>
+</ul></li>
+<li><strong>Dim</strong>
+<ul>
+<li><em>esistenza</em>
+<ul>
+<li><span class="math inline">\(I = \{0\} \implies I = I(0)\)</span>
+poiché i multipli di <span class="math inline">\(0\)</span> sono tutti
+pari a <span class="math inline">\(0\)</span></li>
+<li>se invece <span class="math inline">\(I \neq \{0\} \implies I \cap
+\mathbb{Z}_{&gt;0} \neq \varnothing\)</span>, dunque <span
+class="math inline">\(I\)</span> contiene almeno un numero non nullo, in
+particolare positivo
+<ul>
+<li>è possibile considerare solo il caso dei positivi in quanto<span
+class="math inline">\(\forall x \in I - \{0\} \quad x &lt; 0 \iff
+(-x)&gt;0\)</span>, e <span class="math inline">\((-x) \in I\)</span>
+per definizione di <span class="math inline">\(I\)</span>, dunque per
+valori negativi è sufficiente considerare il loro opposto, sicuramente
+contenuto in <span class="math inline">\(I\)</span></li>
+</ul></li>
+<li>dunque, ha senso considerare <span class="math inline">\(d:=\min(I
+\cap \mathbb{Z}_{\gt 0})\)</span></li>
+<li><span class="math inline">\(I(d)=I \implies I(d) \subset I \wedge I
+\subset I(d)\)</span>
+<ul>
+<li><span class="math inline">\(I(d) \subset I\)</span>
+<ul>
+<li><span class="math inline">\(\forall x \in I(d) \quad \exists y \in
+\mathbb{Z} \mid x = dy\)</span> per definizione</li>
+<li><span class="math inline">\(\mathbb{Z}\)</span> è anello
+commutativo</li>
+<li><span class="math inline">\(I \subset \mathbb{Z}\)</span> ideale, e
+dunque <span class="math inline">\(I \cdot \mathbb{Z} \subset
+I\)</span></li>
+<li><span class="math inline">\(d := \min(I \cap \mathbb{Z}_{\gt 0})
+\implies d \in I \implies y \in \mathbb{Z} \land d \in I \implies dy \in
+I \implies x \in I \implies I(d) \subset I\)</span></li>
+</ul></li>
+<li><span class="math inline">\(I \subset I(d)\)</span>
+<ul>
+<li><span class="math inline">\(d := \min(I \cap \mathbb{Z}_{\gt 0})
+\implies d \neq 0\)</span></li>
+<li>per il teorema della divisione euclidea con il resto <span
+class="math inline">\(\forall x \in I \quad \exists ! q,r \in \mathbb{Z}
+\mid x=d q+r \quad 0 \leq r&lt;d\)</span>
+<ul>
+<li><span class="math inline">\(r = 0 \iff x = dq \implies x \in
+I(d)\)</span> per definizione, dunque <span class="math inline">\(I
+\subset I(d)\)</span></li>
+<li>ipotizzando <span class="math inline">\(r \neq 0\)</span>
+<ul>
+<li><span class="math inline">\(dq \in I(d) \implies dq \in I\)</span>
+per dimostrazione precedente</li>
+<li>quindi <span class="math inline">\(x = dq + r \implies r = x - dq
+\in I\)</span> poiché <span class="math inline">\(I\)</span> è un
+ideale</li>
+<li><span class="math inline">\(r \neq 0 \implies r \in I \cap
+\mathbb{Z}_{\gt 0}\)</span></li>
+<li>per definizione, <span class="math inline">\(0 \le r \lt d\)</span>,
+ma <span class="math inline">\(d:=\min(I \cap \mathbb{Z}_{\gt
+0})\)</span>, quindi il minimo numero che <span
+class="math inline">\(d\)</span> può assumere è <span
+class="math inline">\(1\)</span>, e poiché <span class="math inline">\(r
+&lt; d \implies r = 0\)</span> necessariamente, dunque segue la
+dimostrazione precedente</li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul></li>
+<li><em>unicità</em>
+<ul>
+<li>l’unicità deriva dal fatto che <span class="math inline">\(d:=\min(I
+\cap \mathbb{Z}_{\gt 0})\)</span>, e dunque nella dimostrazione <span
+class="math inline">\(d &gt; 0\)</span>, ma vale il ragionamento analogo
+per <span class="math inline">\(d &lt; 0\)</span> considerando <span
+class="math inline">\(I(-d)\)</span>, in quanto <span
+class="math inline">\(I(d) = I(-d)\)</span> per dimostrazione
+precedente</li>
+</ul></li>
+<li>quindi, ogni ideale in <span
+class="math inline">\(\mathbb{Z}\)</span> è generato dall’insieme dei
+multipli di un certo <span class="math inline">\(d \ge 0\)</span>, che
+esiste sempre ed è unico, e di conseguenza <span
+class="math inline">\(\mathbb{Z}\)</span> è un anello ad ideali
+principali</li>
+</ul></li>
+</ul>
+<h2 id="oss-6">Oss</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\(a_1, \ldots, a_n \in
+\mathbb{Z}\)</span></li>
+<li><span class="math inline">\(\exists ! d \in \mathbb{N} \mid I(a_1,
+\ldots, a_n) = I(d)\)</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\(d = \textrm{MCD}(a_1, \ldots,
+a_n)\)</span></li>
+</ul></li>
+<li><strong>Dim</strong>
+<ul>
+<li><span class="math inline">\(d\)</span> è <em>divisore comune</em>
+<ul>
+<li><span class="math inline">\(I(d) = I(a_1, \ldots, a_n) \implies
+\forall x \in I(a_1, \ldots, a_n) \quad x \in I(d) \implies d \mid
+x\)</span> per definizione di <span
+class="math inline">\(I(d)\)</span></li>
+<li>preso ad esempio <span class="math inline">\(a_1\)</span>, è
+possibile riscriverlo come <span class="math inline">\(a_1 = a_1 \cdot 1
++ a_2 \cdot 0 + \ldots + a_n \cdot 0\)</span>, di conseguenza <span
+class="math inline">\(a_1 \in I(a_1, \ldots, a_n)\)</span>, dunque <span
+class="math inline">\(d \mid a_1\)</span></li>
+<li>vale il ragionamento analogo per ogni <span
+class="math inline">\(a_1, \ldots , a_n\)</span>, dunque <span
+class="math inline">\(d \mid a_1, \ldots, a_n\)</span></li>
+</ul></li>
+<li><span class="math inline">\(d\)</span> è il <em>massimo tra i
+divisori comuni</em>
+<ul>
+<li>⚠️ <strong>QUI MANCA QUALCOSA ✅</strong></li>
+<li><span class="math inline">\(d\)</span> è il massimo tra i divisori
+comuni quando <span class="math inline">\(e \mid a_1, \ldots, a_n
+\implies e \mid d\)</span></li>
+<li>sia <span class="math inline">\(e\)</span> l’elemento neutro, allora
+sicuramente <span class="math inline">\(e \mid a_1 \ldots,
+a_n\)</span></li>
+<li>in generale <span class="math inline">\(\forall i \in [1, n] \quad e
+\mid a_i \implies \exists x_i \in \mathbb{Z} \mid ex_i =
+a_i\)</span></li>
+<li><span class="math inline">\(d \in I(d) = I(a_1, \ldots, a_n) \iff d
+\in I(a_1, \ldots, a_n) \implies \exists b_1, \ldots b_n \in \mathbb{Z}
+\mid d = a_1 b_1 + \ldots + a_n b_n\)</span>, e per osservazione
+precedente si ottiene che <span class="math inline">\(d = ex_1b_1 +
+\ldots + ex_nb_n = e(b_1x_1 + \ldots + b_nx_n) \implies e \mid
+d\)</span></li>
+</ul></li>
+</ul></li>
+</ul>
+<h2 id="def-2">Def</h2>
+<ul>
+<li><strong>Massimo Comun Divisore</strong> &gt; - <span
+class="math inline">\(a_{1}, \ldots , a_{n} \in \mathbb{Z}\)</span> &gt;
+- <span class="math inline">\(\exists !d \in \mathbb{N} \mid
+I\left(a_{1}, \ldots , a_{n}\right)=I(d)\)</span>, ed è detto
+<strong>massimo comun divisore degli <span class="math inline">\(a_1,
+\ldots, a_n\)</span></strong> &gt; - per dimostrazione precedente <span
+class="math inline">\(I(a_1, \ldots, a_n)\)</span> è un ideale, e per
+dimostrazione precedente ogni ideale in <span
+class="math inline">\(\mathbb{Z}\)</span> è principale, dunque per un
+certo <span class="math inline">\(d\)</span> coincide con <span
+class="math inline">\(I(d)\)</span>, e in particolare <span
+class="math inline">\(d\)</span> è proprio il massimo comun divisore
+degli <span class="math inline">\(a_1, \ldots, a_n\)</span> per
+dimostrazione precedente</li>
+</ul>
+<h2 id="oss-7">Oss</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\(a_1, \ldots, a_n \in
+\mathbb{Z}\)</span></li>
+<li><span class="math inline">\(d := \textrm{MCD}(a_1, \ldots,
+a_n)\)</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\(\exists x_1, \ldots, x_n \in \mathbb{Z}
+\mid a_1 x_1 + \ldots + a_nx_n=d\)</span>, che prende il nome di
+<em>identità di Bézout</em></li>
+</ul></li>
+<li><strong>Dim</strong>
+<ul>
+<li>per dimostrazione precedente, <span
+class="math inline">\(I\left(a_{1}, \ldots a_{n}\right)=I(d)\)</span>,
+quindi <span class="math inline">\(d \in I(a_1, \ldots, a_n) \implies
+\exists x_1, \ldots, x_n \in \mathbb{Z} \mid a_1x_1 + \ldots + a_n x_n =
+d\)</span></li>
+</ul></li>
+</ul>
+<h2 id="oss-8">Oss</h2>
+<ul>
+<li>⚠️ <strong>MANCA DIMOSTRAZIONE SISTEMA DI IDENTITÀ DI
+BÉZOUT</strong></li>
+</ul>
+<hr />
+<h1 id="operazioni-sugli-ideali">Operazioni sugli ideali</h1>
+<h2 id="def-3">Def</h2>
+<ul>
+<li><strong><span class="math inline">\(+\)</span> tra ideali</strong>
+&gt; - <span class="math inline">\((A, +, \cdot)\)</span> anello
+commutativo &gt; - <span class="math inline">\(I, J \subset A\)</span>
+ideali &gt; - <span class="math inline">\(I + J = \{i + j \mid \forall i
+\in I, j \in J\}\)</span></li>
+</ul>
+<h2 id="oss-9">Oss</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\((A, +, \cdot)\)</span> anello
+commutativo</li>
+<li><span class="math inline">\(I, J \subset A\)</span> ideali</li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\(I + J\)</span> è un ideale</li>
+</ul></li>
+<li><strong>Dim</strong>
+<ul>
+<li><span class="math inline">\(0 \in I, 0 \in J, 0+0=0 \implies 0 \in I
++ J\)</span> per definizione</li>
+<li>la chiusura rispetto a <span class="math inline">\(+\)</span> deve
+implicare che <span class="math inline">\(\forall i_1, i_2 \in I, j_1,
+j_2 \in J \quad (i_1 + j_1) + (i_2 + j_2) \in I + J\)</span>, allora si
+ottiene che <span class="math inline">\((i_1 + j_1) + (i_2 + j_2) = (i_1
++ i_2) + (j_1 + j_2)\)</span>, e <span class="math inline">\(i_1 + i_2
+\in I, j_1 + j_2 \in J \implies (i_1 + i_2) + (j_1 + j_2) \in I +
+J\)</span> per definizione di <span class="math inline">\(I +
+J\)</span></li>
+<li><span class="math inline">\(\forall i \in I, j \in J \quad i + j \in
+I + J\)</span>, l’opposto rispetto a <span
+class="math inline">\(+\)</span> di <span class="math inline">\(i +
+j\)</span> è <span class="math inline">\(- (i + j) = (-i) +
+(-j)\)</span>, e <span class="math inline">\(\forall i \in I, j \in J
+\quad -i \in I, -j \in J \implies (-i) + (-j) \in I + J\)</span> per
+definizione</li>
+<li><span class="math inline">\(A \cdot I \subset I \implies \forall a
+\in A, i \in I, j \in J \quad a(i + j) \in I + J\)</span>
+<ul>
+<li><span class="math inline">\(i + j \in I + J\)</span> per
+definizione, e <span class="math inline">\(a(i + j) = ai + aj\)</span>,
+e <span class="math inline">\(ai \in I, aj \in J\)</span> per
+definizione, quindi <span class="math inline">\(ai + aj \in I +
+J\)</span> per definizione</li>
+</ul></li>
+</ul></li>
+</ul>
+<h2 id="def-4">Def</h2>
+<ul>
+<li><strong><span class="math inline">\(\cap\)</span> tra
+ideali</strong> &gt; - <span class="math inline">\((A, +,
+\cdot)\)</span> anello commutativo &gt; - <span class="math inline">\(I,
+J \subset A\)</span> ideali &gt; - <span class="math inline">\(I \cap J
+= \{x \in I \land x \in J\}\)</span></li>
+</ul>
+<h2 id="oss-10">Oss</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\((A, +, \cdot)\)</span> anello
+commutativo</li>
+<li><span class="math inline">\(I, J \subset A\)</span> ideali</li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\(I \cap J\)</span> è un ideale</li>
+</ul></li>
+<li><strong>Dim</strong>
+<ul>
+<li><span class="math inline">\(0 \in I \land 0 \in J \implies 0 \in I
+\cap J\)</span></li>
+<li><span class="math inline">\(\forall x, y \in I \cap J \quad x, y \in
+I \land x, y \in J \implies x + y \in I \land x + y \in J \implies x + y
+\in I \cap J\)</span> per definizione</li>
+<li><span class="math inline">\(\forall x \in I \cap J \quad x \in I
+\land x \in J \implies x^{-1} \in I \land x ^{-1} \in J \implies x^{-1}
+\in I \cap J\)</span> per definizione</li>
+<li><span class="math inline">\(\forall a \in A, x \in I \cap J \quad x
+\in I \land x \in J \implies ax \in I \land ax \in J \implies ax \in I
+\cap J\)</span></li>
+</ul></li>
+</ul>
+<h2 id="def-5">Def</h2>
+<ul>
+<li><strong>Minimo Comune Multiplo</strong> &gt; - <span
+class="math inline">\(a_{1}, \ldots, a_{n} \in \mathbb{Z}\)</span> &gt;
+- <span class="math inline">\(\displaystyle \exists ! m \in \mathbb{N}
+\mid I(m) = I(a_1) \cap \ldots \cap I(a_n) =
+\bigcap_{i=1}^{n}{I(a_i)}\)</span>, ed è detto <strong>minimo comune
+multiplo degli <span class="math inline">\(a_1, \ldots,
+a_n\)</span></strong></li>
+</ul>
+<h2 id="def-6">Def</h2>
+<ul>
+<li><strong><span class="math inline">\(\cdot\)</span> tra
+ideali</strong> &gt; - <span class="math inline">\((A, +,
+\cdot)\)</span> anello commutativo &gt; - <span class="math inline">\(I,
+J \subset A\)</span> ideali &gt; - <span class="math inline">\(I \cdot J
+= \{i_1 j_1 + \ldots + i_k j_k \mid k \ge 1, \forall i_1 , \ldots , i_k
+\in I, j_1 , \ldots , j_k \in J \}\)</span></li>
+</ul>
+<h2 id="oss-11">Oss</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\((A, +, \cdot)\)</span> anello
+commutativo</li>
+<li><span class="math inline">\(I, J \subset A\)</span> ideali</li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\(I \cdot J\)</span> è un ideale</li>
+</ul></li>
+<li><strong>Dim</strong>
+<ul>
+<li>⚠️ <strong>MANCA DIMOSTRAZIONE</strong></li>
+</ul></li>
+</ul>
+<h2 id="oss-12">Oss</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\(a, b \in \mathbb{Z}\)</span></li>
+<li><span class="math inline">\(d:= \textrm{MCD}(a, b)\)</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\(I(a) + I(b) = I(d)\)</span></li>
+</ul></li>
+<li><strong>Dim</strong>
+<ul>
+<li>per dimostrazione precedente <span
+class="math inline">\(I(a)\)</span> e <span
+class="math inline">\(I(b)\)</span> sono ideali, e poiché la somma tra
+ideali è ben definita, allora <span
+class="math inline">\(I(a)+I(b)=\{i+j \mid i \in I(a), j \in I(b)
+\}\)</span></li>
+<li><span class="math inline">\(i \in I(a) \implies \exists x \in
+\mathbb{Z} \mid i = ax\)</span> e <span class="math inline">\(j \in I(b)
+\implies \exists y \in \mathbb{Z} \mid j = by\)</span></li>
+<li>quindi <span class="math inline">\(i + j = ax + by \implies\)</span>
+<span class="math inline">\(I(a)+I(b)=\{a x+b y \mid x, y \in
+\mathbb{Z}\} = I(a, b)\)</span> per definizione</li>
+<li>in particolare, per dimostrazione precedente, <span
+class="math inline">\(I(a, b) = I(d)\)</span></li>
+<li>questa dimostrazione si può estendere per un numero arbitrario di
+ideali, ottenendo <span class="math inline">\(I(a_1) + \ldots + I(a_n) =
+I(\textrm{MCD}(a_1, \ldots, a_n))\)</span></li>
+</ul></li>
+</ul>
+<h2 id="oss-13">Oss</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\(a, b \in \mathbb{Z}\)</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\(I(a) \cdot I(b)=I(a \cdot
+b)\)</span></li>
+</ul></li>
+<li><strong>Dim</strong>
+<ul>
+<li><span class="math inline">\(x \in I(a) \cdot I(b) \implies x \in I(a
+\cdot b)\)</span>
+<ul>
+<li>per dimostrazione precedente <span
+class="math inline">\(I(a)\)</span> e <span
+class="math inline">\(I(b)\)</span> sono ideali, e poiché il prodotto
+tra ideali è ben definito, allora <span class="math inline">\(x \in I(a)
+\cdot I(b) \implies x = i_1 j_1 + \ldots + i_k j_k\)</span> con <span
+class="math inline">\(i_1 , \ldots , i_k \in I(a)\)</span> e <span
+class="math inline">\(j_1 , \ldots , j_k \in I(b)\)</span></li>
+<li>per definizione, <span class="math inline">\(i \in I(a) \implies
+\exists x \in \mathbb{Z} \mid i = ax\)</span>, e dunque <span
+class="math inline">\(i_1, \ldots, i_k = ax_1, \ldots, ax_k\)</span> con
+<span class="math inline">\(x_1, \ldots, x_k \in
+\mathbb{Z}\)</span></li>
+<li>analogamente <span class="math inline">\(j_1, \ldots, j_k = by_1,
+\ldots, by_k\)</span> con <span class="math inline">\(y_1, \ldots, y_k
+\in \mathbb{Z}\)</span></li>
+<li>segue che <span class="math inline">\(x = (ax_1)(by_1),+\ldots+
+(ax_k)(by_k) = ab\cdot(x_1y_1+ \ldots+ x_ky_k)\)</span></li>
+<li>poiché <span class="math inline">\((x_1y_1+ \ldots+ x_ky_k) \in
+\mathbb{Z}\)</span>, segue che <span class="math inline">\(ab \mid x
+\implies x \in I(a \cdot b)\)</span></li>
+</ul></li>
+<li><span class="math inline">\(x \in I(a \cdot b) \implies x \in I(a)
+\cdot I(b)\)</span>
+<ul>
+<li><span class="math inline">\(x \in I(a \cdot b) \implies \exists k
+\in \mathbb{Z} \mid x = ab \cdot k\)</span></li>
+<li><span class="math inline">\(x = abk\)</span>, ma <span
+class="math inline">\(a \in I(a) \land bk \in I(b) \implies x \in I(a)
+\cdot I(b)\)</span></li>
+</ul></li>
+</ul></li>
+</ul>
+</body>
+</html>

@@ -1,0 +1,2088 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Everything</title>
+  <style>
+    html {
+      line-height: 1.5;
+      font-family: Georgia, serif;
+      font-size: 20px;
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 1em;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, 'Lucida Console', Consolas, monospace;
+      font-size: 85%;
+      margin: 0;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+  </style>
+  <script
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js"
+  type="text/javascript"></script>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Everything</h1>
+</header>
+<h1 id="disclaimer">DISCLAIMER</h1>
+<p>Questo è un file che contiene una lista di tutti i teoremi,
+osservazioni, esempi, lemmi, corollari, formule e proposizioni
+<strong>senza alcuna dimostrazione né definizione</strong>, di
+conseguenza molte informazioni risulteranno essere senza alcun contesto
+se già non si conosce la materia. Detto questo, buona lettura.</p>
+<hr />
+<h1 id="numeri-complessi">Numeri complessi</h1>
+<h2 id="teorema-1">Teorema 1</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\(a, b \in \mathbb{R}, z \in \mathbb{C}
+\mid z=a+i b\)</span></li>
+<li><span class="math inline">\(c, d \in \mathbb{R}, w \in \mathbb{C}
+\mid w=c+i d\)</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\(z + w = (a+b)+i (c +d)\)</span></li>
+<li><span class="math inline">\(z\cdot w=(a c-b d)+i(ad+
+bc)\)</span></li>
+</ul></li>
+</ul>
+<h2 id="teorema-2">Teorema 2</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\(a, b \in \mathbb{R}, z \in \mathbb{C}
+\mid z=a+i b\)</span></li>
+<li><span class="math inline">\(c, d \in \mathbb{R}, w \in \mathbb{C}
+\mid w=c+i d\)</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span
+class="math inline">\(\overline{z}+\overline{w}=\overline{z+w}\)</span></li>
+<li><span class="math inline">\(\overline{z} \cdot
+\overline{w}=\overline{z \cdot w}\)</span></li>
+</ul></li>
+</ul>
+<h2 id="teorema-3">Teorema 3</h2>
+<ul>
+<li><span class="math inline">\(\forall \theta \quad e^{i \theta}=\cos
+\theta+i \sin \theta\)</span></li>
+</ul>
+<h2 id="teorema-4">Teorema 4</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\((\mathbb{C}, +, \cdot)\)</span> è un
+gruppo</li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\((\mathbb{C}, +, \cdot )\)</span> è un
+campo</li>
+</ul></li>
+</ul>
+<h2 id="teorema-5">Teorema 5</h2>
+<ul>
+<li><span class="math inline">\(|z \cdot w|=|z|\cdot |w| \quad
+\arg(z\cdot w)=\arg(z) + \arg(w)\)</span></li>
+<li><span class="math inline">\(|\overline{w}|=|w| \quad
+\arg(\overline{w})=-\arg(w)\)</span></li>
+<li><span class="math inline">\(|w^{-1}|={|w|}^{-1}\quad
+\arg(w^{-1})=-\arg(w)\)</span></li>
+<li><span
+class="math inline">\(\left|\dfrac{z}{w}\right|=\dfrac{|z|}{|w|} \quad
+\arg\left(\dfrac{z}{w}\right)=\arg(z) - \arg(w)\)</span></li>
+</ul>
+<h2 id="teorema-6">Teorema 6</h2>
+<ul>
+<li><span class="math inline">\(z^{n}=|z|^{n} e^{i n \theta} \quad \arg
+\left( z^{n} \right)=n \arg (z)\)</span></li>
+</ul>
+<hr />
+<h1 id="permutazioni">Permutazioni</h1>
+<h2 id="teorema-7">Teorema 7</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\(S_X := \{f \mid f : X \rightarrow
+Y\)</span> biiettiva <span class="math inline">\(\}\)</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\((S_X, \circ)\)</span> è un gruppo, non
+abeliano se <span class="math inline">\(|X| \ge 3\)</span></li>
+</ul></li>
+</ul>
+<h2 id="teorema-8">Teorema 8</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\(n \in \mathbb{N}\)</span></li>
+<li><span class="math inline">\(\sigma \in S_n\)</span></li>
+<li><span class="math inline">\(1 \le i \lt n \in
+\mathbb{N}\)</span></li>
+<li><span class="math inline">\(I(\sigma, i):=\left\{n \in \mathbb{Z}
+\mid \sigma^{n}(i)=i\right\}\)</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\((I(\sigma, i), +) \subset (\mathbb{Z},
++)\)</span> è un ideale</li>
+</ul></li>
+</ul>
+<h2 id="teorema-9">Teorema 9</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li>⚠️ <strong>RISCRIVI TUTTO</strong></li>
+<li><span class="math inline">\(I(\sigma, i)\)</span> è <strong>ideale
+principale</strong> in <span class="math inline">\(\mathbb{Z}\)</span>
+generato da <span class="math inline">\(I(d)\)</span>, dove <span
+class="math inline">\(d\)</span> è la lunghezza del ciclo di <span
+class="math inline">\(i\)</span>, quindi <span
+class="math inline">\(I(\sigma, i) = I(d)\)</span></li>
+<li><span class="math inline">\(I(\sigma, i) = I(d) \implies d \in
+I(\sigma, i)\)</span></li>
+</ul></li>
+</ul>
+<h2 id="teorema-10">Teorema 10</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\(n \in \mathbb{N}\)</span></li>
+<li><span class="math inline">\(\sigma \in S_n \mid \sigma = \gamma_1
+\ldots \gamma_k\)</span> sia la sua decomposizione in cicli</li>
+<li><span class="math inline">\(d_j:=\)</span> lunghezza di <span
+class="math inline">\(\gamma_j \quad \forall j \in [1, k]\)</span></li>
+<li><span class="math inline">\(m := \textrm{mcm}(d_1, \ldots,
+d_k)\)</span></li>
+<li><span class="math inline">\(I(\sigma):=\left\{n \in \mathbb{Z} \mid
+\sigma^{n}=\textrm{id}\right\}\)</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\(o(\sigma) = m\)</span></li>
+</ul></li>
+</ul>
+<h2 id="teorema-11">Teorema 11</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\(n \in \mathbb{N}\)</span></li>
+<li><span class="math inline">\(\sigma \in S_n\)</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\(\exists 1 \leq i_1, \ldots, i_k \lt n
+\mid \sigma = \tau_{i_1, i_1 + 1} \ldots \tau_{i_k, i_k + 1}\)</span>,
+quindi ogni permutazione può essere riscritta come composizione di
+trasposizioni adiacenti</li>
+</ul></li>
+</ul>
+<h2 id="teorema-12">Teorema 12</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\(n \in \mathbb{N}\)</span></li>
+<li><span class="math inline">\(A_n := \{\sigma \in S_n \mid
+\sigma\)</span> pari<span class="math inline">\(\}\)</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\(A_n \subset S_n\)</span> è un
+sottogruppo, detto <em>gruppo alterno di ordine <span
+class="math inline">\(n\)</span></em></li>
+</ul></li>
+</ul>
+<h2 id="teorema-13">Teorema 13</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\(n \in \mathbb{N}\)</span></li>
+<li><span class="math inline">\(\sigma \in S_{n} \mid \sigma=\tau_{1}
+\ldots \tau_{k}\)</span> dove <span class="math inline">\(\forall j \in
+[1, k] \quad \tau_{j} = \tau_{j, j + 1}\)</span>, dunque tutte le
+trasposizioni sono adiacenti</li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\(\textrm{sgn}(\sigma)=
+(-1)^k\)</span></li>
+</ul></li>
+</ul>
+<h2 id="teorema-14">Teorema 14</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\(n \in \mathbb{N}\)</span></li>
+<li><span class="math inline">\(\sigma, \sigma^{\prime} \in S_{n} |
+\left\{\begin{array}{l}\sigma = \tau_1 \ldots \tau_k \\ \sigma &#39; =
+\tau_1^{\prime} \ldots \tau_h^{\prime}\end{array}\right.\)</span>, dove
+ogni trasposizione è adiacente</li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\(\operatorname{sgn}\left(\sigma
+\sigma^{\prime}\right)=\operatorname{sgn}(\sigma)\cdot
+\textrm{sgn}(\sigma &#39;)\)</span></li>
+</ul></li>
+</ul>
+<h2 id="teorema-15">Teorema 15</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\(n \in \mathbb{N}\)</span></li>
+<li><span class="math inline">\(\sigma \in S_n\)</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span
+class="math inline">\(\textrm{sgn}(\sigma^{-1})=\textrm{sgn}(\sigma)\)</span></li>
+</ul></li>
+</ul>
+<h2 id="teorema-16">Teorema 16</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\(n \in \mathbb{N}\)</span></li>
+<li><span class="math inline">\(\sigma, \sigma^\prime \in
+S_n\)</span></li>
+<li><span class="math inline">\(\sigma \sim \sigma ^\prime \iff
+\exists\alpha \in S_n \mid \sigma^\prime = \alpha \sigma
+\alpha^{-1}\)</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\(\textrm{sgn}(\sigma^\prime) =
+\textrm{sgn}(\sigma)\)</span></li>
+</ul></li>
+</ul>
+<h2 id="teorema-17">Teorema 17</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\(n \in \mathbb{N}\)</span></li>
+<li><span class="math inline">\(\sigma, \sigma^\prime \in S_n \mid
+\sigma := \gamma_1 \ldots \gamma_k, \sigma^\prime := \gamma_1^\prime
+\ldots \gamma_h^\prime\)</span></li>
+<li><span class="math inline">\(\sigma \sim \sigma ^\prime \iff
+\exists\alpha \in S_n \mid \sigma^\prime = \alpha \sigma
+\alpha^{-1}\)</span>, che costituisce dunque la relazione di
+coniugio</li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\(\sigma \sim \sigma ^\prime
+\iff\)</span><span class="math inline">\(\left\{\begin{array}{c}k=h \\
+d=d_{1}^{\prime} \\ \vdots \\
+d_{k}=d_{h}^{\prime}=d_{k}^{\prime}\end{array}\right.\)</span>, dove
+<span class="math inline">\(d_j\)</span> è la lunghezza del ciclo <span
+class="math inline">\(\gamma_j\)</span> e <span
+class="math inline">\(d_j^\prime\)</span> è la lunghezza del ciclo <span
+class="math inline">\(\gamma_j^\prime\)</span></li>
+</ul></li>
+</ul>
+<h2 id="teorema-18">Teorema 18</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\(n \in \mathbb{N}\)</span></li>
+<li><span class="math inline">\(\sigma \in S_n \mid \sigma := \gamma_1
+\ldots \gamma_k\)</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\(\textrm{sgn}(\sigma)=(-1)^{n -
+k}\)</span></li>
+</ul></li>
+</ul>
+<hr />
+<h1 id="ideali">Ideali</h1>
+<h2 id="teorema-19">Teorema 19</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\((A, +, \cdot)\)</span> anello</li>
+<li><span class="math inline">\(a \in \mathbb{Z}\)</span></li>
+<li><span class="math inline">\(I(a) := \{ax \mid x \in
+A\}\)</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\(I(a)\)</span> è un ideale, e prende il
+nome di <em>ideale di <span class="math inline">\(A\)</span> generato da
+<span class="math inline">\(a \in A\)</span></em></li>
+</ul></li>
+</ul>
+<h2 id="teorema-20">Teorema 20</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\(A\)</span> dominio di integrità</li>
+<li><span class="math inline">\(a, b \in A\)</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\(I(a)=I(b) \iff \exists c \in A^* \mid a
+= bc\)</span></li>
+</ul></li>
+</ul>
+<h2 id="teorema-21">Teorema 21</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\(a, b \in \mathbb{Z} -
+\{0\}\)</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\(I(a)=I(b) \iff a=\pm b\)</span></li>
+</ul></li>
+</ul>
+<h2 id="teorema-22">Teorema 22</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\((A, +, \cdot)\)</span> anello</li>
+<li><span class="math inline">\(a_1, \ldots, a_n
+\in\mathbb{Z}\)</span></li>
+<li><span class="math inline">\(I(a_1, \ldots, a_n) := \{ a_1b_1 +
+\ldots +a_nb_n \mid b_1, \ldots, b_n \in A\}\)</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\(I(a_1, \ldots, a_n)\)</span> è un
+ideale, e prende il nome di <em>ideale di <span
+class="math inline">\(A\)</span> generato dagli <span
+class="math inline">\(a_1, \ldots, a_n \in A\)</span></em></li>
+</ul></li>
+</ul>
+<h2 id="teorema-23">Teorema 23</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\((A, +, \cdot)\)</span> anello</li>
+<li><span class="math inline">\(+: A/I \times A/I \rightarrow
+A/I\)</span></li>
+<li><span class="math inline">\(\cdot : A/I \times A/I \rightarrow
+A/I\)</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\((A/I, +, \cdot)\)</span> è un
+anello</li>
+</ul></li>
+</ul>
+<h2 id="teorema-24">Teorema 24</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\(I \subset \mathbb{Z}\)</span>
+ideale</li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\(\exists ! \ d \in \mathbb{N} \mid I =
+I(d)\)</span>, o equivalentemente, in <span
+class="math inline">\(\mathbb{Z}\)</span> ogni ideale è principale</li>
+</ul></li>
+</ul>
+<h2 id="teorema-25">Teorema 25</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\(a_1, \ldots, a_n \in
+\mathbb{Z}\)</span></li>
+<li><span class="math inline">\(\exists ! d \in \mathbb{N} \mid I(a_1,
+\ldots, a_n) = I(d)\)</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\(d = \textrm{MCD}(a_1, \ldots,
+a_n)\)</span></li>
+</ul></li>
+</ul>
+<h2 id="teorema-26">Teorema 26</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\(a_1, \ldots, a_n \in
+\mathbb{Z}\)</span></li>
+<li><span class="math inline">\(d := \textrm{MCD}(a_1, \ldots,
+a_n)\)</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\(\exists x_1, \ldots, x_n \in \mathbb{Z}
+\mid a_1 x_1 + \ldots + a_nx_n=d\)</span>, che prende il nome di
+<em>identità di Bézout</em></li>
+</ul></li>
+</ul>
+<h2 id="teorema-27">Teorema 27</h2>
+<ul>
+<li>⚠️ <strong>MANCA DIMOSTRAZIONE SISTEMA DI IDENTITÀ DI
+BÉZOUT</strong></li>
+</ul>
+<hr />
+<h1 id="operazioni-sugli-ideali">Operazioni sugli ideali</h1>
+<h2 id="teorema-28">Teorema 28</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\((A, +, \cdot)\)</span> anello
+commutativo</li>
+<li><span class="math inline">\(I, J \subset A\)</span> ideali</li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\(I + J\)</span> è un ideale</li>
+</ul></li>
+</ul>
+<h2 id="teorema-29">Teorema 29</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\((A, +, \cdot)\)</span> anello
+commutativo</li>
+<li><span class="math inline">\(I, J \subset A\)</span> ideali</li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\(I \cap J\)</span> è un ideale</li>
+</ul></li>
+</ul>
+<h2 id="teorema-30">Teorema 30</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\((A, +, \cdot)\)</span> anello
+commutativo</li>
+<li><span class="math inline">\(I, J \subset A\)</span> ideali</li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\(I \cdot J\)</span> è un ideale</li>
+</ul></li>
+</ul>
+<h2 id="teorema-31">Teorema 31</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\(a, b \in \mathbb{Z}\)</span></li>
+<li><span class="math inline">\(d:= \textrm{MCD}(a, b)\)</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\(I(a) + I(b) = I(d)\)</span></li>
+</ul></li>
+</ul>
+<h2 id="teorema-32">Teorema 32</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\(a, b \in \mathbb{Z}\)</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\(I(a) \cdot I(b)=I(a \cdot
+b)\)</span></li>
+</ul></li>
+</ul>
+<hr />
+<h1 id="polinomi">Polinomi</h1>
+<h2 id="teorema-33">Teorema 33</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li>(<span class="math inline">\(\mathbb{K}, +, \cdot)\)</span>
+anello</li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\((\mathbb{K}[x], +, \cdot)\)</span> è un
+anello</li>
+</ul></li>
+</ul>
+<h2 id="teorema-34">Teorema 34</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\(\mathbb{K}\)</span> campo</li>
+<li><span class="math inline">\(a(x), b(x) \in
+\mathbb{K}[x]\)</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\(\deg(a(x) \cdot b(x)) = \deg(a(x)) +
+\deg(b(x))\)</span></li>
+</ul></li>
+</ul>
+<h2 id="teorema-35">Teorema 35</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\(\mathbb{K}\)</span> campo</li>
+<li><span class="math inline">\(a(x) \in \mathbb{K}[x] \mid \deg(a(x))
+\ge 1\)</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\(\nexists a^{-1}(x) \in
+\mathbb{K}[x]\)</span></li>
+</ul></li>
+</ul>
+<h2 id="teorema-36">Teorema 36</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\(\mathbb{K}\)</span> campo</li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\(\mathbb{K}[x]^* = \mathbb{K}^* \subset
+\mathbb{K}[x]\)</span></li>
+</ul></li>
+</ul>
+<h2 id="teorema-37">Teorema 37</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\(\mathbb{K}\)</span> campo</li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\(\mathbb{K}[x]\)</span> è un dominio</li>
+</ul></li>
+</ul>
+<h2 id="teorema-38">Teorema 38</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\(\mathbb{K}\)</span> campo</li>
+<li><span class="math inline">\(p(x) \in \mathbb{K}[x]\)</span></li>
+<li><span class="math inline">\(c \in \mathbb{K}\)</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\(p(c) = 0 \iff x - c \mid
+p(x)\)</span></li>
+</ul></li>
+</ul>
+<h2 id="teorema-39">Teorema 39</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\(\mathbb{K}\)</span> campo</li>
+<li><span class="math inline">\(p(x) \in \mathbb{K}[x]\)</span></li>
+<li><span class="math inline">\(n := \deg(p(x))\)</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\(|\{c \in \mathbb{K} \mid p(c) = 0\}| \le
+n\)</span></li>
+</ul></li>
+</ul>
+<h2 id="teorema-40">Teorema 40</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\(\mathbb{K}\)</span> campo</li>
+<li><span class="math inline">\(I \subset \mathbb{K}[x]\)</span>
+ideale</li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\(I\)</span> è un ideale principale</li>
+</ul></li>
+</ul>
+<h2 id="teorema-41">Teorema 41</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\(\mathbb{K}\)</span> campo</li>
+<li><span class="math inline">\(I(a_1(x)), \ldots, I(a_n(x)) \subset
+\mathbb{K}[x]\)</span> ideali</li>
+<li><span class="math inline">\(\exists d(x) \in \mathbb{K}[x]\mid
+I(a_1(x), \ldots, a_n(x)) = I(d(x))\)</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\(d(x)=\textrm{MCD}(a_1(x), \ldots,
+a_n(x))\)</span></li>
+</ul></li>
+</ul>
+<h2 id="teorema-42">Teorema 42</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\(\mathbb{K}\)</span> campo</li>
+<li><span class="math inline">\(I(a_1(x)), \ldots, I(a_n(x)) \subset
+\mathbb{K}[x]\)</span> ideali</li>
+<li><span class="math inline">\(\exists m(x) \in \mathbb{K}[x] \mid
+I(a_1(x)) \cap \ldots \cap I(a_1(x)) = I(m(x))\)</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\(m(x)=\textrm{mcm}(a_1(x), \ldots,
+a_n(x))\)</span></li>
+</ul></li>
+</ul>
+<h2 id="teorema-43">Teorema 43</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\(\mathbb{K}\)</span> campo</li>
+<li><span class="math inline">\(a_1(x), \ldots ,a_n(x) \in
+\mathbb{K}[x]\)</span></li>
+<li><span class="math inline">\(c \in \mathbb{K}\)</span></li>
+<li><span class="math inline">\(d(x):= \textrm{MCD}(a_1(x), \ldots,
+a_n(x))\)</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\(a_1(c) = \ldots = a_n(c) = 0 \iff d(c) =
+0\)</span></li>
+</ul></li>
+</ul>
+<h2 id="teorema-44">Teorema 44</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\(\mathbb{K}\)</span> campo</li>
+<li><span class="math inline">\(p(x) \in \mathbb{K}[x]\)</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\(p(x) \in \mathbb{K}[x]\)</span>
+irriducibile <span class="math inline">\(\iff p(x)\)</span> primo</li>
+</ul></li>
+</ul>
+<h2 id="teorema-45">Teorema 45</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\(\mathbb{K}\)</span> campo</li>
+<li><span class="math inline">\(p(x) \in \mathbb{K}[x] -
+\{0\}\)</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\(\exists ! q_1(x), \ldots ,q_k(x) \in
+\mathbb{K}[x]\)</span> irriducibili e monici<span
+class="math inline">\(, c \in \mathbb{K} - \{0\} \mid p(x) = c \cdot
+q_1(x) \cdot \ldots \cdot q_k(x)\)</span></li>
+<li>in particolare, i polinomi sono unici a meno di un
+riordinamento</li>
+</ul></li>
+</ul>
+<h2 id="teorema-46">Teorema 46</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\(\mathbb{K}\)</span> campo</li>
+<li><span class="math inline">\(p(x) \in \mathbb{K}[x]\)</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\(p(x)\)</span> irriducibile <span
+class="math inline">\(\iff \deg(p(x)) = 1\)</span></li>
+</ul></li>
+</ul>
+<h2 id="teorema-47">Teorema 47</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\(p(x) \in \mathbb{R}[x]\)</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\(p(x)\)</span> irriducibile <span
+class="math inline">\(\iff \deg(p(x)) = 1\)</span> oppure <span
+class="math inline">\(\deg(p(x)) = 2 \land \Delta \lt 0\)</span></li>
+</ul></li>
+</ul>
+<h2 id="teorema-48">Teorema 48</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\(a_0, \ldots, a_n \in \mathbb{Z} \mid
+a_0, a_n \neq 0\)</span></li>
+<li><span class="math inline">\(p(x) \in \mathbb{Z}[x] \mid p(x) = a_0 +
+\ldots + a_nx^n\)</span></li>
+<li><span class="math inline">\(a, b \in \mathbb{Z} \mid \textrm{MCD}(a,
+b) = 1\)</span></li>
+<li><span class="math inline">\(p(\frac{a}{b}) = 0\)</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\(a \mid a_0 \land b \mid
+a_n\)</span></li>
+</ul></li>
+</ul>
+<h2 id="teorema-49">Teorema 49</h2>
+<ul>
+<li>⚠️ <strong>MANCA UN TEOREMA ENORME</strong></li>
+</ul>
+<hr />
+<h1 id="coefficienti-binomiali">Coefficienti binomiali</h1>
+<h2 id="teorema-50">Teorema 50</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\(n, k \in \mathbb{N}\)</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\(\displaystyle \binom{n}{k} =
+\binom{n}{n-k}\)</span></li>
+</ul></li>
+</ul>
+<h2 id="teorema-51">Teorema 51</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\(n, k \in \mathbb{N}\)</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\(\displaystyle \binom{n}{k + 1} =
+\binom{n - 1}{k + 1} \binom{n - 1}{ k}\)</span></li>
+</ul></li>
+</ul>
+<h2 id="teorema-52">Teorema 52</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\(p \in \mathbb{P}\)</span></li>
+<li><span class="math inline">\(k \in \mathbb{N} \mid 0 \lt k \lt
+p\)</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\(p \ \bigg\vert \displaystyle
+\binom{p}{k}\)</span></li>
+</ul></li>
+</ul>
+<h2 id="teorema-53">Teorema 53</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\(n \in \mathbb{Z}\)</span></li>
+<li><span class="math inline">\(p \in \mathbb{P} : p \mid
+n\)</span></li>
+<li><span class="math inline">\([a] \in \mathbb{Z}_{p}\)</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\(n \cdot [a] = [0]\)</span> in <span
+class="math inline">\(\mathbb{Z}_p\)</span></li>
+</ul></li>
+</ul>
+<h2 id="teorema-54">Teorema 54</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\(n \in \mathbb{Z}\)</span></li>
+<li><span class="math inline">\(p \in \mathbb{P} : p \mid
+n\)</span></li>
+<li><span class="math inline">\([a] \in \mathbb{Z}_{p}\)</span></li>
+<li><span class="math inline">\(k \in \mathbb{N} \mid 0 \lt k \lt
+p\)</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\(\displaystyle \binom{p}{k} \cdot [a] =
+[0]\)</span> in <span class="math inline">\(\mathbb{Z}_p\)</span></li>
+</ul></li>
+</ul>
+<h2 id="teorema-55">Teorema 55</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\(p \in \mathbb{P}\)</span></li>
+<li><span class="math inline">\([a], [b] \in \mathbb{Z}_p\)</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\(([a]+[b])^{p}=[a]^{p}+[b]^{p}\)</span>
+in <span class="math inline">\(\mathbb{Z}_p\)</span></li>
+</ul></li>
+</ul>
+<h2 id="teorema-56">Teorema 56</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\(p \in \mathbb{P}\)</span></li>
+<li><span class="math inline">\([a_1], \ldots, [a_n] \in
+\mathbb{Z}_p\)</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span
+class="math inline">\(\left(\left[a_{1}\right]+\ldots+\left[a_{n}\right]\right)^{p}=\left[a_{1}\right]^{p}+\ldots+\left[a_{n}\right]^{p}\)</span>
+in <span class="math inline">\(\mathbb{Z}_p\)</span></li>
+</ul></li>
+</ul>
+<hr />
+<h1 id="gruppi">Gruppi</h1>
+<h2 id="teorema-57">Teorema 57</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\(G\)</span> monoide</li>
+<li><span class="math inline">\(\exists e \in G\)</span> elemento
+neutro</li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\(e\)</span> è unico in <span
+class="math inline">\(G\)</span></li>
+</ul></li>
+</ul>
+<h2 id="teorema-58">Teorema 58</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\((G, m)\)</span> gruppo</li>
+<li><span class="math inline">\(x \in G\)</span></li>
+<li><span class="math inline">\(\exists x^{-1} \in G\)</span> inverso di
+<span class="math inline">\(x\)</span> rispetto ad <span
+class="math inline">\(m\)</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\(x^{-1}\)</span> è unico in <span
+class="math inline">\(G\)</span> per <span
+class="math inline">\(x\)</span> rispetto a <span
+class="math inline">\(m\)</span></li>
+</ul></li>
+</ul>
+<h2 id="teorema-59">Teorema 59</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\(X, Y\)</span> insiemi,</li>
+<li><span class="math inline">\(Y^X = \{f \mid f:X \rightarrow
+Y\}\)</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\((X^X, \circ)\)</span> è monoide</li>
+</ul></li>
+</ul>
+<h2 id="teorema-60">Teorema 60</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\(X, Y\)</span> insiemi finiti</li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\(\left| Y^X \right| = \left| Y \right| ^
+{|X|}\)</span></li>
+</ul></li>
+</ul>
+<hr />
+<h1 id="anelli">Anelli</h1>
+<h2 id="teorema-61">Teorema 61</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\((A, +, \cdot)\)</span> anello
+commutativo</li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\((A^*, \cdot)\)</span> è un gruppo</li>
+</ul></li>
+</ul>
+<h2 id="teorema-62">Teorema 62</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\((A, +, \cdot)\)</span> anello
+commutativo</li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\((A^*, \cdot) \subset (A, \cdot)\)</span>
+è un sottogruppo</li>
+</ul></li>
+</ul>
+<h2 id="teorema-63">Teorema 63</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\((A, +, \cdot)\)</span> anello
+commutativo</li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\(x \mid 0 \iff x \notin A^*\)</span></li>
+</ul></li>
+</ul>
+<h2 id="teorema-64">Teorema 64</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\(A\)</span> campo</li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\(A\)</span> dominio di integrità</li>
+</ul></li>
+</ul>
+<h2 id="teorema-65">Teorema 65</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\(A\)</span> dominio di integrità</li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\(a\)</span> primo <span
+class="math inline">\(\implies a\)</span> irriducibile</li>
+</ul></li>
+</ul>
+<h2 id="teorema-66">Teorema 66</h2>
+<ul>
+<li><strong>Hp</strong>
+<ol type="1">
+<li><span class="math inline">\(H\)</span> è sottogruppo normale</li>
+<li><span class="math inline">\(\forall g \in G, h \in H \quad g \cdot h
+\cdot g^{-1} \in H\)</span></li>
+<li><span class="math inline">\(\forall g \in G, h \in H \quad \exists k
+\in H \mid g \cdot h = k \cdot g\)</span></li>
+</ol></li>
+<li><strong>Th</strong>
+<ul>
+<li>le tre formulazioni sono equivalenti</li>
+</ul></li>
+</ul>
+<h2 id="teorema-67">Teorema 67</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\(G\)</span> gruppo</li>
+<li><span class="math inline">\(g \in G\)</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\((H(g), \cdot) \subset (G,
+\cdot)\)</span> è sottogruppo</li>
+</ul></li>
+</ul>
+<h2 id="teorema-68">Teorema 68</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\(G\)</span> gruppo</li>
+<li><span class="math inline">\(g \in G\)</span></li>
+<li><span class="math inline">\(I(g):=\{n \in \mathbb{Z} \mid g^n =
+e\}\)</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\(I(g)\)</span> è un ideale</li>
+</ul></li>
+</ul>
+<h2 id="teorema-69">Teorema 69</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\(G\)</span> gruppo</li>
+<li><span class="math inline">\(g \in G\)</span></li>
+<li><span class="math inline">\(\exists! d \geq 0 \mid
+I(g)=I(d)\)</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\(d = 0 \implies o(g) := |H(g)| =
+|\mathbb{Z}|\)</span>, dunque infinito</li>
+<li><span class="math inline">\(d&gt;0 \implies d = o(g)\)</span></li>
+</ul></li>
+</ul>
+<h2 id="teorema-70">Teorema 70</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\(G\)</span> gruppo finito</li>
+<li><span class="math inline">\(g \in G \mid d := o(g)\)</span>
+finito</li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\(g^{|G|}=e\)</span></li>
+</ul></li>
+</ul>
+<h2 id="teorema-71">Teorema 71</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\(G\)</span> gruppo finito</li>
+<li><span class="math inline">\(g \in G\)</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\(o(g) = o(g^{-1})\)</span></li>
+</ul></li>
+</ul>
+<h2 id="teorema-72">Teorema 72</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\(G\)</span> gruppo finito</li>
+<li><span class="math inline">\(k \in \mathbb{Z}\)</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\(\forall g \in G \quad o(g^k) \mid
+o(g)\)</span></li>
+</ul></li>
+</ul>
+<h2 id="teorema-73">Teorema 73</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\(G\)</span> gruppo finito</li>
+<li><span class="math inline">\(g, h \in G \mid gh = hg\)</span></li>
+<li><span class="math inline">\(d := \textrm{MCD}(o(g),
+o(h))\)</span></li>
+<li><span class="math inline">\(m := \textrm{mcm}(o(g),
+o(h))\)</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\(\dfrac{m}{d} \mid o(gh) \land o(gh) \mid
+m\)</span></li>
+</ul></li>
+</ul>
+<h2 id="teorema-74">Teorema 74</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\(G\)</span> gruppo finito</li>
+<li><span class="math inline">\(g, h \in G \mid gh = hg\)</span></li>
+<li><span class="math inline">\(d := \textrm{MCD}(o(g), o(h)) =
+1\)</span></li>
+<li><span class="math inline">\(m := \textrm{mcm}(o(g),
+o(h))\)</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\(o(gh) = o(hg) = m\)</span></li>
+</ul></li>
+</ul>
+<hr />
+<h1 id="insieme-quoziente">Insieme quoziente</h1>
+<h2 id="teorema-75">Teorema 75</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\(n \in \mathbb{Z}\)</span></li>
+<li><span class="math inline">\(I(n) := \{nk \mid k \in
+\mathbb{Z}\}\)</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\((\mathbb{Z}_n, +)\)</span> è un
+gruppo</li>
+</ul></li>
+</ul>
+<h2 id="teorema-76">Teorema 76</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\(p \in \mathbb{P}\)</span></li>
+<li><span class="math inline">\(a, b \in \mathbb{Z}\)</span></li>
+<li><span class="math inline">\(p \mid ab\)</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\(p \mid a \lor p \mid b\)</span></li>
+</ul></li>
+</ul>
+<h2 id="teorema-77">Teorema 77</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\(n \in \mathbb{Z}\)</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\(\mathbb{Z}_n\)</span> dominio di
+integrità <span class="math inline">\(\iff n \in
+\mathbb{P}\)</span></li>
+</ul></li>
+</ul>
+<h2 id="teorema-78">Teorema 78</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\(n \in \mathbb{Z}\)</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\(\forall [a] \in \mathbb{Z}_n \quad
+\textrm{MCD}(a, n) = 1 \iff [a] \in \mathbb{Z}^*_n\)</span></li>
+</ul></li>
+</ul>
+<h2 id="teorema-79">Teorema 79</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\(p \in \mathbb{P}\)</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\(\mathbb{Z}_p\)</span> campo</li>
+</ul></li>
+</ul>
+<h2 id="teorema-80">Teorema 80</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\(p \in \mathbb{P}\)</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\((\mathbb{Z}_p^*, \cdot)\)</span> è
+ciclico</li>
+</ul></li>
+</ul>
+<h2 id="teorema-81">Teorema 81</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\(n, m \in \mathbb{N}\)</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\([a] \in \mathbb{Z}_{m n}^{*} \iff[a] \in
+\mathbb{Z}_{m}^{*} \land [a] \in \mathbb{Z}^*_{n}\)</span></li>
+</ul></li>
+</ul>
+<h2 id="teorema-82">Teorema 82</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\(m, n \in \mathbb{N} \mid \textrm{MCD}(m,
+n) = 1\)</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\(\varphi(m \cdot n) = \varphi(m) \cdot
+\varphi(n)\)</span></li>
+</ul></li>
+</ul>
+<h2 id="teorema-83">Teorema 83</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\(p \in \mathbb{P}\)</span></li>
+<li><span class="math inline">\(k \in \mathbb{N} \mid k \ge
+1\)</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\(\varphi(p^k) = p^{k
+-1}(p-1)\)</span></li>
+</ul></li>
+</ul>
+<h2 id="teorema-84">Teorema 84</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\(k \in \mathbb{N} \mid k \ge
+1\)</span></li>
+<li><span class="math inline">\(p_1, \ldots, p_k \in
+\mathbb{P}\)</span></li>
+<li><span class="math inline">\(i_1, \ldots, i_k \ge 1\)</span></li>
+<li><span class="math inline">\(n \in \mathbb{N} \mid n = p_1^{i_1}
+\cdot \ldots \cdot p_k^{i_k}\)</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\(\displaystyle\varphi(n)=n \cdot \prod_{p
+\mid n}\left(1-\frac{1}{p}\right)\)</span></li>
+</ul></li>
+</ul>
+<hr />
+<h1 id="induzione">Induzione</h1>
+<h2 id="teorema-85">Teorema 85</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><p><span class="math inline">\(\left\{\begin{array}{l}F_0 = 0 \\ F_1
+= 1 \\ F_n = F_{n - 1} + F_{n - 2} \quad \forall n \ge
+2\end{array}\right.\)</span> è detta <em>sequenza di
+Fibonacci</em></p></li>
+<li><p><span class="math inline">\(x^2 -x -1 = 0\)</span> ha come
+soluzioni <span class="math inline">\(\left\{\begin{array}{l}\phi :=
+\dfrac{1+\sqrt{5}}{2} \\ \psi := \dfrac{1 -
+\sqrt{5}}{2}\end{array}\right.\)</span></p></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li>la formula chiusa della serie di Fibonacci è <span
+class="math inline">\(F_{n}=\dfrac{\varphi^{n}-\psi^{n}}{\varphi-\psi}=\dfrac{\varphi^{n}-\psi^{n}}{\sqrt{5}}\)</span></li>
+</ul></li>
+</ul>
+<hr />
+<h1 id="teorema-fondamentale-dellalgebra">Teorema fondamentale
+dell’algebra</h1>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\(\mathbb{K}\)</span> campo</li>
+<li><span class="math inline">\(p(x) \in \mathbb{K}[x] \mid p(x) =
+a_{0}x^0 + \ldots +a_{n} x^{n}\)</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\(\exists z \in \mathbb{C} \mid p(z) =
+0\)</span></li>
+</ul></li>
+</ul>
+<hr />
+<h1 id="teorema-della-divisione-euclidea-con-il-resto">Teorema della
+divisione euclidea con il resto</h1>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\(m \in \mathbb{Z}\)</span></li>
+<li><span class="math inline">\(n \in \mathbb{Z} - \{0\}\)</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\(\exists ! \ q, r \in \mathbb{Z} \mid m=n
+q+r \quad 0 \leq r&lt;n\)</span></li>
+</ul></li>
+</ul>
+<h2 id="teorema-86">Teorema 86</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\(\mathbb{K}\)</span> campo</li>
+<li><span class="math inline">\(a(x), b(x) \in \mathbb{K}[x] \mid b(x)
+\neq 0\)</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\(\exists ! q(x), r(x) \in \mathbb{K}[x]
+\mid a(x) = b(x) \cdot q(x) + r(x) \quad \deg(r(x)) \lt
+\deg(b(x))\)</span>, che è detto <em>teorema della divisione con il
+resto tra polinomi</em></li>
+</ul></li>
+</ul>
+<hr />
+<h1 id="teorema-di-lagrange">Teorema di Lagrange</h1>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\(G\)</span> gruppo finito</li>
+<li><span class="math inline">\(H \subset G\)</span> sottogruppo
+finito</li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\(|G| = |H| \cdot |G / H|\)</span></li>
+</ul></li>
+</ul>
+<h2 id="teorema-87">Teorema 87</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\(a_1, \ldots, a_n \ge 2 \in \mathbb{Z}
+\mid \textrm{MCD}(a_i, a_j) = 1 \quad \forall i, j \in [1, n] : i \neq
+j\)</span></li>
+<li><span class="math inline">\(m := \textrm{mcm}(a_1, \ldots,
+a_n)\)</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\(m = a_1 \cdot \ldots \cdot
+a_n\)</span></li>
+</ul></li>
+</ul>
+<h2 id="teorema-88">Teorema 88</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\(n \in \mathbb{N}\)</span></li>
+<li><span class="math inline">\(a_1, \ldots, a_n \in \mathbb{Z}_{n \ge
+2}\)</span></li>
+<li><span class="math inline">\(m:= \textrm{mcm}(a_1, \ldots,
+a_n)\)</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\(\exists \phi \mid \phi: \mathbb{Z}_m
+\rightarrow \mathbb{Z}_{a_1} \times \ldots \times \mathbb{Z}_{a_n}: x \
+(\bmod \ m) \rightarrow (x \ (\bmod \ a_1), \ldots, x \ (\bmod \
+a_n))\)</span></li>
+<li><span class="math inline">\(\phi\)</span> è una funzione ben
+definita, ed è iniettiva</li>
+</ul></li>
+</ul>
+<h2 id="teorema-89">Teorema 89</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\(k \in \mathbb{N}\)</span></li>
+<li><span class="math inline">\(n_1, \ldots, n_k \in \mathbb{N} - \{0\}
+\mid \forall i, j \in [1, k] \quad i \neq j \implies \textrm{MCD}(n_i,
+n_j) = 1\)</span></li>
+<li><span class="math inline">\(N := \textrm{mcm}(n_1, \ldots,
+n_k)\)</span></li>
+<li><span class="math inline">\([a] \in \mathbb{Z}_N^*\)</span></li>
+<li><span class="math inline">\(o := o([a])\)</span> in <span
+class="math inline">\(\mathbb{Z}_N^*\)</span></li>
+<li><span class="math inline">\(\forall h \in [1, k] \quad o_h :=
+o([a])\)</span> in <span
+class="math inline">\(\mathbb{Z}_{n_h}^*\)</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\(o = \textrm{mcm}(o_1, \ldots,
+o_k)\)</span></li>
+</ul></li>
+</ul>
+<h2 id="teorema-90">Teorema 90</h2>
+<ul>
+<li>⚠️ <strong>NON HO CAPITO UN CAZZO</strong></li>
+</ul>
+<hr />
+<h1 id="piccolo-teorema-di-fermat">Piccolo teorema di Fermat</h1>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\(p \in \mathbb{P}\)</span></li>
+<li><span class="math inline">\(a \in \mathbb{Z}\)</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\(a^{p} \equiv a \ (\bmod \
+p)\)</span></li>
+</ul></li>
+</ul>
+<h2 id="teorema-91">Teorema 91</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\(p \in \mathbb{P}\)</span></li>
+<li><span class="math inline">\([a] \in
+\mathbb{Z}_{p}-\{0\}\)</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span
+class="math inline">\([a]^{-1}=\left[a\right]^{p-2}\)</span></li>
+</ul></li>
+</ul>
+<h2 id="teorema-92">Teorema 92</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\(p \in \mathbb{P}\)</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\(\displaystyle \prod_{0 \lt a \lt p} (x -
+a) \equiv x^{p - 1} - 1 \ (\bmod \ p)\)</span></li>
+</ul></li>
+</ul>
+<h2 id="teorema-93">Teorema 93</h2>
+<ul>
+<li>⚠️ <strong>NON HO CAPITO UN CAZZO</strong></li>
+</ul>
+<hr />
+<h1 id="teorema-di-eulero">Teorema di Eulero</h1>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\(a, n \in \mathbb{N} \mid \textrm{MCD}(a,
+n) = 1\)</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\(a^{\varphi(n)} \equiv 1 \ (\bmod \
+n)\)</span></li>
+</ul></li>
+</ul>
+<h2 id="teorema-94">Teorema 94</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\(G, H\)</span> gruppi</li>
+<li><span class="math inline">\(f: G \rightarrow H\)</span> morfismo di
+gruppi</li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\(G / \textrm{ker}(f) \cong
+\textrm{Im}(f)\)</span>, o alternativamente <span
+class="math inline">\(\exists \varphi \mid \varphi : G / \textrm{ker}(f)
+\rightarrow \textrm{Im}(f): [g] \rightarrow f(g)\)</span> isomorfismo di
+gruppi</li>
+</ul></li>
+</ul>
+<h2 id="teorema-95">Teorema 95</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\(G\)</span> gruppo <span
+class="math inline">\(\bigg\vert |G|=4\)</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\(G \cong \mathbb{Z}_4\)</span> oppure
+<span class="math inline">\(G \cong K_4\)</span></li>
+</ul></li>
+</ul>
+<hr />
+<h1 id="relazioni">Relazioni</h1>
+<h2 id="teorema-96">Teorema 96</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\(m, n \in \mathbb{N}\)</span></li>
+<li><span class="math inline">\(m \mid n \iff \exists p \in \mathbb{N}
+\mid mp = n\)</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\(\mid\)</span> è ordine parziale</li>
+</ul></li>
+</ul>
+<h2 id="teorema-97">Teorema 97</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\(a, b \in \mathbb{Z}\)</span></li>
+<li><span class="math inline">\(a \equiv b \ (\bmod \ n) \iff m \mid
+b-a\)</span> è detta congruenza modulo <span
+class="math inline">\(n\)</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\(\equiv\)</span> è una relazione di
+equivalenza</li>
+</ul></li>
+</ul>
+<h2 id="teorema-98">Teorema 98</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\(x, y \in \mathbb{Z} \mid x \equiv y \
+(\bmod \ n)\)</span></li>
+<li><span class="math inline">\(d \in \mathbb{Z} : d\mid n\)</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\(x \equiv y \ (\bmod \ d)\)</span></li>
+</ul></li>
+</ul>
+<h2 id="teorema-99">Teorema 99</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\(n \in \mathbb{N}\)</span></li>
+<li><span class="math inline">\([a], [b] \in \mathbb{Z}_n\)</span></li>
+<li><span class="math inline">\(d:= \textrm{MCD}(a, n)\)</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\(d \nmid b \implies \nexists [x] \in
+\mathbb{Z}_n \mid ax \equiv b \ (\bmod \ n)\)</span></li>
+<li><span class="math inline">\(d \mid b \implies \forall [x] \in
+\mathbb{Z}_n \mid ax \equiv b \ (\bmod \ n) \quad x\)</span> è anche
+tale che <span class="math inline">\(\dfrac{a}{d}x \equiv \dfrac{b}{d} \
+\left(\bmod \ \dfrac{n}{d}\right)\)</span></li>
+</ul></li>
+</ul>
+<h2 id="teorema-100">Teorema 100</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\(G\)</span> gruppo</li>
+<li><span class="math inline">\(g, h \in G\)</span></li>
+<li><span class="math inline">\(g \sim h \iff \exists a \in G \mid h =
+a\cdot g \cdot a^{-1}\)</span> è detta <em>relazione di
+coniugio</em></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\(\sim\)</span> è una relazione di
+equivalenza</li>
+</ul></li>
+</ul>
+<h2 id="teorema-101">Teorema 101</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\(G\)</span> gruppo</li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\(\forall x, y \in G \quad x \nsim y \iff
+[x] \cap [y] = \varnothing \lor x \sim y \iff [x] = [y]\)</span></li>
+</ul></li>
+</ul>
+<h2 id="teorema-102">Teorema 102</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\(G\)</span> gruppo</li>
+<li><span class="math inline">\(\sim\)</span> è una relazione di
+equivalenza in <span class="math inline">\(G\)</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\(\sim\)</span> induce una partizione di
+<span class="math inline">\(G\)</span>, dunque <span
+class="math inline">\(\displaystyle G = \coprod_{[x] \in
+X/\sim}[x]\)</span></li>
+</ul></li>
+</ul>
+<h2 id="teorema-103">Teorema 103</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\(G\)</span> gruppo</li>
+<li><span class="math inline">\(H \subset G\)</span> sottogruppo</li>
+<li><span class="math inline">\(x, y \in G\)</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\(x \sim_S y \iff x^{-1}y \in H\)</span> è
+una relazione di equivalenza</li>
+</ul></li>
+</ul>
+<h2 id="teorema-104">Teorema 104</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\((\mathbb{Z}, +)\)</span> anello</li>
+<li><span class="math inline">\(n \in \mathbb{N}_{\ge 2}\)</span></li>
+<li><span class="math inline">\(I(n) := \{n k \mid k \in
+\mathbb{Z}\}\)</span></li>
+<li><span class="math inline">\(a, b \in \mathbb{Z}\)</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\(a \sim_S b \iff a \equiv b \ (\bmod \
+n)\)</span></li>
+</ul></li>
+</ul>
+<h2 id="teorema-105">Teorema 105</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\(G\)</span> gruppo</li>
+<li><span class="math inline">\(H \subset G\)</span> sottogruppo</li>
+<li><span class="math inline">\(x \in G\)</span></li>
+<li><span class="math inline">\([x] = \{y \in G \mid y \sim_S
+x\}\)</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\(xH:= \{ xh \mid h \in H\} =
+[x]\)</span></li>
+</ul></li>
+</ul>
+<h2 id="teorema-106">Teorema 106</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\(G\)</span> gruppo</li>
+<li><span class="math inline">\(H \subset G\)</span> sottogruppo</li>
+<li><span class="math inline">\(x \in G\)</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\(| xH |= |H|\)</span></li>
+</ul></li>
+</ul>
+<h2 id="teorema-107">Teorema 107</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\(G\)</span> gruppo</li>
+<li><span class="math inline">\(H \subset G\)</span> sottogruppo</li>
+<li><span class="math inline">\(+: G/H \times G/H \rightarrow
+G/H\)</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\((G/H, +)\)</span> è gruppo abeliano</li>
+</ul></li>
+</ul>
+<hr />
+<h1 id="morfismi">Morfismi</h1>
+<h2 id="teorema-108">Teorema 108</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\((G, \cdot), (H, \cdot)\)</span>
+gruppi</li>
+<li><span class="math inline">\(1_G\)</span> neutro per <span
+class="math inline">\(G\)</span></li>
+<li><span class="math inline">\(1_H\)</span> neutro per <span
+class="math inline">\(H\)</span></li>
+<li><span class="math inline">\(f: G \rightarrow H\)</span>
+morfismo</li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\(f(1_G) = 1_H\)</span></li>
+</ul></li>
+</ul>
+<h2 id="teorema-109">Teorema 109</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\((G, \cdot), (H, \cdot)\)</span>
+gruppi</li>
+<li><span class="math inline">\(1_G\)</span> neutro per <span
+class="math inline">\(G\)</span></li>
+<li><span class="math inline">\(1_H\)</span> neutro per <span
+class="math inline">\(H\)</span></li>
+<li><span class="math inline">\(f: G \rightarrow H\)</span>
+morfismo</li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\(f(g^{-1}) = f(g)^{-1}\)</span></li>
+</ul></li>
+</ul>
+<h2 id="teorema-110">Teorema 110</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\(f: G \rightarrow H\)</span>
+isomorfismo</li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\(f ^{-1}: H \rightarrow G\)</span>
+isomorfismo</li>
+</ul></li>
+</ul>
+<h2 id="teorema-111">Teorema 111</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\(z \in \mathbb{C} \mid z^n = 1\)</span>
+sono le radici <span class="math inline">\(n\)</span>-esime di <span
+class="math inline">\(1\)</span></li>
+<li><span class="math inline">\(\zeta := e^{i \frac{2
+\pi}{n}}\)</span></li>
+<li><span class="math inline">\(H := \{\zeta ^0, \zeta^1, \zeta^k,
+\ldots, \zeta^{n-1}\}\)</span> è l’insieme delle radici <span
+class="math inline">\(n\)</span>-esime di <span
+class="math inline">\(1\)</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\((H, \cdot) \subset (\mathbb{C}-\{0\},
+\cdot)\)</span> è un sottogruppo</li>
+</ul></li>
+</ul>
+<h2 id="teorema-112">Teorema 112</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\(f: \mathbb{Z}_n \rightarrow H : [k]
+\rightarrow \zeta^k\)</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\(f\)</span> isomorfismo di gruppi <span
+class="math inline">\((\mathbb{Z}_n , +)\)</span> e <span
+class="math inline">\((H, \cdot)\)</span></li>
+</ul></li>
+</ul>
+<h2 id="teorema-113">Teorema 113</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\((G, \cdot)\)</span> gruppo</li>
+<li><span class="math inline">\(f: \mathbb{Z} \rightarrow G: n
+\rightarrow g^n\)</span> per qualche <span class="math inline">\(g \in
+G\)</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\(f\)</span> morfismo di gruppi <span
+class="math inline">\((\mathbb{Z}, +)\)</span> e <span
+class="math inline">\((G, \cdot)\)</span></li>
+</ul></li>
+</ul>
+<h2 id="teorema-114">Teorema 114</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\(f: \mathbb{Z} \rightarrow \mathbb{Z}_n :
+k \rightarrow [k]\)</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\(f\)</span> morfismo di anelli <span
+class="math inline">\(\left(\mathbb{Z},+, \cdot\right)\)</span> e <span
+class="math inline">\(\left(\mathbb{Z}_{n},+, \cdot\right)\)</span></li>
+</ul></li>
+</ul>
+<h2 id="teorema-115">Teorema 115</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\(n, m \in \mathbb{Z} : n \mid
+m\)</span></li>
+<li><span class="math inline">\(f : \mathbb{Z}_m \rightarrow
+\mathbb{Z}_n: x \ (\bmod \ m) \rightarrow x \ (\bmod\ n)\)</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\(f\)</span> morfismo di anelli <span
+class="math inline">\(\left(\mathbb{Z}_{m},+, \cdot\right)\)</span> e
+<span class="math inline">\(\left(\mathbb{Z}_{n},+,
+\cdot\right)\)</span></li>
+</ul></li>
+</ul>
+<h2 id="teorema-116">Teorema 116</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\(G\)</span> gruppo</li>
+<li><span class="math inline">\(f: G \rightarrow G : h \rightarrow g
+\cdot h \cdot g^{-1}\)</span> per qualche <span class="math inline">\(g
+\in G\)</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\(f\)</span> morfismo di gruppi <span
+class="math inline">\((G, \cdot)\)</span> e <span
+class="math inline">\((G, \cdot)\)</span></li>
+</ul></li>
+</ul>
+<h2 id="teorema-117">Teorema 117</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\(G, H\)</span> gruppi</li>
+<li><span class="math inline">\(f: G \rightarrow H\)</span>
+morfismo</li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\(\textrm{ker}(f) \subset G\)</span> è
+sottogruppo</li>
+</ul></li>
+</ul>
+<h2 id="teorema-118">Teorema 118</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\(G, H\)</span> gruppi</li>
+<li><span class="math inline">\(f: G \rightarrow H\)</span>
+morfismo</li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\(\textrm{Im}(f) \subset G\)</span> è
+sottogruppo</li>
+</ul></li>
+</ul>
+<h2 id="teorema-119">Teorema 119</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\(G, H\)</span> gruppi</li>
+<li><span class="math inline">\(f: G \rightarrow H\)</span>
+morfismo</li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\(f\)</span> iniettiva <span
+class="math inline">\(\iff \textrm{ker}(f) = \{1_G\}\)</span></li>
+</ul></li>
+</ul>
+<h2 id="teorema-120">Teorema 120</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\(A, B\)</span> anelli</li>
+<li><span class="math inline">\(f: A \rightarrow B\)</span> morfismo di
+anelli</li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\(\textrm{ker}(f)\)</span> ideale</li>
+</ul></li>
+</ul>
+<h2 id="teorema-121">Teorema 121</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\(A, B\)</span> anelli</li>
+<li><span class="math inline">\(f: A \rightarrow B\)</span> morfismo di
+anelli</li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\(\textrm{Im}(f)\)</span> sottoanello</li>
+</ul></li>
+</ul>
+<h2 id="teorema-122">Teorema 122</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\(f: \mathbb{Z} \rightarrow \mathbb{C} -
+\{0\} : k \rightarrow \zeta^k\)</span></li>
+<li><span class="math inline">\(f\)</span> morfismo di gruppi <span
+class="math inline">\((\mathbb{Z}, +)\)</span> e <span
+class="math inline">\((\mathbb{C} - \{0\}, \cdot)\)</span></li>
+<li><span class="math inline">\(I(n)\)</span> ideale generato da <span
+class="math inline">\(n\)</span> <strong>⚠️ CONTROLLA SE SERVE QUESTA
+COSA</strong></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\(\textrm{ker}(f) = I(n)\)</span></li>
+</ul></li>
+</ul>
+<h2 id="teorema-123">Teorema 123</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\(G, H\)</span> gruppi</li>
+<li><span class="math inline">\(f: G \rightarrow H\)</span>
+morfismo</li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\(\textrm{ker}(f)\)</span> è sottogruppo
+normale</li>
+</ul></li>
+</ul>
+<hr />
+<h1 id="gruppi-diedrali">Gruppi diedrali</h1>
+<h2 id="teorema-124">Teorema 124</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\(n \in \mathbb{N}_{\ge 2}\)</span></li>
+<li><span class="math inline">\(D_n\)</span> insieme delle simmetrie
+dell’<span class="math inline">\(n\)</span>-gono regolare</li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\(|D_n| = 2n\)</span></li>
+</ul></li>
+</ul>
+<h2 id="teorema-125">Teorema 125</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\(n \in \mathbb{N}_{\ge 2}\)</span></li>
+<li><span class="math inline">\(D_n\)</span> insieme delle simmetrie
+dell’<span class="math inline">\(n\)</span>-gono regolare</li>
+<li><span class="math inline">\(\cdot\)</span> è l’operazione di
+composizione delle simmetrie</li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\((D_n, \cdot)\)</span> è un gruppo</li>
+</ul></li>
+</ul>
+<h2 id="teorema-126">Teorema 126</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\(D_2\)</span> gruppo diedrale</li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\((D_2, \cdot)\)</span> è l’unico gruppo
+diedrale abeliano</li>
+</ul></li>
+</ul>
+<h2 id="teorema-127">Teorema 127</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\(D_n\)</span> gruppo diedrale</li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\(D_n \hookrightarrow S_n\)</span></li>
+<li><span class="math inline">\(\exists X \subset S_n\)</span>
+sottogruppo di <span class="math inline">\(S_n\)</span> <span
+class="math inline">\(\mid D_n \cong X\)</span>
+<ul>
+<li><span class="math inline">\(D_3 \cong S_3\)</span></li>
+</ul></li>
+</ul></li>
+</ul>
+<h2 id="teorema-128">Teorema 128</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\(K_4\)</span> è il gruppo di Klein</li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\(K_4 \cong D_2\)</span></li>
+</ul></li>
+</ul>
+<hr />
+</body>
+</html>

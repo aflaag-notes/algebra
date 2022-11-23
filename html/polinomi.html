@@ -1,0 +1,880 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Polinomi</title>
+  <style>
+    html {
+      line-height: 1.5;
+      font-family: Georgia, serif;
+      font-size: 20px;
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 1em;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, 'Lucida Console', Consolas, monospace;
+      font-size: 85%;
+      margin: 0;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+  </style>
+  <script
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js"
+  type="text/javascript"></script>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Polinomi</h1>
+</header>
+<h1 id="polinomi">Polinomi</h1>
+<h2 id="def">Def</h2>
+<ul>
+<li><strong>Polinomi</strong> &gt; - <span
+class="math inline">\(\mathbb{K}\)</span> campo &gt; - <span
+class="math inline">\(a(x) := \displaystyle{\sum_{k = 0}^na_kx^k} =
+a_0x^0 + \ldots + a_nx^n\)</span> è un <strong>polinomio</strong> &gt; -
+<span class="math inline">\(\mathbb{K}[x] := \{a_0x^0 + \ldots + a_n x^n
+\mid a_0, \ldots, a_n \in \mathbb{K}\}\)</span> è l’<strong>insieme dei
+polinomi a coefficienti in <span
+class="math inline">\(\mathbb{K}\)</span></strong> &gt; - <span
+class="math inline">\(p(x) = a_0x^0 + \ldots + a_nx^n \in
+\mathbb{K}[x]\)</span> è detto <strong>polinomio monico</strong> <span
+class="math inline">\(\iff a_n = 1\)</span></li>
+</ul>
+<h2 id="oss">Oss</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li>(<span class="math inline">\(\mathbb{K}, +, \cdot)\)</span>
+anello</li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\((\mathbb{K}[x], +, \cdot)\)</span> è un
+anello</li>
+</ul></li>
+<li><strong>Dim</strong>
+<ul>
+<li>le operazioni <span class="math inline">\(+\)</span> e <span
+class="math inline">\(\cdot\)</span> sono ben definite
+<ul>
+<li><span class="math inline">\(p(x), q(x) \in \mathbb{K}[x] \mid p(x) =
+\displaystyle{\sum_{i = 0}^n a_ix^i} \land q(x) = \displaystyle{\sum_{j
+= 0}^m b_jx^j}\)</span></li>
+<li><span class="math inline">\(p(x) + q(x) = \displaystyle{\sum_{k =
+0}^{+\infty}{(a_k + b_k)}}x^k\)</span>
+<ul>
+<li>ogni termine presente in solo uno dei due polinomi, varra <span
+class="math inline">\(0\)</span> nell’altro, di conseguenza la
+sommatoria che va a <span class="math inline">\(+ \infty\)</span> ha
+significato</li>
+</ul></li>
+<li><span class="math inline">\(p(x) \cdot q(x) = \displaystyle \sum_{i
+= 0}^n \left( \sum_{j = 0}^{m}{a_ib_j x^{i + j }}\right)\)</span></li>
+</ul></li>
+<li><span class="math inline">\((\mathbb{K}[x], +)\)</span> gruppo
+abeliano
+<ul>
+<li>per come <span class="math inline">\(+\)</span> è definita, è
+associativa</li>
+<li>l’elemento neutro rispetto a <span class="math inline">\(+\)</span>
+è costituito dal polinomio nullo <span class="math inline">\(a(x) =
+0\)</span></li>
+<li><span class="math inline">\(\forall a(x) := \displaystyle{\sum_{i =
+0}^{n}{a_i x^i}}\in \mathbb{K}[x] \quad \exists-a(x)= - \displaystyle
+{\sum_{i = 0}^n{a_i x^i}}\)</span></li>
+<li>per come <span class="math inline">\(+\)</span> è definita, è
+commutativa</li>
+</ul></li>
+<li><span class="math inline">\((\mathbb{K}[x], \cdot)\)</span> monoide
+<ul>
+<li>per come <span class="math inline">\(\cdot\)</span> è definita, è
+associativa</li>
+<li>l’elemento neutro rispetto a <span
+class="math inline">\(\cdot\)</span> è costituito da <span
+class="math inline">\(a(x) = 1\cdot x^0 = 1\)</span></li>
+</ul></li>
+<li>per come <span class="math inline">\(+\)</span> e <span
+class="math inline">\(\cdot\)</span> sono definite <span
+class="math inline">\(\forall a(x), b(x), c(x) \in \mathbb{K}[x] \quad
+a(x) \cdot (b(x) + c(x)) = a(x) \cdot b(x) + a(x) \cdot
+c(x)\)</span></li>
+</ul></li>
+</ul>
+<h2 id="def-1">Def</h2>
+<ul>
+<li><strong>Grado del polinomio</strong> &gt; - <span
+class="math inline">\(\mathbb{K}\)</span> campo &gt; - <span
+class="math inline">\(a(x) = a_0x^0 + \ldots + a_nx^n \in
+\mathbb{K}[x]\)</span> &gt; - <span
+class="math inline">\(\deg(a(x)):=\left\{\begin{array}{ll} n &amp; a(x)
+\neq 0 \\ - \infty &amp; a(x) = 0\end{array}\right.\)</span></li>
+</ul>
+<h2 id="oss-1">Oss</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\(\mathbb{K}\)</span> campo</li>
+<li><span class="math inline">\(a(x), b(x) \in
+\mathbb{K}[x]\)</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\(\deg(a(x) \cdot b(x)) = \deg(a(x)) +
+\deg(b(x))\)</span></li>
+</ul></li>
+<li><strong>Dim</strong>
+<ul>
+<li><span class="math inline">\(a(x) \neq 0 \implies a(x) = a_0x^0 +
+\ldots + a_nb^n \implies \deg(a(x)) = n\)</span></li>
+<li><span class="math inline">\(b(x) \neq 0 \implies b(x) = b_0x^0 +
+\ldots + b_mx^m \implies \deg(b(x)) = m\)</span></li>
+<li>dunque <span class="math inline">\(\deg(a(x)) + \deg(b(x)) = n +
+m\)</span></li>
+<li><span class="math inline">\(a(x) \cdot b(x) = a_0b_0\cdot x^0 +
+\ldots + a_nb_m\cdot x^{n + m} \implies \deg(a(x) \cdot b(x)) = n +
+m\)</span>
+<ul>
+<li>per dimostrazione precedente <span
+class="math inline">\(\mathbb{K}\)</span> campo <span
+class="math inline">\(\implies \mathbb{K}\)</span> dominio di integrità,
+e dunque in <span class="math inline">\(\mathbb{K}\)</span> vale la
+legge di annullamento del prodotto, per cui <span
+class="math inline">\(a_n, b_m \neq 0 \implies a_n \cdot b_m \neq
+0\)</span></li>
+</ul></li>
+<li>di conseguenza <span class="math inline">\(\deg(a(x) \cdot b(x)) = n
++ m = \deg(a(x)) + \deg(b(x))\)</span></li>
+<li>l’equazione è verificata anche quando almeno uno dei due polinomi è
+nullo, in quanto <span class="math inline">\(\forall n \in \mathbb{N}
+\quad -\infty \pm n = -\infty \land -\infty -\infty =
+-\infty\)</span></li>
+</ul></li>
+</ul>
+<h2 id="oss-2">Oss</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\(\mathbb{K}\)</span> campo</li>
+<li><span class="math inline">\(a(x) \in \mathbb{K}[x] \mid \deg(a(x))
+\ge 1\)</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\(\nexists a^{-1}(x) \in
+\mathbb{K}[x]\)</span></li>
+</ul></li>
+<li><strong>Dim</strong>
+<ul>
+<li><span class="math inline">\(\forall b(x) \neq 0 \quad \deg(a(x)
+\cdot b(x)) \ge \deg(a(x)) \ge 1\)</span></li>
+<li><span class="math inline">\(\deg(1 \cdot x^0) = \deg(1) =
+0\)</span></li>
+<li>ipotizzando che <span class="math inline">\(\exists a^{-1}(x) \in
+\mathbb{K}[x]\)</span>, allora <span class="math inline">\(a(x) \cdot
+a^{-1}(x) = 1\)</span>, dunque <span class="math inline">\(\deg(a(x)
+\cdot a^{-1}(x)) = 0\)</span>, ma <span class="math inline">\(\forall
+b(x) \quad \deg(a(x) \cdot b(x)) \ge 1 \ \bot\)</span></li>
+</ul></li>
+</ul>
+<h2 id="oss-3">Oss</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\(\mathbb{K}\)</span> campo</li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\(\mathbb{K}[x]^* = \mathbb{K}^* \subset
+\mathbb{K}[x]\)</span></li>
+</ul></li>
+<li><strong>Dim</strong>
+<ul>
+<li><span class="math inline">\(\mathbb{K}[x]^* = \mathbb{K}^*\)</span>
+<ul>
+<li><span class="math inline">\(\forall a(x) \in\mathbb{K}[x] \mid a(x)
+= a_0 \neq 0\)</span> polinomio costante non nullo, il polinomio inverso
+sarà costituito esclusivamente dal suo coefficiente <span
+class="math inline">\(a_0^{-1} \in \mathbb{K}\)</span></li>
+<li>per dimostrazione precedente <span
+class="math inline">\(\mathbb{K}\)</span> campo <span
+class="math inline">\(\implies \forall a_0 \in \mathbb{K} - \{0\} \quad
+\exists a_0^{-1} \in \mathbb{K} - \{0\}\)</span></li>
+<li>dunque <span class="math inline">\(\exists a^{-1}(x) \quad a(x)
+\cdot a^{-1}(x) = a_0 \cdot a_0^{-1} = 1\)</span></li>
+</ul></li>
+<li><span class="math inline">\(\mathbb{K}^* \subset
+\mathbb{K}[x]\)</span>
+<ul>
+<li><span class="math inline">\(\mathbb{K}^* \subset \mathbb{K} \subset
+\mathbb{K}[x]\)</span></li>
+<li>per dimostrazione precedente, gli unici elementi invertibili in
+<span class="math inline">\(\mathbb{K}[x]\)</span> sono i polinomi
+costanti, che costituiscono un sottoinsieme di <span
+class="math inline">\(\mathbb{K}[x]\)</span>, che coincide proprio con
+<span class="math inline">\(\mathbb{K}\)</span> poiché i polinomi
+costanti si identificano con un singolo coefficiente</li>
+</ul></li>
+</ul></li>
+</ul>
+<h2 id="oss-4">Oss</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\(\mathbb{K}\)</span> campo</li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\(\mathbb{K}[x]\)</span> è un dominio</li>
+</ul></li>
+<li><strong>Dim</strong>
+<ul>
+<li>⚠️ <strong>MANCA LA DIMOSTRAZIONE</strong></li>
+</ul></li>
+</ul>
+<h2 id="def-2">Def</h2>
+<ul>
+<li><strong>Radici di un polinomio</strong> &gt; - <span
+class="math inline">\(\mathbb{K}\)</span> campo &gt; - <span
+class="math inline">\(p(x) \in \mathbb{K}[x]\)</span> &gt; - <span
+class="math inline">\(\{c \in \mathbb{K}\ \mid p(c) = 0\}\)</span> è
+l’<strong>insieme delle radici di <span
+class="math inline">\(p(x)\)</span></strong></li>
+</ul>
+<h2 id="oss-5">Oss</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\(\mathbb{K}\)</span> campo</li>
+<li><span class="math inline">\(p(x) \in \mathbb{K}[x]\)</span></li>
+<li><span class="math inline">\(c \in \mathbb{K}\)</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\(p(c) = 0 \iff x - c \mid
+p(x)\)</span></li>
+</ul></li>
+<li><strong>Dim</strong>
+<ul>
+<li><em>prima implicazione</em>
+<ul>
+<li>per il teorema della divisione con il resto tra polinomi, dividendo
+<span class="math inline">\(p(x)\)</span> per <span
+class="math inline">\((x - c)\)</span> si ottiene che <span
+class="math inline">\(\exists!q(x), r(x) \in \mathbb{K}[x] \mid p(x) =
+q(x) \cdot (x - c) + r(x)\)</span></li>
+<li><span class="math inline">\(r_0 := r(x)\)</span></li>
+<li><span class="math inline">\(p(c) = q(c) (c - c) + r_0 =
+r_0\)</span>, ma <span class="math inline">\(p(c) = 0\)</span> in
+ipotesi, e dunque <span class="math inline">\(r_0 = 0\)</span></li>
+<li><span class="math inline">\(r_0 = 0 \implies p(x) = q(x)(x - c)
+\implies x- c \mid p(x)\)</span></li>
+</ul></li>
+<li><em>seconda implicazione</em>
+<ul>
+<li><span class="math inline">\(x - c \mid p(x) \implies \exists p(x)
+\in \mathbb{K}[x] : p(x) = q(x)\cdot (x - c)\)</span>, allora <span
+class="math inline">\(p(c) = q(c) \cdot (c - c) = 0 \implies c\)</span>
+radice di <span class="math inline">\(p(x)\)</span></li>
+</ul></li>
+</ul></li>
+</ul>
+<h2 id="oss-6">Oss</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\(\mathbb{K}\)</span> campo</li>
+<li><span class="math inline">\(p(x) \in \mathbb{K}[x]\)</span></li>
+<li><span class="math inline">\(n := \deg(p(x))\)</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\(|\{c \in \mathbb{K} \mid p(c) = 0\}| \le
+n\)</span></li>
+</ul></li>
+<li><strong>Dim</strong>
+<ul>
+<li>ipotizzando <span class="math inline">\(N :=|\{c \in \mathbb{K} \mid
+p(c) = 0\}| \gt n \implies \{c_1, \ldots, c_N\}\)</span> sia l’insieme
+delle radici</li>
+<li>per dimostrazione precedente <span
+class="math inline">\(\left.\begin{array}{c} x - c_1 \mid p(x) \\ \vdots
+\\ x-c_N \mid p(x) \end{array}\right\} \implies (x - c_1) \cdot \ldots
+\cdot (x - c_N) \mid p(x)\)</span>
+<ul>
+<li>⚠️ <strong>MANCA LA DIMOSTRAZIONE DI QUESTO PASSAGGIO
+✅</strong></li>
+</ul></li>
+<li>ma <span class="math inline">\(\deg\left((x - c_1) \cdot \ldots
+\cdot (x - c_N)\right) = N\)</span>, mentre <span
+class="math inline">\(\deg(p(x)) = n\)</span>, dove <span
+class="math inline">\(M \gt n \ \bot\)</span></li>
+</ul></li>
+</ul>
+<h2 id="oss-7">Oss</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\(\mathbb{K}\)</span> campo</li>
+<li><span class="math inline">\(I \subset \mathbb{K}[x]\)</span>
+ideale</li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\(I\)</span> è un ideale principale</li>
+</ul></li>
+<li><strong>Dim</strong>
+<ul>
+<li><em>unicità</em>
+<ul>
+<li><span class="math inline">\(I = \{0\} \implies I = I(0)\)</span>,
+ovvero l’ideale principale generato da <span
+class="math inline">\(0\)</span></li>
+<li>preso <span class="math inline">\(p(x) \in I - \{0\} \mid
+\deg(p(x))\)</span> sia il minore possibile, allora <span
+class="math inline">\(\forall q(x) \in I \mid \deg(q(x)) \lt \deg(p(x))
+\implies q(x) \in I(0) \implies q(x) = 0\)</span>, di conseguenza è
+unico in quanto l’elemento minore in <span class="math inline">\(I -
+\{0\}\)</span> è unico</li>
+</ul></li>
+<li><em>esistenza</em>
+<ul>
+<li><span class="math inline">\(\exists p(x) \in I - \{0\} \mid I =
+I(p(x))\)</span>, dove <span class="math inline">\(p(x)\)</span> è il
+polinomio di grado minore in <span class="math inline">\(I -
+\{0\}\)</span>
+<ul>
+<li><span class="math inline">\(I \subset I(p(x))\)</span>
+<ul>
+<li>per il teorema della divisione con il resto tra polinomi <span
+class="math inline">\(\forall a(x) \in I \quad \exists ! q(x), r(x) \mid
+a(x) = p(x) \cdot q(x) + r(x) \quad \deg(r(x)) \lt \deg(p(x)) \implies
+r(x) = a(x) - p(x) \cdot q(x)\)</span></li>
+<li><span class="math inline">\(\left.\begin{array}{l} a(x) \in I \\
+p(x) \in I - \{0\} \implies p(x) \cdot q(x) \in I \end{array}\right\}
+\implies r(x) \in I\)</span></li>
+<li>ma poiché <span class="math inline">\(\deg(r(x)) \lt
+\deg(p(x))\)</span>, e <span class="math inline">\(p(x)\)</span> è stato
+preso con il grado minore possibile, per osservazione precedente segue
+necessariamente che <span class="math inline">\(r(x) = 0\)</span>, e
+dunque <span class="math inline">\(a(x) = p(x) \cdot q(x) \implies a(x)
+\in I(p(x)) \implies I \subset I(p(x))\)</span></li>
+</ul></li>
+<li><span class="math inline">\(I(p(x)) \subset I\)</span>
+<ul>
+<li><span class="math inline">\(p(x) \in I - \{0\}\)</span> e <span
+class="math inline">\(I\)</span> è un ideale per ipotesi, dunque in
+particolare <span class="math inline">\(\mathbb{K}[x] \cdot I \subset
+I\)</span>, quindi <span class="math inline">\(\forall q(x) \in
+\mathbb{K}[x] \quad q(x) \cdot p(x) \in I\)</span></li>
+<li><span class="math inline">\(\forall a(x) \in I(p(x)) \quad \exists
+q(x) \in \mathbb{K}[x] \mid q(x)\cdot p(x) = a(x)\)</span>, dunque <span
+class="math inline">\(a(x) \in I\)</span> per osservazione precedente,
+allora <span class="math inline">\(I(p(x)) \subset I\)</span></li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul>
+<h2 id="oss-8">Oss</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\(\mathbb{K}\)</span> campo</li>
+<li><span class="math inline">\(I(a_1(x)), \ldots, I(a_n(x)) \subset
+\mathbb{K}[x]\)</span> ideali</li>
+<li><span class="math inline">\(\exists d(x) \in \mathbb{K}[x]\mid
+I(a_1(x), \ldots, a_n(x)) = I(d(x))\)</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\(d(x)=\textrm{MCD}(a_1(x), \ldots,
+a_n(x))\)</span></li>
+</ul></li>
+<li><strong>Dim</strong>
+<ul>
+<li>la dimostrazione è analoga al caso di <span
+class="math inline">\(\mathbb{Z}\)</span></li>
+<li>in particolare, <span class="math inline">\(\textrm{MCD}(a_1(x),
+\ldots, a_n(x))\)</span> è ben definito in quanto, per dimostrazione
+precedente, la divisione con il resto tra polinomi è ben definita, ed è
+dunque possibile calcolare il massimo comun divisore attraverso, ad
+esempio, l’algoritmo di Euclide</li>
+<li>inoltre, <span class="math inline">\(d(x)\)</span> è ben definito a
+meno di una costante moltiplicativa non nulla
+<ul>
+<li>ad esempio <span class="math inline">\(d(x) = x + 1\)</span>, allora
+<span class="math inline">\(\forall a \in \mathbb{K} \quad a(x +
+1)\)</span> è ancora divisore</li>
+</ul></li>
+</ul></li>
+</ul>
+<h2 id="oss-9">Oss</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\(\mathbb{K}\)</span> campo</li>
+<li><span class="math inline">\(I(a_1(x)), \ldots, I(a_n(x)) \subset
+\mathbb{K}[x]\)</span> ideali</li>
+<li><span class="math inline">\(\exists m(x) \in \mathbb{K}[x] \mid
+I(a_1(x)) \cap \ldots \cap I(a_1(x)) = I(m(x))\)</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\(m(x)=\textrm{mcm}(a_1(x), \ldots,
+a_n(x))\)</span></li>
+</ul></li>
+<li><strong>Dim</strong>
+<ul>
+<li>la dimostrazione è analoga al caso in <span
+class="math inline">\(\mathbb{Z}\)</span></li>
+<li>in particolare, <span class="math inline">\(\textrm{mcm}(a_1(x),
+\ldots, a_n(x))\)</span> è ben definito in quanto il teorema
+fondamentale dell’aritmetica è applicabile anche ai polinomi</li>
+<li>inoltre, <span class="math inline">\(m(x)\)</span> è ben definito a
+meno di una costante moltiplicativa non nulla
+<ul>
+<li>ad esempio <span class="math inline">\(m(x) = x + 1\)</span>, allora
+<span class="math inline">\(\forall a \in \mathbb{K} \quad a(x +
+1)\)</span> è ancora multiplo</li>
+</ul></li>
+</ul></li>
+</ul>
+<h2 id="oss-10">Oss</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\(\mathbb{K}\)</span> campo</li>
+<li><span class="math inline">\(a_1(x), \ldots ,a_n(x) \in
+\mathbb{K}[x]\)</span></li>
+<li><span class="math inline">\(c \in \mathbb{K}\)</span></li>
+<li><span class="math inline">\(d(x):= \textrm{MCD}(a_1(x), \ldots,
+a_n(x))\)</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\(a_1(c) = \ldots = a_n(c) = 0 \iff d(c) =
+0\)</span></li>
+</ul></li>
+<li><strong>Dim</strong>
+<ul>
+<li><em>prima implicazione</em>
+<ul>
+<li>in ipotesi <span class="math inline">\(\forall i \in [i, n] \quad
+\exists c \in \mathbb{K} \mid a_i(c) = 0\)</span></li>
+<li>per dimostrazione precedente <span class="math inline">\(\forall i
+\in [1, n] \quad a_i(c) = 0 \iff (x - c) \mid a_i(x)\)</span>
+<ul>
+<li>ad esempio, per <span class="math inline">\(i = 1\)</span> si ha che
+<span class="math inline">\(\exists k \in \mathbb{K} \mid (x - c) \cdot
+k = a_1(x)\)</span></li>
+</ul></li>
+<li>per definizione <span class="math inline">\(\forall i \in [1, n]
+\quad d(x) \mid a_i(x)\)</span>
+<ul>
+<li>ad esempio, per <span class="math inline">\(i = 1\)</span> si ha che
+<span class="math inline">\(\exists h \in \mathbb{K} \mid d(x) \cdot h =
+a_1(x)\)</span></li>
+</ul></li>
+<li>allora sostituendo, si ha che <span class="math inline">\(d(x) \cdot
+h = (x - c) \cdot k\)</span></li>
+<li><span class="math inline">\(h \in \mathbb{K} \implies \exists h^{-1}
+\in \mathbb{K}\)</span> poiché <span
+class="math inline">\(\mathbb{K}\)</span> è un campo</li>
+<li>allora <span class="math inline">\(d(x) = (x- c) \cdot
+kh^{-1}\)</span>, dove <span class="math inline">\(kh^{-1} \in
+\mathbb{K}\)</span> poiché <span
+class="math inline">\(\mathbb{K}\)</span> è un campo, e dunque <span
+class="math inline">\(\exists kh^{-1} \in \mathbb{K} \mid (x - c) \mid
+d(x)\)</span>, che per dimostrazione precedente implica che <span
+class="math inline">\(d(c) = 0\)</span></li>
+</ul></li>
+<li><em>seconda implicazione</em>
+<ul>
+<li>per definizione <span class="math inline">\(\forall i \in [1, n]
+\quad d(x) \mid a_i(x)\)</span></li>
+<li>per dimostrazione precedente <span class="math inline">\(d(c) = 0
+\iff (x - c) \mid d(x)\)</span></li>
+<li>per dimostrazione precedente, <span
+class="math inline">\(\mid\)</span> è un ordine parziale, e in
+particolare transitiva, e dunque <span class="math inline">\(\forall i
+\in [1, n] \quad (x - c) \mid d(x) \land d(x) \mid a_i(x) \implies (x -
+c) \mid a_i(x)\)</span>, e riapplicando lo stesso teorema <span
+class="math inline">\(\forall i \in [1, n]\quad (x - c) \mid a_i(x) \iff
+a(c) = 0\)</span></li>
+</ul></li>
+</ul></li>
+</ul>
+<h2 id="oss-11">Oss</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\(\mathbb{K}\)</span> campo</li>
+<li><span class="math inline">\(p(x) \in \mathbb{K}[x]\)</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\(p(x) \in \mathbb{K}[x]\)</span>
+irriducibile <span class="math inline">\(\iff p(x)\)</span> primo</li>
+</ul></li>
+<li><strong>Dim</strong>
+<ul>
+<li><em>prima implicazione</em>
+<ul>
+<li><span class="math inline">\(p(x) \in \mathbb{K}[x]\)</span>
+irriducibile$</li>
+<li>si supponga <span class="math inline">\(\exists d(x) \in
+\mathbb{K}[x] : d(x) \mid p(x) \implies \exists e(x) \in \mathbb{K}[x]
+\mid p(x) = p(x) \cdot e(x)\)</span></li>
+<li>⚠️ <strong>NON HO CAPITO NULLA QUI C’È UN BUCO</strong></li>
+<li><span class="math inline">\(p(x) \nmid a(x) \implies
+\textrm{MCD}(a(x), p(x))= 1\)</span> ⚠️ <strong>NON SO IL
+PERCHÉ</strong>
+<ul>
+<li>per l’identità di Bézout <span class="math inline">\(\exists f(x),
+g(x) \in \mathbb{K}[x] \mid 1 = f(x)a(x) + g(x)p(x) \iff b(x) =
+a(x)b(x)f(x) + p(x)g(x)b(x)\)</span></li>
+</ul></li>
+<li>⚠️ <strong>NON HO CAPITO NULLA QUI C’È UN BUCO</strong></li>
+</ul></li>
+<li><em>seconda implicazione</em>
+<ul>
+<li>per dimostrazione precedente <span
+class="math inline">\(\mathbb{K}[x]\)</span> è un dominio di integrità,
+e dunque, per dimostrazione precedente, implica che ogni elemento primo
+è anche irriducibile</li>
+</ul></li>
+</ul></li>
+</ul>
+<h2 id="oss-12">Oss</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\(\mathbb{K}\)</span> campo</li>
+<li><span class="math inline">\(p(x) \in \mathbb{K}[x] -
+\{0\}\)</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\(\exists ! q_1(x), \ldots ,q_k(x) \in
+\mathbb{K}[x]\)</span> irriducibili e monici<span
+class="math inline">\(, c \in \mathbb{K} - \{0\} \mid p(x) = c \cdot
+q_1(x) \cdot \ldots \cdot q_k(x)\)</span></li>
+<li>in particolare, i polinomi sono unici a meno di un
+riordinamento</li>
+</ul></li>
+<li><strong>Dim</strong>
+<ul>
+<li><em>esistenza</em>:
+<ul>
+<li><span class="math inline">\(\deg(p(x)) = 1\)</span>
+<ul>
+<li>⚠️ <strong>NON HO CAPITO NULLA</strong></li>
+</ul></li>
+<li><span class="math inline">\(\deg(p(x)) \gt 1\)</span>
+<ul>
+<li>⚠️ <strong>NON HO CAPITO NULLA</strong></li>
+</ul></li>
+</ul></li>
+<li><em>unicità</em>
+<ul>
+<li>⚠️ <strong>NON HO CAPITO SU COS’È L’INDUZIONE</strong></li>
+<li><span class="math inline">\(\deg(p(x)) = 0\)</span>
+<ul>
+<li>⚠️ <strong>NON HO CAPITO NULLA</strong></li>
+</ul></li>
+<li><span class="math inline">\(\deg(p(x)) \gt 0\)</span>
+<ul>
+<li>si supponga <span class="math inline">\(\exists q_1(x), \ldots
+q_k(x), q_1&#39;(x), \ldots, q_j&#39;(x) \in \mathbb{K}[x], c, c&#39;
+\in \mathbb{K} \mid c \cdot q_1(x) \cdot \ldots \cdot q_i(x) = p(x) =
+c&#39;\cdot q_1&#39;(x) \cdot \ldots \cdot q_j&#39;(x)\)</span> dove
+<span class="math inline">\(c \neq c&#39;, \forall k \in [1, i] \quad
+q_k(x) \neq q_k&#39;(x)\)</span></li>
+<li>⚠️ <strong>DOVE HA DIMOSTRATO CHE <span class="math inline">\(i =
+k\)</span>????</strong></li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul>
+<h2 id="oss-13">Oss</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\(\mathbb{K}\)</span> campo</li>
+<li><span class="math inline">\(p(x) \in \mathbb{K}[x]\)</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\(p(x)\)</span> irriducibile <span
+class="math inline">\(\iff \deg(p(x)) = 1\)</span></li>
+</ul></li>
+<li><strong>Dim</strong>
+<ul>
+<li><em>prima implicazione</em>
+<ul>
+<li>ipotizzando che <span class="math inline">\(\deg(p(x)) \gt 1
+\implies \exists z \in \mathbb{C} \mid p(z) = 0\)</span> per il teorema
+fondamentale dell’algebra</li>
+<li>per dimostrazione precedente <span class="math inline">\(p(z) = 0
+\iff x - z \mid p(x) \implies \exists q(x) \in \mathbb{K}[x] \mid p(x) =
+(x - z) \cdot q(x)\)</span></li>
+<li>poiché <span class="math inline">\(\deg(x - z) = 1\)</span>, allora
+necessariamente <span class="math inline">\(\deg(q(x)) = \deg(p(x)) -
+1\)</span></li>
+<li><span class="math inline">\(\deg(p(x)) \gt 1 \implies \deg(q(x)) =
+\deg(p(x)) - 1 \gt 0 \implies p(x)\)</span> non è irriducibile <span
+class="math inline">\(\bot\)</span></li>
+</ul></li>
+<li><em>seconda implicazione</em>
+<ul>
+<li>per dimostrazione precedente <span class="math inline">\(\forall
+a(x), b(x), c(x) \in \mathbb{K}[x] \quad a(x) = b(x) \cdot c(x) \implies
+\deg(a(x)) = \deg(b(x)) + \deg(c(x))\)</span></li>
+<li><span class="math inline">\(\deg(p(x)) = 1\)</span>, se <span
+class="math inline">\(\exists a(x), b(x) \in \mathbb{K}[x] \mid p(x) =
+a(x) \cdot b(x)\)</span>, allora <span class="math inline">\(\deg(p(x))
+= \deg(a(x))+\deg(b(x)) \implies \deg(a(x)) = 1 \land \deg(b(x)) =
+0\)</span> oppure <span class="math inline">\(\deg(a(x)) = 0 \land
+\deg(b(x)) = 1\)</span></li>
+<li>dunque, ad esempio se <span class="math inline">\(\deg(a(x)) = 1
+\land \deg(b(x)) = 0 \implies b(x) \in \mathbb{K}[x]^*\)</span>, e
+dunque <span class="math inline">\(p(x)\)</span> è dato dal prodotto di
+un polinomio irriducibile e una costante, e dunque <span
+class="math inline">\(p(x)\)</span> è irriducibile</li>
+</ul></li>
+</ul></li>
+</ul>
+<h2 id="oss-14">Oss</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\(p(x) \in \mathbb{R}[x]\)</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\(p(x)\)</span> irriducibile <span
+class="math inline">\(\iff \deg(p(x)) = 1\)</span> oppure <span
+class="math inline">\(\deg(p(x)) = 2 \land \Delta \lt 0\)</span></li>
+</ul></li>
+<li><strong>Dim</strong>
+<ul>
+<li>per dimostrazione precedente <span
+class="math inline">\(\mathbb{R}\)</span> campo <span
+class="math inline">\(\implies \forall p(x) \in \mathbb{R}[x]\)</span>
+irriducibile <span class="math inline">\(\iff \deg(p(x)) = 1\)</span>,
+dunque segue la prima tesi</li>
+<li><span class="math inline">\(p(x)\)</span> irriducibile <span
+class="math inline">\(\iff \deg(p(x)) = 2 \land \Delta \lt 0\)</span>
+<ul>
+<li><em>prima implicazione</em></li>
+<li><em>seconda implicazione</em>
+<ul>
+<li>ipotizzando <span class="math inline">\(p(x)\)</span> non
+irriducibile <span class="math inline">\(\exists a(x), b(x) \in
+\mathbb{R}[x] \mid p(x) = a(x) \cdot b(x) \implies \deg(a(x)) =
+\deg(b(x)) = 1\)</span> per dimostrazione precedente</li>
+<li>dunque <span class="math inline">\(a(x)\)</span> e <span
+class="math inline">\(b(x)\)</span> sono della forma <span
+class="math inline">\(a(x) = cx + d \quad c \in R - \{0\}\)</span>, ma
+allora <span class="math inline">\(x&#39; := -c^{-1}d\)</span> è radice
+di <span class="math inline">\(a(x)\)</span>, e dunque necessariamente è
+anche radice di <span class="math inline">\(p(x)\)</span></li>
+<li><span class="math inline">\(\deg(p(x)) = 2 \land \exists x&#39; \in
+\mathbb{R} \mid p(x&#39;) = 0 \implies p(x)\)</span> non è irriducibile
+<span class="math inline">\(\bot\)</span></li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul>
+<h2 id="oss-15">Oss</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\(a_0, \ldots, a_n \in \mathbb{Z} \mid
+a_0, a_n \neq 0\)</span></li>
+<li><span class="math inline">\(p(x) \in \mathbb{Z}[x] \mid p(x) = a_0 +
+\ldots + a_nx^n\)</span></li>
+<li><span class="math inline">\(a, b \in \mathbb{Z} \mid \textrm{MCD}(a,
+b) = 1\)</span></li>
+<li><span class="math inline">\(p(\frac{a}{b}) = 0\)</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\(a \mid a_0 \land b \mid
+a_n\)</span></li>
+</ul></li>
+<li><strong>Dim</strong>
+<ul>
+<li><span class="math inline">\(0 = p(\frac{a}{b}) = a_n(\frac{a}{b})^n
++ a_{n - 1}\left(\frac{a^{n - 1}}{b^{n - 1}}\right) + \ldots +
+a_0\)</span></li>
+<li>moltiplicando entrambe i membri dell’equazione per <span
+class="math inline">\(b^n\)</span> si ottiene <span
+class="math inline">\(0 = a_na^n + a_{n -1}a^{n - 1}b + \ldots +
+a_1a^1b^{n -1 } + a_0b^n\)</span></li>
+<li>allora <span class="math inline">\(a_na^n = - a_{n - 1} a^{n - 1}b -
+\ldots - a_1a^1 b^{n - 1}- a_0b^n\)</span></li>
+<li>poiché ogni sottraendo del secondo membro di tale equazione è un
+multiplo di <span class="math inline">\(b\)</span>, mettendo in evidenza
+<span class="math inline">\(b\)</span> si ottiene che <span
+class="math inline">\(b \mid a_na^n\)</span></li>
+<li><span class="math inline">\(\textrm{MCD}(a, b) = 1 \implies
+\textrm{MCD}(a^n, b) = 1\)</span>, ma allora <span
+class="math inline">\(b \mid a_na^n \implies b \mid a_n\)</span></li>
+<li>è possibile ripetere il ragionamento analogo per <span
+class="math inline">\(a_0b^n\)</span>, e dall’equazione ottenuta si
+noterà che <span class="math inline">\(a \mid a_0b^n\)</span>, che per
+ragionamento analogo all’osservazione precedente deve necessariamente
+implicare che <span class="math inline">\(a \mid a_0\)</span></li>
+</ul></li>
+</ul>
+<h2 id="oss-16">Oss</h2>
+<ul>
+<li>⚠️ <strong>MANCA UN TEOREMA ENORME</strong></li>
+</ul>
+</body>
+</html>
