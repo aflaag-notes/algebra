@@ -125,7 +125,7 @@
 
 ****
 
-# Partizione
+# Partizioni
 
 ## Def
 

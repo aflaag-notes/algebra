@@ -505,10 +505,10 @@ class="math inline">\(V \iff \forall v \in V \quad \exists ! \lambda_1,
 </ul></li>
 </ul>
 <hr />
-<h1 id="morfismi">Morfismi</h1>
+<h1 id="applicazioni-lineari">Applicazioni lineari</h1>
 <h2 id="def-5">Def</h2>
 <ul>
-<li><strong>Morfisimi di spazi vettoriali</strong> &gt; - <span
+<li><strong>Applicazioni lineari</strong> &gt; - <span
 class="math inline">\(\mathbb{K}\)</span> campo &gt; - <span
 class="math inline">\(V\)</span> e <span
 class="math inline">\(W\)</span> spazi vettoriali su <span
@@ -517,7 +517,9 @@ class="math inline">\(f: V \rightarrow W\)</span> <strong>morfismo di
 spazi vettoriali</strong> <span class="math inline">\(\iff \forall x, y
 \in V \quad f(x + y) = f(x) + f(y)\)</span> e <span
 class="math inline">\(\forall v \in V, \lambda \in \mathbb{K} \quad
-f(\lambda k) = \lambda f(v)\)</span></li>
+f(\lambda k) = \lambda f(v)\)</span> &gt; - un morfismo su spazi
+vettoriali è detto anche <strong>applicazione lineare</strong> o
+<strong>trasformazione lineare</strong></li>
 </ul>
 <h2 id="oss-3">Oss</h2>
 <ul>
@@ -730,7 +732,63 @@ class="math inline">\(V\)</span></li>
 \ldots, u_m, v_{k + 1}, \ldots, v_n) \implies B_1 \cup B_2\)</span>
 generatori di <span class="math inline">\(U + V\)</span>, poiché <span
 class="math inline">\(u + v \in U + V\)</span></li>
-<li>⚠️ <strong>INCOMPLETA</strong></li>
+<li><span class="math inline">\(a := \displaystyle \sum_{i =
+1}^k{\lambda_iw_i}\)</span></li>
+<li><span class="math inline">\(b := \displaystyle \sum_{j = k
++1}^m{\mu_j u_j } \implies b \in \textrm{span}(u_{k +1 }, \ldots, u_k)
+\subsetneqq U \implies b \in U\)</span></li>
+<li><span class="math inline">\(c := \displaystyle \sum_{h = k + 1}
+^n{\eta_hv_h}\)</span></li>
+<li>siano i coefficienti tali che <span class="math inline">\(a + b + c=
+0_W \iff b = - a - c\)</span></li>
+<li><span class="math inline">\(b \in U\)</span> per osservazione
+precedente, mentre <span class="math inline">\(a + c = v \in V \implies
+-(a + c) \in V \implies - a- c \in V\)</span>, e dunque <span
+class="math inline">\(b \in U \cap V\)</span></li>
+<li>allora, <span class="math inline">\(b\)</span> deve essere generato
+dalla base <span class="math inline">\(w_1, \ldots, w_k\)</span> di
+<span class="math inline">\(U \cap V \implies \displaystyle \exists
+\alpha_1, \ldots, \alpha_k \in \mathbb{K} \mid \sum_{j = k +1}^m{\mu_j
+u_j }=:b = \displaystyle \sum_{i = 1}^k {\alpha_i w_i} \implies \sum_{j
+= k +1}^m{\mu_j u_j } - \displaystyle \sum_{i = 1}^k {\alpha_i w_i} =
+0_W\)</span></li>
+<li>poiché per ipotesi <span class="math inline">\(w_i, \ldots, w_k,
+u_{k +1}, \ldots, u_m\)</span> è una base di <span
+class="math inline">\(U\)</span>, in <span
+class="math inline">\(U\)</span> tali vettori sono linearmente
+indipendenti, dunque segue che ogni <span
+class="math inline">\(\alpha_i\)</span> e <span
+class="math inline">\(\mu_j\)</span> deve essere necessariamente <span
+class="math inline">\(0_{\mathbb{K}}\)</span></li>
+<li>in particolare, si ottiene che <span class="math inline">\(\forall j
+\in [k +1, m] \quad \mu_j =0 \implies b = 0_W \implies a + c =
+0_W\)</span></li>
+<li>per ragionamento analogo, sapendo che <span class="math inline">\(c
+= - a- b\)</span> si otterrà che <span class="math inline">\(c =
+0_W\)</span>, e dunque <span class="math inline">\(a + b + c = 0_W \iff
+a = 0_W\)</span></li>
+<li>per definizione <span class="math inline">\(a\)</span> è
+combinazione lineare della base di <span class="math inline">\(U \cap
+V\)</span>, e poichè <span class="math inline">\(a = 0_W\)</span> si ha
+necessariamente che i coefficienti di <span
+class="math inline">\(a\)</span> sono tutti nulli</li>
+<li>dunque, l’equazione di partenza <span class="math inline">\(a + b +
+c = 0_W\)</span> è verificata solamente per coefficienti di <span
+class="math inline">\(a\)</span>, <span class="math inline">\(b\)</span>
+e <span class="math inline">\(c\)</span> nulli, il che implica che i
+vettori che generano <span class="math inline">\(a + b + c\)</span> sono
+linearmente indipendenti</li>
+<li><span class="math inline">\(B_1 \cup B_2\)</span> generatori di
+<span class="math inline">\(U + V \implies a + b + c \in U + V\)</span>,
+e poiché <span class="math inline">\(w_1, \ldots, w_k, u_{k + 1},
+\ldots, u_m, v_{k + 1}, \ldots, v_n\)</span> sono sia generatori che
+linearmente indipendenti, allora sono una base di <span
+class="math inline">\(U + V\)</span></li>
+<li>per definizione, la dimensione di uno spazio vettoriale è la
+cardinalità di una delle sue basi, e dunque la cardinalità di <span
+class="math inline">\(B_1 \cup B_2\)</span> è pari a <span
+class="math inline">\(k + (m - k) + (n - k) = k + m - k + n - k = m + n
+- k\)</span></li>
 </ul></li>
 </ul>
 </body>

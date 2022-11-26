@@ -264,7 +264,7 @@
 
 ****
 
-## Teorema di Cauchy
+# Teorema di Cauchy
 
 - **Hp**
   - $G$ gruppo finito
