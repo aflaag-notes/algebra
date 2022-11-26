@@ -184,7 +184,79 @@
 - **Th**
     - $V \cong \mathbb{K}^n$
 - **Dim**
-    - sia $v_1, \ldots, v_n$ una base di $V$
+    - sia $v_1, \ldots, v_n \in V$ una base di $V$
         - ⚠️ **MANCA LA DIMOSTRAZIONE PER CUI ALMENO UNA BASE ESISTE SEMPRE**
-    - $f: \mathbb{K}^n \rightarrow V: (t_1, \ldots, t_n) \rightarrow t_1v_1 + \ldots + t_nv_n$
+    - per dimostrare la tesi è necessario dimostrare che $f: \mathbb{K}^n \rightarrow V: (t_1, \ldots, t_n) \rightarrow t_1v_1 + \ldots + t_nv_n$ è un isomorfismo
+    - $f$ morfismo
+        - $\forall \lambda \in\mathbb{K}, x, y \in \mathbb{K}^n \mid x = (x_1, \ldots, x_n) \land y=(y_1, \ldots, y_n)$ si ha che $f(x + y) = (x_1 + y_1)v_1 + \ldots + (x_n + y_n) v_n = (x_1v_1+ \ldots + x_nv_n) + (y_1v_1 + \ldots + y_nv_n) = f(x) + f(y)$, dunque è verificata la prima condizione, e inoltre $f(\lambda x) = \lambda x_1v_1 + \ldots + \lambda x_n v_n = \lambda(x_1v_1 + \ldots + x_n v_n) = \lambda f(x)$, dunque è verificata anche la seconda
+    - $f$ biiettiva
+        - ⚠️ **MANCA LA DIMOSTRAZIONE**
 
+## Oss
+
+- ⚠️ **QUI C'È UN BUCONE**
+
+## Oss
+
+- **Hp**
+    - $\mathbb{K}$ campo
+    - $W$ spazio vettoriale su $\mathbb{K}$
+    - $n:= \dim(W)$
+    - $k \in \mathbb{N} \mid k \lt n$
+    - $w_1, \ldots, w_k \in W$ linearmente indipendenti
+- **Th**
+    - $\exists w_{k + 1}, \ldots, w_n \in W \mid w_1, \ldots, w_n$ è una base di $W$
+- **Dim**
+    - $k \lt n \implies \textrm{span}(w_1, \ldots, w_k) \subsetneqq W \implies \exists w_{k + 1} \in W \mid w_{k + 1} \notin \textrm{span}(w_1, \ldots, w_k)$, allora per dimostrazione precedente $w_1, \ldots, w_{k +1}$ sono linearmente indipendenti
+    - per ragionamento analogo, è possibile estendere $w_1, \ldots, w_{k + 1}$ fino ad avere $w_1, \ldots, w_n$ vettori linearmente indipendenti
+
+## Oss
+
+- **Hp**
+    - $\mathbb{K}$ campo
+    - $W$ spazio vettoriale su $\mathbb{K}$
+    - $n := \dim(W)$
+    - $m \in \mathbb{N} \mid m \ge n$
+    - $w_1, \ldots, w_m \in W \mid w_1, \ldots, w_m$ generatori di $W$
+- **Th**
+    - $\exists 1 \le i_1, \ldots, i_n \le m \mid w_{i_1}, \ldots, w_{i_n}$ è una base di $W$
+- **Dim**
+    - è possibile assumere che $w_{i_1}$ non sia nullo, poiché $w_1, \ldots, w_m$ sono sicuramente non tutti nulli in quanto generatori di $W$
+    - $w_{i_1} \neq 0 \implies w_{i_1}$ linearmente indipendente, ma non può costituire un generatore poiché sono meno di $n$ vettori $\implies \textrm{span}(w_{i_1}) \subsetneqq W \implies \exists w_{i_2} \notin \textrm{span}(w_{i_1})$, allora per dimostrazione precedente $w_{i_1}, w_{i_2}$ sono linearmente indipendenti
+    - è possiible ripetere il ragionamento fino ad ottenere esattamente $n$ vettori, ottenendo $w_{i_1}, \ldots, w_{i_n}$ vettori linearmente indipendenti
+
+## Oss
+
+- **Hp**
+    - $\mathbb{K}$ campo
+    - $W$ spazio vettoriale su $\mathbb{K}$
+    - $n:= \dim(W)$
+    - $w_1, \ldots, w_n \in W$
+- **Th**
+    - $w_1, \ldots, w_n$ linearmente indipendenti $\iff w_1, \ldots, w_n$ generatori di $W$
+- **Dim**
+    - _prima implicazione_
+        - per assurdo, siano $w_1, \ldots, w_n$ linearmente indipendenti ma non generatori di $W \implies \textrm{span}(w_1, \ldots, w_n) \subsetneqq W \implies \exists w_{n + 1} \notin \textrm{span}(w_1, \ldots, w_n)$, ma per dimostrazione precedente $w_1, \ldots, w_{n + 1}$ linearmente indipendenti $\bot$
+    - _seconda implicazione_
+        - per assurdo, siano $w_1, \ldots, w_n$ generatori di $W$ ma non linearmente indipendenti $\implies \exists \lambda_1, \ldots, \lambda_n \mid \lambda_1w_1 + \ldots + \lambda_nw_n = 0_W$ dove $\exists i \in [1, n] \mid \lambda_i \neq 0 \implies w_i = -\lambda_i^{-1} \lambda_1w_1 - \ldots - \lambda_i^{-1} \lambda_nw_n$, dunque $w_i$ è combinazione lineare degli altri vettori, in simboli $w_i \in \textrm{span}(w_1, \ldots, \hat{w_i}, \ldots, w_n) \implies \textrm{span}(w_1, \ldots, w_n) \subseteq \textrm{span}(w_1, \ldots, \hat{w_i}, \ldots, w_n)$
+        - per qualsiasi insieme di vettori minore di $n$ si ha che $\textrm{span}(w_1, \ldots, \hat{w_i}, \ldots, w_n) \subseteq \textrm{span}(w_1, \ldots, w_n)$
+        - allora segue che $\textrm{span}(w_1, \ldots, \hat{w_i}, \ldots, w_n) = \textrm{span}(w_1, \ldots, w_n)$, ma questo non è possibile in queanto $w_1, \ldots, \hat{w_i}, \ldots, w_n$ sono $n - 1$ generatori, e i generatori non possono essere meno di $n \ \bot$
+
+## Formula di Grassmann
+
+- **Hp**
+    - $\mathbb{K}$ campo
+    - $W$ spazio vettoriale su $\mathbb{K}$
+    - $U, V \subset W$ sottospazi vettoriali
+- **Th**
+    - $\dim(U + V) = \dim(U) + \dim(V) - \dim(U \cap V)$
+- **Dim**
+    - $k:=\dim(U \cap V)$
+    - $m:=\dim(U)$
+    - $n := \dim (V)$
+    - $w_1, \ldots, w_k \in U \cap V$ base di $U \cap V$
+    - $B_1 := w_1, \ldots, w_k, u_{k + 1}, \ldots, u_m \in U$ base di $U$
+    - $B_2 := w_1, \ldots, w_k, v_{k + 1}, \ldots, v_n \in V$ base di $V$
+    - $B_1 \cup B_2 := w_1, \ldots w_k, u_{k + 1}, \ldots, u_m, v_{k + 1}, \ldots, v_n$
+    - $\forall u \in U, v \in V \mid u := \displaystyle \sum_{i = 1}^k{\lambda_iw_i} + \sum_{j = k + 1}^m{\lambda_j u_j} \land \displaystyle v :=\sum_{i = 1}^k{\mu_iw_i} + \sum_{h = k + 1}^n {\mu_hv_h} \quad u + v =\sum_{i = 1}^k{(\lambda_i + \mu_i)w_i} + \sum_{j = k + 1}^m{\lambda_j u_j} + \sum_{h = k + 1}^n {\mu_hv_h} \implies u + v \in \textrm{span}(w_1, \ldots w_k, u_{k + 1}, \ldots, u_m, v_{k + 1}, \ldots, v_n) \implies B_1 \cup B_2$ generatori di $U + V$, poiché $u + v \in U + V$
+    - ⚠️ **INCOMPLETA**
