@@ -3,21 +3,25 @@
 ## Def
 
 - **Semigruppo**
+
 > - $S$ insieme
 > - $m: S \times S \rightarrow S$
 > - $(S, m)$ **semigruppo** $\iff \forall x, y, z \in S \quad m(x, m(y, z))=m(m(x, y),z) \quad$
 
 - **Monoide**
+
 > - $S$ insieme
 > - $m: S \times S \rightarrow S$
 > - $(S, m)$ **monoide** $\iff (S, m)$ semigruppo e $\forall x \in S \quad \exists e \in S  \mid m(x, e) = m(e, x) = x$
 
 - **Gruppo**
+
 > - $S$ insieme
 > - $m: S \times S \rightarrow S$
 > - $(S, m)$ **gruppo** $\iff (S, m)$ monoide e $\forall x \in S \quad \exists x^{-1} \in S \mid m(x, x^{-1}) =m(x^{-1}, x) =e$
 
 - **Gruppo abeliano**
+
 > - $S$ insieme
 > - $m: S \times S \rightarrow S$
 > - $(S, m)$ **gruppo abeliano** $\iff (S,m)$ gruppo e $\forall x, y \in S \quad m(x, y) = m(y, x)$
@@ -68,6 +72,7 @@
 ## Def
 
 - **Anello**
+
 > - $A$ insieme
 > - $+: A \times A \rightarrow A$
 > - $*: A \times A \rightarrow A$
@@ -75,11 +80,11 @@
 > - $a * b=b * a \quad \forall a, b \in A \implies   (A, *, +)$ è un **anello commutativo**
 
 - **Campo**
+
 > - $(A, +, *)$ anello
 > - $(A, +, *)$ è un **campo** $\iff \forall x \in A \quad \exists x^{-1}$ rispetto a $*$
 
 - **Semianello commutativo**
-> - $A$ insieme
 
 > - $A$ insieme
 > - $+: A \times A \rightarrow A$
@@ -87,10 +92,12 @@
 > - $(A, +, *)$ **semianello commutativo** $\iff (A, +)$ monide commutativo, $(A, *)$ monoide commutativo e $\forall a, b, c \in A \quad a*(b + c) = a*b + a*c$
 
 - **Sottoanello**
+
 > - $(A, +, \cdot)$ anello
 > - $(B, + , \cdot) \subset (A, +, \cdot)$ **sottoanello** $\iff (B, +) \subset (A, +)$ sottogruppo e $B \cdot B \subset B$
 
 ## Def
+
 
 - **Invertibili**
 > - $(A, +, \cdot)$ anello commutativo
@@ -123,10 +130,12 @@
 ## Def
 
 - **Divisori dello $0$**
+
 > - $(A, + , \cdot)$ anello commutativo
 > - $a \in A$ **divisore dello $0$** $\iff \exists b \in A - \{0\} \mid a \cdot b = 0$
 
 - **Dominio di integrità**
+
 > - $(A, +, \cdot)$ anello commutativo
 > - $A$ **dominio di integrità** $\iff \nexists x : x \mid 0$, oltre a $x = 0$
 > - alternativamente, $A$ è dominio di integrità $\iff$ in $A$ vale la legge di annullamento del prodotto
@@ -157,11 +166,13 @@
 ## Def
 
 - **Elementi irriducibili**
+
 > - $A$ anello commutativo
 > - $a \in A - \{0\} \mid a \in A^*$
 > - $a$ **irriducibile** $\iff \exists b, c \in A \mid a = b c \implies b \in A^* \lor c \in A^*$
 
 - **Elementi primi**
+
 > - $A$ anello commutativo
 > - $a \in A - \{0\} \mid a \in A^*$
 > - $a$ **primo** $\iff \exists b, c \in A : a \mid bc \implies a \mid b \lor a \mid c$
@@ -188,12 +199,14 @@
 ## Def
 
 - **Sottogruppo**
+
 > - $(G, *)$ gruppo 
 > - $(H, *) \subset (G, *)$ **sottogruppo** $\iff \exists e \in H \mid e$ è l'elemento neutro, $H * H \subset H$ e $\exists x^{-1} \in H \quad \forall x \in H$
 
 ## Def
 
 - **Sottogruppo normale**
+
 > - $(G, *)$ gruppo
 > - $(H, *) \subset (G, *)$ sottogruppo
 > - $x \in G$
@@ -234,6 +247,7 @@
 ## Def
 
 - **Ordine di un elemento in un gruppo**
+
 > - $G$ gruppo
 > - $g \in G$
 > - $H(g):=\left\{g^{n} \mid n \in \mathbb{Z}\right\}$ è detto **sottogruppo ciclico**

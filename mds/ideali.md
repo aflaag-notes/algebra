@@ -3,6 +3,7 @@
 ## Def
 
 - **Ideali**
+
 > - $(A, +, \cdot)$ anello
 > - $I \subset A$ **ideale** $\iff (I, +) \subset (A, +)$ è un sottogruppo e $A \cdot I \subset I$ e $I \cdot A \subset I$
 
@@ -76,6 +77,7 @@
 ## Def
 
 - **Congruenza modulo di un ideale**
+
 > - $(A, +, \cdot)$ anello
 > - $I \subset A$ ideale
 > - per definizione, $I$ ideale $\implies(I, +) \subset (A, +)$ sottogruppo, dunque ha senso definire $A/I$, e infatti $I$ induce una relazione di equivalenza su $A$ detta **congruenza modulo $I$**, dove $\forall a, b \in A \quad a \equiv b \ (\bmod I) \iff b - a \in I$
@@ -152,6 +154,7 @@
 ## Def
 
 - **Massimo Comun Divisore**
+
 > - $a_{1}, \ldots , a_{n} \in \mathbb{Z}$
 > - $\exists !d \in \mathbb{N}  \mid I\left(a_{1}, \ldots , a_{n}\right)=I(d)$, ed è detto **massimo comun divisore degli $a_1, \ldots, a_n$**
 >    - per dimostrazione precedente $I(a_1, \ldots, a_n)$ è un ideale, e per dimostrazione precedente ogni ideale in $\mathbb{Z}$ è principale, dunque per un certo $d$ coincide con $I(d)$, e in particolare $d$ è proprio il massimo comun divisore degli $a_1, \ldots, a_n$ per dimostrazione precedente
@@ -177,6 +180,7 @@
 ## Def
 
 - **$+$ tra ideali**
+
 > - $(A, +, \cdot)$ anello commutativo
 > - $I, J \subset A$ ideali
 > - $I + J = \{i + j \mid \forall i \in I, j \in J\}$
@@ -198,6 +202,7 @@
 ## Def
 
 - **$\cap$ tra ideali**
+
 > - $(A, +, \cdot)$ anello commutativo
 > - $I, J \subset A$ ideali
 > - $I \cap J = \{x \in I \land x \in J\}$
@@ -218,12 +223,14 @@
 ## Def
 
 - **Minimo Comune Multiplo**
+
 > - $a_{1}, \ldots, a_{n} \in \mathbb{Z}$
 > - $\displaystyle \exists ! m  \in \mathbb{N} \mid I(m) = I(a_1) \cap \ldots \cap I(a_n) = \bigcap_{i=1}^{n}{I(a_i)}$, ed è detto **minimo comune multiplo degli $a_1, \ldots, a_n$**
 
 ## Def
 
 - **$\cdot$ tra ideali**
+
 > - $(A, +, \cdot)$ anello commutativo
 > - $I, J \subset A$ ideali
 > - $I \cdot J = \{i_1 j_1 + \ldots + i_k j_k \mid k \ge  1, \forall i_1 , \ldots , i_k \in I, j_1 , \ldots , j_k \in J \}$

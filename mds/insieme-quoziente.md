@@ -3,6 +3,7 @@
 ## Def
 
 - **Insieme quoziente**
+
 > - $G$ gruppo
 > - $\sim$ relazione di equivalenza in $G$
 > - $\forall x \in G \quad [x]:=\{y \in G \mid x \sim y\}$
@@ -11,6 +12,7 @@
 ## Def
 
 - **Insieme quoziente $\mathbb{Z}_n$**
+
 > - $(\mathbb{Z}, +, \cdot)$ anello, in particolare $(\mathbb{Z}, +)$ gruppo
 > - $n \in \mathbb{Z}$
 > - $\mathbb{Z}/\equiv$ è l'insieme delle classi di equivalenza definite dalla relazione di equivalenza $\equiv$
@@ -111,6 +113,7 @@
 ## Def
 
 - **Funzione totiente di Eulero**
+
 > - $n \in \mathbb{N}$
 > - $\varphi(n) := |\mathbb{Z}_n^* |$
 

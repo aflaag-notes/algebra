@@ -3,6 +3,7 @@
 ## Def
 
 - **Gruppo diedrale**
+
 > - $n \in \mathbb{N}_{\ge 2}$
 > - $D_n$ è l'**insieme delle simmetrie dell'$n$-gono regolare**
 >   - l'insieme delle rotazioni che lasciano l'$n$-gono invariato, e delle riflessioni rispetto agli assi di simmetria
@@ -84,6 +85,7 @@
 ## Def
 
 - **Gruppo di Klein**
+
 > - $K_4 := \{1, a, b, c\}$
 > - $a^2=b^2=c^2=1$
 > - $ab=c=ba$

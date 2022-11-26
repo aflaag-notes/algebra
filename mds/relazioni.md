@@ -3,45 +3,54 @@
 ## Def
 
 - **Relazioni**
+
 > - $S$ insieme
 > - ogni elemento $R \subseteq S \times S$ è una **relazione** su $S$
 
 - **Relazione riflessiva**
+
 > - $S$ insieme
 > - $R$ relazione in $S \times S$
 > - $R$ **riflessiva** $\iff \forall x \in R \quad (x, x) \in R$
 
 - **Relazione simmetrica**
+
 > - $S$ insieme
 > - $R$ relazione in $S \times S$
 > - $R$ **simmetrica** $\iff \forall x, y \in R \quad (x, y) \in R \implies (y, x) \in R$
 
 - **Relazione transitiva**
+
 > - $S$ insieme
 > - $R$ relazione in $S \times S$
 > - $R$ **transitiva** $\iff \forall x, y, z \in R \quad (x, y) \in R \land (y, z) \in R \implies (x, z) \in R$
 
 - **Relazione antisimmetrica**
+
 > - $S$ insieme
 > - $R$ relazione in $S \times S$
 > - $R$ **transitiva** $\iff \forall x, y \in R \quad (x, y) \in R \land (y, x) \in R \implies x = y$
 
 - **Relazione totale**
+
 > - $S$ insieme
 > - $R$ relazione in $S \times S$
 > - $R$ **totale** $\iff \forall x, y \in R \quad (x, y) \in R \lor (y, x) \in R$
 
 - **Relazione di equivalenza**
+
 > - $S$ insieme
 > - $R$ relazione in $S \times S$
 > - $R$ è una **relazione di equivalenza** $\iff R$ riflessiva, simmetrica e transitiva
 
 - **Ordine parziale**
+
 > - $S$ insieme
 > - $R$ relazione in $S \times S$
 > - $R$ **ordine parziale** $\iff R$ riflessiva, transitiva e antisimmetrica
 
 - **Ordine totale**
+
 > - $S$ insieme
 > - $R$ relazione in $S \times S$
 > - $R$ **ordine totale** $\iff R$ ordine parziale in cui vale la totalità
@@ -130,6 +139,7 @@
 ## Def
 
 - **Partizione**
+
 > - $X$ insieme
 > - $I$ insieme di indici
 > - $\forall i \in I \quad X_i \subset X$
@@ -187,6 +197,7 @@
 ## Def 
 
 - **Classi laterali**
+
 > - $(G, \cdot)$ gruppo
 > - $(H, \cdot) \subset (G, \cdot)$ sottogruppo
 > - $\forall x,y \in G \quad x \sim_S y \iff x^{-1}y \in H$ è una relazione di equivalenza

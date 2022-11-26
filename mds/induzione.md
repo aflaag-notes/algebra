@@ -3,6 +3,7 @@
 ## Def
 
 - **Induzione**
+
 > - successione di proposizioni infinita $P_{1}, P_{2}, P_{3}, \ldots$
 >  - $\left\{\begin{array}{l}P_{1} \textrm{ vera}\\ P_{1}, P_{2}, P_{3}, \ldots, P_{n} \implies P_{n+1} \quad \forall n \ge 1 \end{array}\right.$
 >  - allora $P_n$ vera $\forall n$

@@ -3,6 +3,7 @@
 ## Def 
 
 - **Spazio vettoriale**
+
 > - $\mathbb{K}$ campo
 > - $x \in \mathbb{K}$ è detto **scalare**
 > - $V$ è **spazio vettoriale su $\mathbb{K}$** $\iff (V, +)$ gruppo abeliano, è ben definita un'operazione di $\cdot: K \times V \rightarrow V$ che ammetta elemento neutro, inoltre $\forall s, t \in \mathbb{K}, v \in V \quad s\cdot (t \cdot v) = (s \cdot t) \cdot v, (s + t) \cdot v = s\cdot v + t \cdot v$ e infine $\forall s \in \mathbb{K}, v, w \in V \quad s \cdot (v + w) = s \cdot v + s \cdot w$
@@ -26,6 +27,7 @@
 ## Def
 
 - **Sottospazio vettoriale**
+
 > - $\mathbb{K}$ campo
 > - $V$ spazio vettoriale su $\mathbb{K}$
 > - $W$ è **sottospazio vettoriale di $V$** $\iff (W, +) \subset (V, +)$ sottogruppo, e $\forall w \in W, \lambda \in \mathbb{K} \quad \lambda \cdot w \in W$
@@ -33,6 +35,7 @@
 ## Def
 
 - **Span di vettori**
+
 > - $n \in \mathbb{N}$
 > - $\mathbb{K}$ campo
 > - $V$ spazio vettoriale su $\mathbb{K}$
@@ -60,6 +63,7 @@
 ## Def
 
 - **Vettori generatori**
+
 > - $n \in \mathbb{N}$
 > - $\mathbb{K}$ campo
 > - $V$ spazio vettoriale su $\mathbb{K}$
@@ -68,6 +72,7 @@
 >     - equivalentemente, ogni altro vettore in $V$ è una combinazione lineare degli $v_1, \ldots, v_n$
 
 - **Indipendenza lineare**
+
 > - $n \in \mathbb{N}$
 > - $\mathbb{K}$ campo
 > - $V$ spazio vettoriale su $\mathbb{K}$
@@ -76,6 +81,7 @@
 >    - equivalentemente, nessuno degli $v_1, \ldots, v_n$ è combinazione lineare degli altri
 
 - **Base di uno spazio vettoriale**
+
 > - $n \in \mathbb{N}$
 > - $\mathbb{K}$ campo
 > - $V$ spazio vettoriale su $\mathbb{K}$
@@ -146,6 +152,7 @@
 ## Def
 
 - **Dimensione di uno spazio vettoriale**
+
 > - $\mathbb{K}$ campo
 > - $V$ spazio vettoriale su $\mathbb{K}$
 > - $\dim(V)$ è detta **dimensione di $V$**, ed è la cardinalità delle basi di $V$
@@ -171,6 +178,7 @@
 ## Def
 
 - **Applicazioni lineari**
+
 > - $\mathbb{K}$ campo
 > - $V$ e $W$ spazi vettoriali su $\mathbb{K}$
 > - $f: V \rightarrow W$ **morfismo di spazi vettoriali** $\iff \forall x, y \in V \quad f(x + y) = f(x) + f(y)$ e $\forall v \in V, \lambda \in \mathbb{K} \quad f(\lambda k) = \lambda f(v)$

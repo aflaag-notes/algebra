@@ -172,13 +172,18 @@
 <h1 id="ideali">Ideali</h1>
 <h2 id="def">Def</h2>
 <ul>
-<li><strong>Ideali</strong> &gt; - <span class="math inline">\((A, +,
-\cdot)\)</span> anello &gt; - <span class="math inline">\(I \subset
-A\)</span> <strong>ideale</strong> <span class="math inline">\(\iff (I,
-+) \subset (A, +)\)</span> è un sottogruppo e <span
-class="math inline">\(A \cdot I \subset I\)</span> e <span
-class="math inline">\(I \cdot A \subset I\)</span></li>
+<li><strong>Ideali</strong></li>
 </ul>
+<blockquote>
+<ul>
+<li><span class="math inline">\((A, +, \cdot)\)</span> anello</li>
+<li><span class="math inline">\(I \subset A\)</span>
+<strong>ideale</strong> <span class="math inline">\(\iff (I, +) \subset
+(A, +)\)</span> è un sottogruppo e <span class="math inline">\(A \cdot I
+\subset I\)</span> e <span class="math inline">\(I \cdot A \subset
+I\)</span></li>
+</ul>
+</blockquote>
 <h2 id="oss">Oss</h2>
 <ul>
 <li><strong>Hp</strong>
@@ -355,10 +360,13 @@ class="math inline">\(cx \in I(a_1, \ldots, a_n)\)</span></li>
 </ul>
 <h2 id="def-1">Def</h2>
 <ul>
-<li><strong>Congruenza modulo di un ideale</strong> &gt; - <span
-class="math inline">\((A, +, \cdot)\)</span> anello &gt; - <span
-class="math inline">\(I \subset A\)</span> ideale &gt; - per
-definizione, <span class="math inline">\(I\)</span> ideale <span
+<li><strong>Congruenza modulo di un ideale</strong></li>
+</ul>
+<blockquote>
+<ul>
+<li><span class="math inline">\((A, +, \cdot)\)</span> anello</li>
+<li><span class="math inline">\(I \subset A\)</span> ideale</li>
+<li>per definizione, <span class="math inline">\(I\)</span> ideale <span
 class="math inline">\(\implies(I, +) \subset (A, +)\)</span>
 sottogruppo, dunque ha senso definire <span
 class="math inline">\(A/I\)</span>, e infatti <span
@@ -366,11 +374,12 @@ class="math inline">\(I\)</span> induce una relazione di equivalenza su
 <span class="math inline">\(A\)</span> detta <strong>congruenza modulo
 <span class="math inline">\(I\)</span></strong>, dove <span
 class="math inline">\(\forall a, b \in A \quad a \equiv b \ (\bmod I)
-\iff b - a \in I\)</span> &gt; - <span class="math inline">\(b -a \in I
-\iff (-a) + b \in I\)</span>, di conseguenza questa congruenza coincide
-con la classe laterale sinistra di <span class="math inline">\((A,
-+)\)</span></li>
+\iff b - a \in I\)</span></li>
+<li><span class="math inline">\(b -a \in I \iff (-a) + b \in I\)</span>,
+di conseguenza questa congruenza coincide con la classe laterale
+sinistra di <span class="math inline">\((A, +)\)</span></li>
 </ul>
+</blockquote>
 <h2 id="oss-4">Oss</h2>
 <ul>
 <li><strong>Hp</strong>
@@ -565,21 +574,28 @@ d\)</span></li>
 </ul>
 <h2 id="def-2">Def</h2>
 <ul>
-<li><strong>Massimo Comun Divisore</strong> &gt; - <span
-class="math inline">\(a_{1}, \ldots , a_{n} \in \mathbb{Z}\)</span> &gt;
-- <span class="math inline">\(\exists !d \in \mathbb{N} \mid
+<li><strong>Massimo Comun Divisore</strong></li>
+</ul>
+<blockquote>
+<ul>
+<li><span class="math inline">\(a_{1}, \ldots , a_{n} \in
+\mathbb{Z}\)</span></li>
+<li><span class="math inline">\(\exists !d \in \mathbb{N} \mid
 I\left(a_{1}, \ldots , a_{n}\right)=I(d)\)</span>, ed è detto
 <strong>massimo comun divisore degli <span class="math inline">\(a_1,
-\ldots, a_n\)</span></strong> &gt; - per dimostrazione precedente <span
-class="math inline">\(I(a_1, \ldots, a_n)\)</span> è un ideale, e per
-dimostrazione precedente ogni ideale in <span
-class="math inline">\(\mathbb{Z}\)</span> è principale, dunque per un
-certo <span class="math inline">\(d\)</span> coincide con <span
-class="math inline">\(I(d)\)</span>, e in particolare <span
+\ldots, a_n\)</span></strong>
+<ul>
+<li>per dimostrazione precedente <span class="math inline">\(I(a_1,
+\ldots, a_n)\)</span> è un ideale, e per dimostrazione precedente ogni
+ideale in <span class="math inline">\(\mathbb{Z}\)</span> è principale,
+dunque per un certo <span class="math inline">\(d\)</span> coincide con
+<span class="math inline">\(I(d)\)</span>, e in particolare <span
 class="math inline">\(d\)</span> è proprio il massimo comun divisore
 degli <span class="math inline">\(a_1, \ldots, a_n\)</span> per
 dimostrazione precedente</li>
+</ul></li>
 </ul>
+</blockquote>
 <h2 id="oss-7">Oss</h2>
 <ul>
 <li><strong>Hp</strong>
@@ -613,12 +629,18 @@ BÉZOUT</strong></li>
 <h1 id="operazioni-sugli-ideali">Operazioni sugli ideali</h1>
 <h2 id="def-3">Def</h2>
 <ul>
-<li><strong><span class="math inline">\(+\)</span> tra ideali</strong>
-&gt; - <span class="math inline">\((A, +, \cdot)\)</span> anello
-commutativo &gt; - <span class="math inline">\(I, J \subset A\)</span>
-ideali &gt; - <span class="math inline">\(I + J = \{i + j \mid \forall i
-\in I, j \in J\}\)</span></li>
+<li><strong><span class="math inline">\(+\)</span> tra
+ideali</strong></li>
 </ul>
+<blockquote>
+<ul>
+<li><span class="math inline">\((A, +, \cdot)\)</span> anello
+commutativo</li>
+<li><span class="math inline">\(I, J \subset A\)</span> ideali</li>
+<li><span class="math inline">\(I + J = \{i + j \mid \forall i \in I, j
+\in J\}\)</span></li>
+</ul>
+</blockquote>
 <h2 id="oss-9">Oss</h2>
 <ul>
 <li><strong>Hp</strong>
@@ -664,11 +686,17 @@ J\)</span> per definizione</li>
 <h2 id="def-4">Def</h2>
 <ul>
 <li><strong><span class="math inline">\(\cap\)</span> tra
-ideali</strong> &gt; - <span class="math inline">\((A, +,
-\cdot)\)</span> anello commutativo &gt; - <span class="math inline">\(I,
-J \subset A\)</span> ideali &gt; - <span class="math inline">\(I \cap J
-= \{x \in I \land x \in J\}\)</span></li>
+ideali</strong></li>
 </ul>
+<blockquote>
+<ul>
+<li><span class="math inline">\((A, +, \cdot)\)</span> anello
+commutativo</li>
+<li><span class="math inline">\(I, J \subset A\)</span> ideali</li>
+<li><span class="math inline">\(I \cap J = \{x \in I \land x \in
+J\}\)</span></li>
+</ul>
+</blockquote>
 <h2 id="oss-10">Oss</h2>
 <ul>
 <li><strong>Hp</strong>
@@ -698,23 +726,34 @@ I \land x, y \in J \implies x + y \in I \land x + y \in J \implies x + y
 </ul>
 <h2 id="def-5">Def</h2>
 <ul>
-<li><strong>Minimo Comune Multiplo</strong> &gt; - <span
-class="math inline">\(a_{1}, \ldots, a_{n} \in \mathbb{Z}\)</span> &gt;
-- <span class="math inline">\(\displaystyle \exists ! m \in \mathbb{N}
+<li><strong>Minimo Comune Multiplo</strong></li>
+</ul>
+<blockquote>
+<ul>
+<li><span class="math inline">\(a_{1}, \ldots, a_{n} \in
+\mathbb{Z}\)</span></li>
+<li><span class="math inline">\(\displaystyle \exists ! m \in \mathbb{N}
 \mid I(m) = I(a_1) \cap \ldots \cap I(a_n) =
 \bigcap_{i=1}^{n}{I(a_i)}\)</span>, ed è detto <strong>minimo comune
 multiplo degli <span class="math inline">\(a_1, \ldots,
 a_n\)</span></strong></li>
 </ul>
+</blockquote>
 <h2 id="def-6">Def</h2>
 <ul>
 <li><strong><span class="math inline">\(\cdot\)</span> tra
-ideali</strong> &gt; - <span class="math inline">\((A, +,
-\cdot)\)</span> anello commutativo &gt; - <span class="math inline">\(I,
-J \subset A\)</span> ideali &gt; - <span class="math inline">\(I \cdot J
-= \{i_1 j_1 + \ldots + i_k j_k \mid k \ge 1, \forall i_1 , \ldots , i_k
-\in I, j_1 , \ldots , j_k \in J \}\)</span></li>
+ideali</strong></li>
 </ul>
+<blockquote>
+<ul>
+<li><span class="math inline">\((A, +, \cdot)\)</span> anello
+commutativo</li>
+<li><span class="math inline">\(I, J \subset A\)</span> ideali</li>
+<li><span class="math inline">\(I \cdot J = \{i_1 j_1 + \ldots + i_k j_k
+\mid k \ge 1, \forall i_1 , \ldots , i_k \in I, j_1 , \ldots , j_k \in J
+\}\)</span></li>
+</ul>
+</blockquote>
 <h2 id="oss-11">Oss</h2>
 <ul>
 <li><strong>Hp</strong>

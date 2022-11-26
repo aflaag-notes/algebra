@@ -3,6 +3,7 @@
 ## Def
 
 - **Polinomi**
+
 > - $\mathbb{K}$ campo
 > - $a(x) := \displaystyle{\sum_{k = 0}^na_kx^k} = a_0x^0 + \ldots + a_nx^n$ è un **polinomio**
 > - $\mathbb{K}[x] := \{a_0x^0 + \ldots + a_n x^n \mid a_0, \ldots, a_n \in \mathbb{K}\}$ è l'**insieme dei polinomi a coefficienti in $\mathbb{K}$**
@@ -33,6 +34,7 @@
 ## Def
 
 - **Grado del polinomio**
+
 > - $\mathbb{K}$ campo
 > - $a(x) = a_0x^0 + \ldots + a_nx^n \in \mathbb{K}[x]$
 > - $\deg(a(x)):=\left\{\begin{array}{ll} n & a(x) \neq 0 \\ - \infty & a(x) = 0\end{array}\right.$
@@ -93,6 +95,7 @@
 ## Def
 
 - **Radici di un polinomio**
+
 > - $\mathbb{K}$ campo
 > - $p(x) \in \mathbb{K}[x]$
 > - $\{c \in \mathbb{K}\ \mid p(c) = 0\}$ è l'**insieme delle radici di $p(x)$**

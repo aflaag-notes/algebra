@@ -172,34 +172,60 @@
 <h1 id="gruppi">Gruppi</h1>
 <h2 id="def">Def</h2>
 <ul>
-<li><p><strong>Semigruppo</strong> &gt; - <span
-class="math inline">\(S\)</span> insieme &gt; - <span
-class="math inline">\(m: S \times S \rightarrow S\)</span> &gt; - <span
-class="math inline">\((S, m)\)</span> <strong>semigruppo</strong> <span
-class="math inline">\(\iff \forall x, y, z \in S \quad m(x, m(y,
-z))=m(m(x, y),z) \quad\)</span></p></li>
-<li><p><strong>Monoide</strong> &gt; - <span
-class="math inline">\(S\)</span> insieme &gt; - <span
-class="math inline">\(m: S \times S \rightarrow S\)</span> &gt; - <span
-class="math inline">\((S, m)\)</span> <strong>monoide</strong> <span
-class="math inline">\(\iff (S, m)\)</span> semigruppo e <span
-class="math inline">\(\forall x \in S \quad \exists e \in S \mid m(x, e)
-= m(e, x) = x\)</span></p></li>
-<li><p><strong>Gruppo</strong> &gt; - <span
-class="math inline">\(S\)</span> insieme &gt; - <span
-class="math inline">\(m: S \times S \rightarrow S\)</span> &gt; - <span
-class="math inline">\((S, m)\)</span> <strong>gruppo</strong> <span
-class="math inline">\(\iff (S, m)\)</span> monoide e <span
-class="math inline">\(\forall x \in S \quad \exists x^{-1} \in S \mid
-m(x, x^{-1}) =m(x^{-1}, x) =e\)</span></p></li>
-<li><p><strong>Gruppo abeliano</strong> &gt; - <span
-class="math inline">\(S\)</span> insieme &gt; - <span
-class="math inline">\(m: S \times S \rightarrow S\)</span> &gt; - <span
-class="math inline">\((S, m)\)</span> <strong>gruppo abeliano</strong>
-<span class="math inline">\(\iff (S,m)\)</span> gruppo e <span
-class="math inline">\(\forall x, y \in S \quad m(x, y) = m(y,
-x)\)</span></p></li>
+<li><strong>Semigruppo</strong></li>
 </ul>
+<blockquote>
+<ul>
+<li><span class="math inline">\(S\)</span> insieme</li>
+<li><span class="math inline">\(m: S \times S \rightarrow
+S\)</span></li>
+<li><span class="math inline">\((S, m)\)</span>
+<strong>semigruppo</strong> <span class="math inline">\(\iff \forall x,
+y, z \in S \quad m(x, m(y, z))=m(m(x, y),z) \quad\)</span></li>
+</ul>
+</blockquote>
+<ul>
+<li><strong>Monoide</strong></li>
+</ul>
+<blockquote>
+<ul>
+<li><span class="math inline">\(S\)</span> insieme</li>
+<li><span class="math inline">\(m: S \times S \rightarrow
+S\)</span></li>
+<li><span class="math inline">\((S, m)\)</span> <strong>monoide</strong>
+<span class="math inline">\(\iff (S, m)\)</span> semigruppo e <span
+class="math inline">\(\forall x \in S \quad \exists e \in S \mid m(x, e)
+= m(e, x) = x\)</span></li>
+</ul>
+</blockquote>
+<ul>
+<li><strong>Gruppo</strong></li>
+</ul>
+<blockquote>
+<ul>
+<li><span class="math inline">\(S\)</span> insieme</li>
+<li><span class="math inline">\(m: S \times S \rightarrow
+S\)</span></li>
+<li><span class="math inline">\((S, m)\)</span> <strong>gruppo</strong>
+<span class="math inline">\(\iff (S, m)\)</span> monoide e <span
+class="math inline">\(\forall x \in S \quad \exists x^{-1} \in S \mid
+m(x, x^{-1}) =m(x^{-1}, x) =e\)</span></li>
+</ul>
+</blockquote>
+<ul>
+<li><strong>Gruppo abeliano</strong></li>
+</ul>
+<blockquote>
+<ul>
+<li><span class="math inline">\(S\)</span> insieme</li>
+<li><span class="math inline">\(m: S \times S \rightarrow
+S\)</span></li>
+<li><span class="math inline">\((S, m)\)</span> <strong>gruppo
+abeliano</strong> <span class="math inline">\(\iff (S,m)\)</span> gruppo
+e <span class="math inline">\(\forall x, y \in S \quad m(x, y) = m(y,
+x)\)</span></li>
+</ul>
+</blockquote>
 <h2 id="oss">Oss</h2>
 <ul>
 <li><strong>Hp</strong>
@@ -291,24 +317,39 @@ stesso</li>
 <h1 id="anelli">Anelli</h1>
 <h2 id="def-1">Def</h2>
 <ul>
-<li><p><strong>Anello</strong> &gt; - <span
-class="math inline">\(A\)</span> insieme &gt; - <span
-class="math inline">\(+: A \times A \rightarrow A\)</span> &gt; - <span
-class="math inline">\(*: A \times A \rightarrow A\)</span> &gt; - <span
-class="math inline">\((A, +, *)\)</span> <strong>anello</strong> <span
-class="math inline">\(\iff (A, +)\)</span> gruppo abeliano, <span
-class="math inline">\((A, *)\)</span> monoide e <span
-class="math inline">\(\forall a, b, c \in A \quad a*(b + c) = a * b + a
-* c\)</span> &gt; - <span class="math inline">\(a * b=b * a \quad
-\forall a, b \in A \implies (A, *, +)\)</span> è un <strong>anello
-commutativo</strong></p></li>
-<li><p><strong>Campo</strong> &gt; - <span class="math inline">\((A, +,
-*)\)</span> anello &gt; - <span class="math inline">\((A, +, *)\)</span>
-è un <strong>campo</strong> <span class="math inline">\(\iff \forall x
-\in A \quad \exists x^{-1}\)</span> rispetto a <span
-class="math inline">\(*\)</span></p></li>
-<li><p><strong>Semianello commutativo</strong> &gt; - <span
-class="math inline">\(A\)</span> insieme</p></li>
+<li><strong>Anello</strong></li>
+</ul>
+<blockquote>
+<ul>
+<li><span class="math inline">\(A\)</span> insieme</li>
+<li><span class="math inline">\(+: A \times A \rightarrow
+A\)</span></li>
+<li><span class="math inline">\(*: A \times A \rightarrow
+A\)</span></li>
+<li><span class="math inline">\((A, +, *)\)</span>
+<strong>anello</strong> <span class="math inline">\(\iff (A, +)\)</span>
+gruppo abeliano, <span class="math inline">\((A, *)\)</span> monoide e
+<span class="math inline">\(\forall a, b, c \in A \quad a*(b + c) = a *
+b + a * c\)</span></li>
+<li><span class="math inline">\(a * b=b * a \quad \forall a, b \in A
+\implies (A, *, +)\)</span> è un <strong>anello
+commutativo</strong></li>
+</ul>
+</blockquote>
+<ul>
+<li><strong>Campo</strong></li>
+</ul>
+<blockquote>
+<ul>
+<li><span class="math inline">\((A, +, *)\)</span> anello</li>
+<li><span class="math inline">\((A, +, *)\)</span> è un
+<strong>campo</strong> <span class="math inline">\(\iff \forall x \in A
+\quad \exists x^{-1}\)</span> rispetto a <span
+class="math inline">\(*\)</span></li>
+</ul>
+</blockquote>
+<ul>
+<li><strong>Semianello commutativo</strong></li>
 </ul>
 <blockquote>
 <ul>
@@ -325,12 +366,17 @@ a*(b + c) = a*b + a*c\)</span></li>
 </ul>
 </blockquote>
 <ul>
-<li><strong>Sottoanello</strong> &gt; - <span class="math inline">\((A,
-+, \cdot)\)</span> anello &gt; - <span class="math inline">\((B, + ,
-\cdot) \subset (A, +, \cdot)\)</span> <strong>sottoanello</strong> <span
+<li><strong>Sottoanello</strong></li>
+</ul>
+<blockquote>
+<ul>
+<li><span class="math inline">\((A, +, \cdot)\)</span> anello</li>
+<li><span class="math inline">\((B, + , \cdot) \subset (A, +,
+\cdot)\)</span> <strong>sottoanello</strong> <span
 class="math inline">\(\iff (B, +) \subset (A, +)\)</span> sottogruppo e
 <span class="math inline">\(B \cdot B \subset B\)</span></li>
 </ul>
+</blockquote>
 <h2 id="def-2">Def</h2>
 <ul>
 <li><strong>Invertibili</strong> &gt; - <span class="math inline">\((A,
@@ -394,23 +440,35 @@ A^*\)</span> per definizione</li>
 </ul>
 <h2 id="def-3">Def</h2>
 <ul>
-<li><p><strong>Divisori dello <span
-class="math inline">\(0\)</span></strong> &gt; - <span
-class="math inline">\((A, + , \cdot)\)</span> anello commutativo &gt; -
-<span class="math inline">\(a \in A\)</span> <strong>divisore dello
+<li><strong>Divisori dello <span
+class="math inline">\(0\)</span></strong></li>
+</ul>
+<blockquote>
+<ul>
+<li><span class="math inline">\((A, + , \cdot)\)</span> anello
+commutativo</li>
+<li><span class="math inline">\(a \in A\)</span> <strong>divisore dello
 <span class="math inline">\(0\)</span></strong> <span
 class="math inline">\(\iff \exists b \in A - \{0\} \mid a \cdot b =
-0\)</span></p></li>
-<li><p><strong>Dominio di integrità</strong> &gt; - <span
-class="math inline">\((A, +, \cdot)\)</span> anello commutativo &gt; -
-<span class="math inline">\(A\)</span> <strong>dominio di
-integrità</strong> <span class="math inline">\(\iff \nexists x : x \mid
-0\)</span>, oltre a <span class="math inline">\(x = 0\)</span> &gt; -
-alternativamente, <span class="math inline">\(A\)</span> è dominio di
-integrità <span class="math inline">\(\iff\)</span> in <span
-class="math inline">\(A\)</span> vale la legge di annullamento del
-prodotto</p></li>
+0\)</span></li>
 </ul>
+</blockquote>
+<ul>
+<li><strong>Dominio di integrità</strong></li>
+</ul>
+<blockquote>
+<ul>
+<li><span class="math inline">\((A, +, \cdot)\)</span> anello
+commutativo</li>
+<li><span class="math inline">\(A\)</span> <strong>dominio di
+integrità</strong> <span class="math inline">\(\iff \nexists x : x \mid
+0\)</span>, oltre a <span class="math inline">\(x = 0\)</span></li>
+<li>alternativamente, <span class="math inline">\(A\)</span> è dominio
+di integrità <span class="math inline">\(\iff\)</span> in <span
+class="math inline">\(A\)</span> vale la legge di annullamento del
+prodotto</li>
+</ul>
+</blockquote>
 <h2 id="oss-5">Oss</h2>
 <ul>
 <li><strong>Hp</strong>
@@ -461,19 +519,31 @@ poiché <span class="math inline">\(0\)</span> è l’unico divisore dello
 </ul>
 <h2 id="def-4">Def</h2>
 <ul>
-<li><p><strong>Elementi irriducibili</strong> &gt; - <span
-class="math inline">\(A\)</span> anello commutativo &gt; - <span
-class="math inline">\(a \in A - \{0\} \mid a \in A^*\)</span> &gt; -
-<span class="math inline">\(a\)</span> <strong>irriducibile</strong>
-<span class="math inline">\(\iff \exists b, c \in A \mid a = b c
-\implies b \in A^* \lor c \in A^*\)</span></p></li>
-<li><p><strong>Elementi primi</strong> &gt; - <span
-class="math inline">\(A\)</span> anello commutativo &gt; - <span
-class="math inline">\(a \in A - \{0\} \mid a \in A^*\)</span> &gt; -
-<span class="math inline">\(a\)</span> <strong>primo</strong> <span
-class="math inline">\(\iff \exists b, c \in A : a \mid bc \implies a
-\mid b \lor a \mid c\)</span></p></li>
+<li><strong>Elementi irriducibili</strong></li>
 </ul>
+<blockquote>
+<ul>
+<li><span class="math inline">\(A\)</span> anello commutativo</li>
+<li><span class="math inline">\(a \in A - \{0\} \mid a \in
+A^*\)</span></li>
+<li><span class="math inline">\(a\)</span> <strong>irriducibile</strong>
+<span class="math inline">\(\iff \exists b, c \in A \mid a = b c
+\implies b \in A^* \lor c \in A^*\)</span></li>
+</ul>
+</blockquote>
+<ul>
+<li><strong>Elementi primi</strong></li>
+</ul>
+<blockquote>
+<ul>
+<li><span class="math inline">\(A\)</span> anello commutativo</li>
+<li><span class="math inline">\(a \in A - \{0\} \mid a \in
+A^*\)</span></li>
+<li><span class="math inline">\(a\)</span> <strong>primo</strong> <span
+class="math inline">\(\iff \exists b, c \in A : a \mid bc \implies a
+\mid b \lor a \mid c\)</span></li>
+</ul>
+</blockquote>
 <h2 id="oss-7">Oss</h2>
 <ul>
 <li><strong>Hp</strong>
@@ -518,26 +588,35 @@ definizione di irriducibilità di un elemento</li>
 <h1 id="sottogruppi">Sottogruppi</h1>
 <h2 id="def-5">Def</h2>
 <ul>
-<li><strong>Sottogruppo</strong> &gt; - <span class="math inline">\((G,
-*)\)</span> gruppo &gt; - <span class="math inline">\((H, *) \subset (G,
-*)\)</span> <strong>sottogruppo</strong> <span
-class="math inline">\(\iff \exists e \in H \mid e\)</span> è l’elemento
-neutro, <span class="math inline">\(H * H \subset H\)</span> e <span
-class="math inline">\(\exists x^{-1} \in H \quad \forall x \in
-H\)</span></li>
+<li><strong>Sottogruppo</strong></li>
 </ul>
+<blockquote>
+<ul>
+<li><span class="math inline">\((G, *)\)</span> gruppo</li>
+<li><span class="math inline">\((H, *) \subset (G, *)\)</span>
+<strong>sottogruppo</strong> <span class="math inline">\(\iff \exists e
+\in H \mid e\)</span> è l’elemento neutro, <span class="math inline">\(H
+* H \subset H\)</span> e <span class="math inline">\(\exists x^{-1} \in
+H \quad \forall x \in H\)</span></li>
+</ul>
+</blockquote>
 <h2 id="def-6">Def</h2>
 <ul>
-<li><strong>Sottogruppo normale</strong> &gt; - <span
-class="math inline">\((G, *)\)</span> gruppo &gt; - <span
-class="math inline">\((H, *) \subset (G, *)\)</span> sottogruppo &gt; -
-<span class="math inline">\(x \in G\)</span> &gt; - <span
-class="math inline">\(xH := \{xh \mid h \in H\}\)</span> &gt; - <span
-class="math inline">\(Hx := \{hx \mid h \in H\}\)</span> &gt; - <span
-class="math inline">\(H\)</span> <strong>sottogruppo normale</strong>
-<span class="math inline">\(\iff xH = Hx \quad \forall x \in
-G\)</span></li>
+<li><strong>Sottogruppo normale</strong></li>
 </ul>
+<blockquote>
+<ul>
+<li><span class="math inline">\((G, *)\)</span> gruppo</li>
+<li><span class="math inline">\((H, *) \subset (G, *)\)</span>
+sottogruppo</li>
+<li><span class="math inline">\(x \in G\)</span></li>
+<li><span class="math inline">\(xH := \{xh \mid h \in H\}\)</span></li>
+<li><span class="math inline">\(Hx := \{hx \mid h \in H\}\)</span></li>
+<li><span class="math inline">\(H\)</span> <strong>sottogruppo
+normale</strong> <span class="math inline">\(\iff xH = Hx \quad \forall
+x \in G\)</span></li>
+</ul>
+</blockquote>
 <h2 id="oss-8">Oss</h2>
 <ul>
 <li><strong>Hp</strong>
@@ -605,22 +684,30 @@ gH\)</span></li>
 <h1 id="ordine">Ordine</h1>
 <h2 id="def-7">Def</h2>
 <ul>
-<li><strong>Ordine di un elemento in un gruppo</strong> &gt; - <span
-class="math inline">\(G\)</span> gruppo &gt; - <span
-class="math inline">\(g \in G\)</span> &gt; - <span
-class="math inline">\(H(g):=\left\{g^{n} \mid n \in
-\mathbb{Z}\right\}\)</span> è detto <strong>sottogruppo ciclico</strong>
-&gt; - prende il nome di <em>sottogruppo ciclico</em> poiché, a seconda
-del gruppo, le potenze di <span class="math inline">\(g\)</span> possono
-essere infinite o finite, ma quest’ultimo caso si verifica
-esclusivamente quando le potenze ciclano su loro stesse &gt; - <span
-class="math inline">\(o(g):= |H(g)|\)</span> è detto <strong>ordine di
-<span class="math inline">\(g \in G\)</span></strong> &gt; - tale valore
-può dunque essere infinito o finito, e in quest’ultimo caso l’ordine
-costituisce il valore più piccolo, non nullo, per cui <span
-class="math inline">\(g^{o(g)} = e\)</span>, poiché per valori maggiori
-le potenze ricicleranno infinitamente</li>
+<li><strong>Ordine di un elemento in un gruppo</strong></li>
 </ul>
+<blockquote>
+<ul>
+<li><span class="math inline">\(G\)</span> gruppo</li>
+<li><span class="math inline">\(g \in G\)</span></li>
+<li><span class="math inline">\(H(g):=\left\{g^{n} \mid n \in
+\mathbb{Z}\right\}\)</span> è detto <strong>sottogruppo ciclico</strong>
+<ul>
+<li>prende il nome di <em>sottogruppo ciclico</em> poiché, a seconda del
+gruppo, le potenze di <span class="math inline">\(g\)</span> possono
+essere infinite o finite, ma quest’ultimo caso si verifica
+esclusivamente quando le potenze ciclano su loro stesse</li>
+</ul></li>
+<li><span class="math inline">\(o(g):= |H(g)|\)</span> è detto
+<strong>ordine di <span class="math inline">\(g \in G\)</span></strong>
+<ul>
+<li>tale valore può dunque essere infinito o finito, e in quest’ultimo
+caso l’ordine costituisce il valore più piccolo, non nullo, per cui
+<span class="math inline">\(g^{o(g)} = e\)</span>, poiché per valori
+maggiori le potenze ricicleranno infinitamente</li>
+</ul></li>
+</ul>
+</blockquote>
 <h2 id="oss-9">Oss</h2>
 <ul>
 <li><strong>Hp</strong>

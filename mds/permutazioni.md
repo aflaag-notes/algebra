@@ -3,6 +3,7 @@
 ## Def
 
 - **Permutazioni**
+
 > - $X$ insieme
 > - $S_X := \{f \mid f:X \rightarrow X$ biiettiva $\}$ è l'**insieme delle permutazioni di $X$**
 > - $X = \{1, \ldots, n\} \implies S_n$ è detto **gruppo simmetrico di $n$**
@@ -24,7 +25,9 @@
   - quindi $|X| = 2 \implies S_X$ è abeliano, mentre $|X| = 1 \implies S_X$ è abeliano perché contiene un solo elemento
 
 ## Def
+
 - **Ciclo di una permutazione**
+
 > - $n \in \mathbb{N}$
 > - $\sigma \in S_n$
 > - $\exists 1 \leq i_1, \ldots, i_d \leq n \in \mathbb{N} \mid \left\{\begin{array}{c}
@@ -34,7 +37,6 @@
 \sigma\left(i_{d-1}\right)=i_{d} \\
 \sigma\left(i_{d}\right)=i_{1}
 \end{array}\right. \implies i_1, \ldots, i_n$ costituiscono un **ciclo di $\sigma$**
-
 
 ## Oss
 
@@ -85,6 +87,7 @@
 ## Def
 
 - **Trasposizione**
+
 > - $n \in \mathbb{N}$
 > - $i, j \in \mathbb{N} \mid 1 \leq i \lt j \leq n \quad$
 > - $k \in [1, n]$
@@ -92,6 +95,7 @@
 >   - $\tau_{i, j}^2 = \textrm{id} \iff \tau_{i, j} = \tau_{i, j} ^{-1}$
 
 - **Trasposizione adiacente**
+
 > - $n \in \mathbb{N}$
 > - $i, j \in \mathbb{N} \mid 1 \le i \lt j \le  n \land  j = i + 1$
 > - $\tau_{i, j}=\tau_{i, i+1}$ è detta **trasposizione adiacente**, poiché inverte esclusivamente due elementi, adiacenti, tra loro
@@ -118,12 +122,12 @@
 ## Def
 
 - **Segno di una permutazione**
+
 > - $n \in \mathbb{N}$
 > - $\sigma \in S_n$
 > - $\textrm{Inv}(\sigma) := \{ (i, j) \mid 1 \leq i \lt j \lt n : \sigma(i) \gt \sigma(j)\}$ è l'**insieme delle inversioni di $\sigma$**
 > - $\textrm{sgn}(\sigma) := (-1)^{|\textrm{Inv}(\sigma)|} =$$\left\{\begin{array}{ll}+1 & |\operatorname{Inv}(\sigma)| \equiv 0 \ (\bmod 2) \\ -1 & |\operatorname{Inv}(\sigma)| \equiv 1 \ (\bmod 2)\end{array}\right. \implies \sigma$ **pari** $\iff \textrm{sgn}(\sigma) = +1$
 >   - $\textrm{sgn}(\textrm{id}) = (-1)^0 = 1$, in quando la funzione identità non ha inversioni
-
 
 ## Oss
 

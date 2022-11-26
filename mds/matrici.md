@@ -3,6 +3,7 @@
 ## Def
 
 - **Matrici**
+
 > - $\mathbb{K}$ campo
 > - $m, n \in \mathbb{N} - \{0\}$
 > - $\textrm{Mat}_{m \times n}(\mathbb{K})$ è l'**insieme delle matrici aventi $m$ righe e $n$ colonne a coefficienti in $\mathbb{K}$**
@@ -17,6 +18,7 @@
 ## Def
 
 - **Prodotto scalare**
+
 > - $\mathbb{K}$ campo
 > - $m, n \in \mathbb{N} - \{0\}$
 > - $A \in \textrm{Mat}_{1 \times n}(\mathbb{K})$
@@ -31,4 +33,5 @@
 - **Th**
     - $\textrm{Mat}_{m \times n}(\mathbb{K})$ è uno spazio vettoriale
 - **Dim**
+    - **DA FINIRE**
 

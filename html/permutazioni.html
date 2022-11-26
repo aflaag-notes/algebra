@@ -172,15 +172,20 @@
 <h1 id="permutazioni">Permutazioni</h1>
 <h2 id="def">Def</h2>
 <ul>
-<li><strong>Permutazioni</strong> &gt; - <span
-class="math inline">\(X\)</span> insieme &gt; - <span
-class="math inline">\(S_X := \{f \mid f:X \rightarrow X\)</span>
-biiettiva <span class="math inline">\(\}\)</span> è l’<strong>insieme
-delle permutazioni di <span class="math inline">\(X\)</span></strong>
-&gt; - <span class="math inline">\(X = \{1, \ldots, n\} \implies
+<li><strong>Permutazioni</strong></li>
+</ul>
+<blockquote>
+<ul>
+<li><span class="math inline">\(X\)</span> insieme</li>
+<li><span class="math inline">\(S_X := \{f \mid f:X \rightarrow
+X\)</span> biiettiva <span class="math inline">\(\}\)</span> è
+l’<strong>insieme delle permutazioni di <span
+class="math inline">\(X\)</span></strong></li>
+<li><span class="math inline">\(X = \{1, \ldots, n\} \implies
 S_n\)</span> è detto <strong>gruppo simmetrico di <span
 class="math inline">\(n\)</span></strong></li>
 </ul>
+</blockquote>
 <h2 id="oss">Oss</h2>
 <ul>
 <li><strong>Hp</strong>
@@ -223,17 +228,21 @@ S_X\)</span> è abeliano perché contiene un solo elemento</li>
 </ul>
 <h2 id="def-1">Def</h2>
 <ul>
-<li><strong>Ciclo di una permutazione</strong> &gt; - <span
-class="math inline">\(n \in \mathbb{N}\)</span> &gt; - <span
-class="math inline">\(\sigma \in S_n\)</span> &gt; - <span
-class="math inline">\(\exists 1 \leq i_1, \ldots, i_d \leq n \in
-\mathbb{N} \mid \left\{\begin{array}{c} \sigma\left(i_{1}\right)=i_{2}
-\\ \sigma\left(i_{2}\right)=i_{3} \\ \vdots \\
-\sigma\left(i_{d-1}\right)=i_{d} \\ \sigma\left(i_{d}\right)=i_{1}
-\end{array}\right. \implies i_1, \ldots, i_n\)</span> costituiscono un
-<strong>ciclo di <span
+<li><strong>Ciclo di una permutazione</strong></li>
+</ul>
+<blockquote>
+<ul>
+<li><span class="math inline">\(n \in \mathbb{N}\)</span></li>
+<li><span class="math inline">\(\sigma \in S_n\)</span></li>
+<li><span class="math inline">\(\exists 1 \leq i_1, \ldots, i_d \leq n
+\in \mathbb{N} \mid \left\{\begin{array}{c}
+\sigma\left(i_{1}\right)=i_{2} \\ \sigma\left(i_{2}\right)=i_{3} \\
+\vdots \\ \sigma\left(i_{d-1}\right)=i_{d} \\
+\sigma\left(i_{d}\right)=i_{1} \end{array}\right. \implies i_1, \ldots,
+i_n\)</span> costituiscono un <strong>ciclo di <span
 class="math inline">\(\sigma\)</span></strong></li>
 </ul>
+</blockquote>
 <h2 id="oss-1">Oss</h2>
 <ul>
 <li><strong>Hp</strong>
@@ -336,25 +345,38 @@ I(d) \implies m = d\)</span></li>
 <h1 id="trasposizioni">Trasposizioni</h1>
 <h2 id="def-2">Def</h2>
 <ul>
-<li><p><strong>Trasposizione</strong> &gt; - <span
-class="math inline">\(n \in \mathbb{N}\)</span> &gt; - <span
-class="math inline">\(i, j \in \mathbb{N} \mid 1 \leq i \lt j \leq n
-\quad\)</span> &gt; - <span class="math inline">\(k \in [1, n]\)</span>
-&gt; - <span class="math inline">\(\tau_{i, j} \in S_n \mid \tau_{i, j}
+<li><strong>Trasposizione</strong></li>
+</ul>
+<blockquote>
+<ul>
+<li><span class="math inline">\(n \in \mathbb{N}\)</span></li>
+<li><span class="math inline">\(i, j \in \mathbb{N} \mid 1 \leq i \lt j
+\leq n \quad\)</span></li>
+<li><span class="math inline">\(k \in [1, n]\)</span></li>
+<li><span class="math inline">\(\tau_{i, j} \in S_n \mid \tau_{i, j}
 =\)</span><span class="math inline">\(\left\{\begin{array}{ll}j &amp;
 k=i \\ i &amp; k=j \\ k &amp; k \neq i, j\end{array}\right.\)</span> è
 detta <strong>trasposizione</strong>, ovvero una permutazione che
-inverte esclusivamente due elementi tra loro &gt; - <span
-class="math inline">\(\tau_{i, j}^2 = \textrm{id} \iff \tau_{i, j} =
-\tau_{i, j} ^{-1}\)</span></p></li>
-<li><p><strong>Trasposizione adiacente</strong> &gt; - <span
-class="math inline">\(n \in \mathbb{N}\)</span> &gt; - <span
-class="math inline">\(i, j \in \mathbb{N} \mid 1 \le i \lt j \le n \land
-j = i + 1\)</span> &gt; - <span class="math inline">\(\tau_{i,
-j}=\tau_{i, i+1}\)</span> è detta <strong>trasposizione
-adiacente</strong>, poiché inverte esclusivamente due elementi,
-adiacenti, tra loro</p></li>
+inverte esclusivamente due elementi tra loro
+<ul>
+<li><span class="math inline">\(\tau_{i, j}^2 = \textrm{id} \iff
+\tau_{i, j} = \tau_{i, j} ^{-1}\)</span></li>
+</ul></li>
 </ul>
+</blockquote>
+<ul>
+<li><strong>Trasposizione adiacente</strong></li>
+</ul>
+<blockquote>
+<ul>
+<li><span class="math inline">\(n \in \mathbb{N}\)</span></li>
+<li><span class="math inline">\(i, j \in \mathbb{N} \mid 1 \le i \lt j
+\le n \land j = i + 1\)</span></li>
+<li><span class="math inline">\(\tau_{i, j}=\tau_{i, i+1}\)</span> è
+detta <strong>trasposizione adiacente</strong>, poiché inverte
+esclusivamente due elementi, adiacenti, tra loro</li>
+</ul>
+</blockquote>
 <h2 id="oss-3">Oss</h2>
 <ul>
 <li><strong>Hp</strong>
@@ -413,22 +435,29 @@ class="math inline">\(\sigma \tau_{34} \tau_{23} \tau_{12}
 <h1 id="segno">Segno</h1>
 <h2 id="def-3">Def</h2>
 <ul>
-<li><strong>Segno di una permutazione</strong> &gt; - <span
-class="math inline">\(n \in \mathbb{N}\)</span> &gt; - <span
-class="math inline">\(\sigma \in S_n\)</span> &gt; - <span
-class="math inline">\(\textrm{Inv}(\sigma) := \{ (i, j) \mid 1 \leq i
-\lt j \lt n : \sigma(i) \gt \sigma(j)\}\)</span> è l’<strong>insieme
-delle inversioni di <span class="math inline">\(\sigma\)</span></strong>
-&gt; - <span class="math inline">\(\textrm{sgn}(\sigma) :=
+<li><strong>Segno di una permutazione</strong></li>
+</ul>
+<blockquote>
+<ul>
+<li><span class="math inline">\(n \in \mathbb{N}\)</span></li>
+<li><span class="math inline">\(\sigma \in S_n\)</span></li>
+<li><span class="math inline">\(\textrm{Inv}(\sigma) := \{ (i, j) \mid 1
+\leq i \lt j \lt n : \sigma(i) \gt \sigma(j)\}\)</span> è
+l’<strong>insieme delle inversioni di <span
+class="math inline">\(\sigma\)</span></strong></li>
+<li><span class="math inline">\(\textrm{sgn}(\sigma) :=
 (-1)^{|\textrm{Inv}(\sigma)|} =\)</span><span
 class="math inline">\(\left\{\begin{array}{ll}+1 &amp;
 |\operatorname{Inv}(\sigma)| \equiv 0 \ (\bmod 2) \\ -1 &amp;
 |\operatorname{Inv}(\sigma)| \equiv 1 \ (\bmod 2)\end{array}\right.
 \implies \sigma\)</span> <strong>pari</strong> <span
-class="math inline">\(\iff \textrm{sgn}(\sigma) = +1\)</span> &gt; -
-<span class="math inline">\(\textrm{sgn}(\textrm{id}) = (-1)^0 =
+class="math inline">\(\iff \textrm{sgn}(\sigma) = +1\)</span>
+<ul>
+<li><span class="math inline">\(\textrm{sgn}(\textrm{id}) = (-1)^0 =
 1\)</span>, in quando la funzione identità non ha inversioni</li>
+</ul></li>
 </ul>
+</blockquote>
 <h2 id="oss-4">Oss</h2>
 <ul>
 <li><strong>Hp</strong>

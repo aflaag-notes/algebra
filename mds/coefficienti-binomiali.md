@@ -3,6 +3,7 @@
 ## Def
 
 - **Coefficiente binomiale**
+
 > - $0! := 1$
 > - $n, k \in \mathbb{N}$
 > - $\displaystyle \binom{n}{k}:=\left\{\begin{array}{ll}\frac{n !}{n !(n-k) !} & k \leqslant n \\ 0 & k>n\end{array}\right.$

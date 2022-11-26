@@ -3,11 +3,13 @@
 ## Def 
 
 - **Morfismo di gruppi**
+
 > - $(G, \cdot), (H, \cdot)$ gruppi
 > - $f: G \rightarrow H$
 > - $f$ **morfismo di gruppi** $\iff \forall x, y \in G \quad f(x\cdot y)=f(x)\cdot f(y)$
 
 - **Morfismo di anelli**
+
 > - $(A, +, \cdot), (B, +, \cdot)$ anelli
 > - $f: A \rightarrow B$
 > - $f$ **morfismo di anelli** $\iff \forall x, y \in A \quad f(x+ y) = f(x) + f(y) \land f(x \cdot y) = f(x) \cdot f(y)$
@@ -45,6 +47,7 @@
 ## Def
 
 - **Isomorfismo**
+
 > - $f$ isomorfismo $\iff f$ morfismo e $f$ biiettiva
 
 ## Oss
@@ -129,17 +132,19 @@ $f([x \cdot y])=f([x]) \cdot f([y])$
 
 ****
 
-# Kernel e Immagine
+# Kernel e immagine
 
 ## Def
 
-- **kernel e Immagine di gruppi**
+- **kernel e immagine di gruppi**
+
 > - $G, H$ gruppi
 > - $f: G \rightarrow H$ morfismo
 > - $\textrm{ker}(f):=\{g \in G \mid f(g) = 1_H\}$
 > - $\textrm{Im}(f):=\{h \in H \mid \exists g \in G : f(g) = h\}$
 
- -  **kernel e Immagine di anelli**
+-  **kernel e immagine di anelli**
+
 > - $A, B$ gruppi
 > - $f: A \rightarrow B$ morfismo
 > - $\textrm{ker}(f):=\{a \in A \mid f(a)= 0_B\}$
