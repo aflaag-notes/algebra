@@ -18,7 +18,7 @@ out = "# DISCLAIMER\n\nQuesto è un file che contiene una lista di tutti i teore
 i = 1
 
 for file in os.listdir("mds/"):
-    if file != "everything.md":
+    if file != "everything.md" and file != "index.md":
         with open("mds/" + file) as md:
             parts = re.split("## Ex|## Oss|## Def|## Lem|## Cor|## Formula di de Moivre|## Formula di Eulero|## Formula di Grassmann", md.read())
             
