@@ -18,7 +18,7 @@
 - [Morfismi](https://ph04.github.io/algebra/html/morfismi.html)
     - Morfismi
     - Isomorfismi
-    - Kernel e Immagine
+    - Kernel e immagine
 - [Numeri complessi](https://ph04.github.io/algebra/html/numeri-complessi.html)
 - [Permutazioni](https://ph04.github.io/algebra/html/permutazioni.html)
     - Permutazioni

@@ -136,14 +136,14 @@ $f([x \cdot y])=f([x]) \cdot f([y])$
 
 ## Def
 
-- **kernel e immagine di gruppi**
+- **Kernel e immagine di gruppi**
 
 > - $G, H$ gruppi
 > - $f: G \rightarrow H$ morfismo
 > - $\textrm{ker}(f):=\{g \in G \mid f(g) = 1_H\}$
 > - $\textrm{Im}(f):=\{h \in H \mid \exists g \in G : f(g) = h\}$
 
--  **kernel e immagine di anelli**
+- **Kernel e immagine di anelli**
 
 > - $A, B$ gruppi
 > - $f: A \rightarrow B$ morfismo

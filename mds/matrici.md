@@ -33,5 +33,8 @@
 - **Th**
     - $\textrm{Mat}_{m \times n}(\mathbb{K})$ è uno spazio vettoriale
 - **Dim**
-    - **DA FINIRE**
+    - **⚠️ DA FINIRE**
 
+## Oss
+
+- **⚠️  WIP**
