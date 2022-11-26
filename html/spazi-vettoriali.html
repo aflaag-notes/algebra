@@ -504,5 +504,234 @@ class="math inline">\(V \iff \forall v \in V \quad \exists ! \lambda_1,
 <li><em>seconda implicazione</em></li>
 </ul></li>
 </ul>
+<hr />
+<h1 id="morfismi">Morfismi</h1>
+<h2 id="def-5">Def</h2>
+<ul>
+<li><strong>Morfisimi di spazi vettoriali</strong> &gt; - <span
+class="math inline">\(\mathbb{K}\)</span> campo &gt; - <span
+class="math inline">\(V\)</span> e <span
+class="math inline">\(W\)</span> spazi vettoriali su <span
+class="math inline">\(\mathbb{K}\)</span> &gt; - <span
+class="math inline">\(f: V \rightarrow W\)</span> <strong>morfismo di
+spazi vettoriali</strong> <span class="math inline">\(\iff \forall x, y
+\in V \quad f(x + y) = f(x) + f(y)\)</span> e <span
+class="math inline">\(\forall v \in V, \lambda \in \mathbb{K} \quad
+f(\lambda k) = \lambda f(v)\)</span></li>
+</ul>
+<h2 id="oss-3">Oss</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\(\mathbb{K}\)</span> campo</li>
+<li><span class="math inline">\(V\)</span> spazio vettoriale su <span
+class="math inline">\(\mathbb{K}\)</span></li>
+<li><span class="math inline">\(n:= \dim(V)\)</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\(V \cong \mathbb{K}^n\)</span></li>
+</ul></li>
+<li><strong>Dim</strong>
+<ul>
+<li>sia <span class="math inline">\(v_1, \ldots, v_n \in V\)</span> una
+base di <span class="math inline">\(V\)</span>
+<ul>
+<li>⚠️ <strong>MANCA LA DIMOSTRAZIONE PER CUI ALMENO UNA BASE ESISTE
+SEMPRE</strong></li>
+</ul></li>
+<li>per dimostrare la tesi è necessario dimostrare che <span
+class="math inline">\(f: \mathbb{K}^n \rightarrow V: (t_1, \ldots, t_n)
+\rightarrow t_1v_1 + \ldots + t_nv_n\)</span> è un isomorfismo</li>
+<li><span class="math inline">\(f\)</span> morfismo
+<ul>
+<li><span class="math inline">\(\forall \lambda \in\mathbb{K}, x, y \in
+\mathbb{K}^n \mid x = (x_1, \ldots, x_n) \land y=(y_1, \ldots,
+y_n)\)</span> si ha che <span class="math inline">\(f(x + y) = (x_1 +
+y_1)v_1 + \ldots + (x_n + y_n) v_n = (x_1v_1+ \ldots + x_nv_n) + (y_1v_1
++ \ldots + y_nv_n) = f(x) + f(y)\)</span>, dunque è verificata la prima
+condizione, e inoltre <span class="math inline">\(f(\lambda x) = \lambda
+x_1v_1 + \ldots + \lambda x_n v_n = \lambda(x_1v_1 + \ldots + x_n v_n) =
+\lambda f(x)\)</span>, dunque è verificata anche la seconda</li>
+</ul></li>
+<li><span class="math inline">\(f\)</span> biiettiva
+<ul>
+<li>⚠️ <strong>MANCA LA DIMOSTRAZIONE</strong></li>
+</ul></li>
+</ul></li>
+</ul>
+<h2 id="oss-4">Oss</h2>
+<ul>
+<li>⚠️ <strong>QUI C’È UN BUCONE</strong></li>
+</ul>
+<h2 id="oss-5">Oss</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\(\mathbb{K}\)</span> campo</li>
+<li><span class="math inline">\(W\)</span> spazio vettoriale su <span
+class="math inline">\(\mathbb{K}\)</span></li>
+<li><span class="math inline">\(n:= \dim(W)\)</span></li>
+<li><span class="math inline">\(k \in \mathbb{N} \mid k \lt
+n\)</span></li>
+<li><span class="math inline">\(w_1, \ldots, w_k \in W\)</span>
+linearmente indipendenti</li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\(\exists w_{k + 1}, \ldots, w_n \in W
+\mid w_1, \ldots, w_n\)</span> è una base di <span
+class="math inline">\(W\)</span></li>
+</ul></li>
+<li><strong>Dim</strong>
+<ul>
+<li><span class="math inline">\(k \lt n \implies \textrm{span}(w_1,
+\ldots, w_k) \subsetneqq W \implies \exists w_{k + 1} \in W \mid w_{k +
+1} \notin \textrm{span}(w_1, \ldots, w_k)\)</span>, allora per
+dimostrazione precedente <span class="math inline">\(w_1, \ldots, w_{k
++1}\)</span> sono linearmente indipendenti</li>
+<li>per ragionamento analogo, è possibile estendere <span
+class="math inline">\(w_1, \ldots, w_{k + 1}\)</span> fino ad avere
+<span class="math inline">\(w_1, \ldots, w_n\)</span> vettori
+linearmente indipendenti</li>
+</ul></li>
+</ul>
+<h2 id="oss-6">Oss</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\(\mathbb{K}\)</span> campo</li>
+<li><span class="math inline">\(W\)</span> spazio vettoriale su <span
+class="math inline">\(\mathbb{K}\)</span></li>
+<li><span class="math inline">\(n := \dim(W)\)</span></li>
+<li><span class="math inline">\(m \in \mathbb{N} \mid m \ge
+n\)</span></li>
+<li><span class="math inline">\(w_1, \ldots, w_m \in W \mid w_1, \ldots,
+w_m\)</span> generatori di <span class="math inline">\(W\)</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\(\exists 1 \le i_1, \ldots, i_n \le m
+\mid w_{i_1}, \ldots, w_{i_n}\)</span> è una base di <span
+class="math inline">\(W\)</span></li>
+</ul></li>
+<li><strong>Dim</strong>
+<ul>
+<li>è possibile assumere che <span
+class="math inline">\(w_{i_1}\)</span> non sia nullo, poiché <span
+class="math inline">\(w_1, \ldots, w_m\)</span> sono sicuramente non
+tutti nulli in quanto generatori di <span
+class="math inline">\(W\)</span></li>
+<li><span class="math inline">\(w_{i_1} \neq 0 \implies w_{i_1}\)</span>
+linearmente indipendente, ma non può costituire un generatore poiché
+sono meno di <span class="math inline">\(n\)</span> vettori <span
+class="math inline">\(\implies \textrm{span}(w_{i_1}) \subsetneqq W
+\implies \exists w_{i_2} \notin \textrm{span}(w_{i_1})\)</span>, allora
+per dimostrazione precedente <span class="math inline">\(w_{i_1},
+w_{i_2}\)</span> sono linearmente indipendenti</li>
+<li>è possiible ripetere il ragionamento fino ad ottenere esattamente
+<span class="math inline">\(n\)</span> vettori, ottenendo <span
+class="math inline">\(w_{i_1}, \ldots, w_{i_n}\)</span> vettori
+linearmente indipendenti</li>
+</ul></li>
+</ul>
+<h2 id="oss-7">Oss</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\(\mathbb{K}\)</span> campo</li>
+<li><span class="math inline">\(W\)</span> spazio vettoriale su <span
+class="math inline">\(\mathbb{K}\)</span></li>
+<li><span class="math inline">\(n:= \dim(W)\)</span></li>
+<li><span class="math inline">\(w_1, \ldots, w_n \in W\)</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\(w_1, \ldots, w_n\)</span> linearmente
+indipendenti <span class="math inline">\(\iff w_1, \ldots, w_n\)</span>
+generatori di <span class="math inline">\(W\)</span></li>
+</ul></li>
+<li><strong>Dim</strong>
+<ul>
+<li><em>prima implicazione</em>
+<ul>
+<li>per assurdo, siano <span class="math inline">\(w_1, \ldots,
+w_n\)</span> linearmente indipendenti ma non generatori di <span
+class="math inline">\(W \implies \textrm{span}(w_1, \ldots, w_n)
+\subsetneqq W \implies \exists w_{n + 1} \notin \textrm{span}(w_1,
+\ldots, w_n)\)</span>, ma per dimostrazione precedente <span
+class="math inline">\(w_1, \ldots, w_{n + 1}\)</span> linearmente
+indipendenti <span class="math inline">\(\bot\)</span></li>
+</ul></li>
+<li><em>seconda implicazione</em>
+<ul>
+<li>per assurdo, siano <span class="math inline">\(w_1, \ldots,
+w_n\)</span> generatori di <span class="math inline">\(W\)</span> ma non
+linearmente indipendenti <span class="math inline">\(\implies \exists
+\lambda_1, \ldots, \lambda_n \mid \lambda_1w_1 + \ldots + \lambda_nw_n =
+0_W\)</span> dove <span class="math inline">\(\exists i \in [1, n] \mid
+\lambda_i \neq 0 \implies w_i = -\lambda_i^{-1} \lambda_1w_1 - \ldots -
+\lambda_i^{-1} \lambda_nw_n\)</span>, dunque <span
+class="math inline">\(w_i\)</span> è combinazione lineare degli altri
+vettori, in simboli <span class="math inline">\(w_i \in
+\textrm{span}(w_1, \ldots, \hat{w_i}, \ldots, w_n) \implies
+\textrm{span}(w_1, \ldots, w_n) \subseteq \textrm{span}(w_1, \ldots,
+\hat{w_i}, \ldots, w_n)\)</span></li>
+<li>per qualsiasi insieme di vettori minore di <span
+class="math inline">\(n\)</span> si ha che <span
+class="math inline">\(\textrm{span}(w_1, \ldots, \hat{w_i}, \ldots, w_n)
+\subseteq \textrm{span}(w_1, \ldots, w_n)\)</span></li>
+<li>allora segue che <span class="math inline">\(\textrm{span}(w_1,
+\ldots, \hat{w_i}, \ldots, w_n) = \textrm{span}(w_1, \ldots,
+w_n)\)</span>, ma questo non è possibile in queanto <span
+class="math inline">\(w_1, \ldots, \hat{w_i}, \ldots, w_n\)</span> sono
+<span class="math inline">\(n - 1\)</span> generatori, e i generatori
+non possono essere meno di <span class="math inline">\(n \
+\bot\)</span></li>
+</ul></li>
+</ul></li>
+</ul>
+<h2 id="formula-di-grassmann">Formula di Grassmann</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\(\mathbb{K}\)</span> campo</li>
+<li><span class="math inline">\(W\)</span> spazio vettoriale su <span
+class="math inline">\(\mathbb{K}\)</span></li>
+<li><span class="math inline">\(U, V \subset W\)</span> sottospazi
+vettoriali</li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\(\dim(U + V) = \dim(U) + \dim(V) - \dim(U
+\cap V)\)</span></li>
+</ul></li>
+<li><strong>Dim</strong>
+<ul>
+<li><span class="math inline">\(k:=\dim(U \cap V)\)</span></li>
+<li><span class="math inline">\(m:=\dim(U)\)</span></li>
+<li><span class="math inline">\(n := \dim (V)\)</span></li>
+<li><span class="math inline">\(w_1, \ldots, w_k \in U \cap V\)</span>
+base di <span class="math inline">\(U \cap V\)</span></li>
+<li><span class="math inline">\(B_1 := w_1, \ldots, w_k, u_{k + 1},
+\ldots, u_m \in U\)</span> base di <span
+class="math inline">\(U\)</span></li>
+<li><span class="math inline">\(B_2 := w_1, \ldots, w_k, v_{k + 1},
+\ldots, v_n \in V\)</span> base di <span
+class="math inline">\(V\)</span></li>
+<li><span class="math inline">\(B_1 \cup B_2 := w_1, \ldots w_k, u_{k +
+1}, \ldots, u_m, v_{k + 1}, \ldots, v_n\)</span></li>
+<li><span class="math inline">\(\forall u \in U, v \in V \mid u :=
+\displaystyle \sum_{i = 1}^k{\lambda_iw_i} + \sum_{j = k +
+1}^m{\lambda_j u_j} \land \displaystyle v :=\sum_{i = 1}^k{\mu_iw_i} +
+\sum_{h = k + 1}^n {\mu_hv_h} \quad u + v =\sum_{i = 1}^k{(\lambda_i +
+\mu_i)w_i} + \sum_{j = k + 1}^m{\lambda_j u_j} + \sum_{h = k + 1}^n
+{\mu_hv_h} \implies u + v \in \textrm{span}(w_1, \ldots w_k, u_{k + 1},
+\ldots, u_m, v_{k + 1}, \ldots, v_n) \implies B_1 \cup B_2\)</span>
+generatori di <span class="math inline">\(U + V\)</span>, poiché <span
+class="math inline">\(u + v \in U + V\)</span></li>
+<li>⚠️ <strong>INCOMPLETA</strong></li>
+</ul></li>
+</ul>
 </body>
 </html>
