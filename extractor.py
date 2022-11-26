@@ -20,7 +20,7 @@ i = 1
 for file in os.listdir("mds/"):
     if file != "everything.md":
         with open("mds/" + file) as md:
-            parts = re.split("## Ex|## Oss|## Def|## Lem|## Cor|## Formula di de Moivre|## Formula di Eulero", md.read())
+            parts = re.split("## Ex|## Oss|## Def|## Lem|## Cor|## Formula di de Moivre|## Formula di Eulero|## Formula di Grassmann", md.read())
             
             for y, part in enumerate(parts):
                 if (s := filter_content(part)):
