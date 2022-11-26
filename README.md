@@ -8,6 +8,7 @@ Se invece siete qui per la lista di teoremi, ecco [il link](https://raw.githubus
 
 - cambia il gruppo alterno, è sottogruppo normale
 - fixa il quoziente, che posso quozientare solo per il normale
+- fixa il gruppo alterno $A_n$
 - quando non va a capo mi tilta
     - alternativamente, trovare un modo per far prendere a pandoc tutta la pagina di default
 
