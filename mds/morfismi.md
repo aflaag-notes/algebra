@@ -5,12 +5,12 @@
 - **Morfismo di gruppi**
 > - $(G, \cdot), (H, \cdot)$ gruppi
 > - $f: G \rightarrow H$
-> - $f$ **morfismo di gruppi** $\iff f(x\cdot y)=f(x)\cdot f(y) \quad \forall x, y \in G$
+> - $f$ **morfismo di gruppi** $\iff \forall x, y \in G \quad f(x\cdot y)=f(x)\cdot f(y)$
 
 - **Morfismo di anelli**
 > - $(A, +, \cdot), (B, +, \cdot)$ anelli
 > - $f: A \rightarrow B$
-> - $f$ **morfismo di anelli** $\iff f(x+ y) = f(x) + f(y)$ e $f(x \cdot y) = f(x) \cdot f(y) \quad \forall x, y \in A$
+> - $f$ **morfismo di anelli** $\iff \forall x, y \in A \quad f(x+ y) = f(x) + f(y) \land f(x \cdot y) = f(x) \cdot f(y)$
 >     -   la stessa definizione si applica per morfismo di campi
 
 ## Oss

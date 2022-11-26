@@ -163,3 +163,28 @@
     - ⚠️ **INCOMPLETA**
     - _prima implicazione_
     - _seconda implicazione_
+
+****
+
+# Morfismi
+
+## Def
+
+- **Morfisimi di spazi vettoriali**
+> - $\mathbb{K}$ campo
+> - $V$ e $W$ spazi vettoriali su $\mathbb{K}$
+> - $f: V \rightarrow W$ **morfismo di spazi vettoriali** $\iff \forall x, y \in V \quad f(x + y) = f(x) + f(y)$ e $\forall v \in V, \lambda \in \mathbb{K} \quad f(\lambda k) = \lambda f(v)$
+
+## Oss
+
+- **Hp**
+    - $\mathbb{K}$ campo
+    - $V$ spazio vettoriale su $\mathbb{K}$
+    - $n:= \dim(V)$
+- **Th**
+    - $V \cong \mathbb{K}^n$
+- **Dim**
+    - sia $v_1, \ldots, v_n$ una base di $V$
+        - ⚠️ **MANCA LA DIMOSTRAZIONE PER CUI ALMENO UNA BASE ESISTE SEMPRE**
+    - $f: \mathbb{K}^n \rightarrow V: (t_1, \ldots, t_n) \rightarrow t_1v_1 + \ldots + t_nv_n$
+
