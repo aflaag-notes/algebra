@@ -7,6 +7,9 @@ def good_format(title):
 if not os.path.isdir("./temp"):
     os.mkdir("temp")
 
+if not os.path.isdir("./html"):
+    os.mkdir("html")
+
 for file in os.listdir("mds"):
     name_no_ext = file.split(".")[0]
 
@@ -22,7 +25,16 @@ for file in os.listdir("mds"):
     with open("temp/" + name_no_ext + ".md", "w") as NF:
         NF.write(content)
 
-    os.system(f"pandoc --standalone --mathjax --metadata title=\"{good_format(name_no_ext)}\" -f markdown -t html temp/" + name_no_ext + ".md -o html/" + name_no_ext + ".html")
+    os.system(f"pandoc --standalone --mathjax --metadata title=\"{good_format(name_no_ext)}\" -f markdown -t html temp/" + name_no_ext + ".md -o temp/" + name_no_ext + ".html")
+
+    with open("temp/" + name_no_ext + ".html") as B:
+        content = B.read()
+        content = re.sub("#fdfdfd", "#1f1f1f", content)
+        content = re.sub("#1a1a1a", "#fdfdfd", content)
+        content = re.sub("#606060", "#adbac7", content)
+
+        with open("html/" + name_no_ext + ".html", "w") as NB:
+            NB.write(content)
 
     print(name_no_ext + ".html was successfully created")
 

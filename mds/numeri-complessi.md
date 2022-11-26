@@ -3,6 +3,7 @@
 ## Def
 
 - **Insieme dei complessi**
+
 > - $\mathbb{C}:=\left\{a+i b \mid a, b \in \mathbb{R}, \  i : i^{2}=-1\right\}$ è l'**insieme dei complessi**
 > - $z \in \mathbb{C} \implies\left\{\begin{array}{l}a:=\operatorname{Re}(z) \\ b:=\operatorname{Im}(z)\end{array}\right.$
 
@@ -38,6 +39,7 @@
 ## Def
 
 - **Raggio**
+
 > - $z = a+ib$
 > - $|z|:=\sqrt{a^{2}+b^{2}}$ è il **raggio** di $z$
 >   - è la distanza di $z$ dall'origine nel piano di Gauss
@@ -69,4 +71,5 @@
 - $\left|\dfrac{z}{w}\right|=\dfrac{|z|}{|w|} \quad \arg\left(\dfrac{z}{w}\right)=\arg(z) - \arg(w)$
 
 ## Formula di de Moivre
+
   - $z^{n}=|z|^{n} e^{i n \theta} \quad \arg \left( z^{n} \right)=n \arg (z)$

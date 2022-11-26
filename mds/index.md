@@ -14,6 +14,7 @@
 - [Insieme quoziente](https://ph04.github.io/algebra/html/insieme-quoziente.html)
     - Insieme quoziente
     - Funzione totiente di Eulero
+- [Matrici](https://ph04.github.io/algebra/html/matrici.html)
 - [Morfismi](https://ph04.github.io/algebra/html/morfismi.html)
     - Morfismi
     - Isomorfismi
