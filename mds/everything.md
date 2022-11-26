@@ -964,57 +964,6 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, esemp
 
 
 ****
-# Indice
-
-- [Coefficienti Binomiali](https://ph04.github.io/algebra/html/coefficienti-binomiali.html)
-- [Gruppi diedrali](https://ph04.github.io/algebra/html/gruppi-diedrali.html)
-- [Gruppi e Anelli](https://ph04.github.io/algebra/html/gruppi-e-anelli.html)
-    - Gruppi
-    - Anelli
-    - Sottogruppi
-    - Ordine
-- [Ideali](https://ph04.github.io/algebra/html/ideali.html)
-    - Ideali
-    - Operazioni sugli ideali
-- [Induzione](https://ph04.github.io/algebra/html/induzione.html)
-- [Insieme quoziente](https://ph04.github.io/algebra/html/insieme-quoziente.html)
-    - Insieme quoziente
-    - Funzione totiente di Eulero
-- [Matrici](https://ph04.github.io/algebra/html/matrici.html)
-- [Morfismi](https://ph04.github.io/algebra/html/morfismi.html)
-    - Morfismi
-    - Isomorfismi
-    - Kernel e Immagine
-- [Numeri complessi](https://ph04.github.io/algebra/html/numeri-complessi.html)
-- [Permutazioni](https://ph04.github.io/algebra/html/permutazioni.html)
-    - Permutazioni
-    - Trasposizioni
-    - Segno
-- [Polinomi](https://ph04.github.io/algebra/html/polinomi.html)
-- [Relazioni](https://ph04.github.io/algebra/html/relazioni.html)
-    - Relazioni
-    - Partizioni
-    - Classi laterali
-- [Spazi vettoriali](https://ph04.github.io/algebra/html/spazi-vettoriali.html)
-    - Spazi vettoriali
-    - Applicazioni lineari
-- [Teoremi fondamentali](https://ph04.github.io/algebra/html/teoremi-fondamentali.html)
-    - Teorema fondamentale dell'algebra
-    - Teorema della divisione euclidea con il resto
-    - Teorema di Lagrange
-    - Teorema fondamentale dell'aritmetica
-    - Teorema cinese dei resti
-    - Teorema del binomio di Newton
-    - Piccolo teorema di Fermat
-    - Teorema di Eulero
-    - Teorema fondamentale di isomorfismo
-    - Teorema di Cauchy
-- [Tutti i teoremi](https://ph04.github.io/algebra/html/everything.html)
-
-
-
-
-****
 # Induzione
 
 
@@ -1044,6 +993,12 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, esemp
 - **Th**
     - $\textrm{Mat}_{m \times n}(\mathbb{K})$ è uno spazio vettoriale
 
+## Teorema 100
+
+
+- **⚠️  WIP**
+
+
 
 ****
 # Teorema fondamentale dell'algebra
@@ -1064,7 +1019,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, esemp
 - **Th**
   - $\exists !  \ q, r \in \mathbb{Z} \mid m=n q+r \quad 0 \leq r<n$
 
-## Teorema 100
+## Teorema 101
 
 
 - **Hp**
@@ -1083,7 +1038,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, esemp
 - **Th**
   - $|G| = |H| \cdot |G / H|$
 
-## Teorema 101
+## Teorema 102
 
 
 - **Hp**
@@ -1092,7 +1047,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, esemp
 - **Th**
   - $m = a_1 \cdot \ldots \cdot a_n$
 
-## Teorema 102
+## Teorema 103
 
 
 - **Hp**
@@ -1103,7 +1058,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, esemp
   - $\exists \phi \mid \phi: \mathbb{Z}_m \rightarrow \mathbb{Z}_{a_1} \times \ldots \times \mathbb{Z}_{a_n}: x \ (\bmod \ m) \rightarrow (x \ (\bmod \ a_1), \ldots, x \ (\bmod \ a_n))$
   - $\phi$ è una funzione ben definita, ed è iniettiva
 
-## Teorema 103
+## Teorema 104
 
 
 - **Hp**
@@ -1116,7 +1071,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, esemp
 - **Th**
     - $o = \textrm{mcm}(o_1, \ldots, o_k)$
 
-## Teorema 104
+## Teorema 105
 
 
 - ⚠️ **NON HO CAPITO UN CAZZO**
@@ -1131,7 +1086,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, esemp
 - **Th**
   - $a^{p} \equiv a \ (\bmod \ p)$
 
-## Teorema 105
+## Teorema 106
 
 
 - **Hp**
@@ -1140,7 +1095,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, esemp
 - **Th**
   - $[a]^{-1}=\left[a\right]^{p-2}$
 
-## Teorema 106
+## Teorema 107
 
 
 - **Hp**
@@ -1148,7 +1103,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, esemp
 - **Th**
     - $\displaystyle \prod_{0 \lt a \lt p} (x - a) \equiv x^{p - 1} - 1 \ (\bmod \ p)$
 
-## Teorema 107
+## Teorema 108
 
 
 - ⚠️ **NON HO CAPITO UN CAZZO**
@@ -1162,7 +1117,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, esemp
 - **Th**
     - $a^{\varphi(n)} \equiv 1 \ (\bmod \ n)$
 
-## Teorema 108
+## Teorema 109
 
 
 - **Hp**
@@ -1171,7 +1126,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, esemp
 - **Th**
   - $G / \textrm{ker}(f) \cong \textrm{Im}(f)$, o alternativamente $\exists \varphi \mid \varphi : G / \textrm{ker}(f) \rightarrow \textrm{Im}(f): [g] \rightarrow f(g)$ isomorfismo di gruppi
 
-## Teorema 109
+## Teorema 110
 
 
 - **Hp**
@@ -1185,7 +1140,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, esemp
 
 
 
-## Teorema 110
+## Teorema 111
 
 
 - **Hp**
@@ -1194,7 +1149,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, esemp
 - **Th**
   - $\mid$ è ordine parziale
 
-## Teorema 111
+## Teorema 112
 
 
 - **Hp**
@@ -1203,7 +1158,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, esemp
 - **Th**
   - $\equiv$ è una relazione di equivalenza
 
-## Teorema 112
+## Teorema 113
 
 
 - **Hp**
@@ -1212,7 +1167,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, esemp
 - **Th**
   - $x \equiv y \ (\bmod  \ d)$
 
-## Teorema 113
+## Teorema 114
 
 
 - **Hp**
@@ -1225,7 +1180,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, esemp
 
 
 
-## Teorema 114
+## Teorema 115
 
 
 - **Hp**
@@ -1235,7 +1190,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, esemp
 - **Th**
   - $\sim$ è una relazione di equivalenza
 
-## Teorema 115
+## Teorema 116
 
 
 - **Hp**
@@ -1243,7 +1198,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, esemp
 - **Th**
   - $\forall x, y \in G \quad x \nsim y \iff [x] \cap [y] = \varnothing \lor x \sim y \iff [x] = [y]$
 
-## Teorema 116
+## Teorema 117
 
 
 - **Hp**
@@ -1252,7 +1207,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, esemp
 - **Th**
   - $\sim$ induce una partizione di $G$, dunque $\displaystyle G = \coprod_{[x] \in X/\sim}[x]$
 
-## Teorema 117
+## Teorema 118
 
 
 - **Hp**
@@ -1262,7 +1217,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, esemp
 - **Th**
   - $x \sim_S y \iff x^{-1}y \in H$ è una relazione di equivalenza
 
-## Teorema 118
+## Teorema 119
 
 
 - **Hp**
@@ -1273,7 +1228,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, esemp
 - **Th**
   - $a \sim_S b \iff a \equiv b \ (\bmod \ n)$
 
-## Teorema 119
+## Teorema 120
 
 
 - **Hp**
@@ -1284,7 +1239,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, esemp
 - **Th**
   - $xH:= \{ xh \mid h \in H\} = [x]$
 
-## Teorema 120
+## Teorema 121
 
 
 - **Hp**
@@ -1294,7 +1249,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, esemp
 - **Th**
   - $| xH |= |H|$
 
-## Teorema 121
+## Teorema 122
 
 
 - **Hp**
@@ -1310,7 +1265,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, esemp
 
 
 
-## Teorema 122
+## Teorema 123
 
 
 - **Hp**
@@ -1321,7 +1276,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, esemp
 - **Th**
   - $f(1_G) = 1_H$
 
-## Teorema 123
+## Teorema 124
 
 
 - **Hp**
@@ -1332,7 +1287,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, esemp
 - **Th**
   - $f(g^{-1}) = f(g)^{-1}$
 
-## Teorema 124
+## Teorema 125
 
 
 - **Hp**
@@ -1340,7 +1295,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, esemp
 - **Th**
   - $f ^{-1}: H \rightarrow G$ isomorfismo
 
-## Teorema 125
+## Teorema 126
 
 
 - **Hp**
@@ -1350,7 +1305,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, esemp
 - **Th**
   - $(H, \cdot) \subset (\mathbb{C}-\{0\}, \cdot)$ è un sottogruppo
 
-## Teorema 126
+## Teorema 127
 
 
 - **Hp**
@@ -1358,7 +1313,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, esemp
 - **Th**
   - $f$ isomorfismo di gruppi $(\mathbb{Z}_n , +)$ e $(H, \cdot)$
 
-## Teorema 127
+## Teorema 128
 
 
 - **Hp**
@@ -1367,7 +1322,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, esemp
 - **Th**
   - $f$ morfismo di gruppi $(\mathbb{Z}, +)$ e $(G, \cdot)$
 
-## Teorema 128
+## Teorema 129
 
 
 - **Hp**
@@ -1375,7 +1330,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, esemp
 - **Th**
   - $f$ morfismo di anelli $\left(\mathbb{Z},+, \cdot\right)$ e $\left(\mathbb{Z}_{n},+, \cdot\right)$
 
-## Teorema 129
+## Teorema 130
 
 
 - **Hp**
@@ -1384,7 +1339,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, esemp
 - **Th**
   - $f$ morfismo di anelli $\left(\mathbb{Z}_{m},+, \cdot\right)$ e $\left(\mathbb{Z}_{n},+, \cdot\right)$
 
-## Teorema 130
+## Teorema 131
 
 
 - **Hp**
@@ -1393,7 +1348,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, esemp
 - **Th**
   - $f$ morfismo di gruppi $(G, \cdot)$ e $(G, \cdot)$
 
-## Teorema 131
+## Teorema 132
 
 
 - **Hp**
@@ -1402,7 +1357,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, esemp
 - **Th**
   - $\textrm{ker}(f) \subset G$ è sottogruppo
 
-## Teorema 132
+## Teorema 133
 
 
 - **Hp**
@@ -1411,7 +1366,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, esemp
 - **Th**
   - $\textrm{Im}(f) \subset G$ è sottogruppo
 
-## Teorema 133
+## Teorema 134
 
 
 - **Hp**
@@ -1420,7 +1375,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, esemp
 - **Th**
   - $f$ iniettiva $\iff \textrm{ker}(f) = \{1_G\}$
 
-## Teorema 134
+## Teorema 135
 
 
 - **Hp**
@@ -1429,7 +1384,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, esemp
 - **Th**
   - $\textrm{ker}(f)$ ideale
 
-## Teorema 135
+## Teorema 136
 
 
 - **Hp**
@@ -1438,7 +1393,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, esemp
 - **Th**
   - $\textrm{Im}(f)$ sottoanello
 
-## Teorema 136
+## Teorema 137
 
 
 - **Hp**
@@ -1448,7 +1403,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, esemp
 - **Th**
   - $\textrm{ker}(f) = I(n)$
 
-## Teorema 137
+## Teorema 138
 
 
 - **Hp**
@@ -1463,7 +1418,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, esemp
 
 
 
-## Teorema 138
+## Teorema 139
 
 
 - **Hp**
@@ -1472,7 +1427,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, esemp
 - **Th**
   - $|D_n| = 2n$
 
-## Teorema 139
+## Teorema 140
 
 
 - **Hp**
@@ -1482,7 +1437,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, esemp
 - **Th**
   - $(D_n, \cdot)$ è un gruppo
 
-## Teorema 140
+## Teorema 141
 
 
 - **Hp**
@@ -1490,7 +1445,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, esemp
 - **Th**
   - $(D_2, \cdot)$ è l'unico gruppo diedrale abeliano
 
-## Teorema 141
+## Teorema 142
 
 
 - **Hp**
@@ -1500,7 +1455,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, esemp
   - $\exists X \subset S_n$ sottogruppo di $S_n$ $\mid D_n \cong X$
     - $D_3 \cong S_3$
 
-## Teorema 142
+## Teorema 143
 
 
 - **Hp**
