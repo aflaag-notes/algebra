@@ -1,6 +1,6 @@
 # Indice
 
-- [Coefficienti Binomiali](https://ph04.github.io/algebra/html/coefficienti-binomiali.html)
+- [Coefficienti binomiali](https://ph04.github.io/algebra/html/coefficienti-binomiali.html)
 - [Gruppi diedrali](https://ph04.github.io/algebra/html/gruppi-diedrali.html)
 - [Gruppi e Anelli](https://ph04.github.io/algebra/html/gruppi-e-anelli.html)
     - Gruppi
