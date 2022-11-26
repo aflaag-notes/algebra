@@ -6,7 +6,6 @@ Se invece siete qui per la lista di teoremi, ecco [il link](https://raw.githubus
 
 ## TODO list
 
-- fixare le definizioni negli html
 - quando non va a capo mi tilta
     - alternativamente, trovare un modo per far prendere a pandoc tutta la pagina di default
 
