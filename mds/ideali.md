@@ -144,11 +144,9 @@
         - preso ad esempio $a_1$, è possibile riscriverlo come $a_1 = a_1 \cdot 1 + a_2 \cdot 0 + \ldots + a_n \cdot 0$, di conseguenza $a_1 \in I(a_1, \ldots, a_n)$, dunque $d \mid a_1$
         - vale il ragionamento analogo per ogni $a_1, \ldots , a_n$, dunque $d \mid a_1, \ldots, a_n$
     - $d$ è il _massimo tra i divisori comuni_
-        - ⚠️ **QUI MANCA QUALCOSA ✅**
-        - $d$ è il massimo tra i divisori comuni quando $e \mid a_1, \ldots, a_n \implies e \mid d$
-        - sia $e$ l'elemento neutro, allora sicuramente $e \mid a_1 \ldots, a_n$
-        - in generale $\forall i \in [1, n] \quad e \mid a_i \implies \exists x_i \in \mathbb{Z} \mid ex_i = a_i$
-        - $d \in I(d) = I(a_1, \ldots, a_n) \iff d \in I(a_1, \ldots, a_n) \implies \exists b_1, \ldots b_n \in \mathbb{Z} \mid d = a_1 b_1 + \ldots + a_n b_n$, e per osservazione precedente si ottiene che $d = ex_1b_1 + \ldots + ex_nb_n = e(b_1x_1 + \ldots + b_nx_n) \implies e \mid d$
+        - $d$ è il massimo tra i divisori comuni quando $\forall k \in \mathbb{Z} \mid a_1, \ldots, a_n \quad  k \mid d$
+        - in generale $\forall i \in [1, n] \quad k \mid a_i \implies \exists x_i \in \mathbb{Z} \mid kx_i = a_i$
+        - $d \in I(d) = I(a_1, \ldots, a_n) \iff d \in I(a_1, \ldots, a_n) \implies \exists b_1, \ldots b_n \in \mathbb{Z} \mid d = a_1 b_1 + \ldots + a_n b_n$, e per osservazione precedente si ottiene che $d = kx_1b_1 + \ldots + kx_nb_n = k(b_1x_1 + \ldots + b_nx_n) \implies k \mid d$
 
 
 ## Def

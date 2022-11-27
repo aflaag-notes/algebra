@@ -101,7 +101,7 @@
   - $\left\{\begin{array}{c}x \equiv x^{\prime}\ \left(\bmod \ a_{1}\right) \\ \vdots \\ x \equiv x^{\prime}\ \left(\bmod \ a_{n}\right)\end{array}\right. \iff \left\{\begin{array}{c}x^{\prime}-x \in I\left(a_{1}\right) \\ \vdots \\ x^{\prime}-x \in I\left(a_{n}\right)\end{array}\right. \iff x - x^\prime \in I(a_1) \cap \ldots \cap I(a_n) = I(m)$, e per definizione $x - x^\prime \in I(m) \implies x \equiv x^\prime \ (\bmod \ m)$
   - poiché tale osservazione è valida in entrambe i versi dell'implicazione, $\phi$ risulta essere iniettiva
 
-## Teorema
+## Teorema cinese dei resti
 
 - **Hp**
   - $n \in \mathbb{N}$
@@ -117,9 +117,9 @@
     - $\mathbb{Z}_n := \{[0],[1], \cdots,[n-1]\} \implies \left|\mathbb{Z}_{n}\right|=n$, quindi $\left|\mathbb{Z}_{a_{1}}\right| \cdot\ldots\cdot\left|\mathbb{Z}_{a_{n}}\right|  = a_1 \cdot \ldots \cdot a_n = m = \left| \mathbb{Z}_m \right|$ per ragionamento analogo
   - $|X|=|Y|<\infty \implies f: X \rightarrow Y$ iniettiva $\iff$ $f$ suriettiva
     - applicando questa osservazione, $\phi$ iniettiva $\implies \phi$ suriettiva, in quanto, per l'osservazione precedente, insieme di partenza e di arrivo di $\phi$ hanno la stessa cardinalità $\left| \mathbb{Z}_m \right|$
-  - $\phi$ _suriettiva_ $\implies$ $\exists x \mid x \ (\bmod m)$ è soluzione del sistema
+  - $\phi$ suriettiva $\implies$ $\exists x \mid x \ (\bmod m)$ è soluzione del sistema
     - $\varphi(x \ (\bmod m))=\left(b_{1}\ \left( \bmod  a_{1}\right), \ldots, b_{n} \ (\bmod a_{n})\right)$, e poiché $\phi$ è suriettiva, allora ogni tupla di $n$ elementi dell'insieme di arrivo, che descrive un sistema come in ipotesi, ha una controimmagine $x \ (\bmod m)$, e $x \ (\bmod m)\in \mathbb{Z}_m$ per definizione, dunque _esiste sempre una soluzione_
-  - $\phi$ _iniettiva_ $\implies$ $\exists ! x \mid x \ (\bmod m)$ è soluzione del sistema
+  - $\phi$ iniettiva $\implies$ $\exists ! x \mid x \ (\bmod m)$ è soluzione del sistema
     - poiché $\phi$ è iniettiva, $x \ (\bmod m) \in \mathbb{Z}_m$ è unica, dunque _la soluzione è sempre unica_
 
 ## Cor
@@ -145,7 +145,7 @@
 
 ****
 
-# Teorema del binomio di newton
+# Teorema del binomio di Newton
 
 - **Hp**
   - $A$ anello commutativo
@@ -227,25 +227,25 @@
 # Teorema fondamentale di isomorfismo
 
 - **Hp**
-  - $A, B$ anelli
-  - $f: A \rightarrow B$ morfismo di anelli
+    - $A, B$ anelli
+    - $f: A \rightarrow B$ morfismo di anelli
 - **Th**
-  - $A / \textrm{ker}(f) \cong \textrm{im}(f)$, ovvero $\exists \varphi \mid \varphi : A / \textrm{ker}(f) \rightarrow \textrm{Im}(f): [a] \rightarrow f(a)$ isomorfismo di anelli
+    - $A / \textrm{ker}(f) \cong \textrm{im}(f)$, ovvero $\exists \varphi \mid \varphi : A / \textrm{ker}(f) \rightarrow \textrm{Im}(f): [a] \rightarrow f(a)$ isomorfismo di anelli
 - **Dim**
-  - $\varphi$ è ben definita
+    - $\varphi$ è ben definita
     - $\varphi$ è ben definita $\iff [x] = [y] \implies f(x) = f(y) \quad \forall x, y \in A$
     - $[x] = [y] \iff x \equiv y \ (\bmod \ \textrm{ker}(f)) \implies y - x \in \textrm{ker}(f) \implies f(y - x) = 0_B$ per definizione
     - $f(y - x) = f(y + (-x))$, e $-x \in A$ perche $A$ è un anello
     - per dimostrazione precedente $f$ morfismo $\implies f(x^{-1}) = f(x)^{-1}$, e dunque rispetto a $+$ in $A$ si ottiene che $\forall x \in A \quad f(-x) = -f(x)$
     - dunque, $f(y-x) = f(y)-f(x) \iff 0_B = f(y) - f(x) \iff f(y) = f(x)$
-  - $\varphi$ morfismo di anelli
+    - $\varphi$ morfismo di anelli
     - $\varphi$ morfismo di anelli $\iff \varphi([a]) \cdot \varphi([b]) = \varphi([a]\cdot [b])$ e $\varphi([a]) + \varphi([b]) = \varphi([a]+ [b])$
       - $\varphi([a]) \cdot \varphi([b]) = f(a) \cdot f(b)$ per definizione di $\varphi$
       - $f(a) \cdot f(b) = f(a\cdot b)$ per morfismo di $f$
       - $f(a \cdot b ) = \varphi([a \cdot b])$ per definizione di $\varphi$
       - $\varphi([a \cdot b]) = \varphi([a] \cdot [b])$ per definizione di $\cdot$
       - per $+$ vale il ragionamento analogo
-  - $\varphi$ isomorfismo di anelli $\iff \varphi$ iniettiva e suriettiva
+    - $\varphi$ isomorfismo di anelli $\iff \varphi$ iniettiva e suriettiva
     - $\varphi$ iniettiva
       - $\varphi$ iniettiva $\iff \textrm{ker}(\varphi)=\{[0_A]\}$ per dimostrazione precedente
       - $x \in \textrm{ker}(f) \iff x - 0_A \in \textrm{ker}(f) \implies x \equiv 0_A \ (\bmod \ \textrm{ker}(f)) \implies [x] = [0_A] \implies \varphi([x]) = \varphi([0_A])$, poiché $\varphi$ è ben definita, dunque $f(x) = 0_B$

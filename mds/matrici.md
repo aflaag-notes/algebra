@@ -9,6 +9,7 @@
 > - $\textrm{Mat}_{m \times n}(\mathbb{K})$ è l'**insieme delle matrici aventi $m$ righe e $n$ colonne a coefficienti in $\mathbb{K}$**
 
 - **Vettori riga e vettori colonna**
+
 > - $\mathbb{K}$ campo
 > - $m, n \in \mathbb{N} - \{0\}$
 > - $\forall A \in \textrm{Mat}_{1 \times n}(\mathbb{K}) \quad A = \left(x_1, \ldots, x_n\right)$ è detto **vettore riga**

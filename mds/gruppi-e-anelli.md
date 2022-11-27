@@ -98,8 +98,8 @@
 
 ## Def
 
-
 - **Invertibili**
+
 > - $(A, +, \cdot)$ anello commutativo
 > - $a \in A$ **invertibile** $\iff \exists a^{-1} \in A \mid a \cdot a^{-1}=e$, dove $e$ è l'elemento neutro dell'anello rispetto a $\cdot$
 > - $A^* := \{a \in A \mid a$ invertibile$\}$ è l'**insieme degli invertibili di $A$**

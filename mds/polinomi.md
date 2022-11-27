@@ -127,7 +127,7 @@
     - $|\{c \in \mathbb{K} \mid p(c) = 0\}| \le n$
 - **Dim**
     - ipotizzando $N :=|\{c \in \mathbb{K} \mid p(c) = 0\}| \gt n \implies \{c_1, \ldots, c_N\}$ sia l'insieme delle radici
-    - per dimostrazione precedente $\left.\begin{array}{c} x - c_1 \mid p(x) \\ \vdots \\ x-c_N \mid p(x) \end{array}\right\} \implies (x - c_1) \cdot \ldots \cdot (x - c_N) \mid p(x)$
+    - allora, per dimostrazione precedente, si ottiene il seguente sistema $\left.\begin{array}{c} x - c_1 \mid p(x) \\ \vdots \\ x-c_N \mid p(x) \end{array}\right\}$, dal quale si ottiene che $(x - c_1) \cdot \ldots \cdot (x - c_N) \mid p(x)$
         - ⚠️  **MANCA LA DIMOSTRAZIONE DI QUESTO PASSAGGIO ✅**
     - ma $\deg\left((x - c_1) \cdot \ldots \cdot (x - c_N)\right) = N$, mentre $\deg(p(x)) = n$, dove $N \gt n \ \bot$
 

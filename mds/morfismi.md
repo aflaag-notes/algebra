@@ -140,15 +140,15 @@ $f([x \cdot y])=f([x]) \cdot f([y])$
 
 > - $G, H$ gruppi
 > - $f: G \rightarrow H$ morfismo
-> - $\textrm{ker}(f):=\{g \in G \mid f(g) = 1_H\}$
-> - $\textrm{im}(f):=\{h \in H \mid \exists g \in G : f(g) = h\}$
+> - $\textrm{ker}(f):=\{g \in G \mid f(g) = 1_H\}$ è detto **kernel/nucleo di $f$**
+> - $\textrm{im}(f):=\{h \in H \mid \exists g \in G : f(g) = h\}$ è detta **immagine di $f$**
 
 - **Kernel e immagine di anelli**
 
 > - $A, B$ gruppi
 > - $f: A \rightarrow B$ morfismo
-> - $\textrm{ker}(f):=\{a \in A \mid f(a)= 0_B\}$
-> - $\textrm{im}(f):=\{b \in B \mid \exists a \in A : f(a) = b\}$
+> - $\textrm{ker}(f):=\{a \in A \mid f(a)= 0_B\}$ è detto **kernel/nucleo di $f$**
+> - $\textrm{im}(f):=\{b \in B \mid \exists a \in A : f(a) = b\}$ è detto **immagine di $f$**
 
 ## Oss
 
