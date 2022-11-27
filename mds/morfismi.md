@@ -141,14 +141,14 @@ $f([x \cdot y])=f([x]) \cdot f([y])$
 > - $G, H$ gruppi
 > - $f: G \rightarrow H$ morfismo
 > - $\textrm{ker}(f):=\{g \in G \mid f(g) = 1_H\}$
-> - $\textrm{Im}(f):=\{h \in H \mid \exists g \in G : f(g) = h\}$
+> - $\textrm{im}(f):=\{h \in H \mid \exists g \in G : f(g) = h\}$
 
 - **Kernel e immagine di anelli**
 
 > - $A, B$ gruppi
 > - $f: A \rightarrow B$ morfismo
 > - $\textrm{ker}(f):=\{a \in A \mid f(a)= 0_B\}$
-> - $\textrm{Im}(f):=\{b \in B \mid \exists a \in A : f(a) = b\}$
+> - $\textrm{im}(f):=\{b \in B \mid \exists a \in A : f(a) = b\}$
 
 ## Oss
 
@@ -168,11 +168,11 @@ $f([x \cdot y])=f([x]) \cdot f([y])$
   - $G, H$ gruppi
   - $f: G \rightarrow H$ morfismo
 - **Th**
-  - $\textrm{Im}(f) \subset G$ è sottogruppo
+  - $\textrm{im}(f) \subset G$ è sottogruppo
 - **Dim**
-  - per dimostrazione precedente $f(1_G)= 1_H \implies 1_H \in \textrm{Im}(f)$ per definizione
-  - $x, y \in \textrm{Im}(f) \implies \exists g, g^\prime \in G \mid x = f(g) \land y = f(g^\prime) \implies x \cdot y = f(g) \cdot f(g^\prime) = f(g\cdot g^\prime)$ perché $f$ morfismo, quindi $x \cdot y \in \textrm{Im}(f)$ per definizione
-  - $x \in \textrm{Im}(f) \implies \exists g \in G \mid f(g) = x \implies x^{-1} = f(g)^{-1} = f(g^{-1})$ per dimostrazione precedente, quindi $x ^{-1} \in \textrm{Im}(f)$ per definizione
+  - per dimostrazione precedente $f(1_G)= 1_H \implies 1_H \in \textrm{im}(f)$ per definizione
+  - $x, y \in \textrm{im}(f) \implies \exists g, g^\prime \in G \mid x = f(g) \land y = f(g^\prime) \implies x \cdot y = f(g) \cdot f(g^\prime) = f(g\cdot g^\prime)$ perché $f$ morfismo, quindi $x \cdot y \in \textrm{Im}(f)$ per definizione
+  - $x \in \textrm{im}(f) \implies \exists g \in G \mid f(g) = x \implies x^{-1} = f(g)^{-1} = f(g^{-1})$ per dimostrazione precedente, quindi $x ^{-1} \in \textrm{Im}(f)$ per definizione
  
 ## Oss
 
@@ -207,10 +207,10 @@ $f([x \cdot y])=f([x]) \cdot f([y])$
   - $A, B$ anelli
   - $f: A \rightarrow B$ morfismo di anelli
 - **Th**
-  - $\textrm{Im}(f)$ sottoanello
+  - $\textrm{im}(f)$ sottoanello
 - **Dim**
-  - $(\textrm{Im}(f), +) \subset (A, +)$ sottogruppo per dimostrazione precedente
-  - $x, y \in \textrm{Im}(f) \implies \exists a, a^\prime \mid x = f(a) \land y = f(a^\prime) \implies x \cdot y = f(a) \cdot f(a^\prime) = f(a\cdot a^\prime)$ perche $f$ morfismo, quindi $\exists a \cdot a^\prime \mid x \cdot y = f(a \cdot a^\prime) \implies x\cdot y \in \textrm{Im}(f) \implies \textrm{Im}(f) \cdot \textrm{Im}(f) \subset \textrm{Im}(f)$
+  - $(\textrm{im}(f), +) \subset (A, +)$ sottogruppo per dimostrazione precedente
+  - $x, y \in \textrm{im}(f) \implies \exists a, a^\prime \mid x = f(a) \land y = f(a^\prime) \implies x \cdot y = f(a) \cdot f(a^\prime) = f(a\cdot a^\prime)$ perche $f$ morfismo, quindi $\exists a \cdot a^\prime \mid x \cdot y = f(a \cdot a^\prime) \implies x\cdot y \in \textrm{Im}(f) \implies \textrm{Im}(f) \cdot \textrm{Im}(f) \subset \textrm{Im}(f)$
  
 ## Oss
 
