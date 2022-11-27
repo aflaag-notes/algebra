@@ -135,7 +135,9 @@
     - $n \in \mathbb{N}$
     - $A_n := \{\sigma \in S_n \mid \sigma$ pari$\}$
 - **Th**
-    - $A_n \subset S_n$ è un sottogruppo, detto _gruppo alterno di ordine $n$_
+    - $A_n \subset S_n$ è un sottogruppo normale, detto _gruppo alterno di ordine $n$_
+- **Dim**
+    - ⚠️ **MANCA DIMOSTRAZIONE**
 
 ## Oss
 

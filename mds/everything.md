@@ -1356,9 +1356,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
     - $n \in \mathbb{N}$
     - $A_n := \{\sigma \in S_n \mid \sigma$ pari$\}$
 - **Th**
-    - $A_n \subset S_n$ è un sottogruppo, detto _gruppo alterno di ordine $n$_
-
-
+    - $A_n \subset S_n$ è un sottogruppo normale, detto _gruppo alterno di ordine $n$_
 
 ## Teorema 86
 
@@ -2158,6 +2156,17 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 - **Hp**
+  - $n \in \mathbb{N}$
+  - $a_1, \ldots, a_n \in \mathbb{Z}_{\ge 2} \mid \forall i, j \in [1, n] \quad i \neq j \implies \textrm{MCD}(a_i, a_j) = 1$
+  - $b_1, \ldots, b_n \in \mathbb{Z} \mid 0 \leq b_{1}<a_{1}, \ldots, 0 \leq b_n \lt a_n$
+  - $m := \textrm{mcm}(a_1, \ldots, a_n)$
+- **Th**
+  - $\exists ! x \ (\bmod \ m) \mid$ $\left\{\begin{array}{c}x \equiv b_{1}\ \left(\bmod  \ a_{1}\right) \\ \vdots \\ x \equiv b_{n}\ \left(\bmod  \ a_{n}\right)\end{array}\right.$
+
+## Teorema 138
+
+
+- **Hp**
     - $k \in \mathbb{N}$
     - $n_1, \ldots, n_k \in \mathbb{N} - \{0\} \mid \forall i, j \in [1, k] \quad i \neq j \implies \textrm{MCD}(n_i, n_j) = 1$
     - $N := \textrm{mcm}(n_1, \ldots, n_k)$
@@ -2179,7 +2188,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
   - $(a+b )^n = \displaystyle{\sum_{k = 0}^{n}{\binom{n}{k} a^k b ^{n - k}}}$
 
-## Teorema 138
+## Teorema 139
 
 
 - ⚠️ **NON HO CAPITO UN CAZZO**
@@ -2197,7 +2206,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
   - $a^{p} \equiv a \ (\bmod \ p)$
 
-## Teorema 139
+## Teorema 140
 
 
 - **Hp**
@@ -2206,7 +2215,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
   - $[a]^{-1}=\left[a\right]^{p-2}$
 
-## Teorema 140
+## Teorema 141
 
 
 - **Hp**
@@ -2214,7 +2223,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
     - $\displaystyle \prod_{0 \lt a \lt p} (x - a) \equiv x^{p - 1} - 1 \ (\bmod \ p)$
 
-## Teorema 141
+## Teorema 142
 
 
 - ⚠️ **NON HO CAPITO UN CAZZO**
@@ -2242,7 +2251,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
     - $A / \textrm{ker}(f) \cong \textrm{im}(f)$, ovvero $\exists \varphi \mid \varphi : A / \textrm{ker}(f) \rightarrow \textrm{Im}(f): [a] \rightarrow f(a)$ isomorfismo di anelli
 
-## Teorema 142
+## Teorema 143
 
 
 - **Hp**
@@ -2264,7 +2273,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
   - $\exists g \in G \mid o(g) = p$
 
 
-## Teorema 143
+## Teorema 144
 
 
 - **Hp**
