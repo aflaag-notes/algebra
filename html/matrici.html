@@ -198,32 +198,38 @@ class="math inline">\(\mathbb{K}\)</span></strong></li>
 n}(\mathbb{K}) \quad A = \left(x_1, \ldots, x_n\right)\)</span> è detto
 <strong>vettore riga</strong></li>
 <li><span class="math inline">\(\forall A \in \textrm{Mat}_{m \times
-1}(\mathbb{K}) \quad A = \left(\begin{array}{c} x_1 \\ \vdots \\ x_m
+1}(\mathbb{K}) \quad A = \left(\begin{array}{ccc} x_1 \\ \vdots \\ x_m
 \end{array}\right)\)</span> è detto <strong>vettore
 colonna</strong></li>
 <li><span class="math inline">\(\forall A \in \textrm{Mat}_{m \times
 n}(\mathbb{K}) \quad \exists A^1, \ldots, A^n \in \mathbb{K}^m\)</span>
 vettori colonna e <span class="math inline">\(A_1, \ldots, A_m \in
 \mathbb{K}^n\)</span> vettori riga <span class="math inline">\(\mid A =
-\left(A^1, \ldots, A^n \right) = \left(\begin{array}{c} A_1 \\ \vdots \\
-A_m\end{array}\right)\)</span></li>
+\left(A^1, \ldots, A^n \right) = \left(\begin{array}{ccc} A_1 \\ \vdots
+\\ A_m\end{array}\right)\)</span></li>
 </ul>
 </blockquote>
 <h2 id="def-1">Def</h2>
 <ul>
-<li><strong>Prodotto scalare</strong></li>
+<li><strong>Somma tra matrici</strong></li>
 </ul>
 <blockquote>
 <ul>
 <li><span class="math inline">\(\mathbb{K}\)</span> campo</li>
 <li><span class="math inline">\(m, n \in \mathbb{N} -
 \{0\}\)</span></li>
-<li><span class="math inline">\(A \in \textrm{Mat}_{1 \times
-n}(\mathbb{K})\)</span></li>
-<li><span class="math inline">\(B \in \textrm{Mat}_{m \times
-1}(\mathbb{K})\)</span></li>
-<li><span class="math inline">\(A \cdot B := \displaystyle \sum_{i =
-1}^n{a_i \cdot b_i}\)</span></li>
+<li><span class="math inline">\(\forall i \in [1, m], j \in [1, n] \quad
+a_{i, j}, b_{i, j} \in \mathbb{K}\)</span></li>
+<li><span class="math inline">\(A, B \in \textrm{Mat}_{m \times
+n}(\mathbb{K}) \mid A = \left(\begin{array}{ccc} \ddots &amp; &amp; \\
+&amp; a_{i, j} &amp; \\ &amp; &amp; \ddots \end{array}\right) \land B =
+\left(\begin{array}{ccc}\ddots &amp; &amp; \\ &amp; b_{i, j} &amp; \\
+&amp; &amp; \ddots\end{array}\right)\)</span></li>
+<li><span class="math inline">\(A + B = \left(\begin{array}{ccc}\ddots
+&amp; &amp; \\ &amp; a_{i, j} + b_{i, j} &amp; \\ &amp; &amp;
+\ddots\end{array}\right)\)</span> è la <strong>somma tra <span
+class="math inline">\(A\)</span> e <span
+class="math inline">\(B\)</span></strong></li>
 </ul>
 </blockquote>
 <h2 id="oss">Oss</h2>
@@ -244,9 +250,167 @@ n}(\mathbb{K})\)</span> è uno spazio vettoriale</li>
 <li><strong>⚠️ DA FINIRE</strong></li>
 </ul></li>
 </ul>
+<h2 id="def-2">Def</h2>
+<ul>
+<li><strong>Prodotto scalare</strong></li>
+</ul>
+<blockquote>
+<ul>
+<li><span class="math inline">\(\mathbb{K}\)</span> campo</li>
+<li><span class="math inline">\(m, n \in \mathbb{N} -
+\{0\}\)</span></li>
+<li><span class="math inline">\(A \in \textrm{Mat}_{1 \times
+n}(\mathbb{K})\)</span></li>
+<li><span class="math inline">\(B \in \textrm{Mat}_{m \times
+1}(\mathbb{K})\)</span></li>
+<li><span class="math inline">\(A \cdot B := \displaystyle \sum_{i =
+1}^n{a_i \cdot b_i}\)</span> è il <strong>prodotto scalare tra <span
+class="math inline">\(A\)</span> e <span
+class="math inline">\(B\)</span></strong></li>
+</ul>
+</blockquote>
 <h2 id="oss-1">Oss</h2>
 <ul>
 <li><strong>⚠️ WIP</strong></li>
+</ul>
+<h2 id="def-3">Def</h2>
+<ul>
+<li><strong>Prodotto tra matrici</strong></li>
+</ul>
+<blockquote>
+<ul>
+<li><strong>⚠️ WIP</strong></li>
+</ul>
+</blockquote>
+<h2 id="oss-2">Oss</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\(\mathbb{K}\)</span> campo</li>
+<li><span class="math inline">\(\lambda \in \mathbb{K}\)</span></li>
+<li><span class="math inline">\(l, m, n \in \mathbb{N} -
+\{0\}\)</span></li>
+<li><span class="math inline">\(A \in \textrm{Mat}_{l \times
+m}(\mathbb{K})\)</span></li>
+<li><span class="math inline">\(B \in \textrm{Mat}_{m \times
+n}(\mathbb{K})\)</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\((AB)C = A(BC)\)</span></li>
+<li><span class="math inline">\(A(B+C) = AB+AC\)</span></li>
+<li><span class="math inline">\((A+B)C = AC+BC\)</span></li>
+<li><span class="math inline">\(\lambda(AB) = (\lambda A)B = A (\lambda
+B)\)</span></li>
+</ul></li>
+</ul>
+<h2 id="oss-3">Oss</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\(\mathbb{K}\)</span> campo</li>
+<li><span class="math inline">\(\lambda \in \mathbb{K}\)</span></li>
+<li><span class="math inline">\(n \in \mathbb{N} - \{0\}\)</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\((\textrm{Mat}_{n \times n}(\mathbb{K}),
++, \cdot)\)</span> è un anello</li>
+</ul></li>
+<li><strong>Dim</strong>
+<ul>
+<li><strong>⚠️ TODO</strong></li>
+</ul></li>
+</ul>
+<h2 id="def-4">Def</h2>
+<ul>
+<li><strong>Sottospazio ortogonale</strong></li>
+</ul>
+<blockquote>
+<ul>
+<li><span class="math inline">\(\mathbb{K}\)</span> campo</li>
+<li><span class="math inline">\(n \in \mathbb{N} - \{0\}\)</span></li>
+<li><span class="math inline">\(V \subset \mathbb{K}^n\)</span>
+sottospazio vettoriale</li>
+<li><span class="math inline">\(V^{\perp} := \{w \in \mathbb{K}^n \mid
+\forall v \in V \quad w \cdot v = 0\}\)</span> è detto
+<strong>sottospazio ortogonale di <span
+class="math inline">\(V\)</span></strong></li>
+</ul>
+</blockquote>
+<h2 id="oss-4">Oss</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\(\mathbb{K}\)</span> campo</li>
+<li><span class="math inline">\(n \in \mathbb{N} - \{0\}\)</span></li>
+<li><span class="math inline">\(V \subset \mathbb{K}^n\)</span>
+sottospazio vettoriale</li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\(V^{\bot}\)</span> è sottospazio
+vettoriale di <span class="math inline">\(\mathbb{K}^n\)</span></li>
+</ul></li>
+<li><strong>Dim</strong>
+<ul>
+<li><strong>⚠️ TODO</strong></li>
+</ul></li>
+</ul>
+<h2 id="def-5">Def</h2>
+<ul>
+<li><strong>Moltiplicazione sinistra</strong></li>
+</ul>
+<blockquote>
+<ul>
+<li><span class="math inline">\(\mathbb{K}\)</span> campo</li>
+<li><span class="math inline">\(m,n \in \mathbb{N} - \{0\}\)</span></li>
+<li><span class="math inline">\(x \in \textrm{Mat}_{n \times
+1}(\mathbb{K})\)</span></li>
+<li><span class="math inline">\(\forall A \in \textrm{Mat}_{m \times
+n}(\mathbb{K}) \quad L_A:\mathbb{K}^n \rightarrow \mathbb{K}^m: x
+\rightarrow A\cdot x\)</span></li>
+</ul>
+</blockquote>
+<h2 id="oss-5">Oss</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\(\mathbb{K}\)</span> campo</li>
+<li><span class="math inline">\(m,n \in \mathbb{N} - \{0\}\)</span></li>
+<li><span class="math inline">\(x \in \textrm{Mat}_{n \times
+1}(\mathbb{K})\)</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\(\forall A \in \textrm{Mat}_{m \times
+n}(\mathbb{K}) \quad L_A\)</span> è una trasformazione lineare</li>
+</ul></li>
+<li><strong>Dim</strong>
+<ul>
+<li><strong>⚠️ TODO</strong></li>
+</ul></li>
+</ul>
+<h2 id="oss-6">Oss</h2>
+<ul>
+<li><strong>Rango di una matrice</strong></li>
+</ul>
+<blockquote>
+<ul>
+<li><span class="math inline">\(\mathbb{K}\)</span> campo</li>
+<li><span class="math inline">\(m,n \in \mathbb{N} - \{0\}\)</span></li>
+<li><span class="math inline">\(A \in \textrm{Mat}_{m \times
+n}(\mathbb{K})\)</span></li>
+<li><span class="math inline">\(x \in \textrm{Mat}_{n \times
+1}(\mathbb{K})\)</span></li>
+<li><span
+class="math inline">\(\textrm{rk}(A):=\textrm{rk}(L_A)\)</span> è il
+<strong>rango di <span class="math inline">\(A\)</span></strong></li>
+</ul>
+</blockquote>
+<h2 id="oss-7">Oss</h2>
+<ul>
+<li><strong>Hp</strong></li>
 </ul>
 </body>
 </html>
