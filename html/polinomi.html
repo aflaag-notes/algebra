@@ -385,7 +385,8 @@ identificano con un singolo coefficiente</li>
 </ul></li>
 <li><strong>Th</strong>
 <ul>
-<li><span class="math inline">\mathbb{K}[x]</span> è un dominio</li>
+<li><span class="math inline">\mathbb{K}[x]</span> è un dominio di
+integrità</li>
 </ul></li>
 <li><strong>Dim</strong>
 <ul>
@@ -459,15 +460,27 @@ n</span></li>
 <li>ipotizzando <span class="math inline">N :=|\{c \in \mathbb{K} \mid
 p(c) = 0\}| \gt n \implies \{c_1, \ldots, c_N\}</span> sia l’insieme
 delle radici</li>
-<li>allora, per dimostrazione precedente, si ottiene il seguente sistema
-<span class="math inline">\left.\begin{array}{c} x - c_1 \mid p(x) \\
-\vdots \\ x-c_N \mid p(x) \end{array}\right\}</span>, dal quale si
-ottiene che <span class="math inline">(x - c_1) \cdot \ldots \cdot (x -
-c_N) \mid p(x)</span>
-<ul>
-<li>⚠️ <strong>MANCA LA DIMOSTRAZIONE DI QUESTO PASSAGGIO
-✅</strong></li>
-</ul></li>
+<li>per dimostrazione precedente <span class="math inline">x - c_1 \mid
+p(x) \iff \exists q_1(x) \in \mathbb{K}[x] \mid
+q_1(x)(x-c_1)=p(x)</span></li>
+<li>per ipotesi <span class="math inline">p(c_2) = 0</span>, allora
+<span class="math inline">p(c_2) = q_1(c_2)(c_2 - c_1) = 0</span></li>
+<li>per assurdo <span class="math inline">\exists i, j \in [1, N] ,i
+\neq j \mid c_i = c_j \implies |\{c \in \mathbb{K} \mid p(c) = 0 \}| \lt
+N \implies</span> le soluzioni sono necessariemente tutte distinte, e in
+particolare <span class="math inline">c_2 \neq c_1 \iff c_2 - c_1 \neq
+0</span></li>
+<li>per dimostrazione <span class="math inline">\mathbb{K}[x]</span> è
+un dominio di integrità, allora <span class="math inline">q_1(c_2 - c_1)
+= 0 \land c_2 - c_1 \neq 0 \implies q_1(c_2) = 0</span></li>
+<li>per dimostrazione precedente <span class="math inline">q_1(c_2) = 0
+\iff x- c_2 \mid q_1(x) \implies \exists q_2(x) \in \mathbb{K}[x] \mid
+q_2(x) (x-c_2) = q_1(x)</span>, che sostituendo implica che <span
+class="math inline">p(x) = q_2(x)(x-c_2)(x-c_1)</span></li>
+<li>applicando il ragionamento analogo ad ogni soluzione, si ha che
+<span class="math inline">\exists q_n(x) \in \mathbb{K}[x] \mid q_n(x)
+(x-c_1) \cdot \ldots \cdot(x-c_N) = p(x) \implies (x-c_1) \cdot \ldots
+\cdot (x-c_N) \mid p(x)</span></li>
 <li>ma <span class="math inline">\deg\left((x - c_1) \cdot \ldots \cdot
 (x - c_N)\right) = N</span>, mentre <span class="math inline">\deg(p(x))
 = n</span>, dove <span class="math inline">N \gt n \ \bot</span></li>
