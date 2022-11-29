@@ -386,3 +386,26 @@
 > - $f: V \rightarrow W$ applicazione lineare
 > - $\textrm{rk}(f) := \dim(\textrm{im}(f))$ è detto **rango di $f$**
 
+****
+
+# Sottospazi affini
+
+## Def
+
+- ⚠️ **TODO**
+
+****
+
+## Oss
+
+- **Hp**
+    - $\mathbb{K}$ campo
+    - $m, n \in \mathbb{N} - \{0\}$
+    - $A \in \textrm{Mat}_{m \times n}(\mathbb{K})$
+    - $b \in \textrm{Mat}_{m \times 1}(\mathbb{K})$
+    - $X := \{x \in \textrm{Mat}_{n \times 1}(\mathbb{K}) \mid A\cdot x = b\}$
+    - $X \neq \varnothing$
+- **Th**
+    - $X$ sottospazio affine di $\mathbb{K}^n$, con dimensione pari a $n - \textrm{rk}(A)$
+- **Dim**
+    - ⚠️ **TODO**
