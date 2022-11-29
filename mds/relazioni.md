@@ -223,6 +223,17 @@
 ## Oss
 
 - **Hp**
+    - $G$ gruppo
+    - $H \subset G$ sottogruppo
+- **Th**
+    - $H = [1] \in G/H$
+- **Dim**
+    - $\forall x \in G \quad 1 \sim x \iff 1^{-1}x \in H \iff x \in H \implies \forall x \in H \quad 1 \sim x$
+
+
+## Oss
+
+- **Hp**
   - $G$ gruppo
   - $H \subset G$ sottogruppo
   - $x \in G$

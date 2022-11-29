@@ -53,12 +53,23 @@
 ## Oss
 
 - **Hp**
+  - $(G, \cdot), (H, \cdot)$ gruppi
   - $f: G \rightarrow H$ isomorfismo
 - **Th**
   - $f ^{-1}: H \rightarrow G$ isomorfismo
 - **Dim**
   - $\forall g \in G, h \in H \quad \exists !f^{-1} \mid \left\{\begin{array}{c}f^{-1}(f(g))=g \\ f\left(f^{-1}(h)\right)=h\end{array}\right.$
   - $\forall h, h^{\prime} \in H \quad f^{-1}\left(h h^{\prime}\right)=f^{-1}(h) \cdot f^{-1}\left(h^{\prime}\right) \iff hh'=f\left(f^{-1}\left(h h^{\prime})\right)=f(f^{-1}(h)\cdot f^{-1}(h^\prime)) = f(f^{-1}(h))\cdot f(f^{-1}(h^\prime))\right. = hh'$, e dunque $f^{-1}$ è un morfismo, e poiché è invertibile è un isomorfismo
+
+## Oss
+
+- **Hp**
+    - $(G, \cdot), (H, \cdot)$ gruppi
+    - $f : G \rightarrow H$ isomorfismo, o equivalentemente $G \cong H$
+- **Th**
+    - $\cong$ è una relazione di equivalenza
+- **Dim**
+    - **⚠️ TODO**
 
 ## Ex
 

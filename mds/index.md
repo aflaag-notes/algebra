@@ -43,5 +43,6 @@
     - Teorema di Eulero
     - Teorema fondamentale di isomorfismo
     - Teorema di Cauchy
+    - Teorema del rango
 - [Tutti i teoremi](https://ph04.github.io/algebra/html/everything.html)
 

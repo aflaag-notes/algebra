@@ -115,7 +115,7 @@
     - $v_1, \ldots, v_n$ linearmente indipendenti $\iff v_1, \ldots, v_{n - 1}$ linearmente indipendenti $\land v_n \notin \textrm{span}(v_1, \ldots, v_{n - 1})$
 - **Dim**
     - _prima implicazione_
-        - è stata omessa dal professore, se stai leggendo questa frase sappi che hai bei piedi
+        - è stata omessa dal professore, se stai leggendo questa frase sappi che hai dei bei piedi
     - _seconda implicazione_
         - ⚠️ **MANCA LA DIMOSTRAZIONE**
 
@@ -167,43 +167,9 @@
 - **Th**
     - $v_1, \ldots, v_n$ base di $V \iff \forall v \in V \quad \exists ! \lambda_1, \ldots, \lambda_n \in \mathbb{K} \mid v = \lambda_1 v_1 + \ldots + \lambda_n v_n$
 - **Dim**
-    - ⚠️ **INCOMPLETA**
+    - ⚠️ **TODO**
     - _prima implicazione_
     - _seconda implicazione_
-
-****
-
-# Applicazioni lineari
-
-## Def
-
-- **Applicazioni lineari**
-
-> - $\mathbb{K}$ campo
-> - $V$ e $W$ spazi vettoriali su $\mathbb{K}$
-> - $f: V \rightarrow W$ **morfismo di spazi vettoriali** $\iff \forall x, y \in V \quad f(x + y) = f(x) + f(y)$ e $\forall v \in V, \lambda \in \mathbb{K} \quad f(\lambda k) = \lambda f(v)$
->     - un morfismo su spazi vettoriali è detto anche **applicazione lineare** o **trasformazione lineare**
-
-## Oss
-
-- **Hp**
-    - $\mathbb{K}$ campo
-    - $V$ spazio vettoriale su $\mathbb{K}$
-    - $n:= \dim(V)$
-- **Th**
-    - $V \cong \mathbb{K}^n$
-- **Dim**
-    - sia $v_1, \ldots, v_n \in V$ una base di $V$
-        - ⚠️ **MANCA LA DIMOSTRAZIONE PER CUI ALMENO UNA BASE ESISTE SEMPRE**
-    - per dimostrare la tesi è necessario dimostrare che $f: \mathbb{K}^n \rightarrow V: (t_1, \ldots, t_n) \rightarrow t_1v_1 + \ldots + t_nv_n$ è un isomorfismo
-    - $f$ morfismo
-        - $\forall \lambda \in\mathbb{K}, x, y \in \mathbb{K}^n \mid x = (x_1, \ldots, x_n) \land y=(y_1, \ldots, y_n)$ si ha che $f(x + y) = (x_1 + y_1)v_1 + \ldots + (x_n + y_n) v_n = (x_1v_1+ \ldots + x_nv_n) + (y_1v_1 + \ldots + y_nv_n) = f(x) + f(y)$, dunque è verificata la prima condizione, e inoltre $f(\lambda x) = \lambda x_1v_1 + \ldots + \lambda x_n v_n = \lambda(x_1v_1 + \ldots + x_n v_n) = \lambda f(x)$, dunque è verificata anche la seconda
-    - $f$ biiettiva
-        - ⚠️ **MANCA LA DIMOSTRAZIONE**
-
-## Oss
-
-- ⚠️ **QUI C'È UN BUCONE**
 
 ## Oss
 
@@ -231,7 +197,7 @@
     - $\exists 1 \le i_1, \ldots, i_n \le m \mid w_{i_1}, \ldots, w_{i_n}$ è una base di $W$
 - **Dim**
     - è possibile assumere che $w_{i_1}$ non sia nullo, poiché $w_1, \ldots, w_m$ sono sicuramente non tutti nulli in quanto generatori di $W$
-    - $w_{i_1} \neq 0 \implies w_{i_1}$ linearmente indipendente, ma non può costituire un generatore poiché sono meno di $n$ vettori $\implies \textrm{span}(w_{i_1}) \subsetneqq W \implies \exists w_{i_2} \notin \textrm{span}(w_{i_1})$, allora per dimostrazione precedente $w_{i_1}, w_{i_2}$ sono linearmente indipendenti
+    - $w_{i_1} \neq 0 \implies w_{i_1}$ linearmente indipendente, ma non può costituire un generatore poiché sono meno di $n$ vettori $\implies \textrm{span}(w_{i_1}) \subsetneqq W \implies \exists w_{i_2} \in W \mid w_{i_2} \notin \textrm{span}(w_{i_1})$, allora per dimostrazione precedente $w_{i_1}, w_{i_2}$ sono linearmente indipendenti
     - è possiible ripetere il ragionamento fino ad ottenere esattamente $n$ vettori, ottenendo $w_{i_1}, \ldots, w_{i_n}$ vettori linearmente indipendenti
 
 ## Oss
@@ -245,7 +211,7 @@
     - $w_1, \ldots, w_n$ linearmente indipendenti $\iff w_1, \ldots, w_n$ generatori di $W$
 - **Dim**
     - _prima implicazione_
-        - per assurdo, siano $w_1, \ldots, w_n$ linearmente indipendenti ma non generatori di $W \implies \textrm{span}(w_1, \ldots, w_n) \subsetneqq W \implies \exists w_{n + 1} \notin \textrm{span}(w_1, \ldots, w_n)$, ma per dimostrazione precedente $w_1, \ldots, w_{n + 1}$ linearmente indipendenti $\bot$
+        - per assurdo, siano $w_1, \ldots, w_n$ linearmente indipendenti ma non generatori di $W \implies \textrm{span}(w_1, \ldots, w_n) \subsetneqq W \implies \exists w_{n + 1} \in W \mid w_{n + 1} \notin \textrm{span}(w_1, \ldots, w_n)$, ma per dimostrazione precedente $w_1, \ldots, w_{n + 1}$ linearmente indipendenti $\bot$
     - _seconda implicazione_
         - per assurdo, siano $w_1, \ldots, w_n$ generatori di $W$ ma non linearmente indipendenti $\implies \exists \lambda_1, \ldots, \lambda_n \mid \lambda_1w_1 + \ldots + \lambda_nw_n = 0_W$ dove $\exists i \in [1, n] \mid \lambda_i \neq 0 \implies w_i = -\lambda_i^{-1} \lambda_1w_1 - \ldots - \lambda_i^{-1} \lambda_nw_n$, dunque $w_i$ è combinazione lineare degli altri vettori, in simboli $w_i \in \textrm{span}(w_1, \ldots, \hat{w_i}, \ldots, w_n) \implies \textrm{span}(w_1, \ldots, w_n) \subseteq \textrm{span}(w_1, \ldots, \hat{w_i}, \ldots, w_n)$
         - per qualsiasi insieme di vettori minore di $n$ si ha che $\textrm{span}(w_1, \ldots, \hat{w_i}, \ldots, w_n) \subseteq \textrm{span}(w_1, \ldots, w_n)$
@@ -282,3 +248,129 @@
     - $B_1 \cup B_2$ generatori di $U + V \implies a + b + c \in U + V$, e poiché $w_1, \ldots, w_k, u_{k + 1}, \ldots, u_m, v_{k + 1}, \ldots, v_n$ sono sia generatori che linearmente indipendenti, allora sono una base di $U + V$
     - per definizione, la dimensione di uno spazio vettoriale è la cardinalità di una delle sue basi, e dunque la cardinalità di $B_1 \cup B_2$ è pari a $k + (m - k) + (n - k) = k + m - k + n - k = m + n - k$
 
+## Oss
+
+- **Hp**
+    - $\mathbb{K}$ campo
+    - $V$ spazio vettoriale su $\mathbb{K}$
+    - $W \subset V$ sottospazio vettoriale
+- **Th**
+    - $V/W$ sottospazio vettoriale
+- **Dim**
+    - ⚠️ **TODO**
+
+## Oss
+
+- **Hp**
+    - $\mathbb{K}$ campo
+    - $V$ spazio vettoriale su $\mathbb{K}$
+    - $W \subset V$ sottospazio vettoriale
+- **Th**
+    - $\dim(V/W) = \dim(V) - \dim(W)$
+- **Dim**
+    - $n := \dim(V)$
+    - $k := \dim(W)$
+    - sia $w_1, \ldots, w_k$ base di $W$
+    - $\dim(V) \gt k$
+        - per dimostrazione precedente $w_1, \ldots, w_k$ non è base di $V$, e in particolare non generano $V \implies \textrm{span}(w_1, \ldots, w_k) \subsetneqq V \implies \exists v_{k + 1} \in V \mid v_{k + 1} \notin \textrm{span}(w_1, \ldots, w_k)$
+        - per dimostrazione precedente $w_1, \ldots w_k$ linearmente indipendenti e $v_{k + 1} \notin \textrm{span}(w_1, \ldots, w_k) \implies w_1, \ldots, w_k, v_{k + 1}$ linearmente indipendenti
+    - $\dim(V) \gt k + 1$
+        - per ragionamento analogo si otterrà che $w_1, \ldots, w_k, v_{k +1}, v_{k +2}$ linearmente indipendenti
+    - dunque, è possibile estendere la base di $W$ scelta, fino ad ottenere una base di $V$ della forma $w_1, \ldots, w_k, v_{k +1}, \ldots, v_n$, dove i vettori aggiunti sono proprio $n - k$, che per definizione equivale a $\dim(V) - \dim(W)$
+    - $\forall v \in \textrm{span}(w_1, \ldots, w_k, v_{k +1}, \ldots, v_n) \quad \exists \lambda_1, \ldots, \lambda_n \mid v = \lambda_1 w_1 + \ldots + \lambda_k w_k + \lambda_{k + 1} v_{k +1} + \ldots + \lambda_nv_{n} \implies [v] = \lambda_1 [w_1] + \ldots + \lambda_n[w_k] + \lambda_{k +1} [v_{k +1 }] + \lambda_n[v_n]$ in $V / W$
+    - per dimostrazione precedente $W = [0_V] \in V/W \implies [v] = \lambda_{k +1}[v_{k +1}] + \ldots + \lambda_n[v_n] \implies [v_{k +1}], \ldots, [v_n]$ generatori di $V/W$
+    - $[v_{k +1}], \ldots, [v_n]$ generatori di $V/W \implies \forall [v] \in V/W \quad \exists \lambda_{k +1}, \ldots, \lambda_n \mid [v] = \lambda_{k +1} [v_1] + \ldots + \lambda_n[v_n]$, allora in particolare $\exists \lambda_{k +1}, \ldots, \lambda_n \mid [0_V] = \lambda_{k +1}[v_{k+ 1}] + \ldots+ \lambda_n[v_n] = [\lambda_{k +1} v_{k+1} + \ldots + \lambda_nv_n]$
+    - per osservazione precedente $W = [0_V] \in V/W, e in particolare $[0_V] \subseteq W \implies \forall v \in [0_V] \quad v \in W$, allora si ha che $[0_V] = [\lambda_{k +1} v_{k+1} + \ldots + \lambda_nv_n] \implies \lambda_{k +1}v_{k +1} + \ldots + \lambda_nv_n \in W$
+    - $u:=\lambda_{k +1}v_{k +1} +\ldots + \lambda_nv_n \in W$
+    - $u \in W \implies \exists \lambda_1, \ldots, \lambda_k \mid u = \lambda_1 w_1 + \ldots + \lambda_k w_k \implies \lambda_1w_1+ \ldots + \lambda_kw_k = \lambda_{k +1} v_{k +1} + \ldots + \lambda_nv_n \iff \lambda_1w_1+ \ldots + \lambda_kw_k - \lambda_{k +1} v_{k +1} - \ldots - \lambda_nv_n = 0_V$
+    - per osservazione precedente $w_1, \ldots, w_k, v_{k +1}, \ldots v_k$ è una base di $V$, allora $\lambda_1= \ldots= \lambda_k= -\lambda_{k +1}= \ldots= -\lambda_{n} = 0_V$, e in particolare $-\lambda{k+1} = \ldots = -\lambda_n = 0_V \implies v_{k +1}, \ldots, v_n$ sono linearmente indipendenti, e dunque $[v_{k +1}], \ldots, [v_n] linearmente indipendenti$
+    - allora $[v_{k +1}], \ldots, [v_n]$ sono una base di $V/W$ di cardinalità $n - k$, il che dimostra che $\dim(V/W) = \dim(V)-\dim(W)$
+
+# Applicazioni lineari
+
+## Def
+
+- **Applicazioni lineari**
+
+> - $\mathbb{K}$ campo
+> - $V$ e $W$ spazi vettoriali su $\mathbb{K}$
+> - $f: V \rightarrow W$ **morfismo di spazi vettoriali** $\iff \forall x, y \in V \quad f(x + y) = f(x) + f(y)$ e $\forall v \in V, \lambda \in \mathbb{K} \quad f(\lambda k) = \lambda f(v)$
+>     - un morfismo su spazi vettoriali è detto anche **applicazione lineare** o **trasformazione lineare**
+
+## Oss
+
+- **Hp**
+    - $\mathbb{K}$ campo
+    - $V$ spazio vettoriale su $\mathbb{K}$
+    - $n:= \dim(V)$
+- **Th**
+    - $V \cong \mathbb{K}^n$
+- **Dim**
+    - sia $v_1, \ldots, v_n \in V$ una base di $V$
+        - ⚠️ **MANCA LA DIMOSTRAZIONE PER CUI ALMENO UNA BASE ESISTE SEMPRE**
+    - per dimostrare la tesi è necessario dimostrare che $f: \mathbb{K}^n \rightarrow V: (t_1, \ldots, t_n) \rightarrow t_1v_1 + \ldots + t_nv_n$ è un isomorfismo
+    - $f$ morfismo
+        - $\forall \lambda \in\mathbb{K}, x, y \in \mathbb{K}^n \mid x = (x_1, \ldots, x_n) \land y=(y_1, \ldots, y_n)$ si ha che $f(x + y) = (x_1 + y_1)v_1 + \ldots + (x_n + y_n) v_n = (x_1v_1+ \ldots + x_nv_n) + (y_1v_1 + \ldots + y_nv_n) = f(x) + f(y)$, dunque è verificata la prima condizione, e inoltre $f(\lambda x) = \lambda x_1v_1 + \ldots + \lambda x_n v_n = \lambda(x_1v_1 + \ldots + x_n v_n) = \lambda f(x)$, dunque è verificata anche la seconda
+    - $f$ biiettiva
+        - ⚠️ **MANCA LA DIMOSTRAZIONE**
+
+## Oss
+
+- ⚠️ **QUI C'È UN BUCO DI COSE CHE NON HO CAPITO**
+
+## Oss
+
+- **Hp**
+    - $\mathbb{K}$ campo
+    - $V, W$ spazi vettoriali su $\mathbb{K}$
+- **Th**
+    - $V \cong W \iff \dim(V) = \dim(W)$
+- **Dim**
+    - _prima implicazione_
+        - $V \cong W \implies \exists f : V \rightarrow W \mid f$ isomorfismo
+        - sia $v_1, \ldots, v_n$ una base di $V$
+        - $f$ isomorfismo, in particolare $f$ biiettiva, e in particolare $f$ suriettiva ed iniettiva
+        - $f$ suriettiva $\iff \forall w \in W \quad \exists v \in V \mid w = f(v)$
+        - $v_1, \ldots, v_n$ base di $V$, e in particolare generatori di $W \implies \forall v \in V \quad \exists \lambda_1, \ldots, \lambda_n \mid v = \lambda_1 v_1 + \ldots + \lambda_n v_n \iff f(v) = f(\lambda_1 v_1 + \ldots + \lambda_n v_n) = f(\lambda_1v_1) + \ldots + f(\lambda_n v_n) = \lambda_1 f(v_1) + \ldots + \lambda_n f(v_n)$ perché $f$ morfismo
+        - $v \in V \implies f(w) \in W$, e inoltre $f(v) = \lambda_1f(v_1) + \ldots + \lambda_nf(v_n) \implies f(v_1), \ldots f(v_n)$ generatori di $W$
+        - per osservazione precedente $f(v_1), \ldots, f(v_n)$ generatori di $W \implies \forall w \in W \quad \exists \lambda_1, \ldots, \lambda_n \mid w = \lambda_1f(v_1) + \ldots + \lambda_nf(v_n)$, e in particolare $\exists \lambda_1, \ldots, \lambda_n \mid 0_W = \lambda_1f(v_1) + \ldots + \lambda_nf(v_n) = f(\lambda_1v_1 + \ldots + \lambda_nv_n)$
+        - $f$ iniettiva, allora $0_W = f(\lambda_1v_1 + \ldots + \lambda_n v_n) \implies 0_V = \lambda_1 v_1 + \ldots + \lambda_nv_n$
+        - $v_1, \ldots, v_n$ linearmente indipendenti di $W \implies 0_V = \lambda_1v_1 + \ldots + \lambda_nv_n \iff \lambda_1 = \ldots = \lambda_n = 0_V$
+        - allora $\exists \lambda_1, \ldots, \lambda_n \mid 0_W = \lambda_1 f(v_1) + \ldots + \lambda_nf(v_n) \implies \lambda_1 = \ldots = \lambda_n = 0_V$ corrisponde alla definizione di indipendenza lineare degli $f(v_1), \ldots, f(v_n)$
+        - allora $f(v_1), \ldots, f(v_n)$ base di $W$, ed ha cardinalità $n$, pari alla cardinalità della base $v_1, \ldots, v_n$ di $V$, dunque per definizione $\dim(V) = \dim(W)$
+    - _seconda implicazione_
+        - $n:=\dim(V) = \dim(W)$
+        - allora, per dimostrazione precedente si ha che $V \cong \mathbb{K}^n \land W \cong \mathbb{K}^n$
+        - poiché $\cong$ è una relazione di equivalenza, allora si ha che $V \cong W$
+
+## Def
+
+- **Kernel e immagine**
+
+> - $\mathbb{K}$ campo
+> - $V, W$ spazi vettoriali su $\mathbb{K}$
+> - $f : V \rightarrow W$ trasformazione lineare
+> - $\ker(f) = \{v \in V \mid f(v) = 0_W\}$
+> - $\textrm{im}(f) = \{w \in W \mid \exists v \in V : w = f(v)\}$
+
+## Oss
+
+- **Hp**
+    - $\mathbb{K}$ campo
+    - $V, W$ spazi vettoriali su $\mathbb{K}$
+    - $f : V \rightarrow W$ trasformazione lineare
+- **Th**
+    - $\ker(f) \subset V$ sottospazio
+- **Dim**
+    - ⚠️ **TODO**
+
+## Oss
+
+- **Hp**
+    - $\mathbb{K}$ campo
+    - $V, W$ spazi vettoriali su $\mathbb{K}$
+    - $f : V \rightarrow W$ trasformazione lineare
+- **Th**
+    - $\textrm{im}(f) \subset W$ sottospazio
+- **Dim**
+    - ⚠️ **TODO**

@@ -230,7 +230,7 @@
     - $A, B$ anelli
     - $f: A \rightarrow B$ morfismo di anelli
 - **Th**
-    - $A / \textrm{ker}(f) \cong \textrm{im}(f)$, ovvero $\exists \varphi \mid \varphi : A / \textrm{ker}(f) \rightarrow \textrm{Im}(f): [a] \rightarrow f(a)$ isomorfismo di anelli
+    - $A / \textrm{ker}(f) \cong \textrm{im}(f)$, ovvero $\exists \varphi \mid \varphi : A / \textrm{ker}(f) \rightarrow \textrm{im}(f): [a] \rightarrow f(a)$ isomorfismo di anelli
 - **Dim**
     - $\varphi$ è ben definita
     - $\varphi$ è ben definita $\iff [x] = [y] \implies f(x) = f(y) \quad \forall x, y \in A$
@@ -258,9 +258,20 @@
   - $G, H$ gruppi
   - $f: G \rightarrow H$ morfismo di gruppi
 - **Th**
-  - $G / \textrm{ker}(f) \cong \textrm{im}(f)$, o alternativamente $\exists \varphi \mid \varphi : G / \textrm{ker}(f) \rightarrow \textrm{Im}(f): [g] \rightarrow f(g)$ isomorfismo di gruppi
+  - $G / \textrm{ker}(f) \cong \textrm{im}(f)$, o alternativamente $\exists \varphi \mid \varphi : G / \textrm{ker}(f) \rightarrow \textrm{im}(f): [g] \rightarrow f(g)$ isomorfismo di gruppi
 - **Dim**
   - la dimostrazione è analoga al caso degli anelli
+
+## Oss
+
+- **Hp
+    - $\mathbb{K}$ campo
+    - $V, W$ spazi vettoriali su $\mathbb{K}$
+    - $f:V \rightarrow W$ trasformazione lineare
+- **Th**
+    - $V/\ker(f) \cong \textrm{im}(f)$, o alternativamente $\exists \varphi \mid \varphi : V/\ker(f) \rightarrow \textrm{im}(f):[v] \rightarrow f(v)$
+- **Dim**
+    - la dimostrazione è analoga al caso degli anelli
 
 ****
 
@@ -298,3 +309,18 @@
           - il ragionamento è analogo per tutti gli altri prodotti
       - quindi $G \cong K_4$ **⚠️ PERCHÉ? non mancano altre cose?**
 
+****
+
+# Teorema del rango
+
+- **Hp**
+    - $\mathbb{K}$ campo
+    - $V, W$ spazi vettoriali su $\mathbb{K}$
+    - $f:V \rightarrow W$ trasformazione lineare
+- **Th**
+    - $\textrm{rk}(f) = \dim(V) - \dim(\ker(f))$
+- **Dim**
+    - per dimostrazione precedente di ha che $\ker(f) \subset V$ sottospazio vettoriale
+    - allora, per dimostrazione precedente si ottiene che $\dim(V/\ker(f)) = \dim(V) - \dim(\ker(f))$
+    - per il teorema di isomorfismo tra spazi vettoriali, si ha che $V/\ker(f) \cong \textrm{im}(f)$, e per dimostrazione precedente questo implica che $\dim(V/\ker(f)) = \dim(\textrm{im}(f))$
+    - allora, segue che $\textrm{rk}(f) := \dim(\textrm{im}(f)) = \dim(V) - \dim(\ker(f))$
