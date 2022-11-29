@@ -158,9 +158,24 @@
       vertical-align: middle;
     }
   </style>
-  <script
-  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js"
-  type="text/javascript"></script>
+  <script defer=""
+  src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js"></script>
+  <script>document.addEventListener("DOMContentLoaded", function () {
+ var mathElements = document.getElementsByClassName("math");
+ var macros = [];
+ for (var i = 0; i < mathElements.length; i++) {
+  var texText = mathElements[i].firstChild;
+  if (mathElements[i].tagName == "SPAN") {
+   katex.render(texText.data, mathElements[i], {
+    displayMode: mathElements[i].classList.contains('display'),
+    throwOnError: false,
+    macros: macros,
+    fleqn: false
+   });
+}}});
+  </script>
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css" />
   <!--[if lt IE 9]>
     <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
   <![endif]-->
@@ -176,151 +191,143 @@
 </ul>
 <blockquote>
 <ul>
-<li><span class="math inline">\(G\)</span> gruppo</li>
-<li><span class="math inline">\(\sim\)</span> relazione di equivalenza
-in <span class="math inline">\(G\)</span></li>
-<li><span class="math inline">\(\forall x \in G \quad [x]:=\{y \in G
-\mid x \sim y\}\)</span></li>
-<li><span class="math inline">\(G/\sim := \{[x] \mid x \in G\}\)</span>
-è l’<strong>insieme quoziente</strong>, ovvero l’insieme delle classi di
-equivalenza determinate da <span
-class="math inline">\(\sim\)</span></li>
+<li><span class="math inline">G</span> gruppo</li>
+<li><span class="math inline">\sim</span> relazione di equivalenza in
+<span class="math inline">G</span></li>
+<li><span class="math inline">\forall x \in G \quad [x]:=\{y \in G \mid
+x \sim y\}</span></li>
+<li><span class="math inline">G/\sim := \{[x] \mid x \in G\}</span> è
+l’<strong>insieme quoziente</strong>, ovvero l’insieme delle classi di
+equivalenza determinate da <span class="math inline">\sim</span></li>
 </ul>
 </blockquote>
 <h2 id="def-1">Def</h2>
 <ul>
 <li><strong>Insieme quoziente <span
-class="math inline">\(\mathbb{Z}_n\)</span></strong></li>
+class="math inline">\mathbb{Z}_n</span></strong></li>
 </ul>
 <blockquote>
 <ul>
-<li><span class="math inline">\((\mathbb{Z}, +, \cdot)\)</span> anello,
-in particolare <span class="math inline">\((\mathbb{Z}, +)\)</span>
-gruppo</li>
-<li><span class="math inline">\(n \in \mathbb{Z}\)</span></li>
-<li><span class="math inline">\(\mathbb{Z}/\equiv\)</span> è l’insieme
-delle classi di equivalenza definite dalla relazione di equivalenza
-<span class="math inline">\(\equiv\)</span></li>
-<li><span class="math inline">\(m \equiv r \ (\bmod \ n)\iff r \equiv m
-\ (\bmod \ n) \implies n \mid m - r \implies \exists q: nq = m - r
-\implies m = nq + r \quad 0 \le r \lt n\)</span></li>
-<li><span class="math inline">\(0 \le r \lt n \implies\)</span> è
-possibile definire <span class="math inline">\(\mathbb{Z}_n := \{[0],
-[1], \ldots, [n - 1]\}\)</span>, che coincide con <span
-class="math inline">\(\mathbb{Z}/\equiv\)</span></li>
+<li><span class="math inline">(\mathbb{Z}, +, \cdot)</span> anello, in
+particolare <span class="math inline">(\mathbb{Z}, +)</span> gruppo</li>
+<li><span class="math inline">n \in \mathbb{Z}</span></li>
+<li><span class="math inline">\mathbb{Z}/\equiv</span> è l’insieme delle
+classi di equivalenza definite dalla relazione di equivalenza <span
+class="math inline">\equiv</span></li>
+<li><span class="math inline">m \equiv r \ (\bmod \ n)\iff r \equiv m \
+(\bmod \ n) \implies n \mid m - r \implies \exists q: nq = m - r
+\implies m = nq + r \quad 0 \le r \lt n</span></li>
+<li><span class="math inline">0 \le r \lt n \implies</span> è possibile
+definire <span class="math inline">\mathbb{Z}_n := \{[0], [1], \ldots,
+[n - 1]\}</span>, che coincide con <span
+class="math inline">\mathbb{Z}/\equiv</span></li>
 </ul>
 </blockquote>
 <h2 id="oss">Oss</h2>
 <ul>
 <li><strong>Hp</strong>
 <ul>
-<li><span class="math inline">\(n \in \mathbb{Z}\)</span></li>
-<li><span class="math inline">\(I(n) := \{nk \mid k \in
-\mathbb{Z}\}\)</span></li>
+<li><span class="math inline">n \in \mathbb{Z}</span></li>
+<li><span class="math inline">I(n) := \{nk \mid k \in
+\mathbb{Z}\}</span></li>
 </ul></li>
 <li><strong>Th</strong>
 <ul>
-<li><span class="math inline">\((\mathbb{Z}_n, +)\)</span> è un
-gruppo</li>
+<li><span class="math inline">(\mathbb{Z}_n, +)</span> è un gruppo</li>
 </ul></li>
 <li><strong>Dim</strong>
 <ul>
-<li>per dimostrazione precedente, <span
-class="math inline">\(I(n)\)</span> è un sottogruppo, quindi ha senso
-definire <span class="math inline">\(\mathbb{Z}/I(n)\)</span>, che
-conterrà le classi laterali sinistre definite in <span
-class="math inline">\(\mathbb{Z}\)</span> rispetto a <span
-class="math inline">\(I(n)\)</span>, che per dimostrazione precedente
+<li>per dimostrazione precedente, <span class="math inline">I(n)</span>
+è un sottogruppo, quindi ha senso definire <span
+class="math inline">\mathbb{Z}/I(n)</span>, che conterrà le classi
+laterali sinistre definite in <span
+class="math inline">\mathbb{Z}</span> rispetto a <span
+class="math inline">I(n)</span>, che per dimostrazione precedente
 corrispondono alle classi di equivalenza definite da <span
-class="math inline">\(\equiv\)</span></li>
-<li>di conseguenza, <span class="math inline">\(\mathbb{Z}/I(n) =
-\mathbb{Z}/ \equiv \textrm{} = \mathbb{Z}_n\)</span> per definizione
+class="math inline">\equiv</span></li>
+<li>di conseguenza, <span class="math inline">\mathbb{Z}/I(n) =
+\mathbb{Z}/ \equiv \textrm{} = \mathbb{Z}_n</span> per definizione
 precedente</li>
 <li>per dimostrazione precedente, la somma tra classi di equivalenza è
 ben definita, di conseguenza è possibile definire la struttura di gruppo
-<span class="math inline">\((\mathbb{Z}_n, +)\)</span></li>
+<span class="math inline">(\mathbb{Z}_n, +)</span></li>
 </ul></li>
 </ul>
 <h2 id="lem">Lem</h2>
 <ul>
 <li><strong>Hp</strong>
 <ul>
-<li><span class="math inline">\(p \in \mathbb{P}\)</span></li>
-<li><span class="math inline">\(a, b \in \mathbb{Z}\)</span></li>
-<li><span class="math inline">\(p \mid ab\)</span></li>
+<li><span class="math inline">p \in \mathbb{P}</span></li>
+<li><span class="math inline">a, b \in \mathbb{Z}</span></li>
+<li><span class="math inline">p \mid ab</span></li>
 </ul></li>
 <li><strong>Th</strong>
 <ul>
-<li><span class="math inline">\(p \mid a \lor p \mid b\)</span></li>
+<li><span class="math inline">p \mid a \lor p \mid b</span></li>
 </ul></li>
 <li><strong>Dim</strong>
 <ul>
-<li><span class="math inline">\(p \mid ab \implies p\)</span> compare
-nella fattorizzazione in numeri primi di <span
-class="math inline">\(ab\)</span></li>
-<li>allora <span class="math inline">\(p\)</span> è nella
-fattorizzazione di <span class="math inline">\(a\)</span>, e quindi
-<span class="math inline">\(p \mid a\)</span>, oppure <span
-class="math inline">\(p\)</span> è nella fattorizzazione di <span
-class="math inline">\(b\)</span>, e quindi <span class="math inline">\(p
-\mid b\)</span></li>
+<li><span class="math inline">p \mid ab \implies p</span> compare nella
+fattorizzazione in numeri primi di <span
+class="math inline">ab</span></li>
+<li>allora <span class="math inline">p</span> è nella fattorizzazione di
+<span class="math inline">a</span>, e quindi <span class="math inline">p
+\mid a</span>, oppure <span class="math inline">p</span> è nella
+fattorizzazione di <span class="math inline">b</span>, e quindi <span
+class="math inline">p \mid b</span></li>
 </ul></li>
 </ul>
 <h2 id="oss-1">Oss</h2>
 <ul>
 <li><strong>Hp</strong>
 <ul>
-<li><span class="math inline">\(n \in \mathbb{Z}\)</span></li>
+<li><span class="math inline">n \in \mathbb{Z}</span></li>
 </ul></li>
 <li><strong>Th</strong>
 <ul>
-<li><span class="math inline">\(\mathbb{Z}_n\)</span> dominio di
-integrità <span class="math inline">\(\iff n \in
-\mathbb{P}\)</span></li>
+<li><span class="math inline">\mathbb{Z}_n</span> dominio di integrità
+<span class="math inline">\iff n \in \mathbb{P}</span></li>
 </ul></li>
 <li><strong>Dim</strong>
 <ul>
 <li><em>prima implicazione</em>
 <ul>
-<li>ipotizzando che <span class="math inline">\(n \notin \mathbb{P}
+<li>ipotizzando che <span class="math inline">n \notin \mathbb{P}
 \implies \exists a, b \in \mathbb{Z} \mid n = ab \quad 0 \lt a, b \lt
-n\)</span> per definizione
+n</span> per definizione
 <ul>
-<li>in particolare <span class="math inline">\(a, b \neq 0\)</span></li>
+<li>in particolare <span class="math inline">a, b \neq 0</span></li>
 </ul></li>
-<li><span class="math inline">\(n = ab \iff [n] = [ab]\)</span> in <span
-class="math inline">\(\mathbb{Z}_n\)</span></li>
-<li><span class="math inline">\([n] = [0]\)</span> in <span
-class="math inline">\(\mathbb{Z}_n\)</span>, dunque <span
-class="math inline">\([ab] = [0]\)</span></li>
-<li><span class="math inline">\(\mathbb{Z}_n\)</span> dominio di
-integrità <span class="math inline">\(\implies\)</span> in <span
-class="math inline">\(\mathbb{Z}_n\)</span> vale la legge di
-annullamento del prodotto, e dunque <span class="math inline">\([ab] =
-[0] \iff [a] = 0 \lor [b] = [0] \ \bot\)</span></li>
+<li><span class="math inline">n = ab \iff [n] = [ab]</span> in <span
+class="math inline">\mathbb{Z}_n</span></li>
+<li><span class="math inline">[n] = [0]</span> in <span
+class="math inline">\mathbb{Z}_n</span>, dunque <span
+class="math inline">[ab] = [0]</span></li>
+<li><span class="math inline">\mathbb{Z}_n</span> dominio di integrità
+<span class="math inline">\implies</span> in <span
+class="math inline">\mathbb{Z}_n</span> vale la legge di annullamento
+del prodotto, e dunque <span class="math inline">[ab] = [0] \iff [a] = 0
+\lor [b] = [0] \ \bot</span></li>
 </ul></li>
 <li><em>seconda implicazione</em>
 <ul>
-<li>ipotizzando che <span class="math inline">\(\mathbb{Z}_n\)</span>
-non sia dominio di integrità, e dunque <span
-class="math inline">\(\exists[a] \in \mathbb{Z}_n : [a] \neq [0], a \mid
-0\)</span></li>
-<li><span class="math inline">\(a \mid 0 \implies \exists b \in
-\mathbb{Z} \mid [a][b] = [0] \quad b \neq 0\)</span></li>
-<li><span class="math inline">\([0]=[a][b] \iff [0]=[ab] \iff 0 \equiv
-ab \ (\bmod \  n) \iff n \mid ab - 0 \iff n \mid ab\)</span></li>
-<li><span class="math inline">\(n \in \mathbb{P}\)</span>, allora <span
-class="math inline">\(n \mid ab \implies n \mid a \lor n \mid b\)</span>
-per dimostrazione precedente
+<li>ipotizzando che <span class="math inline">\mathbb{Z}_n</span> non
+sia dominio di integrità, e dunque <span class="math inline">\exists[a]
+\in \mathbb{Z}_n : [a] \neq [0], a \mid 0</span></li>
+<li><span class="math inline">a \mid 0 \implies \exists b \in \mathbb{Z}
+\mid [a][b] = [0] \quad b \neq 0</span></li>
+<li><span class="math inline">[0]=[a][b] \iff [0]=[ab] \iff 0 \equiv ab
+\ (\bmod \  n) \iff n \mid ab - 0 \iff n \mid ab</span></li>
+<li><span class="math inline">n \in \mathbb{P}</span>, allora <span
+class="math inline">n \mid ab \implies n \mid a \lor n \mid b</span> per
+dimostrazione precedente
 <ul>
-<li><span class="math inline">\(n \mid a \implies [a] = [n] =
-[0]\)</span> in <span class="math inline">\(\mathbb{Z}_n \
-\bot\)</span></li>
-<li><span class="math inline">\(n \mid b \implies [b] = [n] =
-[0]\)</span> in <span class="math inline">\(\mathbb{Z}_n\)</span>, ma
-<span class="math inline">\(b \neq 0\)</span> in ipotesi, dunque
-necessariamente <span class="math inline">\([a] =[0] \
-\bot\)</span></li>
+<li><span class="math inline">n \mid a \implies [a] = [n] = [0]</span>
+in <span class="math inline">\mathbb{Z}_n \ \bot</span></li>
+<li><span class="math inline">n \mid b \implies [b] = [n] = [0]</span>
+in <span class="math inline">\mathbb{Z}_n</span>, ma <span
+class="math inline">b \neq 0</span> in ipotesi, dunque necessariamente
+<span class="math inline">[a] =[0] \ \bot</span></li>
 </ul></li>
 </ul></li>
 </ul></li>
@@ -329,55 +336,53 @@ necessariamente <span class="math inline">\([a] =[0] \
 <ul>
 <li><strong>Hp</strong>
 <ul>
-<li><span class="math inline">\(n \in \mathbb{Z}\)</span></li>
+<li><span class="math inline">n \in \mathbb{Z}</span></li>
 </ul></li>
 <li><strong>Th</strong>
 <ul>
-<li><span class="math inline">\(\forall [a] \in \mathbb{Z}_n \quad
-\textrm{MCD}(a, n) = 1 \iff [a] \in \mathbb{Z}^*_n\)</span></li>
+<li><span class="math inline">\forall [a] \in \mathbb{Z}_n \quad
+\textrm{MCD}(a, n) = 1 \iff [a] \in \mathbb{Z}^*_n</span></li>
 </ul></li>
 <li><strong>Dim</strong>
 <ul>
-<li><span class="math inline">\([a] \in \mathbb{Z}^*_n \implies
-\textrm{MCD}(a, n) = 1\)</span>
+<li><span class="math inline">[a] \in \mathbb{Z}^*_n \implies
+\textrm{MCD}(a, n) = 1</span>
 <ul>
-<li><span class="math inline">\([a] \in \mathbb{Z}_n^* \implies \exists
-b \in \mathbb{Z} \mid [a][b] = [1] \quad 0 \lt b \lt n \iff ab \equiv 1
-\ (\bmod \ n) \iff n \mid 1 - ab \iff \exists k \in \mathbb{Z} \mid nk =
-1 - ab\)</span></li>
-<li>allora <span class="math inline">\(\exists b, k \in \mathbb{Z} \mid
-n k = 1 - ab \iff 1 = nk + ab\)</span></li>
-<li><span class="math inline">\(d : = \textrm{MCD}(a, n)\)</span></li>
-<li>per definizione, <span class="math inline">\(d \mid a \land d \mid
-n\)</span>
+<li><span class="math inline">[a] \in \mathbb{Z}_n^* \implies \exists b
+\in \mathbb{Z} \mid [a][b] = [1] \quad 0 \lt b \lt n \iff ab \equiv 1 \
+(\bmod \ n) \iff n \mid 1 - ab \iff \exists k \in \mathbb{Z} \mid nk = 1
+- ab</span></li>
+<li>allora <span class="math inline">\exists b, k \in \mathbb{Z} \mid n
+k = 1 - ab \iff 1 = nk + ab</span></li>
+<li><span class="math inline">d : = \textrm{MCD}(a, n)</span></li>
+<li>per definizione, <span class="math inline">d \mid a \land d \mid
+n</span>
 <ul>
-<li><span class="math inline">\(d \mid a \implies \exists x \in
-\mathbb{Z} \mid dx = a\)</span></li>
-<li><span class="math inline">\(d \mid n \implies \exists y \in
-\mathbb{Z} \mid dy = n\)</span></li>
+<li><span class="math inline">d \mid a \implies \exists x \in \mathbb{Z}
+\mid dx = a</span></li>
+<li><span class="math inline">d \mid n \implies \exists y \in \mathbb{Z}
+\mid dy = n</span></li>
 </ul></li>
-<li><span class="math inline">\(1 = nk + ab \iff 1 = dyk + dxb = d(yk +
+<li><span class="math inline">1 = nk + ab \iff 1 = dyk + dxb = d(yk +
 xb) \implies \exists yk + xb \in \mathbb{Z} \mid 1 = d(yk +xb) \implies
-d \mid 1\)</span></li>
-<li><span class="math inline">\(d \mid 1 \iff d = \pm 1\)</span>, ma
-<span class="math inline">\(d := \textrm{MCD}(a, n) \implies d \ge 0
-\implies d = 1\)</span></li>
+d \mid 1</span></li>
+<li><span class="math inline">d \mid 1 \iff d = \pm 1</span>, ma <span
+class="math inline">d := \textrm{MCD}(a, n) \implies d \ge 0 \implies d
+= 1</span></li>
 </ul></li>
-<li><span class="math inline">\(\textrm{MCD}(a, n) = 1 \implies [a] \in
-\mathbb{Z}^*_n\)</span>
+<li><span class="math inline">\textrm{MCD}(a, n) = 1 \implies [a] \in
+\mathbb{Z}^*_n</span>
 <ul>
-<li><span class="math inline">\(d := \textrm{MCD}(a, n) =
-1\)</span></li>
-<li>per dimostrazione precedente, <span class="math inline">\(I(d) =
-I(a, n) \implies d \in I(a, n) \implies \exists b, k \in \mathbb{Z} \mid
-d = ab + nk\)</span> per definizione di <span class="math inline">\(I(a,
-n)\)</span>, allora <span class="math inline">\(d = 1 = ab + nk \iff nk
-= 1 - ab \iff n \mid 1 - ab \iff ab \equiv 1 \ (\bmod \ n) \implies
-[a][b] = [1]\)</span> in <span
-class="math inline">\(\mathbb{Z}_n\)</span>, dunque sono uno l’inverso
-dell’altro, e in particolare <span class="math inline">\([a] = [b]^{-1}
-\implies \exists [b] \in \mathbb{Z}_n \mid [a]\in
-\mathbb{Z}_n^*\)</span></li>
+<li><span class="math inline">d := \textrm{MCD}(a, n) = 1</span></li>
+<li>per dimostrazione precedente, <span class="math inline">I(d) = I(a,
+n) \implies d \in I(a, n) \implies \exists b, k \in \mathbb{Z} \mid d =
+ab + nk</span> per definizione di <span class="math inline">I(a,
+n)</span>, allora <span class="math inline">d = 1 = ab + nk \iff nk = 1
+- ab \iff n \mid 1 - ab \iff ab \equiv 1 \ (\bmod \ n) \implies [a][b] =
+[1]</span> in <span class="math inline">\mathbb{Z}_n</span>, dunque sono
+uno l’inverso dell’altro, e in particolare <span class="math inline">[a]
+= [b]^{-1} \implies \exists [b] \in \mathbb{Z}_n \mid [a]\in
+\mathbb{Z}_n^*</span></li>
 </ul></li>
 </ul></li>
 </ul>
@@ -385,36 +390,36 @@ dell’altro, e in particolare <span class="math inline">\([a] = [b]^{-1}
 <ul>
 <li><strong>Hp</strong>
 <ul>
-<li><span class="math inline">\(p \in \mathbb{P}\)</span></li>
+<li><span class="math inline">p \in \mathbb{P}</span></li>
 </ul></li>
 <li><strong>Th</strong>
 <ul>
-<li><span class="math inline">\(\mathbb{Z}_p\)</span> campo</li>
+<li><span class="math inline">\mathbb{Z}_p</span> campo</li>
 </ul></li>
 <li><strong>Dim</strong>
 <ul>
-<li><span class="math inline">\(\mathbb{Z}_p^* := \{[x] \in \mathbb{Z}_p
-\mid \exists[x]^{-1} \in \mathbb{Z}_p\}\)</span></li>
-<li><span class="math inline">\(p \in \mathbb{P} \implies\)</span> ogni
-numero è coprimo con <span class="math inline">\(p\)</span></li>
+<li><span class="math inline">\mathbb{Z}_p^* := \{[x] \in \mathbb{Z}_p
+\mid \exists[x]^{-1} \in \mathbb{Z}_p\}</span></li>
+<li><span class="math inline">p \in \mathbb{P} \implies</span> ogni
+numero è coprimo con <span class="math inline">p</span></li>
 <li>per dimostrazione precedente, allora tutti gli elementi di <span
-class="math inline">\(\mathbb{Z}_p\)</span> sono invertibili, tranne
-<span class="math inline">\([0]\)</span> in quanto <span
-class="math inline">\([0]\)</span> non ha inversi</li>
-<li>allora <span class="math inline">\(\mathbb{Z}_p^* = \mathbb{Z}_p -
-\{[0]\}\)</span>, che per definizione implica che <span
-class="math inline">\(\mathbb{Z}_p\)</span> campo</li>
+class="math inline">\mathbb{Z}_p</span> sono invertibili, tranne <span
+class="math inline">[0]</span> in quanto <span
+class="math inline">[0]</span> non ha inversi</li>
+<li>allora <span class="math inline">\mathbb{Z}_p^* = \mathbb{Z}_p -
+\{[0]\}</span>, che per definizione implica che <span
+class="math inline">\mathbb{Z}_p</span> campo</li>
 </ul></li>
 </ul>
 <h2 id="oss-4">Oss</h2>
 <ul>
 <li><strong>Hp</strong>
 <ul>
-<li><span class="math inline">\(p \in \mathbb{P}\)</span></li>
+<li><span class="math inline">p \in \mathbb{P}</span></li>
 </ul></li>
 <li><strong>Th</strong>
 <ul>
-<li><span class="math inline">\((\mathbb{Z}_p^*, \cdot)\)</span> è
+<li><span class="math inline">(\mathbb{Z}_p^*, \cdot)</span> è
 ciclico</li>
 </ul></li>
 <li><strong>Dim</strong>
@@ -430,61 +435,59 @@ ciclico</li>
 </ul>
 <blockquote>
 <ul>
-<li><span class="math inline">\(n \in \mathbb{N}\)</span></li>
-<li><span class="math inline">\(\varphi(n) := |\mathbb{Z}_n^*
-|\)</span></li>
+<li><span class="math inline">n \in \mathbb{N}</span></li>
+<li><span class="math inline">\varphi(n) := |\mathbb{Z}_n^*
+|</span></li>
 </ul>
 </blockquote>
 <h2 id="lem-1">Lem</h2>
 <ul>
 <li><strong>Hp</strong>
 <ul>
-<li><span class="math inline">\(n, m \in \mathbb{N}\)</span></li>
+<li><span class="math inline">n, m \in \mathbb{N}</span></li>
 </ul></li>
 <li><strong>Th</strong>
 <ul>
-<li><span class="math inline">\([a] \in \mathbb{Z}_{m n}^{*} \iff[a] \in
-\mathbb{Z}_{m}^{*} \land [a] \in \mathbb{Z}^*_{n}\)</span></li>
+<li><span class="math inline">[a] \in \mathbb{Z}_{m n}^{*} \iff[a] \in
+\mathbb{Z}_{m}^{*} \land [a] \in \mathbb{Z}^*_{n}</span></li>
 </ul></li>
 <li><strong>Dim</strong>
 <ul>
 <li><em>prima implicazione</em>
 <ul>
-<li><span class="math inline">\(a \ (\bmod \ \ n) \in \mathbb{Z}_{mn}^*
+<li><span class="math inline">a \ (\bmod \ \ n) \in \mathbb{Z}_{mn}^*
 \implies \exists x \in \mathbb{Z} \mid ax \equiv 1 \ (\bmod \ \
-mn)\)</span>
+mn)</span>
 <ul>
 <li>per dimostrazione precedente <span
-class="math inline">\(\left.\begin{array}{l}a \mid b \\ x \equiv y \
+class="math inline">\left.\begin{array}{l}a \mid b \\ x \equiv y \
 (\bmod \ \ b)\end{array}\right\} x \equiv y \ (\bmod \ a) \implies
 \left\{\begin{array}{l}m, n \mid m n \\ a x \equiv 1\ (\bmod \ m
 n)\end{array}\iff\left\{\begin{array}{l}a x \equiv 1\ (\bmod \ m) \\ a x
-\equiv 1 \ ( \bmod \ n)\end{array}\right.\right.\)</span> <span
-class="math inline">\(\implies\left\{\begin{array}{l}{[a] \in
+\equiv 1 \ ( \bmod \ n)\end{array}\right.\right.</span> <span
+class="math inline">\implies\left\{\begin{array}{l}{[a] \in
 \mathbb{Z}_{m}^{*}} \\ {[a] \in
-\mathbb{Z}_{n}^{*}}\end{array}\right.\)</span></li>
+\mathbb{Z}_{n}^{*}}\end{array}\right.</span></li>
 </ul></li>
 </ul></li>
 <li><em>seconda implicazione</em>
 <ul>
-<li><span class="math inline">\([a] \in \mathbb{Z}_{m}^{*} \wedge[a] \in
+<li><span class="math inline">[a] \in \mathbb{Z}_{m}^{*} \wedge[a] \in
 \mathbb{Z}_{n}^{*} \Longrightarrow \exists y, z
 \mid\left\{\begin{array}{l}a y \equiv 1 \ (\bmod \ m) \\ a z \equiv 1\
-(\bmod \ n )\end{array}\right.\)</span>, e per il teorema cinese dei
-resti <span class="math inline">\(\exists ! [x] \in
-\mathbb{Z}_{mn}\)</span>, che si trova ponendo <span
-class="math inline">\(\left\{\begin{array}{l}x \equiv y\ (\bmod \ m) \\
-x \equiv z\ (\bmod \ n)\end{array}\right. \implies
-\left\{\begin{array}{l}a x \equiv a y\ (\bmod \ m) \\ a x \equiv a z\
-(\bmod \ n)\end{array}\right.\)</span> moltiplicando entrambe le
-equazioni per <span class="math inline">\(a\)</span>, e per il sistema
-precedente <span class="math inline">\(\left\{\begin{array}{ll}a
-x\equiv1 \ (\bmod \ m) \\ a x\equiv1 \ (\bmod \
-n)\end{array}\right.\)</span>, e poiché <span
-class="math inline">\(m\)</span> e <span
-class="math inline">\(n\)</span> sono coprimi in ipotesi, per il teorema
-cinese dei resti <span class="math inline">\(ax \equiv 1 \ (\bmod \ mn)
-\implies [a ] \in \mathbb{Z}_{mn}^*\)</span></li>
+(\bmod \ n )\end{array}\right.</span>, e per il teorema cinese dei resti
+<span class="math inline">\exists ! [x] \in \mathbb{Z}_{mn}</span>, che
+si trova ponendo <span class="math inline">\left\{\begin{array}{l}x
+\equiv y\ (\bmod \ m) \\ x \equiv z\ (\bmod \ n)\end{array}\right.
+\implies \left\{\begin{array}{l}a x \equiv a y\ (\bmod \ m) \\ a x
+\equiv a z\ (\bmod \ n)\end{array}\right.</span> moltiplicando entrambe
+le equazioni per <span class="math inline">a</span>, e per il sistema
+precedente <span class="math inline">\left\{\begin{array}{ll}a x\equiv1
+\ (\bmod \ m) \\ a x\equiv1 \ (\bmod \ n)\end{array}\right.</span>, e
+poiché <span class="math inline">m</span> e <span
+class="math inline">n</span> sono coprimi in ipotesi, per il teorema
+cinese dei resti <span class="math inline">ax \equiv 1 \ (\bmod \ mn)
+\implies [a ] \in \mathbb{Z}_{mn}^*</span></li>
 </ul></li>
 </ul></li>
 </ul>
@@ -492,90 +495,86 @@ cinese dei resti <span class="math inline">\(ax \equiv 1 \ (\bmod \ mn)
 <ul>
 <li><strong>Hp</strong>
 <ul>
-<li><span class="math inline">\(m, n \in \mathbb{N} \mid \textrm{MCD}(m,
-n) = 1\)</span></li>
+<li><span class="math inline">m, n \in \mathbb{N} \mid \textrm{MCD}(m,
+n) = 1</span></li>
 </ul></li>
 <li><strong>Th</strong>
 <ul>
-<li><span class="math inline">\(\varphi(m \cdot n) = \varphi(m) \cdot
-\varphi(n)\)</span></li>
+<li><span class="math inline">\varphi(m \cdot n) = \varphi(m) \cdot
+\varphi(n)</span></li>
 </ul></li>
 <li><strong>Dim</strong>
 <ul>
 <li>per dimostrazione precedente, esiste una biezione definita come
-<span class="math inline">\(\mathbb{Z}_{m n}^{*} \rightarrow
-\mathbb{Z}_{m}^{*} \times \mathbb{Z}_{n}^{*}\)</span></li>
-<li><span class="math inline">\(\varphi(m \cdot n):=\left|\mathbb{Z}_{m
+<span class="math inline">\mathbb{Z}_{m n}^{*} \rightarrow
+\mathbb{Z}_{m}^{*} \times \mathbb{Z}_{n}^{*}</span></li>
+<li><span class="math inline">\varphi(m \cdot n):=\left|\mathbb{Z}_{m
 n}^{*}\right|=\left|\mathbb{Z}_{m}^{*} \times
-\mathbb{Z}_{n}^{*}\right|\)</span> perché è una biezione, e dunque è
-pari a <span class="math inline">\(\left|\mathbb{Z}_{m}^{*}\right|
-\cdot\left|\mathbb{Z}_{n}^{*}\right|=\varphi(m) \cdot
-\varphi(n)\)</span> per definizione</li>
+\mathbb{Z}_{n}^{*}\right|</span> perché è una biezione, e dunque è pari
+a <span class="math inline">\left|\mathbb{Z}_{m}^{*}\right|
+\cdot\left|\mathbb{Z}_{n}^{*}\right|=\varphi(m) \cdot \varphi(n)</span>
+per definizione</li>
 </ul></li>
 </ul>
 <h2 id="oss-6">Oss</h2>
 <ul>
 <li><strong>Hp</strong>
 <ul>
-<li><span class="math inline">\(p \in \mathbb{P}\)</span></li>
-<li><span class="math inline">\(k \in \mathbb{N} \mid k \ge
-1\)</span></li>
+<li><span class="math inline">p \in \mathbb{P}</span></li>
+<li><span class="math inline">k \in \mathbb{N} \mid k \ge 1</span></li>
 </ul></li>
 <li><strong>Th</strong>
 <ul>
-<li><span class="math inline">\(\varphi(p^k) = p^{k
--1}(p-1)\)</span></li>
+<li><span class="math inline">\varphi(p^k) = p^{k -1}(p-1)</span></li>
 </ul></li>
 <li><strong>Dim</strong>
 <ul>
-<li><span class="math inline">\(0 \le a \lt p^k \in \mathbb{Z}_{p^k}^*
-\iff \textrm{MCD}(a, p^k)=1\)</span>, che è vero quando <span
-class="math inline">\(p \nmid a\)</span> poiché <span
-class="math inline">\(p \in \mathbb{P}\)</span></li>
-<li>simmetricamente, <span class="math inline">\(0 \le a \lt p^k \notin
-\mathbb{Z}_{p^k}^* \iff \exists n \in \mathbb{Z} \mid a = np\)</span>
+<li><span class="math inline">0 \le a \lt p^k \in \mathbb{Z}_{p^k}^*
+\iff \textrm{MCD}(a, p^k)=1</span>, che è vero quando <span
+class="math inline">p \nmid a</span> poiché <span class="math inline">p
+\in \mathbb{P}</span></li>
+<li>simmetricamente, <span class="math inline">0 \le a \lt p^k \notin
+\mathbb{Z}_{p^k}^* \iff \exists n \in \mathbb{Z} \mid a = np</span>
 <ul>
-<li>i multipli di <span class="math inline">\(p\)</span> sono tutti
-<span class="math inline">\(0 \leq n p&lt;p^{k} \implies 0 \leq n \lt p
-^{k - 1}\)</span></li>
+<li>i multipli di <span class="math inline">p</span> sono tutti <span
+class="math inline">0 \leq n p&lt;p^{k} \implies 0 \leq n \lt p ^{k -
+1}</span></li>
 <li><strong>⚠️ INCOMPLETA</strong></li>
 </ul></li>
-<li><span class="math inline">\(\varphi \left(
-p^{k}\right):=\left|\mathbb{Z}_{p^{k}}^{*}\right|=\)</span><span
-class="math inline">\(\left| \mathbb{Z}_{p^{k}}-\left\{[a] \in
+<li><span class="math inline">\varphi \left(
+p^{k}\right):=\left|\mathbb{Z}_{p^{k}}^{*}\right|=</span><span
+class="math inline">\left| \mathbb{Z}_{p^{k}}-\left\{[a] \in
 \mathbb{Z}_{p^{k}} \mid\nexists[a]^{-1} \in \mathbb{Z}_{p^{k}}\right\}
-\right|\)</span> = <span class="math inline">\(p^k - p^{k - 1} = p^{k -
-1}(p - 1)\)</span></li>
+\right|</span> = <span class="math inline">p^k - p^{k - 1} = p^{k - 1}(p
+- 1)</span></li>
 </ul></li>
 </ul>
 <h2 id="oss-7">Oss</h2>
 <ul>
 <li><strong>Hp</strong>
 <ul>
-<li><span class="math inline">\(k \in \mathbb{N} \mid k \ge
-1\)</span></li>
-<li><span class="math inline">\(p_1, \ldots, p_k \in
-\mathbb{P}\)</span></li>
-<li><span class="math inline">\(i_1, \ldots, i_k \ge 1\)</span></li>
-<li><span class="math inline">\(n \in \mathbb{N} \mid n = p_1^{i_1}
-\cdot \ldots \cdot p_k^{i_k}\)</span></li>
+<li><span class="math inline">k \in \mathbb{N} \mid k \ge 1</span></li>
+<li><span class="math inline">p_1, \ldots, p_k \in
+\mathbb{P}</span></li>
+<li><span class="math inline">i_1, \ldots, i_k \ge 1</span></li>
+<li><span class="math inline">n \in \mathbb{N} \mid n = p_1^{i_1} \cdot
+\ldots \cdot p_k^{i_k}</span></li>
 </ul></li>
 <li><strong>Th</strong>
 <ul>
-<li><span class="math inline">\(\displaystyle\varphi(n)=n \cdot \prod_{p
-\mid n}\left(1-\frac{1}{p}\right)\)</span></li>
+<li><span class="math inline">\displaystyle\varphi(n)=n \cdot \prod_{p
+\mid n}\left(1-\frac{1}{p}\right)</span></li>
 </ul></li>
 <li><strong>Dim</strong>
 <ul>
-<li>per dimostrazione precedente <span class="math inline">\(\varphi(n)
+<li>per dimostrazione precedente <span class="math inline">\varphi(n)
 =\varphi\left(p_{1}^{i_{1}}\right) \cdot \ldots \cdot
 \varphi\left(p_{k}^{i_{k}}\right)= p_1^{i_1 - 1}(p_1 - 1) \cdot \ldots
 \cdot p_k^{i_k - 1}(p_k -1) = p_1^{i_1} \cdot \ldots \cdot p_k^{i_k}
 \cdot \dfrac{p_1 - 1}{p_1} \cdot \ldots \cdot \dfrac{p_k - 1}{p_k}= n
 \cdot \dfrac{p_1 - 1}{p_1} \cdot \ldots \cdot \dfrac{p_k - 1}{p_k}
-\implies\)</span> <span class="math inline">\(\displaystyle{
-\varphi(n)=n \cdot \prod_{p \mid n}\left(1-\frac{1}{p}\right)
-}\)</span></li>
+\implies</span> <span class="math inline">\displaystyle{ \varphi(n)=n
+\cdot \prod_{p \mid n}\left(1-\frac{1}{p}\right) }</span></li>
 </ul></li>
 </ul>
 </body>

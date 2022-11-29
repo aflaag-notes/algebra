@@ -158,9 +158,24 @@
       vertical-align: middle;
     }
   </style>
-  <script
-  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js"
-  type="text/javascript"></script>
+  <script defer=""
+  src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js"></script>
+  <script>document.addEventListener("DOMContentLoaded", function () {
+ var mathElements = document.getElementsByClassName("math");
+ var macros = [];
+ for (var i = 0; i < mathElements.length; i++) {
+  var texText = mathElements[i].firstChild;
+  if (mathElements[i].tagName == "SPAN") {
+   katex.render(texText.data, mathElements[i], {
+    displayMode: mathElements[i].classList.contains('display'),
+    throwOnError: false,
+    macros: macros,
+    fleqn: false
+   });
+}}});
+  </script>
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css" />
   <!--[if lt IE 9]>
     <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
   <![endif]-->
@@ -176,209 +191,205 @@
 </ul>
 <blockquote>
 <ul>
-<li><span class="math inline">\(0! := 1\)</span></li>
-<li><span class="math inline">\(n, k \in \mathbb{N}\)</span></li>
-<li><span class="math inline">\(\displaystyle
+<li><span class="math inline">0! := 1</span></li>
+<li><span class="math inline">n, k \in \mathbb{N}</span></li>
+<li><span class="math inline">\displaystyle
 \binom{n}{k}:=\left\{\begin{array}{ll}\frac{n !}{n !(n-k) !} &amp; k
-\leqslant n \\ 0 &amp; k&gt;n\end{array}\right.\)</span></li>
+\leqslant n \\ 0 &amp; k&gt;n\end{array}\right.</span></li>
 </ul>
 </blockquote>
 <h2 id="oss">Oss</h2>
 <ul>
 <li><strong>Hp</strong>
 <ul>
-<li><span class="math inline">\(n, k \in \mathbb{N}\)</span></li>
+<li><span class="math inline">n, k \in \mathbb{N}</span></li>
 </ul></li>
 <li><strong>Th</strong>
 <ul>
-<li><span class="math inline">\(\displaystyle \binom{n}{k} =
-\binom{n}{n-k}\)</span></li>
+<li><span class="math inline">\displaystyle \binom{n}{k} =
+\binom{n}{n-k}</span></li>
 </ul></li>
 <li><strong>Dim</strong>
 <ul>
-<li><span class="math inline">\(\displaystyle \binom{n}{n-k}=\dfrac{n
+<li><span class="math inline">\displaystyle \binom{n}{n-k}=\dfrac{n
 !}{(n-k) !(n-(n-k)) !}=\dfrac{n !}{(n-k) ! k !}=
-\binom{n}{k}\)</span></li>
+\binom{n}{k}</span></li>
 </ul></li>
 </ul>
 <h2 id="oss-1">Oss</h2>
 <ul>
 <li><strong>Hp</strong>
 <ul>
-<li><span class="math inline">\(n, k \in \mathbb{N}\)</span></li>
+<li><span class="math inline">n, k \in \mathbb{N}</span></li>
 </ul></li>
 <li><strong>Th</strong>
 <ul>
-<li><span class="math inline">\(\displaystyle \binom{n}{k + 1} =
-\binom{n - 1}{k + 1} \binom{n - 1}{ k}\)</span></li>
+<li><span class="math inline">\displaystyle \binom{n}{k + 1} = \binom{n
+- 1}{k + 1} \binom{n - 1}{ k}</span></li>
 </ul></li>
 <li><strong>Dim</strong>
 <ul>
-<li><span class="math inline">\(\binom{n - 1}{k +1}+ \binom{n -
-1}{k}=\)</span><span class="math inline">\(\frac{(n-1) !}{(k+1)
-!(n-1-(k+1)) !}+\frac{(n-1) !}{k !(n-1-k) !}\)</span> <span
-class="math inline">\(=\frac{(n-1) !}{(k+1) k !(n-2-k) !}+\frac{(n-1)
-!}{k !(n-1-k) !} =\)</span> <span
-class="math inline">\(\frac{(n-1-k)(n-1) !+(k+1)(n-1) !}{(k+1) !(n-k-1)
-!}=\)</span> <span class="math inline">\(\frac{(n-1) !(n-1-k+k+1)}{(k+1)
-!(n-1-k) !}=\)</span> <span class="math inline">\(\frac{(n-1) ! \cdot
-n}{(n+1) !(n-1-k) !} =\)</span> <span class="math inline">\(\frac{n
-!}{(k+1) !(n-k-1) !}=\binom{n}{k + 1}\)</span></li>
+<li><span class="math inline">\binom{n - 1}{k +1}+ \binom{n -
+1}{k}=</span><span class="math inline">\frac{(n-1) !}{(k+1) !(n-1-(k+1))
+!}+\frac{(n-1) !}{k !(n-1-k) !}</span> <span
+class="math inline">=\frac{(n-1) !}{(k+1) k !(n-2-k) !}+\frac{(n-1) !}{k
+!(n-1-k) !} =</span> <span class="math inline">\frac{(n-1-k)(n-1)
+!+(k+1)(n-1) !}{(k+1) !(n-k-1) !}=</span> <span
+class="math inline">\frac{(n-1) !(n-1-k+k+1)}{(k+1) !(n-1-k) !}=</span>
+<span class="math inline">\frac{(n-1) ! \cdot n}{(n+1) !(n-1-k) !}
+=</span> <span class="math inline">\frac{n !}{(k+1) !(n-k-1)
+!}=\binom{n}{k + 1}</span></li>
 </ul></li>
 </ul>
 <h2 id="lem">Lem</h2>
 <ul>
 <li><strong>Hp</strong>
 <ul>
-<li><span class="math inline">\(p \in \mathbb{P}\)</span></li>
-<li><span class="math inline">\(k \in \mathbb{N} \mid 0 \lt k \lt
-p\)</span></li>
+<li><span class="math inline">p \in \mathbb{P}</span></li>
+<li><span class="math inline">k \in \mathbb{N} \mid 0 \lt k \lt
+p</span></li>
 </ul></li>
 <li><strong>Th</strong>
 <ul>
-<li><span class="math inline">\(p \ \bigg\vert \displaystyle
-\binom{p}{k}\)</span></li>
+<li><span class="math inline">p \ \bigg\vert \displaystyle
+\binom{p}{k}</span></li>
 </ul></li>
 <li><strong>Dim</strong>
 <ul>
-<li><span class="math inline">\(\displaystyle{\binom{p}{k}=\frac{p !}{k
+<li><span class="math inline">\displaystyle{\binom{p}{k}=\frac{p !}{k
 !(p-k) !} = \frac{p \cdot (p - 1) !}{k!(p - k)!} = p \cdot \frac{(p -
-1)!}{k!(p- k)!}} \implies p\)</span> è nella fattorizzazione di <span
-class="math inline">\(\displaystyle{\binom{p}{k}}\)</span></li>
-<li>poiché <span class="math inline">\(p\)</span> è primo in ipotesi,
-non è possibile semplificarlo con nessun fattore del denominatore
+1)!}{k!(p- k)!}} \implies p</span> è nella fattorizzazione di <span
+class="math inline">\displaystyle{\binom{p}{k}}</span></li>
+<li>poiché <span class="math inline">p</span> è primo in ipotesi, non è
+possibile semplificarlo con nessun fattore del denominatore
 <ul>
-<li><span class="math inline">\(k \lt p \implies p\)</span> non può
-essere nella fattorizzazione di <span
-class="math inline">\(k!\)</span></li>
-<li><span class="math inline">\(p - k \lt p \implies p\)</span> non può
-essere nella fattorizzazione di <span class="math inline">\((p -
-k)!\)</span></li>
+<li><span class="math inline">k \lt p \implies p</span> non può essere
+nella fattorizzazione di <span class="math inline">k!</span></li>
+<li><span class="math inline">p - k \lt p \implies p</span> non può
+essere nella fattorizzazione di <span class="math inline">(p -
+k)!</span></li>
 </ul></li>
-<li>quindi necessariamente <span class="math inline">\(p \ \bigg\vert
-\displaystyle \binom{p}{k}\)</span></li>
+<li>quindi necessariamente <span class="math inline">p \ \bigg\vert
+\displaystyle \binom{p}{k}</span></li>
 </ul></li>
 </ul>
 <h2 id="oss-2">Oss</h2>
 <ul>
 <li><strong>Hp</strong>
 <ul>
-<li><span class="math inline">\(n \in \mathbb{Z}\)</span></li>
-<li><span class="math inline">\(p \in \mathbb{P} : p \mid
-n\)</span></li>
-<li><span class="math inline">\([a] \in \mathbb{Z}_{p}\)</span></li>
+<li><span class="math inline">n \in \mathbb{Z}</span></li>
+<li><span class="math inline">p \in \mathbb{P} : p \mid n</span></li>
+<li><span class="math inline">[a] \in \mathbb{Z}_{p}</span></li>
 </ul></li>
 <li><strong>Th</strong>
 <ul>
-<li><span class="math inline">\(n \cdot [a] = [0]\)</span> in <span
-class="math inline">\(\mathbb{Z}_p\)</span></li>
+<li><span class="math inline">n \cdot [a] = [0]</span> in <span
+class="math inline">\mathbb{Z}_p</span></li>
 </ul></li>
 <li><strong>Dim</strong>
 <ul>
-<li><span class="math inline">\(p \mid n \implies \exists k \in
-\mathbb{Z} \mid pk = n\)</span></li>
-<li><span class="math inline">\(n \cdot[a]=[a]+\ldots+[a] = [n \cdot a]
-= [pk \cdot a] = p \cdot [ka]\)</span></li>
-<li><span class="math inline">\([pka]\)</span> è multiplo di <span
-class="math inline">\(p\)</span> per definizione, e quindi <span
-class="math inline">\([pka] = [0]\)</span> in <span
-class="math inline">\(\mathbb{Z}_p\)</span>, quindi <span
-class="math inline">\(n \cdot [a] = [pka] = [0]\)</span> in <span
-class="math inline">\(\mathbb{Z}_p\)</span></li>
+<li><span class="math inline">p \mid n \implies \exists k \in \mathbb{Z}
+\mid pk = n</span></li>
+<li><span class="math inline">n \cdot[a]=[a]+\ldots+[a] = [n \cdot a] =
+[pk \cdot a] = p \cdot [ka]</span></li>
+<li><span class="math inline">[pka]</span> è multiplo di <span
+class="math inline">p</span> per definizione, e quindi <span
+class="math inline">[pka] = [0]</span> in <span
+class="math inline">\mathbb{Z}_p</span>, quindi <span
+class="math inline">n \cdot [a] = [pka] = [0]</span> in <span
+class="math inline">\mathbb{Z}_p</span></li>
 </ul></li>
 </ul>
 <h2 id="oss-3">Oss</h2>
 <ul>
 <li><strong>Hp</strong>
 <ul>
-<li><span class="math inline">\(n \in \mathbb{Z}\)</span></li>
-<li><span class="math inline">\(p \in \mathbb{P} : p \mid
-n\)</span></li>
-<li><span class="math inline">\([a] \in \mathbb{Z}_{p}\)</span></li>
-<li><span class="math inline">\(k \in \mathbb{N} \mid 0 \lt k \lt
-p\)</span></li>
+<li><span class="math inline">n \in \mathbb{Z}</span></li>
+<li><span class="math inline">p \in \mathbb{P} : p \mid n</span></li>
+<li><span class="math inline">[a] \in \mathbb{Z}_{p}</span></li>
+<li><span class="math inline">k \in \mathbb{N} \mid 0 \lt k \lt
+p</span></li>
 </ul></li>
 <li><strong>Th</strong>
 <ul>
-<li><span class="math inline">\(\displaystyle \binom{p}{k} \cdot [a] =
-[0]\)</span> in <span class="math inline">\(\mathbb{Z}_p\)</span></li>
+<li><span class="math inline">\displaystyle \binom{p}{k} \cdot [a] =
+[0]</span> in <span class="math inline">\mathbb{Z}_p</span></li>
 </ul></li>
 <li><strong>Dim</strong>
 <ul>
-<li><span class="math inline">\(\displaystyle \binom{p}{k}
-\cdot[a]=\left[\displaystyle{\binom{p}{k}} \cdot a\right]\)</span></li>
+<li><span class="math inline">\displaystyle \binom{p}{k}
+\cdot[a]=\left[\displaystyle{\binom{p}{k}} \cdot a\right]</span></li>
 <li>per il dimostrazione precedente, <span
-class="math inline">\(\displaystyle{p \ \bigg\vert
-\binom{p}{k}}\)</span>, quindi <span class="math inline">\(\displaystyle
-\binom{p}{k} \cdot a\)</span> è anch’esso multiplo di <span
-class="math inline">\(p\)</span>, e di conseguenza <span
-class="math inline">\(\left[\displaystyle \binom{p}{k} \cdot a\right] =
-[0]\)</span> in <span class="math inline">\(\mathbb{Z}_p\)</span></li>
+class="math inline">\displaystyle{p \ \bigg\vert \binom{p}{k}}</span>,
+quindi <span class="math inline">\displaystyle \binom{p}{k} \cdot
+a</span> è anch’esso multiplo di <span class="math inline">p</span>, e
+di conseguenza <span class="math inline">\left[\displaystyle
+\binom{p}{k} \cdot a\right] = [0]</span> in <span
+class="math inline">\mathbb{Z}_p</span></li>
 </ul></li>
 </ul>
 <h2 id="cor">Cor</h2>
 <ul>
 <li><strong>Hp</strong>
 <ul>
-<li><span class="math inline">\(p \in \mathbb{P}\)</span></li>
-<li><span class="math inline">\([a], [b] \in \mathbb{Z}_p\)</span></li>
+<li><span class="math inline">p \in \mathbb{P}</span></li>
+<li><span class="math inline">[a], [b] \in \mathbb{Z}_p</span></li>
 </ul></li>
 <li><strong>Th</strong>
 <ul>
-<li><span class="math inline">\(([a]+[b])^{p}=[a]^{p}+[b]^{p}\)</span>
-in <span class="math inline">\(\mathbb{Z}_p\)</span></li>
+<li><span class="math inline">([a]+[b])^{p}=[a]^{p}+[b]^{p}</span> in
+<span class="math inline">\mathbb{Z}_p</span></li>
 </ul></li>
 <li><strong>Dim</strong>
 <ul>
 <li>per il teorema del binomio di Newton <span
-class="math inline">\(([a]+[b])^{p}=\)</span><span
-class="math inline">\(\displaystyle
+class="math inline">([a]+[b])^{p}=</span><span
+class="math inline">\displaystyle
 \sum_{k=0}^{p}\binom{p}{k}[a]^{k}\cdot[b]^{p-k}=\sum_{k=0}^{p}\binom{p}{k}\left[a^{k}
-\cdot b^{p-k}\right]\)</span></li>
-<li>per dimostrazione precedente <span class="math inline">\(p \in
+\cdot b^{p-k}\right]</span></li>
+<li>per dimostrazione precedente <span class="math inline">p \in
 \mathbb{P} \implies \displaystyle{\binom{p}{k}}\left[a^{k} \cdot
 b^{p-k}\right]= [0] \quad \forall k \in \mathbb{Z} \mid 0 \lt k \lt
-p\)</span></li>
+p</span></li>
 <li>di conseguenza, nella sommatoria del binomio di Newton tutti i
-termini con <span class="math inline">\(k \in (0, p)\)</span> si
-annullano, in quanto congruenti a <span
-class="math inline">\([0]\)</span> in <span
-class="math inline">\(\mathbb{Z}_p\)</span></li>
-<li><span class="math inline">\(\displaystyle
+termini con <span class="math inline">k \in (0, p)</span> si annullano,
+in quanto congruenti a <span class="math inline">[0]</span> in <span
+class="math inline">\mathbb{Z}_p</span></li>
+<li><span class="math inline">\displaystyle
 ([a]+[b])^{p}=\sum_{k=0}^{p}\binom{p}{k}\left[a^{k} \cdot
 b^{p-k}\right]=
-\binom{p}{0}[b]^{p}+\binom{p}{p}[a]^{p}=[a]^{p}+[b]^{p}\)</span></li>
+\binom{p}{0}[b]^{p}+\binom{p}{p}[a]^{p}=[a]^{p}+[b]^{p}</span></li>
 </ul></li>
 </ul>
 <h2 id="cor-1">Cor</h2>
 <ul>
 <li><p><strong>Hp</strong></p>
 <ul>
-<li><span class="math inline">\(p \in \mathbb{P}\)</span></li>
-<li><span class="math inline">\([a_1], \ldots, [a_n] \in
-\mathbb{Z}_p\)</span></li>
+<li><span class="math inline">p \in \mathbb{P}</span></li>
+<li><span class="math inline">[a_1], \ldots, [a_n] \in
+\mathbb{Z}_p</span></li>
 </ul></li>
 <li><p><strong>Th</strong></p>
 <ul>
 <li><span
-class="math inline">\(\left(\left[a_{1}\right]+\ldots+\left[a_{n}\right]\right)^{p}=\left[a_{1}\right]^{p}+\ldots+\left[a_{n}\right]^{p}\)</span>
-in <span class="math inline">\(\mathbb{Z}_p\)</span></li>
+class="math inline">\left(\left[a_{1}\right]+\ldots+\left[a_{n}\right]\right)^{p}=\left[a_{1}\right]^{p}+\ldots+\left[a_{n}\right]^{p}</span>
+in <span class="math inline">\mathbb{Z}_p</span></li>
 </ul></li>
 <li><p><strong>Dim</strong></p>
 <ul>
-<li><span class="math inline">\(n = 1 \implies\)</span> <span
-class="math inline">\(\left[a_{1}\right]^{p}=\left[a_{1}\right]^{p}\)</span>
+<li><span class="math inline">n = 1 \implies</span> <span
+class="math inline">\left[a_{1}\right]^{p}=\left[a_{1}\right]^{p}</span>
 per dimostrazione precedente</li>
-<li><span class="math inline">\(n&gt;1
+<li><span class="math inline">n&gt;1
 \implies\left(\left[a_{1}\right]+\ldots+\left[a_{n}\right]+\left[a_{n+1}\right]\right)^{p}=
-\left[a_{1}\right]^{p}+\ldots+\left[a_{n}\right]^{p}+\left[a_{n+1}\right]^{p}\)</span>
+\left[a_{1}\right]^{p}+\ldots+\left[a_{n}\right]^{p}+\left[a_{n+1}\right]^{p}</span>
 <ul>
 <li>per ipotesi induttiva, <span
-class="math inline">\(\left[a_{1}\right]^{p}+\ldots+\left[a_{n}\right]^{p}+\left[a_{n+1}\right]^{p}=
-\left(\left[a_{1}\right]+\ldots+\left[a_{n}\right]\right)^{p}+\left[a_{n+1}\right]^{p}\)</span></li>
+class="math inline">\left[a_{1}\right]^{p}+\ldots+\left[a_{n}\right]^{p}+\left[a_{n+1}\right]^{p}=
+\left(\left[a_{1}\right]+\ldots+\left[a_{n}\right]\right)^{p}+\left[a_{n+1}\right]^{p}</span></li>
 <li>allora, ancora per ipotesi induttiva <span
-class="math inline">\(\left(\left[a_{1}\right]+\ldots+\left[a_{n}\right]\right)^{p}+\left[a_{n+1}\right]^{p}=
-\left(\left[a_{1}\right]+\ldots+\left[a_{n+1}\right]\right)^{p}\)</span></li>
+class="math inline">\left(\left[a_{1}\right]+\ldots+\left[a_{n}\right]\right)^{p}+\left[a_{n+1}\right]^{p}=
+\left(\left[a_{1}\right]+\ldots+\left[a_{n+1}\right]\right)^{p}</span></li>
 </ul></li>
 </ul></li>
 </ul>

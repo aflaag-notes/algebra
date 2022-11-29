@@ -25,7 +25,7 @@ for file in os.listdir("mds"):
     with open("temp/" + name_no_ext + ".md", "w") as NF:
         NF.write(content)
 
-    os.system(f"pandoc --standalone --mathjax --metadata title=\" \" -f markdown -t html temp/" + name_no_ext + ".md -o temp/" + name_no_ext + ".html")
+    os.system(f"pandoc --standalone --katex --metadata title=\" \" -f markdown -t html temp/" + name_no_ext + ".md -o temp/" + name_no_ext + ".html")
 
     with open("temp/" + name_no_ext + ".html") as B:
         content = B.read()

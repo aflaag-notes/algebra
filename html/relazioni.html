@@ -158,9 +158,24 @@
       vertical-align: middle;
     }
   </style>
-  <script
-  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js"
-  type="text/javascript"></script>
+  <script defer=""
+  src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js"></script>
+  <script>document.addEventListener("DOMContentLoaded", function () {
+ var mathElements = document.getElementsByClassName("math");
+ var macros = [];
+ for (var i = 0; i < mathElements.length; i++) {
+  var texText = mathElements[i].firstChild;
+  if (mathElements[i].tagName == "SPAN") {
+   katex.render(texText.data, mathElements[i], {
+    displayMode: mathElements[i].classList.contains('display'),
+    throwOnError: false,
+    macros: macros,
+    fleqn: false
+   });
+}}});
+  </script>
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css" />
   <!--[if lt IE 9]>
     <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
   <![endif]-->
@@ -176,10 +191,10 @@
 </ul>
 <blockquote>
 <ul>
-<li><span class="math inline">\(S\)</span> insieme</li>
-<li>ogni elemento <span class="math inline">\(R \subseteq S \times
-S\)</span> è una <strong>relazione</strong> su <span
-class="math inline">\(S\)</span></li>
+<li><span class="math inline">S</span> insieme</li>
+<li>ogni elemento <span class="math inline">R \subseteq S \times
+S</span> è una <strong>relazione</strong> su <span
+class="math inline">S</span></li>
 </ul>
 </blockquote>
 <ul>
@@ -187,12 +202,11 @@ class="math inline">\(S\)</span></li>
 </ul>
 <blockquote>
 <ul>
-<li><span class="math inline">\(S\)</span> insieme</li>
-<li><span class="math inline">\(R\)</span> relazione in <span
-class="math inline">\(S \times S\)</span></li>
-<li><span class="math inline">\(R\)</span> <strong>riflessiva</strong>
-<span class="math inline">\(\iff \forall x \in R \quad (x, x) \in
-R\)</span></li>
+<li><span class="math inline">S</span> insieme</li>
+<li><span class="math inline">R</span> relazione in <span
+class="math inline">S \times S</span></li>
+<li><span class="math inline">R</span> <strong>riflessiva</strong> <span
+class="math inline">\iff \forall x \in R \quad (x, x) \in R</span></li>
 </ul>
 </blockquote>
 <ul>
@@ -200,12 +214,12 @@ R\)</span></li>
 </ul>
 <blockquote>
 <ul>
-<li><span class="math inline">\(S\)</span> insieme</li>
-<li><span class="math inline">\(R\)</span> relazione in <span
-class="math inline">\(S \times S\)</span></li>
-<li><span class="math inline">\(R\)</span> <strong>simmetrica</strong>
-<span class="math inline">\(\iff \forall x, y \in R \quad (x, y) \in R
-\implies (y, x) \in R\)</span></li>
+<li><span class="math inline">S</span> insieme</li>
+<li><span class="math inline">R</span> relazione in <span
+class="math inline">S \times S</span></li>
+<li><span class="math inline">R</span> <strong>simmetrica</strong> <span
+class="math inline">\iff \forall x, y \in R \quad (x, y) \in R \implies
+(y, x) \in R</span></li>
 </ul>
 </blockquote>
 <ul>
@@ -213,12 +227,12 @@ class="math inline">\(S \times S\)</span></li>
 </ul>
 <blockquote>
 <ul>
-<li><span class="math inline">\(S\)</span> insieme</li>
-<li><span class="math inline">\(R\)</span> relazione in <span
-class="math inline">\(S \times S\)</span></li>
-<li><span class="math inline">\(R\)</span> <strong>transitiva</strong>
-<span class="math inline">\(\iff \forall x, y, z \in R \quad (x, y) \in
-R \land (y, z) \in R \implies (x, z) \in R\)</span></li>
+<li><span class="math inline">S</span> insieme</li>
+<li><span class="math inline">R</span> relazione in <span
+class="math inline">S \times S</span></li>
+<li><span class="math inline">R</span> <strong>transitiva</strong> <span
+class="math inline">\iff \forall x, y, z \in R \quad (x, y) \in R \land
+(y, z) \in R \implies (x, z) \in R</span></li>
 </ul>
 </blockquote>
 <ul>
@@ -226,12 +240,12 @@ R \land (y, z) \in R \implies (x, z) \in R\)</span></li>
 </ul>
 <blockquote>
 <ul>
-<li><span class="math inline">\(S\)</span> insieme</li>
-<li><span class="math inline">\(R\)</span> relazione in <span
-class="math inline">\(S \times S\)</span></li>
-<li><span class="math inline">\(R\)</span> <strong>transitiva</strong>
-<span class="math inline">\(\iff \forall x, y \in R \quad (x, y) \in R
-\land (y, x) \in R \implies x = y\)</span></li>
+<li><span class="math inline">S</span> insieme</li>
+<li><span class="math inline">R</span> relazione in <span
+class="math inline">S \times S</span></li>
+<li><span class="math inline">R</span> <strong>transitiva</strong> <span
+class="math inline">\iff \forall x, y \in R \quad (x, y) \in R \land (y,
+x) \in R \implies x = y</span></li>
 </ul>
 </blockquote>
 <ul>
@@ -239,12 +253,12 @@ class="math inline">\(S \times S\)</span></li>
 </ul>
 <blockquote>
 <ul>
-<li><span class="math inline">\(S\)</span> insieme</li>
-<li><span class="math inline">\(R\)</span> relazione in <span
-class="math inline">\(S \times S\)</span></li>
-<li><span class="math inline">\(R\)</span> <strong>totale</strong> <span
-class="math inline">\(\iff \forall x, y \in R \quad (x, y) \in R \lor
-(y, x) \in R\)</span></li>
+<li><span class="math inline">S</span> insieme</li>
+<li><span class="math inline">R</span> relazione in <span
+class="math inline">S \times S</span></li>
+<li><span class="math inline">R</span> <strong>totale</strong> <span
+class="math inline">\iff \forall x, y \in R \quad (x, y) \in R \lor (y,
+x) \in R</span></li>
 </ul>
 </blockquote>
 <ul>
@@ -252,12 +266,12 @@ class="math inline">\(\iff \forall x, y \in R \quad (x, y) \in R \lor
 </ul>
 <blockquote>
 <ul>
-<li><span class="math inline">\(S\)</span> insieme</li>
-<li><span class="math inline">\(R\)</span> relazione in <span
-class="math inline">\(S \times S\)</span></li>
-<li><span class="math inline">\(R\)</span> è una <strong>relazione di
-equivalenza</strong> <span class="math inline">\(\iff R\)</span>
-riflessiva, simmetrica e transitiva</li>
+<li><span class="math inline">S</span> insieme</li>
+<li><span class="math inline">R</span> relazione in <span
+class="math inline">S \times S</span></li>
+<li><span class="math inline">R</span> è una <strong>relazione di
+equivalenza</strong> <span class="math inline">\iff R</span> riflessiva,
+simmetrica e transitiva</li>
 </ul>
 </blockquote>
 <ul>
@@ -265,12 +279,12 @@ riflessiva, simmetrica e transitiva</li>
 </ul>
 <blockquote>
 <ul>
-<li><span class="math inline">\(S\)</span> insieme</li>
-<li><span class="math inline">\(R\)</span> relazione in <span
-class="math inline">\(S \times S\)</span></li>
-<li><span class="math inline">\(R\)</span> <strong>ordine
-parziale</strong> <span class="math inline">\(\iff R\)</span>
-riflessiva, transitiva e antisimmetrica</li>
+<li><span class="math inline">S</span> insieme</li>
+<li><span class="math inline">R</span> relazione in <span
+class="math inline">S \times S</span></li>
+<li><span class="math inline">R</span> <strong>ordine parziale</strong>
+<span class="math inline">\iff R</span> riflessiva, transitiva e
+antisimmetrica</li>
 </ul>
 </blockquote>
 <ul>
@@ -278,52 +292,52 @@ riflessiva, transitiva e antisimmetrica</li>
 </ul>
 <blockquote>
 <ul>
-<li><span class="math inline">\(S\)</span> insieme</li>
-<li><span class="math inline">\(R\)</span> relazione in <span
-class="math inline">\(S \times S\)</span></li>
-<li><span class="math inline">\(R\)</span> <strong>ordine
-totale</strong> <span class="math inline">\(\iff R\)</span> ordine
-parziale in cui vale la totalità</li>
+<li><span class="math inline">S</span> insieme</li>
+<li><span class="math inline">R</span> relazione in <span
+class="math inline">S \times S</span></li>
+<li><span class="math inline">R</span> <strong>ordine totale</strong>
+<span class="math inline">\iff R</span> ordine parziale in cui vale la
+totalità</li>
 </ul>
 </blockquote>
 <h2 id="ex">Ex</h2>
 <ul>
 <li><strong>Hp</strong>
 <ul>
-<li><span class="math inline">\(m, n \in \mathbb{N}\)</span></li>
-<li><span class="math inline">\(m \mid n \iff \exists p \in \mathbb{N}
-\mid mp = n\)</span></li>
+<li><span class="math inline">m, n \in \mathbb{N}</span></li>
+<li><span class="math inline">m \mid n \iff \exists p \in \mathbb{N}
+\mid mp = n</span></li>
 </ul></li>
 <li><strong>Th</strong>
 <ul>
-<li><span class="math inline">\(\mid\)</span> è ordine parziale</li>
+<li><span class="math inline">\mid</span> è ordine parziale</li>
 </ul></li>
 <li><strong>Dim</strong>
 <ul>
-<li><em>riflessività</em>: <span class="math inline">\(\forall x \in
-\mathbb{N} \quad x\mid x\)</span>
+<li><em>riflessività</em>: <span class="math inline">\forall x \in
+\mathbb{N} \quad x\mid x</span>
 <ul>
-<li><span class="math inline">\(x\mid x \iff \exists p \in \mathbb{N}
-\mid x p=x \iff p = 1 \in \mathbb{N}\)</span></li>
+<li><span class="math inline">x\mid x \iff \exists p \in \mathbb{N} \mid
+x p=x \iff p = 1 \in \mathbb{N}</span></li>
 </ul></li>
-<li><em>transitività</em>: <span class="math inline">\(\forall d, m, n
-\in \mathbb{N} \quad d \mid m \wedge m| n \implies d \mid n\)</span>
+<li><em>transitività</em>: <span class="math inline">\forall d, m, n \in
+\mathbb{N} \quad d \mid m \wedge m| n \implies d \mid n</span>
 <ul>
-<li><span class="math inline">\(\left.\begin{array}{l}d \mid m \iff
+<li><span class="math inline">\left.\begin{array}{l}d \mid m \iff
 \exists p_{1} \in \mathbb{N}\mid d p_{1}=m \\ m\mid n \iff \exists p_{2}
 \in \mathbb{N}\mid m p_{2}=n\end{array}\right\} \implies d p_{1} p_{2}=n
-\implies d \mid n\)</span> poiché <span class="math inline">\(p_1 \in
+\implies d \mid n</span> poiché <span class="math inline">p_1 \in
 \mathbb{N} \land p_2 \in \mathbb{N} \implies p_1 p_2 \in
-\mathbb{N}\)</span></li>
+\mathbb{N}</span></li>
 </ul></li>
-<li><em>antisimmetria</em>: <span class="math inline">\(\forall m, n \in
-\mathbb{N}, \ m\mid n \wedge n\mid m \implies m=n\)</span>
+<li><em>antisimmetria</em>: <span class="math inline">\forall m, n \in
+\mathbb{N}, \ m\mid n \wedge n\mid m \implies m=n</span>
 <ul>
-<li><span class="math inline">\(\left.\begin{array}{l}m\mid n \iff
-\exists p_{1} \in \mathbb{N}\mid m p_{1}=n \\ n\mid m \iff \exists p_{2}
-\in \mathbb{N}\mid n p_{2}=m\end{array}\right\} \implies m p_{1} p_{2}=m
-\iff p_1 p_2 = 1 \iff p_1 = p_2 = 1\)</span>, e dunque <span
-class="math inline">\(m p_1 =n \iff m = n\)</span></li>
+<li><span class="math inline">\left.\begin{array}{l}m\mid n \iff \exists
+p_{1} \in \mathbb{N}\mid m p_{1}=n \\ n\mid m \iff \exists p_{2} \in
+\mathbb{N}\mid n p_{2}=m\end{array}\right\} \implies m p_{1} p_{2}=m
+\iff p_1 p_2 = 1 \iff p_1 = p_2 = 1</span>, e dunque <span
+class="math inline">m p_1 =n \iff m = n</span></li>
 </ul></li>
 </ul></li>
 </ul>
@@ -331,58 +345,57 @@ class="math inline">\(m p_1 =n \iff m = n\)</span></li>
 <ul>
 <li><strong>Hp</strong>
 <ul>
-<li><span class="math inline">\(a, b \in \mathbb{Z}\)</span></li>
-<li><span class="math inline">\(a \equiv b \ (\bmod \ n) \iff m \mid
-b-a\)</span> è detta congruenza modulo <span
-class="math inline">\(n\)</span></li>
+<li><span class="math inline">a, b \in \mathbb{Z}</span></li>
+<li><span class="math inline">a \equiv b \ (\bmod \ n) \iff m \mid
+b-a</span> è detta congruenza modulo <span
+class="math inline">n</span></li>
 </ul></li>
 <li><strong>Th</strong>
 <ul>
-<li><span class="math inline">\(\equiv\)</span> è una relazione di
+<li><span class="math inline">\equiv</span> è una relazione di
 equivalenza</li>
 </ul></li>
 <li><strong>Dim</strong>
 <ul>
-<li><em>riflessività</em>: <span class="math inline">\(\forall a \in
-\mathbb{Z} \quad a \equiv a \ (\bmod \ n)\)</span>
+<li><em>riflessività</em>: <span class="math inline">\forall a \in
+\mathbb{Z} \quad a \equiv a \ (\bmod \ n)</span>
 <ul>
-<li><span class="math inline">\(a \equiv a \ (\bmod \ n) \iff n \mid a -
-a \iff n \mid 0 \iff \exists p \in \mathbb{Z} \mid n p = 0 \iff p = 0
-\in \mathbb{Z}\)</span></li>
+<li><span class="math inline">a \equiv a \ (\bmod \ n) \iff n \mid a - a
+\iff n \mid 0 \iff \exists p \in \mathbb{Z} \mid n p = 0 \iff p = 0 \in
+\mathbb{Z}</span></li>
 </ul></li>
-<li><em>simmetria</em>: <span class="math inline">\(\forall a, b \in
+<li><em>simmetria</em>: <span class="math inline">\forall a, b \in
 \mathbb{Z}\quad a \equiv b \ (\bmod \ n) \implies b \equiv a \ (\bmod \
-n)\)</span>
+n)</span>
 <ul>
-<li><span class="math inline">\(a \equiv b \ (\bmod \ n) \iff n \mid b -
-a \iff \exists p_1 \in \mathbb{Z} \mid n p_1 = b - a\)</span></li>
-<li><span class="math inline">\(b \equiv a \ (\bmod \ n) \iff n \mid a -
-b \iff \exists p_2 \in \mathbb{Z} \mid n p_2 = a - b\)</span></li>
-<li><span class="math inline">\(\left.\begin{array}{l}n p_{1}=b-a
-\implies b=n p_{1}+a \\ n p_{2}=a-b\end{array}\right\} \implies np_2 = a
-- np_1 - a = -np_1\)</span>, e dunque <span class="math inline">\(np_2 =
--np_1 \iff np_2+np_1 = 0 \iff n(p_2 + p_1)=0\)</span></li>
-<li><span class="math inline">\(n \neq 0\implies n(p_2+p_1) 0 \iff
-p_{2}+p_{1}=0 \implies -p_{2}=p_{1}\)</span></li>
-<li><span class="math inline">\(n\mid b -a \iff np_1= b - a \iff n(-p_2)
-= b - a \iff np_2 = a - b \iff n \mid a- b\)</span></li>
+<li><span class="math inline">a \equiv b \ (\bmod \ n) \iff n \mid b - a
+\iff \exists p_1 \in \mathbb{Z} \mid n p_1 = b - a</span></li>
+<li><span class="math inline">b \equiv a \ (\bmod \ n) \iff n \mid a - b
+\iff \exists p_2 \in \mathbb{Z} \mid n p_2 = a - b</span></li>
+<li><span class="math inline">\left.\begin{array}{l}n p_{1}=b-a \implies
+b=n p_{1}+a \\ n p_{2}=a-b\end{array}\right\} \implies np_2 = a - np_1 -
+a = -np_1</span>, e dunque <span class="math inline">np_2 = -np_1 \iff
+np_2+np_1 = 0 \iff n(p_2 + p_1)=0</span></li>
+<li><span class="math inline">n \neq 0\implies n(p_2+p_1) 0 \iff
+p_{2}+p_{1}=0 \implies -p_{2}=p_{1}</span></li>
+<li><span class="math inline">n\mid b -a \iff np_1= b - a \iff n(-p_2) =
+b - a \iff np_2 = a - b \iff n \mid a- b</span></li>
 </ul></li>
-<li><em>transitivtà</em>: <span class="math inline">\(\forall a, b, c
-\in \mathbb{Z} \quad a \equiv b \ (\bmod \ n) \land b \equiv c \ (\bmod
-\ n) \implies a \equiv c \ (\bmod \ n)\)</span>
+<li><em>transitivtà</em>: <span class="math inline">\forall a, b, c \in
+\mathbb{Z} \quad a \equiv b \ (\bmod \ n) \land b \equiv c \ (\bmod \ n)
+\implies a \equiv c \ (\bmod \ n)</span>
 <ul>
-<li><span class="math inline">\(a \equiv b \ (\bmod \ n) \iff n \mid b -
-a \iff \exists p_1 \in \mathbb{Z} \mid n p_1 = b - a\)</span></li>
-<li><span class="math inline">\(b \equiv c \ (\bmod \ n) \iff n \mid c -
-b \iff \exists p_2 \in \mathbb{Z} \mid n p_2 = c - b\)</span></li>
-<li><span class="math inline">\(\left.\begin{array}{l}n p_{1}=b-a
-\implies b=n p_{1}+a \\ n p_{2}=c-b\end{array}\right\} \implies np_2 = c
-- np_2 - a \iff np_2 + np_1 = c - a \implies n(p_2 + p_1)=c
--a\)</span></li>
-<li><span class="math inline">\(p_{1}, p_{2} \in \mathbb{Z} \implies
-p_{1}+p_{2} \in \mathbb{Z}\)</span>, e qundue per la proposizione
-precedente <span class="math inline">\(\exists p_1 + p_2 \in \mathbb{Z}
-\mid n(p_1 + p_2) = c - a \iff n \mid c - a\)</span></li>
+<li><span class="math inline">a \equiv b \ (\bmod \ n) \iff n \mid b - a
+\iff \exists p_1 \in \mathbb{Z} \mid n p_1 = b - a</span></li>
+<li><span class="math inline">b \equiv c \ (\bmod \ n) \iff n \mid c - b
+\iff \exists p_2 \in \mathbb{Z} \mid n p_2 = c - b</span></li>
+<li><span class="math inline">\left.\begin{array}{l}n p_{1}=b-a \implies
+b=n p_{1}+a \\ n p_{2}=c-b\end{array}\right\} \implies np_2 = c - np_2 -
+a \iff np_2 + np_1 = c - a \implies n(p_2 + p_1)=c -a</span></li>
+<li><span class="math inline">p_{1}, p_{2} \in \mathbb{Z} \implies
+p_{1}+p_{2} \in \mathbb{Z}</span>, e qundue per la proposizione
+precedente <span class="math inline">\exists p_1 + p_2 \in \mathbb{Z}
+\mid n(p_1 + p_2) = c - a \iff n \mid c - a</span></li>
 </ul></li>
 </ul></li>
 </ul>
@@ -390,86 +403,85 @@ precedente <span class="math inline">\(\exists p_1 + p_2 \in \mathbb{Z}
 <ul>
 <li><strong>Hp</strong>
 <ul>
-<li><span class="math inline">\(x, y \in \mathbb{Z} \mid x \equiv y \
-(\bmod \ n)\)</span></li>
-<li><span class="math inline">\(d \in \mathbb{Z} : d\mid n\)</span></li>
+<li><span class="math inline">x, y \in \mathbb{Z} \mid x \equiv y \
+(\bmod \ n)</span></li>
+<li><span class="math inline">d \in \mathbb{Z} : d\mid n</span></li>
 </ul></li>
 <li><strong>Th</strong>
 <ul>
-<li><span class="math inline">\(x \equiv y \ (\bmod \ d)\)</span></li>
+<li><span class="math inline">x \equiv y \ (\bmod \ d)</span></li>
 </ul></li>
 <li><strong>Dim</strong>
 <ul>
-<li><span class="math inline">\(x \equiv y \ (\bmod \ n) \iff n \mid y -
-x \iff \exists p \in \mathbb{Z} \mid np = y - x\)</span></li>
-<li><span class="math inline">\(d \mid n \iff \exists k \in \mathbb{Z}
-\mid dk = n\)</span></li>
-<li>allora, <span class="math inline">\(np = y - x \iff dkp = y -x
+<li><span class="math inline">x \equiv y \ (\bmod \ n) \iff n \mid y - x
+\iff \exists p \in \mathbb{Z} \mid np = y - x</span></li>
+<li><span class="math inline">d \mid n \iff \exists k \in \mathbb{Z}
+\mid dk = n</span></li>
+<li>allora, <span class="math inline">np = y - x \iff dkp = y -x
 \implies \exists kp \in \mathbb{Z} : d \mid y - x \iff x \equiv y \
-(\bmod \ d)\)</span></li>
+(\bmod \ d)</span></li>
 </ul></li>
 </ul>
 <h2 id="oss-1">Oss</h2>
 <ul>
 <li><strong>Hp</strong>
 <ul>
-<li><span class="math inline">\(n \in \mathbb{N}\)</span></li>
-<li><span class="math inline">\([a], [b] \in \mathbb{Z}_n\)</span></li>
-<li><span class="math inline">\(d:= \textrm{MCD}(a, n)\)</span></li>
+<li><span class="math inline">n \in \mathbb{N}</span></li>
+<li><span class="math inline">[a], [b] \in \mathbb{Z}_n</span></li>
+<li><span class="math inline">d:= \textrm{MCD}(a, n)</span></li>
 </ul></li>
 <li><strong>Th</strong>
 <ul>
-<li><span class="math inline">\(d \nmid b \implies \nexists [x] \in
-\mathbb{Z}_n \mid ax \equiv b \ (\bmod \ n)\)</span></li>
-<li><span class="math inline">\(d \mid b \implies \forall [x] \in
-\mathbb{Z}_n \mid ax \equiv b \ (\bmod \ n) \quad x\)</span> è anche
-tale che <span class="math inline">\(\dfrac{a}{d}x \equiv \dfrac{b}{d} \
-\left(\bmod \ \dfrac{n}{d}\right)\)</span></li>
+<li><span class="math inline">d \nmid b \implies \nexists [x] \in
+\mathbb{Z}_n \mid ax \equiv b \ (\bmod \ n)</span></li>
+<li><span class="math inline">d \mid b \implies \forall [x] \in
+\mathbb{Z}_n \mid ax \equiv b \ (\bmod \ n) \quad x</span> è anche tale
+che <span class="math inline">\dfrac{a}{d}x \equiv \dfrac{b}{d} \
+\left(\bmod \ \dfrac{n}{d}\right)</span></li>
 </ul></li>
 </ul>
 <h2 id="ex-2">Ex</h2>
 <ul>
 <li><strong>Hp</strong>
 <ul>
-<li><span class="math inline">\(G\)</span> gruppo</li>
-<li><span class="math inline">\(g, h \in G\)</span></li>
-<li><span class="math inline">\(g \sim h \iff \exists a \in G \mid h =
-a\cdot g \cdot a^{-1}\)</span> è detta <em>relazione di
-coniugio</em></li>
+<li><span class="math inline">G</span> gruppo</li>
+<li><span class="math inline">g, h \in G</span></li>
+<li><span class="math inline">g \sim h \iff \exists a \in G \mid h =
+a\cdot g \cdot a^{-1}</span> è detta <em>relazione di coniugio</em></li>
 </ul></li>
 <li><strong>Th</strong>
 <ul>
-<li><span class="math inline">\(\sim\)</span> è una relazione di
+<li><span class="math inline">\sim</span> è una relazione di
 equivalenza</li>
 </ul></li>
 <li><strong>Dim</strong>
 <ul>
-<li><em>riflessività</em>: <span class="math inline">\(\forall g \in G
-\quad g \sim g\)</span>
+<li><em>riflessività</em>: <span class="math inline">\forall g \in G
+\quad g \sim g</span>
 <ul>
-<li><span class="math inline">\(g = 1 \cdot g \cdot 1^{-1} \implies g
-\sim g\)</span></li>
+<li><span class="math inline">g = 1 \cdot g \cdot 1^{-1} \implies g \sim
+g</span></li>
 </ul></li>
-<li><em>simmetria</em>: <span class="math inline">\(\forall g, h \in G
-\quad g \sim h \implies h \sim g\)</span>
+<li><em>simmetria</em>: <span class="math inline">\forall g, h \in G
+\quad g \sim h \implies h \sim g</span>
 <ul>
-<li><span class="math inline">\(g \sim h \implies \exists a \in G \mid h
-= a \cdot g \cdot a^{-1} \iff a^{-1} \cdot h = a^{-1} \cdot a \cdot g
+<li><span class="math inline">g \sim h \implies \exists a \in G \mid h =
+a \cdot g \cdot a^{-1} \iff a^{-1} \cdot h = a^{-1} \cdot a \cdot g
 \cdot a^{-1} \iff a^{-1} \cdot h = g \cdot a^{-1}\iff a^{-1} \cdot h
 \cdot a = g \cdot a^{-1} \cdot a \iff a ^{-1} \cdot h \cdot a =
-g\)</span></li>
-<li><span class="math inline">\(b := a^{-1} \implies b \cdot h \cdot
-b^{-1} = g \implies h \sim g\)</span></li>
+g</span></li>
+<li><span class="math inline">b := a^{-1} \implies b \cdot h \cdot
+b^{-1} = g \implies h \sim g</span></li>
 </ul></li>
-<li><em>transitività</em>: <span class="math inline">\(\forall g, h, k
-\in G \quad g \sim h \land h \sim k \implies g \sim k\)</span>
+<li><em>transitività</em>: <span class="math inline">\forall g, h, k \in
+G \quad g \sim h \land h \sim k \implies g \sim k</span>
 <ul>
-<li><span class="math inline">\(g \sim h \land h \sim k \implies \exists
+<li><span class="math inline">g \sim h \land h \sim k \implies \exists
 a, b \mid h = a \cdot g \cdot a^{-1} \land k = b \cdot h \cdot b^{-1}
-\implies k = b \cdot a \cdot g \cdot a ^{-1} \cdot b^{-1}\)</span></li>
-<li><span class="math inline">\(c:= b \cdot a \implies c^{-1} = a^{-1}
+\implies k = b \cdot a \cdot g \cdot a ^{-1} \cdot b^{-1}</span></li>
+<li><span class="math inline">c:= b \cdot a \implies c^{-1} = a^{-1}
 \cdot b^{-1} \implies k = c \cdot g \cdot c^{-1} \implies g \sim
-k\)</span></li>
+k</span></li>
 </ul></li>
 </ul></li>
 </ul>
@@ -481,50 +493,50 @@ k\)</span></li>
 </ul>
 <blockquote>
 <ul>
-<li><span class="math inline">\(X\)</span> insieme</li>
-<li><span class="math inline">\(I\)</span> insieme di indici</li>
-<li><span class="math inline">\(\forall i \in I \quad X_i \subset
-X\)</span></li>
-<li><span class="math inline">\(\displaystyle X = \coprod_{i \in
-I}X_i\)</span></li>
+<li><span class="math inline">X</span> insieme</li>
+<li><span class="math inline">I</span> insieme di indici</li>
+<li><span class="math inline">\forall i \in I \quad X_i \subset
+X</span></li>
+<li><span class="math inline">\displaystyle X = \coprod_{i \in
+I}X_i</span></li>
 </ul>
 </blockquote>
 <h2 id="oss-2">Oss</h2>
 <ul>
 <li><strong>Hp</strong>
 <ul>
-<li><span class="math inline">\(G\)</span> gruppo</li>
+<li><span class="math inline">G</span> gruppo</li>
 </ul></li>
 <li><strong>Th</strong>
 <ul>
-<li><span class="math inline">\(\forall x, y \in G \quad x \nsim y \iff
-[x] \cap [y] = \varnothing \lor x \sim y \iff [x] = [y]\)</span></li>
+<li><span class="math inline">\forall x, y \in G \quad x \nsim y \iff
+[x] \cap [y] = \varnothing \lor x \sim y \iff [x] = [y]</span></li>
 </ul></li>
 <li><strong>Dim</strong>
 <ul>
-<li><span class="math inline">\(x \sim y \iff [x] = [y]\)</span>
+<li><span class="math inline">x \sim y \iff [x] = [y]</span>
 <ul>
-<li><span class="math inline">\(\forall x, y \in G \mid x \sim
-y\)</span>, sia <span class="math inline">\(z \in [x] \implies z \sim x
-\land x \sim y \implies z \sim y\)</span> per transitività di <span
-class="math inline">\(\sim \implies z \in [y]\)</span></li>
-<li><span class="math inline">\(\forall x, y \in G \mid y \sim
-x\)</span>, sia <span class="math inline">\(z \in [y] \implies z \sim y
-\land y \sim x \implies z \sim x\)</span> per transitività si <span
-class="math inline">\(\sim \implies z \in [x]\)</span></li>
-<li>poiché <span class="math inline">\(\sim\)</span> è relazione di
-equivalenza, allora <span class="math inline">\(x \sim y \iff y \sim
-x\)</span>, allora <span class="math inline">\(z \in [y] \land z \in [x]
-\implies[x] = [y]\)</span> necessariamente</li>
+<li><span class="math inline">\forall x, y \in G \mid x \sim y</span>,
+sia <span class="math inline">z \in [x] \implies z \sim x \land x \sim y
+\implies z \sim y</span> per transitività di <span
+class="math inline">\sim \implies z \in [y]</span></li>
+<li><span class="math inline">\forall x, y \in G \mid y \sim x</span>,
+sia <span class="math inline">z \in [y] \implies z \sim y \land y \sim x
+\implies z \sim x</span> per transitività si <span
+class="math inline">\sim \implies z \in [x]</span></li>
+<li>poiché <span class="math inline">\sim</span> è relazione di
+equivalenza, allora <span class="math inline">x \sim y \iff y \sim
+x</span>, allora <span class="math inline">z \in [y] \land z \in [x]
+\implies[x] = [y]</span> necessariamente</li>
 </ul></li>
-<li><span class="math inline">\(x \nsim y \iff [x] \cap [y] =
-\varnothing\)</span>
+<li><span class="math inline">x \nsim y \iff [x] \cap [y] =
+\varnothing</span>
 <ul>
-<li>ipotizzando che <span class="math inline">\([x] \cap [y] \neq
+<li>ipotizzando che <span class="math inline">[x] \cap [y] \neq
 \varnothing \implies \exists z \in [x] \cap [y] \implies z \in [x] \land
-z \in [y] \implies z \sim x \land z \sim y\)</span>, che per simmetria e
-transitività di <span class="math inline">\(\sim\implies x \sim y \
-\bot\)</span></li>
+z \in [y] \implies z \sim x \land z \sim y</span>, che per simmetria e
+transitività di <span class="math inline">\sim\implies x \sim y \
+\bot</span></li>
 </ul></li>
 </ul></li>
 </ul>
@@ -532,16 +544,16 @@ transitività di <span class="math inline">\(\sim\implies x \sim y \
 <ul>
 <li><strong>Hp</strong>
 <ul>
-<li><span class="math inline">\(G\)</span> gruppo</li>
-<li><span class="math inline">\(\sim\)</span> è una relazione di
-equivalenza in <span class="math inline">\(G\)</span></li>
+<li><span class="math inline">G</span> gruppo</li>
+<li><span class="math inline">\sim</span> è una relazione di equivalenza
+in <span class="math inline">G</span></li>
 </ul></li>
 <li><strong>Th</strong>
 <ul>
-<li><span class="math inline">\(\sim\)</span> induce una partizione di
-<span class="math inline">\(G\)</span>, dunque <span
-class="math inline">\(\displaystyle G = \coprod_{[x] \in
-X/\sim}[x]\)</span></li>
+<li><span class="math inline">\sim</span> induce una partizione di <span
+class="math inline">G</span>, dunque <span
+class="math inline">\displaystyle G = \coprod_{[x] \in
+X/\sim}[x]</span></li>
 </ul></li>
 <li><strong>Dim</strong>
 <ul>
@@ -554,61 +566,58 @@ X/\sim}[x]\)</span></li>
 <ul>
 <li><strong>Hp</strong>
 <ul>
-<li><span class="math inline">\(G\)</span> gruppo</li>
-<li><span class="math inline">\(H \subset G\)</span> sottogruppo</li>
-<li><span class="math inline">\(x, y \in G\)</span></li>
+<li><span class="math inline">G</span> gruppo</li>
+<li><span class="math inline">H \subset G</span> sottogruppo</li>
+<li><span class="math inline">x, y \in G</span></li>
 </ul></li>
 <li><strong>Th</strong>
 <ul>
-<li><span class="math inline">\(x \sim_S y \iff x^{-1}y \in H\)</span> è
-una relazione di equivalenza</li>
+<li><span class="math inline">x \sim_S y \iff x^{-1}y \in H</span> è una
+relazione di equivalenza</li>
 </ul></li>
 <li><strong>Dim</strong>
 <ul>
-<li><em>riflessività</em>: <span class="math inline">\(x \sim x\)</span>
+<li><em>riflessività</em>: <span class="math inline">x \sim x</span>
 <ul>
-<li><span class="math inline">\(x^{-1}x \in H \quad \forall x\)</span>
-perché <span class="math inline">\(H\)</span> sottogruppo, dunque chiuso
-rispetto a prodotto ed inversi, e <span class="math inline">\(x^{-1}x =
-1 \in H\)</span></li>
+<li><span class="math inline">x^{-1}x \in H \quad \forall x</span>
+perché <span class="math inline">H</span> sottogruppo, dunque chiuso
+rispetto a prodotto ed inversi, e <span class="math inline">x^{-1}x = 1
+\in H</span></li>
 </ul></li>
-<li><em>simmetria</em>: <span class="math inline">\(x \sim y \implies y
-\sim x\)</span>
+<li><em>simmetria</em>: <span class="math inline">x \sim y \implies y
+\sim x</span>
 <ul>
-<li><span class="math inline">\(x \sim y \implies x^{-1}y \in H,\quad y
-\sim x \implies y^{-1}x \in H\)</span>
+<li><span class="math inline">x \sim y \implies x^{-1}y \in H,\quad y
+\sim x \implies y^{-1}x \in H</span>
 <ul>
-<li><span class="math inline">\(\forall x, y \in G \quad (x^{-1}y)^{-1}
-= (y^{-1} x)\)</span>
+<li><span class="math inline">\forall x, y \in G \quad (x^{-1}y)^{-1} =
+(y^{-1} x)</span>
 <ul>
-<li><span
-class="math inline">\((xy)(y^{-1}x^{-1})=x(yy^{-1})x^{-1}\)</span> per
-associatività di <span class="math inline">\(G\)</span>, e <span
-class="math inline">\(xx^{-1} = 1\)</span>, dunque necessariamente <span
-class="math inline">\((xy)^{-1}=(y^{-1}x^{-1})\)</span>, e in
-particolare, <span
-class="math inline">\((x^{-1}y)^{-1}=(y^{-1}x)\)</span></li>
+<li><span class="math inline">(xy)(y^{-1}x^{-1})=x(yy^{-1})x^{-1}</span>
+per associatività di <span class="math inline">G</span>, e <span
+class="math inline">xx^{-1} = 1</span>, dunque necessariamente <span
+class="math inline">(xy)^{-1}=(y^{-1}x^{-1})</span>, e in particolare,
+<span class="math inline">(x^{-1}y)^{-1}=(y^{-1}x)</span></li>
 </ul></li>
-<li><span class="math inline">\(h:=x^{-1}y \implies h^{-1} =y^{-1}x \in
-H\)</span> perché <span class="math inline">\(H\)</span> sottogruppo
-<span class="math inline">\(\iff h^{-1} \in H \iff y \sim
-x\)</span></li>
+<li><span class="math inline">h:=x^{-1}y \implies h^{-1} =y^{-1}x \in
+H</span> perché <span class="math inline">H</span> sottogruppo <span
+class="math inline">\iff h^{-1} \in H \iff y \sim x</span></li>
 </ul></li>
 </ul></li>
-<li><em>transitività</em>: <span class="math inline">\(x \sim y \land y
-\sim z \implies x \sim z\)</span>
+<li><em>transitività</em>: <span class="math inline">x \sim y \land y
+\sim z \implies x \sim z</span>
 <ul>
-<li><span class="math inline">\(\left.\begin{array}{l}h:=x^{-1} y \in H
-\\ k:=y^{-1} z \in H\end{array}\right\} \implies a:=h \cdot k=x^{-1} y
-\cdot y^{-1} z= x^{-1} z\)</span></li>
-<li><span class="math inline">\(a \in H\)</span> perche <span
-class="math inline">\(H\)</span> sottogruppo, dunque chiuso su <span
-class="math inline">\(\cdot\)</span>, e dunque <span
-class="math inline">\(\implies a \in H \iff x^{-1}z \in H \iff x \sim
-z\)</span>
+<li><span class="math inline">\left.\begin{array}{l}h:=x^{-1} y \in H \\
+k:=y^{-1} z \in H\end{array}\right\} \implies a:=h \cdot k=x^{-1} y
+\cdot y^{-1} z= x^{-1} z</span></li>
+<li><span class="math inline">a \in H</span> perche <span
+class="math inline">H</span> sottogruppo, dunque chiuso su <span
+class="math inline">\cdot</span>, e dunque <span
+class="math inline">\implies a \in H \iff x^{-1}z \in H \iff x \sim
+z</span>
 <ul>
-<li>quindi basta considerare il prodotto <span class="math inline">\(h
-\cdot k\)</span> per ottenere l’elemento di transitività</li>
+<li>quindi basta considerare il prodotto <span class="math inline">h
+\cdot k</span> per ottenere l’elemento di transitività</li>
 </ul></li>
 </ul></li>
 </ul></li>
@@ -619,19 +628,19 @@ z\)</span>
 </ul>
 <blockquote>
 <ul>
-<li><span class="math inline">\((G, \cdot)\)</span> gruppo</li>
-<li><span class="math inline">\((H, \cdot) \subset (G, \cdot)\)</span>
+<li><span class="math inline">(G, \cdot)</span> gruppo</li>
+<li><span class="math inline">(H, \cdot) \subset (G, \cdot)</span>
 sottogruppo</li>
-<li><span class="math inline">\(\forall x,y \in G \quad x \sim_S y \iff
-x^{-1}y \in H\)</span> è una relazione di equivalenza</li>
-<li><span class="math inline">\(\forall x, y \in G \quad x \sim_D y \iff
-xy^{-1} \in H\)</span> è una relazione di equivalenza</li>
-<li><span class="math inline">\(x \in G\)</span></li>
-<li><span class="math inline">\([x] = \{y \in G \mid y \sim_S
-x\}\)</span> è detta <strong>classe laterale sinistra</strong></li>
-<li><span class="math inline">\([x] = \{y \in G \mid y \sim_D
-x\}\)</span> è detta <strong>classe laterale destra</strong></li>
-<li><span class="math inline">\(G/H := \{[x] \mid x \in G\}\)</span> è
+<li><span class="math inline">\forall x,y \in G \quad x \sim_S y \iff
+x^{-1}y \in H</span> è una relazione di equivalenza</li>
+<li><span class="math inline">\forall x, y \in G \quad x \sim_D y \iff
+xy^{-1} \in H</span> è una relazione di equivalenza</li>
+<li><span class="math inline">x \in G</span></li>
+<li><span class="math inline">[x] = \{y \in G \mid y \sim_S x\}</span> è
+detta <strong>classe laterale sinistra</strong></li>
+<li><span class="math inline">[x] = \{y \in G \mid y \sim_D x\}</span> è
+detta <strong>classe laterale destra</strong></li>
+<li><span class="math inline">G/H := \{[x] \mid x \in G\}</span> è
 l’<strong>insieme delle classi laterali sinistre o destre</strong></li>
 </ul>
 </blockquote>
@@ -639,79 +648,79 @@ l’<strong>insieme delle classi laterali sinistre o destre</strong></li>
 <ul>
 <li><strong>Hp</strong>
 <ul>
-<li><span class="math inline">\((\mathbb{Z}, +)\)</span> anello</li>
-<li><span class="math inline">\(n \in \mathbb{N}_{\ge 2}\)</span></li>
-<li><span class="math inline">\(I(n) := \{n k \mid k \in
-\mathbb{Z}\}\)</span></li>
-<li><span class="math inline">\(a, b \in \mathbb{Z}\)</span></li>
+<li><span class="math inline">(\mathbb{Z}, +)</span> anello</li>
+<li><span class="math inline">n \in \mathbb{N}_{\ge 2}</span></li>
+<li><span class="math inline">I(n) := \{n k \mid k \in
+\mathbb{Z}\}</span></li>
+<li><span class="math inline">a, b \in \mathbb{Z}</span></li>
 </ul></li>
 <li><strong>Th</strong>
 <ul>
-<li><span class="math inline">\(a \sim_S b \iff a \equiv b \ (\bmod \
-n)\)</span></li>
+<li><span class="math inline">a \sim_S b \iff a \equiv b \ (\bmod \
+n)</span></li>
 </ul></li>
 <li><strong>Dim</strong>
 <ul>
-<li><span class="math inline">\(a \equiv b \ (\bmod \ n) \iff n \mid b -
-a \iff \exists p \in \mathbb{Z} \mid n p = b - a\)</span>, ma allora
-<span class="math inline">\(b - a\)</span> è un multiplo di <span
-class="math inline">\(n\)</span>, quindi <span class="math inline">\(b -
-a \in I(n)\)</span> per definizione</li>
-<li><span class="math inline">\(I(n)\)</span> è un sottogruppo per
-dimostrazione precedente, dunque <span class="math inline">\(b - a =
-(-a) + b \in I(n) \iff a \sim_S b\)</span></li>
+<li><span class="math inline">a \equiv b \ (\bmod \ n) \iff n \mid b - a
+\iff \exists p \in \mathbb{Z} \mid n p = b - a</span>, ma allora <span
+class="math inline">b - a</span> è un multiplo di <span
+class="math inline">n</span>, quindi <span class="math inline">b - a \in
+I(n)</span> per definizione</li>
+<li><span class="math inline">I(n)</span> è un sottogruppo per
+dimostrazione precedente, dunque <span class="math inline">b - a = (-a)
++ b \in I(n) \iff a \sim_S b</span></li>
 </ul></li>
 </ul>
 <h2 id="oss-6">Oss</h2>
 <ul>
 <li><strong>Hp</strong>
 <ul>
-<li><span class="math inline">\(G\)</span> gruppo</li>
-<li><span class="math inline">\(H \subset G\)</span> sottogruppo</li>
+<li><span class="math inline">G</span> gruppo</li>
+<li><span class="math inline">H \subset G</span> sottogruppo</li>
 </ul></li>
 <li><strong>Th</strong>
 <ul>
-<li><span class="math inline">\(H = [1] \in G/H\)</span></li>
+<li><span class="math inline">H = [1] \in G/H</span></li>
 </ul></li>
 <li><strong>Dim</strong>
 <ul>
-<li><span class="math inline">\(\forall x \in G \quad 1 \sim x \iff
+<li><span class="math inline">\forall x \in G \quad 1 \sim x \iff
 1^{-1}x \in H \iff x \in H \implies \forall x \in H \quad 1 \sim
-x\)</span></li>
+x</span></li>
 </ul></li>
 </ul>
 <h2 id="oss-7">Oss</h2>
 <ul>
 <li><strong>Hp</strong>
 <ul>
-<li><span class="math inline">\(G\)</span> gruppo</li>
-<li><span class="math inline">\(H \subset G\)</span> sottogruppo</li>
-<li><span class="math inline">\(x \in G\)</span></li>
-<li><span class="math inline">\([x] = \{y \in G \mid y \sim_S
-x\}\)</span></li>
+<li><span class="math inline">G</span> gruppo</li>
+<li><span class="math inline">H \subset G</span> sottogruppo</li>
+<li><span class="math inline">x \in G</span></li>
+<li><span class="math inline">[x] = \{y \in G \mid y \sim_S
+x\}</span></li>
 </ul></li>
 <li><strong>Th</strong>
 <ul>
-<li><span class="math inline">\(xH:= \{ xh \mid h \in H\} =
-[x]\)</span></li>
+<li><span class="math inline">xH:= \{ xh \mid h \in H\} =
+[x]</span></li>
 </ul></li>
 <li><strong>Dim</strong>
 <ul>
-<li><span class="math inline">\([x] \subset xH\)</span>
+<li><span class="math inline">[x] \subset xH</span>
 <ul>
-<li><span class="math inline">\(y \in[x] \implies y \sim x \implies x
-\sim y \implies \exists h:= x^{-1}y \in H\)</span> <span
-class="math inline">\(\implies xh = x(x^{-1}y)=(xx^{-1})y=y \in
-H\)</span> in quanto <span class="math inline">\(H\)</span> è
-sottogruppo, quindi <span class="math inline">\(y \in [x] \implies
-\exists h \in H \mid y = xh \in H \implies y \in xH\)</span></li>
+<li><span class="math inline">y \in[x] \implies y \sim x \implies x \sim
+y \implies \exists h:= x^{-1}y \in H</span> <span
+class="math inline">\implies xh = x(x^{-1}y)=(xx^{-1})y=y \in H</span>
+in quanto <span class="math inline">H</span> è sottogruppo, quindi <span
+class="math inline">y \in [x] \implies \exists h \in H \mid y = xh \in H
+\implies y \in xH</span></li>
 </ul></li>
-<li><span class="math inline">\(xH \subset [x]\)</span>
+<li><span class="math inline">xH \subset [x]</span>
 <ul>
-<li><span class="math inline">\(y \in x H \implies \exists h \in H \mid
-y=x h \implies x^{-1}y = x^{-1}xh= h\)</span>, quindi <span
-class="math inline">\(h \in H \implies x^{-1}y \in H \implies x \sim y
-\implies y \in [x]\)</span></li>
+<li><span class="math inline">y \in x H \implies \exists h \in H \mid
+y=x h \implies x^{-1}y = x^{-1}xh= h</span>, quindi <span
+class="math inline">h \in H \implies x^{-1}y \in H \implies x \sim y
+\implies y \in [x]</span></li>
 </ul></li>
 </ul></li>
 </ul>
@@ -719,30 +728,28 @@ class="math inline">\(h \in H \implies x^{-1}y \in H \implies x \sim y
 <ul>
 <li><strong>Hp</strong>
 <ul>
-<li><span class="math inline">\(G\)</span> gruppo</li>
-<li><span class="math inline">\(H \subset G\)</span> sottogruppo</li>
-<li><span class="math inline">\(x \in G\)</span></li>
+<li><span class="math inline">G</span> gruppo</li>
+<li><span class="math inline">H \subset G</span> sottogruppo</li>
+<li><span class="math inline">x \in G</span></li>
 </ul></li>
 <li><strong>Th</strong>
 <ul>
-<li><span class="math inline">\(| xH |= |H|\)</span></li>
+<li><span class="math inline">| xH |= |H|</span></li>
 </ul></li>
 <li><strong>Dim</strong>
 <ul>
-<li><span class="math inline">\(\forall h, k \in H \quad h \neq k \iff
-xh \neq xk\)</span>, quindi simmetricamente <span
-class="math inline">\(h = k \iff xh = xk\)</span>, di conseguenza è
-possibile definire una funzione <span class="math inline">\(H
-\rightarrow xH : h \rightarrow xh\)</span>
+<li><span class="math inline">\forall h, k \in H \quad h \neq k \iff xh
+\neq xk</span>, quindi simmetricamente <span class="math inline">h = k
+\iff xh = xk</span>, di conseguenza è possibile definire una funzione
+<span class="math inline">H \rightarrow xH : h \rightarrow xh</span>
 <ul>
 <li>la funzione è suriettiva per costruzione, perché <span
-class="math inline">\(\forall h \quad \exists xh\)</span></li>
-<li>la funzione è iniettiva perché <span
-class="math inline">\(xh\)</span> è univoco <span
-class="math inline">\(\forall x, h\)</span></li>
+class="math inline">\forall h \quad \exists xh</span></li>
+<li>la funzione è iniettiva perché <span class="math inline">xh</span> è
+univoco <span class="math inline">\forall x, h</span></li>
 <li>la funzione è biiettiva, di conseguenza insieme di partenza e di
-arrivo hanno la stessa cardinalità, quindi <span
-class="math inline">\(|H| = |xH|\)</span></li>
+arrivo hanno la stessa cardinalità, quindi <span class="math inline">|H|
+= |xH|</span></li>
 </ul></li>
 </ul></li>
 </ul>
@@ -750,55 +757,53 @@ class="math inline">\(|H| = |xH|\)</span></li>
 <ul>
 <li><strong>Hp</strong>
 <ul>
-<li><span class="math inline">\(G\)</span> gruppo</li>
-<li><span class="math inline">\(H \subset G\)</span> sottogruppo</li>
-<li><span class="math inline">\(+: G/H \times G/H \rightarrow
-G/H\)</span></li>
+<li><span class="math inline">G</span> gruppo</li>
+<li><span class="math inline">H \subset G</span> sottogruppo</li>
+<li><span class="math inline">+: G/H \times G/H \rightarrow
+G/H</span></li>
 </ul></li>
 <li><strong>Th</strong>
 <ul>
-<li><span class="math inline">\((G/H, +)\)</span> è gruppo abeliano</li>
+<li><span class="math inline">(G/H, +)</span> è gruppo abeliano</li>
 </ul></li>
 <li><strong>Dim</strong>
 <ul>
-<li>bisogna dimostrare che <span class="math inline">\(+\)</span> è un
+<li>bisogna dimostrare che <span class="math inline">+</span> è un
 operazione ben definita</li>
-<li><span class="math inline">\(+\)</span> ben definita <span
-class="math inline">\(\iff\)</span><span
-class="math inline">\(\left.\forall x, x^{\prime}, y, y&#39; \in G \quad
+<li><span class="math inline">+</span> ben definita <span
+class="math inline">\iff</span><span class="math inline">\left.\forall
+x, x^{\prime}, y, y&#39; \in G \quad
 \begin{array}{l}{[x]=\left[x^{\prime}\right]} \\
 {[y]=\left[y^{\prime}\right]}\end{array}\right\}
-\implies[x+y]=\left[x^{\prime}+y&#39; \right]\)</span>
+\implies[x+y]=\left[x^{\prime}+y&#39; \right]</span>
 <ul>
-<li><span class="math inline">\(\forall k, k&#39; \in G \quad
-[k]=\left[k^{\prime}\right] \iff k \sim k^{\prime}\)</span>, dunque il
+<li><span class="math inline">\forall k, k&#39; \in G \quad
+[k]=\left[k^{\prime}\right] \iff k \sim k^{\prime}</span>, dunque il
 sistema precedente è equivalente a <span
-class="math inline">\(\left.\begin{array}{l}x \sim x^{\prime} \\ y \sim
+class="math inline">\left.\begin{array}{l}x \sim x^{\prime} \\ y \sim
 y^{\prime}\end{array}\right\} \implies x+y \sim
-x^{\prime}+y^{\prime}\)</span></li>
-<li><span class="math inline">\(x \sim x&#39; \iff (-x)+x&#39; \in H
-\implies x&#39; - x \in H\)</span></li>
-<li><span class="math inline">\(y \sim y&#39; \iff (-y) +y&#39; \in H
-\implies y&#39; - y \in H\)</span></li>
-<li><span class="math inline">\(H\)</span> è sottogruppo, di conseguenza
-<span class="math inline">\((x&#39;-x)+(y&#39;-y) \in H \implies
--(x+y)+(x&#39;+y&#39;) \in H \iff x +y \sim x&#39;+y&#39;\)</span></li>
+x^{\prime}+y^{\prime}</span></li>
+<li><span class="math inline">x \sim x&#39; \iff (-x)+x&#39; \in H
+\implies x&#39; - x \in H</span></li>
+<li><span class="math inline">y \sim y&#39; \iff (-y) +y&#39; \in H
+\implies y&#39; - y \in H</span></li>
+<li><span class="math inline">H</span> è sottogruppo, di conseguenza
+<span class="math inline">(x&#39;-x)+(y&#39;-y) \in H \implies
+-(x+y)+(x&#39;+y&#39;) \in H \iff x +y \sim x&#39;+y&#39;</span></li>
 </ul></li>
-<li><span class="math inline">\((G/H, +)\)</span> gruppo abeliano
+<li><span class="math inline">(G/H, +)</span> gruppo abeliano
 <ul>
-<li><span class="math inline">\(\forall [x], [y], [z] \in G/H \quad
+<li><span class="math inline">\forall [x], [y], [z] \in G/H \quad
 ([x]+[y])+[z]=[x+y]+[z]=[(x+y)+z]=
-[x+(y+z)]=[x]+[y+z]=[x]+([y]+[z])\)</span></li>
-<li><span class="math inline">\(\forall [x] \in G/H \quad
-[x]+[0]=[0]+[x]=[x]\)</span> e <span class="math inline">\([0] + [x] =
-[0 + x] = [x]\)</span>, e <span class="math inline">\([0] \in
-G/H\)</span> perché <span class="math inline">\(G\)</span> gruppo</li>
-<li><span class="math inline">\(\forall [x] \in G/H \quad
-[x]+[-x]=[x+(-x)]=[0]\)</span> e <span class="math inline">\([-x]
-+[x]=[-x +x]=[0]\)</span><span class="math inline">\(\implies -[x] =
-[-x]\)</span></li>
-<li><span
-class="math inline">\([x]+[y]=[x+y]=[y+x]=[y]+[x]\)</span></li>
+[x+(y+z)]=[x]+[y+z]=[x]+([y]+[z])</span></li>
+<li><span class="math inline">\forall [x] \in G/H \quad
+[x]+[0]=[0]+[x]=[x]</span> e <span class="math inline">[0] + [x] = [0 +
+x] = [x]</span>, e <span class="math inline">[0] \in G/H</span> perché
+<span class="math inline">G</span> gruppo</li>
+<li><span class="math inline">\forall [x] \in G/H \quad
+[x]+[-x]=[x+(-x)]=[0]</span> e <span class="math inline">[-x] +[x]=[-x
++x]=[0]</span><span class="math inline">\implies -[x] = [-x]</span></li>
+<li><span class="math inline">[x]+[y]=[x+y]=[y+x]=[y]+[x]</span></li>
 </ul></li>
 </ul></li>
 </ul>

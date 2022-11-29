@@ -158,9 +158,24 @@
       vertical-align: middle;
     }
   </style>
-  <script
-  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js"
-  type="text/javascript"></script>
+  <script defer=""
+  src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js"></script>
+  <script>document.addEventListener("DOMContentLoaded", function () {
+ var mathElements = document.getElementsByClassName("math");
+ var macros = [];
+ for (var i = 0; i < mathElements.length; i++) {
+  var texText = mathElements[i].firstChild;
+  if (mathElements[i].tagName == "SPAN") {
+   katex.render(texText.data, mathElements[i], {
+    displayMode: mathElements[i].classList.contains('display'),
+    throwOnError: false,
+    macros: macros,
+    fleqn: false
+   });
+}}});
+  </script>
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css" />
   <!--[if lt IE 9]>
     <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
   <![endif]-->
@@ -177,55 +192,55 @@
 <blockquote>
 <ul>
 <li>successione di proposizioni infinita <span
-class="math inline">\(P_{1}, P_{2}, P_{3}, \ldots\)</span></li>
-<li><span class="math inline">\(\left\{\begin{array}{l}P_{1} \textrm{
+class="math inline">P_{1}, P_{2}, P_{3}, \ldots</span></li>
+<li><span class="math inline">\left\{\begin{array}{l}P_{1} \textrm{
 vera}\\ P_{1}, P_{2}, P_{3}, \ldots, P_{n} \implies P_{n+1} \quad
-\forall n \ge 1 \end{array}\right.\)</span></li>
-<li>allora <span class="math inline">\(P_n\)</span> vera <span
-class="math inline">\(\forall n\)</span></li>
+\forall n \ge 1 \end{array}\right.</span></li>
+<li>allora <span class="math inline">P_n</span> vera <span
+class="math inline">\forall n</span></li>
 </ul>
 </blockquote>
 <h2 id="ex">Ex</h2>
 <ul>
 <li><strong>Hp</strong>
 <ul>
-<li><p><span class="math inline">\(\left\{\begin{array}{l}F_0 = 0 \\ F_1
-= 1 \\ F_n = F_{n - 1} + F_{n - 2} \quad \forall n \ge
-2\end{array}\right.\)</span> è detta <em>sequenza di
+<li><p><span class="math inline">\left\{\begin{array}{l}F_0 = 0 \\ F_1 =
+1 \\ F_n = F_{n - 1} + F_{n - 2} \quad \forall n \ge
+2\end{array}\right.</span> è detta <em>sequenza di
 Fibonacci</em></p></li>
-<li><p><span class="math inline">\(x^2 -x -1 = 0\)</span> ha come
-soluzioni <span class="math inline">\(\left\{\begin{array}{l}\phi :=
+<li><p><span class="math inline">x^2 -x -1 = 0</span> ha come soluzioni
+<span class="math inline">\left\{\begin{array}{l}\phi :=
 \dfrac{1+\sqrt{5}}{2} \\ \psi := \dfrac{1 -
-\sqrt{5}}{2}\end{array}\right.\)</span></p></li>
+\sqrt{5}}{2}\end{array}\right.</span></p></li>
 </ul></li>
 <li><strong>Th</strong>
 <ul>
-<li><span class="math inline">\(\forall n \in \mathbb{N} \quad
-F_{n}=\dfrac{\varphi^{n}-\psi^{n}}{\varphi-\psi}=\dfrac{\varphi^{n}-\psi^{n}}{\sqrt{5}}\)</span></li>
+<li><span class="math inline">\forall n \in \mathbb{N} \quad
+F_{n}=\dfrac{\varphi^{n}-\psi^{n}}{\varphi-\psi}=\dfrac{\varphi^{n}-\psi^{n}}{\sqrt{5}}</span></li>
 </ul></li>
 <li><strong>Dim</strong>
 <ul>
-<li><span class="math inline">\(n = 0 \implies F_0 = \dfrac{\phi^0 -
-\psi^0}{\sqrt 5} = \dfrac{1 - 1}{\sqrt 5} = 0\)</span></li>
-<li><span class="math inline">\(n = 1 \implies F_1 = \dfrac{\phi^1 -
-\psi^1}{\phi - \psi} = 1\)</span></li>
+<li><span class="math inline">n = 0 \implies F_0 = \dfrac{\phi^0 -
+\psi^0}{\sqrt 5} = \dfrac{1 - 1}{\sqrt 5} = 0</span></li>
+<li><span class="math inline">n = 1 \implies F_1 = \dfrac{\phi^1 -
+\psi^1}{\phi - \psi} = 1</span></li>
 <li>per il passo induttivo, al posto di trovare il caso <span
-class="math inline">\(n\)</span> nel caso <span class="math inline">\(n+
-1\)</span>, si trova il caso <span class="math inline">\(n - 1\)</span>
-nel caso <span class="math inline">\(n\)</span>
+class="math inline">n</span> nel caso <span class="math inline">n+
+1</span>, si trova il caso <span class="math inline">n - 1</span> nel
+caso <span class="math inline">n</span>
 <ul>
-<li><span class="math inline">\(F_n = F_{n - 1} + F_{n - 2}\)</span> per
-ipotesi induttiva, quindi <span class="math inline">\(F_n =
-\dfrac{\phi^{n - 1} - \psi^{n - 1}}{\sqrt 5} + \dfrac{\phi ^{n - 2} -
-\psi ^{n - 2}}{\sqrt 5} = \dfrac{\phi ^{n - 1} - \psi^{n - 1} + \phi^{n
-- 2} - \psi^{n - 2}}{\sqrt 5} =\dfrac{(\phi^{n - 1} + \phi^{n - 2}) -
-(\psi^{n - 1} - \psi^{n - 2})}{\sqrt 5}\)</span> <span
-class="math inline">\(=\dfrac{\varphi^{n-2}(\varphi+1)-\psi^{n-2}(\psi+1)}{\sqrt{5}}\)</span></li>
+<li><span class="math inline">F_n = F_{n - 1} + F_{n - 2}</span> per
+ipotesi induttiva, quindi <span class="math inline">F_n = \dfrac{\phi^{n
+- 1} - \psi^{n - 1}}{\sqrt 5} + \dfrac{\phi ^{n - 2} - \psi ^{n -
+2}}{\sqrt 5} = \dfrac{\phi ^{n - 1} - \psi^{n - 1} + \phi^{n - 2} -
+\psi^{n - 2}}{\sqrt 5} =\dfrac{(\phi^{n - 1} + \phi^{n - 2}) - (\psi^{n
+- 1} - \psi^{n - 2})}{\sqrt 5}</span> <span
+class="math inline">=\dfrac{\varphi^{n-2}(\varphi+1)-\psi^{n-2}(\psi+1)}{\sqrt{5}}</span></li>
 <li><span
-class="math inline">\(\left.\begin{array}{l}\varphi^{2}=\varphi+1 \\
+class="math inline">\left.\begin{array}{l}\varphi^{2}=\varphi+1 \\
 \psi^{2}=\psi+1\end{array}\right\} \implies \dfrac{\varphi^{n-2} \cdot
 \varphi^{2}-\psi^{n-2} \cdot \psi^{2}}{\sqrt{5}} = \dfrac{\phi^n -
-\psi^n }{\sqrt 5}\)</span></li>
+\psi^n }{\sqrt 5}</span></li>
 </ul></li>
 </ul></li>
 </ul>

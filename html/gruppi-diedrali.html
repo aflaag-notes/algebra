@@ -158,9 +158,24 @@
       vertical-align: middle;
     }
   </style>
-  <script
-  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js"
-  type="text/javascript"></script>
+  <script defer=""
+  src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js"></script>
+  <script>document.addEventListener("DOMContentLoaded", function () {
+ var mathElements = document.getElementsByClassName("math");
+ var macros = [];
+ for (var i = 0; i < mathElements.length; i++) {
+  var texText = mathElements[i].firstChild;
+  if (mathElements[i].tagName == "SPAN") {
+   katex.render(texText.data, mathElements[i], {
+    displayMode: mathElements[i].classList.contains('display'),
+    throwOnError: false,
+    macros: macros,
+    fleqn: false
+   });
+}}});
+  </script>
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css" />
   <!--[if lt IE 9]>
     <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
   <![endif]-->
@@ -176,73 +191,70 @@
 </ul>
 <blockquote>
 <ul>
-<li><span class="math inline">\(n \in \mathbb{N}_{\ge 2}\)</span></li>
-<li><span class="math inline">\(D_n\)</span> è l’<strong>insieme delle
-simmetrie dell’<span class="math inline">\(n\)</span>-gono
-regolare</strong>
+<li><span class="math inline">n \in \mathbb{N}_{\ge 2}</span></li>
+<li><span class="math inline">D_n</span> è l’<strong>insieme delle
+simmetrie dell’<span class="math inline">n</span>-gono regolare</strong>
 <ul>
 <li>l’insieme delle rotazioni che lasciano l’<span
-class="math inline">\(n\)</span>-gono invariato, e delle riflessioni
+class="math inline">n</span>-gono invariato, e delle riflessioni
 rispetto agli assi di simmetria</li>
 </ul></li>
-<li><span class="math inline">\(\rho :=\)</span> rotazione di <span
-class="math inline">\(\frac{360°}{n}\)</span> gradi di un <span
-class="math inline">\(n\)</span>-gono regolare</li>
-<li><span class="math inline">\(\sigma_i :=\)</span> riflessione
-rispetto all’<span class="math inline">\(i\)</span>-esimo asse di
-simmetria dell’<span class="math inline">\(n\)</span>-gono regolare</li>
+<li><span class="math inline">\rho :=</span> rotazione di <span
+class="math inline">\frac{360°}{n}</span> gradi di un <span
+class="math inline">n</span>-gono regolare</li>
+<li><span class="math inline">\sigma_i :=</span> riflessione rispetto
+all’<span class="math inline">i</span>-esimo asse di simmetria
+dell’<span class="math inline">n</span>-gono regolare</li>
 </ul>
 </blockquote>
 <h2 id="oss">Oss</h2>
 <ul>
 <li><strong>Hp</strong>
 <ul>
-<li><span class="math inline">\(n \in \mathbb{N}_{\ge 2}\)</span></li>
-<li><span class="math inline">\(D_n\)</span> insieme delle simmetrie
-dell’<span class="math inline">\(n\)</span>-gono regolare</li>
+<li><span class="math inline">n \in \mathbb{N}_{\ge 2}</span></li>
+<li><span class="math inline">D_n</span> insieme delle simmetrie
+dell’<span class="math inline">n</span>-gono regolare</li>
 </ul></li>
 <li><strong>Th</strong>
 <ul>
-<li><span class="math inline">\(|D_n| = 2n\)</span></li>
+<li><span class="math inline">|D_n| = 2n</span></li>
 </ul></li>
 <li><strong>Dim</strong>
 <ul>
-<li><span class="math inline">\(\rho := \frac{360°}{n}
-\implies\)</span>le rotazioni che lasciano l’<span
-class="math inline">\(n\)</span>-gono invariato sono esattamente <span
-class="math inline">\(n\)</span></li>
-<li>gli assi di simmetria di un <span
-class="math inline">\(n\)</span>-gono sono <span
-class="math inline">\(n\)</span>, dunque si hanno esattamente <span
-class="math inline">\(n\)</span> possibili riflessioni</li>
-<li><span class="math inline">\(D_n := \{\rho^0, \ldots, \rho^{n - 1},
-\sigma_0, \ldots, \sigma_{n-1}\} \implies |D_n| = 2n\)</span></li>
+<li><span class="math inline">\rho := \frac{360°}{n} \implies</span>le
+rotazioni che lasciano l’<span class="math inline">n</span>-gono
+invariato sono esattamente <span class="math inline">n</span></li>
+<li>gli assi di simmetria di un <span class="math inline">n</span>-gono
+sono <span class="math inline">n</span>, dunque si hanno esattamente
+<span class="math inline">n</span> possibili riflessioni</li>
+<li><span class="math inline">D_n := \{\rho^0, \ldots, \rho^{n - 1},
+\sigma_0, \ldots, \sigma_{n-1}\} \implies |D_n| = 2n</span></li>
 </ul></li>
 </ul>
 <h2 id="oss-1">Oss</h2>
 <ul>
 <li><strong>Hp</strong>
 <ul>
-<li><span class="math inline">\(n \in \mathbb{N}_{\ge 2}\)</span></li>
-<li><span class="math inline">\(D_n\)</span> insieme delle simmetrie
-dell’<span class="math inline">\(n\)</span>-gono regolare</li>
-<li><span class="math inline">\(\cdot\)</span> è l’operazione di
+<li><span class="math inline">n \in \mathbb{N}_{\ge 2}</span></li>
+<li><span class="math inline">D_n</span> insieme delle simmetrie
+dell’<span class="math inline">n</span>-gono regolare</li>
+<li><span class="math inline">\cdot</span> è l’operazione di
 composizione delle simmetrie</li>
 </ul></li>
 <li><strong>Th</strong>
 <ul>
-<li><span class="math inline">\((D_n, \cdot)\)</span> è un gruppo</li>
+<li><span class="math inline">(D_n, \cdot)</span> è un gruppo</li>
 </ul></li>
 <li><strong>Dim</strong>
 <ul>
 <li>la composizione di funzioni è associativa</li>
-<li><span class="math inline">\(\rho^0 = 1 = \textrm{id}\)</span> è
+<li><span class="math inline">\rho^0 = 1 = \textrm{id}</span> è
 l’elemento neutro</li>
-<li><span class="math inline">\(\left\{\begin{array}{l}\rho^{i} \cdot
+<li><span class="math inline">\left\{\begin{array}{l}\rho^{i} \cdot
 \rho^{j}=\rho^{i+j \ (\bmod \ n)} \\ \sigma_{i} \cdot
 \sigma_{j}=\rho^{i-j \ (\bmod \ n)} \\ \rho^{i} \cdot
 \sigma_{j}=\sigma_{i+j \ (\bmod \ n)} \\ \sigma_{i} \cdot
-\rho^{j}=\sigma_{i-j \ (\bmod \ n)}\end{array}\right.\)</span>, dunque è
+\rho^{j}=\sigma_{i-j \ (\bmod \ n)}\end{array}\right.</span>, dunque è
 possibile trovare l’inverso per ogni permutazione e simmetria
 utilizzando queste regole</li>
 </ul></li>
@@ -251,18 +263,18 @@ utilizzando queste regole</li>
 <ul>
 <li><strong>Hp</strong>
 <ul>
-<li><span class="math inline">\(D_2\)</span> gruppo diedrale</li>
+<li><span class="math inline">D_2</span> gruppo diedrale</li>
 </ul></li>
 <li><strong>Th</strong>
 <ul>
-<li><span class="math inline">\((D_2, \cdot)\)</span> è l’unico gruppo
+<li><span class="math inline">(D_2, \cdot)</span> è l’unico gruppo
 diedrale abeliano</li>
 </ul></li>
 <li><strong>Dim</strong>
 <ul>
-<li><span class="math inline">\(D_2 = \{1, \rho, \sigma_0, \sigma_1\}
-\implies\)</span> per le regole di composizione definite precedentemente
-<span class="math inline">\(\left\{\begin{array}{l}\rho^{0} \cdot
+<li><span class="math inline">D_2 = \{1, \rho, \sigma_0, \sigma_1\}
+\implies</span> per le regole di composizione definite precedentemente
+<span class="math inline">\left\{\begin{array}{l}\rho^{0} \cdot
 \sigma_{0}=\sigma_{0+0 \ (\bmod \ 2)}=\sigma_{0}=\sigma_{0-0 \ (\bmod \
 2)}=\sigma_{0} \cdot \rho^{0} \quad i=j=0 \\ \rho^{0} \cdot
 \sigma_{1}=\sigma_{0+1 \ (\bmod \ 2)}=\sigma_{1}=\sigma_{1-0 \ (\bmod \
@@ -271,126 +283,124 @@ diedrale abeliano</li>
 2 )}=\sigma_{0} \cdot \rho^1 \quad i = 1, j = 0 \\ \rho^{1} \cdot
 \sigma_{1}= \sigma_{1 + 1 \ (\bmod \ 2)} = \sigma_0 = \sigma_{1-1 \
 (\bmod\  2)} = \sigma_1 \cdot \rho ^1 \quad i = j =
-1\end{array}\right.\)</span>, quindi il gruppo è commutativo, e dunque
+1\end{array}\right.</span>, quindi il gruppo è commutativo, e dunque
 abeliano</li>
 <li>per le regole di composizione definite precedentemente, per <span
-class="math inline">\(n \ge 3\)</span> la commutatività non è sempre
-rispettata, quindi <span class="math inline">\((D_2, \cdot)\)</span> è
-anche l’unico gruppo abeliano</li>
+class="math inline">n \ge 3</span> la commutatività non è sempre
+rispettata, quindi <span class="math inline">(D_2, \cdot)</span> è anche
+l’unico gruppo abeliano</li>
 </ul></li>
 </ul>
 <h2 id="oss-3">Oss</h2>
 <ul>
 <li><strong>Hp</strong>
 <ul>
-<li><span class="math inline">\(D_n\)</span> gruppo diedrale</li>
+<li><span class="math inline">D_n</span> gruppo diedrale</li>
 </ul></li>
 <li><strong>Th</strong>
 <ul>
-<li><span class="math inline">\(D_n \hookrightarrow S_n\)</span></li>
-<li><span class="math inline">\(\exists X \subset S_n\)</span>
-sottogruppo di <span class="math inline">\(S_n\)</span> <span
-class="math inline">\(\mid D_n \cong X\)</span>
+<li><span class="math inline">D_n \hookrightarrow S_n</span></li>
+<li><span class="math inline">\exists X \subset S_n</span> sottogruppo
+di <span class="math inline">S_n</span> <span class="math inline">\mid
+D_n \cong X</span>
 <ul>
-<li><span class="math inline">\(D_3 \cong S_3\)</span></li>
+<li><span class="math inline">D_3 \cong S_3</span></li>
 </ul></li>
 </ul></li>
 <li><strong>Dim</strong>
 <ul>
-<li><p>per ogni simmetria in <span class="math inline">\(D_n\)</span>, è
+<li><p>per ogni simmetria in <span class="math inline">D_n</span>, è
 possibile trovare l’unica permutazione equivalente in <span
-class="math inline">\(S_n\)</span></p>
+class="math inline">S_n</span></p>
 <ul>
-<li>ad esempio, con <span class="math inline">\(n = 3\)</span>,
-numerando ogni vertice del triangolo equilatero, partendo dal vertice in
-basso a destra, si ottiene
+<li>ad esempio, con <span class="math inline">n = 3</span>, numerando
+ogni vertice del triangolo equilatero, partendo dal vertice in basso a
+destra, si ottiene
 <ul>
-<li><span class="math inline">\(\rho^0=\)</span><span
-class="math inline">\(\left(\begin{array}{lll}1 &amp; 2 &amp; 3 \\
-1&amp;2&amp;3\end{array}\right)\)</span><span
-class="math inline">\(=\textrm{id}\)</span></li>
-<li><span class="math inline">\(\rho^1=\)</span><span
-class="math inline">\(\left(\begin{array}{lll}1 &amp; 2 &amp; 3 \\ 2
-&amp; 3 &amp; 1\end{array}\right)\)</span></li>
-<li><span class="math inline">\(\rho^2=\)</span><span
-class="math inline">\(\left(\begin{array}{lll}1 &amp; 2 &amp; 3 \\
-3&amp;1&amp;2\end{array}\right)\)</span></li>
-<li><span class="math inline">\(\sigma_0=\)</span><span
-class="math inline">\(\left(\begin{array}{lll}1 &amp; 2 &amp; 3 \\
-1&amp;3&amp;2\end{array}\right)\)</span></li>
-<li><span class="math inline">\(\sigma_1=\)</span><span
-class="math inline">\(\left(\begin{array}{lll}1 &amp; 2 &amp; 3 \\
-2&amp;1&amp;3\end{array}\right)\)</span></li>
-<li><span class="math inline">\(\sigma_2=\)</span><span
-class="math inline">\(\left(\begin{array}{lll}1 &amp; 2 &amp; 3 \\
-3&amp;2&amp;1\end{array}\right)\)</span></li>
+<li><span class="math inline">\rho^0=</span><span
+class="math inline">\left(\begin{array}{lll}1 &amp; 2 &amp; 3 \\
+1&amp;2&amp;3\end{array}\right)</span><span
+class="math inline">=\textrm{id}</span></li>
+<li><span class="math inline">\rho^1=</span><span
+class="math inline">\left(\begin{array}{lll}1 &amp; 2 &amp; 3 \\ 2 &amp;
+3 &amp; 1\end{array}\right)</span></li>
+<li><span class="math inline">\rho^2=</span><span
+class="math inline">\left(\begin{array}{lll}1 &amp; 2 &amp; 3 \\
+3&amp;1&amp;2\end{array}\right)</span></li>
+<li><span class="math inline">\sigma_0=</span><span
+class="math inline">\left(\begin{array}{lll}1 &amp; 2 &amp; 3 \\
+1&amp;3&amp;2\end{array}\right)</span></li>
+<li><span class="math inline">\sigma_1=</span><span
+class="math inline">\left(\begin{array}{lll}1 &amp; 2 &amp; 3 \\
+2&amp;1&amp;3\end{array}\right)</span></li>
+<li><span class="math inline">\sigma_2=</span><span
+class="math inline">\left(\begin{array}{lll}1 &amp; 2 &amp; 3 \\
+3&amp;2&amp;1\end{array}\right)</span></li>
 </ul></li>
 </ul></li>
 <li><p>poiché la permutazione equivalente è unica, funzione che manda
-una simmetria in <span class="math inline">\(D_n\)</span> nella
-corrispondente permutazione in <span class="math inline">\(S_n\)</span>
-è iniettiva</p></li>
-<li><p>allora <span class="math inline">\(D_n \hookrightarrow
-S_n\)</span>, ovvero, l’inclusione è iniettiva ma non suriettiva in
-generale</p>
+una simmetria in <span class="math inline">D_n</span> nella
+corrispondente permutazione in <span class="math inline">S_n</span> è
+iniettiva</p></li>
+<li><p>allora <span class="math inline">D_n \hookrightarrow S_n</span>,
+ovvero, l’inclusione è iniettiva ma non suriettiva in generale</p>
 <ul>
-<li><span class="math inline">\(|D_n| \le |S_n|\)</span>, poiché in
-generale <span class="math inline">\(S_n\)</span> contiene più
-permutazioni di <span class="math inline">\(D_n\)</span></li>
+<li><span class="math inline">|D_n| \le |S_n|</span>, poiché in generale
+<span class="math inline">S_n</span> contiene più permutazioni di <span
+class="math inline">D_n</span></li>
 </ul></li>
 <li><p>ma per ragionamento analogo, è sempre possibile trovare un
-sottogruppo <span class="math inline">\(X \subset S_n \mid |X| = |D_n|
-\implies\)</span> l’inclusione è biiettiva</p>
+sottogruppo <span class="math inline">X \subset S_n \mid |X| = |D_n|
+\implies</span> l’inclusione è biiettiva</p>
 <ul>
-<li>dunque, <span class="math inline">\(D_3\)</span> risulta essere il
-caso particolare in cui <span class="math inline">\(X =
-S_n\)</span></li>
+<li>dunque, <span class="math inline">D_3</span> risulta essere il caso
+particolare in cui <span class="math inline">X = S_n</span></li>
 </ul></li>
-<li><p><span class="math inline">\(|D_n| \cong X\)</span></p>
+<li><p><span class="math inline">|D_n| \cong X</span></p>
 <ul>
-<li><span class="math inline">\(f: D_n \rightarrow S_n : a \rightarrow
-\sigma_a\)</span> è un morfismo
+<li><span class="math inline">f: D_n \rightarrow S_n : a \rightarrow
+\sigma_a</span> è un morfismo
 <ul>
-<li><span class="math inline">\(v_i\)</span> vertice <span
-class="math inline">\(i\)</span>-esimo</li>
-<li><span class="math inline">\(a: v_i \rightarrow v_j\)</span> è la
-simmetria che manda <span class="math inline">\(v_i\)</span> in <span
-class="math inline">\(v_j\)</span>, che corrisponde a <span
-class="math inline">\(\sigma_a: i \rightarrow j\)</span> attraverso
-<span class="math inline">\(f\)</span>
+<li><span class="math inline">v_i</span> vertice <span
+class="math inline">i</span>-esimo</li>
+<li><span class="math inline">a: v_i \rightarrow v_j</span> è la
+simmetria che manda <span class="math inline">v_i</span> in <span
+class="math inline">v_j</span>, che corrisponde a <span
+class="math inline">\sigma_a: i \rightarrow j</span> attraverso <span
+class="math inline">f</span>
 <ul>
-<li><span class="math inline">\(f(a) = \sigma_a\)</span></li>
+<li><span class="math inline">f(a) = \sigma_a</span></li>
 </ul></li>
-<li><span class="math inline">\(b: v_j \rightarrow v_k\)</span> è la
-simmetria che manda <span class="math inline">\(v_j\)</span> in <span
-class="math inline">\(v_k\)</span>, che corrisponde a <span
-class="math inline">\(\sigma_b: j \rightarrow k\)</span> attraverso
-<span class="math inline">\(f\)</span>
+<li><span class="math inline">b: v_j \rightarrow v_k</span> è la
+simmetria che manda <span class="math inline">v_j</span> in <span
+class="math inline">v_k</span>, che corrisponde a <span
+class="math inline">\sigma_b: j \rightarrow k</span> attraverso <span
+class="math inline">f</span>
 <ul>
-<li><span class="math inline">\(f(b) = \sigma_b\)</span></li>
+<li><span class="math inline">f(b) = \sigma_b</span></li>
 </ul></li>
-<li><span class="math inline">\(f\)</span> morfismo <span
-class="math inline">\(\iff b \cdot a = v_{\sigma_b \cdot
-\sigma_{a}}\)</span>
+<li><span class="math inline">f</span> morfismo <span
+class="math inline">\iff b \cdot a = v_{\sigma_b \cdot
+\sigma_{a}}</span>
 <ul>
-<li><span class="math inline">\(\left.\begin{array}{l}a(v_i) = v_j \\
+<li><span class="math inline">\left.\begin{array}{l}a(v_i) = v_j \\
 b(v_j) = v_k\end{array}\right\} \implies b \cdot a = b(a(v_i)) =
-v_k\)</span></li>
-<li><span class="math inline">\(\left.\begin{array}{l}\sigma_a(i) = j \\
+v_k</span></li>
+<li><span class="math inline">\left.\begin{array}{l}\sigma_a(i) = j \\
 \sigma_b(j) = k\end{array}\right\} \implies \sigma_b \cdot \sigma_a
-=\sigma_b(\sigma_a(i)) = k\)</span></li>
-<li>quinidi <span class="math inline">\(b \cdot a = b(a(v_i)) = v_k =
-v_{\sigma_b(\sigma_a(i))} = v_{\sigma_b \cdot \sigma_a}\)</span></li>
+=\sigma_b(\sigma_a(i)) = k</span></li>
+<li>quinidi <span class="math inline">b \cdot a = b(a(v_i)) = v_k =
+v_{\sigma_b(\sigma_a(i))} = v_{\sigma_b \cdot \sigma_a}</span></li>
 </ul></li>
 </ul></li>
-<li>poiché <span class="math inline">\(|D_n| = |X|\)</span>, allora
-l’inclusione data da <span class="math inline">\(f\)</span> è anche
+<li>poiché <span class="math inline">|D_n| = |X|</span>, allora
+l’inclusione data da <span class="math inline">f</span> è anche
 suriettiva, e quindi biiettiva, dunque <span
-class="math inline">\(f\)</span> è un isomorfismo</li>
+class="math inline">f</span> è un isomorfismo</li>
 </ul></li>
-<li><p>in particolare, <span class="math inline">\(D_3 \cong
-S_3\)</span>, poiché <span class="math inline">\(X\)</span> è tutto
-<span class="math inline">\(S_3\)</span></p></li>
+<li><p>in particolare, <span class="math inline">D_3 \cong S_3</span>,
+poiché <span class="math inline">X</span> è tutto <span
+class="math inline">S_3</span></p></li>
 </ul></li>
 </ul>
 <h2 id="def-1">Def</h2>
@@ -399,30 +409,30 @@ S_3\)</span>, poiché <span class="math inline">\(X\)</span> è tutto
 </ul>
 <blockquote>
 <ul>
-<li><span class="math inline">\(K_4 := \{1, a, b, c\}\)</span></li>
-<li><span class="math inline">\(a^2=b^2=c^2=1\)</span></li>
-<li><span class="math inline">\(ab=c=ba\)</span></li>
-<li><span class="math inline">\(ac=b=ca\)</span></li>
-<li><span class="math inline">\(cb=a=bc\)</span></li>
+<li><span class="math inline">K_4 := \{1, a, b, c\}</span></li>
+<li><span class="math inline">a^2=b^2=c^2=1</span></li>
+<li><span class="math inline">ab=c=ba</span></li>
+<li><span class="math inline">ac=b=ca</span></li>
+<li><span class="math inline">cb=a=bc</span></li>
 </ul>
 </blockquote>
 <h2 id="oss-4">Oss</h2>
 <ul>
 <li><strong>Hp</strong>
 <ul>
-<li><span class="math inline">\(K_4\)</span> è il gruppo di Klein</li>
+<li><span class="math inline">K_4</span> è il gruppo di Klein</li>
 </ul></li>
 <li><strong>Th</strong>
 <ul>
-<li><span class="math inline">\(K_4 \cong D_2\)</span></li>
+<li><span class="math inline">K_4 \cong D_2</span></li>
 </ul></li>
 <li><strong>Dim</strong>
 <ul>
-<li><span class="math inline">\(K_4:=\{1, a, b, c\}\)</span></li>
-<li><span class="math inline">\(D_2 = \{1, \rho, \sigma_0,
-\sigma_1\}\)</span>, quindi associando gli elementi <span
-class="math inline">\(a=\rho, b= \sigma_0, c= \sigma_1\)</span> si
-ottiene lo stesso gruppo</li>
+<li><span class="math inline">K_4:=\{1, a, b, c\}</span></li>
+<li><span class="math inline">D_2 = \{1, \rho, \sigma_0,
+\sigma_1\}</span>, quindi associando gli elementi <span
+class="math inline">a=\rho, b= \sigma_0, c= \sigma_1</span> si ottiene
+lo stesso gruppo</li>
 </ul></li>
 </ul>
 </body>

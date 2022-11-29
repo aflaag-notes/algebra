@@ -158,9 +158,24 @@
       vertical-align: middle;
     }
   </style>
-  <script
-  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js"
-  type="text/javascript"></script>
+  <script defer=""
+  src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js"></script>
+  <script>document.addEventListener("DOMContentLoaded", function () {
+ var mathElements = document.getElementsByClassName("math");
+ var macros = [];
+ for (var i = 0; i < mathElements.length; i++) {
+  var texText = mathElements[i].firstChild;
+  if (mathElements[i].tagName == "SPAN") {
+   katex.render(texText.data, mathElements[i], {
+    displayMode: mathElements[i].classList.contains('display'),
+    throwOnError: false,
+    macros: macros,
+    fleqn: false
+   });
+}}});
+  </script>
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css" />
   <!--[if lt IE 9]>
     <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
   <![endif]-->
@@ -176,14 +191,13 @@
 </ul>
 <blockquote>
 <ul>
-<li><span class="math inline">\(\mathbb{K}\)</span> campo</li>
-<li><span class="math inline">\(m, n \in \mathbb{N} -
-\{0\}\)</span></li>
-<li><span class="math inline">\(\textrm{Mat}_{m \times
-n}(\mathbb{K})\)</span> è l’<strong>insieme delle matrici aventi <span
-class="math inline">\(m\)</span> righe e <span
-class="math inline">\(n\)</span> colonne a coefficienti in <span
-class="math inline">\(\mathbb{K}\)</span></strong></li>
+<li><span class="math inline">\mathbb{K}</span> campo</li>
+<li><span class="math inline">m, n \in \mathbb{N} - \{0\}</span></li>
+<li><span class="math inline">\textrm{Mat}_{m \times
+n}(\mathbb{K})</span> è l’<strong>insieme delle matrici aventi <span
+class="math inline">m</span> righe e <span class="math inline">n</span>
+colonne a coefficienti in <span
+class="math inline">\mathbb{K}</span></strong></li>
 </ul>
 </blockquote>
 <ul>
@@ -191,22 +205,20 @@ class="math inline">\(\mathbb{K}\)</span></strong></li>
 </ul>
 <blockquote>
 <ul>
-<li><span class="math inline">\(\mathbb{K}\)</span> campo</li>
-<li><span class="math inline">\(m, n \in \mathbb{N} -
-\{0\}\)</span></li>
-<li><span class="math inline">\(\forall A \in \textrm{Mat}_{1 \times
-n}(\mathbb{K}) \quad A = \left(x_1, \ldots, x_n\right)\)</span> è detto
+<li><span class="math inline">\mathbb{K}</span> campo</li>
+<li><span class="math inline">m, n \in \mathbb{N} - \{0\}</span></li>
+<li><span class="math inline">\forall A \in \textrm{Mat}_{1 \times
+n}(\mathbb{K}) \quad A = \left(x_1, \ldots, x_n\right)</span> è detto
 <strong>vettore riga</strong></li>
-<li><span class="math inline">\(\forall A \in \textrm{Mat}_{m \times
+<li><span class="math inline">\forall A \in \textrm{Mat}_{m \times
 1}(\mathbb{K}) \quad A = \left(\begin{array}{ccc} x_1 \\ \vdots \\ x_m
-\end{array}\right)\)</span> è detto <strong>vettore
-colonna</strong></li>
-<li><span class="math inline">\(\forall A \in \textrm{Mat}_{m \times
-n}(\mathbb{K}) \quad \exists A^1, \ldots, A^n \in \mathbb{K}^m\)</span>
-vettori colonna e <span class="math inline">\(A_1, \ldots, A_m \in
-\mathbb{K}^n\)</span> vettori riga <span class="math inline">\(\mid A =
+\end{array}\right)</span> è detto <strong>vettore colonna</strong></li>
+<li><span class="math inline">\forall A \in \textrm{Mat}_{m \times
+n}(\mathbb{K}) \quad \exists A^1, \ldots, A^n \in \mathbb{K}^m</span>
+vettori colonna e <span class="math inline">A_1, \ldots, A_m \in
+\mathbb{K}^n</span> vettori riga <span class="math inline">\mid A =
 \left(A^1, \ldots, A^n \right) = \left(\begin{array}{ccc} A_1 \\ \vdots
-\\ A_m\end{array}\right)\)</span></li>
+\\ A_m\end{array}\right)</span></li>
 </ul>
 </blockquote>
 <h2 id="def-1">Def</h2>
@@ -215,35 +227,33 @@ vettori colonna e <span class="math inline">\(A_1, \ldots, A_m \in
 </ul>
 <blockquote>
 <ul>
-<li><span class="math inline">\(\mathbb{K}\)</span> campo</li>
-<li><span class="math inline">\(m, n \in \mathbb{N} -
-\{0\}\)</span></li>
-<li><span class="math inline">\(\forall i \in [1, m], j \in [1, n] \quad
-a_{i, j}, b_{i, j} \in \mathbb{K}\)</span></li>
-<li><span class="math inline">\(A, B \in \textrm{Mat}_{m \times
+<li><span class="math inline">\mathbb{K}</span> campo</li>
+<li><span class="math inline">m, n \in \mathbb{N} - \{0\}</span></li>
+<li><span class="math inline">\forall i \in [1, m], j \in [1, n] \quad
+a_{i, j}, b_{i, j} \in \mathbb{K}</span></li>
+<li><span class="math inline">A, B \in \textrm{Mat}_{m \times
 n}(\mathbb{K}) \mid A = \left(\begin{array}{ccc} \ddots &amp; &amp; \\
 &amp; a_{i, j} &amp; \\ &amp; &amp; \ddots \end{array}\right) \land B =
 \left(\begin{array}{ccc}\ddots &amp; &amp; \\ &amp; b_{i, j} &amp; \\
-&amp; &amp; \ddots\end{array}\right)\)</span></li>
-<li><span class="math inline">\(A + B = \left(\begin{array}{ccc}\ddots
+&amp; &amp; \ddots\end{array}\right)</span></li>
+<li><span class="math inline">A + B = \left(\begin{array}{ccc}\ddots
 &amp; &amp; \\ &amp; a_{i, j} + b_{i, j} &amp; \\ &amp; &amp;
-\ddots\end{array}\right)\)</span> è la <strong>somma tra <span
-class="math inline">\(A\)</span> e <span
-class="math inline">\(B\)</span></strong></li>
+\ddots\end{array}\right)</span> è la <strong>somma tra <span
+class="math inline">A</span> e <span
+class="math inline">B</span></strong></li>
 </ul>
 </blockquote>
 <h2 id="oss">Oss</h2>
 <ul>
 <li><strong>Hp</strong>
 <ul>
-<li><span class="math inline">\(\mathbb{K}\)</span> campo</li>
-<li><span class="math inline">\(m, n \in \mathbb{N} -
-\{0\}\)</span></li>
+<li><span class="math inline">\mathbb{K}</span> campo</li>
+<li><span class="math inline">m, n \in \mathbb{N} - \{0\}</span></li>
 </ul></li>
 <li><strong>Th</strong>
 <ul>
-<li><span class="math inline">\(\textrm{Mat}_{m \times
-n}(\mathbb{K})\)</span> è uno spazio vettoriale</li>
+<li><span class="math inline">\textrm{Mat}_{m \times
+n}(\mathbb{K})</span> è uno spazio vettoriale</li>
 </ul></li>
 <li><strong>Dim</strong>
 <ul>
@@ -256,17 +266,16 @@ n}(\mathbb{K})\)</span> è uno spazio vettoriale</li>
 </ul>
 <blockquote>
 <ul>
-<li><span class="math inline">\(\mathbb{K}\)</span> campo</li>
-<li><span class="math inline">\(m, n \in \mathbb{N} -
-\{0\}\)</span></li>
-<li><span class="math inline">\(A \in \textrm{Mat}_{1 \times
-n}(\mathbb{K})\)</span></li>
-<li><span class="math inline">\(B \in \textrm{Mat}_{m \times
-1}(\mathbb{K})\)</span></li>
-<li><span class="math inline">\(A \cdot B := \displaystyle \sum_{i =
-1}^n{a_i \cdot b_i}\)</span> è il <strong>prodotto scalare tra <span
-class="math inline">\(A\)</span> e <span
-class="math inline">\(B\)</span></strong></li>
+<li><span class="math inline">\mathbb{K}</span> campo</li>
+<li><span class="math inline">m, n \in \mathbb{N} - \{0\}</span></li>
+<li><span class="math inline">A \in \textrm{Mat}_{1 \times
+n}(\mathbb{K})</span></li>
+<li><span class="math inline">B \in \textrm{Mat}_{m \times
+1}(\mathbb{K})</span></li>
+<li><span class="math inline">A \cdot B := \displaystyle \sum_{i =
+1}^n{a_i \cdot b_i}</span> è il <strong>prodotto scalare tra <span
+class="math inline">A</span> e <span
+class="math inline">B</span></strong></li>
 </ul>
 </blockquote>
 <h2 id="oss-1">Oss</h2>
@@ -286,36 +295,35 @@ class="math inline">\(B\)</span></strong></li>
 <ul>
 <li><strong>Hp</strong>
 <ul>
-<li><span class="math inline">\(\mathbb{K}\)</span> campo</li>
-<li><span class="math inline">\(\lambda \in \mathbb{K}\)</span></li>
-<li><span class="math inline">\(l, m, n \in \mathbb{N} -
-\{0\}\)</span></li>
-<li><span class="math inline">\(A \in \textrm{Mat}_{l \times
-m}(\mathbb{K})\)</span></li>
-<li><span class="math inline">\(B \in \textrm{Mat}_{m \times
-n}(\mathbb{K})\)</span></li>
+<li><span class="math inline">\mathbb{K}</span> campo</li>
+<li><span class="math inline">\lambda \in \mathbb{K}</span></li>
+<li><span class="math inline">l, m, n \in \mathbb{N} - \{0\}</span></li>
+<li><span class="math inline">A \in \textrm{Mat}_{l \times
+m}(\mathbb{K})</span></li>
+<li><span class="math inline">B \in \textrm{Mat}_{m \times
+n}(\mathbb{K})</span></li>
 </ul></li>
 <li><strong>Th</strong>
 <ul>
-<li><span class="math inline">\((AB)C = A(BC)\)</span></li>
-<li><span class="math inline">\(A(B+C) = AB+AC\)</span></li>
-<li><span class="math inline">\((A+B)C = AC+BC\)</span></li>
-<li><span class="math inline">\(\lambda(AB) = (\lambda A)B = A (\lambda
-B)\)</span></li>
+<li><span class="math inline">(AB)C = A(BC)</span></li>
+<li><span class="math inline">A(B+C) = AB+AC</span></li>
+<li><span class="math inline">(A+B)C = AC+BC</span></li>
+<li><span class="math inline">\lambda(AB) = (\lambda A)B = A (\lambda
+B)</span></li>
 </ul></li>
 </ul>
 <h2 id="oss-3">Oss</h2>
 <ul>
 <li><strong>Hp</strong>
 <ul>
-<li><span class="math inline">\(\mathbb{K}\)</span> campo</li>
-<li><span class="math inline">\(\lambda \in \mathbb{K}\)</span></li>
-<li><span class="math inline">\(n \in \mathbb{N} - \{0\}\)</span></li>
+<li><span class="math inline">\mathbb{K}</span> campo</li>
+<li><span class="math inline">\lambda \in \mathbb{K}</span></li>
+<li><span class="math inline">n \in \mathbb{N} - \{0\}</span></li>
 </ul></li>
 <li><strong>Th</strong>
 <ul>
-<li><span class="math inline">\((\textrm{Mat}_{n \times n}(\mathbb{K}),
-+, \cdot)\)</span> è un anello</li>
+<li><span class="math inline">(\textrm{Mat}_{n \times n}(\mathbb{K}), +,
+\cdot)</span> è un anello</li>
 </ul></li>
 <li><strong>Dim</strong>
 <ul>
@@ -330,29 +338,53 @@ B)\)</span></li>
 </ul>
 <blockquote>
 <ul>
-<li><span class="math inline">\(\mathbb{K}\)</span> campo</li>
-<li><span class="math inline">\(n \in \mathbb{N} - \{0\}\)</span></li>
-<li><span class="math inline">\(V \subset \mathbb{K}^n\)</span>
-sottospazio vettoriale</li>
-<li><span class="math inline">\(V^{\perp} := \{w \in \mathbb{K}^n \mid
-\forall v \in V \quad w \cdot v = 0\}\)</span> è detto
+<li><span class="math inline">\mathbb{K}</span> campo</li>
+<li><span class="math inline">n \in \mathbb{N} - \{0\}</span></li>
+<li><span class="math inline">V \subset \mathbb{K}^n</span> sottospazio
+vettoriale</li>
+<li><span class="math inline">V^{\perp} := \{w \in \mathbb{K}^n \mid
+\forall v \in V \quad w \cdot v = 0_{\mathbb{K}^n}\}</span> è detto
 <strong>sottospazio ortogonale di <span
-class="math inline">\(V\)</span></strong></li>
+class="math inline">\mathbb{K}^n</span></strong>
+<ul>
+<li>la definizione ha significato poiché il prodotto scalare tra due
+vettori è nullo esattamente quando i due vettori sono perpendicolari tra
+loro, per osservazione precedente</li>
+</ul></li>
 </ul>
 </blockquote>
 <h2 id="oss-4">Oss</h2>
 <ul>
 <li><strong>Hp</strong>
 <ul>
-<li><span class="math inline">\(\mathbb{K}\)</span> campo</li>
-<li><span class="math inline">\(n \in \mathbb{N} - \{0\}\)</span></li>
-<li><span class="math inline">\(V \subset \mathbb{K}^n\)</span>
-sottospazio vettoriale</li>
+<li><span class="math inline">\mathbb{K}</span> campo</li>
+<li><span class="math inline">n \in \mathbb{N} - \{0\}</span></li>
+<li><span class="math inline">V \subset \mathbb{K}^n</span> sottospazio
+vettoriale</li>
 </ul></li>
 <li><strong>Th</strong>
 <ul>
-<li><span class="math inline">\(V^{\bot}\)</span> è sottospazio
-vettoriale di <span class="math inline">\(\mathbb{K}^n\)</span></li>
+<li><span class="math inline">V^{\bot}</span> è sottospazio vettoriale
+di <span class="math inline">\mathbb{K}^n</span></li>
+</ul></li>
+<li><strong>Dim</strong>
+<ul>
+<li><strong>⚠️ TODO</strong></li>
+</ul></li>
+</ul>
+<h2 id="oss-5">Oss</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\mathbb{K}</span> campo</li>
+<li><span class="math inline">n \in \mathbb{N} - \{0\}</span></li>
+<li><span class="math inline">V \subset \mathbb{K}^n</span> sottospazio
+vettoriale</li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\dim(V^{\bot}) = \dim(\mathbb{K}^n) -
+\dim(V)</span></li>
 </ul></li>
 <li><strong>Dim</strong>
 <ul>
@@ -365,55 +397,71 @@ vettoriale di <span class="math inline">\(\mathbb{K}^n\)</span></li>
 </ul>
 <blockquote>
 <ul>
-<li><span class="math inline">\(\mathbb{K}\)</span> campo</li>
-<li><span class="math inline">\(m,n \in \mathbb{N} - \{0\}\)</span></li>
-<li><span class="math inline">\(x \in \textrm{Mat}_{n \times
-1}(\mathbb{K})\)</span></li>
-<li><span class="math inline">\(\forall A \in \textrm{Mat}_{m \times
+<li><span class="math inline">\mathbb{K}</span> campo</li>
+<li><span class="math inline">m,n \in \mathbb{N} - \{0\}</span></li>
+<li><span class="math inline">x \in \textrm{Mat}_{n \times
+1}(\mathbb{K})</span></li>
+<li><span class="math inline">\forall A \in \textrm{Mat}_{m \times
 n}(\mathbb{K}) \quad L_A:\mathbb{K}^n \rightarrow \mathbb{K}^m: x
-\rightarrow A\cdot x\)</span></li>
+\rightarrow A\cdot x</span></li>
 </ul>
 </blockquote>
-<h2 id="oss-5">Oss</h2>
+<h2 id="oss-6">Oss</h2>
 <ul>
 <li><strong>Hp</strong>
 <ul>
-<li><span class="math inline">\(\mathbb{K}\)</span> campo</li>
-<li><span class="math inline">\(m,n \in \mathbb{N} - \{0\}\)</span></li>
-<li><span class="math inline">\(x \in \textrm{Mat}_{n \times
-1}(\mathbb{K})\)</span></li>
+<li><span class="math inline">\mathbb{K}</span> campo</li>
+<li><span class="math inline">m,n \in \mathbb{N} - \{0\}</span></li>
+<li><span class="math inline">x \in \textrm{Mat}_{n \times
+1}(\mathbb{K})</span></li>
 </ul></li>
 <li><strong>Th</strong>
 <ul>
-<li><span class="math inline">\(\forall A \in \textrm{Mat}_{m \times
-n}(\mathbb{K}) \quad L_A\)</span> è una trasformazione lineare</li>
+<li><span class="math inline">\forall A \in \textrm{Mat}_{m \times
+n}(\mathbb{K}) \quad L_A</span> è una trasformazione lineare</li>
 </ul></li>
 <li><strong>Dim</strong>
 <ul>
 <li><strong>⚠️ TODO</strong></li>
 </ul></li>
 </ul>
-<h2 id="oss-6">Oss</h2>
+<h2 id="oss-7">Oss</h2>
 <ul>
 <li><strong>Hp</strong>
 <ul>
-<li><span class="math inline">\(\mathbb{K}\)</span> campo</li>
-<li><span class="math inline">\(m,n \in \mathbb{N} - \{0\}\)</span></li>
-<li><span class="math inline">\(x \in \textrm{Mat}_{n \times
-1}(\mathbb{K})\)</span></li>
+<li><span class="math inline">\mathbb{K}</span> campo</li>
+<li><span class="math inline">m,n \in \mathbb{N} - \{0\}</span></li>
+<li><span class="math inline">x \in \textrm{Mat}_{n \times
+1}(\mathbb{K})</span></li>
 </ul></li>
 <li><strong>Th</strong>
 <ul>
-<li><span class="math inline">\(\forall A \in \textrm{Mat}_{m \times
-n}(\mathbb{K}) \quad \ker(L_A) = \textrm{span}(A_1, \ldots, A_n) \land
-\textrm{im}(L_A) = \textrm{span}(A^1, \ldots, A^n)\)</span></li>
+<li><span class="math inline">\forall A \in \textrm{Mat}_{m \times
+n}(\mathbb{K}) \quad \ker(L_A) = \textrm{span}(A_1, \ldots, A_m)^\bot
+\land \textrm{im}(L_A) = \textrm{span}(A^1, \ldots, A^n)</span></li>
 </ul></li>
 <li><strong>Dim</strong>
 <ul>
-<li><span class="math inline">\(\forall A \in \textrm{Mat}_{m \times
-n}(\mathbb{K}) \quad L_A(x) = A \cdot x\)</span> per definizione di
-<span class="math inline">\(L_A\)</span></li>
-<li><span class="math inline">\(A \cdot x = \left(\begin{array}{ccc}
+<li><span class="math inline">\ker(L_A) = \textrm{span}(A_1, \ldots,
+A_m)^\bot</span>
+<ul>
+<li><span class="math inline">\ker(L_A) := \left\{x \in \mathbb{K}^n
+\mid L_A(x) = 0_{\mathbb{K}^m} \iff A \cdot x = 0_{\mathbb{K}^m} \iff
+\left(\begin{array}{c}A_1\cdot x \\ \vdots \\ A_m \cdot
+x\end{array}\right)= \left(\begin{array}{c} 0 \\ \vdots \\
+0\end{array}\right)\right\} = \textrm{span}(A_1, \ldots,
+A_m)^\bot</span></li>
+</ul></li>
+<li><span class="math inline">\textrm{im}(L_A) = \textrm{span}(A^1,
+\ldots, A^n)</span>
+<ul>
+<li><span class="math inline">\textrm{im}(L_A) \subset
+\textrm{span}(A^1, \ldots, A^n)</span>
+<ul>
+<li><span class="math inline">\forall A \in \textrm{Mat}_{m \times
+n}(\mathbb{K}) \quad L_A(x) = A \cdot x</span> per definizione di <span
+class="math inline">L_A</span></li>
+<li><span class="math inline">A \cdot x = \left(\begin{array}{ccc}
 a_{1,1} &amp; \cdots &amp; a_{1,n}\\ \vdots &amp; \ddots &amp; \vdots \\
 a_{m,1} &amp; \cdots &amp; a_{m,n}\end{array}\right) \cdot
 \left(\begin{array}{c} x_1 \\ \vdots \\ x_n \end{array}\right) =
@@ -423,32 +471,280 @@ a_{m,1}x_1 + \ldots + a_{m,n} x_n \end{array}\right) =
 x\end{array}\right) = x_1 \left(\begin{array}{c}a_{1, 1} \\ \vdots \\
 a_{m, 1}\end{array}\right) + \ldots + x_n \left(\begin{array}{c}a_{1,
 n}\\ \vdots \\ a_{m, n}\end{array}\right) = x_1A^1 + \ldots +
-x_nA^n\)</span>, e poiché <span class="math inline">\(x_1, \ldots x_n
-\in \mathbb{K} \implies x_1A^1+ \ldots + x_nA^n \in \textrm{span}(A^1,
-\ldots, A^n)\)</span></li>
-<li><strong>⚠️ TODO</strong></li>
+x_nA^n</span>, e poiché <span class="math inline">x_1, \ldots x_n \in
+\mathbb{K} \implies x_1A^1+ \ldots + x_nA^n \in \textrm{span}(A^1,
+\ldots, A^n) \implies \textrm{im}(L_A) \subset \textrm{span}(A^1,
+\ldots, A^n)</span></li>
+</ul></li>
+<li><span class="math inline">\textrm{span}(A^1, \ldots, A^n) \subset
+\textrm{im}(L_A)</span>
+<ul>
+<li><span class="math inline">\forall v \in \textrm{span}(A^1, \ldots,
+A^n) \quad \exists x_1, \ldots, x_n \in \mathbb{K} \mid v = x_1 A^1 +
+\ldots + x_n A^n = A \cdot x</span> per ragionamento analogo, e poiché
+<span class="math inline">A \cdot x \in \textrm{im}(L_A)</span>, allora
+<span class="math inline">\textrm{span}(A^1, \ldots, A^n) \subset
+\textrm{im}(L_A)</span></li>
+</ul></li>
+</ul></li>
 </ul></li>
 </ul>
-<h2 id="oss-7">Oss</h2>
+<h2 id="oss-8">Oss</h2>
 <ul>
 <li><strong>Rango di una matrice</strong></li>
 </ul>
 <blockquote>
 <ul>
-<li><span class="math inline">\(\mathbb{K}\)</span> campo</li>
-<li><span class="math inline">\(m,n \in \mathbb{N} - \{0\}\)</span></li>
-<li><span class="math inline">\(A \in \textrm{Mat}_{m \times
-n}(\mathbb{K})\)</span></li>
-<li><span class="math inline">\(x \in \textrm{Mat}_{n \times
-1}(\mathbb{K})\)</span></li>
-<li><span
-class="math inline">\(\textrm{rk}(A):=\textrm{rk}(L_A)\)</span> è il
-<strong>rango di <span class="math inline">\(A\)</span></strong></li>
+<li><span class="math inline">\mathbb{K}</span> campo</li>
+<li><span class="math inline">m,n \in \mathbb{N} - \{0\}</span></li>
+<li><span class="math inline">A \in \textrm{Mat}_{m \times
+n}(\mathbb{K})</span></li>
+<li><span class="math inline">x \in \textrm{Mat}_{n \times
+1}(\mathbb{K})</span></li>
+<li><span class="math inline">\textrm{rk}(A):=\textrm{rk}(L_A)</span> è
+il <strong>rango di <span class="math inline">A</span></strong></li>
 </ul>
 </blockquote>
-<h2 id="oss-8">Oss</h2>
+<h2 id="oss-9">Oss</h2>
 <ul>
-<li><strong>Hp</strong></li>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\mathbb{K}</span> campo</li>
+<li><span class="math inline">m,n \in \mathbb{N} - \{0\}</span></li>
+<li><span class="math inline">A \in \textrm{Mat}_{m \times
+n}(\mathbb{K})</span></li>
+<li><span class="math inline">x \in \textrm{Mat}_{n \times
+1}(\mathbb{K})</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\textrm{rk}(A) =\dim(\textrm{span}(A^1,
+\ldots, A^n)) = \dim(\textrm{span}(A_1, \ldots, A_n)^\bot)</span></li>
+</ul></li>
+<li><strong>Dim</strong>
+<ul>
+<li>per definizione <span class="math inline">\textrm{rk}(A) =
+\textrm{rk}(L_A)</span></li>
+<li>per dimostrazione precedente <span class="math inline">L_A</span> è
+una trasforamzione lineare, allora per definizione <span
+class="math inline">\textrm{rk}(L_A) =
+\dim(\textrm{im}(L_A))</span></li>
+<li>per dimostrazione precedente si ha che <span
+class="math inline">\textrm{im}(L_A) = \textrm{span}(A^1, \ldots,
+A^n)</span>, allora <span class="math inline">\dim(\textrm{im}(L_A)) =
+\dim(\textrm{span}(A^1, \ldots, A^n))</span>, e per ragionamento analogo
+<span class="math inline">\dim(\ker(L_A)) = \dim(\textrm{span}(A_1,
+\ldots, A_m)^\bot)</span></li>
+<li>allora <span class="math inline">\dim(\textrm{im}(L_A)) =
+\textrm{rk}(L_A) = \dim(\mathbb{K}^n) - \dim(\ker(L_A)) =
+\dim(\mathbb{K}^n) - \dim(\textrm{span}(A_1, \ldots,
+A_m)^\bot)</span></li>
+<li>per dimostrazione precedente si ha che <span
+class="math inline">\dim(\textrm{span}(A_1, \ldots, A_m)^\bot)=
+\dim(\mathbb{K}^n) - \dim(\textrm{span}(A_1, \ldots, A_m))</span></li>
+<li>allora <span class="math inline">\textrm{rk}(A) =
+\dim(\textrm{span}(A^1, \ldots, A^n)) = \dim(\mathbb{K}) -
+(\dim(\mathbb{K}^n) - \dim(\textrm{span}(A_1, \ldots, A_m))) =
+\dim(\textrm{span}(A_1, \ldots, A_m))</span></li>
+</ul></li>
 </ul>
+<hr />
+<h1 id="operazioni-su-righe-e-colonne">Operazioni su righe e
+colonne</h1>
+<h2 id="def-6">Def</h2>
+<ul>
+<li><strong>Scambio di righe di una matrice</strong></li>
+</ul>
+<blockquote>
+<ul>
+<li><span class="math inline">\mathbb{K}</span> campo</li>
+<li><span class="math inline">m, n \in \mathbb{N} - \{0\}</span></li>
+<li><span class="math inline">A \in \textrm{Mat}_{m \times
+n}(\mathbb{K})</span></li>
+<li><span class="math inline">\forall A_1, \ldots, A_m</span> righe di
+<span class="math inline">A</span>, scambiare <span
+class="math inline">A_i</span> e <span class="math inline">A_j</span>
+lascia invariato <span class="math inline">\ker(L_A)</span></li>
+</ul>
+</blockquote>
+<ul>
+<li><strong>Moltiplicazione di una riga per una costante</strong></li>
+</ul>
+<blockquote>
+<ul>
+<li><span class="math inline">\mathbb{K}</span> campo</li>
+<li><span class="math inline">m, n \in \mathbb{N} - \{0\}</span></li>
+<li><span class="math inline">A \in \textrm{Mat}_{m \times
+n}(\mathbb{K})</span></li>
+<li><span class="math inline">\lambda \in \mathbb{K}^*</span></li>
+<li><span class="math inline">\forall A_1, \ldots, A_m</span> righe di
+<span class="math inline">A</span>, moltiplicare <span
+class="math inline">A_i</span> per <span
+class="math inline">\lambda</span> lascia invariato <span
+class="math inline">\ker(L_A)</span></li>
+</ul>
+</blockquote>
+<ul>
+<li><strong>Somma di una riga con un multiplo di un’altra</strong></li>
+</ul>
+<blockquote>
+<ul>
+<li><span class="math inline">\mathbb{K}</span> campo</li>
+<li><span class="math inline">m, n \in \mathbb{N} - \{0\}</span></li>
+<li><span class="math inline">A \in \textrm{Mat}_{m \times
+n}(\mathbb{K})</span></li>
+<li><span class="math inline">\lambda \in \mathbb{K}^*</span></li>
+<li><span class="math inline">\forall A_1, \ldots, A_m</span> righe di
+<span class="math inline">A</span>, sommare ad <span
+class="math inline">A_i</span> un certo <span
+class="math inline">\lambda \cdot A_j</span> lascia invariato <span
+class="math inline">\ker(L_A)</span></li>
+</ul>
+</blockquote>
+<ul>
+<li><strong>Scambio di colonne di una matrice</strong></li>
+</ul>
+<blockquote>
+<ul>
+<li><span class="math inline">\mathbb{K}</span> campo</li>
+<li><span class="math inline">m, n \in \mathbb{N} - \{0\}</span></li>
+<li><span class="math inline">A \in \textrm{Mat}_{m \times
+n}(\mathbb{K})</span></li>
+<li><span class="math inline">\forall A^1, \ldots, A^m</span> colonne di
+<span class="math inline">A</span>, scambiare <span
+class="math inline">A^i</span> e <span class="math inline">A^j</span>
+lascia invariato <span class="math inline">\textrm{im}(L_A)</span></li>
+</ul>
+</blockquote>
+<ul>
+<li><strong>Moltiplicazione di una colonna per una
+costante</strong></li>
+</ul>
+<blockquote>
+<ul>
+<li><span class="math inline">\mathbb{K}</span> campo</li>
+<li><span class="math inline">m, n \in \mathbb{N} - \{0\}</span></li>
+<li><span class="math inline">A \in \textrm{Mat}_{m \times
+n}(\mathbb{K})</span></li>
+<li><span class="math inline">\lambda \in \mathbb{K}^*</span></li>
+<li><span class="math inline">\forall A^1, \ldots, A^m</span> colonne di
+<span class="math inline">A</span>, moltiplicare <span
+class="math inline">A^i</span> per <span
+class="math inline">\lambda</span> lascia invariato <span
+class="math inline">\textrm{im}(L_A)</span></li>
+</ul>
+</blockquote>
+<ul>
+<li><strong>Somma di una colonna con un multiplo di
+un’altra</strong></li>
+</ul>
+<blockquote>
+<ul>
+<li><span class="math inline">\mathbb{K}</span> campo</li>
+<li><span class="math inline">m, n \in \mathbb{N} - \{0\}</span></li>
+<li><span class="math inline">A \in \textrm{Mat}_{m \times
+n}(\mathbb{K})</span></li>
+<li><span class="math inline">\lambda \in \mathbb{K}^*</span></li>
+<li><span class="math inline">\forall A^1, \ldots, A^m</span> righe di
+<span class="math inline">A</span>, sommare ad <span
+class="math inline">A^i</span> un certo <span
+class="math inline">\lambda \cdot A^j</span> lascia invariato <span
+class="math inline">\textrm{im}(L_A)</span></li>
+</ul>
+</blockquote>
+<h2 id="oss-10">Oss</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\mathbb{K}</span> campo</li>
+<li><span class="math inline">m, n \in \mathbb{N} - \{0\}</span></li>
+<li><span class="math inline">A, B \in \textrm{Mat}_{m \times
+n}(\mathbb{K})</span></li>
+<li><span class="math inline">A \equiv B \iff</span> è possibile
+ricavare <span class="math inline">B</span> da <span
+class="math inline">A</span> eseguendo operazioni tra righe definite
+precedentemente</li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\equiv</span> una relazione di
+equivalenza</li>
+</ul></li>
+</ul>
+<h2 id="oss-11">Oss</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\mathbb{K}</span> campo</li>
+<li><span class="math inline">m, n \in \mathbb{N} - \{0\}</span></li>
+<li><span class="math inline">A, B \in \textrm{Mat}_{m \times
+n}(\mathbb{K})</span></li>
+<li><span class="math inline">A \equiv B \iff</span> è possibile
+ricavare <span class="math inline">B</span> da <span
+class="math inline">A</span> eseguendo operazioni tra righe definite
+precedentemente</li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">A \equiv B \implies \ker(L_A) = \ker(L_B)
+\land \textrm{rk}(A) = \textrm{rk}(B)</span></li>
+</ul></li>
+</ul>
+<h2 id="oss-12">Oss</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\mathbb{K}</span> campo</li>
+<li><span class="math inline">m, n \in \mathbb{N} - \{0\}</span></li>
+<li><span class="math inline">A, B \in \textrm{Mat}_{m \times
+n}(\mathbb{K})</span></li>
+<li><span class="math inline">A \equiv B \iff</span> è possibile
+ricavare <span class="math inline">B</span> da <span
+class="math inline">A</span> eseguendo operazioni tra colonne definite
+precedentemente</li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\equiv</span> una relazione di
+equivalenza</li>
+</ul></li>
+</ul>
+<h2 id="oss-13">Oss</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\mathbb{K}</span> campo</li>
+<li><span class="math inline">m, n \in \mathbb{N} - \{0\}</span></li>
+<li><span class="math inline">A, B \in \textrm{Mat}_{m \times
+n}(\mathbb{K})</span></li>
+<li><span class="math inline">A \equiv B \iff</span> è possibile
+ricavare <span class="math inline">B</span> da <span
+class="math inline">A</span> eseguendo operazioni tra colonne definite
+precedentemente</li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">A \equiv B \implies \textrm{im}(L_A) =
+\textrm{im}(L_B) \land \textrm{rk}(A) = \textrm{rk}(B)</span></li>
+</ul></li>
+</ul>
+<h2 id="def-7">Def</h2>
+<ul>
+<li><strong>Matrice completa</strong></li>
+</ul>
+<blockquote>
+<ul>
+<li><span class="math inline">\mathbb{K}</span> campo</li>
+<li><span class="math inline">m, n \in \mathbb{N} - \{0\}</span></li>
+<li><span class="math inline">A \in \textrm{Mat}_{m \times
+n}(\mathbb{K})</span></li>
+<li><span class="math inline">b \in \textrm{Mat}_{m \times
+1}(\mathbb{K})</span></li>
+<li><span class="math inline">A_b:=\left(\begin{array}{cccc}a_{1, 1}
+&amp; \cdots &amp; a_{1, n} &amp; b_1 \\ \vdots &amp; &amp; \vdots &amp;
+\vdots \\ a_{m, 1} &amp; \cdots &amp; a_{m,n} &amp;
+b_m\end{array}\right)</span></li>
+</ul>
+</blockquote>
 </body>
 </html>

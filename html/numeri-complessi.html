@@ -158,9 +158,24 @@
       vertical-align: middle;
     }
   </style>
-  <script
-  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js"
-  type="text/javascript"></script>
+  <script defer=""
+  src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js"></script>
+  <script>document.addEventListener("DOMContentLoaded", function () {
+ var mathElements = document.getElementsByClassName("math");
+ var macros = [];
+ for (var i = 0; i < mathElements.length; i++) {
+  var texText = mathElements[i].firstChild;
+  if (mathElements[i].tagName == "SPAN") {
+   katex.render(texText.data, mathElements[i], {
+    displayMode: mathElements[i].classList.contains('display'),
+    throwOnError: false,
+    macros: macros,
+    fleqn: false
+   });
+}}});
+  </script>
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css" />
   <!--[if lt IE 9]>
     <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
   <![endif]-->
@@ -176,28 +191,27 @@
 </ul>
 <blockquote>
 <ul>
-<li><span class="math inline">\(\mathbb{C}:=\left\{a+i b \mid a, b \in
-\mathbb{R}, \  i : i^{2}=-1\right\}\)</span> è l’<strong>insieme dei
+<li><span class="math inline">\mathbb{C}:=\left\{a+i b \mid a, b \in
+\mathbb{R}, \  i : i^{2}=-1\right\}</span> è l’<strong>insieme dei
 complessi</strong></li>
-<li><span class="math inline">\(z \in \mathbb{C}
+<li><span class="math inline">z \in \mathbb{C}
 \implies\left\{\begin{array}{l}a:=\operatorname{Re}(z) \\
-b:=\operatorname{Im}(z)\end{array}\right.\)</span></li>
+b:=\operatorname{Im}(z)\end{array}\right.</span></li>
 </ul>
 </blockquote>
 <h2 id="oss">Oss</h2>
 <ul>
 <li><strong>Hp</strong>
 <ul>
-<li><span class="math inline">\(a, b \in \mathbb{R}, z \in \mathbb{C}
-\mid z=a+i b\)</span></li>
-<li><span class="math inline">\(c, d \in \mathbb{R}, w \in \mathbb{C}
-\mid w=c+i d\)</span></li>
+<li><span class="math inline">a, b \in \mathbb{R}, z \in \mathbb{C} \mid
+z=a+i b</span></li>
+<li><span class="math inline">c, d \in \mathbb{R}, w \in \mathbb{C} \mid
+w=c+i d</span></li>
 </ul></li>
 <li><strong>Th</strong>
 <ul>
-<li><span class="math inline">\(z + w = (a+b)+i (c +d)\)</span></li>
-<li><span class="math inline">\(z\cdot w=(a c-b d)+i(ad+
-bc)\)</span></li>
+<li><span class="math inline">z + w = (a+b)+i (c +d)</span></li>
+<li><span class="math inline">z\cdot w=(a c-b d)+i(ad+ bc)</span></li>
 </ul></li>
 </ul>
 <h2 id="def-1">Def</h2>
@@ -206,33 +220,32 @@ bc)\)</span></li>
 </ul>
 <blockquote>
 <ul>
-<li><span class="math inline">\(z=a+i b\)</span></li>
-<li><span class="math inline">\(\bar{z}:=a-i b\)</span> è il
-<strong>coniugato</strong> di <span
-class="math inline">\(z\)</span></li>
+<li><span class="math inline">z=a+i b</span></li>
+<li><span class="math inline">\bar{z}:=a-i b</span> è il
+<strong>coniugato</strong> di <span class="math inline">z</span></li>
 </ul>
 </blockquote>
 <h2 id="oss-1">Oss</h2>
 <ul>
 <li><strong>Hp</strong>
 <ul>
-<li><span class="math inline">\(a, b \in \mathbb{R}, z \in \mathbb{C}
-\mid z=a+i b\)</span></li>
-<li><span class="math inline">\(c, d \in \mathbb{R}, w \in \mathbb{C}
-\mid w=c+i d\)</span></li>
+<li><span class="math inline">a, b \in \mathbb{R}, z \in \mathbb{C} \mid
+z=a+i b</span></li>
+<li><span class="math inline">c, d \in \mathbb{R}, w \in \mathbb{C} \mid
+w=c+i d</span></li>
 </ul></li>
 <li><strong>Th</strong>
 <ul>
 <li><span
-class="math inline">\(\overline{z}+\overline{w}=\overline{z+w}\)</span></li>
-<li><span class="math inline">\(\overline{z} \cdot
-\overline{w}=\overline{z \cdot w}\)</span></li>
+class="math inline">\overline{z}+\overline{w}=\overline{z+w}</span></li>
+<li><span class="math inline">\overline{z} \cdot
+\overline{w}=\overline{z \cdot w}</span></li>
 </ul></li>
 </ul>
 <h2 id="formula-di-eulero">Formula di Eulero</h2>
 <ul>
-<li><span class="math inline">\(\forall \theta \quad e^{i \theta}=\cos
-\theta+i \sin \theta\)</span></li>
+<li><span class="math inline">\forall \theta \quad e^{i \theta}=\cos
+\theta+i \sin \theta</span></li>
 </ul>
 <h2 id="def-2">Def</h2>
 <ul>
@@ -240,75 +253,73 @@ class="math inline">\(\overline{z}+\overline{w}=\overline{z+w}\)</span></li>
 </ul>
 <blockquote>
 <ul>
-<li><span class="math inline">\(z = a+ib\)</span></li>
-<li><span class="math inline">\(|z|:=\sqrt{a^{2}+b^{2}}\)</span> è il
-<strong>raggio</strong> di <span class="math inline">\(z\)</span>
+<li><span class="math inline">z = a+ib</span></li>
+<li><span class="math inline">|z|:=\sqrt{a^{2}+b^{2}}</span> è il
+<strong>raggio</strong> di <span class="math inline">z</span>
 <ul>
-<li>è la distanza di <span class="math inline">\(z\)</span> dall’origine
-nel piano di Gauss</li>
+<li>è la distanza di <span class="math inline">z</span> dall’origine nel
+piano di Gauss</li>
 </ul></li>
 </ul>
 </blockquote>
 <h2 id="forma-polare">Forma polare</h2>
 <ul>
-<li><span class="math inline">\(\forall z \in \mathbb{C}-0 \implies
-z=|z|\cdot e^{i \theta}\)</span></li>
+<li><span class="math inline">\forall z \in \mathbb{C}-0 \implies
+z=|z|\cdot e^{i \theta}</span></li>
 </ul>
 <h2 id="def-3">Def</h2>
 <blockquote>
 <ul>
-<li><span class="math inline">\(\arg(z) \subset \mathbb{R}\)</span> è
+<li><span class="math inline">\arg(z) \subset \mathbb{R}</span> è
 l’<strong>insieme delle soluzioni</strong> del sistema <span
-class="math inline">\(\left\{\begin{array}{l}\cos \theta=\frac{a}{|z|}
-\\ \sin \theta=\frac{b}{|z|}\end{array}\right.\)</span></li>
-<li>per definizione, <span class="math inline">\(\textrm{arg}(z)
-\implies \exists ! \theta \mid 0 \leq \theta \le 2 \pi\)</span> tale che
-<span class="math inline">\(\theta\)</span> sia soluzione del sistema, e
-questo prende il nome di <span
-class="math inline">\(\textrm{Arg}(z)\)</span>, detta <strong>soluzione
-principale</strong></li>
+class="math inline">\left\{\begin{array}{l}\cos \theta=\frac{a}{|z|} \\
+\sin \theta=\frac{b}{|z|}\end{array}\right.</span></li>
+<li>per definizione, <span class="math inline">\textrm{arg}(z) \implies
+\exists ! \theta \mid 0 \leq \theta \le 2 \pi</span> tale che <span
+class="math inline">\theta</span> sia soluzione del sistema, e questo
+prende il nome di <span class="math inline">\textrm{Arg}(z)</span>,
+detta <strong>soluzione principale</strong></li>
 </ul>
 </blockquote>
 <h2 id="oss-2">Oss</h2>
 <ul>
 <li><strong>Hp</strong>
 <ul>
-<li><span class="math inline">\((\mathbb{C}, +, \cdot)\)</span> è un
+<li><span class="math inline">(\mathbb{C}, +, \cdot)</span> è un
 gruppo</li>
 </ul></li>
 <li><strong>Th</strong>
 <ul>
-<li><span class="math inline">\((\mathbb{C}, +, \cdot )\)</span> è un
+<li><span class="math inline">(\mathbb{C}, +, \cdot )</span> è un
 campo</li>
 </ul></li>
 <li><strong>Dim</strong>
 <ul>
-<li><span class="math inline">\(\left.\begin{array}{l} z \cdot
+<li><span class="math inline">\left.\begin{array}{l} z \cdot
 \bar{z}=(a+i b)(a-i b)=a^{2}-(i b)^{2} \\ i^{2}=-1 \end{array} \right \}
-\implies a^{2}-i^{2} b^{2}=a^{2}+b^{2}=|z|^{2}\)</span></li>
-<li><span class="math inline">\(z \cdot \bar{z}=|z|^{2} \iff
+\implies a^{2}-i^{2} b^{2}=a^{2}+b^{2}=|z|^{2}</span></li>
+<li><span class="math inline">z \cdot \bar{z}=|z|^{2} \iff
 z=\dfrac{|z|^{2}}{\bar{z}} \iff z^{-1}=\dfrac{z}{|z|^{2}} =
-\dfrac{a}{a^2+b^2}- i \dfrac{b}{a^2+b^2} \implies \mathbb{C}\)</span>
-ammette inversi moltiplicativi <span class="math inline">\(\implies
-(\mathbb{C}, +, \cdot)\)</span> è un campo</li>
+\dfrac{a}{a^2+b^2}- i \dfrac{b}{a^2+b^2} \implies \mathbb{C}</span>
+ammette inversi moltiplicativi <span class="math inline">\implies
+(\mathbb{C}, +, \cdot)</span> è un campo</li>
 </ul></li>
 </ul>
 <h2 id="oss-3">Oss</h2>
 <ul>
-<li><span class="math inline">\(|z \cdot w|=|z|\cdot |w| \quad
-\arg(z\cdot w)=\arg(z) + \arg(w)\)</span></li>
-<li><span class="math inline">\(|\overline{w}|=|w| \quad
-\arg(\overline{w})=-\arg(w)\)</span></li>
-<li><span class="math inline">\(|w^{-1}|={|w|}^{-1}\quad
-\arg(w^{-1})=-\arg(w)\)</span></li>
-<li><span
-class="math inline">\(\left|\dfrac{z}{w}\right|=\dfrac{|z|}{|w|} \quad
-\arg\left(\dfrac{z}{w}\right)=\arg(z) - \arg(w)\)</span></li>
+<li><span class="math inline">|z \cdot w|=|z|\cdot |w| \quad \arg(z\cdot
+w)=\arg(z) + \arg(w)</span></li>
+<li><span class="math inline">|\overline{w}|=|w| \quad
+\arg(\overline{w})=-\arg(w)</span></li>
+<li><span class="math inline">|w^{-1}|={|w|}^{-1}\quad
+\arg(w^{-1})=-\arg(w)</span></li>
+<li><span class="math inline">\left|\dfrac{z}{w}\right|=\dfrac{|z|}{|w|}
+\quad \arg\left(\dfrac{z}{w}\right)=\arg(z) - \arg(w)</span></li>
 </ul>
 <h2 id="formula-di-de-moivre">Formula di de Moivre</h2>
 <ul>
-<li><span class="math inline">\(z^{n}=|z|^{n} e^{i n \theta} \quad \arg
-\left( z^{n} \right)=n \arg (z)\)</span></li>
+<li><span class="math inline">z^{n}=|z|^{n} e^{i n \theta} \quad \arg
+\left( z^{n} \right)=n \arg (z)</span></li>
 </ul>
 </body>
 </html>

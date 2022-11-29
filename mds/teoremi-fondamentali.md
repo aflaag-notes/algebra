@@ -264,7 +264,7 @@
 
 ## Oss
 
-- **Hp
+- **Hp**
     - $\mathbb{K}$ campo
     - $V, W$ spazi vettoriali su $\mathbb{K}$
     - $f:V \rightarrow W$ trasformazione lineare
@@ -324,3 +324,22 @@
     - allora, per dimostrazione precedente si ottiene che $\dim(V/\ker(f)) = \dim(V) - \dim(\ker(f))$
     - per il teorema di isomorfismo tra spazi vettoriali, si ha che $V/\ker(f) \cong \textrm{im}(f)$, e per dimostrazione precedente questo implica che $\dim(V/\ker(f)) = \dim(\textrm{im}(f))$
     - allora, segue che $\textrm{rk}(f) := \dim(\textrm{im}(f)) = \dim(V) - \dim(\ker(f))$
+
+****
+
+# Teorema di Rouché-Capelli
+
+- **Hp**
+    - $\mathbb{K}$ campo
+    - $m, n \in \mathbb{N} - \{0\}$
+    - $A \in \textrm{Mat}_{m \times n}(\mathbb{K})$
+    - $b \in \textrm{Mat}_{m \times 1}(\mathbb{K})$
+- **Th**
+    - $\exists x \in \textrm{Mat}_{n \times 1}(\mathbb{K}) \mid A\cdot x = b \iff \textrm{rk}(A) = \textrm{rk}(A_b)$
+- **Dim**
+    - $\exists x \in \textrm{Mat}_{n \times 1}(\mathbb{K}) \mid A\cdot x = b \iff \exists x_1, \ldots, x_n \in \mathbb{K} \mid x_1A^1 + \ldots + x_nA^n=b \iff b \in \textrm{span}(A^1, \ldots, A^n) \subset \textrm{span}(A^1, \ldots, A^n, b)$
+    - $b \in \textrm{span}(A^1, \ldots, A^n) \implies \exists \mu_1, \ldots, \mu_n \mid v = \mu_1A^1 + \ldots + \mu_n A^n$
+    - $\forall v \in \textrm{span}(A^1, \ldots, A^n, b) \quad \exists \lambda_1, \ldots, \lambda_n, c \in \mathbb{K} \mid v = \lambda_1A^1 + \ldots + \lambda_nA^n + cb = \lambda_1A^1 + \ldots + \lambda_nA^n + c(\mu_1A^1 + \ldots + \mu_nA^n) = (\lambda_1 + c\mu_1)A^1 + \ldots + (\lambda_n + c\mu_n)A^n \implies v \in \textrm{span}(A^1, \ldots, A^n) \implies \textrm{span}(A^1, \ldots, A^n, b) \subset \textrm{span}(A^1, \ldots, A^n)$
+    - allora $\textrm{span}(A^1, \ldots, A^n) = \textrm{span}(A^1, \ldots, A^n, b) \iff \dim(\textrm{span}(A^1, \ldots, A^n)) = \dim(\textrm{span}(A^1, \ldots, A^n, b))$
+    - per dimostrazione precedente $\dim(\textrm{span}(A^1, \ldots, A^n)) = \textrm{rk}(A)$, e analogamente $\dim(\textrm{span}(A^1, \ldots, A^n, b)) = \textrm{rk}(A_b)$
+    - allora $\dim(\textrm{span}(A^1, \ldots, A^n)) = \dim(\textrm{span}(A^1, \ldots, A^n, b)) \iff \textrm{rk}(A) = \textrm{rk}(A_b)$

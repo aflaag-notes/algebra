@@ -296,7 +296,7 @@
 
 > - $\mathbb{K}$ campo
 > - $V$ e $W$ spazi vettoriali su $\mathbb{K}$
-> - $f: V \rightarrow W$ **morfismo di spazi vettoriali** $\iff \forall x, y \in V \quad f(x + y) = f(x) + f(y)$ e $\forall v \in V, \lambda \in \mathbb{K} \quad f(\lambda k) = \lambda f(v)$
+> - $f: V \rightarrow W$ **morfismo di spazi vettoriali** $\iff \forall x, y \in V \quad f(x + y) = f(x) + f(y)$ e $\forall v \in V, \lambda \in \mathbb{K} \quad f(\lambda v) = \lambda f(v)$
 >     - un morfismo su spazi vettoriali è detto anche **applicazione lineare** o **trasformazione lineare**
 
 ## Oss
@@ -376,3 +376,13 @@
     - $\textrm{im}(f) \subset W$ sottospazio
 - **Dim**
     - ⚠️ **TODO**
+
+## Def
+
+- **Rango di un'applicazione lineare**
+
+> - $\mathbb{K}$ campo
+> - $V$ e $W$ spazi vettoriali su $\mathbb{K}$
+> - $f: V \rightarrow W$ applicazione lineare
+> - $\textrm{rk}(f) := \dim(\textrm{im}(f))$ è detto **rango di $f$**
+

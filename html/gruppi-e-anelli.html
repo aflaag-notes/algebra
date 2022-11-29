@@ -158,9 +158,24 @@
       vertical-align: middle;
     }
   </style>
-  <script
-  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js"
-  type="text/javascript"></script>
+  <script defer=""
+  src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js"></script>
+  <script>document.addEventListener("DOMContentLoaded", function () {
+ var mathElements = document.getElementsByClassName("math");
+ var macros = [];
+ for (var i = 0; i < mathElements.length; i++) {
+  var texText = mathElements[i].firstChild;
+  if (mathElements[i].tagName == "SPAN") {
+   katex.render(texText.data, mathElements[i], {
+    displayMode: mathElements[i].classList.contains('display'),
+    throwOnError: false,
+    macros: macros,
+    fleqn: false
+   });
+}}});
+  </script>
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css" />
   <!--[if lt IE 9]>
     <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
   <![endif]-->
@@ -176,12 +191,11 @@
 </ul>
 <blockquote>
 <ul>
-<li><span class="math inline">\(S\)</span> insieme</li>
-<li><span class="math inline">\(m: S \times S \rightarrow
-S\)</span></li>
-<li><span class="math inline">\((S, m)\)</span>
-<strong>semigruppo</strong> <span class="math inline">\(\iff \forall x,
-y, z \in S \quad m(x, m(y, z))=m(m(x, y),z) \quad\)</span></li>
+<li><span class="math inline">S</span> insieme</li>
+<li><span class="math inline">m: S \times S \rightarrow S</span></li>
+<li><span class="math inline">(S, m)</span> <strong>semigruppo</strong>
+<span class="math inline">\iff \forall x, y, z \in S \quad m(x, m(y,
+z))=m(m(x, y),z) \quad</span></li>
 </ul>
 </blockquote>
 <ul>
@@ -189,13 +203,12 @@ y, z \in S \quad m(x, m(y, z))=m(m(x, y),z) \quad\)</span></li>
 </ul>
 <blockquote>
 <ul>
-<li><span class="math inline">\(S\)</span> insieme</li>
-<li><span class="math inline">\(m: S \times S \rightarrow
-S\)</span></li>
-<li><span class="math inline">\((S, m)\)</span> <strong>monoide</strong>
-<span class="math inline">\(\iff (S, m)\)</span> semigruppo e <span
-class="math inline">\(\forall x \in S \quad \exists e \in S \mid m(x, e)
-= m(e, x) = x\)</span></li>
+<li><span class="math inline">S</span> insieme</li>
+<li><span class="math inline">m: S \times S \rightarrow S</span></li>
+<li><span class="math inline">(S, m)</span> <strong>monoide</strong>
+<span class="math inline">\iff (S, m)</span> semigruppo e <span
+class="math inline">\forall x \in S \quad \exists e \in S \mid m(x, e) =
+m(e, x) = x</span></li>
 </ul>
 </blockquote>
 <ul>
@@ -203,13 +216,12 @@ class="math inline">\(\forall x \in S \quad \exists e \in S \mid m(x, e)
 </ul>
 <blockquote>
 <ul>
-<li><span class="math inline">\(S\)</span> insieme</li>
-<li><span class="math inline">\(m: S \times S \rightarrow
-S\)</span></li>
-<li><span class="math inline">\((S, m)\)</span> <strong>gruppo</strong>
-<span class="math inline">\(\iff (S, m)\)</span> monoide e <span
-class="math inline">\(\forall x \in S \quad \exists x^{-1} \in S \mid
-m(x, x^{-1}) =m(x^{-1}, x) =e\)</span></li>
+<li><span class="math inline">S</span> insieme</li>
+<li><span class="math inline">m: S \times S \rightarrow S</span></li>
+<li><span class="math inline">(S, m)</span> <strong>gruppo</strong>
+<span class="math inline">\iff (S, m)</span> monoide e <span
+class="math inline">\forall x \in S \quad \exists x^{-1} \in S \mid m(x,
+x^{-1}) =m(x^{-1}, x) =e</span></li>
 </ul>
 </blockquote>
 <ul>
@@ -217,36 +229,35 @@ m(x, x^{-1}) =m(x^{-1}, x) =e\)</span></li>
 </ul>
 <blockquote>
 <ul>
-<li><span class="math inline">\(S\)</span> insieme</li>
-<li><span class="math inline">\(m: S \times S \rightarrow
-S\)</span></li>
-<li><span class="math inline">\((S, m)\)</span> <strong>gruppo
-abeliano</strong> <span class="math inline">\(\iff (S,m)\)</span> gruppo
-e <span class="math inline">\(\forall x, y \in S \quad m(x, y) = m(y,
-x)\)</span></li>
+<li><span class="math inline">S</span> insieme</li>
+<li><span class="math inline">m: S \times S \rightarrow S</span></li>
+<li><span class="math inline">(S, m)</span> <strong>gruppo
+abeliano</strong> <span class="math inline">\iff (S,m)</span> gruppo e
+<span class="math inline">\forall x, y \in S \quad m(x, y) = m(y,
+x)</span></li>
 </ul>
 </blockquote>
 <h2 id="oss">Oss</h2>
 <ul>
 <li><strong>Hp</strong>
 <ul>
-<li><span class="math inline">\(G\)</span> monoide</li>
-<li><span class="math inline">\(\exists e \in G\)</span> elemento
+<li><span class="math inline">G</span> monoide</li>
+<li><span class="math inline">\exists e \in G</span> elemento
 neutro</li>
 </ul></li>
 <li><strong>Th</strong>
 <ul>
-<li><span class="math inline">\(e\)</span> è unico in <span
-class="math inline">\(G\)</span></li>
+<li><span class="math inline">e</span> è unico in <span
+class="math inline">G</span></li>
 </ul></li>
 <li><strong>Dim</strong>
 <ul>
-<li>per assurdo, <span class="math inline">\(\exists e_1, e_2 \mid e_1
-\neq e_2\)</span> elementi neutri, allora <span
-class="math inline">\(\left.\begin{array}{l}m\left(x,
+<li>per assurdo, <span class="math inline">\exists e_1, e_2 \mid e_1
+\neq e_2</span> elementi neutri, allora <span
+class="math inline">\left.\begin{array}{l}m\left(x,
 e_{1}\right)=m\left(e_{1}, x\right)=x \\ m\left(x,
 e_{2}\right)=m\left(e_{2}, x\right)=x\end{array}\right\} \implies
-m\left(e_{1}, x\right)=m\left(e_{2}, x\right) \implies e_1=e_2\)</span>
+m\left(e_{1}, x\right)=m\left(e_{2}, x\right) \implies e_1=e_2</span>
 necessariamente, quindi è unico</li>
 </ul></li>
 </ul>
@@ -254,49 +265,48 @@ necessariamente, quindi è unico</li>
 <ul>
 <li><strong>Hp</strong>
 <ul>
-<li><span class="math inline">\((G, m)\)</span> gruppo</li>
-<li><span class="math inline">\(x \in G\)</span></li>
-<li><span class="math inline">\(\exists x^{-1} \in G\)</span> inverso di
-<span class="math inline">\(x\)</span> rispetto ad <span
-class="math inline">\(m\)</span></li>
+<li><span class="math inline">(G, m)</span> gruppo</li>
+<li><span class="math inline">x \in G</span></li>
+<li><span class="math inline">\exists x^{-1} \in G</span> inverso di
+<span class="math inline">x</span> rispetto ad <span
+class="math inline">m</span></li>
 </ul></li>
 <li><strong>Th</strong>
 <ul>
-<li><span class="math inline">\(x^{-1}\)</span> è unico in <span
-class="math inline">\(G\)</span> per <span
-class="math inline">\(x\)</span> rispetto a <span
-class="math inline">\(m\)</span></li>
+<li><span class="math inline">x^{-1}</span> è unico in <span
+class="math inline">G</span> per <span class="math inline">x</span>
+rispetto a <span class="math inline">m</span></li>
 </ul></li>
 <li><strong>Dim</strong>
 <ul>
-<li>per assurdo, per un certo <span class="math inline">\(x \in G \quad
-\exists x^{-1}_1, x^{-1}_2 \mid x^{-1}_1 \neq x^{-1}_2\)</span>, allora
-<span class="math inline">\(\left.\begin{array}{l}m\left(x,
+<li>per assurdo, per un certo <span class="math inline">x \in G \quad
+\exists x^{-1}_1, x^{-1}_2 \mid x^{-1}_1 \neq x^{-1}_2</span>, allora
+<span class="math inline">\left.\begin{array}{l}m\left(x,
 x_{1}^{-1}\right)=m\left(x_{1}^{-1}, x\right)=e \\ m\left(x,
 x_{2}^{-1}\right)=m\left(x_{2}^{-1}, x\right)=e \end{array}\right\}
 \implies m\left(e_{1}^{-1}, x\right)=m\left(x_{2}^{-1}, x\right)
-\implies x_1^{-1}=x_2^{-1}\)</span> necessariamente, quindi è unico</li>
+\implies x_1^{-1}=x_2^{-1}</span> necessariamente, quindi è unico</li>
 </ul></li>
 </ul>
 <h2 id="ex">Ex</h2>
 <ul>
 <li><strong>Hp</strong>
 <ul>
-<li><span class="math inline">\(X, Y\)</span> insiemi,</li>
-<li><span class="math inline">\(Y^X = \{f \mid f:X \rightarrow
-Y\}\)</span></li>
+<li><span class="math inline">X, Y</span> insiemi,</li>
+<li><span class="math inline">Y^X = \{f \mid f:X \rightarrow
+Y\}</span></li>
 </ul></li>
 <li><strong>Th</strong>
 <ul>
-<li><span class="math inline">\((X^X, \circ)\)</span> è monoide</li>
+<li><span class="math inline">(X^X, \circ)</span> è monoide</li>
 </ul></li>
 <li><strong>Dim</strong>
 <ul>
-<li><span class="math inline">\(\forall f, g, h \in Y^X \quad (f \circ
-g) \circ h=f \circ(g \circ h)\)</span>. poiché la composizione di
-funzioni è associativa</li>
-<li><span class="math inline">\(\forall X \quad \exists \textrm{id}_X
-\mid \textrm{id}_X : X \rightarrow X : x \rightarrow x\)</span>, che
+<li><span class="math inline">\forall f, g, h \in Y^X \quad (f \circ g)
+\circ h=f \circ(g \circ h)</span>. poiché la composizione di funzioni è
+associativa</li>
+<li><span class="math inline">\forall X \quad \exists \textrm{id}_X \mid
+\textrm{id}_X : X \rightarrow X : x \rightarrow x</span>, che
 costituisce dunque l’elemento neutro, mappando ogni elemento in sé
 stesso</li>
 </ul></li>
@@ -305,12 +315,12 @@ stesso</li>
 <ul>
 <li><strong>Hp</strong>
 <ul>
-<li><span class="math inline">\(X, Y\)</span> insiemi finiti</li>
+<li><span class="math inline">X, Y</span> insiemi finiti</li>
 </ul></li>
 <li><strong>Th</strong>
 <ul>
-<li><span class="math inline">\(\left| Y^X \right| = \left| Y \right| ^
-{|X|}\)</span></li>
+<li><span class="math inline">\left| Y^X \right| = \left| Y \right| ^
+{|X|}</span></li>
 </ul></li>
 </ul>
 <hr />
@@ -321,19 +331,16 @@ stesso</li>
 </ul>
 <blockquote>
 <ul>
-<li><span class="math inline">\(A\)</span> insieme</li>
-<li><span class="math inline">\(+: A \times A \rightarrow
-A\)</span></li>
-<li><span class="math inline">\(*: A \times A \rightarrow
-A\)</span></li>
-<li><span class="math inline">\((A, +, *)\)</span>
-<strong>anello</strong> <span class="math inline">\(\iff (A, +)\)</span>
-gruppo abeliano, <span class="math inline">\((A, *)\)</span> monoide e
-<span class="math inline">\(\forall a, b, c \in A \quad a*(b + c) = a *
-b + a * c\)</span></li>
-<li><span class="math inline">\(a * b=b * a \quad \forall a, b \in A
-\implies (A, *, +)\)</span> è un <strong>anello
-commutativo</strong></li>
+<li><span class="math inline">A</span> insieme</li>
+<li><span class="math inline">+: A \times A \rightarrow A</span></li>
+<li><span class="math inline">*: A \times A \rightarrow A</span></li>
+<li><span class="math inline">(A, +, *)</span> <strong>anello</strong>
+<span class="math inline">\iff (A, +)</span> gruppo abeliano, <span
+class="math inline">(A, *)</span> monoide e <span
+class="math inline">\forall a, b, c \in A \quad a*(b + c) = a * b + a *
+c</span></li>
+<li><span class="math inline">a * b=b * a \quad \forall a, b \in A
+\implies (A, *, +)</span> è un <strong>anello commutativo</strong></li>
 </ul>
 </blockquote>
 <ul>
@@ -341,11 +348,11 @@ commutativo</strong></li>
 </ul>
 <blockquote>
 <ul>
-<li><span class="math inline">\((A, +, *)\)</span> anello</li>
-<li><span class="math inline">\((A, +, *)\)</span> è un
-<strong>campo</strong> <span class="math inline">\(\iff \forall x \in A
-\quad \exists x^{-1}\)</span> rispetto a <span
-class="math inline">\(*\)</span></li>
+<li><span class="math inline">(A, +, *)</span> anello</li>
+<li><span class="math inline">(A, +, *)</span> è un
+<strong>campo</strong> <span class="math inline">\iff \forall x \in A
+\quad \exists x^{-1}</span> rispetto a <span
+class="math inline">*</span></li>
 </ul>
 </blockquote>
 <ul>
@@ -353,16 +360,14 @@ class="math inline">\(*\)</span></li>
 </ul>
 <blockquote>
 <ul>
-<li><span class="math inline">\(A\)</span> insieme</li>
-<li><span class="math inline">\(+: A \times A \rightarrow
-A\)</span></li>
-<li><span class="math inline">\(*: A \times A \rightarrow
-A\)</span></li>
-<li><span class="math inline">\((A, +, *)\)</span> <strong>semianello
-commutativo</strong> <span class="math inline">\(\iff (A, +)\)</span>
-monide commutativo, <span class="math inline">\((A, *)\)</span> monoide
-commutativo e <span class="math inline">\(\forall a, b, c \in A \quad
-a*(b + c) = a*b + a*c\)</span></li>
+<li><span class="math inline">A</span> insieme</li>
+<li><span class="math inline">+: A \times A \rightarrow A</span></li>
+<li><span class="math inline">*: A \times A \rightarrow A</span></li>
+<li><span class="math inline">(A, +, *)</span> <strong>semianello
+commutativo</strong> <span class="math inline">\iff (A, +)</span> monide
+commutativo, <span class="math inline">(A, *)</span> monoide commutativo
+e <span class="math inline">\forall a, b, c \in A \quad a*(b + c) = a*b
++ a*c</span></li>
 </ul>
 </blockquote>
 <ul>
@@ -370,11 +375,11 @@ a*(b + c) = a*b + a*c\)</span></li>
 </ul>
 <blockquote>
 <ul>
-<li><span class="math inline">\((A, +, \cdot)\)</span> anello</li>
-<li><span class="math inline">\((B, + , \cdot) \subset (A, +,
-\cdot)\)</span> <strong>sottoanello</strong> <span
-class="math inline">\(\iff (B, +) \subset (A, +)\)</span> sottogruppo e
-<span class="math inline">\(B \cdot B \subset B\)</span></li>
+<li><span class="math inline">(A, +, \cdot)</span> anello</li>
+<li><span class="math inline">(B, + , \cdot) \subset (A, +,
+\cdot)</span> <strong>sottoanello</strong> <span
+class="math inline">\iff (B, +) \subset (A, +)</span> sottogruppo e
+<span class="math inline">B \cdot B \subset B</span></li>
 </ul>
 </blockquote>
 <h2 id="def-2">Def</h2>
@@ -383,80 +388,77 @@ class="math inline">\(\iff (B, +) \subset (A, +)\)</span> sottogruppo e
 </ul>
 <blockquote>
 <ul>
-<li><span class="math inline">\((A, +, \cdot)\)</span> anello
+<li><span class="math inline">(A, +, \cdot)</span> anello
 commutativo</li>
-<li><span class="math inline">\(a \in A\)</span>
-<strong>invertibile</strong> <span class="math inline">\(\iff \exists
-a^{-1} \in A \mid a \cdot a^{-1}=e\)</span>, dove <span
-class="math inline">\(e\)</span> è l’elemento neutro dell’anello
-rispetto a <span class="math inline">\(\cdot\)</span></li>
-<li><span class="math inline">\(A^* := \{a \in A \mid a\)</span>
-invertibile<span class="math inline">\(\}\)</span> è l’<strong>insieme
-degli invertibili di <span
-class="math inline">\(A\)</span></strong></li>
+<li><span class="math inline">a \in A</span>
+<strong>invertibile</strong> <span class="math inline">\iff \exists
+a^{-1} \in A \mid a \cdot a^{-1}=e</span>, dove <span
+class="math inline">e</span> è l’elemento neutro dell’anello rispetto a
+<span class="math inline">\cdot</span></li>
+<li><span class="math inline">A^* := \{a \in A \mid a</span>
+invertibile<span class="math inline">\}</span> è l’<strong>insieme degli
+invertibili di <span class="math inline">A</span></strong></li>
 </ul>
 </blockquote>
 <h2 id="oss-3">Oss</h2>
 <ul>
 <li><strong>Hp</strong>
 <ul>
-<li><span class="math inline">\((A, +, \cdot)\)</span> anello
+<li><span class="math inline">(A, +, \cdot)</span> anello
 commutativo</li>
 </ul></li>
 <li><strong>Th</strong>
 <ul>
-<li><span class="math inline">\((A^*, \cdot)\)</span> è un gruppo</li>
+<li><span class="math inline">(A^*, \cdot)</span> è un gruppo</li>
 </ul></li>
 <li><strong>Dim</strong>
 <ul>
-<li><span class="math inline">\((xy)z = x(yz)\)</span></li>
-<li><span class="math inline">\(1^{-1} = 1 \implies 1\)</span>
-invertibile <span class="math inline">\(\implies 1 \in A^*\)</span> per
-definizione di <span class="math inline">\(A^* \implies \exists e \in
-A^*\)</span></li>
-<li><span class="math inline">\(\forall x \in A^{*} \quad \exists
-x^{-1}\)</span> per definizione di <span
-class="math inline">\(A^*\)</span>, ma poiché <span
-class="math inline">\(x^{-1}\)</span> è inverso di <span
-class="math inline">\(x\)</span>, allora <span
-class="math inline">\(x^{-1} \in A^*\)</span> per definizione</li>
+<li><span class="math inline">(xy)z = x(yz)</span></li>
+<li><span class="math inline">1^{-1} = 1 \implies 1</span> invertibile
+<span class="math inline">\implies 1 \in A^*</span> per definizione di
+<span class="math inline">A^* \implies \exists e \in A^*</span></li>
+<li><span class="math inline">\forall x \in A^{*} \quad \exists
+x^{-1}</span> per definizione di <span class="math inline">A^*</span>,
+ma poiché <span class="math inline">x^{-1}</span> è inverso di <span
+class="math inline">x</span>, allora <span class="math inline">x^{-1}
+\in A^*</span> per definizione</li>
 </ul></li>
 </ul>
 <h2 id="oss-4">Oss</h2>
 <ul>
 <li><strong>Hp</strong>
 <ul>
-<li><span class="math inline">\((A, +, \cdot)\)</span> anello
+<li><span class="math inline">(A, +, \cdot)</span> anello
 commutativo</li>
 </ul></li>
 <li><strong>Th</strong>
 <ul>
-<li><span class="math inline">\((A^*, \cdot) \subset (A, \cdot)\)</span>
-è un sottogruppo</li>
+<li><span class="math inline">(A^*, \cdot) \subset (A, \cdot)</span> è
+un sottogruppo</li>
 </ul></li>
 <li><strong>Dim</strong>
 <ul>
 <li>esiste il neutro per dimostrazione precedente</li>
-<li><span class="math inline">\(\forall x, y \in A^{*} \quad \exists
-x^{-1}, y^{-1} \in A^*\)</span>, e in particolare <span
-class="math inline">\(y^{-1}x^{-1} = (xy)^{-1} \implies xy \in
-A^*\)</span> per definizione</li>
+<li><span class="math inline">\forall x, y \in A^{*} \quad \exists
+x^{-1}, y^{-1} \in A^*</span>, e in particolare <span
+class="math inline">y^{-1}x^{-1} = (xy)^{-1} \implies xy \in A^*</span>
+per definizione</li>
 <li>è chiuso rispetto agli inversi per dimostrazione precedente</li>
 </ul></li>
 </ul>
 <h2 id="def-3">Def</h2>
 <ul>
 <li><strong>Divisori dello <span
-class="math inline">\(0\)</span></strong></li>
+class="math inline">0</span></strong></li>
 </ul>
 <blockquote>
 <ul>
-<li><span class="math inline">\((A, + , \cdot)\)</span> anello
+<li><span class="math inline">(A, + , \cdot)</span> anello
 commutativo</li>
-<li><span class="math inline">\(a \in A\)</span> <strong>divisore dello
-<span class="math inline">\(0\)</span></strong> <span
-class="math inline">\(\iff \exists b \in A - \{0\} \mid a \cdot b =
-0\)</span></li>
+<li><span class="math inline">a \in A</span> <strong>divisore dello
+<span class="math inline">0</span></strong> <span
+class="math inline">\iff \exists b \in A - \{0\} \mid a \cdot b =
+0</span></li>
 </ul>
 </blockquote>
 <ul>
@@ -464,14 +466,14 @@ class="math inline">\(\iff \exists b \in A - \{0\} \mid a \cdot b =
 </ul>
 <blockquote>
 <ul>
-<li><span class="math inline">\((A, +, \cdot)\)</span> anello
+<li><span class="math inline">(A, +, \cdot)</span> anello
 commutativo</li>
-<li><span class="math inline">\(A\)</span> <strong>dominio di
-integrità</strong> <span class="math inline">\(\iff \nexists x : x \mid
-0\)</span>, oltre a <span class="math inline">\(x = 0\)</span></li>
-<li>alternativamente, <span class="math inline">\(A\)</span> è dominio
-di integrità <span class="math inline">\(\iff\)</span> in <span
-class="math inline">\(A\)</span> vale la legge di annullamento del
+<li><span class="math inline">A</span> <strong>dominio di
+integrità</strong> <span class="math inline">\iff \nexists x : x \mid
+0</span>, oltre a <span class="math inline">x = 0</span></li>
+<li>alternativamente, <span class="math inline">A</span> è dominio di
+integrità <span class="math inline">\iff</span> in <span
+class="math inline">A</span> vale la legge di annullamento del
 prodotto</li>
 </ul>
 </blockquote>
@@ -479,48 +481,47 @@ prodotto</li>
 <ul>
 <li><strong>Hp</strong>
 <ul>
-<li><span class="math inline">\((A, +, \cdot)\)</span> anello
+<li><span class="math inline">(A, +, \cdot)</span> anello
 commutativo</li>
 </ul></li>
 <li><strong>Th</strong>
 <ul>
-<li><span class="math inline">\(x \mid 0 \iff x \notin A^*\)</span></li>
+<li><span class="math inline">x \mid 0 \iff x \notin A^*</span></li>
 </ul></li>
 <li><strong>Dim</strong>
 <ul>
-<li>ipotizzando che <span class="math inline">\(\exists a \in A \mid
-a\)</span> invertibile e divisore dello <span
-class="math inline">\(0\)</span>, allora <span
-class="math inline">\(\exists a^{-1} \in A, b \in A - \{0\} \mid a^{-1}a
-= 1 \land ab = 0\)</span></li>
-<li><span class="math inline">\(b = 1 \cdot b = (a^{-1} a)\cdot b =
-a^{-1}\cdot(ab)=a^{-1}\cdot 0= 0 \ \bot\)</span></li>
+<li>ipotizzando che <span class="math inline">\exists a \in A \mid
+a</span> invertibile e divisore dello <span
+class="math inline">0</span>, allora <span class="math inline">\exists
+a^{-1} \in A, b \in A - \{0\} \mid a^{-1}a = 1 \land ab = 0</span></li>
+<li><span class="math inline">b = 1 \cdot b = (a^{-1} a)\cdot b =
+a^{-1}\cdot(ab)=a^{-1}\cdot 0= 0 \ \bot</span></li>
 </ul></li>
 </ul>
 <h2 id="oss-6">Oss</h2>
 <ul>
 <li><strong>Hp</strong>
 <ul>
-<li><span class="math inline">\(A\)</span> campo</li>
+<li><span class="math inline">A</span> campo</li>
 </ul></li>
 <li><strong>Th</strong>
 <ul>
-<li><span class="math inline">\(A\)</span> dominio di integrità</li>
+<li><span class="math inline">A</span> dominio di integrità</li>
 </ul></li>
 <li><strong>Dim</strong>
 <ul>
-<li><span class="math inline">\(A\)</span> campo <span
-class="math inline">\(\implies\)</span> ogni elemento non nullo è
-invertibile, dunque <span class="math inline">\(A^*=A - \{0\}\)</span>
+<li><span class="math inline">A</span> campo <span
+class="math inline">\implies</span> ogni elemento non nullo è
+invertibile, dunque <span class="math inline">A^*=A - \{0\}</span>
 <ul>
-<li><span class="math inline">\(0\)</span> è l’unico elemento non
+<li><span class="math inline">0</span> è l’unico elemento non
 invertibile</li>
-<li><span class="math inline">\(0 \notin A^* \iff 0 \mid 0\)</span> per
+<li><span class="math inline">0 \notin A^* \iff 0 \mid 0</span> per
 dimostrazione precedente</li>
 </ul></li>
-<li>quindi <span class="math inline">\(A\)</span> è dominio di integrità
-poiché <span class="math inline">\(0\)</span> è l’unico divisore dello
-<span class="math inline">\(0\)</span></li>
+<li>quindi <span class="math inline">A</span> è dominio di integrità
+poiché <span class="math inline">0</span> è l’unico divisore dello <span
+class="math inline">0</span></li>
 </ul></li>
 </ul>
 <h2 id="def-4">Def</h2>
@@ -529,12 +530,11 @@ poiché <span class="math inline">\(0\)</span> è l’unico divisore dello
 </ul>
 <blockquote>
 <ul>
-<li><span class="math inline">\(A\)</span> anello commutativo</li>
-<li><span class="math inline">\(a \in A - \{0\} \mid a \in
-A^*\)</span></li>
-<li><span class="math inline">\(a\)</span> <strong>irriducibile</strong>
-<span class="math inline">\(\iff \exists b, c \in A \mid a = b c
-\implies b \in A^* \lor c \in A^*\)</span></li>
+<li><span class="math inline">A</span> anello commutativo</li>
+<li><span class="math inline">a \in A - \{0\} \mid a \in A^*</span></li>
+<li><span class="math inline">a</span> <strong>irriducibile</strong>
+<span class="math inline">\iff \exists b, c \in A \mid a = b c \implies
+b \in A^* \lor c \in A^*</span></li>
 </ul>
 </blockquote>
 <ul>
@@ -542,49 +542,47 @@ A^*\)</span></li>
 </ul>
 <blockquote>
 <ul>
-<li><span class="math inline">\(A\)</span> anello commutativo</li>
-<li><span class="math inline">\(a \in A - \{0\} \mid a \in
-A^*\)</span></li>
-<li><span class="math inline">\(a\)</span> <strong>primo</strong> <span
-class="math inline">\(\iff \exists b, c \in A : a \mid bc \implies a
-\mid b \lor a \mid c\)</span></li>
+<li><span class="math inline">A</span> anello commutativo</li>
+<li><span class="math inline">a \in A - \{0\} \mid a \in A^*</span></li>
+<li><span class="math inline">a</span> <strong>primo</strong> <span
+class="math inline">\iff \exists b, c \in A : a \mid bc \implies a \mid
+b \lor a \mid c</span></li>
 </ul>
 </blockquote>
 <h2 id="oss-7">Oss</h2>
 <ul>
 <li><strong>Hp</strong>
 <ul>
-<li><span class="math inline">\(A\)</span> dominio di integrità</li>
+<li><span class="math inline">A</span> dominio di integrità</li>
 </ul></li>
 <li><strong>Th</strong>
 <ul>
-<li><span class="math inline">\(a\)</span> primo <span
-class="math inline">\(\implies a\)</span> irriducibile</li>
+<li><span class="math inline">a</span> primo <span
+class="math inline">\implies a</span> irriducibile</li>
 </ul></li>
 <li><strong>Dim</strong>
 <ul>
-<li>si supponga <span class="math inline">\(\exists b, c \in A \mid a =
-bc\)</span></li>
-<li><span class="math inline">\(\forall a \in A \quad a \mid a\)</span>
-per riflessività</li>
-<li>per ipotesi <span class="math inline">\(a\)</span> primo, dunque per
-definizione <span class="math inline">\(\exists b, c \in A : a \mid bc
-\implies a \mid b \lor a \mid c\)</span>, ma poiché <span
-class="math inline">\(a \mid a = bc\)</span>, allora i coefficienti
+<li>si supponga <span class="math inline">\exists b, c \in A \mid a =
+bc</span></li>
+<li><span class="math inline">\forall a \in A \quad a \mid a</span> per
+riflessività</li>
+<li>per ipotesi <span class="math inline">a</span> primo, dunque per
+definizione <span class="math inline">\exists b, c \in A : a \mid bc
+\implies a \mid b \lor a \mid c</span>, ma poiché <span
+class="math inline">a \mid a = bc</span>, allora i coefficienti
 moltiplicativi sono proprio li stessi che compongono <span
-class="math inline">\(a\)</span></li>
-<li>prendendo ad esempio <span class="math inline">\(a \mid b \implies
+class="math inline">a</span></li>
+<li>prendendo ad esempio <span class="math inline">a \mid b \implies
 \exists d \in A \mid ad = b \implies a = bc \iff a = adc \iff a \cdot( 1
-- dc ) = 0\)</span></li>
-<li><span class="math inline">\(A\)</span> dominio di integrità per
-ipotesi, e dunque in esso vale la legge di annullamento del
-prodotto</li>
-<li>per definizione <span class="math inline">\(a\)</span> primo <span
-class="math inline">\(\implies a \neq 0 \implies 1 - cd = 0 \iff -cd =
--1 \iff cd = 1\)</span>, che per definizione implica che <span
-class="math inline">\(d\)</span> è l’inverso di <span
-class="math inline">\(c\)</span>, e dunque <span class="math inline">\(c
-\in A^*\)</span></li>
+- dc ) = 0</span></li>
+<li><span class="math inline">A</span> dominio di integrità per ipotesi,
+e dunque in esso vale la legge di annullamento del prodotto</li>
+<li>per definizione <span class="math inline">a</span> primo <span
+class="math inline">\implies a \neq 0 \implies 1 - cd = 0 \iff -cd = -1
+\iff cd = 1</span>, che per definizione implica che <span
+class="math inline">d</span> è l’inverso di <span
+class="math inline">c</span>, e dunque <span class="math inline">c \in
+A^*</span></li>
 <li>dunque, avendo preso un numero primo in ipotesi che si potesse
 scrivere come prodotto di altri due numeri nel dominio, si è ottenuta la
 definizione di irriducibilità di un elemento</li>
@@ -598,12 +596,12 @@ definizione di irriducibilità di un elemento</li>
 </ul>
 <blockquote>
 <ul>
-<li><span class="math inline">\((G, *)\)</span> gruppo</li>
-<li><span class="math inline">\((H, *) \subset (G, *)\)</span>
-<strong>sottogruppo</strong> <span class="math inline">\(\iff \exists e
-\in H \mid e\)</span> è l’elemento neutro, <span class="math inline">\(H
-* H \subset H\)</span> e <span class="math inline">\(\exists x^{-1} \in
-H \quad \forall x \in H\)</span></li>
+<li><span class="math inline">(G, *)</span> gruppo</li>
+<li><span class="math inline">(H, *) \subset (G, *)</span>
+<strong>sottogruppo</strong> <span class="math inline">\iff \exists e
+\in H \mid e</span> è l’elemento neutro, <span class="math inline">H * H
+\subset H</span> e <span class="math inline">\exists x^{-1} \in H \quad
+\forall x \in H</span></li>
 </ul>
 </blockquote>
 <h2 id="def-6">Def</h2>
@@ -612,26 +610,26 @@ H \quad \forall x \in H\)</span></li>
 </ul>
 <blockquote>
 <ul>
-<li><span class="math inline">\((G, *)\)</span> gruppo</li>
-<li><span class="math inline">\((H, *) \subset (G, *)\)</span>
+<li><span class="math inline">(G, *)</span> gruppo</li>
+<li><span class="math inline">(H, *) \subset (G, *)</span>
 sottogruppo</li>
-<li><span class="math inline">\(x \in G\)</span></li>
-<li><span class="math inline">\(xH := \{xh \mid h \in H\}\)</span></li>
-<li><span class="math inline">\(Hx := \{hx \mid h \in H\}\)</span></li>
-<li><span class="math inline">\(H\)</span> <strong>sottogruppo
-normale</strong> <span class="math inline">\(\iff xH = Hx \quad \forall
-x \in G\)</span></li>
+<li><span class="math inline">x \in G</span></li>
+<li><span class="math inline">xH := \{xh \mid h \in H\}</span></li>
+<li><span class="math inline">Hx := \{hx \mid h \in H\}</span></li>
+<li><span class="math inline">H</span> <strong>sottogruppo
+normale</strong> <span class="math inline">\iff xH = Hx \quad \forall x
+\in G</span></li>
 </ul>
 </blockquote>
 <h2 id="oss-8">Oss</h2>
 <ul>
 <li><strong>Hp</strong>
 <ol type="1">
-<li><span class="math inline">\(H\)</span> è sottogruppo normale</li>
-<li><span class="math inline">\(\forall g \in G, h \in H \quad g \cdot h
-\cdot g^{-1} \in H\)</span></li>
-<li><span class="math inline">\(\forall g \in G, h \in H \quad \exists k
-\in H \mid g \cdot h = k \cdot g\)</span></li>
+<li><span class="math inline">H</span> è sottogruppo normale</li>
+<li><span class="math inline">\forall g \in G, h \in H \quad g \cdot h
+\cdot g^{-1} \in H</span></li>
+<li><span class="math inline">\forall g \in G, h \in H \quad \exists k
+\in H \mid g \cdot h = k \cdot g</span></li>
 </ol></li>
 <li><strong>Th</strong>
 <ul>
@@ -639,49 +637,48 @@ x \in G\)</span></li>
 </ul></li>
 <li><strong>Dim</strong>
 <ul>
-<li>1 <span class="math inline">\(\implies\)</span> 3
+<li>1 <span class="math inline">\implies</span> 3
 <ul>
-<li><span class="math inline">\(gH = Hg\)</span> per ipotesi 1 <span
-class="math inline">\(\implies \forall gh \in gH = Hg = \{kg \mid k \in
-H\} \implies \exists k \in H \mid gh = kg\)</span> per definizione di
-<span class="math inline">\(Hg\)</span></li>
+<li><span class="math inline">gH = Hg</span> per ipotesi 1 <span
+class="math inline">\implies \forall gh \in gH = Hg = \{kg \mid k \in
+H\} \implies \exists k \in H \mid gh = kg</span> per definizione di
+<span class="math inline">Hg</span></li>
 </ul></li>
-<li>3 <span class="math inline">\(\implies\)</span> 2
+<li>3 <span class="math inline">\implies</span> 2
 <ul>
-<li><span class="math inline">\(\forall g \in G, h \in H \quad \exists k
-\in H \mid gh = kg\)</span> per ipotesi 3</li>
-<li><span class="math inline">\(gh = kg \iff g h g^{-1} =k g g^{-1} \iff
-k = ghg^{-1}\)</span>, ma <span class="math inline">\(k \in H\)</span>
-per ipotesi, dunque <span class="math inline">\(ghg^{-1} \in
-H\)</span></li>
+<li><span class="math inline">\forall g \in G, h \in H \quad \exists k
+\in H \mid gh = kg</span> per ipotesi 3</li>
+<li><span class="math inline">gh = kg \iff g h g^{-1} =k g g^{-1} \iff k
+= ghg^{-1}</span>, ma <span class="math inline">k \in H</span> per
+ipotesi, dunque <span class="math inline">ghg^{-1} \in H</span></li>
 </ul></li>
-<li>2 <span class="math inline">\(\implies\)</span> 1
+<li>2 <span class="math inline">\implies</span> 1
 <ul>
-<li><span class="math inline">\(gH = Hg \iff gH \subset Hg \land Hg
-\subset gH\)</span></li>
-<li><span class="math inline">\(gH \subset Hg\)</span>
+<li><span class="math inline">gH = Hg \iff gH \subset Hg \land Hg
+\subset gH</span></li>
+<li><span class="math inline">gH \subset Hg</span>
 <ul>
-<li><span class="math inline">\(\forall h \in H, g \in G \implies gh \in
-gH\)</span></li>
-<li><span class="math inline">\(k:= ghg^{-1} \in H\)</span> per ipotesi
+<li><span class="math inline">\forall h \in H, g \in G \implies gh \in
+gH</span></li>
+<li><span class="math inline">k:= ghg^{-1} \in H</span> per ipotesi
 2</li>
-<li><span class="math inline">\(k = ghg^{-1} \iff k g= ghg^{-1}g \iff kg
-= gh\)</span>, e <span class="math inline">\(kg \in Hg\)</span> e <span
-class="math inline">\(gh \in gH\)</span>, quindi <span
-class="math inline">\(gH \subset Hg\)</span></li>
+<li><span class="math inline">k = ghg^{-1} \iff k g= ghg^{-1}g \iff kg =
+gh</span>, e <span class="math inline">kg \in Hg</span> e <span
+class="math inline">gh \in gH</span>, quindi <span
+class="math inline">gH \subset Hg</span></li>
 </ul></li>
-<li><span class="math inline">\(Hg \subset gH\)</span>
+<li><span class="math inline">Hg \subset gH</span>
 <ul>
-<li><span class="math inline">\(G\)</span> gruppo <span
-class="math inline">\(\implies \forall g \in G \quad \exists g^{-1} \in
-G\)</span></li>
-<li><span class="math inline">\(\forall g^{-1} \in G \quad \exists h \in
-H \mid h:= g^{-1}k(g^{-1})^{-1} \in H\)</span> per ipotesi</li>
-<li><span class="math inline">\(g^{-1}kg = h \iff gg^{-1}kg = gh \iff kg
-= gh\)</span>, ma <span class="math inline">\(h \in H \implies gh \in
-gH\)</span></li>
-<li><span class="math inline">\(k \in H \implies kg \in Hg\)</span>, ma
-<span class="math inline">\(kg = gh \implies kg \in gH\)</span></li>
+<li><span class="math inline">G</span> gruppo <span
+class="math inline">\implies \forall g \in G \quad \exists g^{-1} \in
+G</span></li>
+<li><span class="math inline">\forall g^{-1} \in G \quad \exists h \in H
+\mid h:= g^{-1}k(g^{-1})^{-1} \in H</span> per ipotesi</li>
+<li><span class="math inline">g^{-1}kg = h \iff gg^{-1}kg = gh \iff kg =
+gh</span>, ma <span class="math inline">h \in H \implies gh \in
+gH</span></li>
+<li><span class="math inline">k \in H \implies kg \in Hg</span>, ma
+<span class="math inline">kg = gh \implies kg \in gH</span></li>
 </ul></li>
 </ul></li>
 </ul></li>
@@ -694,22 +691,22 @@ gH\)</span></li>
 </ul>
 <blockquote>
 <ul>
-<li><span class="math inline">\(G\)</span> gruppo</li>
-<li><span class="math inline">\(g \in G\)</span></li>
-<li><span class="math inline">\(H(g):=\left\{g^{n} \mid n \in
-\mathbb{Z}\right\}\)</span> è detto <strong>sottogruppo ciclico</strong>
+<li><span class="math inline">G</span> gruppo</li>
+<li><span class="math inline">g \in G</span></li>
+<li><span class="math inline">H(g):=\left\{g^{n} \mid n \in
+\mathbb{Z}\right\}</span> è detto <strong>sottogruppo ciclico</strong>
 <ul>
 <li>prende il nome di <em>sottogruppo ciclico</em> poiché, a seconda del
-gruppo, le potenze di <span class="math inline">\(g\)</span> possono
-essere infinite o finite, ma quest’ultimo caso si verifica
-esclusivamente quando le potenze ciclano su loro stesse</li>
+gruppo, le potenze di <span class="math inline">g</span> possono essere
+infinite o finite, ma quest’ultimo caso si verifica esclusivamente
+quando le potenze ciclano su loro stesse</li>
 </ul></li>
-<li><span class="math inline">\(o(g):= |H(g)|\)</span> è detto
-<strong>ordine di <span class="math inline">\(g \in G\)</span></strong>
+<li><span class="math inline">o(g):= |H(g)|</span> è detto
+<strong>ordine di <span class="math inline">g \in G</span></strong>
 <ul>
 <li>tale valore può dunque essere infinito o finito, e in quest’ultimo
 caso l’ordine costituisce il valore più piccolo, non nullo, per cui
-<span class="math inline">\(g^{o(g)} = e\)</span>, poiché per valori
+<span class="math inline">g^{o(g)} = e</span>, poiché per valori
 maggiori le potenze ricicleranno infinitamente</li>
 </ul></li>
 </ul>
@@ -718,142 +715,142 @@ maggiori le potenze ricicleranno infinitamente</li>
 <ul>
 <li><strong>Hp</strong>
 <ul>
-<li><span class="math inline">\(G\)</span> gruppo</li>
-<li><span class="math inline">\(g \in G\)</span></li>
+<li><span class="math inline">G</span> gruppo</li>
+<li><span class="math inline">g \in G</span></li>
 </ul></li>
 <li><strong>Th</strong>
 <ul>
-<li><span class="math inline">\((H(g), \cdot) \subset (G,
-\cdot)\)</span> è sottogruppo</li>
+<li><span class="math inline">(H(g), \cdot) \subset (G, \cdot)</span> è
+sottogruppo</li>
 </ul></li>
 <li><strong>Dim</strong>
 <ul>
-<li><span class="math inline">\(e=g^{0} \implies e \in H(g)\)</span> per
-definizione di <span class="math inline">\(H(g)\)</span></li>
-<li><span class="math inline">\(\forall m, n \in \mathbb{Z} \quad m + n
-\in \mathbb{Z} \implies g^m \cdot g^n = g^{m + n} \in H(g)\)</span> per
-definizione di <span class="math inline">\(H(g)\)</span>, quindi <span
-class="math inline">\(H(g) \cdot Hg(g) \subset H(g)\)</span></li>
-<li><span class="math inline">\(\forall n \in \mathbb{Z} \quad -n \in
-\mathbb{Z} \implies (g^n)^{-1} = g^{-n} \in H(g)\)</span> per
-definizione di <span class="math inline">\(H(g)\)</span></li>
+<li><span class="math inline">e=g^{0} \implies e \in H(g)</span> per
+definizione di <span class="math inline">H(g)</span></li>
+<li><span class="math inline">\forall m, n \in \mathbb{Z} \quad m + n
+\in \mathbb{Z} \implies g^m \cdot g^n = g^{m + n} \in H(g)</span> per
+definizione di <span class="math inline">H(g)</span>, quindi <span
+class="math inline">H(g) \cdot Hg(g) \subset H(g)</span></li>
+<li><span class="math inline">\forall n \in \mathbb{Z} \quad -n \in
+\mathbb{Z} \implies (g^n)^{-1} = g^{-n} \in H(g)</span> per definizione
+di <span class="math inline">H(g)</span></li>
 </ul></li>
 </ul>
 <h2 id="oss-10">Oss</h2>
 <ul>
 <li><strong>Hp</strong>
 <ul>
-<li><span class="math inline">\(G\)</span> gruppo</li>
-<li><span class="math inline">\(g \in G\)</span></li>
-<li><span class="math inline">\(I(g):=\{n \in \mathbb{Z} \mid g^n =
-e\}\)</span></li>
+<li><span class="math inline">G</span> gruppo</li>
+<li><span class="math inline">g \in G</span></li>
+<li><span class="math inline">I(g):=\{n \in \mathbb{Z} \mid g^n =
+e\}</span></li>
 </ul></li>
 <li><strong>Th</strong>
 <ul>
-<li><span class="math inline">\(I(g)\)</span> è un ideale</li>
+<li><span class="math inline">I(g)</span> è un ideale</li>
 </ul></li>
 <li><strong>Dim</strong>
 <ul>
-<li><span class="math inline">\((I(g), +) \subset (\mathbb{Z},
-+)\)</span> è sottogruppo
+<li><span class="math inline">(I(g), +) \subset (\mathbb{Z}, +)</span> è
+sottogruppo
 <ul>
-<li><span class="math inline">\(0 \in \mathbb{Z} \land g^{0}=e \implies
-0 \in I(g)\)</span> per definizione di <span
-class="math inline">\(I(g)\)</span></li>
-<li><span class="math inline">\(m, n \in \mathbb{Z} \mid g^{m}=g^{n}=e
+<li><span class="math inline">0 \in \mathbb{Z} \land g^{0}=e \implies 0
+\in I(g)</span> per definizione di <span
+class="math inline">I(g)</span></li>
+<li><span class="math inline">m, n \in \mathbb{Z} \mid g^{m}=g^{n}=e
 \implies g^{m} \cdot g^{n}= g^{m + n} \iff e \cdot e = e \implies m +n
-\in I(g)\)</span> per definizoine di <span
-class="math inline">\(I(g)\)</span>, quindi <span
-class="math inline">\(I(g) + I(g) \subset I(g)\)</span></li>
-<li><span class="math inline">\(n \in I(g) \mid g^n = e \iff (g^n)^{-1}
-= e ^{-1 } \iff g^{-n} =e \implies -n \in I(g)\)</span> per definizione
-di <span class="math inline">\(I(g)\)</span></li>
+\in I(g)</span> per definizoine di <span
+class="math inline">I(g)</span>, quindi <span class="math inline">I(g) +
+I(g) \subset I(g)</span></li>
+<li><span class="math inline">n \in I(g) \mid g^n = e \iff (g^n)^{-1} =
+e ^{-1 } \iff g^{-n} =e \implies -n \in I(g)</span> per definizione di
+<span class="math inline">I(g)</span></li>
 </ul></li>
-<li><span class="math inline">\(\forall n \in I(g), k \in \mathbb{Z}
-\quad g^{n \cdot k} = (g^n)^k = e^k = e \implies n \cdot k \in
-I(g)\)</span></li>
+<li><span class="math inline">\forall n \in I(g), k \in \mathbb{Z} \quad
+g^{n \cdot k} = (g^n)^k = e^k = e \implies n \cdot k \in
+I(g)</span></li>
 </ul></li>
 </ul>
 <h2 id="oss-11">Oss</h2>
 <ul>
 <li><strong>Hp</strong>
 <ul>
-<li><span class="math inline">\(G\)</span> gruppo</li>
-<li><span class="math inline">\(g \in G\)</span></li>
-<li><span class="math inline">\(\exists! d \geq 0 \mid
-I(g)=I(d)\)</span></li>
+<li><span class="math inline">G</span> gruppo</li>
+<li><span class="math inline">g \in G</span></li>
+<li><span class="math inline">\exists! d \geq 0 \mid
+I(g)=I(d)</span></li>
 </ul></li>
 <li><strong>Th</strong>
 <ul>
-<li><span class="math inline">\(d = 0 \implies o(g) := |H(g)| =
-|\mathbb{Z}|\)</span>, dunque infinito</li>
-<li><span class="math inline">\(d&gt;0 \implies d = o(g)\)</span></li>
+<li><span class="math inline">d = 0 \implies o(g) := |H(g)| =
+|\mathbb{Z}|</span>, dunque infinito</li>
+<li><span class="math inline">d&gt;0 \implies d = o(g)</span></li>
 </ul></li>
 <li><strong>Dim</strong>
 <ul>
-<li><span class="math inline">\(d = 0\)</span>
+<li><span class="math inline">d = 0</span>
 <ul>
-<li>la funzione <span class="math inline">\(f: \mathbb{Z} \rightarrow
-H(g) : n \rightarrow g^n\)</span> è biiettiva
+<li>la funzione <span class="math inline">f: \mathbb{Z} \rightarrow H(g)
+: n \rightarrow g^n</span> è biiettiva
 <ul>
-<li><span class="math inline">\(f\)</span> iniettiva <span
-class="math inline">\(\iff \forall m, n \in \mathbb{Z} \quad g^n =g^m
-\implies n = m\)</span>
+<li><span class="math inline">f</span> iniettiva <span
+class="math inline">\iff \forall m, n \in \mathbb{Z} \quad g^n =g^m
+\implies n = m</span>
 <ul>
-<li><span class="math inline">\(m, n \in \mathbb{Z} \mid g^m = g^n
+<li><span class="math inline">m, n \in \mathbb{Z} \mid g^m = g^n
 \implies g^{-m} \cdot g^m=g^{-m} \cdot g^n \iff e = g^{n - m} \implies n
-- m \in I(g) = I(d) \implies d \mid n - m\)</span></li>
-<li><span class="math inline">\(d = 0 \implies 0 \mid n - m \iff n -m =
-0 \iff n = m\)</span>, di conseguenza <span class="math inline">\(g^m =
-g^n \implies n = m\)</span></li>
+- m \in I(g) = I(d) \implies d \mid n - m</span></li>
+<li><span class="math inline">d = 0 \implies 0 \mid n - m \iff n -m = 0
+\iff n = m</span>, di conseguenza <span class="math inline">g^m = g^n
+\implies n = m</span></li>
 </ul></li>
-<li>la suriettività di <span class="math inline">\(f\)</span> è data al
-fatto che l’immagine di <span class="math inline">\(f\)</span> coincide
-con <span class="math inline">\(H(g)\)</span> per definizione di <span
-class="math inline">\(H(g)\)</span></li>
+<li>la suriettività di <span class="math inline">f</span> è data al
+fatto che l’immagine di <span class="math inline">f</span> coincide con
+<span class="math inline">H(g)</span> per definizione di <span
+class="math inline">H(g)</span></li>
 </ul></li>
-<li><span class="math inline">\(f\)</span> è biiettiva <span
-class="math inline">\(\implies |\mathbb{Z} | = |H(g)| = o(g)\)</span>,
+<li><span class="math inline">f</span> è biiettiva <span
+class="math inline">\implies |\mathbb{Z} | = |H(g)| = o(g)</span>,
 dunque infinito</li>
 </ul></li>
-<li><span class="math inline">\(d \gt 0\)</span>
+<li><span class="math inline">d \gt 0</span>
 <ul>
-<li><span class="math inline">\(I(g) = I(d) \land d \in I(d) \implies d
-\in I(g) \implies g^d = e\)</span></li>
-<li><span class="math inline">\(d \gt 0 \implies \forall n \in
-\mathbb{Z} \quad \exists q, r \mid n = dq + r \quad 0 \le r \lt
-d\)</span> per il teorema della divisione euclidea con il resto, dunque
-<span class="math inline">\(g^n = g^{dq +r}=(g^d)^q \cdot g^r=e^q \cdot
-g^r =e \cdot g^r = g^r\)</span></li>
-<li><span class="math inline">\(g^n = g^r \iff n = r\)</span>, e inoltre
-<span class="math inline">\(0 \le r \lt d \implies 0 \le n \lt
-d\)</span></li>
-<li>poiché è stato scelto <span class="math inline">\(n \in
-\mathbb{Z}\)</span> senza restrizioni, allora il fatto che <span
-class="math inline">\(0 \le n \lt d\)</span> implica necessariamente che
-ogni esponente di <span class="math inline">\(g\)</span> deve essere un
-valore intero compreso tra <span class="math inline">\(0\)</span> e
-<span class="math inline">\(d - 1\)</span>, dunque il numero di potenze
-di <span class="math inline">\(g\)</span> è al massimo <span
-class="math inline">\(d\)</span></li>
-<li><span class="math inline">\(\forall x, y \in \mathbb{Z} \mid 0 \le
-x, y \lt d \quad g^x = g^y \iff g^x \cdot g^{-y} = e \iff g^{x - y} =
-e\)</span>, ma per osservazione precedente <span
-class="math inline">\(\forall k \in \mathbb{Z} \quad e = (g^d)^k =
-g^{dk}\)</span></li>
-<li><span class="math inline">\(0 \le x, y \lt d \implies -d \lt x, y
-\lt d \implies -d \lt x - y \lt d\)</span> poiché la differenza non può
-uscire mai dall’intervallo</li>
-<li>allora, segue che <span class="math inline">\(g^{x-y} = g^{dk} \iff
-x - y = dk \iff d \mid x- y\)</span>, ma poiché <span
-class="math inline">\(-d \lt x - y \lt d\)</span>, allora
-necessariamente <span class="math inline">\(x - y =0 \iff x =
-y\)</span>, e dunque <span class="math inline">\(g^x\)</span> e <span
-class="math inline">\(g^y\)</span> sono la stessa potenza, e dunque le
-potenze di <span class="math inline">\(g\)</span> non sono meno di <span
-class="math inline">\(d\)</span></li>
-<li>di conseguenza, si ottiene che <span class="math inline">\(H(g) =
-\{g^0, g^1, \ldots, g^{d-1}\} \implies |H(g)|=d\)</span></li>
+<li><span class="math inline">I(g) = I(d) \land d \in I(d) \implies d
+\in I(g) \implies g^d = e</span></li>
+<li><span class="math inline">d \gt 0 \implies \forall n \in \mathbb{Z}
+\quad \exists q, r \mid n = dq + r \quad 0 \le r \lt d</span> per il
+teorema della divisione euclidea con il resto, dunque <span
+class="math inline">g^n = g^{dq +r}=(g^d)^q \cdot g^r=e^q \cdot g^r =e
+\cdot g^r = g^r</span></li>
+<li><span class="math inline">g^n = g^r \iff n = r</span>, e inoltre
+<span class="math inline">0 \le r \lt d \implies 0 \le n \lt
+d</span></li>
+<li>poiché è stato scelto <span class="math inline">n \in
+\mathbb{Z}</span> senza restrizioni, allora il fatto che <span
+class="math inline">0 \le n \lt d</span> implica necessariamente che
+ogni esponente di <span class="math inline">g</span> deve essere un
+valore intero compreso tra <span class="math inline">0</span> e <span
+class="math inline">d - 1</span>, dunque il numero di potenze di <span
+class="math inline">g</span> è al massimo <span
+class="math inline">d</span></li>
+<li><span class="math inline">\forall x, y \in \mathbb{Z} \mid 0 \le x,
+y \lt d \quad g^x = g^y \iff g^x \cdot g^{-y} = e \iff g^{x - y} =
+e</span>, ma per osservazione precedente <span
+class="math inline">\forall k \in \mathbb{Z} \quad e = (g^d)^k =
+g^{dk}</span></li>
+<li><span class="math inline">0 \le x, y \lt d \implies -d \lt x, y \lt
+d \implies -d \lt x - y \lt d</span> poiché la differenza non può uscire
+mai dall’intervallo</li>
+<li>allora, segue che <span class="math inline">g^{x-y} = g^{dk} \iff x
+- y = dk \iff d \mid x- y</span>, ma poiché <span class="math inline">-d
+\lt x - y \lt d</span>, allora necessariamente <span
+class="math inline">x - y =0 \iff x = y</span>, e dunque <span
+class="math inline">g^x</span> e <span class="math inline">g^y</span>
+sono la stessa potenza, e dunque le potenze di <span
+class="math inline">g</span> non sono meno di <span
+class="math inline">d</span></li>
+<li>di conseguenza, si ottiene che <span class="math inline">H(g) =
+\{g^0, g^1, \ldots, g^{d-1}\} \implies |H(g)|=d</span></li>
 </ul></li>
 </ul></li>
 </ul>
@@ -861,90 +858,86 @@ class="math inline">\(d\)</span></li>
 <ul>
 <li><strong>Hp</strong>
 <ul>
-<li><span class="math inline">\(G\)</span> gruppo finito</li>
-<li><span class="math inline">\(g \in G \mid d := o(g)\)</span>
-finito</li>
+<li><span class="math inline">G</span> gruppo finito</li>
+<li><span class="math inline">g \in G \mid d := o(g)</span> finito</li>
 </ul></li>
 <li><strong>Th</strong>
 <ul>
-<li><span class="math inline">\(g^{|G|}=e\)</span></li>
+<li><span class="math inline">g^{|G|}=e</span></li>
 </ul></li>
 <li><strong>Dim</strong>
 <ul>
-<li>per dimostrazione precedente <span class="math inline">\(I(d) =
-I(g)\)</span>, allora <span class="math inline">\(d \in I(d) \implies d
-\in I(g) \implies g^d = e\)</span></li>
-<li><span class="math inline">\(d = o(g) = |H(g)| \bigg\vert
-|G|\)</span> per il teorema di Lagrange, e dunque <span
-class="math inline">\(\exists k \in \mathbb{Z} : |G|=d \cdot k \implies
-g^{|G|} = g^{d \cdot k} = (g^d)^k = e^k = e\)</span></li>
+<li>per dimostrazione precedente <span class="math inline">I(d) =
+I(g)</span>, allora <span class="math inline">d \in I(d) \implies d \in
+I(g) \implies g^d = e</span></li>
+<li><span class="math inline">d = o(g) = |H(g)| \bigg\vert |G|</span>
+per il teorema di Lagrange, e dunque <span class="math inline">\exists k
+\in \mathbb{Z} : |G|=d \cdot k \implies g^{|G|} = g^{d \cdot k} =
+(g^d)^k = e^k = e</span></li>
 </ul></li>
 </ul>
 <h2 id="oss-13">Oss</h2>
 <ul>
 <li><strong>Hp</strong>
 <ul>
-<li><span class="math inline">\(G\)</span> gruppo finito</li>
-<li><span class="math inline">\(g \in G\)</span></li>
+<li><span class="math inline">G</span> gruppo finito</li>
+<li><span class="math inline">g \in G</span></li>
 </ul></li>
 <li><strong>Th</strong>
 <ul>
-<li><span class="math inline">\(o(g) = o(g^{-1})\)</span></li>
+<li><span class="math inline">o(g) = o(g^{-1})</span></li>
 </ul></li>
 <li><strong>Dim</strong>
 <ul>
-<li><span class="math inline">\(H(g) \subset H(g^{-1})\)</span>
+<li><span class="math inline">H(g) \subset H(g^{-1})</span>
 <ul>
-<li><span class="math inline">\(\forall g^n \in H(g) \quad g^n =
-(g^{-1})^{-n} \implies g^n \in H(g^{-1})\)</span></li>
+<li><span class="math inline">\forall g^n \in H(g) \quad g^n =
+(g^{-1})^{-n} \implies g^n \in H(g^{-1})</span></li>
 </ul></li>
-<li><span class="math inline">\(H(g^{-1}) \subset H(g)\)</span>
+<li><span class="math inline">H(g^{-1}) \subset H(g)</span>
 <ul>
-<li><span class="math inline">\(\forall (g^{-1})^n \in H(g^{-1}) \quad
-(g^{-1})^n=g^{-n} \implies (g^{-1})^n \in H(g)\)</span></li>
+<li><span class="math inline">\forall (g^{-1})^n \in H(g^{-1}) \quad
+(g^{-1})^n=g^{-n} \implies (g^{-1})^n \in H(g)</span></li>
 </ul></li>
-<li>dunque <span class="math inline">\(H(g) = H(g^n) \implies o(g) =
-|H(g)| = |H(g^{-1})| = o(g^{-1})\)</span></li>
+<li>dunque <span class="math inline">H(g) = H(g^n) \implies o(g) =
+|H(g)| = |H(g^{-1})| = o(g^{-1})</span></li>
 </ul></li>
 </ul>
 <h2 id="oss-14">Oss</h2>
 <ul>
 <li><strong>Hp</strong>
 <ul>
-<li><span class="math inline">\(G\)</span> gruppo finito</li>
-<li><span class="math inline">\(k \in \mathbb{Z}\)</span></li>
+<li><span class="math inline">G</span> gruppo finito</li>
+<li><span class="math inline">k \in \mathbb{Z}</span></li>
 </ul></li>
 <li><strong>Th</strong>
 <ul>
-<li><span class="math inline">\(\forall g \in G \quad o(g^k) \mid
-o(g)\)</span></li>
+<li><span class="math inline">\forall g \in G \quad o(g^k) \mid
+o(g)</span></li>
 </ul></li>
 <li><strong>Dim</strong>
 <ul>
-<li><span class="math inline">\(\forall (g^k)^n \in H(g^k) \quad (g^k)^n
-= g^{nk} \implies g^{nk} \in H(g) \implies H(g^k) \subset
-H(g)\)</span></li>
-<li>per dimostrazione precedente <span class="math inline">\(H(g^k)
-\subset H(g) \subset G\)</span> sottogruppi, allora in particolare, per
-il teorema di Lagrange <span class="math inline">\(o(g^k) = | H(g^k)|
-\bigg\vert |H(g)| = o(g)\)</span></li>
+<li><span class="math inline">\forall (g^k)^n \in H(g^k) \quad (g^k)^n =
+g^{nk} \implies g^{nk} \in H(g) \implies H(g^k) \subset H(g)</span></li>
+<li>per dimostrazione precedente <span class="math inline">H(g^k)
+\subset H(g) \subset G</span> sottogruppi, allora in particolare, per il
+teorema di Lagrange <span class="math inline">o(g^k) = | H(g^k)|
+\bigg\vert |H(g)| = o(g)</span></li>
 </ul></li>
 </ul>
 <h2 id="oss-15">Oss</h2>
 <ul>
 <li><strong>Hp</strong>
 <ul>
-<li><span class="math inline">\(G\)</span> gruppo finito</li>
-<li><span class="math inline">\(g, h \in G \mid gh = hg\)</span></li>
-<li><span class="math inline">\(d := \textrm{MCD}(o(g),
-o(h))\)</span></li>
-<li><span class="math inline">\(m := \textrm{mcm}(o(g),
-o(h))\)</span></li>
+<li><span class="math inline">G</span> gruppo finito</li>
+<li><span class="math inline">g, h \in G \mid gh = hg</span></li>
+<li><span class="math inline">d := \textrm{MCD}(o(g), o(h))</span></li>
+<li><span class="math inline">m := \textrm{mcm}(o(g), o(h))</span></li>
 </ul></li>
 <li><strong>Th</strong>
 <ul>
-<li><span class="math inline">\(\dfrac{m}{d} \mid o(gh) \land o(gh) \mid
-m\)</span></li>
+<li><span class="math inline">\dfrac{m}{d} \mid o(gh) \land o(gh) \mid
+m</span></li>
 </ul></li>
 <li><strong>Dim</strong>
 <ul>
@@ -955,22 +948,20 @@ m\)</span></li>
 <ul>
 <li><strong>Hp</strong>
 <ul>
-<li><span class="math inline">\(G\)</span> gruppo finito</li>
-<li><span class="math inline">\(g, h \in G \mid gh = hg\)</span></li>
-<li><span class="math inline">\(d := \textrm{MCD}(o(g), o(h)) =
-1\)</span></li>
-<li><span class="math inline">\(m := \textrm{mcm}(o(g),
-o(h))\)</span></li>
+<li><span class="math inline">G</span> gruppo finito</li>
+<li><span class="math inline">g, h \in G \mid gh = hg</span></li>
+<li><span class="math inline">d := \textrm{MCD}(o(g), o(h)) =
+1</span></li>
+<li><span class="math inline">m := \textrm{mcm}(o(g), o(h))</span></li>
 </ul></li>
 <li><strong>Th</strong>
 <ul>
-<li><span class="math inline">\(o(gh) = o(hg) = m\)</span></li>
+<li><span class="math inline">o(gh) = o(hg) = m</span></li>
 </ul></li>
 <li><strong>Dim</strong>
 <ul>
-<li>per dimostrazione precedente, <span class="math inline">\(d = 1
-\implies m \mid o(gh) \land o(gh) \mid m \implies m =
-o(gh)\)</span></li>
+<li>per dimostrazione precedente, <span class="math inline">d = 1
+\implies m \mid o(gh) \land o(gh) \mid m \implies m = o(gh)</span></li>
 </ul></li>
 </ul>
 </body>

@@ -93,7 +93,8 @@
 > - $\mathbb{K}$ campo
 > - $n \in \mathbb{N} - \{0\}$
 > - $V \subset \mathbb{K}^n$ sottospazio vettoriale
-> - $V^{\perp} := \{w \in \mathbb{K}^n \mid \forall v \in V \quad w \cdot v = 0\}$ è detto **sottospazio ortogonale di $V$**
+> - $V^{\perp} := \{w \in \mathbb{K}^n \mid \forall v \in V \quad w \cdot v = 0_{\mathbb{K}^n}\}$ è detto **sottospazio ortogonale di $\mathbb{K}^n$**
+>     - la definizione ha significato poiché il prodotto scalare tra due vettori è nullo esattamente quando i due vettori sono perpendicolari tra loro, per osservazione precedente
 
 ## Oss
 
@@ -103,6 +104,17 @@
     - $V \subset \mathbb{K}^n$ sottospazio vettoriale
 - **Th**
     - $V^{\bot}$ è sottospazio vettoriale di $\mathbb{K}^n$
+- **Dim**
+    - **⚠️  TODO**
+
+## Oss
+
+- **Hp**
+    - $\mathbb{K}$ campo
+    - $n \in \mathbb{N} - \{0\}$
+    - $V \subset \mathbb{K}^n$ sottospazio vettoriale
+- **Th**
+    - $\dim(V^{\bot}) = \dim(\mathbb{K}^n) - \dim(V)$
 - **Dim**
     - **⚠️  TODO**
 
@@ -133,11 +145,17 @@
     - $m,n \in \mathbb{N} - \{0\}$
     - $x \in \textrm{Mat}_{n \times 1}(\mathbb{K})$
 - **Th**
-    - $\forall A \in \textrm{Mat}_{m \times n}(\mathbb{K}) \quad \ker(L_A) = \textrm{span}(A_1, \ldots, A_n) \land \textrm{im}(L_A) = \textrm{span}(A^1, \ldots, A^n)$
+    - $\forall A \in \textrm{Mat}_{m \times n}(\mathbb{K}) \quad \ker(L_A) = \textrm{span}(A_1, \ldots, A_m)^\bot \land \textrm{im}(L_A) = \textrm{span}(A^1, \ldots, A^n)$
 - **Dim**
-    - $\forall A \in \textrm{Mat}_{m \times n}(\mathbb{K}) \quad L_A(x) = A \cdot x$ per definizione di $L_A$
-    - $A \cdot x = \left(\begin{array}{ccc} a_{1,1} & \cdots & a_{1,n}\\ \vdots & \ddots & \vdots \\ a_{m,1} & \cdots & a_{m,n}\end{array}\right) \cdot \left(\begin{array}{c} x_1 \\ \vdots \\ x_n \end{array}\right) = \left(\begin{array}{c}a_{1, 1} x_1 + \ldots + a_{1,n}x_n \\ \vdots \\ a_{m,1}x_1 + \ldots + a_{m,n} x_n \end{array}\right) = \left(\begin{array}{c}A_1 \cdot x \\ \vdots \\ A_m \cdot x\end{array}\right) = x_1 \left(\begin{array}{c}a_{1, 1} \\ \vdots \\ a_{m, 1}\end{array}\right) + \ldots + x_n \left(\begin{array}{c}a_{1, n}\\ \vdots \\ a_{m, n}\end{array}\right) = x_1A^1 + \ldots + x_nA^n$, e poiché $x_1, \ldots x_n \in \mathbb{K} \implies x_1A^1+ \ldots + x_nA^n \in \textrm{span}(A^1, \ldots, A^n)$
-    - **⚠️  TODO**
+    - $\ker(L_A) = \textrm{span}(A_1, \ldots, A_m)^\bot$
+        - $\ker(L_A) := \left\{x \in \mathbb{K}^n \mid L_A(x) = 0_{\mathbb{K}^m} \iff A \cdot x = 0_{\mathbb{K}^m} \iff \left(\begin{array}{c}A_1\cdot x \\ \vdots \\ A_m \cdot x\end{array}\right)= \left(\begin{array}{c} 0 \\ \vdots \\ 0\end{array}\right)\right\} = \textrm{span}(A_1, \ldots, A_m)^\bot$
+
+    - $\textrm{im}(L_A) = \textrm{span}(A^1, \ldots, A^n)$
+        - $\textrm{im}(L_A) \subset \textrm{span}(A^1, \ldots, A^n)$
+            - $\forall A \in \textrm{Mat}_{m \times n}(\mathbb{K}) \quad L_A(x) = A \cdot x$ per definizione di $L_A$
+            - $A \cdot x = \left(\begin{array}{ccc} a_{1,1} & \cdots & a_{1,n}\\ \vdots & \ddots & \vdots \\ a_{m,1} & \cdots & a_{m,n}\end{array}\right) \cdot \left(\begin{array}{c} x_1 \\ \vdots \\ x_n \end{array}\right) = \left(\begin{array}{c}a_{1, 1} x_1 + \ldots + a_{1,n}x_n \\ \vdots \\ a_{m,1}x_1 + \ldots + a_{m,n} x_n \end{array}\right) = \left(\begin{array}{c}A_1 \cdot x \\ \vdots \\ A_m \cdot x\end{array}\right) = x_1 \left(\begin{array}{c}a_{1, 1} \\ \vdots \\ a_{m, 1}\end{array}\right) + \ldots + x_n \left(\begin{array}{c}a_{1, n}\\ \vdots \\ a_{m, n}\end{array}\right) = x_1A^1 + \ldots + x_nA^n$, e poiché $x_1, \ldots x_n \in \mathbb{K} \implies x_1A^1+ \ldots + x_nA^n \in \textrm{span}(A^1, \ldots, A^n) \implies \textrm{im}(L_A) \subset \textrm{span}(A^1, \ldots, A^n)$
+        - $\textrm{span}(A^1, \ldots, A^n) \subset \textrm{im}(L_A)$
+            - $\forall v \in \textrm{span}(A^1, \ldots, A^n) \quad \exists x_1, \ldots, x_n \in \mathbb{K} \mid v = x_1 A^1 + \ldots + x_n A^n = A \cdot x$ per ragionamento analogo, e poiché $A \cdot x \in \textrm{im}(L_A)$, allora $\textrm{span}(A^1, \ldots, A^n) \subset \textrm{im}(L_A)$
 
 ## Oss
 
@@ -152,3 +170,119 @@
 ## Oss
 
 - **Hp**
+    - $\mathbb{K}$ campo
+    - $m,n \in \mathbb{N} - \{0\}$
+    - $A \in \textrm{Mat}_{m \times n}(\mathbb{K})$
+    - $x \in \textrm{Mat}_{n \times 1}(\mathbb{K})$
+- **Th**
+    - $\textrm{rk}(A) =\dim(\textrm{span}(A^1, \ldots, A^n)) = \dim(\textrm{span}(A_1, \ldots, A_n)^\bot)$
+- **Dim**
+    - per definizione $\textrm{rk}(A) = \textrm{rk}(L_A)$
+    - per dimostrazione precedente $L_A$ è una trasforamzione lineare, allora per definizione $\textrm{rk}(L_A) = \dim(\textrm{im}(L_A))$
+    - per dimostrazione precedente si ha che $\textrm{im}(L_A) = \textrm{span}(A^1, \ldots, A^n)$, allora $\dim(\textrm{im}(L_A)) = \dim(\textrm{span}(A^1, \ldots, A^n))$, e per ragionamento analogo $\dim(\ker(L_A)) = \dim(\textrm{span}(A_1, \ldots, A_m)^\bot)$
+    - allora $\dim(\textrm{im}(L_A)) = \textrm{rk}(L_A) = \dim(\mathbb{K}^n) - \dim(\ker(L_A)) = \dim(\mathbb{K}^n) - \dim(\textrm{span}(A_1, \ldots, A_m)^\bot)$
+    - per dimostrazione precedente si ha che $\dim(\textrm{span}(A_1, \ldots, A_m)^\bot)= \dim(\mathbb{K}^n) - \dim(\textrm{span}(A_1, \ldots, A_m))$
+    - allora $\textrm{rk}(A) = \dim(\textrm{span}(A^1, \ldots, A^n)) = \dim(\mathbb{K}) - (\dim(\mathbb{K}^n) - \dim(\textrm{span}(A_1, \ldots, A_m))) = \dim(\textrm{span}(A_1, \ldots, A_m))$
+
+****
+
+# Operazioni su righe e colonne
+
+## Def
+
+- **Scambio di righe di una matrice**
+
+> - $\mathbb{K}$ campo
+> - $m, n \in \mathbb{N} - \{0\}$
+> - $A \in \textrm{Mat}_{m \times n}(\mathbb{K})$
+> - $\forall A_1, \ldots, A_m$ righe di $A$, scambiare $A_i$ e $A_j$ lascia invariato $\ker(L_A)$
+
+- **Moltiplicazione di una riga per una costante**
+
+> - $\mathbb{K}$ campo
+> - $m, n \in \mathbb{N} - \{0\}$
+> - $A \in \textrm{Mat}_{m \times n}(\mathbb{K})$
+> - $\lambda \in \mathbb{K}^*$
+> - $\forall A_1, \ldots, A_m$ righe di $A$, moltiplicare $A_i$ per $\lambda$ lascia invariato $\ker(L_A)$
+
+- **Somma di una riga con un multiplo di un'altra**
+
+> - $\mathbb{K}$ campo
+> - $m, n \in \mathbb{N} - \{0\}$
+> - $A \in \textrm{Mat}_{m \times n}(\mathbb{K})$
+> - $\lambda \in \mathbb{K}^*$
+> - $\forall A_1, \ldots, A_m$ righe di $A$, sommare ad $A_i$ un certo $\lambda \cdot A_j$ lascia invariato $\ker(L_A)$
+
+- **Scambio di colonne di una matrice**
+
+> - $\mathbb{K}$ campo
+> - $m, n \in \mathbb{N} - \{0\}$
+> - $A \in \textrm{Mat}_{m \times n}(\mathbb{K})$
+> - $\forall A^1, \ldots, A^m$ colonne di $A$, scambiare $A^i$ e $A^j$ lascia invariato $\textrm{im}(L_A)$
+
+- **Moltiplicazione di una colonna per una costante**
+
+> - $\mathbb{K}$ campo
+> - $m, n \in \mathbb{N} - \{0\}$
+> - $A \in \textrm{Mat}_{m \times n}(\mathbb{K})$
+> - $\lambda \in \mathbb{K}^*$
+> - $\forall A^1, \ldots, A^m$ colonne di $A$, moltiplicare $A^i$ per $\lambda$ lascia invariato $\textrm{im}(L_A)$
+
+- **Somma di una colonna con un multiplo di un'altra**
+
+> - $\mathbb{K}$ campo
+> - $m, n \in \mathbb{N} - \{0\}$
+> - $A \in \textrm{Mat}_{m \times n}(\mathbb{K})$
+> - $\lambda \in \mathbb{K}^*$
+> - $\forall A^1, \ldots, A^m$ righe di $A$, sommare ad $A^i$ un certo $\lambda \cdot A^j$ lascia invariato $\textrm{im}(L_A)$
+
+## Oss
+
+- **Hp**
+    - $\mathbb{K}$ campo
+    - $m, n \in \mathbb{N} - \{0\}$
+    - $A, B \in \textrm{Mat}_{m \times n}(\mathbb{K})$
+    - $A \equiv B \iff$ è possibile ricavare $B$ da $A$ eseguendo operazioni tra righe definite precedentemente
+- **Th**
+    - $\equiv$ una relazione di equivalenza
+
+## Oss
+
+- **Hp**
+    - $\mathbb{K}$ campo
+    - $m, n \in \mathbb{N} - \{0\}$
+    - $A, B \in \textrm{Mat}_{m \times n}(\mathbb{K})$
+    - $A \equiv B \iff$ è possibile ricavare $B$ da $A$ eseguendo operazioni tra righe definite precedentemente
+- **Th**
+    - $A \equiv B \implies \ker(L_A) = \ker(L_B) \land \textrm{rk}(A) = \textrm{rk}(B)$
+
+## Oss
+
+- **Hp**
+    - $\mathbb{K}$ campo
+    - $m, n \in \mathbb{N} - \{0\}$
+    - $A, B \in \textrm{Mat}_{m \times n}(\mathbb{K})$
+    - $A \equiv B \iff$ è possibile ricavare $B$ da $A$ eseguendo operazioni tra colonne definite precedentemente
+- **Th**
+    - $\equiv$ una relazione di equivalenza
+
+## Oss
+
+- **Hp**
+    - $\mathbb{K}$ campo
+    - $m, n \in \mathbb{N} - \{0\}$
+    - $A, B \in \textrm{Mat}_{m \times n}(\mathbb{K})$
+    - $A \equiv B \iff$ è possibile ricavare $B$ da $A$ eseguendo operazioni tra colonne definite precedentemente
+- **Th**
+    - $A \equiv B \implies \textrm{im}(L_A) = \textrm{im}(L_B) \land \textrm{rk}(A) = \textrm{rk}(B)$
+
+## Def
+
+- **Matrice completa**
+
+> - $\mathbb{K}$ campo
+> - $m, n \in \mathbb{N} - \{0\}$
+> - $A \in \textrm{Mat}_{m \times n}(\mathbb{K})$
+> - $b \in \textrm{Mat}_{m \times 1}(\mathbb{K})$
+> - $A_b:=\left(\begin{array}{cccc}a_{1, 1} & \cdots & a_{1, n} & b_1 \\ \vdots & & \vdots & \vdots \\ a_{m, 1} & \cdots & a_{m,n} & b_m\end{array}\right)$
+
