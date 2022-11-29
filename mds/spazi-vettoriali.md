@@ -286,6 +286,8 @@
     - per osservazione precedente $w_1, \ldots, w_k, v_{k +1}, \ldots v_k$ è una base di $V$, allora $\lambda_1= \ldots= \lambda_k= -\lambda_{k +1}= \ldots= -\lambda_{n} = 0_V$, e in particolare $-\lambda{k+1} = \ldots = -\lambda_n = 0_V \implies v_{k +1}, \ldots, v_n$ sono linearmente indipendenti, e dunque $[v_{k +1}], \ldots, [v_n] linearmente indipendenti$
     - allora $[v_{k +1}], \ldots, [v_n]$ sono una base di $V/W$ di cardinalità $n - k$, il che dimostra che $\dim(V/W) = \dim(V)-\dim(W)$
 
+****
+
 # Applicazioni lineari
 
 ## Def

@@ -3,46 +3,46 @@
 - [Coefficienti binomiali](https://ph04.github.io/algebra/html/coefficienti-binomiali.html)
 - [Gruppi diedrali](https://ph04.github.io/algebra/html/gruppi-diedrali.html)
 - [Gruppi e Anelli](https://ph04.github.io/algebra/html/gruppi-e-anelli.html)
-    - Gruppi
-    - Anelli
-    - Sottogruppi
-    - Ordine
+    - [Gruppi](https://ph04.github.io/algebra/html/gruppi-e-anelli.html#gruppi)
+    - [Anelli](https://ph04.github.io/algebra/html/gruppi-e-anelli.html#anelli)
+    - [Sottogruppi](https://ph04.github.io/algebra/html/gruppi-e-anelli.html#sottogruppi)
+    - [Ordine](https://ph04.github.io/algebra/html/gruppi-e-anelli.html#ordine)
 - [Ideali](https://ph04.github.io/algebra/html/ideali.html)
-    - Ideali
-    - Operazioni sugli ideali
+    - [Ideali](https://ph04.github.io/algebra/html/ideali.html#ideali)
+    - [Operazioni sugli ideali](https://ph04.github.io/algebra/html/ideali.html#operazioni-sugli-ideali)
 - [Induzione](https://ph04.github.io/algebra/html/induzione.html)
 - [Insieme quoziente](https://ph04.github.io/algebra/html/insieme-quoziente.html)
-    - Insieme quoziente
-    - Funzione totiente di Eulero
+    - [Insieme quoziente](https://ph04.github.io/algebra/html/insieme-quoziente.html#insieme-quoziente)
+    - [Funzione totiente di Eulero](https://ph04.github.io/algebra/html/insieme-quoziente.html#funzione-totiente-di-eulero)
 - [Matrici](https://ph04.github.io/algebra/html/matrici.html)
 - [Morfismi](https://ph04.github.io/algebra/html/morfismi.html)
-    - Morfismi
-    - Isomorfismi
-    - Kernel e immagine
+    - [Morfismi](https://ph04.github.io/algebra/html/morfismi.html#morfismi)
+    - [Isomorfismi](https://ph04.github.io/algebra/html/morfismi.html#isomorfismi)
+    - [Kernel e immagine](https://ph04.github.io/algebra/html/morfismi.html#kernel-e-immagine)
 - [Numeri complessi](https://ph04.github.io/algebra/html/numeri-complessi.html)
 - [Permutazioni](https://ph04.github.io/algebra/html/permutazioni.html)
-    - Permutazioni
-    - Trasposizioni
-    - Segno
+    - [Permutazioni](https://ph04.github.io/algebra/html/permutazioni.html#permutazioni)
+    - [Trasposizioni](https://ph04.github.io/algebra/html/permutazioni.html#trasposizioni)
+    - [Segno](https://ph04.github.io/algebra/html/permutazioni.html#segno)
 - [Polinomi](https://ph04.github.io/algebra/html/polinomi.html)
 - [Relazioni](https://ph04.github.io/algebra/html/relazioni.html)
-    - Relazioni
-    - Partizioni
-    - Classi laterali
+    - [Relazioni](https://ph04.github.io/algebra/html/relazioni.html#relazioni)
+    - [Partizioni](https://ph04.github.io/algebra/html/relazioni.html#partizioni)
+    - [Classi laterali](https://ph04.github.io/algebra/html/relazioni.html#classi-laterali)
 - [Spazi vettoriali](https://ph04.github.io/algebra/html/spazi-vettoriali.html)
-    - Spazi vettoriali
-    - Applicazioni lineari
+    - [Spazi vettoriali](https://ph04.github.io/algebra/html/spazi-vettoriali.html#spazi-vettoriali)
+    - [Applicazioni lineari](https://ph04.github.io/algebra/html/spazi-vettoriali.html#applicazioni-lineari)
 - [Teoremi fondamentali](https://ph04.github.io/algebra/html/teoremi-fondamentali.html)
-    - Teorema fondamentale dell'algebra
-    - Teorema della divisione euclidea con il resto
-    - Teorema di Lagrange
-    - Teorema fondamentale dell'aritmetica
-    - Teorema cinese dei resti
-    - Teorema del binomio di Newton
-    - Piccolo teorema di Fermat
-    - Teorema di Eulero
-    - Teorema fondamentale di isomorfismo
-    - Teorema di Cauchy
-    - Teorema del rango
+    - [Teorema fondamentale dell'algebra](https://ph04.github.io/algebra/html/teoremi-fondamentali.html#teorema-fondamentale-dellalgebra)
+    - [Teorema della divisione euclidea con il resto](https://ph04.github.io/algebra/html/teoremi-fondamentali.html#teorema-della-divisione-euclidea-con-il-resto)
+    - [Teorema di Lagrange](https://ph04.github.io/algebra/html/teoremi-fondamentali.html#teorema-di-lagrange)
+    - [Teorema fondamentale dell'aritmetica](https://ph04.github.io/algebra/html/teoremi-fondamentali.html#teorema-fondamentale-dellaritmetica)
+    - [Teorema cinese dei resti](https://ph04.github.io/algebra/html/teoremi-fondamentali.html#teorema-cinese-dei-resti)
+    - [Teorema del binomio di Newton](https://ph04.github.io/algebra/html/teoremi-fondamentali.html#teorema-del-binomio-di-newton)
+    - [Piccolo teorema di Fermat](https://ph04.github.io/algebra/html/teoremi-fondamentali.html#piccolo-teorema-di-fermat)
+    - [Teorema di Eulero](https://ph04.github.io/algebra/html/teoremi-fondamentali.html#teorema-di-eulero)
+    - [Teorema fondamentale di isomorfismo](https://ph04.github.io/algebra/html/teoremi-fondamentali.html#teorema-fondamentale-di-isomorfismo)
+    - [Teorema di Cauchy](https://ph04.github.io/algebra/html/teoremi-fondamentali.html#teorema-di-cauchy)
+    - [Teorema del rango](https://ph04.github.io/algebra/html/teoremi-fondamentali.html#teorema-del-rango)
 - [Tutti i teoremi](https://ph04.github.io/algebra/html/everything.html)
 

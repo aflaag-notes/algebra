@@ -963,6 +963,11 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
     - $(\textrm{Mat}_{n \times n}(\mathbb{K}), +, \cdot)$ è un anello
 
+****
+
+# Rango
+
+
 ## Definizione 27
 
 
@@ -1007,6 +1012,16 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
     - $\forall A \in \textrm{Mat}_{m \times n}(\mathbb{K}) \quad L_A$ è una trasformazione lineare
 
+## Teorema 62
+
+
+- **Hp**
+    - $\mathbb{K}$ campo
+    - $m,n \in \mathbb{N} - \{0\}$
+    - $x \in \textrm{Mat}_{n \times 1}(\mathbb{K})$
+- **Th**
+    - $\forall A \in \textrm{Mat}_{m \times n}(\mathbb{K}) \quad \ker(L_A) = \textrm{span}(A_1, \ldots, A_n) \land \textrm{im}(L_A) = \textrm{span}(A^1, \ldots, A^n)$
+
 ## Definizione 29
 
 
@@ -1020,7 +1035,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 62
+## Teorema 63
 
 
 - **Hp**
@@ -1050,7 +1065,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 63
+## Teorema 64
 
 
 - **Hp**
@@ -1061,7 +1076,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
   - $f(1_G) = 1_H$
 
-## Teorema 64
+## Teorema 65
 
 
 - **Hp**
@@ -1086,7 +1101,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 65
+## Teorema 66
 
 
 - **Hp**
@@ -1095,7 +1110,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
   - $f ^{-1}: H \rightarrow G$ isomorfismo
 
-## Teorema 66
+## Teorema 67
 
 
 - **Hp**
@@ -1104,7 +1119,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
     - $\cong$ è una relazione di equivalenza
 
-## Teorema 67
+## Teorema 68
 
 
 - **Hp**
@@ -1114,7 +1129,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
   - $(H, \cdot) \subset (\mathbb{C}-\{0\}, \cdot)$ è un sottogruppo
 
-## Teorema 68
+## Teorema 69
 
 
 - **Hp**
@@ -1122,7 +1137,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
   - $f$ isomorfismo di gruppi $(\mathbb{Z}_n , +)$ e $(H, \cdot)$
 
-## Teorema 69
+## Teorema 70
 
 
 - **Hp**
@@ -1131,7 +1146,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
   - $f$ morfismo di gruppi $(\mathbb{Z}, +)$ e $(G, \cdot)$
 
-## Teorema 70
+## Teorema 71
 
 
 - **Hp**
@@ -1139,7 +1154,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
   - $f$ morfismo di anelli $\left(\mathbb{Z},+, \cdot\right)$ e $\left(\mathbb{Z}_{n},+, \cdot\right)$
 
-## Teorema 71
+## Teorema 72
 
 
 - **Hp**
@@ -1148,7 +1163,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
   - $f$ morfismo di anelli $\left(\mathbb{Z}_{m},+, \cdot\right)$ e $\left(\mathbb{Z}_{n},+, \cdot\right)$
 
-## Teorema 72
+## Teorema 73
 
 
 - **Hp**
@@ -1181,7 +1196,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 73
+## Teorema 74
 
 
 - **Hp**
@@ -1190,7 +1205,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
   - $\textrm{ker}(f) \subset G$ è sottogruppo
 
-## Teorema 74
+## Teorema 75
 
 
 - **Hp**
@@ -1199,7 +1214,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
   - $\textrm{im}(f) \subset G$ è sottogruppo
 
-## Teorema 75
+## Teorema 76
 
 
 - **Hp**
@@ -1208,7 +1223,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
   - $f$ iniettiva $\iff \textrm{ker}(f) = \{1_G\}$
 
-## Teorema 76
+## Teorema 77
 
 
 - **Hp**
@@ -1217,7 +1232,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
   - $\textrm{ker}(f)$ ideale
 
-## Teorema 77
+## Teorema 78
 
 
 - **Hp**
@@ -1226,7 +1241,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
   - $\textrm{im}(f)$ sottoanello
 
-## Teorema 78
+## Teorema 79
 
 
 - **Hp**
@@ -1236,7 +1251,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
   - $\textrm{ker}(f) = I(n)$
 
-## Teorema 79
+## Teorema 80
 
 
 - **Hp**
@@ -1261,7 +1276,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 80
+## Teorema 81
 
 
 - **Hp**
@@ -1283,7 +1298,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 81
+## Teorema 82
 
 
 - **Hp**
@@ -1295,7 +1310,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 82
+## Teorema 83
 
 
 - $\forall \theta \quad e^{i \theta}=\cos \theta+i \sin \theta$
@@ -1325,7 +1340,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 83
+## Teorema 84
 
 
 - **Hp**
@@ -1333,7 +1348,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
   - $(\mathbb{C}, +, \cdot )$ è un campo
 
-## Teorema 84
+## Teorema 85
 
 
 - $|z \cdot w|=|z|\cdot |w| \quad \arg(z\cdot w)=\arg(z) + \arg(w)$
@@ -1343,7 +1358,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 85
+## Teorema 86
 
 
   - $z^{n}=|z|^{n} e^{i n \theta} \quad \arg \left( z^{n} \right)=n \arg (z)$
@@ -1366,7 +1381,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 86
+## Teorema 87
 
 
 - **Hp**
@@ -1391,7 +1406,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 87
+## Teorema 88
 
 
 - **Hp**
@@ -1402,7 +1417,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
   - $(I(\sigma, i), +) \subset (\mathbb{Z}, +)$ è un ideale
 
-## Teorema 88
+## Teorema 89
 
 
 - **Hp**
@@ -1410,7 +1425,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
     - $I(\sigma, i)$ è **ideale principale** in $\mathbb{Z}$ generato da $I(d)$, dove $d$ è la lunghezza del ciclo di $i$, quindi $I(\sigma, i) = I(d)$
   - $I(\sigma, i) = I(d) \implies d \in I(\sigma, i)$
 
-## Teorema 89
+## Teorema 90
 
 
 - **Hp**
@@ -1446,7 +1461,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 90
+## Teorema 91
 
 
 - **Hp**
@@ -1473,7 +1488,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 91
+## Teorema 92
 
 
 - **Hp**
@@ -1482,7 +1497,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
     - $A_n \subset S_n$ è un sottogruppo normale, detto _gruppo alterno di ordine $n$_
 
-## Teorema 92
+## Teorema 93
 
 
 - **Hp**
@@ -1491,7 +1506,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
     - $\textrm{sgn}(\sigma)= (-1)^k$
 
-## Teorema 93
+## Teorema 94
 
 
 - **Hp**
@@ -1500,7 +1515,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
     - $\operatorname{sgn}\left(\sigma \sigma^{\prime}\right)=\operatorname{sgn}(\sigma)\cdot \textrm{sgn}(\sigma ')$
 
-## Teorema 94
+## Teorema 95
 
 
 - **Hp**
@@ -1509,7 +1524,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
     - $\textrm{sgn}(\sigma^{-1})=\textrm{sgn}(\sigma)$
 
-## Teorema 95
+## Teorema 96
 
 
 - **Hp**
@@ -1519,7 +1534,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
     - $\textrm{sgn}(\sigma^\prime) = \textrm{sgn}(\sigma)$
 
-## Teorema 96
+## Teorema 97
 
 
 - **Hp**
@@ -1529,7 +1544,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
     - $\sigma \sim \sigma ^\prime \iff$$\left\{\begin{array}{c}k=h \\ d=d_{1}^{\prime} \\ \vdots \\ d_{k}=d_{h}^{\prime}=d_{k}^{\prime}\end{array}\right.$, dove $d_j$ è la lunghezza del ciclo $\gamma_j$ e $d_j^\prime$ è la lunghezza del ciclo $\gamma_j^\prime$
 
-## Teorema 97
+## Teorema 98
 
 
 - **Hp**
@@ -1556,7 +1571,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 98
+## Teorema 99
 
 
 - **Hp**
@@ -1575,7 +1590,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 99
+## Teorema 100
 
 
 - **Hp**
@@ -1584,7 +1599,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
     - $\deg(a(x) \cdot b(x)) = \deg(a(x)) + \deg(b(x))$
 
-## Teorema 100
+## Teorema 101
 
 
 - **Hp**
@@ -1593,7 +1608,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
     - $\nexists a^{-1}(x) \in \mathbb{K}[x]$
 
-## Teorema 101
+## Teorema 102
 
 
 - **Hp**
@@ -1601,7 +1616,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
     - $\mathbb{K}[x]^* = \mathbb{K}^* \subset \mathbb{K}[x]$
 
-## Teorema 102
+## Teorema 103
 
 
 - **Hp**
@@ -1620,7 +1635,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 103
+## Teorema 104
 
 
 - **Hp**
@@ -1630,7 +1645,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
     - $p(c) = 0 \iff x - c \mid p(x)$
 
-## Teorema 104
+## Teorema 105
 
 
 - **Hp**
@@ -1640,7 +1655,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
     - $|\{c \in \mathbb{K} \mid p(c) = 0\}| \le n$
 
-## Teorema 105
+## Teorema 106
 
 
 - **Hp**
@@ -1649,7 +1664,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
     - $I$ è un ideale principale
 
-## Teorema 106
+## Teorema 107
 
 
 - **Hp**
@@ -1659,7 +1674,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
     - $d(x)=\textrm{MCD}(a_1(x), \ldots, a_n(x))$
 
-## Teorema 107
+## Teorema 108
 
 
 - **Hp**
@@ -1669,7 +1684,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
     - $m(x)=\textrm{mcm}(a_1(x), \ldots, a_n(x))$
 
-## Teorema 108
+## Teorema 109
 
 
 - **Hp**
@@ -1680,7 +1695,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
     - $a_1(c) = \ldots = a_n(c) = 0 \iff d(c) = 0$
 
-## Teorema 109
+## Teorema 110
 
 
 - **Hp**
@@ -1689,7 +1704,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
     - $p(x) \in \mathbb{K}[x]$ irriducibile $\iff p(x)$ primo
 
-## Teorema 110
+## Teorema 111
 
 
 - **Hp**
@@ -1699,7 +1714,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
     - $\exists ! q_1(x), \ldots ,q_k(x) \in \mathbb{K}[x]$ irriducibili e monici$, c \in \mathbb{K} - \{0\} \mid p(x) = c \cdot q_1(x) \cdot \ldots \cdot q_k(x)$
     - in particolare, i polinomi sono unici a meno di un riordinamento
 
-## Teorema 111
+## Teorema 112
 
 
 - **Hp**
@@ -1708,7 +1723,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
     - $p(x)$ irriducibile $\iff \deg(p(x)) = 1$
 
-## Teorema 112
+## Teorema 113
 
 
 - **Hp**
@@ -1716,7 +1731,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
     - $p(x)$ irriducibile $\iff \deg(p(x)) = 1$ oppure $\deg(p(x)) = 2 \land \Delta \lt 0$
 
-## Teorema 113
+## Teorema 114
 
 
 - **Hp**
@@ -1727,7 +1742,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
     - $a \mid a_0 \land b \mid a_n$
 
-## Teorema 114
+## Teorema 115
 
 
 - ⚠️  **MANCA UN TEOREMA ENORME**
@@ -1797,7 +1812,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 115
+## Teorema 116
 
 
 - **Hp**
@@ -1806,7 +1821,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
   - $\mid$ è ordine parziale
 
-## Teorema 116
+## Teorema 117
 
 
 - **Hp**
@@ -1815,7 +1830,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
   - $\equiv$ è una relazione di equivalenza
 
-## Teorema 117
+## Teorema 118
 
 
 - **Hp**
@@ -1824,7 +1839,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
   - $x \equiv y \ (\bmod  \ d)$
 
-## Teorema 118
+## Teorema 119
 
 
 - **Hp**
@@ -1837,7 +1852,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 119
+## Teorema 120
 
 
 - **Hp**
@@ -1864,7 +1879,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 120
+## Teorema 121
 
 
 - **Hp**
@@ -1872,7 +1887,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
   - $\forall x, y \in G \quad x \nsim y \iff [x] \cap [y] = \varnothing \lor x \sim y \iff [x] = [y]$
 
-## Teorema 121
+## Teorema 122
 
 
 - **Hp**
@@ -1886,7 +1901,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 # Classi laterali
 
 
-## Teorema 122
+## Teorema 123
 
 
 - **Hp**
@@ -1912,7 +1927,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 123
+## Teorema 124
 
 
 - **Hp**
@@ -1923,7 +1938,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
   - $a \sim_S b \iff a \equiv b \ (\bmod \ n)$
 
-## Teorema 124
+## Teorema 125
 
 
 - **Hp**
@@ -1932,7 +1947,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
     - $H = [1] \in G/H$
 
-## Teorema 125
+## Teorema 126
 
 
 - **Hp**
@@ -1943,7 +1958,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
   - $xH:= \{ xh \mid h \in H\} = [x]$
 
-## Teorema 126
+## Teorema 127
 
 
 - **Hp**
@@ -1953,7 +1968,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
   - $| xH |= |H|$
 
-## Teorema 127
+## Teorema 128
 
 
 - **Hp**
@@ -1981,7 +1996,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 128
+## Teorema 129
 
 
 - **Hp**
@@ -2015,7 +2030,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 129
+## Teorema 130
 
 
 - **Hp**
@@ -2058,7 +2073,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 130
+## Teorema 131
 
 
 - **Hp**
@@ -2068,7 +2083,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
     - $e_1, \ldots, e_n$ sono una base di $\mathbb{K}^n$, ed è detta _base canonica_
 
-## Teorema 131
+## Teorema 132
 
 
 - **Hp**
@@ -2079,7 +2094,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
     - $v_1, \ldots, v_n$ linearmente indipendenti $\iff v_1, \ldots, v_{n - 1}$ linearmente indipendenti $\land v_n \notin \textrm{span}(v_1, \ldots, v_{n - 1})$
 
-## Teorema 132
+## Teorema 133
 
 
 - **Hp**
@@ -2091,7 +2106,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
     - $k \le m$
 
-## Teorema 133
+## Teorema 134
 
 
 - **Hp**
@@ -2114,7 +2129,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 134
+## Teorema 135
 
 
 - **Hp**
@@ -2125,7 +2140,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
     - $v_1, \ldots, v_n$ base di $V \iff \forall v \in V \quad \exists ! \lambda_1, \ldots, \lambda_n \in \mathbb{K} \mid v = \lambda_1 v_1 + \ldots + \lambda_n v_n$
 
-## Teorema 135
+## Teorema 136
 
 
 - **Hp**
@@ -2137,7 +2152,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
     - $\exists w_{k + 1}, \ldots, w_n \in W \mid w_1, \ldots, w_n$ è una base di $W$
 
-## Teorema 136
+## Teorema 137
 
 
 - **Hp**
@@ -2149,7 +2164,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
     - $\exists 1 \le i_1, \ldots, i_n \le m \mid w_{i_1}, \ldots, w_{i_n}$ è una base di $W$
 
-## Teorema 137
+## Teorema 138
 
 
 - **Hp**
@@ -2160,7 +2175,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
     - $w_1, \ldots, w_n$ linearmente indipendenti $\iff w_1, \ldots, w_n$ generatori di $W$
 
-## Teorema 138
+## Teorema 139
 
 
 - **Hp**
@@ -2170,7 +2185,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
     - $\dim(U + V) = \dim(U) + \dim(V) - \dim(U \cap V)$
 
-## Teorema 139
+## Teorema 140
 
 
 - **Hp**
@@ -2180,7 +2195,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
     - $V/W$ sottospazio vettoriale
 
-## Teorema 140
+## Teorema 141
 
 
 - **Hp**
@@ -2189,6 +2204,11 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
     - $W \subset V$ sottospazio vettoriale
 - **Th**
     - $\dim(V/W) = \dim(V) - \dim(W)$
+
+****
+
+# Applicazioni lineari
+
 
 ## Definizione 52
 
@@ -2202,7 +2222,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 141
+## Teorema 142
 
 
 - **Hp**
@@ -2212,14 +2232,14 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
     - $V \cong \mathbb{K}^n$
 
-## Teorema 142
+## Teorema 143
 
 
 - ⚠️ **QUI C'È UN BUCO DI COSE CHE NON HO CAPITO**
 
 
 
-## Teorema 143
+## Teorema 144
 
 
 - **Hp**
@@ -2241,7 +2261,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 144
+## Teorema 145
 
 
 - **Hp**
@@ -2251,7 +2271,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
     - $\ker(f) \subset V$ sottospazio
 
-## Teorema 145
+## Teorema 146
 
 
 - **Hp**
@@ -2284,7 +2304,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
   - $\exists !  \ q, r \in \mathbb{Z} \mid m=n q+r \quad 0 \leq r<n$
 
-## Teorema 146
+## Teorema 147
 
 
 - **Hp**
@@ -2322,7 +2342,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 # Teorema cinese dei resti
 
 
-## Teorema 147
+## Teorema 148
 
 
 - **Hp**
@@ -2331,7 +2351,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
   - $m = a_1 \cdot \ldots \cdot a_n$
 
-## Teorema 148
+## Teorema 149
 
 
 - **Hp**
@@ -2342,7 +2362,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
   - $\exists \phi \mid \phi: \mathbb{Z}_m \rightarrow \mathbb{Z}_{a_1} \times \ldots \times \mathbb{Z}_{a_n}: x \ (\bmod \ m) \rightarrow (x \ (\bmod \ a_1), \ldots, x \ (\bmod \ a_n))$
   - $\phi$ è una funzione ben definita, ed è iniettiva
 
-## Teorema 149
+## Teorema 150
 
 
 - **Hp**
@@ -2353,7 +2373,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
   - $\exists ! x \ (\bmod \ m) \mid$ $\left\{\begin{array}{c}x \equiv b_{1}\ \left(\bmod  \ a_{1}\right) \\ \vdots \\ x \equiv b_{n}\ \left(\bmod  \ a_{n}\right)\end{array}\right.$
 
-## Teorema 150
+## Teorema 151
 
 
 - **Hp**
@@ -2378,7 +2398,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
   - $(a+b )^n = \displaystyle{\sum_{k = 0}^{n}{\binom{n}{k} a^k b ^{n - k}}}$
 
-## Teorema 151
+## Teorema 152
 
 
 - ⚠️ **NON HO CAPITO UN CAZZO**
@@ -2396,7 +2416,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
   - $a^{p} \equiv a \ (\bmod \ p)$
 
-## Teorema 152
+## Teorema 153
 
 
 - **Hp**
@@ -2405,7 +2425,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
   - $[a]^{-1}=\left[a\right]^{p-2}$
 
-## Teorema 153
+## Teorema 154
 
 
 - **Hp**
@@ -2413,7 +2433,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
     - $\displaystyle \prod_{0 \lt a \lt p} (x - a) \equiv x^{p - 1} - 1 \ (\bmod \ p)$
 
-## Teorema 154
+## Teorema 155
 
 
 - ⚠️ **NON HO CAPITO UN CAZZO**
@@ -2441,7 +2461,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
     - $A / \textrm{ker}(f) \cong \textrm{im}(f)$, ovvero $\exists \varphi \mid \varphi : A / \textrm{ker}(f) \rightarrow \textrm{im}(f): [a] \rightarrow f(a)$ isomorfismo di anelli
 
-## Teorema 155
+## Teorema 156
 
 
 - **Hp**
@@ -2450,7 +2470,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
   - $G / \textrm{ker}(f) \cong \textrm{im}(f)$, o alternativamente $\exists \varphi \mid \varphi : G / \textrm{ker}(f) \rightarrow \textrm{im}(f): [g] \rightarrow f(g)$ isomorfismo di gruppi
 
-## Teorema 156
+## Teorema 157
 
 
 - **Hp
@@ -2473,7 +2493,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
   - $\exists g \in G \mid o(g) = p$
 
 
-## Teorema 157
+## Teorema 158
 
 
 - **Hp**

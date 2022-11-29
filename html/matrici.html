@@ -247,7 +247,7 @@ n}(\mathbb{K})\)</span> è uno spazio vettoriale</li>
 </ul></li>
 <li><strong>Dim</strong>
 <ul>
-<li><strong>⚠️ DA FINIRE</strong></li>
+<li><strong>⚠️ TODO</strong></li>
 </ul></li>
 </ul>
 <h2 id="def-2">Def</h2>
@@ -322,6 +322,8 @@ B)\)</span></li>
 <li><strong>⚠️ TODO</strong></li>
 </ul></li>
 </ul>
+<hr />
+<h1 id="rango">Rango</h1>
 <h2 id="def-4">Def</h2>
 <ul>
 <li><strong>Sottospazio ortogonale</strong></li>
@@ -393,6 +395,42 @@ n}(\mathbb{K}) \quad L_A\)</span> è una trasformazione lineare</li>
 </ul>
 <h2 id="oss-6">Oss</h2>
 <ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\(\mathbb{K}\)</span> campo</li>
+<li><span class="math inline">\(m,n \in \mathbb{N} - \{0\}\)</span></li>
+<li><span class="math inline">\(x \in \textrm{Mat}_{n \times
+1}(\mathbb{K})\)</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\(\forall A \in \textrm{Mat}_{m \times
+n}(\mathbb{K}) \quad \ker(L_A) = \textrm{span}(A_1, \ldots, A_n) \land
+\textrm{im}(L_A) = \textrm{span}(A^1, \ldots, A^n)\)</span></li>
+</ul></li>
+<li><strong>Dim</strong>
+<ul>
+<li><span class="math inline">\(\forall A \in \textrm{Mat}_{m \times
+n}(\mathbb{K}) \quad L_A(x) = A \cdot x\)</span> per definizione di
+<span class="math inline">\(L_A\)</span></li>
+<li><span class="math inline">\(A \cdot x = \left(\begin{array}{ccc}
+a_{1,1} &amp; \cdots &amp; a_{1,n}\\ \vdots &amp; \ddots &amp; \vdots \\
+a_{m,1} &amp; \cdots &amp; a_{m,n}\end{array}\right) \cdot
+\left(\begin{array}{c} x_1 \\ \vdots \\ x_n \end{array}\right) =
+\left(\begin{array}{c}a_{1, 1} x_1 + \ldots + a_{1,n}x_n \\ \vdots \\
+a_{m,1}x_1 + \ldots + a_{m,n} x_n \end{array}\right) =
+\left(\begin{array}{c}A_1 \cdot x \\ \vdots \\ A_m \cdot
+x\end{array}\right) = x_1 \left(\begin{array}{c}a_{1, 1} \\ \vdots \\
+a_{m, 1}\end{array}\right) + \ldots + x_n \left(\begin{array}{c}a_{1,
+n}\\ \vdots \\ a_{m, n}\end{array}\right) = x_1A^1 + \ldots +
+x_nA^n\)</span>, e poiché <span class="math inline">\(x_1, \ldots x_n
+\in \mathbb{K} \implies x_1A^1+ \ldots + x_nA^n \in \textrm{span}(A^1,
+\ldots, A^n)\)</span></li>
+<li><strong>⚠️ TODO</strong></li>
+</ul></li>
+</ul>
+<h2 id="oss-7">Oss</h2>
+<ul>
 <li><strong>Rango di una matrice</strong></li>
 </ul>
 <blockquote>
@@ -408,7 +446,7 @@ class="math inline">\(\textrm{rk}(A):=\textrm{rk}(L_A)\)</span> è il
 <strong>rango di <span class="math inline">\(A\)</span></strong></li>
 </ul>
 </blockquote>
-<h2 id="oss-7">Oss</h2>
+<h2 id="oss-8">Oss</h2>
 <ul>
 <li><strong>Hp</strong></li>
 </ul>

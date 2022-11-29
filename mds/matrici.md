@@ -34,7 +34,7 @@
 - **Th**
     - $\textrm{Mat}_{m \times n}(\mathbb{K})$ è uno spazio vettoriale
 - **Dim**
-    - **⚠️ DA FINIRE**
+    - **⚠️ TODO**
 
 ## Def
 
@@ -82,6 +82,10 @@
 - **Dim**
     - **⚠️  TODO**
 
+****
+
+# Rango
+
 ## Def
 
 - **Sottospazio ortogonale**
@@ -120,6 +124,19 @@
 - **Th**
     - $\forall A \in \textrm{Mat}_{m \times n}(\mathbb{K}) \quad L_A$ è una trasformazione lineare
 - **Dim**
+    - **⚠️  TODO**
+
+## Oss
+
+- **Hp**
+    - $\mathbb{K}$ campo
+    - $m,n \in \mathbb{N} - \{0\}$
+    - $x \in \textrm{Mat}_{n \times 1}(\mathbb{K})$
+- **Th**
+    - $\forall A \in \textrm{Mat}_{m \times n}(\mathbb{K}) \quad \ker(L_A) = \textrm{span}(A_1, \ldots, A_n) \land \textrm{im}(L_A) = \textrm{span}(A^1, \ldots, A^n)$
+- **Dim**
+    - $\forall A \in \textrm{Mat}_{m \times n}(\mathbb{K}) \quad L_A(x) = A \cdot x$ per definizione di $L_A$
+    - $A \cdot x = \left(\begin{array}{ccc} a_{1,1} & \cdots & a_{1,n}\\ \vdots & \ddots & \vdots \\ a_{m,1} & \cdots & a_{m,n}\end{array}\right) \cdot \left(\begin{array}{c} x_1 \\ \vdots \\ x_n \end{array}\right) = \left(\begin{array}{c}a_{1, 1} x_1 + \ldots + a_{1,n}x_n \\ \vdots \\ a_{m,1}x_1 + \ldots + a_{m,n} x_n \end{array}\right) = \left(\begin{array}{c}A_1 \cdot x \\ \vdots \\ A_m \cdot x\end{array}\right) = x_1 \left(\begin{array}{c}a_{1, 1} \\ \vdots \\ a_{m, 1}\end{array}\right) + \ldots + x_n \left(\begin{array}{c}a_{1, n}\\ \vdots \\ a_{m, n}\end{array}\right) = x_1A^1 + \ldots + x_nA^n$, e poiché $x_1, \ldots x_n \in \mathbb{K} \implies x_1A^1+ \ldots + x_nA^n \in \textrm{span}(A^1, \ldots, A^n)$
     - **⚠️  TODO**
 
 ## Oss
