@@ -17,6 +17,7 @@
 - [Matrici](https://ph04.github.io/algebra/html/matrici.html)
     - [Matrici](https://ph04.github.io/algebra/html/matrici.html#matrici)
     - [Rango](https://ph04.github.io/algebra/html/matrici.html#rango)
+    - [Operazioni su righe e colonne](https://ph04.github.io/algebra/html/matrici.html#operazioni-su-righe-e-colonne)
 - [Morfismi](https://ph04.github.io/algebra/html/morfismi.html)
     - [Morfismi](https://ph04.github.io/algebra/html/morfismi.html#morfismi)
     - [Isomorfismi](https://ph04.github.io/algebra/html/morfismi.html#isomorfismi)
