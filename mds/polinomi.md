@@ -87,7 +87,7 @@
 - **Hp**
     - $\mathbb{K}$ campo
 - **Th**
-    - $\mathbb{K}[x]$ è un dominio
+    - $\mathbb{K}[x]$ è un dominio di integrità
 - **Dim**
     - ⚠️  **MANCA LA DIMOSTRAZIONE**
 
@@ -127,8 +127,12 @@
     - $|\{c \in \mathbb{K} \mid p(c) = 0\}| \le n$
 - **Dim**
     - ipotizzando $N :=|\{c \in \mathbb{K} \mid p(c) = 0\}| \gt n \implies \{c_1, \ldots, c_N\}$ sia l'insieme delle radici
-    - allora, per dimostrazione precedente, si ottiene il seguente sistema $\left.\begin{array}{c} x - c_1 \mid p(x) \\ \vdots \\ x-c_N \mid p(x) \end{array}\right\}$, dal quale si ottiene che $(x - c_1) \cdot \ldots \cdot (x - c_N) \mid p(x)$
-        - ⚠️  **MANCA LA DIMOSTRAZIONE DI QUESTO PASSAGGIO ✅**
+    - per dimostrazione precedente $x - c_1 \mid p(x) \iff \exists q_1(x) \in \mathbb{K}[x] \mid q_1(x)(x-c_1)=p(x)$
+    - per ipotesi $p(c_2) = 0$, allora $p(c_2) = q_1(c_2)(c_2 - c_1) = 0$
+    - per assurdo $\exists i, j \in [1, N] ,i \neq j \mid c_i = c_j \implies |\{c \in \mathbb{K} \mid p(c) = 0 \}| \lt N \implies$ le soluzioni sono necessariemente tutte distinte, e in particolare $c_2 \neq c_1 \iff c_2 - c_1 \neq 0$
+    - per dimostrazione $\mathbb{K}[x]$ è un dominio di integrità, allora $q_1(c_2 - c_1) = 0 \land c_2 - c_1 \neq 0 \implies q_1(c_2) = 0$
+    - per dimostrazione precedente $q_1(c_2) = 0 \iff x- c_2 \mid q_1(x) \implies \exists q_2(x) \in \mathbb{K}[x] \mid q_2(x) (x-c_2) = q_1(x)$, che sostituendo implica che $p(x) = q_2(x)(x-c_2)(x-c_1)$
+    - applicando il ragionamento analogo ad ogni soluzione, si ha che $\exists q_n(x) \in \mathbb{K}[x] \mid q_n(x) (x-c_1) \cdot \ldots \cdot(x-c_N) = p(x) \implies (x-c_1) \cdot \ldots \cdot (x-c_N) \mid p(x)$
     - ma $\deg\left((x - c_1) \cdot \ldots \cdot (x - c_N)\right) = N$, mentre $\deg(p(x)) = n$, dove $N \gt n \ \bot$
 
 ## Oss
