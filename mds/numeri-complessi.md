@@ -56,7 +56,7 @@
 - **Forma polare**
 
 > - $a, b \in \mathbb{C}$
-> - $z \in \mathbb{C}-\{0\}
+> - $z \in \mathbb{C}-\{0\}$
 > - $z=|z|\cdot e^{i \theta}$ è detta **forma polare di $z$**
 
 ## Def

@@ -745,6 +745,9 @@ normale</strong> <span class="math inline">\iff xH = Hx \quad \forall x
 <h2 id="teorema-22">Teorema 22</h2>
 <ul>
 <li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">G</span> gruppo</li>
+</ul>
 <ol type="1">
 <li><span class="math inline">H</span> è sottogruppo normale</li>
 <li><span class="math inline">\forall g \in G, h \in H \quad g \cdot h
@@ -1513,7 +1516,25 @@ class="math inline">B</span></strong></li>
 </ul>
 <blockquote>
 <ul>
-<li><strong>!!! WIP</strong></li>
+<li><span class="math inline">\mathbb{K}</span> campo</li>
+<li><span class="math inline">l, m, n \in \mathbb{N} - \{0\}</span></li>
+<li><span class="math inline">A \in \textrm{Mat}_{l \times
+m}(\mathbb{K}) \mid A = \left(\begin{array}{ccc} a_{1, 1} &amp; \cdots
+&amp; a_{1, m} \\ \vdots &amp; \ddots &amp; \vdots \\ a_{l, 1} &amp;
+\cdots &amp; a_{l, m} \end{array}\right)</span></li>
+<li><span class="math inline">B \in \textrm{Mat}_{m \times
+n}(\mathbb{K}) \mid B = \left(\begin{array}{ccc} b_{1, 1} &amp; \cdots
+&amp; b_{1, n} \\ \vdots &amp; \ddots &amp; \vdots \\ b_{m, 1} &amp;
+\cdots &amp; b_{m, n} \end{array}\right)</span></li>
+<li><span class="math inline">C \in \textrm{Mat}_{l \times
+n}(\mathbb{K}) \mid C = A \cdot B</span> è il <strong>prodotto tra <span
+class="math inline">A</span> e <span
+class="math inline">B</span></strong>, ed è definito come <span
+class="math inline">\left(\begin{array}{ccc}a_{1, 1}b_{1, 1} + \ldots +
+a_{1, m}b_{m, 1} &amp; \cdots &amp; a_{1, 1}b_{1, n} + \ldots + a_{1,
+m}b_{m,n} \\ \vdots &amp; \ddots &amp; \vdots \\a_{l,1}b_{1, 1} + \ldots
++ a_{l,m}b_{m, 1} &amp; \cdots &amp; a_{l,1}b_{1,n} + \ldots + a_{l,
+m}b_{m,n}\end{array}\right)</span></li>
 </ul>
 </blockquote>
 <h2 id="teorema-58">Teorema 58</h2>
@@ -1974,9 +1995,8 @@ isomorfismo</li>
 <ul>
 <li><strong>Hp</strong>
 <ul>
-<li><span class="math inline">(G, \cdot), (H, \cdot)</span> gruppi</li>
-<li><span class="math inline">f : G \rightarrow H</span> isomorfismo, o
-equivalentemente <span class="math inline">G \cong H</span></li>
+<li><span class="math inline">\cong</span> è la relazione di
+isomorfismo</li>
 </ul></li>
 <li><strong>Th</strong>
 <ul>
@@ -2185,8 +2205,7 @@ anelli</li>
 class="math inline">(\mathbb{Z}, +)</span> e <span
 class="math inline">(\mathbb{C} - \{0\}, \cdot)</span></li>
 <li><span class="math inline">I(n)</span> ideale generato da <span
-class="math inline">n</span> <strong>!!! CONTROLLA SE SERVE QUESTA
-COSA</strong></li>
+class="math inline">n</span></li>
 </ul></li>
 <li><strong>Th</strong>
 <ul>
@@ -2217,8 +2236,8 @@ normale</li>
 <li><span class="math inline">\mathbb{C}:=\left\{a+i b \mid a, b \in
 \mathbb{R}, \  i : i^{2}=-1\right\}</span> è l’<strong>insieme dei
 complessi</strong></li>
-<li><span class="math inline">z \in \mathbb{C}
-\implies\left\{\begin{array}{l}a:=\operatorname{Re}(z) \\
+<li><span class="math inline">\forall z \in \mathbb{C} \quad
+\left\{\begin{array}{l}a:=\operatorname{Re}(z) \\
 b:=\operatorname{Im}(z)\end{array}\right.</span></li>
 </ul>
 </blockquote>
@@ -2226,10 +2245,9 @@ b:=\operatorname{Im}(z)\end{array}\right.</span></li>
 <ul>
 <li><strong>Hp</strong>
 <ul>
-<li><span class="math inline">a, b \in \mathbb{R}, z \in \mathbb{C} \mid
-z=a+i b</span></li>
-<li><span class="math inline">c, d \in \mathbb{R}, w \in \mathbb{C} \mid
-w=c+i d</span></li>
+<li><span class="math inline">a, b, c, d \in \mathbb{R}</span></li>
+<li><span class="math inline">z \in \mathbb{C} \mid z=a+i b</span></li>
+<li><span class="math inline">w \in \mathbb{C} \mid w=c+i d</span></li>
 </ul></li>
 <li><strong>Th</strong>
 <ul>
@@ -2243,7 +2261,8 @@ w=c+i d</span></li>
 </ul>
 <blockquote>
 <ul>
-<li><span class="math inline">z=a+i b</span></li>
+<li><span class="math inline">a, b \in mathbb{R}</span></li>
+<li><span class="math inline">z \in \mathbb{C} \mid z=a+i b</span></li>
 <li><span class="math inline">\bar{z}:=a-i b</span> è il
 <strong>coniugato</strong> di <span class="math inline">z</span></li>
 </ul>
@@ -2252,10 +2271,9 @@ w=c+i d</span></li>
 <ul>
 <li><strong>Hp</strong>
 <ul>
-<li><span class="math inline">a, b \in \mathbb{R}, z \in \mathbb{C} \mid
-z=a+i b</span></li>
-<li><span class="math inline">c, d \in \mathbb{R}, w \in \mathbb{C} \mid
-w=c+i d</span></li>
+<li><span class="math inline">a,b, c, d, \in \mathbb{R}</span></li>
+<li><span class="math inline">z \in \mathbb{C} \mid z=a+i b</span></li>
+<li><span class="math inline">w \in \mathbb{C} \mid w=c+i d</span></li>
 </ul></li>
 <li><strong>Th</strong>
 <ul>
@@ -2267,8 +2285,15 @@ class="math inline">\overline{z}+\overline{w}=\overline{z+w}</span></li>
 </ul>
 <h2 id="teorema-88">Teorema 88</h2>
 <ul>
-<li><span class="math inline">\forall \theta \quad e^{i \theta}=\cos
-\theta+i \sin \theta</span></li>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">0 \le \theta &lt; 2 \pi</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">e^{i \theta}=\cos \theta+i \sin
+\theta</span></li>
+</ul></li>
 </ul>
 <h2 id="definizione-37">Definizione 37</h2>
 <ul>
@@ -2276,23 +2301,37 @@ class="math inline">\overline{z}+\overline{w}=\overline{z+w}</span></li>
 </ul>
 <blockquote>
 <ul>
-<li><span class="math inline">z = a+ib</span></li>
+<li><span class="math inline">a, b \in \mathbb{R}</span></li>
+<li><span class="math inline">z \in \mathbb{C} \mid z = a+ib</span></li>
 <li><span class="math inline">|z|:=\sqrt{a^{2}+b^{2}}</span> è il
 <strong>raggio</strong> di <span class="math inline">z</span>
 <ul>
-<li>è la distanza di <span class="math inline">z</span> dall’origine nel
-piano di Gauss</li>
+<li>corrisponde alla distanza di <span class="math inline">z</span>
+dall’origine nel piano di Gauss</li>
 </ul></li>
 </ul>
 </blockquote>
-<h2 id="forma-polare">Forma polare</h2>
-<ul>
-<li><span class="math inline">\forall z \in \mathbb{C}-0 \implies
-z=|z|\cdot e^{i \theta}</span></li>
-</ul>
 <h2 id="definizione-38">Definizione 38</h2>
+<ul>
+<li><strong>Forma polare</strong></li>
+</ul>
 <blockquote>
 <ul>
+<li><span class="math inline">a, b \in \mathbb{C}</span></li>
+<li><span class="math inline">z \in \mathbb{C}-\{0\}</span></li>
+<li><span class="math inline">z=|z|\cdot e^{i \theta}</span> è detta
+<strong>forma polare di <span class="math inline">z</span></strong></li>
+</ul>
+</blockquote>
+<h2 id="definizione-39">Definizione 39</h2>
+<ul>
+<li><strong>Soluzione principale</strong></li>
+</ul>
+<blockquote>
+<ul>
+<li><span class="math inline">a, b \in \mathbb{R}</span></li>
+<li><span class="math inline">z \in \mathbb{C} \mid z = a + i
+b</span></li>
 <li><span class="math inline">\arg(z) \subset \mathbb{R}</span> è
 l’<strong>insieme delle soluzioni</strong> del sistema <span
 class="math inline">\left\{\begin{array}{l}\cos \theta=\frac{a}{|z|} \\
@@ -2319,6 +2358,12 @@ campo</li>
 </ul>
 <h2 id="teorema-90">Teorema 90</h2>
 <ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">z, w \in \mathbb{C}</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
 <li><span class="math inline">|z \cdot w|=|z|\cdot |w| \quad \arg(z\cdot
 w)=\arg(z) + \arg(w)</span></li>
 <li><span class="math inline">|\overline{w}|=|w| \quad
@@ -2327,15 +2372,23 @@ w)=\arg(z) + \arg(w)</span></li>
 \arg(w^{-1})=-\arg(w)</span></li>
 <li><span class="math inline">\left|\dfrac{z}{w}\right|=\dfrac{|z|}{|w|}
 \quad \arg\left(\dfrac{z}{w}\right)=\arg(z) - \arg(w)</span></li>
+</ul></li>
 </ul>
 <h2 id="teorema-91">Teorema 91</h2>
 <ul>
-<li><span class="math inline">z^{n}=|z|^{n} e^{i n \theta} \quad \arg
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">z \in \mathbb{C}</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">z^{n}=|z|^{n} e^{i \theta n} \quad \arg
 \left( z^{n} \right)=n \arg (z)</span></li>
+</ul></li>
 </ul>
 <hr />
 <h1 id="permutazioni">Permutazioni</h1>
-<h2 id="definizione-39">Definizione 39</h2>
+<h2 id="definizione-40">Definizione 40</h2>
 <ul>
 <li><strong>Permutazioni</strong></li>
 </ul>
@@ -2363,7 +2416,7 @@ biiettiva <span class="math inline">\}</span></li>
 abeliano se <span class="math inline">|X| \ge 3</span></li>
 </ul></li>
 </ul>
-<h2 id="definizione-40">Definizione 40</h2>
+<h2 id="definizione-41">Definizione 41</h2>
 <ul>
 <li><strong>Ciclo di una permutazione</strong></li>
 </ul>
@@ -2431,7 +2484,7 @@ d_k)</span></li>
 </ul>
 <hr />
 <h1 id="trasposizioni">Trasposizioni</h1>
-<h2 id="definizione-41">Definizione 41</h2>
+<h2 id="definizione-42">Definizione 42</h2>
 <ul>
 <li><strong>Trasposizione</strong></li>
 </ul>
@@ -2482,7 +2535,7 @@ trasposizioni adiacenti</li>
 </ul>
 <hr />
 <h1 id="segno">Segno</h1>
-<h2 id="definizione-42">Definizione 42</h2>
+<h2 id="definizione-43">Definizione 43</h2>
 <ul>
 <li><strong>Segno di una permutazione</strong></li>
 </ul>
@@ -2623,7 +2676,7 @@ k}</span></li>
 </ul>
 <hr />
 <h1 id="polinomi">Polinomi</h1>
-<h2 id="definizione-43">Definizione 43</h2>
+<h2 id="definizione-44">Definizione 44</h2>
 <ul>
 <li><strong>Polinomi</strong></li>
 </ul>
@@ -2654,7 +2707,7 @@ class="math inline">\iff a_n = 1</span></li>
 anello</li>
 </ul></li>
 </ul>
-<h2 id="definizione-44">Definizione 44</h2>
+<h2 id="definizione-45">Definizione 45</h2>
 <ul>
 <li><strong>Grado del polinomio</strong></li>
 </ul>
@@ -2719,7 +2772,7 @@ anello</li>
 integrità</li>
 </ul></li>
 </ul>
-<h2 id="definizione-45">Definizione 45</h2>
+<h2 id="definizione-46">Definizione 46</h2>
 <ul>
 <li><strong>Radici di un polinomio</strong></li>
 </ul>
@@ -2899,7 +2952,7 @@ b) = 1</span></li>
 </ul>
 <hr />
 <h1 id="relazioni">Relazioni</h1>
-<h2 id="definizione-46">Definizione 46</h2>
+<h2 id="definizione-47">Definizione 47</h2>
 <ul>
 <li><strong>Relazioni</strong></li>
 </ul>
@@ -3090,7 +3143,7 @@ equivalenza</li>
 </ul>
 <hr />
 <h1 id="partizioni">Partizioni</h1>
-<h2 id="definizione-47">Definizione 47</h2>
+<h2 id="definizione-48">Definizione 48</h2>
 <ul>
 <li><strong>Partizione</strong></li>
 </ul>
@@ -3148,7 +3201,7 @@ X/\sim}[x]</span></li>
 relazione di equivalenza</li>
 </ul></li>
 </ul>
-<h2 id="definizione-48">Definizione 48</h2>
+<h2 id="definizione-49">Definizione 49</h2>
 <ul>
 <li><strong>Classi laterali</strong></li>
 </ul>
@@ -3243,7 +3296,7 @@ G/H</span></li>
 </ul>
 <hr />
 <h1 id="spazi-vettoriali">Spazi Vettoriali</h1>
-<h2 id="definizione-49">Definizione 49</h2>
+<h2 id="definizione-50">Definizione 50</h2>
 <ul>
 <li><strong>Spazio vettoriale</strong></li>
 </ul>
@@ -3278,7 +3331,7 @@ w \in V \quad s \cdot (v + w) = s \cdot v + s \cdot w</span></li>
 <span class="math inline">\mathbb{K}</span></li>
 </ul></li>
 </ul>
-<h2 id="definizione-50">Definizione 50</h2>
+<h2 id="definizione-51">Definizione 51</h2>
 <ul>
 <li><strong>Sottospazio vettoriale</strong></li>
 </ul>
@@ -3294,7 +3347,7 @@ class="math inline">\iff (W, +) \subset (V, +)</span> sottogruppo, e
 \lambda \cdot w \in W</span></li>
 </ul>
 </blockquote>
-<h2 id="definizione-51">Definizione 51</h2>
+<h2 id="definizione-52">Definizione 52</h2>
 <ul>
 <li><strong>Span di vettori</strong></li>
 </ul>
@@ -3327,7 +3380,7 @@ class="math inline">\mathbb{K}</span></li>
 un sottospazio vettoriale di <span class="math inline">V</span></li>
 </ul></li>
 </ul>
-<h2 id="definizione-52">Definizione 52</h2>
+<h2 id="definizione-53">Definizione 53</h2>
 <ul>
 <li><strong>Vettori generatori</strong></li>
 </ul>
@@ -3457,7 +3510,7 @@ v_n</span> base di <span class="math inline">V</span></li>
 cardinalità delle basi di uno spazio vettoriale è unica</li>
 </ul></li>
 </ul>
-<h2 id="definizione-53">Definizione 53</h2>
+<h2 id="definizione-54">Definizione 54</h2>
 <ul>
 <li><strong>Dimensione di uno spazio vettoriale</strong></li>
 </ul>
@@ -3592,7 +3645,7 @@ vettoriale</li>
 </ul>
 <hr />
 <h1 id="applicazioni-lineari">Applicazioni lineari</h1>
-<h2 id="definizione-54">Definizione 54</h2>
+<h2 id="definizione-55">Definizione 55</h2>
 <ul>
 <li><strong>Applicazioni lineari</strong></li>
 </ul>
@@ -3645,7 +3698,7 @@ class="math inline">\mathbb{K}</span></li>
 \dim(W)</span></li>
 </ul></li>
 </ul>
-<h2 id="definizione-55">Definizione 55</h2>
+<h2 id="definizione-56">Definizione 56</h2>
 <ul>
 <li><strong>Kernel e immagine</strong></li>
 </ul>
@@ -3693,7 +3746,7 @@ lineare</li>
 sottospazio</li>
 </ul></li>
 </ul>
-<h2 id="definizione-56">Definizione 56</h2>
+<h2 id="definizione-57">Definizione 57</h2>
 <ul>
 <li><strong>Rango di un’applicazione lineare</strong></li>
 </ul>

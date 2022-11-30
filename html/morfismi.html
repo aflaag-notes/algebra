@@ -306,9 +306,8 @@ invertibile è un isomorfismo</li>
 <ul>
 <li><strong>Hp</strong>
 <ul>
-<li><span class="math inline">(G, \cdot), (H, \cdot)</span> gruppi</li>
-<li><span class="math inline">f : G \rightarrow H</span> isomorfismo, o
-equivalentemente <span class="math inline">G \cong H</span></li>
+<li><span class="math inline">\cong</span> è la relazione di
+isomorfismo</li>
 </ul></li>
 <li><strong>Th</strong>
 <ul>
@@ -317,7 +316,49 @@ equivalenza</li>
 </ul></li>
 <li><strong>Dim</strong>
 <ul>
-<li><strong>⚠️ TODO</strong></li>
+<li><em>riflessività</em>: <span class="math inline">\forall G</span>
+gruppo<span class="math inline">\quad G \cong G</span>
+<ul>
+<li><span class="math inline">G \cong G \implies \exists f : G
+\rightarrow G</span> isomorfismo</li>
+<li>presa <span class="math inline">f: G \rightarrow G : x \rightarrow
+x</span>, allora <span class="math inline">\forall x, y \in G \quad f(x)
+\cdot f(y) = x \cdot y = f(x \cdot y) \implies f</span> è un
+morfismo</li>
+<li><span class="math inline">f</span> è la funzione identità, e dunque
+è biiettiva</li>
+<li>allora <span class="math inline">f</span> è l’isomorfismo tale che
+<span class="math inline">G \cong G</span></li>
+</ul></li>
+<li><em>simmetria</em>: <span class="math inline">\forall G, H</span>
+gruppi<span class="math inline">\quad G \cong H \implies H \cong
+G</span>
+<ul>
+<li><span class="math inline">G \cong H \implies \exists f: G
+\rightarrow H</span> isomorfismo, e in particolare biiettiva <span
+class="math inline">\implies \exists f^{-1}</span> ancora biiettiva</li>
+<li>per dimostrazione precedente <span class="math inline">f</span>
+morfismo <span class="math inline">\implies f^{-1}</span> morfismo,
+allora <span class="math inline">f : H \rightarrow G</span> isomorfismo
+<span class="math inline">\implies H \cong G</span></li>
+</ul></li>
+<li><em>transitività</em>: <span class="math inline">\forall G, H,
+K</span> gruppi <span class="math inline">G \cong H \land H \cong K
+\implies G \cong K</span>
+<ul>
+<li><span class="math inline">G \cong H \implies \exists f: G
+\rightarrow H</span> isomorfismo</li>
+<li><span class="math inline">H \cong K \implies \exists g: H
+\rightarrow K</span> isomorfismo</li>
+<li><span class="math inline">g \circ f: G \rightarrow K</span> è ancora
+biiettiva perché composizione di funzioni biiettive</li>
+<li><span class="math inline">f: x \rightarrow f(x), g: x \rightarrow
+g(x) \implies g \circ f : x \rightarrow g(f(x)) \implies \forall x, y
+\in G \quad g(f(x))\cdot g(f(y)) =g(f(x)\cdot f(y)) = g(f(x \cdot
+y))</span> poiché <span class="math inline">f</span> e <span
+class="math inline">g</span> sono isomorfismi, e questo dimostra che
+<span class="math inline">g \circ f</span> è un isomorfismo</li>
+</ul></li>
 </ul></li>
 </ul>
 <h2 id="ex">Ex</h2>
@@ -671,8 +712,7 @@ a^\prime) \implies x\cdot y \in \textrm{Im}(f) \implies \textrm{Im}(f)
 class="math inline">(\mathbb{Z}, +)</span> e <span
 class="math inline">(\mathbb{C} - \{0\}, \cdot)</span></li>
 <li><span class="math inline">I(n)</span> ideale generato da <span
-class="math inline">n</span> <strong>⚠️ CONTROLLA SE SERVE QUESTA
-COSA</strong></li>
+class="math inline">n</span></li>
 </ul></li>
 <li><strong>Th</strong>
 <ul>
@@ -680,7 +720,7 @@ COSA</strong></li>
 </ul></li>
 <li><strong>Dim</strong>
 <ul>
-<li>pass</li>
+<li><strong>⚠️ RISCRIVI TUTTO, ANCHE IPOTESI E TESI</strong></li>
 </ul></li>
 </ul>
 <h2 id="oss-10">Oss</h2>

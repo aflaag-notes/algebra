@@ -194,8 +194,8 @@
 <li><span class="math inline">\mathbb{C}:=\left\{a+i b \mid a, b \in
 \mathbb{R}, \  i : i^{2}=-1\right\}</span> è l’<strong>insieme dei
 complessi</strong></li>
-<li><span class="math inline">z \in \mathbb{C}
-\implies\left\{\begin{array}{l}a:=\operatorname{Re}(z) \\
+<li><span class="math inline">\forall z \in \mathbb{C} \quad
+\left\{\begin{array}{l}a:=\operatorname{Re}(z) \\
 b:=\operatorname{Im}(z)\end{array}\right.</span></li>
 </ul>
 </blockquote>
@@ -203,10 +203,9 @@ b:=\operatorname{Im}(z)\end{array}\right.</span></li>
 <ul>
 <li><strong>Hp</strong>
 <ul>
-<li><span class="math inline">a, b \in \mathbb{R}, z \in \mathbb{C} \mid
-z=a+i b</span></li>
-<li><span class="math inline">c, d \in \mathbb{R}, w \in \mathbb{C} \mid
-w=c+i d</span></li>
+<li><span class="math inline">a, b, c, d \in \mathbb{R}</span></li>
+<li><span class="math inline">z \in \mathbb{C} \mid z=a+i b</span></li>
+<li><span class="math inline">w \in \mathbb{C} \mid w=c+i d</span></li>
 </ul></li>
 <li><strong>Th</strong>
 <ul>
@@ -220,7 +219,8 @@ w=c+i d</span></li>
 </ul>
 <blockquote>
 <ul>
-<li><span class="math inline">z=a+i b</span></li>
+<li><span class="math inline">a, b \in mathbb{R}</span></li>
+<li><span class="math inline">z \in \mathbb{C} \mid z=a+i b</span></li>
 <li><span class="math inline">\bar{z}:=a-i b</span> è il
 <strong>coniugato</strong> di <span class="math inline">z</span></li>
 </ul>
@@ -229,10 +229,9 @@ w=c+i d</span></li>
 <ul>
 <li><strong>Hp</strong>
 <ul>
-<li><span class="math inline">a, b \in \mathbb{R}, z \in \mathbb{C} \mid
-z=a+i b</span></li>
-<li><span class="math inline">c, d \in \mathbb{R}, w \in \mathbb{C} \mid
-w=c+i d</span></li>
+<li><span class="math inline">a,b, c, d, \in \mathbb{R}</span></li>
+<li><span class="math inline">z \in \mathbb{C} \mid z=a+i b</span></li>
+<li><span class="math inline">w \in \mathbb{C} \mid w=c+i d</span></li>
 </ul></li>
 <li><strong>Th</strong>
 <ul>
@@ -244,8 +243,15 @@ class="math inline">\overline{z}+\overline{w}=\overline{z+w}</span></li>
 </ul>
 <h2 id="formula-di-eulero">Formula di Eulero</h2>
 <ul>
-<li><span class="math inline">\forall \theta \quad e^{i \theta}=\cos
-\theta+i \sin \theta</span></li>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">0 \le \theta \lt 2 \pi</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">e^{i \theta}=\cos \theta+i \sin
+\theta</span></li>
+</ul></li>
 </ul>
 <h2 id="def-2">Def</h2>
 <ul>
@@ -253,23 +259,37 @@ class="math inline">\overline{z}+\overline{w}=\overline{z+w}</span></li>
 </ul>
 <blockquote>
 <ul>
-<li><span class="math inline">z = a+ib</span></li>
+<li><span class="math inline">a, b \in \mathbb{R}</span></li>
+<li><span class="math inline">z \in \mathbb{C} \mid z = a+ib</span></li>
 <li><span class="math inline">|z|:=\sqrt{a^{2}+b^{2}}</span> è il
 <strong>raggio</strong> di <span class="math inline">z</span>
 <ul>
-<li>è la distanza di <span class="math inline">z</span> dall’origine nel
-piano di Gauss</li>
+<li>corrisponde alla distanza di <span class="math inline">z</span>
+dall’origine nel piano di Gauss</li>
 </ul></li>
 </ul>
 </blockquote>
-<h2 id="forma-polare">Forma polare</h2>
-<ul>
-<li><span class="math inline">\forall z \in \mathbb{C}-0 \implies
-z=|z|\cdot e^{i \theta}</span></li>
-</ul>
 <h2 id="def-3">Def</h2>
+<ul>
+<li><strong>Forma polare</strong></li>
+</ul>
 <blockquote>
 <ul>
+<li><span class="math inline">a, b \in \mathbb{C}</span></li>
+<li><span class="math inline">z \in \mathbb{C}-\{0\}</span></li>
+<li><span class="math inline">z=|z|\cdot e^{i \theta}</span> è detta
+<strong>forma polare di <span class="math inline">z</span></strong></li>
+</ul>
+</blockquote>
+<h2 id="def-4">Def</h2>
+<ul>
+<li><strong>Soluzione principale</strong></li>
+</ul>
+<blockquote>
+<ul>
+<li><span class="math inline">a, b \in \mathbb{R}</span></li>
+<li><span class="math inline">z \in \mathbb{C} \mid z = a + i
+b</span></li>
 <li><span class="math inline">\arg(z) \subset \mathbb{R}</span> è
 l’<strong>insieme delle soluzioni</strong> del sistema <span
 class="math inline">\left\{\begin{array}{l}\cos \theta=\frac{a}{|z|} \\
@@ -307,6 +327,12 @@ ammette inversi moltiplicativi <span class="math inline">\implies
 </ul>
 <h2 id="oss-3">Oss</h2>
 <ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">z, w \in \mathbb{C}</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
 <li><span class="math inline">|z \cdot w|=|z|\cdot |w| \quad \arg(z\cdot
 w)=\arg(z) + \arg(w)</span></li>
 <li><span class="math inline">|\overline{w}|=|w| \quad
@@ -315,11 +341,19 @@ w)=\arg(z) + \arg(w)</span></li>
 \arg(w^{-1})=-\arg(w)</span></li>
 <li><span class="math inline">\left|\dfrac{z}{w}\right|=\dfrac{|z|}{|w|}
 \quad \arg\left(\dfrac{z}{w}\right)=\arg(z) - \arg(w)</span></li>
+</ul></li>
 </ul>
 <h2 id="formula-di-de-moivre">Formula di de Moivre</h2>
 <ul>
-<li><span class="math inline">z^{n}=|z|^{n} e^{i n \theta} \quad \arg
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">z \in \mathbb{C}</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">z^{n}=|z|^{n} e^{i \theta n} \quad \arg
 \left( z^{n} \right)=n \arg (z)</span></li>
+</ul></li>
 </ul>
 </body>
 </html>
