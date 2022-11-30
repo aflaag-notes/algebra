@@ -64,19 +64,23 @@
 ## Oss
 
 - **Hp**
-    - $f$ isomorfismo
+    - $\cong$ è la relazione di isomorfismo
 - **Th**
     - $\cong$ è una relazione di equivalenza
 - **Dim**
-    - **⚠️ TODO**
     - _riflessività_: $\forall G$ gruppo$\quad G \cong G$
-        - $\forall x, y \in G \quad f(x)\cdot f(y) = f(x \cdot y)$
-        - **⚠️ INCOMPLETA**
+        - $G \cong G \implies \exists f : G \rightarrow G$ isomorfismo
+        - presa $f: G \rightarrow G : x \rightarrow x$, allora $\forall x, y \in G \quad f(x) \cdot f(y) = x \cdot y = f(x \cdot y) \implies f$ è un morfismo
+        - $f$ è la funzione identità, e dunque è biiettiva
+        - allora $f$ è l'isomorfismo tale che $G \cong G$
     - _simmetria_: $\forall G, H$ gruppi$\quad G \cong H \implies H \cong G$
-        - $\forall x, y \in G \quad f(x) \cdot f(y) = f(x \cdot y) \implies \forall x', y'\in H \quad f(x')\cdot f(y') = f(x'\cdot y')$
-        - **⚠️ INCOMPLETA**
+        - $G \cong H \implies \exists f: G \rightarrow H$ isomorfismo, e in particolare biiettiva $\implies \exists f^{-1}$ ancora biiettiva
+        - per dimostrazione precedente $f$ morfismo $\implies f^{-1}$ morfismo, allora $f : H \rightarrow G$ isomorfismo $\implies H \cong G$
     - _transitività_: $\forall G, H, K$ gruppi $G \cong H \land H \cong K \implies G \cong K$
-        - **⚠️ INCOMPLETA**
+        - $G \cong H \implies \exists f: G \rightarrow H$ isomorfismo
+        - $H \cong K \implies \exists g: H \rightarrow K$ isomorfismo
+        - $g \circ f: G \rightarrow K$ è ancora biiettiva perché composizione di funzioni biiettive
+        - $f: x \rightarrow f(x), g: x \rightarrow g(x) \implies g \circ f : x \rightarrow g(f(x)) \implies \forall x, y \in G \quad g(f(x))\cdot g(f(y)) =g(f(x)\cdot f(y)) = g(f(x \cdot y))$ poiché $f$ e $g$ sono isomorfismi, e questo dimostra che $g \circ f$ è un isomorfismo
 
 ## Ex
 
