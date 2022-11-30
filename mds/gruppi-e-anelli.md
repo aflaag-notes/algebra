@@ -217,6 +217,7 @@
 ## Oss
 
 - **Hp**
+  - $G$ gruppo
   1) $H$ è sottogruppo normale
   2) $\forall g \in G, h \in H \quad g \cdot h \cdot g^{-1} \in H$
   3) $\forall g \in G, h \in H \quad \exists k \in H \mid g \cdot h = k \cdot g$

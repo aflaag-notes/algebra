@@ -385,6 +385,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 - **Hp**
+  - $G$ gruppo
   1) $H$ è sottogruppo normale
   2) $\forall g \in G, h \in H \quad g \cdot h \cdot g^{-1} \in H$
   3) $\forall g \in G, h \in H \quad \exists k \in H \mid g \cdot h = k \cdot g$
@@ -932,7 +933,11 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 - **Prodotto tra matrici**
 
-> - **⚠️  WIP**
+> - $\mathbb{K}$ campo
+> - $l, m, n \in \mathbb{N} - \{0\}$
+> - $A \in \textrm{Mat}_{l \times m}(\mathbb{K}) \mid A = \left(\begin{array}{ccc} a_{1, 1} & \cdots & a_{1, m} \\ \vdots & \ddots & \vdots \\ a_{l, 1} & \cdots & a_{l, m} \end{array}\right)$
+> - $B \in \textrm{Mat}_{m \times n}(\mathbb{K}) \mid B = \left(\begin{array}{ccc} b_{1, 1} & \cdots & b_{1, n} \\ \vdots & \ddots & \vdots \\ b_{m, 1} & \cdots & b_{m, n} \end{array}\right)$
+> - $C \in \textrm{Mat}_{l \times n}(\mathbb{K}) \mid C = A \cdot B$ è il **prodotto tra $A$ e $B$**, ed è definito come $\left(\begin{array}{ccc}a_{1, 1}b_{1, 1} + \ldots + a_{1, m}b_{m, 1} & \cdots & a_{1, 1}b_{1, n} + \ldots + a_{1, m}b_{m,n} \\ \vdots & \ddots & \vdots \\a_{l,1}b_{1, 1} + \ldots + a_{l,m}b_{m, 1} & \cdots & a_{l,1}b_{1,n} + \ldots + a_{l, m}b_{m,n}\end{array}\right)$
 
 
 
@@ -1250,8 +1255,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 - **Hp**
-    - $(G, \cdot), (H, \cdot)$ gruppi
-    - $f : G \rightarrow H$ isomorfismo, o equivalentemente $G \cong H$
+    - $f$ isomorfismo
 - **Th**
     - $\cong$ è una relazione di equivalenza
 
@@ -1383,7 +1387,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Hp**
   - $f: \mathbb{Z} \rightarrow \mathbb{C} - \{0\} : k \rightarrow \zeta^k$
   - $f$ morfismo di gruppi $(\mathbb{Z}, +)$ e $(\mathbb{C} - \{0\}, \cdot)$
-  - $I(n)$ ideale generato da $n$ **⚠️ CONTROLLA SE SERVE QUESTA COSA**
+  - $I(n)$ ideale generato da $n$
 - **Th**
   - $\textrm{ker}(f) = I(n)$
 
@@ -1408,7 +1412,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Insieme dei complessi**
 
 > - $\mathbb{C}:=\left\{a+i b \mid a, b \in \mathbb{R}, \  i : i^{2}=-1\right\}$ è l'**insieme dei complessi**
-> - $z \in \mathbb{C} \implies\left\{\begin{array}{l}a:=\operatorname{Re}(z) \\ b:=\operatorname{Im}(z)\end{array}\right.$
+> - $\forall z \in \mathbb{C} \quad \left\{\begin{array}{l}a:=\operatorname{Re}(z) \\ b:=\operatorname{Im}(z)\end{array}\right.$
 
 
 
@@ -1416,8 +1420,9 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 - **Hp**
-    - $a, b \in \mathbb{R}, z \in \mathbb{C} \mid z=a+i b$
-    - $c, d \in \mathbb{R}, w \in \mathbb{C} \mid w=c+i d$
+    - $a, b, c, d \in \mathbb{R}$
+    - $z \in \mathbb{C} \mid z=a+i b$
+    - $w \in \mathbb{C} \mid w=c+i d$
 - **Th**
     - $z + w = (a+b)+i (c +d)$
     - $z\cdot w=(a c-b d)+i(ad+ bc)$
@@ -1429,7 +1434,8 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 - **Coniugato**
 
-> - $z=a+i b$
+> - $a, b \in mathbb{R}$
+> - $z \in \mathbb{C} \mid z=a+i b$
 > - $\bar{z}:=a-i b$ è il **coniugato** di $z$
 
 
@@ -1438,8 +1444,9 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 - **Hp**
-    - $a, b \in \mathbb{R}, z \in \mathbb{C} \mid z=a+i b$
-    - $c, d \in \mathbb{R}, w \in \mathbb{C} \mid w=c+i d$
+    - $a,b, c, d, \in \mathbb{R}$
+    - $z \in \mathbb{C} \mid z=a+i b$
+    - $w \in \mathbb{C} \mid w=c+i d$
 - **Th**
     - $\overline{z}+\overline{w}=\overline{z+w}$
     - $\overline{z} \cdot \overline{w}=\overline{z \cdot w}$
@@ -1449,7 +1456,10 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 ## Teorema 88
 
 
-- $\forall \theta \quad e^{i \theta}=\cos \theta+i \sin \theta$
+- **Hp**
+    - $0 \le \theta \lt 2 \pi$
+- **Th**
+    - $e^{i \theta}=\cos \theta+i \sin \theta$
 
 
 
@@ -1458,19 +1468,31 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 - **Raggio**
 
-> - $z = a+ib$
+> - $a, b \in \mathbb{R}$
+> - $z \in \mathbb{C} \mid z = a+ib$
 > - $|z|:=\sqrt{a^{2}+b^{2}}$ è il **raggio** di $z$
->   - è la distanza di $z$ dall'origine nel piano di Gauss
-
-## Forma polare
-
-- $\forall z \in \mathbb{C}-0 \implies z=|z|\cdot e^{i \theta}$
+>   - corrisponde alla distanza di $z$ dall'origine nel piano di Gauss
 
 
 
 ## Definizione 38
 
 
+- **Forma polare**
+
+> - $a, b \in \mathbb{C}$
+> - $z \in \mathbb{C}-\{0\}
+> - $z=|z|\cdot e^{i \theta}$ è detta **forma polare di $z$**
+
+
+
+## Definizione 39
+
+
+- **Soluzione principale**
+
+> - $a, b \in \mathbb{R}$
+> - $z \in \mathbb{C} \mid z = a + i b$
 > - $\arg(z) \subset \mathbb{R}$ è l'**insieme delle soluzioni** del sistema $\left\{\begin{array}{l}\cos \theta=\frac{a}{|z|} \\ \sin \theta=\frac{b}{|z|}\end{array}\right.$
 > - per definizione, $\textrm{arg}(z) \implies \exists ! \theta \mid 0 \leq \theta \le 2 \pi$ tale che $\theta$ sia soluzione del sistema, e questo prende il nome di $\textrm{Arg}(z)$, detta **soluzione principale**
 
@@ -1487,17 +1509,23 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 ## Teorema 90
 
 
-- $|z \cdot w|=|z|\cdot |w| \quad \arg(z\cdot w)=\arg(z) + \arg(w)$
-- $|\overline{w}|=|w| \quad \arg(\overline{w})=-\arg(w)$
-- $|w^{-1}|={|w|}^{-1}\quad \arg(w^{-1})=-\arg(w)$
-- $\left|\dfrac{z}{w}\right|=\dfrac{|z|}{|w|} \quad \arg\left(\dfrac{z}{w}\right)=\arg(z) - \arg(w)$
+- **Hp**
+    - $z, w \in \mathbb{C}$
+- **Th**
+    - $|z \cdot w|=|z|\cdot |w| \quad \arg(z\cdot w)=\arg(z) + \arg(w)$
+    - $|\overline{w}|=|w| \quad \arg(\overline{w})=-\arg(w)$
+    - $|w^{-1}|={|w|}^{-1}\quad \arg(w^{-1})=-\arg(w)$
+    - $\left|\dfrac{z}{w}\right|=\dfrac{|z|}{|w|} \quad \arg\left(\dfrac{z}{w}\right)=\arg(z) - \arg(w)$
 
 
 
 ## Teorema 91
 
 
-  - $z^{n}=|z|^{n} e^{i n \theta} \quad \arg \left( z^{n} \right)=n \arg (z)$
+- **Hp**
+    - $z \in \mathbb{C}$
+- **Th**
+    - $z^{n}=|z|^{n} e^{i  \theta n} \quad \arg \left( z^{n} \right)=n \arg (z)$
 
 
 
@@ -1506,7 +1534,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Definizione 39
+## Definizione 40
 
 
 - **Permutazioni**
@@ -1525,7 +1553,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
   - $(S_X, \circ)$ è un gruppo, non abeliano se $|X| \ge 3$
 
-## Definizione 40
+## Definizione 41
 
 
 - **Ciclo di una permutazione**
@@ -1578,7 +1606,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 # Trasposizioni
 
 
-## Definizione 41
+## Definizione 42
 
 
 - **Trasposizione**
@@ -1611,7 +1639,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 # Segno
 
 
-## Definizione 42
+## Definizione 43
 
 
 - **Segno di una permutazione**
@@ -1695,7 +1723,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Definizione 43
+## Definizione 44
 
 
 - **Polinomi**
@@ -1715,7 +1743,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
     - $(\mathbb{K}[x], +, \cdot)$ è un anello
 
-## Definizione 44
+## Definizione 45
 
 
 - **Grado del polinomio**
@@ -1760,7 +1788,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
     - $\mathbb{K}[x]$ è un dominio di integrità
 
-## Definizione 45
+## Definizione 46
 
 
 - **Radici di un polinomio**
@@ -1890,7 +1918,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Definizione 46
+## Definizione 47
 
 
 - **Relazioni**
@@ -2003,7 +2031,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 # Partizioni
 
 
-## Definizione 47
+## Definizione 48
 
 
 - **Partizione**
@@ -2047,7 +2075,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
   - $x \sim_S y \iff x^{-1}y \in H$ è una relazione di equivalenza
 
-## Definizione 48
+## Definizione 49
  
 
 - **Classi laterali**
@@ -2120,7 +2148,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Definizione 49
+## Definizione 50
  
 
 - **Spazio vettoriale**
@@ -2141,7 +2169,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
     - $\mathbb{K}^n$ spazio vettoriale su $\mathbb{K}$
 
-## Definizione 50
+## Definizione 51
 
 
 - **Sottospazio vettoriale**
@@ -2152,7 +2180,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Definizione 51
+## Definizione 52
 
 
 - **Span di vettori**
@@ -2177,7 +2205,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
     - $\textrm{span}(v_1, \ldots, v_n)$ è un sottospazio vettoriale di $V$
 
-## Definizione 52
+## Definizione 53
 
 
 - **Vettori generatori**
@@ -2254,7 +2282,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
     - $n = m$, il che implica che la cardinalità delle basi di uno spazio vettoriale è unica
 
-## Definizione 53
+## Definizione 54
 
 
 - **Dimensione di uno spazio vettoriale**
@@ -2346,7 +2374,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 # Applicazioni lineari
 
 
-## Definizione 54
+## Definizione 55
 
 
 - **Applicazioni lineari**
@@ -2384,7 +2412,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
     - $V \cong W \iff \dim(V) = \dim(W)$
 
-## Definizione 55
+## Definizione 56
 
 
 - **Kernel e immagine**
@@ -2417,7 +2445,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
     - $\textrm{im}(f) \subset W$ sottospazio
 
-## Definizione 56
+## Definizione 57
 
 
 - **Rango di un'applicazione lineare**

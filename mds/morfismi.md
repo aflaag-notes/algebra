@@ -64,12 +64,19 @@
 ## Oss
 
 - **Hp**
-    - $(G, \cdot), (H, \cdot)$ gruppi
-    - $f : G \rightarrow H$ isomorfismo, o equivalentemente $G \cong H$
+    - $f$ isomorfismo
 - **Th**
     - $\cong$ è una relazione di equivalenza
 - **Dim**
     - **⚠️ TODO**
+    - _riflessività_: $\forall G$ gruppo$\quad G \cong G$
+        - $\forall x, y \in G \quad f(x)\cdot f(y) = f(x \cdot y)$
+        - **⚠️ INCOMPLETA**
+    - _simmetria_: $\forall G, H$ gruppi$\quad G \cong H \implies H \cong G$
+        - $\forall x, y \in G \quad f(x) \cdot f(y) = f(x \cdot y) \implies \forall x', y'\in H \quad f(x')\cdot f(y') = f(x'\cdot y')$
+        - **⚠️ INCOMPLETA**
+    - _transitività_: $\forall G, H, K$ gruppi $G \cong H \land H \cong K \implies G \cong K$
+        - **⚠️ INCOMPLETA**
 
 ## Ex
 
@@ -228,11 +235,11 @@ $f([x \cdot y])=f([x]) \cdot f([y])$
 - **Hp**
   - $f: \mathbb{Z} \rightarrow \mathbb{C} - \{0\} : k \rightarrow \zeta^k$
   - $f$ morfismo di gruppi $(\mathbb{Z}, +)$ e $(\mathbb{C} - \{0\}, \cdot)$
-  - $I(n)$ ideale generato da $n$ **⚠️ CONTROLLA SE SERVE QUESTA COSA**
+  - $I(n)$ ideale generato da $n$
 - **Th**
   - $\textrm{ker}(f) = I(n)$
 - **Dim**
-  - pass
+  - **⚠️ RISCRIVI TUTTO, ANCHE IPOTESI E TESI**
 
 ## Oss
 

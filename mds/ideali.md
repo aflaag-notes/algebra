@@ -241,7 +241,10 @@
 - **Th**
   - $I \cdot J$ è un ideale
 - **Dim**
-  - ⚠️ **MANCA DIMOSTRAZIONE**
+    - $0 \in I \land 0 \in J \implies 0 \cdot 0 = 0 \in I \cdot J$
+    - $\forall x, y \in I \cdot J \quad \exists i_1, \ldots, i_k, i_1', \ldots, i_h' \in I, j_1, \ldots, j_k, j_1', \ldots, j_h' \in J \mid x = i_1j_1 + \ldots + i_k j_k \land y = i_1'j_1' + \ldots + i_h'j_h' \implies x + y = i_1j_1 + \ldots + i_kj_k + i_1'j_1'+ \ldots + i_hj_h' \in I\cdot J$ per definizione di $I \cdot J$
+    - $\forall x \in I \cdot J \quad \exists i_1, \ldots, i_k \in I, j_1, \ldots, j_k \in J \mid x = i_1j_1 + \ldots + i_kj_k \implies -x = -i_1j_1 + \ldots + (-i_kj_k) \in I \cdot J$ per definizione di $I \cdot J$
+    - $I$ ideale $\implies \forall a \in A, i \in I \quad a\cdot i \in I$, allora $\forall x \in I \cdot J \quad \exists i_1, \ldots, i_k \in I, j_1, \ldots, j_k \in J \mid x = i_1j_1 + \ldots + i_kj_k \implies \forall a \in A \quad a\cdot x = a(i_1j_1 + \ldots + i_kj_k) = (ai_1)j_1 + \ldots + (ai_k)j_k \in I \cdot J$
 
 ## Oss
 

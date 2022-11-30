@@ -6,6 +6,7 @@ Se invece siete qui per la lista di teoremi, ecco [il link](https://ph04.github.
 
 ## TODO list
 
+- RIGENERA TUTTO
 - fixa il quoziente, che $(G/H, \cdot)$ gruppo soltanto se $H$ normale
 - quando non va a capo mi tilta
     - alternativamente, trovare un modo per far prendere a pandoc tutta la pagina di default
