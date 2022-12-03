@@ -212,7 +212,7 @@
 > - $x \in G$
 > - $xH := \{xh \mid h \in H\}$
 > - $Hx := \{hx \mid h \in H\}$
-> - $H$ **sottogruppo normale** $\iff xH = Hx \quad \forall x \in G$
+> - $H$ **sottogruppo normale** $\iff \forall x \in G \quad xH = Hx$
 
 ## Oss
 
