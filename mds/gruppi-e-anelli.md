@@ -258,8 +258,20 @@
 
 ## Oss
 
+- **Hp**
+    - $(G, +)$ gruppo
+    - $g \in G$
+- **Th**
+    - $(H(g), +) \subset (G, +)$ sottogruppo
+- **Dim**
+    - $0 = 0 \cdot g \implies 0 \in H(g)$ per definizione di $H(g)$
+    - $\forall xg, yg \in H(g) \quad xg + yg = (x + y)g \in H(g)$ per definizione di $H(g)$
+    - $\forall xg \in H(g) \quad -xg = (-x)g \in H(g)$ per definizione di $H(g)$
+
+## Oss
+
 - **Hp** 
-  - $G$ gruppo
+  - $(G, \cdot)$ gruppo
   - $g \in G$
 - **Th**
   - $(H(g), \cdot) \subset (G, \cdot)$  è sottogruppo
@@ -313,7 +325,7 @@
 ## Oss
 
 - **Hp**
-  - $G$ gruppo finito
+  - $(G, \cdot)$ gruppo finito
   - $g \in G \mid d := o(g)$ finito
 - **Th**
   - $g^{|G|}=e$
