@@ -137,7 +137,7 @@
 - **Dominio di integrità**
 
 > - $(A, +, \cdot)$ anello commutativo
-> - $A$ **dominio di integrità** $\iff \nexists x : x \mid 0$, oltre a $x = 0$
+> - $A$ **dominio di integrità** $\iff \nexists x \neq 0 : x \mid 0$
 > - alternativamente, $A$ è dominio di integrità $\iff$ in $A$ vale la legge di annullamento del prodotto
 
 
