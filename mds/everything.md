@@ -559,7 +559,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 > - $(A, +, \cdot)$ anello
 > - $I \subset A$ ideale
-> - per definizione, $I$ ideale $\implies(I, +) \subset (A, +)$ sottogruppo, dunque ha senso definire $A/I$, e infatti $I$ induce una relazione di equivalenza su $A$ detta **congruenza modulo $I$**, dove $\forall a, b \in A \quad a \equiv b \ (\bmod I) \iff b - a \in I$
+> - per definizione, $I$ ideale $\implies(I, +) \subset (A, +)$ sottogruppo, dunque ha senso definire $A/I$, e infatti $I$ induce una relazione di equivalenza su $A$ detta **congruenza modulo $I$**, dove $\forall a, b \in A \quad a \equiv b \ (\bmod \ I) \iff b - a \in I$
 > - $b -a \in I \iff  (-a) + b \in I$, di conseguenza questa congruenza coincide con la classe laterale sinistra di $(A, +)$
 
 
@@ -569,6 +569,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 - **Hp**
   - $(A, +, \cdot)$ anello
+  - $I \subset A$ ideale
   - $+: A/I \times A/I \rightarrow A/I$
   - $\cdot : A/I \times A/I \rightarrow A/I$
 - **Th**
@@ -837,7 +838,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 - **Hp**
-  - $n, m \in \mathbb{N}$
+  - $n, m \in \mathbb{N} \mid \textrm{MCD}(a, n) = 1$
 - **Th**
   - $[a]  \in \mathbb{Z}_{m n}^{*} \iff[a] \in \mathbb{Z}_{m}^{*} \land [a] \in \mathbb{Z}^*_{n}$
 
@@ -1291,7 +1292,8 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 - **Hp**
   - $(G, \cdot)$ gruppo
-  - $f: \mathbb{Z} \rightarrow G: n \rightarrow g^n$ per qualche $g \in G$
+  - $g \in G$
+  - $f: \mathbb{Z} \rightarrow G: n \rightarrow g^n$
 - **Th**
   - $f$ morfismo di gruppi $(\mathbb{Z}, +)$ e $(G, \cdot)$
 
@@ -1317,7 +1319,8 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 - **Hp**
   - $G$ gruppo
-  - $f: G \rightarrow G : h \rightarrow g \cdot h \cdot g^{-1}$ per qualche $g \in G$
+  - $g \in G$
+  - $f: G \rightarrow G : h \rightarrow g \cdot h \cdot g^{-1}$
 - **Th**
   - $f$ morfismo di gruppi $(G, \cdot)$ e $(G, \cdot)$
 
@@ -1361,7 +1364,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
   - $G, H$ gruppi
   - $f: G \rightarrow H$ morfismo
 - **Th**
-  - $\textrm{im}(f) \subset G$ è sottogruppo
+  - $\textrm{im}(f) \subset H$ è sottogruppo
 
 ## Teorema 82
 
@@ -1388,7 +1391,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
   - $A, B$ anelli
   - $f: A \rightarrow B$ morfismo di anelli
 - **Th**
-  - $\textrm{im}(f)$ sottoanello
+  - $\textrm{im}(f) \subset B$ sottoanello
 
 ## Teorema 85
 
@@ -1407,7 +1410,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
   - $G, H$ gruppi
   - $f: G \rightarrow H$ morfismo
 - **Th**
-  - $\textrm{ker}(f)$ è sottogruppo normale
+  - $\textrm{ker}(f) \subset G$ sottogruppo normale
 
 
 ****
@@ -1443,7 +1446,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 - **Coniugato**
 
-> - $a, b \in mathbb{R}$
+> - $a, b \in \mathbb{R}$
 > - $z \in \mathbb{C} \mid z=a+i b$
 > - $\bar{z}:=a-i b$ è il **coniugato** di $z$
 
@@ -1656,7 +1659,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 > - $n \in \mathbb{N}$
 > - $\sigma \in S_n$
 > - $\textrm{Inv}(\sigma) := \{ (i, j) \mid 1 \leq i \lt j \lt n : \sigma(i) \gt \sigma(j)\}$ è l'**insieme delle inversioni di $\sigma$**
-> - $\textrm{sgn}(\sigma) := (-1)^{|\textrm{Inv}(\sigma)|} =$$\left\{\begin{array}{ll}+1 & |\operatorname{Inv}(\sigma)| \equiv 0 \ (\bmod 2) \\ -1 & |\operatorname{Inv}(\sigma)| \equiv 1 \ (\bmod 2)\end{array}\right. \implies \sigma$ **pari** $\iff \textrm{sgn}(\sigma) = +1$
+> - $\textrm{sgn}(\sigma) := (-1)^{|\textrm{Inv}(\sigma)|} =$$\left\{\begin{array}{ll}+1 & |\operatorname{Inv}(\sigma)| \equiv 0 \ (\bmod  \ 2) \\ -1 & |\operatorname{Inv}(\sigma)| \equiv 1 \ (\bmod \ 2)\end{array}\right. \implies \sigma$ **pari** $\iff \textrm{sgn}(\sigma) = +1$
 >   - $\textrm{sgn}(\textrm{id}) = (-1)^0 = 1$, in quando la funzione identità non ha inversioni
 
 

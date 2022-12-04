@@ -114,7 +114,8 @@
 
 - **Hp**
   - $(G, \cdot)$ gruppo
-  - $f: \mathbb{Z} \rightarrow G: n \rightarrow g^n$ per qualche $g \in G$
+  - $g \in G$
+  - $f: \mathbb{Z} \rightarrow G: n \rightarrow g^n$
 - **Th**
   - $f$ morfismo di gruppi $(\mathbb{Z}, +)$ e $(G, \cdot)$
 - **Dim**
@@ -146,7 +147,8 @@ $f([x \cdot y])=f([x]) \cdot f([y])$
 
 - **Hp**
   - $G$ gruppo
-  - $f: G \rightarrow G : h \rightarrow g \cdot h \cdot g^{-1}$ per qualche $g \in G$
+  - $g \in G$
+  - $f: G \rightarrow G : h \rightarrow g \cdot h \cdot g^{-1}$
 - **Th**
   - $f$ morfismo di gruppi $(G, \cdot)$ e $(G, \cdot)$
 - **Dim**
@@ -190,7 +192,7 @@ $f([x \cdot y])=f([x]) \cdot f([y])$
   - $G, H$ gruppi
   - $f: G \rightarrow H$ morfismo
 - **Th**
-  - $\textrm{im}(f) \subset G$ è sottogruppo
+  - $\textrm{im}(f) \subset H$ è sottogruppo
 - **Dim**
   - per dimostrazione precedente $f(1_G)= 1_H \implies 1_H \in \textrm{im}(f)$ per definizione
   - $x, y \in \textrm{im}(f) \implies \exists g, g^\prime \in G \mid x = f(g) \land y = f(g^\prime) \implies x \cdot y = f(g) \cdot f(g^\prime) = f(g\cdot g^\prime)$ perché $f$ morfismo, quindi $x \cdot y \in \textrm{Im}(f)$ per definizione
@@ -229,9 +231,9 @@ $f([x \cdot y])=f([x]) \cdot f([y])$
   - $A, B$ anelli
   - $f: A \rightarrow B$ morfismo di anelli
 - **Th**
-  - $\textrm{im}(f)$ sottoanello
+  - $\textrm{im}(f) \subset B$ sottoanello
 - **Dim**
-  - $(\textrm{im}(f), +) \subset (A, +)$ sottogruppo per dimostrazione precedente
+  - $(\textrm{im}(f), +) \subset (B, +)$ sottogruppo per dimostrazione precedente
   - $x, y \in \textrm{im}(f) \implies \exists a, a^\prime \mid x = f(a) \land y = f(a^\prime) \implies x \cdot y = f(a) \cdot f(a^\prime) = f(a\cdot a^\prime)$ perche $f$ morfismo, quindi $\exists a \cdot a^\prime \mid x \cdot y = f(a \cdot a^\prime) \implies x\cdot y \in \textrm{Im}(f) \implies \textrm{Im}(f) \cdot \textrm{Im}(f) \subset \textrm{Im}(f)$
  
 ## Oss
@@ -251,7 +253,7 @@ $f([x \cdot y])=f([x]) \cdot f([y])$
   - $G, H$ gruppi
   - $f: G \rightarrow H$ morfismo
 - **Th**
-  - $\textrm{ker}(f)$ è sottogruppo normale
+  - $\textrm{ker}(f) \subset G$ sottogruppo normale
 - **Dim**
   - per la formulazione 2 della definizione di sottogruppo normale, $\forall g \in G, h \in \textrm{ker}(f) \implies g h g^{-1} \in \textrm{ker}(f)$
   - $f(ghg^{-1}) = f(g) \cdot f(h) \cdot f(g^{-1})$

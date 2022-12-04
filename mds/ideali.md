@@ -80,13 +80,14 @@
 
 > - $(A, +, \cdot)$ anello
 > - $I \subset A$ ideale
-> - per definizione, $I$ ideale $\implies(I, +) \subset (A, +)$ sottogruppo, dunque ha senso definire $A/I$, e infatti $I$ induce una relazione di equivalenza su $A$ detta **congruenza modulo $I$**, dove $\forall a, b \in A \quad a \equiv b \ (\bmod I) \iff b - a \in I$
+> - per definizione, $I$ ideale $\implies(I, +) \subset (A, +)$ sottogruppo, dunque ha senso definire $A/I$, e infatti $I$ induce una relazione di equivalenza su $A$ detta **congruenza modulo $I$**, dove $\forall a, b \in A \quad a \equiv b \ (\bmod \ I) \iff b - a \in I$
 > - $b -a \in I \iff  (-a) + b \in I$, di conseguenza questa congruenza coincide con la classe laterale sinistra di $(A, +)$
 
 ## Oss
 
 - **Hp**
   - $(A, +, \cdot)$ anello
+  - $I \subset A$ ideale
   - $+: A/I \times A/I \rightarrow A/I$
   - $\cdot : A/I \times A/I \rightarrow A/I$
 - **Th**

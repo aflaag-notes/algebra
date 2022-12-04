@@ -21,7 +21,7 @@
 
 - **Coniugato**
 
-> - $a, b \in mathbb{R}$
+> - $a, b \in \mathbb{R}$
 > - $z \in \mathbb{C} \mid z=a+i b$
 > - $\bar{z}:=a-i b$ è il **coniugato** di $z$
 

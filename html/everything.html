@@ -996,8 +996,8 @@ dunque ha senso definire <span class="math inline">A/I</span>, e infatti
 <span class="math inline">I</span> induce una relazione di equivalenza
 su <span class="math inline">A</span> detta <strong>congruenza modulo
 <span class="math inline">I</span></strong>, dove <span
-class="math inline">\forall a, b \in A \quad a \equiv b \ (\bmod I) \iff
-b - a \in I</span></li>
+class="math inline">\forall a, b \in A \quad a \equiv b \ (\bmod \ I)
+\iff b - a \in I</span></li>
 <li><span class="math inline">b -a \in I \iff (-a) + b \in I</span>, di
 conseguenza questa congruenza coincide con la classe laterale sinistra
 di <span class="math inline">(A, +)</span></li>
@@ -1008,6 +1008,7 @@ di <span class="math inline">(A, +)</span></li>
 <li><strong>Hp</strong>
 <ul>
 <li><span class="math inline">(A, +, \cdot)</span> anello</li>
+<li><span class="math inline">I \subset A</span> ideale</li>
 <li><span class="math inline">+: A/I \times A/I \rightarrow
 A/I</span></li>
 <li><span class="math inline">\cdot : A/I \times A/I \rightarrow
@@ -1378,7 +1379,8 @@ ciclico</li>
 <ul>
 <li><strong>Hp</strong>
 <ul>
-<li><span class="math inline">n, m \in \mathbb{N}</span></li>
+<li><span class="math inline">n, m \in \mathbb{N} \mid \textrm{MCD}(a,
+n) = 1</span></li>
 </ul></li>
 <li><strong>Th</strong>
 <ul>
@@ -2055,8 +2057,9 @@ class="math inline">(H, \cdot)</span></li>
 <li><strong>Hp</strong>
 <ul>
 <li><span class="math inline">(G, \cdot)</span> gruppo</li>
+<li><span class="math inline">g \in G</span></li>
 <li><span class="math inline">f: \mathbb{Z} \rightarrow G: n \rightarrow
-g^n</span> per qualche <span class="math inline">g \in G</span></li>
+g^n</span></li>
 </ul></li>
 <li><strong>Th</strong>
 <ul>
@@ -2099,9 +2102,9 @@ class="math inline">\left(\mathbb{Z}_{n},+, \cdot\right)</span></li>
 <li><strong>Hp</strong>
 <ul>
 <li><span class="math inline">G</span> gruppo</li>
+<li><span class="math inline">g \in G</span></li>
 <li><span class="math inline">f: G \rightarrow G : h \rightarrow g \cdot
-h \cdot g^{-1}</span> per qualche <span class="math inline">g \in
-G</span></li>
+h \cdot g^{-1}</span></li>
 </ul></li>
 <li><strong>Th</strong>
 <ul>
@@ -2165,7 +2168,7 @@ sottogruppo</li>
 </ul></li>
 <li><strong>Th</strong>
 <ul>
-<li><span class="math inline">\textrm{im}(f) \subset G</span> è
+<li><span class="math inline">\textrm{im}(f) \subset H</span> è
 sottogruppo</li>
 </ul></li>
 </ul>
@@ -2205,7 +2208,8 @@ anelli</li>
 </ul></li>
 <li><strong>Th</strong>
 <ul>
-<li><span class="math inline">\textrm{im}(f)</span> sottoanello</li>
+<li><span class="math inline">\textrm{im}(f) \subset B</span>
+sottoanello</li>
 </ul></li>
 </ul>
 <h2 id="teorema-85">Teorema 85</h2>
@@ -2234,8 +2238,8 @@ class="math inline">n</span></li>
 </ul></li>
 <li><strong>Th</strong>
 <ul>
-<li><span class="math inline">\textrm{ker}(f)</span> è sottogruppo
-normale</li>
+<li><span class="math inline">\textrm{ker}(f) \subset G</span>
+sottogruppo normale</li>
 </ul></li>
 </ul>
 <hr />
@@ -2274,7 +2278,7 @@ b:=\operatorname{Im}(z)\end{array}\right.</span></li>
 </ul>
 <blockquote>
 <ul>
-<li><span class="math inline">a, b \in mathbb{R}</span></li>
+<li><span class="math inline">a, b \in \mathbb{R}</span></li>
 <li><span class="math inline">z \in \mathbb{C} \mid z=a+i b</span></li>
 <li><span class="math inline">\bar{z}:=a-i b</span> è il
 <strong>coniugato</strong> di <span class="math inline">z</span></li>
@@ -2563,8 +2567,8 @@ class="math inline">\sigma</span></strong></li>
 <li><span class="math inline">\textrm{sgn}(\sigma) :=
 (-1)^{|\textrm{Inv}(\sigma)|} =</span><span
 class="math inline">\left\{\begin{array}{ll}+1 &amp;
-|\operatorname{Inv}(\sigma)| \equiv 0 \ (\bmod 2) \\ -1 &amp;
-|\operatorname{Inv}(\sigma)| \equiv 1 \ (\bmod 2)\end{array}\right.
+|\operatorname{Inv}(\sigma)| \equiv 0 \ (\bmod \ 2) \\ -1 &amp;
+|\operatorname{Inv}(\sigma)| \equiv 1 \ (\bmod \ 2)\end{array}\right.
 \implies \sigma</span> <strong>pari</strong> <span
 class="math inline">\iff \textrm{sgn}(\sigma) = +1</span>
 <ul>

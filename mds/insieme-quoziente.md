@@ -120,7 +120,7 @@
 ## Lem
 
 - **Hp**
-  - $n, m \in \mathbb{N}$
+  - $n, m \in \mathbb{N} \mid \textrm{MCD}(a, n) = 1$
 - **Th**
   - $[a]  \in \mathbb{Z}_{m n}^{*} \iff[a] \in \mathbb{Z}_{m}^{*} \land [a] \in \mathbb{Z}^*_{n}$
 - **Dim**
