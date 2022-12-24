@@ -88,6 +88,33 @@
 
 ****
 
+# Matrici particolari
+
+## Def
+
+- **Vettore trasposto**
+
+> - $n \in \mathbb{N}$
+> - $\mathbb{K}$ campo
+> - $v \in \textrm{Mat}_{n \times 1}(\mathbb{K}) \mid v = \left(\begin{array}$
+
+- **Matrice trasposta**
+
+> - $m, n \in \mathbb{N} - \{0\}$
+> - $\mathbb{K}$ campo
+> - $A \in \textrm{Mat}_{m \times n}(\mathbb{K}) \mid A = \left(A^1, \ldots, A^n\right)$
+> - $A^T = \left(\begin{array}{c} {A^1}^T \\ \vdots \\ {A^n}^T \end{array}\right)$
+
+## Def
+
+- **Matrice identità**
+
+> - $n \in \mathbb{N} - \{0\}$
+> - $\mathbb{K}$ campo
+> - $I_n = \left(\begin{array}{c}e_1 \\ \vdots \\ e_n \end{array}\right) = \left(e_1^T, \ldots, e_n^T\right) = \left(\begin{array}{cccc}1 & 0 & \cdots & \cdots & 0 \\ \vdots & \ddots & & & \vdots\\ 0 & \cdots & 1 & \cdots & 0 \\ \vdots & & & \ddots & \vdots\\ 0 &\cdots & \cdots & 0 & 1\end{array}\right)$ è detta **matrice identità**
+
+****
+
 # Rango
 
 ## Def

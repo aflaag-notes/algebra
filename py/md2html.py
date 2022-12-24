@@ -1,9 +1,6 @@
 import os
 import re
 
-# def good_format(title):
-#     return " ".join(map(lambda s: s[0].upper() + s[1:] if len(s) != 1 else s, title.split("-")))
-
 if not os.path.isdir("./temp"):
     os.mkdir("temp")
 

@@ -25,7 +25,7 @@ d = 1
 for file in sorted(os.listdir("mds/")):
     if file != "everything.md" and file != "index.md" and file != "teoremi-fondamentali.md":
         with open("mds/" + file) as md:
-            parts = re.split("## Teorema cinese dei resti|## Ex|## Oss|## Def|## Lem|## Cor|## Formula di de Moivre|## Formula di Eulero|## Formula di Grassmann", md.read())
+            parts = re.split("## Teorema cinese dei resti|## Ex|## Oss|## Def|## Lem|## Cor|## Formula di de Moivre|## Formula di Eulero|## Formula di Grassmann|## Formula di Leibniz", md.read())
             
             for y, part in enumerate(parts):
                 if (a := filter_content(part)):
