@@ -160,8 +160,8 @@
 ## Oss
 
 - **Hp**
-    - $n \in \mathbb{N}$
     - $\mathbb{K}$ campo
+    - $n \in \mathbb{N}$
     - $V$ spazio vettoriale su $\mathbb{K}$
     - $v_1, \ldots, v_n \in V$
 - **Th**
@@ -230,10 +230,10 @@
     - $m:=\dim(U)$
     - $n := \dim (V)$
     - $w_1, \ldots, w_k \in U \cap V$ base di $U \cap V$
-    - $B_1 := w_1, \ldots, w_k, u_{k + 1}, \ldots, u_m \in U$ base di $U$
-    - $B_2 := w_1, \ldots, w_k, v_{k + 1}, \ldots, v_n \in V$ base di $V$
-    - $B_1 \cup B_2 := w_1, \ldots w_k, u_{k + 1}, \ldots, u_m, v_{k + 1}, \ldots, v_n$
-    - $\forall u \in U, v \in V \mid u := \displaystyle \sum_{i = 1}^k{\lambda_iw_i} + \sum_{j = k + 1}^m{\lambda_j u_j} \land \displaystyle v :=\sum_{i = 1}^k{\mu_iw_i} + \sum_{h = k + 1}^n {\mu_hv_h} \quad u + v =\sum_{i = 1}^k{(\lambda_i + \mu_i)w_i} + \sum_{j = k + 1}^m{\lambda_j u_j} + \sum_{h = k + 1}^n {\mu_hv_h} \implies u + v \in \textrm{span}(w_1, \ldots w_k, u_{k + 1}, \ldots, u_m, v_{k + 1}, \ldots, v_n) \implies B_1 \cup B_2$ generatori di $U + V$, poiché $u + v \in U + V$
+    - $\mathcal{B}_1 := w_1, \ldots, w_k, u_{k + 1}, \ldots, u_m \in U$ base di $U$
+    - $\mathcal{B}_2 := w_1, \ldots, w_k, v_{k + 1}, \ldots, v_n \in V$ base di $V$
+    - $\mathcal{B}_1 \cup \mathcal{B}_2 := w_1, \ldots w_k, u_{k + 1}, \ldots, u_m, v_{k + 1}, \ldots, v_n$
+    - $\forall u \in U, v \in V \mid u := \displaystyle \sum_{i = 1}^k{\lambda_iw_i} + \sum_{j = k + 1}^m{\lambda_j u_j} \land \displaystyle v :=\sum_{i = 1}^k{\mu_iw_i} + \sum_{h = k + 1}^n {\mu_hv_h} \quad u + v =\sum_{i = 1}^k{(\lambda_i + \mu_i)w_i} + \sum_{j = k + 1}^m{\lambda_j u_j} + \sum_{h = k + 1}^n {\mu_hv_h} \implies u + v \in \textrm{span}(w_1, \ldots w_k, u_{k + 1}, \ldots, u_m, v_{k + 1}, \ldots, v_n) \implies \mathcal{B}_1 \cup \mathcal{B}_2$ generatori di $U + V$, poiché $u + v \in U + V$
     - $a := \displaystyle \sum_{i = 1}^k{\lambda_iw_i}$
     - $b := \displaystyle \sum_{j = k +1}^m{\mu_j u_j } \implies b \in \textrm{span}(u_{k +1 }, \ldots, u_k) \subsetneqq U \implies b \in U$
     - $c := \displaystyle \sum_{h = k + 1} ^n{\eta_hv_h}$
@@ -245,8 +245,8 @@
     - per ragionamento analogo, sapendo che $c = - a- b$ si otterrà che $c = 0_W$, e dunque $a + b + c = 0_W \iff a = 0_W$
     - per definizione $a$ è combinazione lineare della base di $U \cap V$, e poichè $a = 0_W$ si ha necessariamente che i coefficienti di $a$ sono tutti nulli
     - dunque, l'equazione di partenza $a + b + c = 0_W$ è verificata solamente per coefficienti di $a$, $b$ e $c$ nulli, il che implica che i vettori che generano $a + b + c$ sono linearmente indipendenti
-    - $B_1 \cup B_2$ generatori di $U + V \implies a + b + c \in U + V$, e poiché $w_1, \ldots, w_k, u_{k + 1}, \ldots, u_m, v_{k + 1}, \ldots, v_n$ sono sia generatori che linearmente indipendenti, allora sono una base di $U + V$
-    - per definizione, la dimensione di uno spazio vettoriale è la cardinalità di una delle sue basi, e dunque la cardinalità di $B_1 \cup B_2$ è pari a $k + (m - k) + (n - k) = k + m - k + n - k = m + n - k$
+    - $\mathcal{B}_1 \cup \mathcal{B}_2$ generatori di $U + V \implies a + b + c \in U + V$, e poiché $w_1, \ldots, w_k, u_{k + 1}, \ldots, u_m, v_{k + 1}, \ldots, v_n$ sono sia generatori che linearmente indipendenti, allora sono una base di $U + V$
+    - per definizione, la dimensione di uno spazio vettoriale è la cardinalità di una delle sue basi, e dunque la cardinalità di $\mathcal{B}_1 \cup \mathcal{B}_2$ è pari a $k + (m - k) + (n - k) = k + m - k + n - k = m + n - k$
 
 ## Oss
 
@@ -289,8 +289,8 @@
 ## Oss
 
 - **Hp**
-    - $k \in \mathbb{N}$
     - $\mathbb{K}$ campo
+    - $k \in \mathbb{N}$
     - $V_1, \ldots, V_k$ spazi vettoriali su $\mathbb{K}$
 - **Th**
     - $\dim(V_1 \times \ldots \times V_k) = \dim(V_1) \cdot \ldots \cdot \dim(V_k)$

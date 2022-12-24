@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title> </title>
+  <style>
+    html {
+      line-height: 1.5;
+      font-family: Georgia, serif;
+      font-size: 20px;
+      color: #fdfdfd;
+      background-color: #1f1f1f;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 1em;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #fdfdfd;
+    }
+    a:visited {
+      color: #fdfdfd;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #adbac7;
+    }
+    code {
+      font-family: Menlo, Monaco, 'Lucida Console', Consolas, monospace;
+      font-size: 85%;
+      margin: 0;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #fdfdfd;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #fdfdfd;
+      border-bottom: 1px solid #fdfdfd;
+    }
+    th {
+      border-top: 1px solid #fdfdfd;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+  </style>
+  <script defer=""
+  src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js"></script>
+  <script>document.addEventListener("DOMContentLoaded", function () {
+ var mathElements = document.getElementsByClassName("math");
+ var macros = [];
+ for (var i = 0; i < mathElements.length; i++) {
+  var texText = mathElements[i].firstChild;
+  if (mathElements[i].tagName == "SPAN") {
+   katex.render(texText.data, mathElements[i], {
+    displayMode: mathElements[i].classList.contains('display'),
+    throwOnError: false,
+    macros: macros,
+    fleqn: false
+   });
+}}});
+  </script>
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css" />
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title"> </h1>
+</header>
+<h1 id="determinante">Determinante</h1>
+<h2 id="def">Def</h2>
+<ul>
+<li><strong>Applicazione multilineare</strong></li>
+</ul>
+<blockquote>
+<ul>
+<li><span class="math inline">\mathbb{K}</span> campo</li>
+<li><span class="math inline">k \in \mathbb{N}</span></li>
+<li><span class="math inline">V_1, \ldots, V_k, W</span> spazi
+vettoriali</li>
+<li><span class="math inline">f: V_1 \times \ldots \times V_k
+\rightarrow W:(v_1, \ldots, v_k) \rightarrow w</span></li>
+</ul>
+</blockquote>
+<pre><code>&gt; - $f$ **multilineare** $\iff \forall i \in [1, k], \ \forall v_1 \in V_1, \ldots, v_i&#39;, v_i&#39;&#39; \in V_i, \ldots, v_k \in V_k, \ \forall \lambda, \mu \in \mathbb{K} \quad f(v_1, \ldots, \lambda v_i&#39;+\mu v_i&#39;&#39;, \ldots, v_k) = \lambda f(v_1, \ldots, v_i&#39;, \ldots, v_k) + \mu f(v_1, \ldots, v_i&#39;&#39;, \ldots, v_k)$</code></pre>
+<ul>
+<li><strong>Determinante</strong></li>
+</ul>
+<blockquote>
+<ul>
+<li><span class="math inline">\mathbb{K}</span> campo</li>
+<li><span class="math inline">n \in \mathbb{N} - \{0\}</span></li>
+<li><span class="math inline">\det : \textrm{Mat}_{n \times
+n}(\mathbb{K}) \rightarrow \mathbb{K}</span></li>
+<li><ol type="1">
+<li><span class="math inline">\forall A \in \textrm{Mat}_{n \times
+n}(\mathbb{K}) \quad \det</span> multilineare su <span
+class="math inline">A_1, \ldots A_n</span> e <span
+class="math inline">A^1, \ldots, A^n</span></li>
+</ol></li>
+<li><ol start="2" type="1">
+<li><span class="math inline">\forall A \in \textrm{Mat}_{n \times
+n}(\mathbb{K}) \quad A_1, \ldots A_n</span> e <span
+class="math inline">A^1, \ldots, A^n</span> basi di <span
+class="math inline">\mathbb{K}^n \iff \det(A) \neq 0</span></li>
+</ol></li>
+<li><ol start="3" type="1">
+<li><span class="math inline">\det(I_n) = 1</span></li>
+</ol></li>
+<li><ol start="4" type="1">
+<li>per <span class="math inline">\mathbb{K} \mid 1 \neq -1 \quad</span>
+<strong>⚠️ SCRIVI DETERMINANTE ALTERNANTE</strong></li>
+</ol></li>
+<li><span class="math inline">\det</span> è il
+<strong>determinante</strong> <span class="math inline">\iff \det</span>
+verifica 1, 2 e 3, oppure 1, 3 e 4
+<ul>
+<li>poiché è possibile dimostrare che la funzione che verifica tali
+condizioni esiste ed è unica, allora il <span
+class="math inline">\det</span> è totalmente determinato da tali
+caratteristiche</li>
+</ul></li>
+</ul>
+</blockquote>
+<h2 id="oss">Oss</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\mathbb{K}</span> campo <span
+class="math inline">\mid 1 \neq -1</span></li>
+<li><span class="math inline">n \in \mathbb{N} - \{0\}</span></li>
+<li><span class="math inline">f : \textrm{Mat}_{n \times n}(\mathbb{K})
+\rightarrow \mathbb{K}</span></li>
+</ul>
+<ol start="4" type="1">
+<li><strong>⚠️ SCRIVI</strong></li>
+</ol></li>
+<li><strong>Th</strong>
+<ul>
+<li><strong>⚠️ DETERMINANTE ALTERNANTE</strong></li>
+</ul></li>
+</ul>
+<h2 id="oss-1">Oss</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\mathbb{K}</span> campo</li>
+<li><span class="math inline">n \in \mathbb{N} - \{0\}</span></li>
+<li><span class="math inline">A \in \textrm{Mat}_{n \times
+n}(\mathbb{K})</span></li>
+</ul>
+<ol type="1">
+<li><span class="math inline">A</span> invertibile</li>
+<li><span class="math inline">A_1, \ldots, A_n</span> base di <span
+class="math inline">\mathbb{K}^n</span></li>
+<li><span class="math inline">A^1, \ldots, A^n</span> base di <span
+class="math inline">\mathbb{K}^n</span></li>
+<li><span class="math inline">\textrm{rk}(A)=n</span></li>
+<li><span class="math inline">\det(A) \neq 0</span></li>
+<li><span class="math inline">A \equiv I_n</span> tramite la relazione
+di equivalenza delle operazioni sulle righe</li>
+<li><strong>⚠️ NON ANCHE PER COLONNE? CEH PENSO DE SI</strong></li>
+</ol></li>
+<li><strong>Th</strong>
+<ul>
+<li>le proposizioni sono equivalenti</li>
+</ul></li>
+<li><strong>Dim</strong>
+<ul>
+<li><strong>⚠️ alcune le ha fatte</strong></li>
+</ul></li>
+</ul>
+<h2 id="oss-2">Oss</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\mathbb{K}</span> campo</li>
+<li><span class="math inline">n \in \mathbb{N} - \{0\}</span></li>
+<li><span class="math inline">A \in \textrm{Mat}_{n \times
+n}(\mathbb{K}) \mid \exists i \in [1, n] : A_i = 0_{\mathbb{K}^n} \lor
+\exists j \in [1, n] : A^j = 0_{\mathbb{K}^n}</span>, ovvero in <span
+class="math inline">A</span> è presente o una riga, o una colonna
+nulla</li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\det(A) = 0</span></li>
+</ul></li>
+</ul>
+<h2 id="oss-3">Oss</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\mathbb{K}</span> campo</li>
+<li><span class="math inline">n \in \mathbb{N} - \{0\}</span></li>
+<li><span class="math inline">A \in \textrm{Mat}_{n \times
+n}(\mathbb{K})</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\det(A) = \det(A^T)</span></li>
+</ul></li>
+</ul>
+<h2 id="formula-di-leibniz">Formula di Leibniz</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\mathbb{K}</span> campo</li>
+<li><span class="math inline">n \in \mathbb{N} - \{0\}</span></li>
+<li><span class="math inline">A \in \textrm{Mat}_{n \times
+n}(\mathbb{K})</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\displaystyle{\det(A) = \sum_{\sigma \in
+S_n} \textrm{sgn}(\sigma) \cdot \prod_{i=1}^n{a_{i,
+\sigma_i}}}</span></li>
+</ul></li>
+</ul>
+<h2 id="oss-4">Oss</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\mathbb{K}</span> campo</li>
+<li><span class="math inline">A \in \textrm{Mat}_{2 \times
+2}(\mathbb{K})</span></li>
+<li><span class="math inline">A = \left(\begin{array}{cc}a_{1,1} &amp;
+a_{1, 2} \\ a_{2, 1} &amp; a_{2, 2}\end{array}\right)</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\det(A) =
+a_{1,1}a_{2,2}-a_{1,2}a_{2,1}</span></li>
+</ul></li>
+</ul>
+<h2 id="oss-5">Oss</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\mathbb{K}</span> campo</li>
+<li><span class="math inline">A \in \textrm{Mat}_{3 \times
+3}(\mathbb{K})</span></li>
+<li><span class="math inline">A = \left(\begin{array}{ccc}a_{1,1} &amp;
+a_{1, 2} &amp; a_{1,3}\\ a_{2, 1} &amp; a_{2, 2} &amp; a_{2,3} \\
+a_{3,1} &amp; a_{3,2} &amp; a_{3,3}\end{array}\right)</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\det(A) =
+a_{1,1}a_{2,2}a_{3,3}+a_{1,3}a_{2,1}a_{3,2}+a_{1,2}a_{2,3}a_{3,1} -
+a_{1,3}a_{2,2}a_{3,1}-a_{1,1}a_{2,3}a_{3,2}-a_{1,2}a_{2,1}a_{3,3}</span></li>
+</ul></li>
+</ul>
+<h2 id="oss-6">Oss</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\mathbb{K}</span> campo</li>
+<li><span class="math inline">n \in \mathbb{N} - \{0\}</span></li>
+<li><span class="math inline">A \in \textrm{Mat}_{n \times
+n}(\mathbb{K}) \mid A</span> triangolare</li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\det(A) = a_{1,1} \cdot \ldots \cdot a_{n,
+n}</span></li>
+</ul></li>
+</ul>
+<h2 id="oss-7">Oss</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\mathbb{K}</span> campo</li>
+<li><span class="math inline">n \in \mathbb{N} - \{0\}</span></li>
+<li><span class="math inline">\lambda \in \mathbb{K}</span></li>
+<li><span class="math inline">A \in \textrm{Mat}_{n \times
+n}(\mathbb{K})</span></li>
+<li><span class="math inline">A&#39; = \left(\begin{array}{c}A_1 \\
+\vdots \\ \lambda A_i \\ \vdots \\ A_n \end{array}\right)</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\det(A&#39;)=\lambda \cdot
+\det(A)</span></li>
+</ul></li>
+<li><strong>Dim</strong>
+<ul>
+<li><strong>⚠️ credo abbia a che fare con la multilinearità, inoltre
+aggiungi anche il terzo tipo di operazione che non cambia un
+cazzo</strong></li>
+</ul></li>
+</ul>
+<h2 id="formula-di-laplace">Formula di Laplace</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\mathbb{K}</span> campo</li>
+<li><span class="math inline">n \in \mathbb{N} - \{0\}</span></li>
+<li><span class="math inline">A \in \textrm{Mat}_{n \times
+n}(\mathbb{K})</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\forall 1 \le i, j \le n \quad \det(A) =
+\displaystyle \sum_{k = 1}^{n}{(-1)^{i + k}\cdot a_{i, k} \cdot
+\det(A_i^k)} = \sum_{h = 1}^n{(-1)^{h + j}\cdot a_{h, j} \cdot
+\det(A_h^j)}</span></li>
+</ul></li>
+</ul>
+<h2 id="def-1">Def</h2>
+<ul>
+<li><strong>Aggiunta di una matrice</strong></li>
+</ul>
+<blockquote>
+<ul>
+<li><span class="math inline">\mathbb{K}</span> campo</li>
+<li><span class="math inline">n \in \mathbb{N} - \{0\}</span></li>
+<li><span class="math inline">A \in \textrm{Mat}_{n \times
+n}(\mathbb{K})</span></li>
+<li><span class="math inline">A^*</span> è detta <strong>aggiunta di
+<span class="math inline">A</span></strong> <span
+class="math inline">\iff \forall i, j \in [1, n] \quad a^*_{i, j} =
+(-1)^{i + j}\cdot \det(A_i^j)</span></li>
+</ul>
+</blockquote>
+<h2 id="oss-8">Oss</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\mathbb{K}</span> campo</li>
+<li><span class="math inline">n \in \mathbb{N} - \{0\}</span></li>
+<li><span class="math inline">A \in \textrm{Mat}_{n \times
+n}(\mathbb{K}) \mid \det(A) \neq 0</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span
+class="math inline">A^{-1}=\dfrac{(A^*)^T}{\det(A)}</span></li>
+</ul></li>
+</ul>
+<h2 id="oss-9">Oss</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\mathbb{K}</span> campo</li>
+<li><span class="math inline">A \in \textrm{Mat}_{2 \times
+2}(\mathbb{K}) \mid \det(A) \neq 0</span></li>
+<li><span class="math inline">A = \left(\begin{array}{cc}a &amp; b \\ c
+&amp; d\end{array}\right)</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">A^{-1}=\dfrac{1}{ad - bc}
+\left(\begin{array}{cc}d &amp; -b \\ -c &amp;
+a\end{array}\right)</span></li>
+</ul></li>
+</ul>
+<hr />
+<h1 id="polinomio-caratteristico">Polinomio caratteristico</h1>
+<h2 id="def-2">Def</h2>
+<blockquote>
+<ul>
+<li><span class="math inline">\mathbb{K}</span> campo</li>
+<li><span class="math inline">n \in \mathbb{N} - \{0\}</span></li>
+<li><span class="math inline">A \in \textrm{Mat}_{n \times
+n}(\mathbb{K})</span></li>
+<li><span class="math inline">p_A(x) := \det(x\cdot I_n - A)</span> è
+detto <strong>polinomio caratteristico di <span
+class="math inline">A</span></strong></li>
+</ul>
+</blockquote>
+<h2 id="oss-10">Oss</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\mathbb{K}</span> campo</li>
+<li><span class="math inline">n \in \mathbb{N} - \{0\}</span></li>
+<li><span class="math inline">A \in \textrm{Mat}_{n \times
+n}(\mathbb{K})</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">p_A(x) = x^n - \textrm{tr}(A)\cdot x^{n
+-1} + \ldots + (-1)^n \cdot \det(A)</span></li>
+</ul></li>
+</ul>
+<h2 id="oss-11">Oss</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\mathbb{K}</span> campo</li>
+<li><span class="math inline">n \in \mathbb{N} - \{0\}</span></li>
+<li><span class="math inline">A, B \in \textrm{Mat}_{n \times
+n}(\mathbb{K}) \mid A</span> simile a <span
+class="math inline">B</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">p_A(x) = p_B(x)</span></li>
+</ul></li>
+</ul>
+<h2 id="def-3">Def</h2>
+<ul>
+<li><strong>Autovalore</strong></li>
+</ul>
+<blockquote>
+<ul>
+<li><span class="math inline">\mathbb{K}</span> campo</li>
+<li><span class="math inline">n \in \mathbb{N} - \{0\}</span></li>
+<li><span class="math inline">A \in \textrm{Mat}_{n \times
+n}(\mathbb{K})</span></li>
+<li><span class="math inline">\lambda \in \mathbb{K} \mid p_A(\lambda) =
+0</span> è detto <strong>autovalore di <span
+class="math inline">A</span></strong></li>
+</ul>
+</blockquote>
+<ul>
+<li><strong>Spettro</strong></li>
+</ul>
+<blockquote>
+<ul>
+<li><span class="math inline">\mathbb{K}</span> campo</li>
+<li><span class="math inline">n \in \mathbb{N} - \{0\}</span></li>
+<li><span class="math inline">A \in \textrm{Mat}_{n \times
+n}(\mathbb{K})</span></li>
+<li><span class="math inline">\textrm{sp}(A) := \{\lambda \in \mathbb{K}
+\mid p_A(\lambda) = 0\}</span> è detto <strong>spettro di <span
+class="math inline">A</span></strong></li>
+</ul>
+</blockquote>
+<h2 id="oss-12">Oss</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\mathbb{K}</span> campo</li>
+<li><span class="math inline">n \in \mathbb{N} - \{0\}</span></li>
+<li><span class="math inline">A, B \in \textrm{Mat}_{n \times
+n}(\mathbb{K}) \mid A</span> simile a <span
+class="math inline">B</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\textrm{sp}(A) =
+\textrm{sp}(B)</span></li>
+</ul></li>
+</ul>
+<h2 id="oss-13">Oss</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\mathbb{K}</span> campo</li>
+<li><span class="math inline">n \in \mathbb{N} - \{0\}</span></li>
+<li><span class="math inline">A \in \textrm{Mat}_{n \times
+n}(\mathbb{K})</span></li>
+<li><span class="math inline">\lambda \in \mathbb{K}</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\lambda</span> autovalore <span
+class="math inline">\iff \exists v \in \mathbb{K}^n - \{0\} \mid A \cdot
+v = \lambda \cdot v</span></li>
+</ul></li>
+<li><strong>Dim</strong>
+<ul>
+<li><span class="math inline">\exists v \in \mathbb{K}^n - \{0\} \mid A
+\cdot v = \lambda \cdot v = \lambda \cdot I_n \cdot v \iff \exists v \in
+\mathbb{K}^n - \{0\} \mid (A - \lambda \cdot I_n)\cdot v = 0 \iff v \in
+\ker(L_{A - \lambda \cdot I_n})</span></li>
+<li>di conseguenza <span class="math inline">\ker(L_{A - \lambda \cdot
+I_n}) \neq \{0\} \implies \dim(\ker(L_{A - \lambda \cdot I_n})) \gt
+0</span></li>
+<li>per il teorema del rango <span class="math inline">\textrm{rk}(L_{A
+- \lambda \cdot I_n}) = \dim(\mathbb{K}^n) - \dim(\ker(L_{A - \lambda
+\cdot I_n})) = n - \dim(\ker(L_{A - \lambda \cdot I_n})) \lt n</span>,
+in particolare <span class="math inline">\textrm{rk}(L_{A-\lambda \cdot
+I_n}) \neq n</span></li>
+<li><span class="math inline">\textrm{rk}(L_{A- \lambda \cdot I_n}) \neq
+n \iff \det(A - \lambda \cdot I_n) = 0</span> per dimostrazione
+precedente, e <span class="math inline">\det(A - \lambda \cdot I_n) =
+p_A(\lambda) = 0 \iff \lambda</span> autovalore</li>
+</ul></li>
+</ul>
+<h2 id="def-4">Def</h2>
+<ul>
+<li><strong>Autovettore</strong></li>
+</ul>
+<blockquote>
+<ul>
+<li><span class="math inline">\mathbb{K}</span> campo</li>
+<li><span class="math inline">n \in \mathbb{N} - \{0\}</span></li>
+<li><span class="math inline">A \in \textrm{Mat}_{n \times
+n}(\mathbb{K})</span></li>
+<li><span class="math inline">\lambda \in \textrm{sp}(A)</span></li>
+<li><span class="math inline">v \in \mathbb{K}^n - \{0\}</span> è detto
+<strong>autovettore di <span class="math inline">A</span> relativo a
+<span class="math inline">\lambda</span></strong> <span
+class="math inline">\iff (A- \lambda \cdot I_n) \cdot v = 0</span></li>
+</ul>
+</blockquote>
+<ul>
+<li><strong>Autospazio</strong></li>
+</ul>
+<blockquote>
+<ul>
+<li><span class="math inline">\mathbb{K}</span> campo</li>
+<li><span class="math inline">n \in \mathbb{N} - \{0\}</span></li>
+<li><span class="math inline">A \in \textrm{Mat}_{n \times
+n}(\mathbb{K})</span></li>
+<li><span class="math inline">\lambda \in \textrm{sp}(A)</span></li>
+<li><span class="math inline">\textrm{E}_\lambda(A) := \{v \in
+\mathbb{K}^n \mid A \cdot v = \lambda \cdot v\}</span> è detto
+<strong>autospazio di <span class="math inline">A</span> relativo a
+<span class="math inline">\lambda</span></strong></li>
+</ul>
+</blockquote>
+<h2 id="oss-14">Oss</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\mathbb{K}</span> campo</li>
+<li><span class="math inline">n \in \mathbb{N} - \{0\}</span></li>
+<li><span class="math inline">A \in \textrm{Mat}_{n \times
+n}(\mathbb{K})</span></li>
+<li><span class="math inline">\lambda \in \textrm{sp}(A)</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\textrm{E}_\lambda(A) \subset
+\mathbb{K}</span> sottospazio vettoriale</li>
+</ul></li>
+</ul>
+</body>
+</html>

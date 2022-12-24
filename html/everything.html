@@ -302,8 +302,442 @@ in <span class="math inline">\mathbb{Z}_p</span></li>
 </ul></li>
 </ul>
 <hr />
-<h1 id="gruppi-diedrali">Gruppi diedrali</h1>
+<h1 id="determinante">Determinante</h1>
 <h2 id="definizione-2">Definizione 2</h2>
+<ul>
+<li><strong>Applicazione multilineare</strong></li>
+</ul>
+<blockquote>
+<ul>
+<li><span class="math inline">\mathbb{K}</span> campo</li>
+<li><span class="math inline">k \in \mathbb{N}</span></li>
+<li><span class="math inline">V_1, \ldots, V_k, W</span> spazi
+vettoriali</li>
+<li><span class="math inline">f: V_1 \times \ldots \times V_k
+\rightarrow W:(v_1, \ldots, v_k) \rightarrow w</span></li>
+</ul>
+</blockquote>
+<pre><code>&gt; - $f$ **multilineare** $\iff \forall i \in [1, k], \ \forall v_1 \in V_1, \ldots, v_i&#39;, v_i&#39;&#39; \in V_i, \ldots, v_k \in V_k, \ \forall \lambda, \mu \in \mathbb{K} \quad f(v_1, \ldots, \lambda v_i&#39;+\mu v_i&#39;&#39;, \ldots, v_k) = \lambda f(v_1, \ldots, v_i&#39;, \ldots, v_k) + \mu f(v_1, \ldots, v_i&#39;&#39;, \ldots, v_k)$</code></pre>
+<ul>
+<li><strong>Determinante</strong></li>
+</ul>
+<blockquote>
+<ul>
+<li><span class="math inline">\mathbb{K}</span> campo</li>
+<li><span class="math inline">n \in \mathbb{N} - \{0\}</span></li>
+<li><span class="math inline">\det : \textrm{Mat}_{n \times
+n}(\mathbb{K}) \rightarrow \mathbb{K}</span></li>
+<li><ol type="1">
+<li><span class="math inline">\forall A \in \textrm{Mat}_{n \times
+n}(\mathbb{K}) \quad \det</span> multilineare su <span
+class="math inline">A_1, \ldots A_n</span> e <span
+class="math inline">A^1, \ldots, A^n</span></li>
+</ol></li>
+<li><ol start="2" type="1">
+<li><span class="math inline">\forall A \in \textrm{Mat}_{n \times
+n}(\mathbb{K}) \quad A_1, \ldots A_n</span> e <span
+class="math inline">A^1, \ldots, A^n</span> basi di <span
+class="math inline">\mathbb{K}^n \iff \det(A) \neq 0</span></li>
+</ol></li>
+<li><ol start="3" type="1">
+<li><span class="math inline">\det(I_n) = 1</span></li>
+</ol></li>
+<li><ol start="4" type="1">
+<li>per <span class="math inline">\mathbb{K} \mid 1 \neq -1 \quad</span>
+<strong>!!! SCRIVI DETERMINANTE ALTERNANTE</strong></li>
+</ol></li>
+<li><span class="math inline">\det</span> è il
+<strong>determinante</strong> <span class="math inline">\iff \det</span>
+verifica 1, 2 e 3, oppure 1, 3 e 4
+<ul>
+<li>poiché è possibile dimostrare che la funzione che verifica tali
+condizioni esiste ed è unica, allora il <span
+class="math inline">\det</span> è totalmente determinato da tali
+caratteristiche</li>
+</ul></li>
+</ul>
+</blockquote>
+<h2 id="teorema-8">Teorema 8</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\mathbb{K}</span> campo <span
+class="math inline">\mid 1 \neq -1</span></li>
+<li><span class="math inline">n \in \mathbb{N} - \{0\}</span></li>
+<li><span class="math inline">f : \textrm{Mat}_{n \times n}(\mathbb{K})
+\rightarrow \mathbb{K}</span></li>
+</ul>
+<ol start="4" type="1">
+<li><strong>!!! SCRIVI</strong></li>
+</ol></li>
+<li><strong>Th</strong>
+<ul>
+<li><strong>!!! DETERMINANTE ALTERNANTE</strong></li>
+</ul></li>
+</ul>
+<h2 id="teorema-9">Teorema 9</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\mathbb{K}</span> campo</li>
+<li><span class="math inline">n \in \mathbb{N} - \{0\}</span></li>
+<li><span class="math inline">A \in \textrm{Mat}_{n \times
+n}(\mathbb{K})</span></li>
+</ul>
+<ol type="1">
+<li><span class="math inline">A</span> invertibile</li>
+<li><span class="math inline">A_1, \ldots, A_n</span> base di <span
+class="math inline">\mathbb{K}^n</span></li>
+<li><span class="math inline">A^1, \ldots, A^n</span> base di <span
+class="math inline">\mathbb{K}^n</span></li>
+<li><span class="math inline">\textrm{rk}(A)=n</span></li>
+<li><span class="math inline">\det(A) \neq 0</span></li>
+<li><span class="math inline">A \equiv I_n</span> tramite la relazione
+di equivalenza delle operazioni sulle righe</li>
+<li><strong>!!! NON ANCHE PER COLONNE? CEH PENSO DE SI</strong></li>
+</ol></li>
+<li><strong>Th</strong>
+<ul>
+<li>le proposizioni sono equivalenti</li>
+</ul></li>
+</ul>
+<h2 id="teorema-10">Teorema 10</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\mathbb{K}</span> campo</li>
+<li><span class="math inline">n \in \mathbb{N} - \{0\}</span></li>
+<li><span class="math inline">A \in \textrm{Mat}_{n \times
+n}(\mathbb{K}) \mid \exists i \in [1, n] : A_i = 0_{\mathbb{K}^n} \lor
+\exists j \in [1, n] : A^j = 0_{\mathbb{K}^n}</span>, ovvero in <span
+class="math inline">A</span> è presente o una riga, o una colonna
+nulla</li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\det(A) = 0</span></li>
+</ul></li>
+</ul>
+<h2 id="teorema-11">Teorema 11</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\mathbb{K}</span> campo</li>
+<li><span class="math inline">n \in \mathbb{N} - \{0\}</span></li>
+<li><span class="math inline">A \in \textrm{Mat}_{n \times
+n}(\mathbb{K})</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\det(A) = \det(A^T)</span></li>
+</ul></li>
+</ul>
+<h2 id="teorema-12">Teorema 12</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\mathbb{K}</span> campo</li>
+<li><span class="math inline">n \in \mathbb{N} - \{0\}</span></li>
+<li><span class="math inline">A \in \textrm{Mat}_{n \times
+n}(\mathbb{K})</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\displaystyle{\det(A) = \sum_{\sigma \in
+S_n} \textrm{sgn}(\sigma) \cdot \prod_{i=1}^n{a_{i,
+\sigma_i}}}</span></li>
+</ul></li>
+</ul>
+<h2 id="teorema-13">Teorema 13</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\mathbb{K}</span> campo</li>
+<li><span class="math inline">A \in \textrm{Mat}_{2 \times
+2}(\mathbb{K})</span></li>
+<li><span class="math inline">A = \left(\begin{array}{cc}a_{1,1} &amp;
+a_{1, 2} \\ a_{2, 1} &amp; a_{2, 2}\end{array}\right)</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\det(A) =
+a_{1,1}a_{2,2}-a_{1,2}a_{2,1}</span></li>
+</ul></li>
+</ul>
+<h2 id="teorema-14">Teorema 14</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\mathbb{K}</span> campo</li>
+<li><span class="math inline">A \in \textrm{Mat}_{3 \times
+3}(\mathbb{K})</span></li>
+<li><span class="math inline">A = \left(\begin{array}{ccc}a_{1,1} &amp;
+a_{1, 2} &amp; a_{1,3}\\ a_{2, 1} &amp; a_{2, 2} &amp; a_{2,3} \\
+a_{3,1} &amp; a_{3,2} &amp; a_{3,3}\end{array}\right)</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\det(A) =
+a_{1,1}a_{2,2}a_{3,3}+a_{1,3}a_{2,1}a_{3,2}+a_{1,2}a_{2,3}a_{3,1} -
+a_{1,3}a_{2,2}a_{3,1}-a_{1,1}a_{2,3}a_{3,2}-a_{1,2}a_{2,1}a_{3,3}</span></li>
+</ul></li>
+</ul>
+<h2 id="teorema-15">Teorema 15</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\mathbb{K}</span> campo</li>
+<li><span class="math inline">n \in \mathbb{N} - \{0\}</span></li>
+<li><span class="math inline">A \in \textrm{Mat}_{n \times
+n}(\mathbb{K}) \mid A</span> triangolare</li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\det(A) = a_{1,1} \cdot \ldots \cdot a_{n,
+n}</span></li>
+</ul></li>
+</ul>
+<h2 id="teorema-16">Teorema 16</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\mathbb{K}</span> campo</li>
+<li><span class="math inline">n \in \mathbb{N} - \{0\}</span></li>
+<li><span class="math inline">\lambda \in \mathbb{K}</span></li>
+<li><span class="math inline">A \in \textrm{Mat}_{n \times
+n}(\mathbb{K})</span></li>
+<li><span class="math inline">A&#39; = \left(\begin{array}{c}A_1 \\
+\vdots \\ \lambda A_i \\ \vdots \\ A_n \end{array}\right)</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\det(A&#39;)=\lambda \cdot
+\det(A)</span></li>
+</ul></li>
+</ul>
+<h2 id="teorema-17">Teorema 17</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\mathbb{K}</span> campo</li>
+<li><span class="math inline">n \in \mathbb{N} - \{0\}</span></li>
+<li><span class="math inline">A \in \textrm{Mat}_{n \times
+n}(\mathbb{K})</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\forall 1 \le i, j \le n \quad \det(A) =
+\displaystyle \sum_{k = 1}^{n}{(-1)^{i + k}\cdot a_{i, k} \cdot
+\det(A_i^k)} = \sum_{h = 1}^n{(-1)^{h + j}\cdot a_{h, j} \cdot
+\det(A_h^j)}</span></li>
+</ul></li>
+</ul>
+<h2 id="definizione-3">Definizione 3</h2>
+<ul>
+<li><strong>Aggiunta di una matrice</strong></li>
+</ul>
+<blockquote>
+<ul>
+<li><span class="math inline">\mathbb{K}</span> campo</li>
+<li><span class="math inline">n \in \mathbb{N} - \{0\}</span></li>
+<li><span class="math inline">A \in \textrm{Mat}_{n \times
+n}(\mathbb{K})</span></li>
+<li><span class="math inline">A^*</span> è detta <strong>aggiunta di
+<span class="math inline">A</span></strong> <span
+class="math inline">\iff \forall i, j \in [1, n] \quad a^*_{i, j} =
+(-1)^{i + j}\cdot \det(A_i^j)</span></li>
+</ul>
+</blockquote>
+<h2 id="teorema-18">Teorema 18</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\mathbb{K}</span> campo</li>
+<li><span class="math inline">n \in \mathbb{N} - \{0\}</span></li>
+<li><span class="math inline">A \in \textrm{Mat}_{n \times
+n}(\mathbb{K}) \mid \det(A) \neq 0</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span
+class="math inline">A^{-1}=\dfrac{(A^*)^T}{\det(A)}</span></li>
+</ul></li>
+</ul>
+<h2 id="teorema-19">Teorema 19</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\mathbb{K}</span> campo</li>
+<li><span class="math inline">A \in \textrm{Mat}_{2 \times
+2}(\mathbb{K}) \mid \det(A) \neq 0</span></li>
+<li><span class="math inline">A = \left(\begin{array}{cc}a &amp; b \\ c
+&amp; d\end{array}\right)</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">A^{-1}=\dfrac{1}{ad - bc}
+\left(\begin{array}{cc}d &amp; -b \\ -c &amp;
+a\end{array}\right)</span></li>
+</ul></li>
+</ul>
+<hr />
+<h1 id="polinomio-caratteristico">Polinomio caratteristico</h1>
+<h2 id="definizione-4">Definizione 4</h2>
+<blockquote>
+<ul>
+<li><span class="math inline">\mathbb{K}</span> campo</li>
+<li><span class="math inline">n \in \mathbb{N} - \{0\}</span></li>
+<li><span class="math inline">A \in \textrm{Mat}_{n \times
+n}(\mathbb{K})</span></li>
+<li><span class="math inline">p_A(x) := \det(x\cdot I_n - A)</span> è
+detto <strong>polinomio caratteristico di <span
+class="math inline">A</span></strong></li>
+</ul>
+</blockquote>
+<h2 id="teorema-20">Teorema 20</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\mathbb{K}</span> campo</li>
+<li><span class="math inline">n \in \mathbb{N} - \{0\}</span></li>
+<li><span class="math inline">A \in \textrm{Mat}_{n \times
+n}(\mathbb{K})</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">p_A(x) = x^n - \textrm{tr}(A)\cdot x^{n
+-1} + \ldots + (-1)^n \cdot \det(A)</span></li>
+</ul></li>
+</ul>
+<h2 id="teorema-21">Teorema 21</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\mathbb{K}</span> campo</li>
+<li><span class="math inline">n \in \mathbb{N} - \{0\}</span></li>
+<li><span class="math inline">A, B \in \textrm{Mat}_{n \times
+n}(\mathbb{K}) \mid A</span> simile a <span
+class="math inline">B</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">p_A(x) = p_B(x)</span></li>
+</ul></li>
+</ul>
+<h2 id="definizione-5">Definizione 5</h2>
+<ul>
+<li><strong>Autovalore</strong></li>
+</ul>
+<blockquote>
+<ul>
+<li><span class="math inline">\mathbb{K}</span> campo</li>
+<li><span class="math inline">n \in \mathbb{N} - \{0\}</span></li>
+<li><span class="math inline">A \in \textrm{Mat}_{n \times
+n}(\mathbb{K})</span></li>
+<li><span class="math inline">\lambda \in \mathbb{K} \mid p_A(\lambda) =
+0</span> è detto <strong>autovalore di <span
+class="math inline">A</span></strong></li>
+</ul>
+</blockquote>
+<ul>
+<li><strong>Spettro</strong></li>
+</ul>
+<blockquote>
+<ul>
+<li><span class="math inline">\mathbb{K}</span> campo</li>
+<li><span class="math inline">n \in \mathbb{N} - \{0\}</span></li>
+<li><span class="math inline">A \in \textrm{Mat}_{n \times
+n}(\mathbb{K})</span></li>
+<li><span class="math inline">\textrm{sp}(A) := \{\lambda \in \mathbb{K}
+\mid p_A(\lambda) = 0\}</span> è detto <strong>spettro di <span
+class="math inline">A</span></strong></li>
+</ul>
+</blockquote>
+<h2 id="teorema-22">Teorema 22</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\mathbb{K}</span> campo</li>
+<li><span class="math inline">n \in \mathbb{N} - \{0\}</span></li>
+<li><span class="math inline">A, B \in \textrm{Mat}_{n \times
+n}(\mathbb{K}) \mid A</span> simile a <span
+class="math inline">B</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\textrm{sp}(A) =
+\textrm{sp}(B)</span></li>
+</ul></li>
+</ul>
+<h2 id="teorema-23">Teorema 23</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\mathbb{K}</span> campo</li>
+<li><span class="math inline">n \in \mathbb{N} - \{0\}</span></li>
+<li><span class="math inline">A \in \textrm{Mat}_{n \times
+n}(\mathbb{K})</span></li>
+<li><span class="math inline">\lambda \in \mathbb{K}</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\lambda</span> autovalore <span
+class="math inline">\iff \exists v \in \mathbb{K}^n - \{0\} \mid A \cdot
+v = \lambda \cdot v</span></li>
+</ul></li>
+</ul>
+<h2 id="definizione-6">Definizione 6</h2>
+<ul>
+<li><strong>Autovettore</strong></li>
+</ul>
+<blockquote>
+<ul>
+<li><span class="math inline">\mathbb{K}</span> campo</li>
+<li><span class="math inline">n \in \mathbb{N} - \{0\}</span></li>
+<li><span class="math inline">A \in \textrm{Mat}_{n \times
+n}(\mathbb{K})</span></li>
+<li><span class="math inline">\lambda \in \textrm{sp}(A)</span></li>
+<li><span class="math inline">v \in \mathbb{K}^n - \{0\}</span> è detto
+<strong>autovettore di <span class="math inline">A</span> relativo a
+<span class="math inline">\lambda</span></strong> <span
+class="math inline">\iff (A- \lambda \cdot I_n) \cdot v = 0</span></li>
+</ul>
+</blockquote>
+<ul>
+<li><strong>Autospazio</strong></li>
+</ul>
+<blockquote>
+<ul>
+<li><span class="math inline">\mathbb{K}</span> campo</li>
+<li><span class="math inline">n \in \mathbb{N} - \{0\}</span></li>
+<li><span class="math inline">A \in \textrm{Mat}_{n \times
+n}(\mathbb{K})</span></li>
+<li><span class="math inline">\lambda \in \textrm{sp}(A)</span></li>
+<li><span class="math inline">\textrm{E}_\lambda(A) := \{v \in
+\mathbb{K}^n \mid A \cdot v = \lambda \cdot v\}</span> è detto
+<strong>autospazio di <span class="math inline">A</span> relativo a
+<span class="math inline">\lambda</span></strong></li>
+</ul>
+</blockquote>
+<h2 id="teorema-24">Teorema 24</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\mathbb{K}</span> campo</li>
+<li><span class="math inline">n \in \mathbb{N} - \{0\}</span></li>
+<li><span class="math inline">A \in \textrm{Mat}_{n \times
+n}(\mathbb{K})</span></li>
+<li><span class="math inline">\lambda \in \textrm{sp}(A)</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\textrm{E}_\lambda(A) \subset
+\mathbb{K}</span> sottospazio vettoriale</li>
+</ul></li>
+</ul>
+<hr />
+<h1 id="gruppi-diedrali">Gruppi diedrali</h1>
+<h2 id="definizione-7">Definizione 7</h2>
 <ul>
 <li><strong>Gruppo diedrale</strong></li>
 </ul>
@@ -325,7 +759,7 @@ all’<span class="math inline">i</span>-esimo asse di simmetria
 dell’<span class="math inline">n</span>-gono regolare</li>
 </ul>
 </blockquote>
-<h2 id="teorema-8">Teorema 8</h2>
+<h2 id="teorema-25">Teorema 25</h2>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -338,7 +772,7 @@ dell’<span class="math inline">n</span>-gono regolare</li>
 <li><span class="math inline">|D_n| = 2n</span></li>
 </ul></li>
 </ul>
-<h2 id="teorema-9">Teorema 9</h2>
+<h2 id="teorema-26">Teorema 26</h2>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -353,7 +787,7 @@ composizione delle simmetrie</li>
 <li><span class="math inline">(D_n, \cdot)</span> è un gruppo</li>
 </ul></li>
 </ul>
-<h2 id="teorema-10">Teorema 10</h2>
+<h2 id="teorema-27">Teorema 27</h2>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -365,7 +799,7 @@ composizione delle simmetrie</li>
 diedrale abeliano</li>
 </ul></li>
 </ul>
-<h2 id="teorema-11">Teorema 11</h2>
+<h2 id="teorema-28">Teorema 28</h2>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -382,7 +816,7 @@ D_n \cong X</span>
 </ul></li>
 </ul></li>
 </ul>
-<h2 id="definizione-3">Definizione 3</h2>
+<h2 id="definizione-8">Definizione 8</h2>
 <ul>
 <li><strong>Gruppo di Klein</strong></li>
 </ul>
@@ -395,7 +829,7 @@ D_n \cong X</span>
 <li><span class="math inline">cb=a=bc</span></li>
 </ul>
 </blockquote>
-<h2 id="teorema-12">Teorema 12</h2>
+<h2 id="teorema-29">Teorema 29</h2>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -408,7 +842,7 @@ D_n \cong X</span>
 </ul>
 <hr />
 <h1 id="gruppi">Gruppi</h1>
-<h2 id="definizione-4">Definizione 4</h2>
+<h2 id="definizione-9">Definizione 9</h2>
 <ul>
 <li><strong>Semigruppo</strong></li>
 </ul>
@@ -460,7 +894,7 @@ abeliano</strong> <span class="math inline">\iff (S,m)</span> gruppo e
 x)</span></li>
 </ul>
 </blockquote>
-<h2 id="teorema-13">Teorema 13</h2>
+<h2 id="teorema-30">Teorema 30</h2>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -474,7 +908,7 @@ neutro</li>
 class="math inline">G</span></li>
 </ul></li>
 </ul>
-<h2 id="teorema-14">Teorema 14</h2>
+<h2 id="teorema-31">Teorema 31</h2>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -491,7 +925,7 @@ class="math inline">G</span> per <span class="math inline">x</span>
 rispetto a <span class="math inline">m</span></li>
 </ul></li>
 </ul>
-<h2 id="teorema-15">Teorema 15</h2>
+<h2 id="teorema-32">Teorema 32</h2>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -504,7 +938,7 @@ Y\}</span></li>
 <li><span class="math inline">(X^X, \circ)</span> è monoide</li>
 </ul></li>
 </ul>
-<h2 id="teorema-16">Teorema 16</h2>
+<h2 id="teorema-33">Teorema 33</h2>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -518,7 +952,7 @@ Y\}</span></li>
 </ul>
 <hr />
 <h1 id="anelli">Anelli</h1>
-<h2 id="definizione-5">Definizione 5</h2>
+<h2 id="definizione-10">Definizione 10</h2>
 <ul>
 <li><strong>Anello</strong></li>
 </ul>
@@ -575,7 +1009,7 @@ class="math inline">\iff (B, +) \subset (A, +)</span> sottogruppo e
 <span class="math inline">B \cdot B \subset B</span></li>
 </ul>
 </blockquote>
-<h2 id="definizione-6">Definizione 6</h2>
+<h2 id="definizione-11">Definizione 11</h2>
 <ul>
 <li><strong>Invertibili</strong></li>
 </ul>
@@ -593,7 +1027,7 @@ invertibile<span class="math inline">\}</span> è l’<strong>insieme degli
 invertibili di <span class="math inline">A</span></strong></li>
 </ul>
 </blockquote>
-<h2 id="teorema-17">Teorema 17</h2>
+<h2 id="teorema-34">Teorema 34</h2>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -605,7 +1039,7 @@ commutativo</li>
 <li><span class="math inline">(A^*, \cdot)</span> è un gruppo</li>
 </ul></li>
 </ul>
-<h2 id="teorema-18">Teorema 18</h2>
+<h2 id="teorema-35">Teorema 35</h2>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -618,7 +1052,7 @@ commutativo</li>
 un sottogruppo</li>
 </ul></li>
 </ul>
-<h2 id="definizione-7">Definizione 7</h2>
+<h2 id="definizione-12">Definizione 12</h2>
 <ul>
 <li><strong>Divisori dello <span
 class="math inline">0</span></strong></li>
@@ -649,7 +1083,7 @@ class="math inline">A</span> vale la legge di annullamento del
 prodotto</li>
 </ul>
 </blockquote>
-<h2 id="teorema-19">Teorema 19</h2>
+<h2 id="teorema-36">Teorema 36</h2>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -661,7 +1095,7 @@ commutativo</li>
 <li><span class="math inline">x \mid 0 \iff x \notin A^*</span></li>
 </ul></li>
 </ul>
-<h2 id="teorema-20">Teorema 20</h2>
+<h2 id="teorema-37">Teorema 37</h2>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -672,7 +1106,7 @@ commutativo</li>
 <li><span class="math inline">A</span> dominio di integrità</li>
 </ul></li>
 </ul>
-<h2 id="definizione-8">Definizione 8</h2>
+<h2 id="definizione-13">Definizione 13</h2>
 <ul>
 <li><strong>Elementi irriducibili</strong></li>
 </ul>
@@ -697,7 +1131,7 @@ class="math inline">\iff \exists b, c \in A : a \mid bc \implies a \mid
 b \lor a \mid c</span></li>
 </ul>
 </blockquote>
-<h2 id="teorema-21">Teorema 21</h2>
+<h2 id="teorema-38">Teorema 38</h2>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -711,7 +1145,7 @@ class="math inline">\implies a</span> irriducibile</li>
 </ul>
 <hr />
 <h1 id="sottogruppi">Sottogruppi</h1>
-<h2 id="definizione-9">Definizione 9</h2>
+<h2 id="definizione-14">Definizione 14</h2>
 <ul>
 <li><strong>Sottogruppo</strong></li>
 </ul>
@@ -725,7 +1159,7 @@ class="math inline">\implies a</span> irriducibile</li>
 \forall x \in H</span></li>
 </ul>
 </blockquote>
-<h2 id="definizione-10">Definizione 10</h2>
+<h2 id="definizione-15">Definizione 15</h2>
 <ul>
 <li><strong>Sottogruppo normale</strong></li>
 </ul>
@@ -742,7 +1176,7 @@ normale</strong> <span class="math inline">\iff \forall x \in G \quad xH
 = Hx</span></li>
 </ul>
 </blockquote>
-<h2 id="teorema-22">Teorema 22</h2>
+<h2 id="teorema-39">Teorema 39</h2>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -757,12 +1191,12 @@ normale</strong> <span class="math inline">\iff \forall x \in G \quad xH
 </ol></li>
 <li><strong>Th</strong>
 <ul>
-<li>le tre formulazioni sono equivalenti</li>
+<li>le proposizioni sono equivalenti</li>
 </ul></li>
 </ul>
 <hr />
 <h1 id="ordine">Ordine</h1>
-<h2 id="definizione-11">Definizione 11</h2>
+<h2 id="definizione-16">Definizione 16</h2>
 <ul>
 <li><strong>Ordine di un elemento in un gruppo</strong></li>
 </ul>
@@ -788,7 +1222,7 @@ maggiori le potenze ricicleranno infinitamente</li>
 </ul></li>
 </ul>
 </blockquote>
-<h2 id="teorema-23">Teorema 23</h2>
+<h2 id="teorema-40">Teorema 40</h2>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -801,7 +1235,7 @@ maggiori le potenze ricicleranno infinitamente</li>
 sottogruppo</li>
 </ul></li>
 </ul>
-<h2 id="teorema-24">Teorema 24</h2>
+<h2 id="teorema-41">Teorema 41</h2>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -814,7 +1248,7 @@ sottogruppo</li>
 sottogruppo</li>
 </ul></li>
 </ul>
-<h2 id="teorema-25">Teorema 25</h2>
+<h2 id="teorema-42">Teorema 42</h2>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -828,7 +1262,7 @@ e\}</span></li>
 <li><span class="math inline">I(g)</span> è un ideale</li>
 </ul></li>
 </ul>
-<h2 id="teorema-26">Teorema 26</h2>
+<h2 id="teorema-43">Teorema 43</h2>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -844,7 +1278,7 @@ I(g)=I(d)</span></li>
 <li><span class="math inline">d&gt;0 \implies d = o(g)</span></li>
 </ul></li>
 </ul>
-<h2 id="teorema-27">Teorema 27</h2>
+<h2 id="teorema-44">Teorema 44</h2>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -856,7 +1290,7 @@ I(g)=I(d)</span></li>
 <li><span class="math inline">g^{|G|}=e</span></li>
 </ul></li>
 </ul>
-<h2 id="teorema-28">Teorema 28</h2>
+<h2 id="teorema-45">Teorema 45</h2>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -868,7 +1302,7 @@ I(g)=I(d)</span></li>
 <li><span class="math inline">o(g) = o(g^{-1})</span></li>
 </ul></li>
 </ul>
-<h2 id="teorema-29">Teorema 29</h2>
+<h2 id="teorema-46">Teorema 46</h2>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -881,7 +1315,7 @@ I(g)=I(d)</span></li>
 o(g)</span></li>
 </ul></li>
 </ul>
-<h2 id="teorema-30">Teorema 30</h2>
+<h2 id="teorema-47">Teorema 47</h2>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -896,7 +1330,7 @@ o(g)</span></li>
 m</span></li>
 </ul></li>
 </ul>
-<h2 id="teorema-31">Teorema 31</h2>
+<h2 id="teorema-48">Teorema 48</h2>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -913,7 +1347,7 @@ m</span></li>
 </ul>
 <hr />
 <h1 id="ideali">Ideali</h1>
-<h2 id="definizione-12">Definizione 12</h2>
+<h2 id="definizione-17">Definizione 17</h2>
 <ul>
 <li><strong>Ideali</strong></li>
 </ul>
@@ -926,7 +1360,7 @@ sottogruppo e <span class="math inline">A \cdot I \subset I</span> e
 <span class="math inline">I \cdot A \subset I</span></li>
 </ul>
 </blockquote>
-<h2 id="teorema-32">Teorema 32</h2>
+<h2 id="teorema-49">Teorema 49</h2>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -941,7 +1375,7 @@ di <em>ideale di <span class="math inline">A</span> generato da <span
 class="math inline">a \in A</span></em></li>
 </ul></li>
 </ul>
-<h2 id="teorema-33">Teorema 33</h2>
+<h2 id="teorema-50">Teorema 50</h2>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -954,7 +1388,7 @@ class="math inline">a \in A</span></em></li>
 bc</span></li>
 </ul></li>
 </ul>
-<h2 id="teorema-34">Teorema 34</h2>
+<h2 id="teorema-51">Teorema 51</h2>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -965,7 +1399,7 @@ bc</span></li>
 <li><span class="math inline">I(a)=I(b) \iff a=\pm b</span></li>
 </ul></li>
 </ul>
-<h2 id="teorema-35">Teorema 35</h2>
+<h2 id="teorema-52">Teorema 52</h2>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -982,7 +1416,7 @@ generato dagli <span class="math inline">a_1, \ldots, a_n \in
 A</span></em></li>
 </ul></li>
 </ul>
-<h2 id="definizione-13">Definizione 13</h2>
+<h2 id="definizione-18">Definizione 18</h2>
 <ul>
 <li><strong>Congruenza modulo di un ideale</strong></li>
 </ul>
@@ -1003,7 +1437,7 @@ conseguenza questa congruenza coincide con la classe laterale sinistra
 di <span class="math inline">(A, +)</span></li>
 </ul>
 </blockquote>
-<h2 id="teorema-36">Teorema 36</h2>
+<h2 id="teorema-53">Teorema 53</h2>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -1019,7 +1453,7 @@ A/I</span></li>
 <li><span class="math inline">(A/I, +, \cdot)</span> è un anello</li>
 </ul></li>
 </ul>
-<h2 id="teorema-37">Teorema 37</h2>
+<h2 id="teorema-54">Teorema 54</h2>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -1032,7 +1466,7 @@ I(d)</span>, o equivalentemente, in <span
 class="math inline">\mathbb{Z}</span> ogni ideale è principale</li>
 </ul></li>
 </ul>
-<h2 id="teorema-38">Teorema 38</h2>
+<h2 id="teorema-55">Teorema 55</h2>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -1047,7 +1481,7 @@ class="math inline">\mathbb{Z}</span> ogni ideale è principale</li>
 a_n)</span></li>
 </ul></li>
 </ul>
-<h2 id="definizione-14">Definizione 14</h2>
+<h2 id="definizione-19">Definizione 19</h2>
 <ul>
 <li><strong>Massimo Comun Divisore</strong></li>
 </ul>
@@ -1071,7 +1505,7 @@ precedente</li>
 </ul></li>
 </ul>
 </blockquote>
-<h2 id="teorema-39">Teorema 39</h2>
+<h2 id="teorema-56">Teorema 56</h2>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -1087,14 +1521,14 @@ a_n)</span></li>
 <em>identità di Bézout</em></li>
 </ul></li>
 </ul>
-<h2 id="teorema-40">Teorema 40</h2>
+<h2 id="teorema-57">Teorema 57</h2>
 <ul>
 <li>!!! <strong>MANCA DIMOSTRAZIONE SISTEMA DI IDENTITÀ DI
 BÉZOUT</strong></li>
 </ul>
 <hr />
 <h1 id="operazioni-sugli-ideali">Operazioni sugli ideali</h1>
-<h2 id="definizione-15">Definizione 15</h2>
+<h2 id="definizione-20">Definizione 20</h2>
 <ul>
 <li><strong><span class="math inline">+</span> tra ideali</strong></li>
 </ul>
@@ -1107,7 +1541,7 @@ commutativo</li>
 \in J\}</span></li>
 </ul>
 </blockquote>
-<h2 id="teorema-41">Teorema 41</h2>
+<h2 id="teorema-58">Teorema 58</h2>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -1120,7 +1554,7 @@ commutativo</li>
 <li><span class="math inline">I + J</span> è un ideale</li>
 </ul></li>
 </ul>
-<h2 id="definizione-16">Definizione 16</h2>
+<h2 id="definizione-21">Definizione 21</h2>
 <ul>
 <li><strong><span class="math inline">\cap</span> tra
 ideali</strong></li>
@@ -1134,7 +1568,7 @@ commutativo</li>
 J\}</span></li>
 </ul>
 </blockquote>
-<h2 id="teorema-42">Teorema 42</h2>
+<h2 id="teorema-59">Teorema 59</h2>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -1147,7 +1581,7 @@ commutativo</li>
 <li><span class="math inline">I \cap J</span> è un ideale</li>
 </ul></li>
 </ul>
-<h2 id="definizione-17">Definizione 17</h2>
+<h2 id="definizione-22">Definizione 22</h2>
 <ul>
 <li><strong>Minimo Comune Multiplo</strong></li>
 </ul>
@@ -1162,7 +1596,7 @@ multiplo degli <span class="math inline">a_1, \ldots,
 a_n</span></strong></li>
 </ul>
 </blockquote>
-<h2 id="definizione-18">Definizione 18</h2>
+<h2 id="definizione-23">Definizione 23</h2>
 <ul>
 <li><strong><span class="math inline">\cdot</span> tra
 ideali</strong></li>
@@ -1177,7 +1611,7 @@ commutativo</li>
 \}</span></li>
 </ul>
 </blockquote>
-<h2 id="teorema-43">Teorema 43</h2>
+<h2 id="teorema-60">Teorema 60</h2>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -1190,7 +1624,7 @@ commutativo</li>
 <li><span class="math inline">I \cdot J</span> è un ideale</li>
 </ul></li>
 </ul>
-<h2 id="teorema-44">Teorema 44</h2>
+<h2 id="teorema-61">Teorema 61</h2>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -1202,7 +1636,7 @@ commutativo</li>
 <li><span class="math inline">I(a) + I(b) = I(d)</span></li>
 </ul></li>
 </ul>
-<h2 id="teorema-45">Teorema 45</h2>
+<h2 id="teorema-62">Teorema 62</h2>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -1215,7 +1649,7 @@ commutativo</li>
 </ul>
 <hr />
 <h1 id="induzione">Induzione</h1>
-<h2 id="definizione-19">Definizione 19</h2>
+<h2 id="definizione-24">Definizione 24</h2>
 <ul>
 <li><strong>Induzione</strong></li>
 </ul>
@@ -1230,7 +1664,7 @@ vera}\\ P_{1}, P_{2}, P_{3}, \ldots, P_{n} \implies P_{n+1} \quad
 class="math inline">\forall n</span></li>
 </ul>
 </blockquote>
-<h2 id="teorema-46">Teorema 46</h2>
+<h2 id="teorema-63">Teorema 63</h2>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -1251,7 +1685,7 @@ F_{n}=\dfrac{\varphi^{n}-\psi^{n}}{\varphi-\psi}=\dfrac{\varphi^{n}-\psi^{n}}{\s
 </ul>
 <hr />
 <h1 id="insieme-quoziente">Insieme quoziente</h1>
-<h2 id="definizione-20">Definizione 20</h2>
+<h2 id="definizione-25">Definizione 25</h2>
 <ul>
 <li><strong>Insieme quoziente</strong></li>
 </ul>
@@ -1267,7 +1701,7 @@ l’<strong>insieme quoziente</strong>, ovvero l’insieme delle classi di
 equivalenza determinate da <span class="math inline">\sim</span></li>
 </ul>
 </blockquote>
-<h2 id="definizione-21">Definizione 21</h2>
+<h2 id="definizione-26">Definizione 26</h2>
 <ul>
 <li><strong>Insieme quoziente <span
 class="math inline">\mathbb{Z}_n</span></strong></li>
@@ -1289,7 +1723,7 @@ definire <span class="math inline">\mathbb{Z}_n := \{[0], [1], \ldots,
 class="math inline">\mathbb{Z}/\equiv</span></li>
 </ul>
 </blockquote>
-<h2 id="teorema-47">Teorema 47</h2>
+<h2 id="teorema-64">Teorema 64</h2>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -1302,7 +1736,7 @@ class="math inline">\mathbb{Z}/\equiv</span></li>
 <li><span class="math inline">(\mathbb{Z}_n, +)</span> è un gruppo</li>
 </ul></li>
 </ul>
-<h2 id="teorema-48">Teorema 48</h2>
+<h2 id="teorema-65">Teorema 65</h2>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -1315,7 +1749,7 @@ class="math inline">\mathbb{Z}/\equiv</span></li>
 <li><span class="math inline">p \mid a \lor p \mid b</span></li>
 </ul></li>
 </ul>
-<h2 id="teorema-49">Teorema 49</h2>
+<h2 id="teorema-66">Teorema 66</h2>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -1327,7 +1761,7 @@ class="math inline">\mathbb{Z}/\equiv</span></li>
 <span class="math inline">\iff n \in \mathbb{P}</span></li>
 </ul></li>
 </ul>
-<h2 id="teorema-50">Teorema 50</h2>
+<h2 id="teorema-67">Teorema 67</h2>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -1339,7 +1773,7 @@ class="math inline">\mathbb{Z}/\equiv</span></li>
 \textrm{MCD}(a, n) = 1 \iff [a] \in \mathbb{Z}^*_n</span></li>
 </ul></li>
 </ul>
-<h2 id="teorema-51">Teorema 51</h2>
+<h2 id="teorema-68">Teorema 68</h2>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -1350,7 +1784,7 @@ class="math inline">\mathbb{Z}/\equiv</span></li>
 <li><span class="math inline">\mathbb{Z}_p</span> campo</li>
 </ul></li>
 </ul>
-<h2 id="teorema-52">Teorema 52</h2>
+<h2 id="teorema-69">Teorema 69</h2>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -1364,7 +1798,7 @@ ciclico</li>
 </ul>
 <hr />
 <h1 id="funzione-totiente-di-eulero">Funzione totiente di Eulero</h1>
-<h2 id="definizione-22">Definizione 22</h2>
+<h2 id="definizione-27">Definizione 27</h2>
 <ul>
 <li><strong>Funzione totiente di Eulero</strong></li>
 </ul>
@@ -1375,7 +1809,7 @@ ciclico</li>
 |</span></li>
 </ul>
 </blockquote>
-<h2 id="teorema-53">Teorema 53</h2>
+<h2 id="teorema-70">Teorema 70</h2>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -1388,7 +1822,7 @@ n) = 1</span></li>
 \mathbb{Z}_{m}^{*} \land [a] \in \mathbb{Z}^*_{n}</span></li>
 </ul></li>
 </ul>
-<h2 id="teorema-54">Teorema 54</h2>
+<h2 id="teorema-71">Teorema 71</h2>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -1401,7 +1835,7 @@ n) = 1</span></li>
 \varphi(n)</span></li>
 </ul></li>
 </ul>
-<h2 id="teorema-55">Teorema 55</h2>
+<h2 id="teorema-72">Teorema 72</h2>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -1413,7 +1847,7 @@ n) = 1</span></li>
 <li><span class="math inline">\varphi(p^k) = p^{k -1}(p-1)</span></li>
 </ul></li>
 </ul>
-<h2 id="teorema-56">Teorema 56</h2>
+<h2 id="teorema-73">Teorema 73</h2>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -1432,7 +1866,7 @@ n) = 1</span></li>
 </ul>
 <hr />
 <h1 id="matrici">Matrici</h1>
-<h2 id="definizione-23">Definizione 23</h2>
+<h2 id="definizione-28">Definizione 28</h2>
 <ul>
 <li><strong>Matrici</strong></li>
 </ul>
@@ -1468,7 +1902,7 @@ vettori colonna e <span class="math inline">A_1, \ldots, A_m \in
 \\ A_m\end{array}\right)</span></li>
 </ul>
 </blockquote>
-<h2 id="definizione-24">Definizione 24</h2>
+<h2 id="definizione-29">Definizione 29</h2>
 <ul>
 <li><strong>Somma tra matrici</strong></li>
 </ul>
@@ -1490,7 +1924,7 @@ class="math inline">A</span> e <span
 class="math inline">B</span></strong></li>
 </ul>
 </blockquote>
-<h2 id="teorema-57">Teorema 57</h2>
+<h2 id="teorema-74">Teorema 74</h2>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -1503,7 +1937,7 @@ class="math inline">B</span></strong></li>
 n}(\mathbb{K})</span> è uno spazio vettoriale</li>
 </ul></li>
 </ul>
-<h2 id="definizione-25">Definizione 25</h2>
+<h2 id="definizione-30">Definizione 30</h2>
 <ul>
 <li><strong>Prodotto scalare</strong></li>
 </ul>
@@ -1521,11 +1955,11 @@ class="math inline">A</span> e <span
 class="math inline">B</span></strong></li>
 </ul>
 </blockquote>
-<h2 id="teorema-58">Teorema 58</h2>
+<h2 id="teorema-75">Teorema 75</h2>
 <ul>
 <li><strong>!!! WIP</strong></li>
 </ul>
-<h2 id="definizione-26">Definizione 26</h2>
+<h2 id="definizione-31">Definizione 31</h2>
 <ul>
 <li><strong>Prodotto tra matrici</strong></li>
 </ul>
@@ -1552,7 +1986,7 @@ m}b_{m,n} \\ \vdots &amp; \ddots &amp; \vdots \\a_{l,1}b_{1, 1} + \ldots
 m}b_{m,n}\end{array}\right)</span></li>
 </ul>
 </blockquote>
-<h2 id="teorema-59">Teorema 59</h2>
+<h2 id="teorema-76">Teorema 76</h2>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -1573,7 +2007,7 @@ n}(\mathbb{K})</span></li>
 B)</span></li>
 </ul></li>
 </ul>
-<h2 id="teorema-60">Teorema 60</h2>
+<h2 id="teorema-77">Teorema 77</h2>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -1588,8 +2022,345 @@ B)</span></li>
 </ul></li>
 </ul>
 <hr />
+<h1 id="matrici-particolari">Matrici particolari</h1>
+<h2 id="definizione-32">Definizione 32</h2>
+<ul>
+<li><strong>Vettore trasposto</strong></li>
+</ul>
+<blockquote>
+<ul>
+<li><span class="math inline">\mathbb{K}</span> campo</li>
+<li><span class="math inline">n \in \mathbb{N}</span></li>
+<li><span class="math inline">v \in \textrm{Mat}_{n \times
+1}(\mathbb{K}) \mid \exists x_1, \ldots, x_n \in \mathbb{K} : v =
+\left(\begin{array}{c}x_1 \\ \vdots \\ x_n
+\end{array}\right)</span></li>
+<li><span class="math inline">v^T = \left(x_1, \ldots, x_n\right)</span>
+è il <strong>vettore trasposto di <span
+class="math inline">v</span></strong>
+<ul>
+<li>vicendevolmente, se <span class="math inline">v</span> è un vettore
+riga, il suo trasposto sarà il corrispondente vettore colonna</li>
+</ul></li>
+</ul>
+</blockquote>
+<ul>
+<li><strong>Matrice trasposta</strong></li>
+</ul>
+<blockquote>
+<ul>
+<li><span class="math inline">m, n \in \mathbb{N} - \{0\}</span></li>
+<li><span class="math inline">\mathbb{K}</span> campo</li>
+<li><span class="math inline">A \in \textrm{Mat}_{m \times
+n}(\mathbb{K}) \mid A = \left(A^1, \ldots, A^n\right)</span></li>
+<li><span class="math inline">A^T = \left(\begin{array}{c} {A^1}^T \\
+\vdots \\ {A^n}^T \end{array}\right)</span> è la <strong>matrice
+trasposta di <span class="math inline">A</span></strong>
+<ul>
+<li>vale il ragionamento analogo considerando le righe di <span
+class="math inline">A</span> al posto delle colonne</li>
+</ul></li>
+</ul>
+</blockquote>
+<h2 id="teorema-78">Teorema 78</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">m, n \in \mathbb{N} - \{0\}</span></li>
+<li><span class="math inline">\mathbb{K}</span> campo</li>
+<li><span class="math inline">A \in \textrm{Mat}_{m \times
+n}(\mathbb{K})</span></li>
+<li><span class="math inline">B \in \textrm{Mat}_{m \times
+n}(\mathbb{K})</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">(A\cdot B)^T = B^T\cdot A^T</span></li>
+</ul></li>
+</ul>
+<h2 id="definizione-33">Definizione 33</h2>
+<ul>
+<li><strong>Matrice identità</strong></li>
+</ul>
+<blockquote>
+<ul>
+<li><span class="math inline">\mathbb{K}</span> campo</li>
+<li><span class="math inline">n \in \mathbb{N} - \{0\}</span></li>
+<li><span class="math inline">I_n = \left(\begin{array}{c}e_1 \\ \vdots
+\\ e_n \end{array}\right) = \left(e_1^T, \ldots, e_n^T\right) =
+\left(\begin{array}{ccccc}1 &amp; 0 &amp; \cdots &amp; \cdots &amp; 0 \\
+\vdots &amp; \ddots &amp; &amp; &amp; \vdots\\ 0 &amp; \cdots &amp; 1
+&amp; \cdots &amp; 0 \\ \vdots &amp; &amp; &amp; \ddots &amp; \vdots\\ 0
+&amp;\cdots &amp; \cdots &amp; 0 &amp; 1\end{array}\right)</span> è
+detta <strong>matrice identità</strong></li>
+</ul>
+</blockquote>
+<ul>
+<li><strong>Matrice invertibile</strong></li>
+</ul>
+<blockquote>
+<ul>
+<li><span class="math inline">\mathbb{K}</span> campo</li>
+<li><span class="math inline">n \in \mathbb{N} - \{0\}</span></li>
+<li><span class="math inline">A \in \textrm{Mat}_{n \times
+n}(\mathbb{K})</span></li>
+<li><span class="math inline">A</span> <strong>invertibile</strong>
+<span class="math inline">\iff \exists A^{-1} \in \textrm{Mat}_{n \times
+n}(\mathbb{K}) \mid A\cdot A^{-1} = A^{-1} \cdot A = I_n</span></li>
+</ul>
+</blockquote>
+<ul>
+<li><strong>Gruppo Generale Lineare</strong></li>
+</ul>
+<blockquote>
+<ul>
+<li><span class="math inline">\mathbb{K}</span> campo</li>
+<li><span class="math inline">n \in \mathbb{N} - \{0\}</span></li>
+<li><span class="math inline">\textrm{GL}(n, \mathbb{K}) := \{A \in
+\textrm{Mat}_{n \times n}(\mathbb{K}) \mid A</span> invertibile <span
+class="math inline">\}</span> è detto <strong>gruppo generale lineare
+invertibile</strong></li>
+</ul>
+</blockquote>
+<h2 id="teorema-79">Teorema 79</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\mathbb{K}</span> campo</li>
+<li><span class="math inline">n \in \mathbb{N} - \{0\}</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">(\textrm{GL}(n, \mathbb{K}), \cdot)</span>
+è un gruppo</li>
+</ul></li>
+</ul>
+<h2 id="teorema-80">Teorema 80</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\mathbb{K}</span> campo</li>
+<li><span class="math inline">n \in \mathbb{N} - \{0\}</span></li>
+<li><span class="math inline">f: \textrm{GL}(n, \mathbb{K}) \rightarrow
+\mathbb{K}^*</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">f</span> morfismo di gruppi</li>
+</ul></li>
+</ul>
+<h2 id="definizione-34">Definizione 34</h2>
+<ul>
+<li><strong>Gruppo Speciale Lineare</strong></li>
+</ul>
+<blockquote>
+<ul>
+<li><span class="math inline">\mathbb{K}</span> campo</li>
+<li><span class="math inline">n \in \mathbb{N} - \{0\}</span></li>
+<li><span class="math inline">\textrm{SL}(n, \mathbb{K}) := \{A \in
+\textrm{Mat}_{n \times n}(\mathbb{K}) \mid \det(A) = 1\}</span> è detto
+<strong>gruppo generale lineare invertibile</strong></li>
+</ul>
+</blockquote>
+<h2 id="definizione-35">Definizione 35</h2>
+<ul>
+<li><strong>Matrici simili</strong></li>
+</ul>
+<blockquote>
+<ul>
+<li><span class="math inline">\mathbb{K}</span> campo</li>
+<li><span class="math inline">n \in \mathbb{N} - \{0\}</span></li>
+<li><span class="math inline">A, B \in \textrm{Mat}_{n \times
+n}(\mathbb{K})</span></li>
+<li><span class="math inline">A</span> <strong>simile a <span
+class="math inline">B</span></strong> <span class="math inline">\iff
+\exists C \in \textrm{GL}(n, \mathbb{K}) \mid A = C^{-1}BC</span></li>
+</ul>
+</blockquote>
+<h2 id="teorema-81">Teorema 81</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\mathbb{K}</span> campo</li>
+<li><span class="math inline">n \in \mathbb{N} - \{0\}</span></li>
+<li><span class="math inline">A, B \in \textrm{Mat}_{n \times
+n}(\mathbb{K}) \mid A</span> simile a <span
+class="math inline">B</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\det(A) = \det(B)</span></li>
+</ul></li>
+</ul>
+<h2 id="definizione-36">Definizione 36</h2>
+<ul>
+<li><strong>Traccia</strong></li>
+</ul>
+<blockquote>
+<ul>
+<li><span class="math inline">\mathbb{K}</span> campo</li>
+<li><span class="math inline">n \in \mathbb{N} - \{0\}</span></li>
+<li><span class="math inline">A \in \textrm{Mat}_{n \times
+n}(\mathbb{K})</span></li>
+<li><span class="math inline">\textrm{tr}(A) := a_{1,1}+ \ldots +
+a_{n,n}</span> è detta <strong>traccia di <span
+class="math inline">A</span></strong></li>
+</ul>
+</blockquote>
+<h2 id="teorema-82">Teorema 82</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\mathbb{K}</span> campo</li>
+<li><span class="math inline">n \in \mathbb{N} - \{0\}</span></li>
+<li><span class="math inline">A, B \in \textrm{Mat}_{n \times
+n}(\mathbb{K}) \mid A</span> simile a <span
+class="math inline">B</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\textrm{tr}(A) =
+\textrm{tr}(B)</span></li>
+</ul></li>
+</ul>
+<h2 id="definizione-37">Definizione 37</h2>
+<ul>
+<li><strong>Matrice triangolare superiore</strong></li>
+</ul>
+<blockquote>
+<ul>
+<li><span class="math inline">\mathbb{K}</span> campo</li>
+<li><span class="math inline">n \in \mathbb{N} - \{0\}</span></li>
+<li><span class="math inline">A \in \textrm{Mat}_{n \times
+n}(\mathbb{K})</span></li>
+<li><span class="math inline">A</span> è detta <strong>triangolare
+superiore</strong> <span class="math inline">\iff \forall i, j \in [1,
+n], i &gt; j \quad a_{i,j} = 0</span></li>
+</ul>
+</blockquote>
+<ul>
+<li><strong>Matrice triangolare inferiore</strong></li>
+</ul>
+<blockquote>
+<ul>
+<li><span class="math inline">\mathbb{K}</span> campo</li>
+<li><span class="math inline">n \in \mathbb{N} - \{0\}</span></li>
+<li><span class="math inline">A \in \textrm{Mat}_{n \times
+n}(\mathbb{K})</span></li>
+<li><span class="math inline">A</span> è detta <strong>triangolare
+superiore</strong> <span class="math inline">\iff \forall i, j \in [1,
+n], i &lt; j \quad a_{i,j} = 0</span></li>
+</ul>
+</blockquote>
+<ul>
+<li><strong>Matrice triangolare</strong></li>
+</ul>
+<blockquote>
+<ul>
+<li><span class="math inline">\mathbb{K}</span> campo</li>
+<li><span class="math inline">n \in \mathbb{N} - \{0\}</span></li>
+<li><span class="math inline">A \in \textrm{Mat}_{n \times
+n}(\mathbb{K})</span></li>
+<li><span class="math inline">A</span> è detta <strong>triangolare <span
+class="math inline">\iff</span></strong> <span
+class="math inline">A</span> triangolare superiore o triangolare
+inferiore</li>
+</ul>
+</blockquote>
+<h2 id="definizione-38">Definizione 38</h2>
+<ul>
+<li><strong>Sottomatrice di una matrice</strong></li>
+</ul>
+<blockquote>
+<ul>
+<li><span class="math inline">\mathbb{K}</span> campo</li>
+<li><span class="math inline">m, n \in \mathbb{N} - \{0\}</span></li>
+<li><span class="math inline">A \in \textrm{Mat}_{m \times
+n}(\mathbb{K})</span></li>
+<li><span class="math inline">A_i^j</span> è una <strong>sottomatrice di
+<span class="math inline">A</span></strong> <span
+class="math inline">\iff A_i^j</span> si ottiene rimuovendo <span
+class="math inline">A_i</span> e <span class="math inline">A^j</span> da
+<span class="math inline">A</span></li>
+</ul>
+</blockquote>
+<ul>
+<li><strong>Minore di una matrice</strong></li>
+</ul>
+<blockquote>
+<ul>
+<li><span class="math inline">\mathbb{K}</span> campo</li>
+<li><span class="math inline">m, n \in \mathbb{N} - \{0\}</span></li>
+<li><span class="math inline">A \in \textrm{Mat}_{m \times
+n}(\mathbb{K})</span></li>
+<li><span class="math inline">M</span> è un <strong>minore di <span
+class="math inline">A</span></strong> <span class="math inline">\iff
+M</span> è una sottomatrice quadrata di <span
+class="math inline">A</span></li>
+</ul>
+</blockquote>
+<ul>
+<li><strong>Orlato di un minore</strong></li>
+</ul>
+<blockquote>
+<ul>
+<li><span class="math inline">\mathbb{K}</span> campo</li>
+<li><span class="math inline">m, n, r \in \mathbb{N} - \{0\} \mid r &lt;
+m \land r &lt; n</span></li>
+<li><span class="math inline">A \in \textrm{Mat}_{m \times
+n}(\mathbb{K})</span></li>
+<li><span class="math inline">M \in \textrm{Mat}_{r \times
+r}(\mathbb{K})</span> è un minore di <span
+class="math inline">A</span></li>
+<li><span class="math inline">M&#39; \in \textrm{Mat}_{(r + 1) \times (r
++ 1)}(\mathbb{K})</span> è un <strong>orlato di <span
+class="math inline">M</span></strong> <span class="math inline">\iff
+M&#39;</span> è un minore di <span class="math inline">A</span> e <span
+class="math inline">M</span> si ottiene rimuovendo una riga e una
+colonna da <span class="math inline">M&#39;</span></li>
+</ul>
+</blockquote>
+<h2 id="teorema-83">Teorema 83</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\mathbb{K}</span> campo</li>
+<li><span class="math inline">m, n, r \in \mathbb{N} - \{0\} \mid r &lt;
+m \land r &lt; n</span></li>
+<li><span class="math inline">A \in \textrm{Mat}_{m \times
+n}(\mathbb{K})</span></li>
+<li><span class="math inline">M \in \textrm{Mat}_{r \times
+r}(\mathbb{K})</span> è un minore di <span
+class="math inline">A</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">M</span> ha <span
+class="math inline">(m-r)\cdot(n-r)</span> orlati in <span
+class="math inline">A</span></li>
+</ul></li>
+</ul>
+<h2 id="definizione-39">Definizione 39</h2>
+<ul>
+<li><strong>Matrice completa</strong></li>
+</ul>
+<blockquote>
+<ul>
+<li><span class="math inline">\mathbb{K}</span> campo</li>
+<li><span class="math inline">m, n \in \mathbb{N} - \{0\}</span></li>
+<li><span class="math inline">A \in \textrm{Mat}_{m \times
+n}(\mathbb{K})</span></li>
+<li><span class="math inline">b \in \textrm{Mat}_{m \times
+1}(\mathbb{K})</span></li>
+<li><span class="math inline">A_b:=\left(\begin{array}{cccc}a_{1, 1}
+&amp; \cdots &amp; a_{1, n} &amp; b_1 \\ \vdots &amp; \ddots &amp;
+\vdots &amp; \vdots \\ a_{m, 1} &amp; \cdots &amp; a_{m,n} &amp;
+b_m\end{array}\right)</span></li>
+</ul>
+</blockquote>
+<hr />
 <h1 id="rango">Rango</h1>
-<h2 id="definizione-27">Definizione 27</h2>
+<h2 id="definizione-40">Definizione 40</h2>
 <ul>
 <li><strong>Sottospazio ortogonale</strong></li>
 </ul>
@@ -1610,7 +2381,7 @@ loro, per osservazione precedente</li>
 </ul></li>
 </ul>
 </blockquote>
-<h2 id="teorema-61">Teorema 61</h2>
+<h2 id="teorema-84">Teorema 84</h2>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -1625,7 +2396,7 @@ vettoriale</li>
 di <span class="math inline">\mathbb{K}^n</span></li>
 </ul></li>
 </ul>
-<h2 id="teorema-62">Teorema 62</h2>
+<h2 id="teorema-85">Teorema 85</h2>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -1640,7 +2411,7 @@ vettoriale</li>
 \dim(V)</span></li>
 </ul></li>
 </ul>
-<h2 id="definizione-28">Definizione 28</h2>
+<h2 id="definizione-41">Definizione 41</h2>
 <ul>
 <li><strong>Moltiplicazione sinistra</strong></li>
 </ul>
@@ -1655,7 +2426,7 @@ n}(\mathbb{K}) \quad L_A:\mathbb{K}^n \rightarrow \mathbb{K}^m: x
 \rightarrow A\cdot x</span></li>
 </ul>
 </blockquote>
-<h2 id="teorema-63">Teorema 63</h2>
+<h2 id="teorema-86">Teorema 86</h2>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -1670,7 +2441,7 @@ n}(\mathbb{K}) \quad L_A:\mathbb{K}^n \rightarrow \mathbb{K}^m: x
 n}(\mathbb{K}) \quad L_A</span> è una trasformazione lineare</li>
 </ul></li>
 </ul>
-<h2 id="teorema-64">Teorema 64</h2>
+<h2 id="teorema-87">Teorema 87</h2>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -1686,7 +2457,7 @@ n}(\mathbb{K}) \quad \ker(L_A) = \textrm{span}(A_1, \ldots, A_m)^\bot
 \land \textrm{im}(L_A) = \textrm{span}(A^1, \ldots, A^n)</span></li>
 </ul></li>
 </ul>
-<h2 id="definizione-29">Definizione 29</h2>
+<h2 id="definizione-42">Definizione 42</h2>
 <ul>
 <li><strong>Rango di una matrice</strong></li>
 </ul>
@@ -1702,7 +2473,7 @@ n}(\mathbb{K})</span></li>
 il <strong>rango di <span class="math inline">A</span></strong></li>
 </ul>
 </blockquote>
-<h2 id="teorema-65">Teorema 65</h2>
+<h2 id="teorema-88">Teorema 88</h2>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -1719,28 +2490,10 @@ n}(\mathbb{K})</span></li>
 \ldots, A^n)) = \dim(\textrm{span}(A_1, \ldots, A_n)^\bot)</span></li>
 </ul></li>
 </ul>
-<h2 id="definizione-30">Definizione 30</h2>
-<ul>
-<li><strong>Matrice completa</strong></li>
-</ul>
-<blockquote>
-<ul>
-<li><span class="math inline">\mathbb{K}</span> campo</li>
-<li><span class="math inline">m, n \in \mathbb{N} - \{0\}</span></li>
-<li><span class="math inline">A \in \textrm{Mat}_{m \times
-n}(\mathbb{K})</span></li>
-<li><span class="math inline">b \in \textrm{Mat}_{m \times
-1}(\mathbb{K})</span></li>
-<li><span class="math inline">A_b:=\left(\begin{array}{cccc}a_{1, 1}
-&amp; \cdots &amp; a_{1, n} &amp; b_1 \\ \vdots &amp; \ddots &amp;
-\vdots &amp; \vdots \\ a_{m, 1} &amp; \cdots &amp; a_{m,n} &amp;
-b_m\end{array}\right)</span></li>
-</ul>
-</blockquote>
 <hr />
 <h1 id="operazioni-su-righe-e-colonne">Operazioni su righe e
 colonne</h1>
-<h2 id="definizione-31">Definizione 31</h2>
+<h2 id="definizione-43">Definizione 43</h2>
 <ul>
 <li><strong>Scambio di righe di una matrice</strong></li>
 </ul>
@@ -1841,7 +2594,7 @@ class="math inline">\lambda \cdot A^j</span> lascia invariato <span
 class="math inline">\textrm{im}(L_A)</span></li>
 </ul>
 </blockquote>
-<h2 id="teorema-66">Teorema 66</h2>
+<h2 id="teorema-89">Teorema 89</h2>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -1851,8 +2604,8 @@ class="math inline">\textrm{im}(L_A)</span></li>
 n}(\mathbb{K})</span></li>
 <li><span class="math inline">A \equiv B \iff</span> è possibile
 ricavare <span class="math inline">B</span> da <span
-class="math inline">A</span> eseguendo operazioni tra righe definite
-precedentemente</li>
+class="math inline">A</span> eseguendo operazioni <em>tra righe</em>
+definite precedentemente</li>
 </ul></li>
 <li><strong>Th</strong>
 <ul>
@@ -1860,7 +2613,7 @@ precedentemente</li>
 equivalenza</li>
 </ul></li>
 </ul>
-<h2 id="teorema-67">Teorema 67</h2>
+<h2 id="teorema-90">Teorema 90</h2>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -1870,8 +2623,8 @@ equivalenza</li>
 n}(\mathbb{K})</span></li>
 <li><span class="math inline">A \equiv B \iff</span> è possibile
 ricavare <span class="math inline">B</span> da <span
-class="math inline">A</span> eseguendo operazioni tra righe definite
-precedentemente</li>
+class="math inline">A</span> eseguendo operazioni <em>tra righe</em>
+definite precedentemente</li>
 </ul></li>
 <li><strong>Th</strong>
 <ul>
@@ -1879,7 +2632,7 @@ precedentemente</li>
 \land \textrm{rk}(A) = \textrm{rk}(B)</span></li>
 </ul></li>
 </ul>
-<h2 id="teorema-68">Teorema 68</h2>
+<h2 id="teorema-91">Teorema 91</h2>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -1889,8 +2642,8 @@ precedentemente</li>
 n}(\mathbb{K})</span></li>
 <li><span class="math inline">A \equiv B \iff</span> è possibile
 ricavare <span class="math inline">B</span> da <span
-class="math inline">A</span> eseguendo operazioni tra colonne definite
-precedentemente</li>
+class="math inline">A</span> eseguendo operazioni <em>tra colonne</em>
+definite precedentemente</li>
 </ul></li>
 <li><strong>Th</strong>
 <ul>
@@ -1898,7 +2651,7 @@ precedentemente</li>
 equivalenza</li>
 </ul></li>
 </ul>
-<h2 id="teorema-69">Teorema 69</h2>
+<h2 id="teorema-92">Teorema 92</h2>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -1908,8 +2661,8 @@ equivalenza</li>
 n}(\mathbb{K})</span></li>
 <li><span class="math inline">A \equiv B \iff</span> è possibile
 ricavare <span class="math inline">B</span> da <span
-class="math inline">A</span> eseguendo operazioni tra colonne definite
-precedentemente</li>
+class="math inline">A</span> eseguendo operazioni <em>tra colonne</em>
+definite precedentemente</li>
 </ul></li>
 <li><strong>Th</strong>
 <ul>
@@ -1919,7 +2672,7 @@ precedentemente</li>
 </ul>
 <hr />
 <h1 id="morfismi">Morfismi</h1>
-<h2 id="definizione-32">Definizione 32</h2>
+<h2 id="definizione-44">Definizione 44</h2>
 <ul>
 <li><strong>Morfismo di gruppi</strong></li>
 </ul>
@@ -1948,7 +2701,7 @@ f(x+ y) = f(x) + f(y) \land f(x \cdot y) = f(x) \cdot f(y)</span>
 </ul></li>
 </ul>
 </blockquote>
-<h2 id="teorema-70">Teorema 70</h2>
+<h2 id="teorema-93">Teorema 93</h2>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -1964,7 +2717,7 @@ class="math inline">H</span></li>
 <li><span class="math inline">f(1_G) = 1_H</span></li>
 </ul></li>
 </ul>
-<h2 id="teorema-71">Teorema 71</h2>
+<h2 id="teorema-94">Teorema 94</h2>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -1982,7 +2735,7 @@ class="math inline">H</span></li>
 </ul>
 <hr />
 <h1 id="isomorfismi">Isomorfismi</h1>
-<h2 id="definizione-33">Definizione 33</h2>
+<h2 id="definizione-45">Definizione 45</h2>
 <ul>
 <li><strong>Isomorfismo</strong></li>
 </ul>
@@ -1993,7 +2746,7 @@ class="math inline">\iff f</span> morfismo e <span
 class="math inline">f</span> biiettiva</li>
 </ul>
 </blockquote>
-<h2 id="teorema-72">Teorema 72</h2>
+<h2 id="teorema-95">Teorema 95</h2>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -2006,7 +2759,7 @@ class="math inline">f</span> biiettiva</li>
 isomorfismo</li>
 </ul></li>
 </ul>
-<h2 id="teorema-73">Teorema 73</h2>
+<h2 id="teorema-96">Teorema 96</h2>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -2019,7 +2772,7 @@ isomorfismo</li>
 equivalenza</li>
 </ul></li>
 </ul>
-<h2 id="teorema-74">Teorema 74</h2>
+<h2 id="teorema-97">Teorema 97</h2>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -2038,7 +2791,7 @@ class="math inline">1</span></li>
 \cdot)</span> è un sottogruppo</li>
 </ul></li>
 </ul>
-<h2 id="teorema-75">Teorema 75</h2>
+<h2 id="teorema-98">Teorema 98</h2>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -2052,7 +2805,7 @@ class="math inline">(\mathbb{Z}_n , +)</span> e <span
 class="math inline">(H, \cdot)</span></li>
 </ul></li>
 </ul>
-<h2 id="teorema-76">Teorema 76</h2>
+<h2 id="teorema-99">Teorema 99</h2>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -2068,7 +2821,7 @@ class="math inline">(\mathbb{Z}, +)</span> e <span
 class="math inline">(G, \cdot)</span></li>
 </ul></li>
 </ul>
-<h2 id="teorema-77">Teorema 77</h2>
+<h2 id="teorema-100">Teorema 100</h2>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -2082,7 +2835,7 @@ class="math inline">\left(\mathbb{Z},+, \cdot\right)</span> e <span
 class="math inline">\left(\mathbb{Z}_{n},+, \cdot\right)</span></li>
 </ul></li>
 </ul>
-<h2 id="teorema-78">Teorema 78</h2>
+<h2 id="teorema-101">Teorema 101</h2>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -2097,7 +2850,7 @@ class="math inline">\left(\mathbb{Z}_{m},+, \cdot\right)</span> e <span
 class="math inline">\left(\mathbb{Z}_{n},+, \cdot\right)</span></li>
 </ul></li>
 </ul>
-<h2 id="teorema-79">Teorema 79</h2>
+<h2 id="teorema-102">Teorema 102</h2>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -2115,7 +2868,7 @@ class="math inline">(G, \cdot)</span> e <span class="math inline">(G,
 </ul>
 <hr />
 <h1 id="kernel-e-immagine">Kernel e immagine</h1>
-<h2 id="definizione-34">Definizione 34</h2>
+<h2 id="definizione-46">Definizione 46</h2>
 <ul>
 <li><strong>Kernel e immagine di gruppi</strong></li>
 </ul>
@@ -2146,7 +2899,7 @@ class="math inline">f</span></strong></li>
 class="math inline">f</span></strong></li>
 </ul>
 </blockquote>
-<h2 id="teorema-80">Teorema 80</h2>
+<h2 id="teorema-103">Teorema 103</h2>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -2159,7 +2912,7 @@ class="math inline">f</span></strong></li>
 sottogruppo</li>
 </ul></li>
 </ul>
-<h2 id="teorema-81">Teorema 81</h2>
+<h2 id="teorema-104">Teorema 104</h2>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -2172,7 +2925,7 @@ sottogruppo</li>
 sottogruppo</li>
 </ul></li>
 </ul>
-<h2 id="teorema-82">Teorema 82</h2>
+<h2 id="teorema-105">Teorema 105</h2>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -2185,7 +2938,7 @@ sottogruppo</li>
 class="math inline">\iff \textrm{ker}(f) = \{1_G\}</span></li>
 </ul></li>
 </ul>
-<h2 id="teorema-83">Teorema 83</h2>
+<h2 id="teorema-106">Teorema 106</h2>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -2198,7 +2951,7 @@ anelli</li>
 <li><span class="math inline">\textrm{ker}(f)</span> ideale</li>
 </ul></li>
 </ul>
-<h2 id="teorema-84">Teorema 84</h2>
+<h2 id="teorema-107">Teorema 107</h2>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -2212,7 +2965,7 @@ anelli</li>
 sottoanello</li>
 </ul></li>
 </ul>
-<h2 id="teorema-85">Teorema 85</h2>
+<h2 id="teorema-108">Teorema 108</h2>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -2229,7 +2982,7 @@ class="math inline">n</span></li>
 <li><span class="math inline">\textrm{ker}(f) = I(n)</span></li>
 </ul></li>
 </ul>
-<h2 id="teorema-86">Teorema 86</h2>
+<h2 id="teorema-109">Teorema 109</h2>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -2244,7 +2997,7 @@ sottogruppo normale</li>
 </ul>
 <hr />
 <h1 id="numeri-complessi">Numeri complessi</h1>
-<h2 id="definizione-35">Definizione 35</h2>
+<h2 id="definizione-47">Definizione 47</h2>
 <ul>
 <li><strong>Insieme dei complessi</strong></li>
 </ul>
@@ -2258,7 +3011,7 @@ complessi</strong></li>
 b:=\operatorname{Im}(z)\end{array}\right.</span></li>
 </ul>
 </blockquote>
-<h2 id="teorema-87">Teorema 87</h2>
+<h2 id="teorema-110">Teorema 110</h2>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -2272,7 +3025,7 @@ b:=\operatorname{Im}(z)\end{array}\right.</span></li>
 <li><span class="math inline">z\cdot w=(a c-b d)+i(ad+ bc)</span></li>
 </ul></li>
 </ul>
-<h2 id="definizione-36">Definizione 36</h2>
+<h2 id="definizione-48">Definizione 48</h2>
 <ul>
 <li><strong>Coniugato</strong></li>
 </ul>
@@ -2284,7 +3037,7 @@ b:=\operatorname{Im}(z)\end{array}\right.</span></li>
 <strong>coniugato</strong> di <span class="math inline">z</span></li>
 </ul>
 </blockquote>
-<h2 id="teorema-88">Teorema 88</h2>
+<h2 id="teorema-111">Teorema 111</h2>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -2300,7 +3053,7 @@ class="math inline">\overline{z}+\overline{w}=\overline{z+w}</span></li>
 \overline{w}=\overline{z \cdot w}</span></li>
 </ul></li>
 </ul>
-<h2 id="teorema-89">Teorema 89</h2>
+<h2 id="teorema-112">Teorema 112</h2>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -2312,7 +3065,7 @@ class="math inline">\overline{z}+\overline{w}=\overline{z+w}</span></li>
 \theta</span></li>
 </ul></li>
 </ul>
-<h2 id="definizione-37">Definizione 37</h2>
+<h2 id="definizione-49">Definizione 49</h2>
 <ul>
 <li><strong>Raggio</strong></li>
 </ul>
@@ -2328,7 +3081,7 @@ dall’origine nel piano di Gauss</li>
 </ul></li>
 </ul>
 </blockquote>
-<h2 id="definizione-38">Definizione 38</h2>
+<h2 id="definizione-50">Definizione 50</h2>
 <ul>
 <li><strong>Forma polare</strong></li>
 </ul>
@@ -2340,7 +3093,7 @@ dall’origine nel piano di Gauss</li>
 <strong>forma polare di <span class="math inline">z</span></strong></li>
 </ul>
 </blockquote>
-<h2 id="definizione-39">Definizione 39</h2>
+<h2 id="definizione-51">Definizione 51</h2>
 <ul>
 <li><strong>Soluzione principale</strong></li>
 </ul>
@@ -2360,7 +3113,7 @@ prende il nome di <span class="math inline">\textrm{Arg}(z)</span>,
 detta <strong>soluzione principale</strong></li>
 </ul>
 </blockquote>
-<h2 id="teorema-90">Teorema 90</h2>
+<h2 id="teorema-113">Teorema 113</h2>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -2373,7 +3126,7 @@ gruppo</li>
 campo</li>
 </ul></li>
 </ul>
-<h2 id="teorema-91">Teorema 91</h2>
+<h2 id="teorema-114">Teorema 114</h2>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -2391,7 +3144,7 @@ w)=\arg(z) + \arg(w)</span></li>
 \quad \arg\left(\dfrac{z}{w}\right)=\arg(z) - \arg(w)</span></li>
 </ul></li>
 </ul>
-<h2 id="teorema-92">Teorema 92</h2>
+<h2 id="teorema-115">Teorema 115</h2>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -2405,7 +3158,7 @@ w)=\arg(z) + \arg(w)</span></li>
 </ul>
 <hr />
 <h1 id="permutazioni">Permutazioni</h1>
-<h2 id="definizione-40">Definizione 40</h2>
+<h2 id="definizione-52">Definizione 52</h2>
 <ul>
 <li><strong>Permutazioni</strong></li>
 </ul>
@@ -2420,7 +3173,7 @@ detto <strong>gruppo simmetrico di <span
 class="math inline">n</span></strong></li>
 </ul>
 </blockquote>
-<h2 id="teorema-93">Teorema 93</h2>
+<h2 id="teorema-116">Teorema 116</h2>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -2433,7 +3186,7 @@ biiettiva <span class="math inline">\}</span></li>
 abeliano se <span class="math inline">|X| \ge 3</span></li>
 </ul></li>
 </ul>
-<h2 id="definizione-41">Definizione 41</h2>
+<h2 id="definizione-53">Definizione 53</h2>
 <ul>
 <li><strong>Ciclo di una permutazione</strong></li>
 </ul>
@@ -2449,7 +3202,7 @@ abeliano se <span class="math inline">|X| \ge 3</span></li>
 <strong>ciclo di <span class="math inline">\sigma</span></strong></li>
 </ul>
 </blockquote>
-<h2 id="teorema-94">Teorema 94</h2>
+<h2 id="teorema-117">Teorema 117</h2>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -2465,7 +3218,7 @@ abeliano se <span class="math inline">|X| \ge 3</span></li>
 +)</span> è un ideale</li>
 </ul></li>
 </ul>
-<h2 id="teorema-95">Teorema 95</h2>
+<h2 id="teorema-118">Teorema 118</h2>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -2480,7 +3233,7 @@ i) = I(d)</span></li>
 I(\sigma, i)</span></li>
 </ul></li>
 </ul>
-<h2 id="teorema-96">Teorema 96</h2>
+<h2 id="teorema-119">Teorema 119</h2>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -2501,7 +3254,7 @@ d_k)</span></li>
 </ul>
 <hr />
 <h1 id="trasposizioni">Trasposizioni</h1>
-<h2 id="definizione-42">Definizione 42</h2>
+<h2 id="definizione-54">Definizione 54</h2>
 <ul>
 <li><strong>Trasposizione</strong></li>
 </ul>
@@ -2535,7 +3288,7 @@ j} = \tau_{i, j} ^{-1}</span></li>
 due elementi, adiacenti, tra loro</li>
 </ul>
 </blockquote>
-<h2 id="teorema-97">Teorema 97</h2>
+<h2 id="teorema-120">Teorema 120</h2>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -2552,7 +3305,7 @@ trasposizioni adiacenti</li>
 </ul>
 <hr />
 <h1 id="segno">Segno</h1>
-<h2 id="definizione-43">Definizione 43</h2>
+<h2 id="definizione-55">Definizione 55</h2>
 <ul>
 <li><strong>Segno di una permutazione</strong></li>
 </ul>
@@ -2577,7 +3330,7 @@ class="math inline">\iff \textrm{sgn}(\sigma) = +1</span>
 </ul></li>
 </ul>
 </blockquote>
-<h2 id="teorema-98">Teorema 98</h2>
+<h2 id="teorema-121">Teorema 121</h2>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -2592,7 +3345,7 @@ normale, detto <em>gruppo alterno di ordine <span
 class="math inline">n</span></em></li>
 </ul></li>
 </ul>
-<h2 id="teorema-99">Teorema 99</h2>
+<h2 id="teorema-122">Teorema 122</h2>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -2607,7 +3360,7 @@ trasposizioni sono adiacenti</li>
 <li><span class="math inline">\textrm{sgn}(\sigma)= (-1)^k</span></li>
 </ul></li>
 </ul>
-<h2 id="teorema-100">Teorema 100</h2>
+<h2 id="teorema-123">Teorema 123</h2>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -2624,7 +3377,7 @@ ogni trasposizione è adiacente</li>
 \textrm{sgn}(\sigma &#39;)</span></li>
 </ul></li>
 </ul>
-<h2 id="teorema-101">Teorema 101</h2>
+<h2 id="teorema-124">Teorema 124</h2>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -2637,7 +3390,7 @@ ogni trasposizione è adiacente</li>
 class="math inline">\textrm{sgn}(\sigma^{-1})=\textrm{sgn}(\sigma)</span></li>
 </ul></li>
 </ul>
-<h2 id="teorema-102">Teorema 102</h2>
+<h2 id="teorema-125">Teorema 125</h2>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -2653,7 +3406,7 @@ class="math inline">\textrm{sgn}(\sigma^{-1})=\textrm{sgn}(\sigma)</span></li>
 \textrm{sgn}(\sigma)</span></li>
 </ul></li>
 </ul>
-<h2 id="teorema-103">Teorema 103</h2>
+<h2 id="teorema-126">Teorema 126</h2>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -2677,7 +3430,7 @@ class="math inline">d_j^\prime</span> è la lunghezza del ciclo <span
 class="math inline">\gamma_j^\prime</span></li>
 </ul></li>
 </ul>
-<h2 id="teorema-104">Teorema 104</h2>
+<h2 id="teorema-127">Teorema 127</h2>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -2693,7 +3446,7 @@ k}</span></li>
 </ul>
 <hr />
 <h1 id="polinomi">Polinomi</h1>
-<h2 id="definizione-44">Definizione 44</h2>
+<h2 id="definizione-56">Definizione 56</h2>
 <ul>
 <li><strong>Polinomi</strong></li>
 </ul>
@@ -2712,7 +3465,7 @@ class="math inline">\mathbb{K}</span></strong></li>
 class="math inline">\iff a_n = 1</span></li>
 </ul>
 </blockquote>
-<h2 id="teorema-105">Teorema 105</h2>
+<h2 id="teorema-128">Teorema 128</h2>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -2724,7 +3477,7 @@ class="math inline">\iff a_n = 1</span></li>
 anello</li>
 </ul></li>
 </ul>
-<h2 id="definizione-45">Definizione 45</h2>
+<h2 id="definizione-57">Definizione 57</h2>
 <ul>
 <li><strong>Grado del polinomio</strong></li>
 </ul>
@@ -2738,7 +3491,7 @@ anello</li>
 0\end{array}\right.</span></li>
 </ul>
 </blockquote>
-<h2 id="teorema-106">Teorema 106</h2>
+<h2 id="teorema-129">Teorema 129</h2>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -2751,7 +3504,7 @@ anello</li>
 \deg(b(x))</span></li>
 </ul></li>
 </ul>
-<h2 id="teorema-107">Teorema 107</h2>
+<h2 id="teorema-130">Teorema 130</h2>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -2765,7 +3518,7 @@ anello</li>
 \mathbb{K}[x]</span></li>
 </ul></li>
 </ul>
-<h2 id="teorema-108">Teorema 108</h2>
+<h2 id="teorema-131">Teorema 131</h2>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -2777,7 +3530,7 @@ anello</li>
 \mathbb{K}[x]</span></li>
 </ul></li>
 </ul>
-<h2 id="teorema-109">Teorema 109</h2>
+<h2 id="teorema-132">Teorema 132</h2>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -2789,7 +3542,7 @@ anello</li>
 integrità</li>
 </ul></li>
 </ul>
-<h2 id="definizione-46">Definizione 46</h2>
+<h2 id="definizione-58">Definizione 58</h2>
 <ul>
 <li><strong>Radici di un polinomio</strong></li>
 </ul>
@@ -2802,7 +3555,7 @@ integrità</li>
 class="math inline">p(x)</span></strong></li>
 </ul>
 </blockquote>
-<h2 id="teorema-110">Teorema 110</h2>
+<h2 id="teorema-133">Teorema 133</h2>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -2815,7 +3568,7 @@ class="math inline">p(x)</span></strong></li>
 <li><span class="math inline">p(c) = 0 \iff x - c \mid p(x)</span></li>
 </ul></li>
 </ul>
-<h2 id="teorema-111">Teorema 111</h2>
+<h2 id="teorema-134">Teorema 134</h2>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -2829,7 +3582,7 @@ class="math inline">p(x)</span></strong></li>
 n</span></li>
 </ul></li>
 </ul>
-<h2 id="teorema-112">Teorema 112</h2>
+<h2 id="teorema-135">Teorema 135</h2>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -2841,7 +3594,7 @@ n</span></li>
 <li><span class="math inline">I</span> è un ideale principale</li>
 </ul></li>
 </ul>
-<h2 id="teorema-113">Teorema 113</h2>
+<h2 id="teorema-136">Teorema 136</h2>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -2857,7 +3610,7 @@ I(a_1(x), \ldots, a_n(x)) = I(d(x))</span></li>
 a_n(x))</span></li>
 </ul></li>
 </ul>
-<h2 id="teorema-114">Teorema 114</h2>
+<h2 id="teorema-137">Teorema 137</h2>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -2873,7 +3626,7 @@ I(a_1(x)) \cap \ldots \cap I(a_1(x)) = I(m(x))</span></li>
 a_n(x))</span></li>
 </ul></li>
 </ul>
-<h2 id="teorema-115">Teorema 115</h2>
+<h2 id="teorema-138">Teorema 138</h2>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -2890,7 +3643,7 @@ a_n(x))</span></li>
 0</span></li>
 </ul></li>
 </ul>
-<h2 id="teorema-116">Teorema 116</h2>
+<h2 id="teorema-139">Teorema 139</h2>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -2903,7 +3656,7 @@ a_n(x))</span></li>
 <span class="math inline">\iff p(x)</span> primo</li>
 </ul></li>
 </ul>
-<h2 id="teorema-117">Teorema 117</h2>
+<h2 id="teorema-140">Teorema 140</h2>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -2920,7 +3673,7 @@ q_k(x)</span></li>
 riordinamento</li>
 </ul></li>
 </ul>
-<h2 id="teorema-118">Teorema 118</h2>
+<h2 id="teorema-141">Teorema 141</h2>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -2933,7 +3686,7 @@ riordinamento</li>
 class="math inline">\iff \deg(p(x)) = 1</span></li>
 </ul></li>
 </ul>
-<h2 id="teorema-119">Teorema 119</h2>
+<h2 id="teorema-142">Teorema 142</h2>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -2946,7 +3699,7 @@ class="math inline">\iff \deg(p(x)) = 1</span> oppure <span
 class="math inline">\deg(p(x)) = 2 \land \Delta &lt; 0</span></li>
 </ul></li>
 </ul>
-<h2 id="teorema-120">Teorema 120</h2>
+<h2 id="teorema-143">Teorema 143</h2>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -2963,13 +3716,13 @@ b) = 1</span></li>
 <li><span class="math inline">a \mid a_0 \land b \mid a_n</span></li>
 </ul></li>
 </ul>
-<h2 id="teorema-121">Teorema 121</h2>
+<h2 id="teorema-144">Teorema 144</h2>
 <ul>
 <li>!!! <strong>MANCA UN TEOREMA ENORME</strong></li>
 </ul>
 <hr />
 <h1 id="relazioni">Relazioni</h1>
-<h2 id="definizione-47">Definizione 47</h2>
+<h2 id="definizione-59">Definizione 59</h2>
 <ul>
 <li><strong>Relazioni</strong></li>
 </ul>
@@ -3084,7 +3837,7 @@ class="math inline">S \times S</span></li>
 totalità</li>
 </ul>
 </blockquote>
-<h2 id="teorema-122">Teorema 122</h2>
+<h2 id="teorema-145">Teorema 145</h2>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -3097,7 +3850,7 @@ totalità</li>
 <li><span class="math inline">\mid</span> è ordine parziale</li>
 </ul></li>
 </ul>
-<h2 id="teorema-123">Teorema 123</h2>
+<h2 id="teorema-146">Teorema 146</h2>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -3112,7 +3865,7 @@ class="math inline">n</span></li>
 equivalenza</li>
 </ul></li>
 </ul>
-<h2 id="teorema-124">Teorema 124</h2>
+<h2 id="teorema-147">Teorema 147</h2>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -3125,7 +3878,7 @@ equivalenza</li>
 <li><span class="math inline">x \equiv y \ (\bmod \ d)</span></li>
 </ul></li>
 </ul>
-<h2 id="teorema-125">Teorema 125</h2>
+<h2 id="teorema-148">Teorema 148</h2>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -3143,7 +3896,7 @@ che <span class="math inline">\dfrac{a}{d}x \equiv \dfrac{b}{d} \
 \left(\bmod \ \dfrac{n}{d}\right)</span></li>
 </ul></li>
 </ul>
-<h2 id="teorema-126">Teorema 126</h2>
+<h2 id="teorema-149">Teorema 149</h2>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -3160,7 +3913,7 @@ equivalenza</li>
 </ul>
 <hr />
 <h1 id="partizioni">Partizioni</h1>
-<h2 id="definizione-48">Definizione 48</h2>
+<h2 id="definizione-60">Definizione 60</h2>
 <ul>
 <li><strong>Partizione</strong></li>
 </ul>
@@ -3174,7 +3927,7 @@ X</span></li>
 I}X_i</span></li>
 </ul>
 </blockquote>
-<h2 id="teorema-127">Teorema 127</h2>
+<h2 id="teorema-150">Teorema 150</h2>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -3186,7 +3939,7 @@ I}X_i</span></li>
 [x] \cap [y] = \varnothing \lor x \sim y \iff [x] = [y]</span></li>
 </ul></li>
 </ul>
-<h2 id="teorema-128">Teorema 128</h2>
+<h2 id="teorema-151">Teorema 151</h2>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -3204,7 +3957,7 @@ X/\sim}[x]</span></li>
 </ul>
 <hr />
 <h1 id="classi-laterali">Classi laterali</h1>
-<h2 id="teorema-129">Teorema 129</h2>
+<h2 id="teorema-152">Teorema 152</h2>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -3218,7 +3971,7 @@ X/\sim}[x]</span></li>
 relazione di equivalenza</li>
 </ul></li>
 </ul>
-<h2 id="definizione-49">Definizione 49</h2>
+<h2 id="definizione-61">Definizione 61</h2>
 <ul>
 <li><strong>Classi laterali</strong></li>
 </ul>
@@ -3240,7 +3993,7 @@ detta <strong>classe laterale destra</strong></li>
 l’<strong>insieme delle classi laterali sinistre o destre</strong></li>
 </ul>
 </blockquote>
-<h2 id="teorema-130">Teorema 130</h2>
+<h2 id="teorema-153">Teorema 153</h2>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -3256,7 +4009,7 @@ l’<strong>insieme delle classi laterali sinistre o destre</strong></li>
 n)</span></li>
 </ul></li>
 </ul>
-<h2 id="teorema-131">Teorema 131</h2>
+<h2 id="teorema-154">Teorema 154</h2>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -3268,7 +4021,7 @@ n)</span></li>
 <li><span class="math inline">H = [1] \in G/H</span></li>
 </ul></li>
 </ul>
-<h2 id="teorema-132">Teorema 132</h2>
+<h2 id="teorema-155">Teorema 155</h2>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -3284,7 +4037,7 @@ x\}</span></li>
 [x]</span></li>
 </ul></li>
 </ul>
-<h2 id="teorema-133">Teorema 133</h2>
+<h2 id="teorema-156">Teorema 156</h2>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -3297,7 +4050,7 @@ x\}</span></li>
 <li><span class="math inline">| xH |= |H|</span></li>
 </ul></li>
 </ul>
-<h2 id="teorema-134">Teorema 134</h2>
+<h2 id="teorema-157">Teorema 157</h2>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -3313,7 +4066,7 @@ G/H</span></li>
 </ul>
 <hr />
 <h1 id="spazi-vettoriali">Spazi Vettoriali</h1>
-<h2 id="definizione-50">Definizione 50</h2>
+<h2 id="definizione-62">Definizione 62</h2>
 <ul>
 <li><strong>Spazio vettoriale</strong></li>
 </ul>
@@ -3335,7 +4088,7 @@ w \in V \quad s \cdot (v + w) = s \cdot v + s \cdot w</span></li>
 <strong>vettore</strong></li>
 </ul>
 </blockquote>
-<h2 id="teorema-135">Teorema 135</h2>
+<h2 id="teorema-158">Teorema 158</h2>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -3348,7 +4101,7 @@ w \in V \quad s \cdot (v + w) = s \cdot v + s \cdot w</span></li>
 <span class="math inline">\mathbb{K}</span></li>
 </ul></li>
 </ul>
-<h2 id="definizione-51">Definizione 51</h2>
+<h2 id="definizione-63">Definizione 63</h2>
 <ul>
 <li><strong>Sottospazio vettoriale</strong></li>
 </ul>
@@ -3364,7 +4117,7 @@ class="math inline">\iff (W, +) \subset (V, +)</span> sottogruppo, e
 \lambda \cdot w \in W</span></li>
 </ul>
 </blockquote>
-<h2 id="definizione-52">Definizione 52</h2>
+<h2 id="definizione-64">Definizione 64</h2>
 <ul>
 <li><strong>Span di vettori</strong></li>
 </ul>
@@ -3381,7 +4134,7 @@ class="math inline">\mathbb{K}</span></li>
 lineari degli <span class="math inline">v_1, \ldots, v_n</span></li>
 </ul>
 </blockquote>
-<h2 id="teorema-136">Teorema 136</h2>
+<h2 id="teorema-159">Teorema 159</h2>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -3397,7 +4150,7 @@ class="math inline">\mathbb{K}</span></li>
 un sottospazio vettoriale di <span class="math inline">V</span></li>
 </ul></li>
 </ul>
-<h2 id="definizione-53">Definizione 53</h2>
+<h2 id="definizione-65">Definizione 65</h2>
 <ul>
 <li><strong>Vettori generatori</strong></li>
 </ul>
@@ -3457,7 +4210,7 @@ linearmente indipendenti</li>
 base di <span class="math inline">V</span></strong></li>
 </ul>
 </blockquote>
-<h2 id="teorema-137">Teorema 137</h2>
+<h2 id="teorema-160">Teorema 160</h2>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -3473,7 +4226,7 @@ base di <span class="math inline">V</span></strong></li>
 canonica</em></li>
 </ul></li>
 </ul>
-<h2 id="teorema-138">Teorema 138</h2>
+<h2 id="teorema-161">Teorema 161</h2>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -3491,7 +4244,7 @@ indipendenti <span class="math inline">\iff v_1, \ldots, v_{n -
 \notin \textrm{span}(v_1, \ldots, v_{n - 1})</span></li>
 </ul></li>
 </ul>
-<h2 id="teorema-139">Teorema 139</h2>
+<h2 id="teorema-162">Teorema 162</h2>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -3508,7 +4261,7 @@ class="math inline">\mathbb{K}</span></li>
 <li><span class="math inline">k \le m</span></li>
 </ul></li>
 </ul>
-<h2 id="teorema-140">Teorema 140</h2>
+<h2 id="teorema-163">Teorema 163</h2>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -3527,7 +4280,7 @@ v_n</span> base di <span class="math inline">V</span></li>
 cardinalità delle basi di uno spazio vettoriale è unica</li>
 </ul></li>
 </ul>
-<h2 id="definizione-54">Definizione 54</h2>
+<h2 id="definizione-66">Definizione 66</h2>
 <ul>
 <li><strong>Dimensione di uno spazio vettoriale</strong></li>
 </ul>
@@ -3541,12 +4294,12 @@ di <span class="math inline">V</span></strong>, ed è la cardinalità
 delle basi di <span class="math inline">V</span></li>
 </ul>
 </blockquote>
-<h2 id="teorema-141">Teorema 141</h2>
+<h2 id="teorema-164">Teorema 164</h2>
 <ul>
 <li><strong>Hp</strong>
 <ul>
-<li><span class="math inline">n \in \mathbb{N}</span></li>
 <li><span class="math inline">\mathbb{K}</span> campo</li>
+<li><span class="math inline">n \in \mathbb{N}</span></li>
 <li><span class="math inline">V</span> spazio vettoriale su <span
 class="math inline">\mathbb{K}</span></li>
 <li><span class="math inline">v_1, \ldots, v_n \in V</span></li>
@@ -3559,7 +4312,7 @@ class="math inline">V \iff \forall v \in V \quad \exists ! \lambda_1,
 \lambda_n v_n</span></li>
 </ul></li>
 </ul>
-<h2 id="teorema-142">Teorema 142</h2>
+<h2 id="teorema-165">Teorema 165</h2>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -3578,7 +4331,7 @@ w_1, \ldots, w_n</span> è una base di <span
 class="math inline">W</span></li>
 </ul></li>
 </ul>
-<h2 id="teorema-143">Teorema 143</h2>
+<h2 id="teorema-166">Teorema 166</h2>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -3597,7 +4350,7 @@ w_{i_1}, \ldots, w_{i_n}</span> è una base di <span
 class="math inline">W</span></li>
 </ul></li>
 </ul>
-<h2 id="teorema-144">Teorema 144</h2>
+<h2 id="teorema-167">Teorema 167</h2>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -3614,7 +4367,7 @@ indipendenti <span class="math inline">\iff w_1, \ldots, w_n</span>
 generatori di <span class="math inline">W</span></li>
 </ul></li>
 </ul>
-<h2 id="teorema-145">Teorema 145</h2>
+<h2 id="teorema-168">Teorema 168</h2>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -3630,7 +4383,7 @@ vettoriali</li>
 \cap V)</span></li>
 </ul></li>
 </ul>
-<h2 id="teorema-146">Teorema 146</h2>
+<h2 id="teorema-169">Teorema 169</h2>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -3645,7 +4398,7 @@ vettoriale</li>
 <li><span class="math inline">V/W</span> sottospazio vettoriale</li>
 </ul></li>
 </ul>
-<h2 id="teorema-147">Teorema 147</h2>
+<h2 id="teorema-170">Teorema 170</h2>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -3660,9 +4413,24 @@ vettoriale</li>
 <li><span class="math inline">\dim(V/W) = \dim(V) - \dim(W)</span></li>
 </ul></li>
 </ul>
+<h2 id="teorema-171">Teorema 171</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\mathbb{K}</span> campo</li>
+<li><span class="math inline">k \in \mathbb{N}</span></li>
+<li><span class="math inline">V_1, \ldots, V_k</span> spazi vettoriali
+su <span class="math inline">\mathbb{K}</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\dim(V_1 \times \ldots \times V_k) =
+\dim(V_1) \cdot \ldots \cdot \dim(V_k)</span></li>
+</ul></li>
+</ul>
 <hr />
 <h1 id="applicazioni-lineari">Applicazioni lineari</h1>
-<h2 id="definizione-55">Definizione 55</h2>
+<h2 id="definizione-67">Definizione 67</h2>
 <ul>
 <li><strong>Applicazioni lineari</strong></li>
 </ul>
@@ -3683,7 +4451,7 @@ lineare</strong> o <strong>trasformazione lineare</strong></li>
 </ul></li>
 </ul>
 </blockquote>
-<h2 id="teorema-148">Teorema 148</h2>
+<h2 id="teorema-172">Teorema 172</h2>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -3697,11 +4465,11 @@ class="math inline">\mathbb{K}</span></li>
 <li><span class="math inline">V \cong \mathbb{K}^n</span></li>
 </ul></li>
 </ul>
-<h2 id="teorema-149">Teorema 149</h2>
+<h2 id="teorema-173">Teorema 173</h2>
 <ul>
 <li>!!! <strong>QUI C’È UN BUCO DI COSE CHE NON HO CAPITO</strong></li>
 </ul>
-<h2 id="teorema-150">Teorema 150</h2>
+<h2 id="teorema-174">Teorema 174</h2>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -3715,7 +4483,7 @@ class="math inline">\mathbb{K}</span></li>
 \dim(W)</span></li>
 </ul></li>
 </ul>
-<h2 id="definizione-56">Definizione 56</h2>
+<h2 id="definizione-68">Definizione 68</h2>
 <ul>
 <li><strong>Kernel e immagine</strong></li>
 </ul>
@@ -3732,7 +4500,7 @@ lineare</li>
 \in V : w = f(v)\}</span></li>
 </ul>
 </blockquote>
-<h2 id="teorema-151">Teorema 151</h2>
+<h2 id="teorema-175">Teorema 175</h2>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -3747,7 +4515,7 @@ lineare</li>
 <li><span class="math inline">\ker(f) \subset V</span> sottospazio</li>
 </ul></li>
 </ul>
-<h2 id="teorema-152">Teorema 152</h2>
+<h2 id="teorema-176">Teorema 176</h2>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -3763,7 +4531,7 @@ lineare</li>
 sottospazio</li>
 </ul></li>
 </ul>
-<h2 id="definizione-57">Definizione 57</h2>
+<h2 id="definizione-69">Definizione 69</h2>
 <ul>
 <li><strong>Rango di un’applicazione lineare</strong></li>
 </ul>
@@ -3782,12 +4550,12 @@ class="math inline">f</span></strong></li>
 </blockquote>
 <hr />
 <h1 id="sottospazi-affini">Sottospazi affini</h1>
-<h2 id="teorema-153">Teorema 153</h2>
+<h2 id="teorema-177">Teorema 177</h2>
 <ul>
 <li>!!! <strong>TODO</strong></li>
 </ul>
 <hr />
-<h2 id="teorema-154">Teorema 154</h2>
+<h2 id="teorema-178">Teorema 178</h2>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -3839,7 +4607,7 @@ divisione euclidea con il resto</h1>
 q+r \quad 0 \leq r&lt;n</span></li>
 </ul></li>
 </ul>
-<h2 id="teorema-155">Teorema 155</h2>
+<h2 id="teorema-179">Teorema 179</h2>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -3884,7 +4652,7 @@ b) = a \cdot b</span></li>
 </ul>
 <hr />
 <h1 id="teorema-cinese-dei-resti">Teorema cinese dei resti</h1>
-<h2 id="teorema-156">Teorema 156</h2>
+<h2 id="teorema-180">Teorema 180</h2>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -3899,7 +4667,7 @@ a_n)</span></li>
 <li><span class="math inline">m = a_1 \cdot \ldots \cdot a_n</span></li>
 </ul></li>
 </ul>
-<h2 id="teorema-157">Teorema 157</h2>
+<h2 id="teorema-181">Teorema 181</h2>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -3919,7 +4687,7 @@ a_n))</span></li>
 ed è iniettiva</li>
 </ul></li>
 </ul>
-<h2 id="teorema-158">Teorema 158</h2>
+<h2 id="teorema-182">Teorema 182</h2>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -3940,7 +4708,7 @@ a_n)</span></li>
 a_{n}\right)\end{array}\right.</span></li>
 </ul></li>
 </ul>
-<h2 id="teorema-159">Teorema 159</h2>
+<h2 id="teorema-183">Teorema 183</h2>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -3979,7 +4747,7 @@ Newton</h1>
 0}^{n}{\binom{n}{k} a^k b ^{n - k}}}</span></li>
 </ul></li>
 </ul>
-<h2 id="teorema-160">Teorema 160</h2>
+<h2 id="teorema-184">Teorema 184</h2>
 <ul>
 <li>!!! <strong>NON HO CAPITO UN CAZZO</strong></li>
 </ul>
@@ -3996,7 +4764,7 @@ Newton</h1>
 <li><span class="math inline">a^{p} \equiv a \ (\bmod \ p)</span></li>
 </ul></li>
 </ul>
-<h2 id="teorema-161">Teorema 161</h2>
+<h2 id="teorema-185">Teorema 185</h2>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -4008,7 +4776,7 @@ Newton</h1>
 <li><span class="math inline">[a]^{-1}=\left[a\right]^{p-2}</span></li>
 </ul></li>
 </ul>
-<h2 id="teorema-162">Teorema 162</h2>
+<h2 id="teorema-186">Teorema 186</h2>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -4020,7 +4788,7 @@ Newton</h1>
 a) \equiv x^{p - 1} - 1 \ (\bmod \ p)</span></li>
 </ul></li>
 </ul>
-<h2 id="teorema-163">Teorema 163</h2>
+<h2 id="teorema-187">Teorema 187</h2>
 <ul>
 <li>!!! <strong>NON HO CAPITO UN CAZZO</strong></li>
 </ul>
@@ -4056,7 +4824,7 @@ anelli</li>
 \rightarrow f(a)</span> isomorfismo di anelli</li>
 </ul></li>
 </ul>
-<h2 id="teorema-164">Teorema 164</h2>
+<h2 id="teorema-188">Teorema 188</h2>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -4073,7 +4841,7 @@ class="math inline">\exists \varphi \mid \varphi : G / \textrm{ker}(f)
 gruppi</li>
 </ul></li>
 </ul>
-<h2 id="teorema-165">Teorema 165</h2>
+<h2 id="teorema-189">Teorema 189</h2>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -4104,7 +4872,7 @@ alternativamente <span class="math inline">\exists \varphi \mid \varphi
 <li><span class="math inline">\exists g \in G \mid o(g) = p</span></li>
 </ul></li>
 </ul>
-<h2 id="teorema-166">Teorema 166</h2>
+<h2 id="teorema-190">Teorema 190</h2>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -4151,6 +4919,86 @@ n}(\mathbb{K})</span></li>
 <li><span class="math inline">\exists x \in \textrm{Mat}_{n \times
 1}(\mathbb{K}) \mid A\cdot x = b \iff \textrm{rk}(A) =
 \textrm{rk}(A_b)</span></li>
+</ul></li>
+</ul>
+<hr />
+<h1 id="teorema-di-cramer">Teorema di Cramer</h1>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\mathbb{K}</span> campo</li>
+<li><span class="math inline">n \in \mathbb{N} - \{0\}</span></li>
+<li><span class="math inline">A \in \textrm{Mat}_{n \times
+n}(\mathbb{K}) \mid \det(A) \neq 0</span></li>
+<li><span class="math inline">b \in \textrm{Mat}_{n \times
+1}(\mathbb{K})</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\left\{\begin{array}{c}x_1 =
+\dfrac{1}{\det(A)} \cdot \det\left(\begin{array}{cccc}b_1 &amp; a_{1,2}
+&amp;\cdots &amp; a_{1,n} \\ \vdots &amp; \vdots &amp; \ddots &amp;
+\vdots \\ b_n &amp; a_{n, 2} &amp; \cdots &amp;
+a_{n,n}\end{array}\right) \\ \vdots \\ x_n = \dfrac{1}{\det(A)} \cdot
+\det\left(\begin{array}{cccc}a_{1,1} &amp; \cdots &amp; a_{1,n-1} &amp;
+b_1\\ \vdots &amp; \ddots &amp; \vdots &amp; \vdots \\ a_{n, 1} &amp;
+\cdots &amp; a_{n,n-1} &amp; b_n\end{array}\right)
+\end{array}\right.</span> sono le componenti del vettore <span
+class="math inline">x \in \textrm{Mat}_{n \times 1}(\mathbb{K}) \mid A
+\cdot x = b</span></li>
+</ul></li>
+</ul>
+<hr />
+<h1 id="teorema-di-kronecker">Teorema di Kronecker</h1>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\mathbb{K}</span> campo</li>
+<li><span class="math inline">n, r, r&#39; \in \mathbb{N} - \{0\} \mid r
+&lt; r&#39; &lt; n</span></li>
+<li><span class="math inline">A \in \textrm{Mat}_{n \times
+n}(\mathbb{K})</span></li>
+<li><span class="math inline">M_1 \in \textrm{Mat}_{r \times
+r}(\mathbb{K}) \mid M_1</span> minore di <span class="math inline">A
+\land \det(A) \neq 0</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\textrm{rk}(A)=r \iff \forall
+M_1&#39;</span> orlato di <span class="math inline">M_1 \quad
+\det(M_1&#39;) = 0 \iff \forall M_2 \in \textrm{Mat}_{r&#39; \times
+r&#39;}(\mathbb{K}) \mid M_2</span> minore di <span
+class="math inline">A \quad \det(M_2) = 0</span></li>
+</ul></li>
+</ul>
+<hr />
+<h1 id="teorema-di-binet">Teorema di Binet</h1>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\mathbb{K}</span> campo</li>
+<li><span class="math inline">n \in \mathbb{N} - \{0\}</span></li>
+<li><span class="math inline">A, B \in \textrm{Mat}_{n \times
+n}(\mathbb{K})</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\det(A \cdot B) = \det(A) \cdot
+\det(B)</span></li>
+</ul></li>
+</ul>
+<h2 id="teorema-191">Teorema 191</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\mathbb{K}</span> campo</li>
+<li><span class="math inline">n \in \mathbb{N} - \{0\}</span></li>
+<li><span class="math inline">A \in \textrm{Mat}_{n \times
+n}(\mathbb{K})</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\det(A)^{-1}=\det(A^{-1})</span></li>
 </ul></li>
 </ul>
 </body>

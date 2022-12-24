@@ -343,3 +343,51 @@
     - allora $\textrm{span}(A^1, \ldots, A^n) = \textrm{span}(A^1, \ldots, A^n, b) \iff \dim(\textrm{span}(A^1, \ldots, A^n)) = \dim(\textrm{span}(A^1, \ldots, A^n, b))$
     - per dimostrazione precedente $\dim(\textrm{span}(A^1, \ldots, A^n)) = \textrm{rk}(A)$, e analogamente $\dim(\textrm{span}(A^1, \ldots, A^n, b)) = \textrm{rk}(A_b)$
     - allora $\dim(\textrm{span}(A^1, \ldots, A^n)) = \dim(\textrm{span}(A^1, \ldots, A^n, b)) \iff \textrm{rk}(A) = \textrm{rk}(A_b)$
+
+****
+
+# Teorema di Cramer
+
+- **Hp**
+    - $\mathbb{K}$ campo
+    - $n \in \mathbb{N} - \{0\}$
+    - $A \in \textrm{Mat}_{n \times n}(\mathbb{K}) \mid \det(A) \neq 0$
+    - $b \in \textrm{Mat}_{n \times 1}(\mathbb{K})$
+- **Th**
+    - $\left\{\begin{array}{c}x_1 = \dfrac{1}{\det(A)} \cdot \det\left(\begin{array}{cccc}b_1 & a_{1,2} &\cdots & a_{1,n} \\ \vdots & \vdots & \ddots & \vdots \\ b_n & a_{n, 2} & \cdots & a_{n,n}\end{array}\right) \\ \vdots \\ x_n = \dfrac{1}{\det(A)} \cdot \det\left(\begin{array}{cccc}a_{1,1} & \cdots & a_{1,n-1} & b_1\\ \vdots & \ddots & \vdots & \vdots \\ a_{n, 1} & \cdots & a_{n,n-1} & b_n\end{array}\right) \end{array}\right.$ sono le componenti del vettore $x \in \textrm{Mat}_{n \times 1}(\mathbb{K}) \mid A \cdot x = b$
+
+****
+
+# Teorema di Kronecker
+
+- **Hp**
+    - $\mathbb{K}$ campo
+    - $n, r, r' \in \mathbb{N} - \{0\} \mid r \lt r' \lt n$
+    - $A \in \textrm{Mat}_{n \times n}(\mathbb{K})$
+    - $M_1 \in \textrm{Mat}_{r \times r}(\mathbb{K}) \mid M_1$ minore di $A \land \det(A) \neq 0$
+- **Th**
+    - $\textrm{rk}(A)=r \iff \forall M_1'$ orlato di $M_1 \quad \det(M_1') = 0 \iff \forall M_2 \in \textrm{Mat}_{r' \times r'}(\mathbb{K}) \mid M_2$ minore di $A \quad \det(M_2) = 0$
+
+****
+
+# Teorema di Binet
+
+- **Hp**
+    - $\mathbb{K}$ campo
+    - $n \in \mathbb{N} - \{0\}$
+    - $A, B \in \textrm{Mat}_{n \times n}(\mathbb{K})$
+- **Th**
+    - $\det(A \cdot B) = \det(A) \cdot \det(B)$
+
+## Cor
+
+- **Hp**
+    - $\mathbb{K}$ campo
+    - $n \in \mathbb{N} - \{0\}$
+    - $A \in \textrm{Mat}_{n \times n}(\mathbb{K})$
+- **Th**
+    - $\det(A)^{-1}=\det(A^{-1})$
+- **Dim**
+    - $\det(A\cdot A^{-1})=\det(I_n)=1$
+    - $\det(A \cdot A^{-1}) = \det(A) \cdot \det(A^{-1})$ per il teorema di Binet
+    - allora $\det(A) \cdot \det(A^{-1}) = 1 \iff \det(A)^{-1}=\det(A^{-1})$

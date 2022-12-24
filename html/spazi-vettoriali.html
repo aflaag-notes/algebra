@@ -532,8 +532,8 @@ delle basi di <span class="math inline">V</span></li>
 <ul>
 <li><strong>Hp</strong>
 <ul>
-<li><span class="math inline">n \in \mathbb{N}</span></li>
 <li><span class="math inline">\mathbb{K}</span> campo</li>
+<li><span class="math inline">n \in \mathbb{N}</span></li>
 <li><span class="math inline">V</span> spazio vettoriale su <span
 class="math inline">\mathbb{K}</span></li>
 <li><span class="math inline">v_1, \ldots, v_n \in V</span></li>
@@ -697,21 +697,23 @@ vettoriali</li>
 <li><span class="math inline">n := \dim (V)</span></li>
 <li><span class="math inline">w_1, \ldots, w_k \in U \cap V</span> base
 di <span class="math inline">U \cap V</span></li>
-<li><span class="math inline">B_1 := w_1, \ldots, w_k, u_{k + 1},
-\ldots, u_m \in U</span> base di <span class="math inline">U</span></li>
-<li><span class="math inline">B_2 := w_1, \ldots, w_k, v_{k + 1},
-\ldots, v_n \in V</span> base di <span class="math inline">V</span></li>
-<li><span class="math inline">B_1 \cup B_2 := w_1, \ldots w_k, u_{k +
-1}, \ldots, u_m, v_{k + 1}, \ldots, v_n</span></li>
+<li><span class="math inline">\mathcal{B}_1 := w_1, \ldots, w_k, u_{k +
+1}, \ldots, u_m \in U</span> base di <span
+class="math inline">U</span></li>
+<li><span class="math inline">\mathcal{B}_2 := w_1, \ldots, w_k, v_{k +
+1}, \ldots, v_n \in V</span> base di <span
+class="math inline">V</span></li>
+<li><span class="math inline">\mathcal{B}_1 \cup \mathcal{B}_2 := w_1,
+\ldots w_k, u_{k + 1}, \ldots, u_m, v_{k + 1}, \ldots, v_n</span></li>
 <li><span class="math inline">\forall u \in U, v \in V \mid u :=
 \displaystyle \sum_{i = 1}^k{\lambda_iw_i} + \sum_{j = k +
 1}^m{\lambda_j u_j} \land \displaystyle v :=\sum_{i = 1}^k{\mu_iw_i} +
 \sum_{h = k + 1}^n {\mu_hv_h} \quad u + v =\sum_{i = 1}^k{(\lambda_i +
 \mu_i)w_i} + \sum_{j = k + 1}^m{\lambda_j u_j} + \sum_{h = k + 1}^n
 {\mu_hv_h} \implies u + v \in \textrm{span}(w_1, \ldots w_k, u_{k + 1},
-\ldots, u_m, v_{k + 1}, \ldots, v_n) \implies B_1 \cup B_2</span>
-generatori di <span class="math inline">U + V</span>, poiché <span
-class="math inline">u + v \in U + V</span></li>
+\ldots, u_m, v_{k + 1}, \ldots, v_n) \implies \mathcal{B}_1 \cup
+\mathcal{B}_2</span> generatori di <span class="math inline">U +
+V</span>, poiché <span class="math inline">u + v \in U + V</span></li>
 <li><span class="math inline">a := \displaystyle \sum_{i =
 1}^k{\lambda_iw_i}</span></li>
 <li><span class="math inline">b := \displaystyle \sum_{j = k +1}^m{\mu_j
@@ -757,17 +759,17 @@ class="math inline">a</span>, <span class="math inline">b</span> e <span
 class="math inline">c</span> nulli, il che implica che i vettori che
 generano <span class="math inline">a + b + c</span> sono linearmente
 indipendenti</li>
-<li><span class="math inline">B_1 \cup B_2</span> generatori di <span
-class="math inline">U + V \implies a + b + c \in U + V</span>, e poiché
-<span class="math inline">w_1, \ldots, w_k, u_{k + 1}, \ldots, u_m, v_{k
-+ 1}, \ldots, v_n</span> sono sia generatori che linearmente
-indipendenti, allora sono una base di <span class="math inline">U +
-V</span></li>
+<li><span class="math inline">\mathcal{B}_1 \cup \mathcal{B}_2</span>
+generatori di <span class="math inline">U + V \implies a + b + c \in U +
+V</span>, e poiché <span class="math inline">w_1, \ldots, w_k, u_{k +
+1}, \ldots, u_m, v_{k + 1}, \ldots, v_n</span> sono sia generatori che
+linearmente indipendenti, allora sono una base di <span
+class="math inline">U + V</span></li>
 <li>per definizione, la dimensione di uno spazio vettoriale è la
 cardinalità di una delle sue basi, e dunque la cardinalità di <span
-class="math inline">B_1 \cup B_2</span> è pari a <span
-class="math inline">k + (m - k) + (n - k) = k + m - k + n - k = m + n -
-k</span></li>
+class="math inline">\mathcal{B}_1 \cup \mathcal{B}_2</span> è pari a
+<span class="math inline">k + (m - k) + (n - k) = k + m - k + n - k = m
++ n - k</span></li>
 </ul></li>
 </ul>
 <h2 id="oss-6">Oss</h2>
@@ -877,6 +879,21 @@ sono una base di <span class="math inline">V/W</span> di cardinalità
 class="math inline">\dim(V/W) = \dim(V)-\dim(W)</span></li>
 </ul></li>
 </ul>
+<h2 id="oss-8">Oss</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\mathbb{K}</span> campo</li>
+<li><span class="math inline">k \in \mathbb{N}</span></li>
+<li><span class="math inline">V_1, \ldots, V_k</span> spazi vettoriali
+su <span class="math inline">\mathbb{K}</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\dim(V_1 \times \ldots \times V_k) =
+\dim(V_1) \cdot \ldots \cdot \dim(V_k)</span></li>
+</ul></li>
+</ul>
 <hr />
 <h1 id="applicazioni-lineari">Applicazioni lineari</h1>
 <h2 id="def-5">Def</h2>
@@ -900,7 +917,7 @@ lineare</strong> o <strong>trasformazione lineare</strong></li>
 </ul></li>
 </ul>
 </blockquote>
-<h2 id="oss-8">Oss</h2>
+<h2 id="oss-9">Oss</h2>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -941,11 +958,11 @@ x_1v_1 + \ldots + \lambda x_n v_n = \lambda(x_1v_1 + \ldots + x_n v_n) =
 </ul></li>
 </ul></li>
 </ul>
-<h2 id="oss-9">Oss</h2>
+<h2 id="oss-10">Oss</h2>
 <ul>
 <li>⚠️ <strong>QUI C’È UN BUCO DI COSE CHE NON HO CAPITO</strong></li>
 </ul>
-<h2 id="oss-10">Oss</h2>
+<h2 id="oss-11">Oss</h2>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -1038,7 +1055,7 @@ lineare</li>
 \in V : w = f(v)\}</span></li>
 </ul>
 </blockquote>
-<h2 id="oss-11">Oss</h2>
+<h2 id="oss-12">Oss</h2>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -1057,7 +1074,7 @@ lineare</li>
 <li>⚠️ <strong>TODO</strong></li>
 </ul></li>
 </ul>
-<h2 id="oss-12">Oss</h2>
+<h2 id="oss-13">Oss</h2>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -1101,7 +1118,7 @@ class="math inline">f</span></strong></li>
 <li>⚠️ <strong>TODO</strong></li>
 </ul>
 <hr />
-<h2 id="oss-13">Oss</h2>
+<h2 id="oss-14">Oss</h2>
 <ul>
 <li><strong>Hp</strong>
 <ul>

@@ -222,7 +222,7 @@
   2) $\forall g \in G, h \in H \quad g \cdot h \cdot g^{-1} \in H$
   3) $\forall g \in G, h \in H \quad \exists k \in H \mid g \cdot h = k \cdot g$
 - **Th**
-  - le tre formulazioni sono equivalenti
+  - le proposizioni sono equivalenti
 - **Dim**
   - 1 $\implies$ 3
     - $gH = Hg$ per ipotesi 1  $\implies \forall gh \in gH = Hg = \{kg \mid k \in H\} \implies \exists k \in H \mid gh = kg$ per definizione di $Hg$

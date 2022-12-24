@@ -994,5 +994,94 @@ A^n)) = \dim(\textrm{span}(A^1, \ldots, A^n, b)) \iff \textrm{rk}(A) =
 \textrm{rk}(A_b)</span></li>
 </ul></li>
 </ul>
+<hr />
+<h1 id="teorema-di-cramer">Teorema di Cramer</h1>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\mathbb{K}</span> campo</li>
+<li><span class="math inline">n \in \mathbb{N} - \{0\}</span></li>
+<li><span class="math inline">A \in \textrm{Mat}_{n \times
+n}(\mathbb{K}) \mid \det(A) \neq 0</span></li>
+<li><span class="math inline">b \in \textrm{Mat}_{n \times
+1}(\mathbb{K})</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\left\{\begin{array}{c}x_1 =
+\dfrac{1}{\det(A)} \cdot \det\left(\begin{array}{cccc}b_1 &amp; a_{1,2}
+&amp;\cdots &amp; a_{1,n} \\ \vdots &amp; \vdots &amp; \ddots &amp;
+\vdots \\ b_n &amp; a_{n, 2} &amp; \cdots &amp;
+a_{n,n}\end{array}\right) \\ \vdots \\ x_n = \dfrac{1}{\det(A)} \cdot
+\det\left(\begin{array}{cccc}a_{1,1} &amp; \cdots &amp; a_{1,n-1} &amp;
+b_1\\ \vdots &amp; \ddots &amp; \vdots &amp; \vdots \\ a_{n, 1} &amp;
+\cdots &amp; a_{n,n-1} &amp; b_n\end{array}\right)
+\end{array}\right.</span> sono le componenti del vettore <span
+class="math inline">x \in \textrm{Mat}_{n \times 1}(\mathbb{K}) \mid A
+\cdot x = b</span></li>
+</ul></li>
+</ul>
+<hr />
+<h1 id="teorema-di-kronecker">Teorema di Kronecker</h1>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\mathbb{K}</span> campo</li>
+<li><span class="math inline">n, r, r&#39; \in \mathbb{N} - \{0\} \mid r
+\lt r&#39; \lt n</span></li>
+<li><span class="math inline">A \in \textrm{Mat}_{n \times
+n}(\mathbb{K})</span></li>
+<li><span class="math inline">M_1 \in \textrm{Mat}_{r \times
+r}(\mathbb{K}) \mid M_1</span> minore di <span class="math inline">A
+\land \det(A) \neq 0</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\textrm{rk}(A)=r \iff \forall
+M_1&#39;</span> orlato di <span class="math inline">M_1 \quad
+\det(M_1&#39;) = 0 \iff \forall M_2 \in \textrm{Mat}_{r&#39; \times
+r&#39;}(\mathbb{K}) \mid M_2</span> minore di <span
+class="math inline">A \quad \det(M_2) = 0</span></li>
+</ul></li>
+</ul>
+<hr />
+<h1 id="teorema-di-binet">Teorema di Binet</h1>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\mathbb{K}</span> campo</li>
+<li><span class="math inline">n \in \mathbb{N} - \{0\}</span></li>
+<li><span class="math inline">A, B \in \textrm{Mat}_{n \times
+n}(\mathbb{K})</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\det(A \cdot B) = \det(A) \cdot
+\det(B)</span></li>
+</ul></li>
+</ul>
+<h2 id="cor-5">Cor</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\mathbb{K}</span> campo</li>
+<li><span class="math inline">n \in \mathbb{N} - \{0\}</span></li>
+<li><span class="math inline">A \in \textrm{Mat}_{n \times
+n}(\mathbb{K})</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\det(A)^{-1}=\det(A^{-1})</span></li>
+</ul></li>
+<li><strong>Dim</strong>
+<ul>
+<li><span class="math inline">\det(A\cdot
+A^{-1})=\det(I_n)=1</span></li>
+<li><span class="math inline">\det(A \cdot A^{-1}) = \det(A) \cdot
+\det(A^{-1})</span> per il teorema di Binet</li>
+<li>allora <span class="math inline">\det(A) \cdot \det(A^{-1}) = 1 \iff
+\det(A)^{-1}=\det(A^{-1})</span></li>
+</ul></li>
+</ul>
 </body>
 </html>

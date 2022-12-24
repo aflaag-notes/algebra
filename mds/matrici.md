@@ -84,7 +84,7 @@
 - **Th**
     - $(\textrm{Mat}_{n \times n}(\mathbb{K}), +, \cdot)$ è un anello
 - **Dim**
-    - **⚠️  TODO**
+    - **⚠️  TODO, non è anche di più?**
 
 ****
 
@@ -94,24 +94,187 @@
 
 - **Vettore trasposto**
 
-> - $n \in \mathbb{N}$
 > - $\mathbb{K}$ campo
-> - $v \in \textrm{Mat}_{n \times 1}(\mathbb{K}) \mid v = \left(\begin{array}$
+> - $n \in \mathbb{N}$
+> - $v \in \textrm{Mat}_{n \times 1}(\mathbb{K}) \mid \exists x_1, \ldots, x_n \in \mathbb{K} : v = \left(\begin{array}{c}x_1 \\ \vdots \\ x_n \end{array}\right)$
+> - $v^T = \left(x_1, \ldots, x_n\right)$ è il **vettore trasposto di $v$**
+>   - vicendevolmente, se $v$ è un vettore riga, il suo trasposto sarà il corrispondente vettore colonna
 
 - **Matrice trasposta**
 
 > - $m, n \in \mathbb{N} - \{0\}$
 > - $\mathbb{K}$ campo
 > - $A \in \textrm{Mat}_{m \times n}(\mathbb{K}) \mid A = \left(A^1, \ldots, A^n\right)$
-> - $A^T = \left(\begin{array}{c} {A^1}^T \\ \vdots \\ {A^n}^T \end{array}\right)$
+> - $A^T = \left(\begin{array}{c} {A^1}^T \\ \vdots \\ {A^n}^T \end{array}\right)$ è la **matrice trasposta di $A$**
+>   - vale il ragionamento analogo considerando le righe di $A$ al posto delle colonne
+
+## Oss
+
+- **Hp**
+    - $m, n \in \mathbb{N} - \{0\}$
+    - $\mathbb{K}$ campo
+    - $A \in \textrm{Mat}_{m \times n}(\mathbb{K})$
+    - $B \in \textrm{Mat}_{m \times n}(\mathbb{K})$
+- **Th**
+    - $(A\cdot B)^T = B^T\cdot A^T$
 
 ## Def
 
 - **Matrice identità**
 
-> - $n \in \mathbb{N} - \{0\}$
 > - $\mathbb{K}$ campo
-> - $I_n = \left(\begin{array}{c}e_1 \\ \vdots \\ e_n \end{array}\right) = \left(e_1^T, \ldots, e_n^T\right) = \left(\begin{array}{cccc}1 & 0 & \cdots & \cdots & 0 \\ \vdots & \ddots & & & \vdots\\ 0 & \cdots & 1 & \cdots & 0 \\ \vdots & & & \ddots & \vdots\\ 0 &\cdots & \cdots & 0 & 1\end{array}\right)$ è detta **matrice identità**
+> - $n \in \mathbb{N} - \{0\}$
+> - $I_n = \left(\begin{array}{c}e_1 \\ \vdots \\ e_n \end{array}\right) = \left(e_1^T, \ldots, e_n^T\right) = \left(\begin{array}{ccccc}1 & 0 & \cdots & \cdots & 0 \\ \vdots & \ddots & & & \vdots\\ 0 & \cdots & 1 & \cdots & 0 \\ \vdots & & & \ddots & \vdots\\ 0 &\cdots & \cdots & 0 & 1\end{array}\right)$ è detta **matrice identità**
+
+- **Matrice invertibile**
+
+> - $\mathbb{K}$ campo
+> - $n \in \mathbb{N} - \{0\}$
+> - $A \in \textrm{Mat}_{n \times n}(\mathbb{K})$
+> - $A$ **invertibile** $\iff \exists A^{-1} \in \textrm{Mat}_{n \times n}(\mathbb{K}) \mid A\cdot A^{-1} = A^{-1} \cdot A = I_n$
+
+- **Gruppo Generale Lineare**
+
+> - $\mathbb{K}$ campo
+> - $n \in \mathbb{N} - \{0\}$
+> - $\textrm{GL}(n, \mathbb{K}) := \{A \in \textrm{Mat}_{n \times n}(\mathbb{K}) \mid A$ invertibile $\}$ è detto **gruppo generale lineare invertibile**
+
+## Oss
+
+- **Hp**
+    - $\mathbb{K}$ campo
+    - $n \in \mathbb{N} - \{0\}$
+- **Th**
+    - $(\textrm{GL}(n, \mathbb{K}), \cdot)$ è un gruppo
+- **Dim**
+    - **⚠️  TODO**
+
+## Oss
+
+- **Hp**
+    - $\mathbb{K}$ campo
+    - $n \in \mathbb{N} - \{0\}$
+    - $f: \textrm{GL}(n, \mathbb{K}) \rightarrow \mathbb{K}^*$
+- **Th**
+    - $f$ morfismo di gruppi
+- **Dim**
+    - **⚠️  TODO**
+
+## Def
+
+- **Gruppo Speciale Lineare**
+
+> - $\mathbb{K}$ campo
+> - $n \in \mathbb{N} - \{0\}$
+> - $\textrm{SL}(n, \mathbb{K}) := \{A \in \textrm{Mat}_{n \times n}(\mathbb{K}) \mid \det(A) = 1\}$ è detto **gruppo generale lineare invertibile**
+
+## Def
+
+- **Matrici simili**
+
+> - $\mathbb{K}$ campo
+> - $n \in \mathbb{N} - \{0\}$
+> - $A, B \in \textrm{Mat}_{n \times n}(\mathbb{K})$
+> - $A$ **simile a $B$** $\iff \exists C \in \textrm{GL}(n, \mathbb{K}) \mid A = C^{-1}BC$
+
+## Oss
+
+- **Hp**
+    - $\mathbb{K}$ campo
+    - $n \in \mathbb{N} - \{0\}$
+    - $A, B \in \textrm{Mat}_{n \times n}(\mathbb{K}) \mid A$ simile a $B$
+- **Th**
+    - $\det(A) = \det(B)$
+- **Dim**
+    - $A$ simile a $B \implies \exists C \in \textrm{GL}(n, \mathbb{K}) \mid A = C^{-1}BC$ per definizione
+    - allora $\det(B)= \det(C^{-1})\cdot \det(A)\cdot \det(C)$
+    - per dimostrazione precedente $\det(C^{-1}) \cdot \det(C)^{-1}$
+    - allora $\det(B)= \det(C)^{-1}\cdot \det(A)\cdot \det(C) = \det(A)$
+
+## Def
+
+- **Traccia**
+
+> - $\mathbb{K}$ campo
+> - $n \in \mathbb{N} - \{0\}$
+> - $A \in \textrm{Mat}_{n \times n}(\mathbb{K})$
+> - $\textrm{tr}(A) := a_{1,1}+ \ldots + a_{n,n}$ è detta **traccia di $A$**
+
+## Oss
+
+- **Hp**
+    - $\mathbb{K}$ campo
+    - $n \in \mathbb{N} - \{0\}$
+    - $A, B \in \textrm{Mat}_{n \times n}(\mathbb{K}) \mid A$ simile a $B$
+- **Th**
+    - $\textrm{tr}(A) = \textrm{tr}(B)$
+
+## Def 
+
+- **Matrice triangolare superiore**
+
+> - $\mathbb{K}$ campo
+> - $n \in \mathbb{N} - \{0\}$
+> - $A \in \textrm{Mat}_{n \times n}(\mathbb{K})$
+> - $A$ è detta **triangolare superiore** $\iff \forall i, j \in [1, n], i \gt j \quad a_{i,j} = 0$
+
+- **Matrice triangolare inferiore**
+
+> - $\mathbb{K}$ campo
+> - $n \in \mathbb{N} - \{0\}$
+> - $A \in \textrm{Mat}_{n \times n}(\mathbb{K})$
+> - $A$ è detta **triangolare superiore** $\iff \forall i, j \in [1, n], i \lt j \quad a_{i,j} = 0$
+
+- **Matrice triangolare**
+
+> - $\mathbb{K}$ campo
+> - $n \in \mathbb{N} - \{0\}$
+> - $A \in \textrm{Mat}_{n \times n}(\mathbb{K})$
+> - $A$ è detta **triangolare $\iff$** $A$ triangolare superiore o triangolare inferiore
+
+## Def
+
+- **Sottomatrice di una matrice**
+
+> - $\mathbb{K}$ campo
+> - $m, n \in \mathbb{N} - \{0\}$
+> - $A \in \textrm{Mat}_{m \times n}(\mathbb{K})$
+> - $A_i^j$ è una **sottomatrice di $A$** $\iff A_i^j$ si ottiene rimuovendo $A_i$ e $A^j$ da $A$
+
+- **Minore di una matrice**
+
+> - $\mathbb{K}$ campo
+> - $m, n \in \mathbb{N} - \{0\}$
+> - $A \in \textrm{Mat}_{m \times n}(\mathbb{K})$
+> - $M$ è un **minore di $A$** $\iff M$ è una sottomatrice quadrata di $A$
+
+- **Orlato di un minore**
+
+> - $\mathbb{K}$ campo
+> - $m, n, r \in \mathbb{N} - \{0\} \mid r \lt m \land r \lt n$
+> - $A \in \textrm{Mat}_{m \times n}(\mathbb{K})$
+> - $M \in \textrm{Mat}_{r \times r}(\mathbb{K})$ è un minore di $A$
+> - $M' \in \textrm{Mat}_{(r + 1) \times (r + 1)}(\mathbb{K})$ è un **orlato di $M$** $\iff M'$ è un minore di $A$ e $M$ si ottiene rimuovendo una riga e una colonna da $M'$
+
+## Oss
+
+- **Hp**
+    - $\mathbb{K}$ campo
+    - $m, n, r \in \mathbb{N} - \{0\} \mid r \lt m \land r \lt n$
+    - $A \in \textrm{Mat}_{m \times n}(\mathbb{K})$
+    - $M \in \textrm{Mat}_{r \times r}(\mathbb{K})$ è un minore di $A$
+- **Th**
+    - $M$ ha $(m-r)\cdot(n-r)$ orlati in $A$
+    
+## Def
+
+- **Matrice completa**
+
+> - $\mathbb{K}$ campo
+> - $m, n \in \mathbb{N} - \{0\}$
+> - $A \in \textrm{Mat}_{m \times n}(\mathbb{K})$
+> - $b \in \textrm{Mat}_{m \times 1}(\mathbb{K})$
+> - $A_b:=\left(\begin{array}{cccc}a_{1, 1} & \cdots & a_{1, n} & b_1 \\ \vdots & \ddots & \vdots & \vdots \\ a_{m, 1} & \cdots & a_{m,n} & b_m\end{array}\right)$
 
 ****
 
@@ -215,16 +378,6 @@
     - per dimostrazione precedente si ha che $\dim(\textrm{span}(A_1, \ldots, A_m)^\bot)= \dim(\mathbb{K}^n) - \dim(\textrm{span}(A_1, \ldots, A_m))$
     - allora $\textrm{rk}(A) = \dim(\textrm{span}(A^1, \ldots, A^n)) = \dim(\mathbb{K}) - (\dim(\mathbb{K}^n) - \dim(\textrm{span}(A_1, \ldots, A_m))) = \dim(\textrm{span}(A_1, \ldots, A_m))$
 
-## Def
-
-- **Matrice completa**
-
-> - $\mathbb{K}$ campo
-> - $m, n \in \mathbb{N} - \{0\}$
-> - $A \in \textrm{Mat}_{m \times n}(\mathbb{K})$
-> - $b \in \textrm{Mat}_{m \times 1}(\mathbb{K})$
-> - $A_b:=\left(\begin{array}{cccc}a_{1, 1} & \cdots & a_{1, n} & b_1 \\ \vdots & \ddots & \vdots & \vdots \\ a_{m, 1} & \cdots & a_{m,n} & b_m\end{array}\right)$
-
 ****
 
 # Operazioni su righe e colonne
@@ -283,7 +436,7 @@
     - $\mathbb{K}$ campo
     - $m, n \in \mathbb{N} - \{0\}$
     - $A, B \in \textrm{Mat}_{m \times n}(\mathbb{K})$
-    - $A \equiv B \iff$ è possibile ricavare $B$ da $A$ eseguendo operazioni tra righe definite precedentemente
+    - $A \equiv B \iff$ è possibile ricavare $B$ da $A$ eseguendo operazioni _tra righe_ definite precedentemente
 - **Th**
     - $\equiv$ una relazione di equivalenza
 
@@ -293,7 +446,7 @@
     - $\mathbb{K}$ campo
     - $m, n \in \mathbb{N} - \{0\}$
     - $A, B \in \textrm{Mat}_{m \times n}(\mathbb{K})$
-    - $A \equiv B \iff$ è possibile ricavare $B$ da $A$ eseguendo operazioni tra righe definite precedentemente
+    - $A \equiv B \iff$ è possibile ricavare $B$ da $A$ eseguendo operazioni _tra righe_ definite precedentemente
 - **Th**
     - $A \equiv B \implies \ker(L_A) = \ker(L_B) \land \textrm{rk}(A) = \textrm{rk}(B)$
 
@@ -303,7 +456,7 @@
     - $\mathbb{K}$ campo
     - $m, n \in \mathbb{N} - \{0\}$
     - $A, B \in \textrm{Mat}_{m \times n}(\mathbb{K})$
-    - $A \equiv B \iff$ è possibile ricavare $B$ da $A$ eseguendo operazioni tra colonne definite precedentemente
+    - $A \equiv B \iff$ è possibile ricavare $B$ da $A$ eseguendo operazioni _tra colonne_ definite precedentemente
 - **Th**
     - $\equiv$ una relazione di equivalenza
 
@@ -313,7 +466,7 @@
     - $\mathbb{K}$ campo
     - $m, n \in \mathbb{N} - \{0\}$
     - $A, B \in \textrm{Mat}_{m \times n}(\mathbb{K})$
-    - $A \equiv B \iff$ è possibile ricavare $B$ da $A$ eseguendo operazioni tra colonne definite precedentemente
+    - $A \equiv B \iff$ è possibile ricavare $B$ da $A$ eseguendo operazioni _tra colonne_ definite precedentemente
 - **Th**
     - $A \equiv B \implies \textrm{im}(L_A) = \textrm{im}(L_B) \land \textrm{rk}(A) = \textrm{rk}(B)$
 

@@ -1,6 +1,9 @@
 # Indice
 
 - [Coefficienti binomiali](https://ph04.github.io/algebra/html/coefficienti-binomiali.html)
+- [Determinante](https://ph04.github.io/algebra/html/determinante.html)
+    - [Determinante](https://ph04.github.io/algebra/html/determinante.html#determinante)
+    - [Polinomio caratteristico](https://ph04.github.io/algebra/html/determinante.html#polinomio-caratteristico)
 - [Gruppi diedrali](https://ph04.github.io/algebra/html/gruppi-diedrali.html)
 - [Gruppi e Anelli](https://ph04.github.io/algebra/html/gruppi-e-anelli.html)
     - [Gruppi](https://ph04.github.io/algebra/html/gruppi-e-anelli.html#gruppi)
@@ -16,6 +19,7 @@
     - [Funzione totiente di Eulero](https://ph04.github.io/algebra/html/insieme-quoziente.html#funzione-totiente-di-eulero)
 - [Matrici](https://ph04.github.io/algebra/html/matrici.html)
     - [Matrici](https://ph04.github.io/algebra/html/matrici.html#matrici)
+    - [Matrici particolari](https://ph04.github.io/algebra/html/matrici.html#matrici-particolari)
     - [Rango](https://ph04.github.io/algebra/html/matrici.html#rango)
     - [Operazioni su righe e colonne](https://ph04.github.io/algebra/html/matrici.html#operazioni-su-righe-e-colonne)
 - [Morfismi](https://ph04.github.io/algebra/html/morfismi.html)
@@ -47,5 +51,9 @@
     - [Teorema fondamentale di isomorfismo](https://ph04.github.io/algebra/html/teoremi-fondamentali.html#teorema-fondamentale-di-isomorfismo)
     - [Teorema di Cauchy](https://ph04.github.io/algebra/html/teoremi-fondamentali.html#teorema-di-cauchy)
     - [Teorema del rango](https://ph04.github.io/algebra/html/teoremi-fondamentali.html#teorema-del-rango)
+    - [Teorema del Rouché-Capelli](https://ph04.github.io/algebra/html/teoremi-fondamentali.html#teorema-di-rouché-capelli)
+    - [Teorema del Cramer](https://ph04.github.io/algebra/html/teoremi-fondamentali.html#teorema-di-cramer)
+    - [Teorema del Kronecker](https://ph04.github.io/algebra/html/teoremi-fondamentali.html#teorema-di-kronecker)
+    - [Teorema del Binet](https://ph04.github.io/algebra/html/teoremi-fondamentali.html#teorema-di-binet)
 - [Tutti i teoremi](https://ph04.github.io/algebra/html/everything.html)
 

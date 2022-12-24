@@ -84,11 +84,318 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 ****
-# Gruppi diedrali
+# Determinante
 
 
 
 ## Definizione 2
+
+
+- **Applicazione multilineare**
+
+> - $\mathbb{K}$ campo
+> - $k \in \mathbb{N}$
+> - $V_1, \ldots, V_k, W$ spazi vettoriali
+> - $f: V_1 \times \ldots \times V_k \rightarrow W:(v_1, \ldots, v_k) \rightarrow w$
+    > - $f$ **multilineare** $\iff \forall i \in [1, k], \ \forall v_1 \in V_1, \ldots, v_i', v_i'' \in V_i, \ldots, v_k \in V_k, \ \forall \lambda, \mu \in \mathbb{K} \quad f(v_1, \ldots, \lambda v_i'+\mu v_i'', \ldots, v_k) = \lambda f(v_1, \ldots, v_i', \ldots, v_k) + \mu f(v_1, \ldots, v_i'', \ldots, v_k)$
+
+- **Determinante**
+
+> - $\mathbb{K}$ campo
+> - $n \in \mathbb{N} - \{0\}$
+> - $\det : \textrm{Mat}_{n \times n}(\mathbb{K}) \rightarrow \mathbb{K}$
+> - 1. $\forall A \in \textrm{Mat}_{n \times n}(\mathbb{K}) \quad \det$ multilineare su $A_1, \ldots A_n$ e $A^1, \ldots, A^n$
+> - 2. $\forall A \in \textrm{Mat}_{n \times n}(\mathbb{K}) \quad A_1, \ldots A_n$ e $A^1, \ldots, A^n$ basi di $\mathbb{K}^n \iff \det(A) \neq 0$
+> - 3. $\det(I_n) = 1$
+> - 4. per $\mathbb{K} \mid 1 \neq -1 \quad$ **⚠️  SCRIVI DETERMINANTE ALTERNANTE**
+> - $\det$ è il **determinante** $\iff \det$ verifica 1, 2 e 3, oppure 1, 3 e 4
+>   - poiché è possibile dimostrare che la funzione che verifica tali condizioni esiste ed è unica, allora il $\det$ è totalmente determinato da tali caratteristiche
+
+
+
+## Teorema 8
+
+
+- **Hp**
+    - $\mathbb{K}$ campo $\mid 1 \neq -1$
+    - $n \in \mathbb{N} - \{0\}$
+    - $f : \textrm{Mat}_{n \times n}(\mathbb{K}) \rightarrow \mathbb{K}$
+    4. **⚠️  SCRIVI**
+- **Th**
+    - **⚠️  DETERMINANTE ALTERNANTE**
+
+
+
+## Teorema 9
+
+
+- **Hp**
+    - $\mathbb{K}$ campo
+    - $n \in \mathbb{N} - \{0\}$
+    - $A \in \textrm{Mat}_{n \times n}(\mathbb{K})$
+    1. $A$ invertibile
+    2. $A_1, \ldots, A_n$ base di $\mathbb{K}^n$
+    3. $A^1, \ldots, A^n$ base di $\mathbb{K}^n$
+    4. $\textrm{rk}(A)=n$
+    5. $\det(A) \neq 0$
+    6. $A \equiv I_n$ tramite la relazione di equivalenza delle operazioni sulle righe
+    7. **⚠️  NON ANCHE PER COLONNE? CEH PENSO DE SI**
+- **Th**
+    - le proposizioni sono equivalenti
+
+## Teorema 10
+
+
+- **Hp**
+    - $\mathbb{K}$ campo
+    - $n \in \mathbb{N} - \{0\}$
+    - $A \in \textrm{Mat}_{n \times n}(\mathbb{K}) \mid \exists i \in [1, n] : A_i = 0_{\mathbb{K}^n} \lor \exists j \in [1, n] : A^j = 0_{\mathbb{K}^n}$, ovvero in $A$ è presente o una riga, o una colonna nulla
+- **Th**
+    - $\det(A) = 0$
+
+
+
+## Teorema 11
+
+
+- **Hp**
+    - $\mathbb{K}$ campo
+    - $n \in \mathbb{N} - \{0\}$
+    - $A \in \textrm{Mat}_{n \times n}(\mathbb{K})$
+- **Th**
+    - $\det(A) = \det(A^T)$
+
+
+
+## Teorema 12
+
+
+- **Hp**
+    - $\mathbb{K}$ campo
+    - $n \in \mathbb{N} - \{0\}$
+    - $A \in \textrm{Mat}_{n \times n}(\mathbb{K})$
+- **Th**
+    - $\displaystyle{\det(A) = \sum_{\sigma \in S_n} \textrm{sgn}(\sigma) \cdot \prod_{i=1}^n{a_{i, \sigma_i}}}$
+
+
+
+## Teorema 13
+
+
+- **Hp**
+    - $\mathbb{K}$ campo
+    - $A \in \textrm{Mat}_{2 \times 2}(\mathbb{K})$
+    - $A = \left(\begin{array}{cc}a_{1,1} & a_{1, 2} \\ a_{2, 1} & a_{2, 2}\end{array}\right)$
+- **Th**
+    - $\det(A) = a_{1,1}a_{2,2}-a_{1,2}a_{2,1}$
+
+
+
+## Teorema 14
+
+
+- **Hp**
+    - $\mathbb{K}$ campo
+    - $A \in \textrm{Mat}_{3 \times 3}(\mathbb{K})$
+    - $A = \left(\begin{array}{ccc}a_{1,1} & a_{1, 2} & a_{1,3}\\ a_{2, 1} & a_{2, 2} & a_{2,3} \\ a_{3,1} & a_{3,2} & a_{3,3}\end{array}\right)$
+- **Th**
+    - $\det(A) = a_{1,1}a_{2,2}a_{3,3}+a_{1,3}a_{2,1}a_{3,2}+a_{1,2}a_{2,3}a_{3,1} - a_{1,3}a_{2,2}a_{3,1}-a_{1,1}a_{2,3}a_{3,2}-a_{1,2}a_{2,1}a_{3,3}$
+
+
+
+## Teorema 15
+
+
+- **Hp**
+    - $\mathbb{K}$ campo
+    - $n \in \mathbb{N} - \{0\}$
+    - $A \in \textrm{Mat}_{n \times n}(\mathbb{K}) \mid A$ triangolare
+- **Th**
+    - $\det(A) = a_{1,1} \cdot \ldots \cdot a_{n, n}$
+
+
+
+## Teorema 16
+
+
+- **Hp**
+    - $\mathbb{K}$ campo
+    - $n \in \mathbb{N} - \{0\}$
+    - $\lambda \in \mathbb{K}$
+    - $A \in \textrm{Mat}_{n \times n}(\mathbb{K})$
+    - $A' = \left(\begin{array}{c}A_1 \\ \vdots \\ \lambda A_i \\ \vdots \\ A_n \end{array}\right)$
+- **Th**
+    - $\det(A')=\lambda \cdot \det(A)$
+
+## Teorema 17
+
+
+- **Hp**
+    - $\mathbb{K}$ campo
+    - $n \in \mathbb{N} - \{0\}$
+    - $A \in \textrm{Mat}_{n \times n}(\mathbb{K})$
+- **Th**
+    - $\forall 1 \le i, j \le n \quad \det(A) = \displaystyle \sum_{k = 1}^{n}{(-1)^{i + k}\cdot a_{i, k} \cdot \det(A_i^k)} = \sum_{h = 1}^n{(-1)^{h + j}\cdot a_{h, j} \cdot \det(A_h^j)}$
+
+
+
+## Definizione 3
+
+
+- **Aggiunta di una matrice**
+
+> - $\mathbb{K}$ campo
+> - $n \in \mathbb{N} - \{0\}$
+> - $A \in \textrm{Mat}_{n \times n}(\mathbb{K})$
+> - $A^*$ è detta **aggiunta di $A$** $\iff \forall i, j \in [1, n] \quad a^*_{i, j} = (-1)^{i + j}\cdot \det(A_i^j)$
+
+
+
+## Teorema 18
+
+
+- **Hp**
+    - $\mathbb{K}$ campo
+    - $n \in \mathbb{N} - \{0\}$
+    - $A \in \textrm{Mat}_{n \times n}(\mathbb{K}) \mid \det(A) \neq 0$
+- **Th**
+    - $A^{-1}=\dfrac{(A^*)^T}{\det(A)}$
+
+
+
+## Teorema 19
+
+
+- **Hp**
+    - $\mathbb{K}$ campo
+    - $A \in \textrm{Mat}_{2 \times 2}(\mathbb{K}) \mid \det(A) \neq 0$
+    - $A = \left(\begin{array}{cc}a & b \\ c & d\end{array}\right)$
+- **Th**
+    - $A^{-1}=\dfrac{1}{ad - bc} \left(\begin{array}{cc}d & -b \\ -c & a\end{array}\right)$
+
+****
+
+# Polinomio caratteristico
+
+
+
+## Definizione 4
+
+
+> - $\mathbb{K}$ campo
+> - $n \in \mathbb{N} - \{0\}$
+> - $A \in \textrm{Mat}_{n \times n}(\mathbb{K})$
+> - $p_A(x) := \det(x\cdot I_n - A)$ è detto **polinomio caratteristico di $A$**
+
+
+
+## Teorema 20
+
+
+- **Hp**
+    - $\mathbb{K}$ campo
+    - $n \in \mathbb{N} - \{0\}$
+    - $A \in \textrm{Mat}_{n \times n}(\mathbb{K})$
+- **Th**
+    - $p_A(x) = x^n - \textrm{tr}(A)\cdot x^{n -1} + \ldots + (-1)^n \cdot \det(A)$
+
+
+
+## Teorema 21
+
+
+- **Hp**
+    - $\mathbb{K}$ campo
+    - $n \in \mathbb{N} - \{0\}$
+    - $A, B \in \textrm{Mat}_{n \times n}(\mathbb{K}) \mid A$ simile a $B$
+- **Th**
+    - $p_A(x) = p_B(x)$
+
+
+
+## Definizione 5
+
+
+- **Autovalore**
+
+> - $\mathbb{K}$ campo
+> - $n \in \mathbb{N} - \{0\}$
+> - $A \in \textrm{Mat}_{n \times n}(\mathbb{K})$
+> - $\lambda \in \mathbb{K} \mid p_A(\lambda) = 0$ è detto **autovalore di $A$**
+
+- **Spettro**
+
+> - $\mathbb{K}$ campo
+> - $n \in \mathbb{N} - \{0\}$
+> - $A \in \textrm{Mat}_{n \times n}(\mathbb{K})$
+> - $\textrm{sp}(A) := \{\lambda \in \mathbb{K} \mid p_A(\lambda) = 0\}$ è detto **spettro di $A$**
+
+
+
+## Teorema 22
+
+
+- **Hp**
+    - $\mathbb{K}$ campo
+    - $n \in \mathbb{N} - \{0\}$
+    - $A, B \in \textrm{Mat}_{n \times n}(\mathbb{K}) \mid A$ simile a $B$
+- **Th**
+    - $\textrm{sp}(A) = \textrm{sp}(B)$
+
+
+
+## Teorema 23
+
+
+- **Hp**
+    - $\mathbb{K}$ campo
+    - $n \in \mathbb{N} - \{0\}$
+    - $A \in \textrm{Mat}_{n \times n}(\mathbb{K})$
+    - $\lambda \in \mathbb{K}$
+- **Th**
+    - $\lambda$ autovalore $\iff \exists v \in \mathbb{K}^n - \{0\} \mid A \cdot v = \lambda \cdot v$
+
+## Definizione 6
+
+
+- **Autovettore**
+
+> - $\mathbb{K}$ campo
+> - $n \in \mathbb{N} - \{0\}$
+> - $A \in \textrm{Mat}_{n \times n}(\mathbb{K})$
+> - $\lambda \in \textrm{sp}(A)$
+> - $v \in \mathbb{K}^n - \{0\}$ è detto **autovettore di $A$ relativo a $\lambda$** $\iff (A- \lambda \cdot I_n) \cdot v = 0$
+
+- **Autospazio**
+
+> - $\mathbb{K}$ campo
+> - $n \in \mathbb{N} - \{0\}$
+> - $A \in \textrm{Mat}_{n \times n}(\mathbb{K})$
+> - $\lambda \in \textrm{sp}(A)$
+> - $\textrm{E}_\lambda(A) := \{v \in \mathbb{K}^n \mid A \cdot v = \lambda \cdot v\}$ è detto **autospazio di $A$ relativo a $\lambda$**
+
+
+
+## Teorema 24
+
+
+- **Hp**
+    - $\mathbb{K}$ campo
+    - $n \in \mathbb{N} - \{0\}$
+    - $A \in \textrm{Mat}_{n \times n}(\mathbb{K})$
+    - $\lambda \in \textrm{sp}(A)$
+- **Th**
+    - $\textrm{E}_\lambda(A) \subset \mathbb{K}$ sottospazio vettoriale
+
+
+
+
+****
+# Gruppi diedrali
+
+
+
+## Definizione 7
 
 
 - **Gruppo diedrale**
@@ -101,7 +408,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 8
+## Teorema 25
 
 
 - **Hp**
@@ -110,7 +417,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
   - $|D_n| = 2n$
 
-## Teorema 9
+## Teorema 26
 
 
 - **Hp**
@@ -120,7 +427,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
   - $(D_n, \cdot)$ è un gruppo
 
-## Teorema 10
+## Teorema 27
 
 
 - **Hp**
@@ -128,7 +435,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
   - $(D_2, \cdot)$ è l'unico gruppo diedrale abeliano
 
-## Teorema 11
+## Teorema 28
 
 
 - **Hp**
@@ -138,7 +445,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
   - $\exists X \subset S_n$ sottogruppo di $S_n$ $\mid D_n \cong X$
     - $D_3 \cong S_3$
 
-## Definizione 3
+## Definizione 8
 
 
 - **Gruppo di Klein**
@@ -151,7 +458,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 12
+## Teorema 29
 
 
 - **Hp**
@@ -165,7 +472,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Definizione 4
+## Definizione 9
 
 
 - **Semigruppo**
@@ -194,7 +501,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 13
+## Teorema 30
 
 
 - **Hp**
@@ -203,7 +510,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
   - $e$ è unico in $G$
 
-## Teorema 14
+## Teorema 31
 
 
 - **Hp**
@@ -213,7 +520,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
   - $x^{-1}$ è unico in $G$ per $x$ rispetto a $m$
 
-## Teorema 15
+## Teorema 32
 
 
 - **Hp**
@@ -222,7 +529,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
   - $(X^X, \circ)$ è monoide
 
-## Teorema 16
+## Teorema 33
 
 
 - **Hp**
@@ -236,7 +543,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Definizione 5
+## Definizione 10
 
 
 - **Anello**
@@ -266,7 +573,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Definizione 6
+## Definizione 11
 
 
 - **Invertibili**
@@ -278,7 +585,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 17
+## Teorema 34
 
 
 - **Hp**
@@ -286,7 +593,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
   - $(A^*, \cdot)$ è un gruppo
 
-## Teorema 18
+## Teorema 35
 
 
 - **Hp**
@@ -294,7 +601,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
     - $(A^*, \cdot) \subset (A, \cdot)$ è un sottogruppo
 
-## Definizione 7
+## Definizione 12
 
 
 - **Divisori dello $0$**
@@ -311,7 +618,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 19
+## Teorema 36
 
 
 - **Hp**
@@ -319,7 +626,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
   - $x \mid 0 \iff x \notin A^*$
 
-## Teorema 20
+## Teorema 37
 
 
 - **Hp**
@@ -327,7 +634,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
   - $A$ dominio di integrità
 
-## Definizione 8
+## Definizione 13
 
 
 - **Elementi irriducibili**
@@ -344,7 +651,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 21
+## Teorema 38
 
 
 - **Hp**
@@ -357,7 +664,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 # Sottogruppi
 
 
-## Definizione 9
+## Definizione 14
 
 
 - **Sottogruppo**
@@ -367,7 +674,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Definizione 10
+## Definizione 15
 
 
 - **Sottogruppo normale**
@@ -381,7 +688,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 22
+## Teorema 39
 
 
 - **Hp**
@@ -390,14 +697,14 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
   2) $\forall g \in G, h \in H \quad g \cdot h \cdot g^{-1} \in H$
   3) $\forall g \in G, h \in H \quad \exists k \in H \mid g \cdot h = k \cdot g$
 - **Th**
-  - le tre formulazioni sono equivalenti
+  - le proposizioni sono equivalenti
 
 ****
 
 # Ordine
 
 
-## Definizione 11
+## Definizione 16
 
 
 - **Ordine di un elemento in un gruppo**
@@ -411,7 +718,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 23
+## Teorema 40
 
 
 - **Hp**
@@ -420,7 +727,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
     - $(H(g), +) \subset (G, +)$ sottogruppo
 
-## Teorema 24
+## Teorema 41
 
 
 - **Hp** 
@@ -429,7 +736,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
   - $(H(g), \cdot) \subset (G, \cdot)$  è sottogruppo
 
-## Teorema 25
+## Teorema 42
 
 
 - **Hp**
@@ -439,7 +746,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
   - $I(g)$ è un ideale
 
-## Teorema 26
+## Teorema 43
 
 
 - **Hp**
@@ -450,7 +757,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
   - $d = 0 \implies o(g) := |H(g)| = |\mathbb{Z}|$, dunque infinito
   - $d>0 \implies d = o(g)$
 
-## Teorema 27
+## Teorema 44
 
 
 - **Hp**
@@ -459,7 +766,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
   - $g^{|G|}=e$
 
-## Teorema 28
+## Teorema 45
 
 
 - **Hp**
@@ -468,7 +775,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
     - $o(g) = o(g^{-1})$
 
-## Teorema 29
+## Teorema 46
 
 
 - **Hp**
@@ -477,7 +784,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
     - $\forall g \in G \quad o(g^k) \mid o(g)$
 
-## Teorema 30
+## Teorema 47
 
 
 - **Hp**
@@ -488,7 +795,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
     - $\dfrac{m}{d} \mid o(gh) \land o(gh) \mid m$
 
-## Teorema 31
+## Teorema 48
 
 
 - **Hp**
@@ -505,7 +812,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Definizione 12
+## Definizione 17
 
 
 - **Ideali**
@@ -515,7 +822,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 32
+## Teorema 49
 
 
 - **Hp**
@@ -525,7 +832,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
   - $I(a)$ è un ideale, e prende il nome di _ideale di $A$ generato da $a \in A$_
 
-## Teorema 33
+## Teorema 50
 
 
 - **Hp**
@@ -534,7 +841,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
     - $I(a)=I(b) \iff \exists c \in A^* \mid a = bc$
 
-## Teorema 34
+## Teorema 51
 
 
 - **Hp**
@@ -542,7 +849,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
   - $I(a)=I(b) \iff a=\pm b$
 
-## Teorema 35
+## Teorema 52
 
 
 - **Hp**
@@ -552,7 +859,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
   - $I(a_1, \ldots, a_n)$ è un ideale, e prende il nome di _ideale di $A$ generato dagli $a_1, \ldots, a_n \in A$_
 
-## Definizione 13
+## Definizione 18
 
 
 - **Congruenza modulo di un ideale**
@@ -564,7 +871,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 36
+## Teorema 53
 
 
 - **Hp**
@@ -575,7 +882,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
   - $(A/I, +, \cdot)$ è un anello
 
-## Teorema 37
+## Teorema 54
 
 
 - **Hp**
@@ -583,7 +890,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
   -  $\exists ! \ d \in \mathbb{N} \mid I = I(d)$, o equivalentemente, in $\mathbb{Z}$ ogni ideale è principale
 
-## Teorema 38
+## Teorema 55
 
 
 - **Hp**
@@ -592,7 +899,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
     - $d = \textrm{MCD}(a_1, \ldots, a_n)$
 
-## Definizione 14
+## Definizione 19
 
 
 - **Massimo Comun Divisore**
@@ -603,7 +910,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 39
+## Teorema 56
 
 
 - **Hp**
@@ -612,7 +919,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
   - $\exists x_1, \ldots, x_n \in \mathbb{Z} \mid a_1 x_1 + \ldots + a_nx_n=d$, che prende il nome di _identità di Bézout_
 
-## Teorema 40
+## Teorema 57
 
 
 - ⚠️ **MANCA DIMOSTRAZIONE SISTEMA DI IDENTITÀ DI BÉZOUT**
@@ -623,7 +930,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Definizione 15
+## Definizione 20
 
 
 - **$+$ tra ideali**
@@ -634,7 +941,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 41
+## Teorema 58
 
 
 - **Hp**
@@ -643,7 +950,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
   - $I + J$ è un ideale
 
-## Definizione 16
+## Definizione 21
 
 
 - **$\cap$ tra ideali**
@@ -654,7 +961,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 42
+## Teorema 59
 
 
 - **Hp**
@@ -663,7 +970,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
     - $I \cap J$ è un ideale
 
-## Definizione 17
+## Definizione 22
 
 
 - **Minimo Comune Multiplo**
@@ -673,7 +980,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Definizione 18
+## Definizione 23
 
 
 - **$\cdot$ tra ideali**
@@ -684,7 +991,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 43
+## Teorema 60
 
 
 - **Hp**
@@ -693,7 +1000,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
   - $I \cdot J$ è un ideale
 
-## Teorema 44
+## Teorema 61
 
 
 - **Hp**
@@ -702,7 +1009,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
   - $I(a) + I(b) = I(d)$
 
-## Teorema 45
+## Teorema 62
 
 
 - **Hp**
@@ -716,7 +1023,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Definizione 19
+## Definizione 24
 
 
 - **Induzione**
@@ -727,7 +1034,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 46
+## Teorema 63
 
 
 - **Hp**
@@ -743,7 +1050,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Definizione 20
+## Definizione 25
 
 
 - **Insieme quoziente**
@@ -755,7 +1062,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Definizione 21
+## Definizione 26
 
 
 - **Insieme quoziente $\mathbb{Z}_n$**
@@ -768,7 +1075,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 47
+## Teorema 64
 
 
 - **Hp**
@@ -777,7 +1084,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
   - $(\mathbb{Z}_n, +)$ è un gruppo
 
-## Teorema 48
+## Teorema 65
 
 
 - **Hp**
@@ -787,7 +1094,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
   - $p \mid a \lor p \mid b$
 
-## Teorema 49
+## Teorema 66
 
 
 - **Hp**
@@ -795,7 +1102,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
   - $\mathbb{Z}_n$ dominio di integrità $\iff n \in \mathbb{P}$
 
-## Teorema 50
+## Teorema 67
 
 
 - **Hp**
@@ -803,7 +1110,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
   - $\forall [a] \in \mathbb{Z}_n \quad \textrm{MCD}(a, n) = 1 \iff [a] \in \mathbb{Z}^*_n$
 
-## Teorema 51
+## Teorema 68
 
 
 - **Hp**
@@ -811,7 +1118,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
   - $\mathbb{Z}_p$ campo
 
-## Teorema 52
+## Teorema 69
 
 
 - **Hp**
@@ -824,7 +1131,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 # Funzione totiente di Eulero
 
 
-## Definizione 22
+## Definizione 27
 
 
 - **Funzione totiente di Eulero**
@@ -834,7 +1141,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 53
+## Teorema 70
 
 
 - **Hp**
@@ -842,7 +1149,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
   - $[a]  \in \mathbb{Z}_{m n}^{*} \iff[a] \in \mathbb{Z}_{m}^{*} \land [a] \in \mathbb{Z}^*_{n}$
 
-## Teorema 54
+## Teorema 71
 
 
 - **Hp**
@@ -850,7 +1157,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
   - $\varphi(m \cdot n) = \varphi(m) \cdot \varphi(n)$
 
-## Teorema 55
+## Teorema 72
 
 
 - **Hp**
@@ -859,7 +1166,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
     - $\varphi(p^k) = p^{k -1}(p-1)$
 
-## Teorema 56
+## Teorema 73
 
 
 - **Hp**
@@ -876,7 +1183,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Definizione 23
+## Definizione 28
 
 
 - **Matrici**
@@ -895,7 +1202,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Definizione 24
+## Definizione 29
 
 
 - **Somma tra matrici**
@@ -908,7 +1215,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 57
+## Teorema 74
 
 
 - **Hp**
@@ -917,7 +1224,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
     - $\textrm{Mat}_{m \times n}(\mathbb{K})$ è uno spazio vettoriale
 
-## Definizione 25
+## Definizione 30
 
 
 - **Prodotto scalare**
@@ -931,14 +1238,14 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 58
+## Teorema 75
 
 
 - **⚠️  WIP**
 
 
 
-## Definizione 26
+## Definizione 31
 
 
 - **Prodotto tra matrici**
@@ -951,7 +1258,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 59
+## Teorema 76
 
 
 - **Hp**
@@ -968,7 +1275,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 60
+## Teorema 77
 
 
 - **Hp**
@@ -980,99 +1287,210 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 ****
 
-# Rango
+# Matrici particolari
 
 
-## Definizione 27
+## Definizione 32
 
 
-- **Sottospazio ortogonale**
+- **Vettore trasposto**
+
+> - $\mathbb{K}$ campo
+> - $n \in \mathbb{N}$
+> - $v \in \textrm{Mat}_{n \times 1}(\mathbb{K}) \mid \exists x_1, \ldots, x_n \in \mathbb{K} : v = \left(\begin{array}{c}x_1 \\ \vdots \\ x_n \end{array}\right)$
+> - $v^T = \left(x_1, \ldots, x_n\right)$ è il **vettore trasposto di $v$**
+>   - vicendevolmente, se $v$ è un vettore riga, il suo trasposto sarà il corrispondente vettore colonna
+
+- **Matrice trasposta**
+
+> - $m, n \in \mathbb{N} - \{0\}$
+> - $\mathbb{K}$ campo
+> - $A \in \textrm{Mat}_{m \times n}(\mathbb{K}) \mid A = \left(A^1, \ldots, A^n\right)$
+> - $A^T = \left(\begin{array}{c} {A^1}^T \\ \vdots \\ {A^n}^T \end{array}\right)$ è la **matrice trasposta di $A$**
+>   - vale il ragionamento analogo considerando le righe di $A$ al posto delle colonne
+
+
+
+## Teorema 78
+
+
+- **Hp**
+    - $m, n \in \mathbb{N} - \{0\}$
+    - $\mathbb{K}$ campo
+    - $A \in \textrm{Mat}_{m \times n}(\mathbb{K})$
+    - $B \in \textrm{Mat}_{m \times n}(\mathbb{K})$
+- **Th**
+    - $(A\cdot B)^T = B^T\cdot A^T$
+
+
+
+## Definizione 33
+
+
+- **Matrice identità**
 
 > - $\mathbb{K}$ campo
 > - $n \in \mathbb{N} - \{0\}$
-> - $V \subset \mathbb{K}^n$ sottospazio vettoriale
-> - $V^{\perp} := \{w \in \mathbb{K}^n \mid \forall v \in V \quad w \cdot v = 0_{\mathbb{K}^n}\}$ è detto **sottospazio ortogonale di $\mathbb{K}^n$**
->     - la definizione ha significato poiché il prodotto scalare tra due vettori è nullo esattamente quando i due vettori sono perpendicolari tra loro, per osservazione precedente
+> - $I_n = \left(\begin{array}{c}e_1 \\ \vdots \\ e_n \end{array}\right) = \left(e_1^T, \ldots, e_n^T\right) = \left(\begin{array}{ccccc}1 & 0 & \cdots & \cdots & 0 \\ \vdots & \ddots & & & \vdots\\ 0 & \cdots & 1 & \cdots & 0 \\ \vdots & & & \ddots & \vdots\\ 0 &\cdots & \cdots & 0 & 1\end{array}\right)$ è detta **matrice identità**
+
+- **Matrice invertibile**
+
+> - $\mathbb{K}$ campo
+> - $n \in \mathbb{N} - \{0\}$
+> - $A \in \textrm{Mat}_{n \times n}(\mathbb{K})$
+> - $A$ **invertibile** $\iff \exists A^{-1} \in \textrm{Mat}_{n \times n}(\mathbb{K}) \mid A\cdot A^{-1} = A^{-1} \cdot A = I_n$
+
+- **Gruppo Generale Lineare**
+
+> - $\mathbb{K}$ campo
+> - $n \in \mathbb{N} - \{0\}$
+> - $\textrm{GL}(n, \mathbb{K}) := \{A \in \textrm{Mat}_{n \times n}(\mathbb{K}) \mid A$ invertibile $\}$ è detto **gruppo generale lineare invertibile**
 
 
 
-## Teorema 61
+## Teorema 79
 
 
 - **Hp**
     - $\mathbb{K}$ campo
     - $n \in \mathbb{N} - \{0\}$
-    - $V \subset \mathbb{K}^n$ sottospazio vettoriale
 - **Th**
-    - $V^{\bot}$ è sottospazio vettoriale di $\mathbb{K}^n$
+    - $(\textrm{GL}(n, \mathbb{K}), \cdot)$ è un gruppo
 
-## Teorema 62
+## Teorema 80
 
 
 - **Hp**
     - $\mathbb{K}$ campo
     - $n \in \mathbb{N} - \{0\}$
-    - $V \subset \mathbb{K}^n$ sottospazio vettoriale
+    - $f: \textrm{GL}(n, \mathbb{K}) \rightarrow \mathbb{K}^*$
 - **Th**
-    - $\dim(V^{\bot}) = \dim(\mathbb{K}^n) - \dim(V)$
+    - $f$ morfismo di gruppi
 
-## Definizione 28
+## Definizione 34
 
 
-- **Moltiplicazione sinistra**
+- **Gruppo Speciale Lineare**
 
 > - $\mathbb{K}$ campo
-> - $m,n \in \mathbb{N} - \{0\}$
-> - $x \in \textrm{Mat}_{n \times 1}(\mathbb{K})$
-> - $\forall A \in \textrm{Mat}_{m \times n}(\mathbb{K}) \quad L_A:\mathbb{K}^n \rightarrow \mathbb{K}^m: x \rightarrow A\cdot x$
+> - $n \in \mathbb{N} - \{0\}$
+> - $\textrm{SL}(n, \mathbb{K}) := \{A \in \textrm{Mat}_{n \times n}(\mathbb{K}) \mid \det(A) = 1\}$ è detto **gruppo generale lineare invertibile**
 
 
 
-## Teorema 63
+## Definizione 35
+
+
+- **Matrici simili**
+
+> - $\mathbb{K}$ campo
+> - $n \in \mathbb{N} - \{0\}$
+> - $A, B \in \textrm{Mat}_{n \times n}(\mathbb{K})$
+> - $A$ **simile a $B$** $\iff \exists C \in \textrm{GL}(n, \mathbb{K}) \mid A = C^{-1}BC$
+
+
+
+## Teorema 81
 
 
 - **Hp**
     - $\mathbb{K}$ campo
-    - $m,n \in \mathbb{N} - \{0\}$
-    - $x \in \textrm{Mat}_{n \times 1}(\mathbb{K})$
+    - $n \in \mathbb{N} - \{0\}$
+    - $A, B \in \textrm{Mat}_{n \times n}(\mathbb{K}) \mid A$ simile a $B$
 - **Th**
-    - $\forall A \in \textrm{Mat}_{m \times n}(\mathbb{K}) \quad L_A$ è una trasformazione lineare
+    - $\det(A) = \det(B)$
 
-## Teorema 64
+## Definizione 36
+
+
+- **Traccia**
+
+> - $\mathbb{K}$ campo
+> - $n \in \mathbb{N} - \{0\}$
+> - $A \in \textrm{Mat}_{n \times n}(\mathbb{K})$
+> - $\textrm{tr}(A) := a_{1,1}+ \ldots + a_{n,n}$ è detta **traccia di $A$**
+
+
+
+## Teorema 82
 
 
 - **Hp**
     - $\mathbb{K}$ campo
-    - $m,n \in \mathbb{N} - \{0\}$
-    - $x \in \textrm{Mat}_{n \times 1}(\mathbb{K})$
+    - $n \in \mathbb{N} - \{0\}$
+    - $A, B \in \textrm{Mat}_{n \times n}(\mathbb{K}) \mid A$ simile a $B$
 - **Th**
-    - $\forall A \in \textrm{Mat}_{m \times n}(\mathbb{K}) \quad \ker(L_A) = \textrm{span}(A_1, \ldots, A_m)^\bot \land \textrm{im}(L_A) = \textrm{span}(A^1, \ldots, A^n)$
-
-## Definizione 29
+    - $\textrm{tr}(A) = \textrm{tr}(B)$
 
 
-- **Rango di una matrice**
+
+## Definizione 37
+ 
+
+- **Matrice triangolare superiore**
 
 > - $\mathbb{K}$ campo
-> - $m,n \in \mathbb{N} - \{0\}$
+> - $n \in \mathbb{N} - \{0\}$
+> - $A \in \textrm{Mat}_{n \times n}(\mathbb{K})$
+> - $A$ è detta **triangolare superiore** $\iff \forall i, j \in [1, n], i \gt j \quad a_{i,j} = 0$
+
+- **Matrice triangolare inferiore**
+
+> - $\mathbb{K}$ campo
+> - $n \in \mathbb{N} - \{0\}$
+> - $A \in \textrm{Mat}_{n \times n}(\mathbb{K})$
+> - $A$ è detta **triangolare superiore** $\iff \forall i, j \in [1, n], i \lt j \quad a_{i,j} = 0$
+
+- **Matrice triangolare**
+
+> - $\mathbb{K}$ campo
+> - $n \in \mathbb{N} - \{0\}$
+> - $A \in \textrm{Mat}_{n \times n}(\mathbb{K})$
+> - $A$ è detta **triangolare $\iff$** $A$ triangolare superiore o triangolare inferiore
+
+
+
+## Definizione 38
+
+
+- **Sottomatrice di una matrice**
+
+> - $\mathbb{K}$ campo
+> - $m, n \in \mathbb{N} - \{0\}$
 > - $A \in \textrm{Mat}_{m \times n}(\mathbb{K})$
-> - $x \in \textrm{Mat}_{n \times 1}(\mathbb{K})$
-> - $\textrm{rk}(A):=\textrm{rk}(L_A)$ è il **rango di $A$**
+> - $A_i^j$ è una **sottomatrice di $A$** $\iff A_i^j$ si ottiene rimuovendo $A_i$ e $A^j$ da $A$
+
+- **Minore di una matrice**
+
+> - $\mathbb{K}$ campo
+> - $m, n \in \mathbb{N} - \{0\}$
+> - $A \in \textrm{Mat}_{m \times n}(\mathbb{K})$
+> - $M$ è un **minore di $A$** $\iff M$ è una sottomatrice quadrata di $A$
+
+- **Orlato di un minore**
+
+> - $\mathbb{K}$ campo
+> - $m, n, r \in \mathbb{N} - \{0\} \mid r \lt m \land r \lt n$
+> - $A \in \textrm{Mat}_{m \times n}(\mathbb{K})$
+> - $M \in \textrm{Mat}_{r \times r}(\mathbb{K})$ è un minore di $A$
+> - $M' \in \textrm{Mat}_{(r + 1) \times (r + 1)}(\mathbb{K})$ è un **orlato di $M$** $\iff M'$ è un minore di $A$ e $M$ si ottiene rimuovendo una riga e una colonna da $M'$
 
 
 
-## Teorema 65
+## Teorema 83
 
 
 - **Hp**
     - $\mathbb{K}$ campo
-    - $m,n \in \mathbb{N} - \{0\}$
+    - $m, n, r \in \mathbb{N} - \{0\} \mid r \lt m \land r \lt n$
     - $A \in \textrm{Mat}_{m \times n}(\mathbb{K})$
-    - $x \in \textrm{Mat}_{n \times 1}(\mathbb{K})$
+    - $M \in \textrm{Mat}_{r \times r}(\mathbb{K})$ è un minore di $A$
 - **Th**
-    - $\textrm{rk}(A) =\dim(\textrm{span}(A^1, \ldots, A^n)) = \dim(\textrm{span}(A_1, \ldots, A_n)^\bot)$
+    - $M$ ha $(m-r)\cdot(n-r)$ orlati in $A$
+    
 
-## Definizione 30
+
+## Definizione 39
 
 
 - **Matrice completa**
@@ -1085,11 +1503,105 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 ****
 
+# Rango
+
+
+
+## Definizione 40
+
+
+- **Sottospazio ortogonale**
+
+> - $\mathbb{K}$ campo
+> - $n \in \mathbb{N} - \{0\}$
+> - $V \subset \mathbb{K}^n$ sottospazio vettoriale
+> - $V^{\perp} := \{w \in \mathbb{K}^n \mid \forall v \in V \quad w \cdot v = 0_{\mathbb{K}^n}\}$ è detto **sottospazio ortogonale di $\mathbb{K}^n$**
+>     - la definizione ha significato poiché il prodotto scalare tra due vettori è nullo esattamente quando i due vettori sono perpendicolari tra loro, per osservazione precedente
+
+
+
+## Teorema 84
+
+
+- **Hp**
+    - $\mathbb{K}$ campo
+    - $n \in \mathbb{N} - \{0\}$
+    - $V \subset \mathbb{K}^n$ sottospazio vettoriale
+- **Th**
+    - $V^{\bot}$ è sottospazio vettoriale di $\mathbb{K}^n$
+
+## Teorema 85
+
+
+- **Hp**
+    - $\mathbb{K}$ campo
+    - $n \in \mathbb{N} - \{0\}$
+    - $V \subset \mathbb{K}^n$ sottospazio vettoriale
+- **Th**
+    - $\dim(V^{\bot}) = \dim(\mathbb{K}^n) - \dim(V)$
+
+## Definizione 41
+
+
+- **Moltiplicazione sinistra**
+
+> - $\mathbb{K}$ campo
+> - $m,n \in \mathbb{N} - \{0\}$
+> - $x \in \textrm{Mat}_{n \times 1}(\mathbb{K})$
+> - $\forall A \in \textrm{Mat}_{m \times n}(\mathbb{K}) \quad L_A:\mathbb{K}^n \rightarrow \mathbb{K}^m: x \rightarrow A\cdot x$
+
+
+
+## Teorema 86
+
+
+- **Hp**
+    - $\mathbb{K}$ campo
+    - $m,n \in \mathbb{N} - \{0\}$
+    - $x \in \textrm{Mat}_{n \times 1}(\mathbb{K})$
+- **Th**
+    - $\forall A \in \textrm{Mat}_{m \times n}(\mathbb{K}) \quad L_A$ è una trasformazione lineare
+
+## Teorema 87
+
+
+- **Hp**
+    - $\mathbb{K}$ campo
+    - $m,n \in \mathbb{N} - \{0\}$
+    - $x \in \textrm{Mat}_{n \times 1}(\mathbb{K})$
+- **Th**
+    - $\forall A \in \textrm{Mat}_{m \times n}(\mathbb{K}) \quad \ker(L_A) = \textrm{span}(A_1, \ldots, A_m)^\bot \land \textrm{im}(L_A) = \textrm{span}(A^1, \ldots, A^n)$
+
+## Definizione 42
+
+
+- **Rango di una matrice**
+
+> - $\mathbb{K}$ campo
+> - $m,n \in \mathbb{N} - \{0\}$
+> - $A \in \textrm{Mat}_{m \times n}(\mathbb{K})$
+> - $x \in \textrm{Mat}_{n \times 1}(\mathbb{K})$
+> - $\textrm{rk}(A):=\textrm{rk}(L_A)$ è il **rango di $A$**
+
+
+
+## Teorema 88
+
+
+- **Hp**
+    - $\mathbb{K}$ campo
+    - $m,n \in \mathbb{N} - \{0\}$
+    - $A \in \textrm{Mat}_{m \times n}(\mathbb{K})$
+    - $x \in \textrm{Mat}_{n \times 1}(\mathbb{K})$
+- **Th**
+    - $\textrm{rk}(A) =\dim(\textrm{span}(A^1, \ldots, A^n)) = \dim(\textrm{span}(A_1, \ldots, A_n)^\bot)$
+
+****
+
 # Operazioni su righe e colonne
 
 
-
-## Definizione 31
+## Definizione 43
 
 
 - **Scambio di righe di una matrice**
@@ -1140,53 +1652,53 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 66
+## Teorema 89
 
 
 - **Hp**
     - $\mathbb{K}$ campo
     - $m, n \in \mathbb{N} - \{0\}$
     - $A, B \in \textrm{Mat}_{m \times n}(\mathbb{K})$
-    - $A \equiv B \iff$ è possibile ricavare $B$ da $A$ eseguendo operazioni tra righe definite precedentemente
+    - $A \equiv B \iff$ è possibile ricavare $B$ da $A$ eseguendo operazioni _tra righe_ definite precedentemente
 - **Th**
     - $\equiv$ una relazione di equivalenza
 
 
 
-## Teorema 67
+## Teorema 90
 
 
 - **Hp**
     - $\mathbb{K}$ campo
     - $m, n \in \mathbb{N} - \{0\}$
     - $A, B \in \textrm{Mat}_{m \times n}(\mathbb{K})$
-    - $A \equiv B \iff$ è possibile ricavare $B$ da $A$ eseguendo operazioni tra righe definite precedentemente
+    - $A \equiv B \iff$ è possibile ricavare $B$ da $A$ eseguendo operazioni _tra righe_ definite precedentemente
 - **Th**
     - $A \equiv B \implies \ker(L_A) = \ker(L_B) \land \textrm{rk}(A) = \textrm{rk}(B)$
 
 
 
-## Teorema 68
+## Teorema 91
 
 
 - **Hp**
     - $\mathbb{K}$ campo
     - $m, n \in \mathbb{N} - \{0\}$
     - $A, B \in \textrm{Mat}_{m \times n}(\mathbb{K})$
-    - $A \equiv B \iff$ è possibile ricavare $B$ da $A$ eseguendo operazioni tra colonne definite precedentemente
+    - $A \equiv B \iff$ è possibile ricavare $B$ da $A$ eseguendo operazioni _tra colonne_ definite precedentemente
 - **Th**
     - $\equiv$ una relazione di equivalenza
 
 
 
-## Teorema 69
+## Teorema 92
 
 
 - **Hp**
     - $\mathbb{K}$ campo
     - $m, n \in \mathbb{N} - \{0\}$
     - $A, B \in \textrm{Mat}_{m \times n}(\mathbb{K})$
-    - $A \equiv B \iff$ è possibile ricavare $B$ da $A$ eseguendo operazioni tra colonne definite precedentemente
+    - $A \equiv B \iff$ è possibile ricavare $B$ da $A$ eseguendo operazioni _tra colonne_ definite precedentemente
 - **Th**
     - $A \equiv B \implies \textrm{im}(L_A) = \textrm{im}(L_B) \land \textrm{rk}(A) = \textrm{rk}(B)$
 
@@ -1198,7 +1710,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Definizione 32
+## Definizione 44
  
 
 - **Morfismo di gruppi**
@@ -1216,7 +1728,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 70
+## Teorema 93
 
 
 - **Hp**
@@ -1227,7 +1739,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
   - $f(1_G) = 1_H$
 
-## Teorema 71
+## Teorema 94
 
 
 - **Hp**
@@ -1243,7 +1755,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 # Isomorfismi
 
 
-## Definizione 33
+## Definizione 45
 
 
 - **Isomorfismo**
@@ -1252,7 +1764,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 72
+## Teorema 95
 
 
 - **Hp**
@@ -1261,7 +1773,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
   - $f ^{-1}: H \rightarrow G$ isomorfismo
 
-## Teorema 73
+## Teorema 96
 
 
 - **Hp**
@@ -1269,7 +1781,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
     - $\cong$ è una relazione di equivalenza
 
-## Teorema 74
+## Teorema 97
 
 
 - **Hp**
@@ -1279,7 +1791,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
   - $(H, \cdot) \subset (\mathbb{C}-\{0\}, \cdot)$ è un sottogruppo
 
-## Teorema 75
+## Teorema 98
 
 
 - **Hp**
@@ -1287,7 +1799,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
   - $f$ isomorfismo di gruppi $(\mathbb{Z}_n , +)$ e $(H, \cdot)$
 
-## Teorema 76
+## Teorema 99
 
 
 - **Hp**
@@ -1297,7 +1809,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
   - $f$ morfismo di gruppi $(\mathbb{Z}, +)$ e $(G, \cdot)$
 
-## Teorema 77
+## Teorema 100
 
 
 - **Hp**
@@ -1305,7 +1817,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
   - $f$ morfismo di anelli $\left(\mathbb{Z},+, \cdot\right)$ e $\left(\mathbb{Z}_{n},+, \cdot\right)$
 
-## Teorema 78
+## Teorema 101
 
 
 - **Hp**
@@ -1314,7 +1826,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
   - $f$ morfismo di anelli $\left(\mathbb{Z}_{m},+, \cdot\right)$ e $\left(\mathbb{Z}_{n},+, \cdot\right)$
 
-## Teorema 79
+## Teorema 102
 
 
 - **Hp**
@@ -1329,7 +1841,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 # Kernel e immagine
 
 
-## Definizione 34
+## Definizione 46
 
 
 - **Kernel e immagine di gruppi**
@@ -1348,7 +1860,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 80
+## Teorema 103
 
 
 - **Hp**
@@ -1357,7 +1869,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
   - $\textrm{ker}(f) \subset G$ è sottogruppo
 
-## Teorema 81
+## Teorema 104
 
 
 - **Hp**
@@ -1366,7 +1878,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
   - $\textrm{im}(f) \subset H$ è sottogruppo
 
-## Teorema 82
+## Teorema 105
 
 
 - **Hp**
@@ -1375,7 +1887,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
   - $f$ iniettiva $\iff \textrm{ker}(f) = \{1_G\}$
 
-## Teorema 83
+## Teorema 106
 
 
 - **Hp**
@@ -1384,7 +1896,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
   - $\textrm{ker}(f)$ ideale
 
-## Teorema 84
+## Teorema 107
 
 
 - **Hp**
@@ -1393,7 +1905,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
   - $\textrm{im}(f) \subset B$ sottoanello
 
-## Teorema 85
+## Teorema 108
 
 
 - **Hp**
@@ -1403,7 +1915,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
   - $\textrm{ker}(f) = I(n)$
 
-## Teorema 86
+## Teorema 109
 
 
 - **Hp**
@@ -1418,7 +1930,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Definizione 35
+## Definizione 47
 
 
 - **Insieme dei complessi**
@@ -1428,7 +1940,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 87
+## Teorema 110
 
 
 - **Hp**
@@ -1441,7 +1953,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Definizione 36
+## Definizione 48
 
 
 - **Coniugato**
@@ -1452,7 +1964,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 88
+## Teorema 111
 
 
 - **Hp**
@@ -1465,7 +1977,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 89
+## Teorema 112
 
 
 - **Hp**
@@ -1475,7 +1987,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Definizione 37
+## Definizione 49
 
 
 - **Raggio**
@@ -1487,7 +1999,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Definizione 38
+## Definizione 50
 
 
 - **Forma polare**
@@ -1498,7 +2010,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Definizione 39
+## Definizione 51
 
 
 - **Soluzione principale**
@@ -1510,7 +2022,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 90
+## Teorema 113
 
 
 - **Hp**
@@ -1518,7 +2030,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
   - $(\mathbb{C}, +, \cdot )$ è un campo
 
-## Teorema 91
+## Teorema 114
 
 
 - **Hp**
@@ -1531,7 +2043,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 92
+## Teorema 115
 
 
 - **Hp**
@@ -1546,7 +2058,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Definizione 40
+## Definizione 52
 
 
 - **Permutazioni**
@@ -1557,7 +2069,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 93
+## Teorema 116
 
 
 - **Hp**
@@ -1565,7 +2077,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
   - $(S_X, \circ)$ è un gruppo, non abeliano se $|X| \ge 3$
 
-## Definizione 41
+## Definizione 53
 
 
 - **Ciclo di una permutazione**
@@ -1582,7 +2094,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 94
+## Teorema 117
 
 
 - **Hp**
@@ -1593,7 +2105,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
   - $(I(\sigma, i), +) \subset (\mathbb{Z}, +)$ è un ideale
 
-## Teorema 95
+## Teorema 118
 
 
 - **Hp**
@@ -1601,7 +2113,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
     - $I(\sigma, i)$ è **ideale principale** in $\mathbb{Z}$ generato da $I(d)$, dove $d$ è la lunghezza del ciclo di $i$, quindi $I(\sigma, i) = I(d)$
   - $I(\sigma, i) = I(d) \implies d \in I(\sigma, i)$
 
-## Teorema 96
+## Teorema 119
 
 
 - **Hp**
@@ -1618,7 +2130,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 # Trasposizioni
 
 
-## Definizione 42
+## Definizione 54
 
 
 - **Trasposizione**
@@ -1637,7 +2149,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 97
+## Teorema 120
 
 
 - **Hp**
@@ -1651,7 +2163,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 # Segno
 
 
-## Definizione 43
+## Definizione 55
 
 
 - **Segno di una permutazione**
@@ -1664,7 +2176,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 98
+## Teorema 121
 
 
 - **Hp**
@@ -1673,7 +2185,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
     - $A_n \subset S_n$ è un sottogruppo normale, detto _gruppo alterno di ordine $n$_
 
-## Teorema 99
+## Teorema 122
 
 
 - **Hp**
@@ -1682,7 +2194,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
     - $\textrm{sgn}(\sigma)= (-1)^k$
 
-## Teorema 100
+## Teorema 123
 
 
 - **Hp**
@@ -1691,7 +2203,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
     - $\operatorname{sgn}\left(\sigma \sigma^{\prime}\right)=\operatorname{sgn}(\sigma)\cdot \textrm{sgn}(\sigma ')$
 
-## Teorema 101
+## Teorema 124
 
 
 - **Hp**
@@ -1700,7 +2212,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
     - $\textrm{sgn}(\sigma^{-1})=\textrm{sgn}(\sigma)$
 
-## Teorema 102
+## Teorema 125
 
 
 - **Hp**
@@ -1710,7 +2222,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
     - $\textrm{sgn}(\sigma^\prime) = \textrm{sgn}(\sigma)$
 
-## Teorema 103
+## Teorema 126
 
 
 - **Hp**
@@ -1720,7 +2232,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
     - $\sigma \sim \sigma ^\prime \iff$$\left\{\begin{array}{c}k=h \\ d=d_{1}^{\prime} \\ \vdots \\ d_{k}=d_{h}^{\prime}=d_{k}^{\prime}\end{array}\right.$, dove $d_j$ è la lunghezza del ciclo $\gamma_j$ e $d_j^\prime$ è la lunghezza del ciclo $\gamma_j^\prime$
 
-## Teorema 104
+## Teorema 127
 
 
 - **Hp**
@@ -1735,7 +2247,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Definizione 44
+## Definizione 56
 
 
 - **Polinomi**
@@ -1747,7 +2259,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 105
+## Teorema 128
 
 
 - **Hp**
@@ -1755,7 +2267,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
     - $(\mathbb{K}[x], +, \cdot)$ è un anello
 
-## Definizione 45
+## Definizione 57
 
 
 - **Grado del polinomio**
@@ -1766,7 +2278,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 106
+## Teorema 129
 
 
 - **Hp**
@@ -1775,7 +2287,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
     - $\deg(a(x) \cdot b(x)) = \deg(a(x)) + \deg(b(x))$
 
-## Teorema 107
+## Teorema 130
 
 
 - **Hp**
@@ -1784,7 +2296,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
     - $\nexists a^{-1}(x) \in \mathbb{K}[x]$
 
-## Teorema 108
+## Teorema 131
 
 
 - **Hp**
@@ -1792,7 +2304,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
     - $\mathbb{K}[x]^* = \mathbb{K}^* \subset \mathbb{K}[x]$
 
-## Teorema 109
+## Teorema 132
 
 
 - **Hp**
@@ -1800,7 +2312,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
     - $\mathbb{K}[x]$ è un dominio di integrità
 
-## Definizione 46
+## Definizione 58
 
 
 - **Radici di un polinomio**
@@ -1811,7 +2323,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 110
+## Teorema 133
 
 
 - **Hp**
@@ -1821,7 +2333,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
     - $p(c) = 0 \iff x - c \mid p(x)$
 
-## Teorema 111
+## Teorema 134
 
 
 - **Hp**
@@ -1831,7 +2343,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
     - $|\{c \in \mathbb{K} \mid p(c) = 0\}| \le n$
 
-## Teorema 112
+## Teorema 135
 
 
 - **Hp**
@@ -1840,7 +2352,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
     - $I$ è un ideale principale
 
-## Teorema 113
+## Teorema 136
 
 
 - **Hp**
@@ -1850,7 +2362,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
     - $d(x)=\textrm{MCD}(a_1(x), \ldots, a_n(x))$
 
-## Teorema 114
+## Teorema 137
 
 
 - **Hp**
@@ -1860,7 +2372,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
     - $m(x)=\textrm{mcm}(a_1(x), \ldots, a_n(x))$
 
-## Teorema 115
+## Teorema 138
 
 
 - **Hp**
@@ -1871,7 +2383,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
     - $a_1(c) = \ldots = a_n(c) = 0 \iff d(c) = 0$
 
-## Teorema 116
+## Teorema 139
 
 
 - **Hp**
@@ -1880,7 +2392,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
     - $p(x) \in \mathbb{K}[x]$ irriducibile $\iff p(x)$ primo
 
-## Teorema 117
+## Teorema 140
 
 
 - **Hp**
@@ -1890,7 +2402,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
     - $\exists ! q_1(x), \ldots ,q_k(x) \in \mathbb{K}[x]$ irriducibili e monici$, c \in \mathbb{K} - \{0\} \mid p(x) = c \cdot q_1(x) \cdot \ldots \cdot q_k(x)$
     - in particolare, i polinomi sono unici a meno di un riordinamento
 
-## Teorema 118
+## Teorema 141
 
 
 - **Hp**
@@ -1899,7 +2411,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
     - $p(x)$ irriducibile $\iff \deg(p(x)) = 1$
 
-## Teorema 119
+## Teorema 142
 
 
 - **Hp**
@@ -1907,7 +2419,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
     - $p(x)$ irriducibile $\iff \deg(p(x)) = 1$ oppure $\deg(p(x)) = 2 \land \Delta \lt 0$
 
-## Teorema 120
+## Teorema 143
 
 
 - **Hp**
@@ -1918,7 +2430,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
     - $a \mid a_0 \land b \mid a_n$
 
-## Teorema 121
+## Teorema 144
 
 
 - ⚠️  **MANCA UN TEOREMA ENORME**
@@ -1930,7 +2442,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Definizione 47
+## Definizione 59
 
 
 - **Relazioni**
@@ -1988,7 +2500,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 122
+## Teorema 145
 
 
 - **Hp**
@@ -1997,7 +2509,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
   - $\mid$ è ordine parziale
 
-## Teorema 123
+## Teorema 146
 
 
 - **Hp**
@@ -2006,7 +2518,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
   - $\equiv$ è una relazione di equivalenza
 
-## Teorema 124
+## Teorema 147
 
 
 - **Hp**
@@ -2015,7 +2527,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
   - $x \equiv y \ (\bmod  \ d)$
 
-## Teorema 125
+## Teorema 148
 
 
 - **Hp**
@@ -2028,7 +2540,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 126
+## Teorema 149
 
 
 - **Hp**
@@ -2043,7 +2555,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 # Partizioni
 
 
-## Definizione 48
+## Definizione 60
 
 
 - **Partizione**
@@ -2055,7 +2567,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 127
+## Teorema 150
 
 
 - **Hp**
@@ -2063,7 +2575,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
   - $\forall x, y \in G \quad x \nsim y \iff [x] \cap [y] = \varnothing \lor x \sim y \iff [x] = [y]$
 
-## Teorema 128
+## Teorema 151
 
 
 - **Hp**
@@ -2077,7 +2589,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 # Classi laterali
 
 
-## Teorema 129
+## Teorema 152
 
 
 - **Hp**
@@ -2087,7 +2599,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
   - $x \sim_S y \iff x^{-1}y \in H$ è una relazione di equivalenza
 
-## Definizione 49
+## Definizione 61
  
 
 - **Classi laterali**
@@ -2103,7 +2615,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 130
+## Teorema 153
 
 
 - **Hp**
@@ -2114,7 +2626,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
   - $a \sim_S b \iff a \equiv b \ (\bmod \ n)$
 
-## Teorema 131
+## Teorema 154
 
 
 - **Hp**
@@ -2123,7 +2635,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
     - $H = [1] \in G/H$
 
-## Teorema 132
+## Teorema 155
 
 
 - **Hp**
@@ -2134,7 +2646,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
   - $xH:= \{ xh \mid h \in H\} = [x]$
 
-## Teorema 133
+## Teorema 156
 
 
 - **Hp**
@@ -2144,7 +2656,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
   - $| xH |= |H|$
 
-## Teorema 134
+## Teorema 157
 
 
 - **Hp**
@@ -2160,7 +2672,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Definizione 50
+## Definizione 62
  
 
 - **Spazio vettoriale**
@@ -2172,7 +2684,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 135
+## Teorema 158
 
 
 - **Hp**
@@ -2181,7 +2693,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
     - $\mathbb{K}^n$ spazio vettoriale su $\mathbb{K}$
 
-## Definizione 51
+## Definizione 63
 
 
 - **Sottospazio vettoriale**
@@ -2192,7 +2704,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Definizione 52
+## Definizione 64
 
 
 - **Span di vettori**
@@ -2206,7 +2718,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 136
+## Teorema 159
 
 
 - **Hp**
@@ -2217,7 +2729,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
     - $\textrm{span}(v_1, \ldots, v_n)$ è un sottospazio vettoriale di $V$
 
-## Definizione 53
+## Definizione 65
 
 
 - **Vettori generatori**
@@ -2249,7 +2761,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 137
+## Teorema 160
 
 
 - **Hp**
@@ -2259,7 +2771,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
     - $e_1, \ldots, e_n$ sono una base di $\mathbb{K}^n$, ed è detta _base canonica_
 
-## Teorema 138
+## Teorema 161
 
 
 - **Hp**
@@ -2270,7 +2782,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
     - $v_1, \ldots, v_n$ linearmente indipendenti $\iff v_1, \ldots, v_{n - 1}$ linearmente indipendenti $\land v_n \notin \textrm{span}(v_1, \ldots, v_{n - 1})$
 
-## Teorema 139
+## Teorema 162
 
 
 - **Hp**
@@ -2282,7 +2794,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
     - $k \le m$
 
-## Teorema 140
+## Teorema 163
 
 
 - **Hp**
@@ -2294,7 +2806,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
     - $n = m$, il che implica che la cardinalità delle basi di uno spazio vettoriale è unica
 
-## Definizione 54
+## Definizione 66
 
 
 - **Dimensione di uno spazio vettoriale**
@@ -2305,18 +2817,18 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 141
+## Teorema 164
 
 
 - **Hp**
-    - $n \in \mathbb{N}$
     - $\mathbb{K}$ campo
+    - $n \in \mathbb{N}$
     - $V$ spazio vettoriale su $\mathbb{K}$
     - $v_1, \ldots, v_n \in V$
 - **Th**
     - $v_1, \ldots, v_n$ base di $V \iff \forall v \in V \quad \exists ! \lambda_1, \ldots, \lambda_n \in \mathbb{K} \mid v = \lambda_1 v_1 + \ldots + \lambda_n v_n$
 
-## Teorema 142
+## Teorema 165
 
 
 - **Hp**
@@ -2328,7 +2840,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
     - $\exists w_{k + 1}, \ldots, w_n \in W \mid w_1, \ldots, w_n$ è una base di $W$
 
-## Teorema 143
+## Teorema 166
 
 
 - **Hp**
@@ -2340,7 +2852,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
     - $\exists 1 \le i_1, \ldots, i_n \le m \mid w_{i_1}, \ldots, w_{i_n}$ è una base di $W$
 
-## Teorema 144
+## Teorema 167
 
 
 - **Hp**
@@ -2351,7 +2863,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
     - $w_1, \ldots, w_n$ linearmente indipendenti $\iff w_1, \ldots, w_n$ generatori di $W$
 
-## Teorema 145
+## Teorema 168
 
 
 - **Hp**
@@ -2361,7 +2873,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
     - $\dim(U + V) = \dim(U) + \dim(V) - \dim(U \cap V)$
 
-## Teorema 146
+## Teorema 169
 
 
 - **Hp**
@@ -2371,7 +2883,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
     - $V/W$ sottospazio vettoriale
 
-## Teorema 147
+## Teorema 170
 
 
 - **Hp**
@@ -2381,12 +2893,23 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
     - $\dim(V/W) = \dim(V) - \dim(W)$
 
+## Teorema 171
+
+
+- **Hp**
+    - $\mathbb{K}$ campo
+    - $k \in \mathbb{N}$
+    - $V_1, \ldots, V_k$ spazi vettoriali su $\mathbb{K}$
+- **Th**
+    - $\dim(V_1 \times \ldots \times V_k) = \dim(V_1) \cdot \ldots \cdot \dim(V_k)$
+
 ****
 
 # Applicazioni lineari
 
 
-## Definizione 55
+
+## Definizione 67
 
 
 - **Applicazioni lineari**
@@ -2398,7 +2921,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 148
+## Teorema 172
 
 
 - **Hp**
@@ -2408,14 +2931,14 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
     - $V \cong \mathbb{K}^n$
 
-## Teorema 149
+## Teorema 173
 
 
 - ⚠️ **QUI C'È UN BUCO DI COSE CHE NON HO CAPITO**
 
 
 
-## Teorema 150
+## Teorema 174
 
 
 - **Hp**
@@ -2424,7 +2947,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
     - $V \cong W \iff \dim(V) = \dim(W)$
 
-## Definizione 56
+## Definizione 68
 
 
 - **Kernel e immagine**
@@ -2437,7 +2960,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 151
+## Teorema 175
 
 
 - **Hp**
@@ -2447,7 +2970,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
     - $\ker(f) \subset V$ sottospazio
 
-## Teorema 152
+## Teorema 176
 
 
 - **Hp**
@@ -2457,7 +2980,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
     - $\textrm{im}(f) \subset W$ sottospazio
 
-## Definizione 57
+## Definizione 69
 
 
 - **Rango di un'applicazione lineare**
@@ -2473,7 +2996,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 153
+## Teorema 177
 
 
 - ⚠️ **TODO**
@@ -2482,7 +3005,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 154
+## Teorema 178
 
 
 - **Hp**
@@ -2518,7 +3041,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
   - $\exists !  \ q, r \in \mathbb{Z} \mid m=n q+r \quad 0 \leq r<n$
 
-## Teorema 155
+## Teorema 179
 
 
 - **Hp**
@@ -2556,7 +3079,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 # Teorema cinese dei resti
 
 
-## Teorema 156
+## Teorema 180
 
 
 - **Hp**
@@ -2565,7 +3088,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
   - $m = a_1 \cdot \ldots \cdot a_n$
 
-## Teorema 157
+## Teorema 181
 
 
 - **Hp**
@@ -2576,7 +3099,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
   - $\exists \phi \mid \phi: \mathbb{Z}_m \rightarrow \mathbb{Z}_{a_1} \times \ldots \times \mathbb{Z}_{a_n}: x \ (\bmod \ m) \rightarrow (x \ (\bmod \ a_1), \ldots, x \ (\bmod \ a_n))$
   - $\phi$ è una funzione ben definita, ed è iniettiva
 
-## Teorema 158
+## Teorema 182
 
 
 - **Hp**
@@ -2587,7 +3110,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
   - $\exists ! x \ (\bmod \ m) \mid$ $\left\{\begin{array}{c}x \equiv b_{1}\ \left(\bmod  \ a_{1}\right) \\ \vdots \\ x \equiv b_{n}\ \left(\bmod  \ a_{n}\right)\end{array}\right.$
 
-## Teorema 159
+## Teorema 183
 
 
 - **Hp**
@@ -2612,7 +3135,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
   - $(a+b )^n = \displaystyle{\sum_{k = 0}^{n}{\binom{n}{k} a^k b ^{n - k}}}$
 
-## Teorema 160
+## Teorema 184
 
 
 - ⚠️ **NON HO CAPITO UN CAZZO**
@@ -2630,7 +3153,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
   - $a^{p} \equiv a \ (\bmod \ p)$
 
-## Teorema 161
+## Teorema 185
 
 
 - **Hp**
@@ -2639,7 +3162,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
   - $[a]^{-1}=\left[a\right]^{p-2}$
 
-## Teorema 162
+## Teorema 186
 
 
 - **Hp**
@@ -2647,7 +3170,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
     - $\displaystyle \prod_{0 \lt a \lt p} (x - a) \equiv x^{p - 1} - 1 \ (\bmod \ p)$
 
-## Teorema 163
+## Teorema 187
 
 
 - ⚠️ **NON HO CAPITO UN CAZZO**
@@ -2675,7 +3198,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
     - $A / \textrm{ker}(f) \cong \textrm{im}(f)$, ovvero $\exists \varphi \mid \varphi : A / \textrm{ker}(f) \rightarrow \textrm{im}(f): [a] \rightarrow f(a)$ isomorfismo di anelli
 
-## Teorema 164
+## Teorema 188
 
 
 - **Hp**
@@ -2684,7 +3207,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
   - $G / \textrm{ker}(f) \cong \textrm{im}(f)$, o alternativamente $\exists \varphi \mid \varphi : G / \textrm{ker}(f) \rightarrow \textrm{im}(f): [g] \rightarrow f(g)$ isomorfismo di gruppi
 
-## Teorema 165
+## Teorema 189
 
 
 - **Hp**
@@ -2707,7 +3230,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
   - $\exists g \in G \mid o(g) = p$
 
 
-## Teorema 166
+## Teorema 190
 
 
 - **Hp**
@@ -2739,3 +3262,56 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
     - $b \in \textrm{Mat}_{m \times 1}(\mathbb{K})$
 - **Th**
     - $\exists x \in \textrm{Mat}_{n \times 1}(\mathbb{K}) \mid A\cdot x = b \iff \textrm{rk}(A) = \textrm{rk}(A_b)$
+
+****
+
+
+# Teorema di Cramer
+
+- **Hp**
+    - $\mathbb{K}$ campo
+    - $n \in \mathbb{N} - \{0\}$
+    - $A \in \textrm{Mat}_{n \times n}(\mathbb{K}) \mid \det(A) \neq 0$
+    - $b \in \textrm{Mat}_{n \times 1}(\mathbb{K})$
+- **Th**
+    - $\left\{\begin{array}{c}x_1 = \dfrac{1}{\det(A)} \cdot \det\left(\begin{array}{cccc}b_1 & a_{1,2} &\cdots & a_{1,n} \\ \vdots & \vdots & \ddots & \vdots \\ b_n & a_{n, 2} & \cdots & a_{n,n}\end{array}\right) \\ \vdots \\ x_n = \dfrac{1}{\det(A)} \cdot \det\left(\begin{array}{cccc}a_{1,1} & \cdots & a_{1,n-1} & b_1\\ \vdots & \ddots & \vdots & \vdots \\ a_{n, 1} & \cdots & a_{n,n-1} & b_n\end{array}\right) \end{array}\right.$ sono le componenti del vettore $x \in \textrm{Mat}_{n \times 1}(\mathbb{K}) \mid A \cdot x = b$
+
+
+
+****
+
+
+# Teorema di Kronecker
+
+- **Hp**
+    - $\mathbb{K}$ campo
+    - $n, r, r' \in \mathbb{N} - \{0\} \mid r \lt r' \lt n$
+    - $A \in \textrm{Mat}_{n \times n}(\mathbb{K})$
+    - $M_1 \in \textrm{Mat}_{r \times r}(\mathbb{K}) \mid M_1$ minore di $A \land \det(A) \neq 0$
+- **Th**
+    - $\textrm{rk}(A)=r \iff \forall M_1'$ orlato di $M_1 \quad \det(M_1') = 0 \iff \forall M_2 \in \textrm{Mat}_{r' \times r'}(\mathbb{K}) \mid M_2$ minore di $A \quad \det(M_2) = 0$
+
+
+
+****
+
+
+# Teorema di Binet
+
+- **Hp**
+    - $\mathbb{K}$ campo
+    - $n \in \mathbb{N} - \{0\}$
+    - $A, B \in \textrm{Mat}_{n \times n}(\mathbb{K})$
+- **Th**
+    - $\det(A \cdot B) = \det(A) \cdot \det(B)$
+
+
+## Teorema 191
+
+
+- **Hp**
+    - $\mathbb{K}$ campo
+    - $n \in \mathbb{N} - \{0\}$
+    - $A \in \textrm{Mat}_{n \times n}(\mathbb{K})$
+- **Th**
+    - $\det(A)^{-1}=\det(A^{-1})$
