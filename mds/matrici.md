@@ -33,23 +33,6 @@
     - $m, n \in \mathbb{N} - \{0\}$
 - **Th**
     - $\textrm{Mat}_{m \times n}(\mathbb{K})$ è uno spazio vettoriale
-- **Dim**
-    - **⚠️ TODO**
-
-## Def
-
-- **Prodotto scalare**
-
-> - $\mathbb{K}$ campo
-> - $m, n \in \mathbb{N} - \{0\}$
-> - $A \in \textrm{Mat}_{1 \times n}(\mathbb{K})$
-> - $B \in \textrm{Mat}_{m \times 1}(\mathbb{K})$
-> - $A \cdot B := \displaystyle \sum_{i = 1}^n{a_i \cdot b_i}$ è il **prodotto scalare tra $A$ e $B$**
-
-
-## Oss
-
-- **⚠️  WIP**
 
 ## Def
 
@@ -59,20 +42,21 @@
 > - $l, m, n \in \mathbb{N} - \{0\}$
 > - $A \in \textrm{Mat}_{l \times m}(\mathbb{K}) \mid A = \left(\begin{array}{ccc} a_{1, 1} & \cdots & a_{1, m} \\ \vdots & \ddots & \vdots \\ a_{l, 1} & \cdots & a_{l, m} \end{array}\right)$
 > - $B \in \textrm{Mat}_{m \times n}(\mathbb{K}) \mid B = \left(\begin{array}{ccc} b_{1, 1} & \cdots & b_{1, n} \\ \vdots & \ddots & \vdots \\ b_{m, 1} & \cdots & b_{m, n} \end{array}\right)$
-> - $C \in \textrm{Mat}_{l \times n}(\mathbb{K}) \mid C = A \cdot B$ è il **prodotto tra $A$ e $B$**, ed è definito come $\left(\begin{array}{ccc}a_{1, 1}b_{1, 1} + \ldots + a_{1, m}b_{m, 1} & \cdots & a_{1, 1}b_{1, n} + \ldots + a_{1, m}b_{m,n} \\ \vdots & \ddots & \vdots \\a_{l,1}b_{1, 1} + \ldots + a_{l,m}b_{m, 1} & \cdots & a_{l,1}b_{1,n} + \ldots + a_{l, m}b_{m,n}\end{array}\right)$
+> - $C \in \textrm{Mat}_{l \times n}(\mathbb{K}) \mid C = AB$ è il **prodotto tra $A$ e $B$**, ed è definito come $\left(\begin{array}{ccc}a_{1, 1}b_{1, 1} + \ldots + a_{1, m}b_{m, 1} & \cdots & a_{1, 1}b_{1, n} + \ldots + a_{1, m}b_{m,n} \\ \vdots & \ddots & \vdots \\a_{l,1}b_{1, 1} + \ldots + a_{l,m}b_{m, 1} & \cdots & a_{l,1}b_{1,n} + \ldots + a_{l, m}b_{m,n}\end{array}\right)$
 
 ## Oss
 
 - **Hp**
     - $\mathbb{K}$ campo
     - $\lambda \in \mathbb{K}$
-    - $l, m, n \in \mathbb{N} - \{0\}$
+    - $l, m, n, k \in \mathbb{N} - \{0\}$
     - $A \in \textrm{Mat}_{l \times m}(\mathbb{K})$
     - $B \in \textrm{Mat}_{m \times n}(\mathbb{K})$
 - **Th**
-    - $(AB)C = A(BC)$
-    - $A(B+C) = AB+AC$
-    - $(A+B)C = AC+BC$
+    - **⚠️  STA ROBA È TUTTA SBAGLIATA**
+    - $\forall C \in \textrm{Mat}_{n \times k}(\mathbb{K}) \quad (AB)C = A(BC)$
+    - $\forall C \in \textrm{Mat}_{m \times n}(\mathbb{K}) \quad A(B+C) = AB+AC$
+    - $\forall C \in \textrm{Mat}_{n \times k}(\mathbb{K}) \quad (A+B)C = AC+BC$
     - $\lambda(AB) = (\lambda A)B = A (\lambda B)$
 
 ## Oss
@@ -85,6 +69,49 @@
     - $(\textrm{Mat}_{n \times n}(\mathbb{K}), +, \cdot)$ è un anello
 - **Dim**
     - **⚠️  TODO, non è anche di più?**
+
+****
+
+# Interpretazione geometrica dei vettori
+
+## Def
+
+- **Prodotto scalare**
+
+> - $\mathbb{K}$ campo
+> - $n \in \mathbb{N} - \{0\}$
+> - $u, v \in \mathbb{K}^n \mid u = \left(\begin{array}{c}x_1 \\ \vdots \\ x_n \end{array}\right), v = \left(\begin{array}{c}y_1 \\ \vdots \\ y_n \end{array}\right)$
+> - $u \cdot v := \displaystyle \sum_{i = 1}^n{x_i \cdot y_i}$ è il **prodotto scalare tra $u$ e $v$**
+
+## Oss
+
+- **Hp**
+    - $n \in \mathbb{N} - \{0\}$
+    - $u, v \in \mathbb{K}^n$
+- **Th**
+    - $u \cdot v = v \cdot u$
+    - $\forall w \in \mathbb{K}^n \quad u \cdot (v + w) = u \cdot v + u \cdot w$
+    - $u \cdot (\lambda v) = \lambda(u \cdot v)$
+    
+
+## Def
+
+- **Norma di un vettore**
+
+> - $\mathbb{K}$ campo
+> - $n \in \mathbb{N} - \{0\}$
+> - $u \in \mathbb{K}^n \mid u = \left(\begin{array}{c}x_1 \\ \vdots \\ x_n \end{array}\right)$
+> - $||u|| := \sqrt{x_1^2 + \ldots + x_n^2}$ è detta **norma di $u$**
+>   - graficamente, corrisponde alla lunghezza del vettore $u$ nel piano cartesiano
+
+## Oss
+
+- **Hp**
+    - $\mathbb{K}$ campo
+    - $n \in \mathbb{N} - \{0\}$
+    - $u \in \mathbb{K}^n \mid u = \left(\begin{array}{c}x_1 \\ \vdots \\ x_n \end{array}\right)$
+- **Th**
+    - $||u|| = \sqrt{u \cdot u}$
 
 ****
 

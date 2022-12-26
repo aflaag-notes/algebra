@@ -51,6 +51,7 @@
     - [Teorema di Eulero](https://ph04.github.io/algebra/html/teoremi-fondamentali.html#teorema-di-eulero)
     - [Teorema fondamentale di isomorfismo](https://ph04.github.io/algebra/html/teoremi-fondamentali.html#teorema-fondamentale-di-isomorfismo)
     - [Teorema di Cauchy](https://ph04.github.io/algebra/html/teoremi-fondamentali.html#teorema-di-cauchy)
+    - [Teorema di Carnot](https://ph04.github.io/algebra/html/teoremi-fondamentali.html#teorema-di-carnot)
     - [Teorema del rango](https://ph04.github.io/algebra/html/teoremi-fondamentali.html#teorema-del-rango)
     - [Teorema del Rouché-Capelli](https://ph04.github.io/algebra/html/teoremi-fondamentali.html#teorema-di-rouché-capelli)
     - [Teorema del Cramer](https://ph04.github.io/algebra/html/teoremi-fondamentali.html#teorema-di-cramer)

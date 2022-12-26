@@ -255,34 +255,8 @@ class="math inline">B</span></strong></li>
 <li><span class="math inline">\textrm{Mat}_{m \times
 n}(\mathbb{K})</span> è uno spazio vettoriale</li>
 </ul></li>
-<li><strong>Dim</strong>
-<ul>
-<li><strong>⚠️ TODO</strong></li>
-</ul></li>
 </ul>
 <h2 id="def-2">Def</h2>
-<ul>
-<li><strong>Prodotto scalare</strong></li>
-</ul>
-<blockquote>
-<ul>
-<li><span class="math inline">\mathbb{K}</span> campo</li>
-<li><span class="math inline">m, n \in \mathbb{N} - \{0\}</span></li>
-<li><span class="math inline">A \in \textrm{Mat}_{1 \times
-n}(\mathbb{K})</span></li>
-<li><span class="math inline">B \in \textrm{Mat}_{m \times
-1}(\mathbb{K})</span></li>
-<li><span class="math inline">A \cdot B := \displaystyle \sum_{i =
-1}^n{a_i \cdot b_i}</span> è il <strong>prodotto scalare tra <span
-class="math inline">A</span> e <span
-class="math inline">B</span></strong></li>
-</ul>
-</blockquote>
-<h2 id="oss-1">Oss</h2>
-<ul>
-<li><strong>⚠️ WIP</strong></li>
-</ul>
-<h2 id="def-3">Def</h2>
 <ul>
 <li><strong>Prodotto tra matrici</strong></li>
 </ul>
@@ -299,7 +273,7 @@ n}(\mathbb{K}) \mid B = \left(\begin{array}{ccc} b_{1, 1} &amp; \cdots
 &amp; b_{1, n} \\ \vdots &amp; \ddots &amp; \vdots \\ b_{m, 1} &amp;
 \cdots &amp; b_{m, n} \end{array}\right)</span></li>
 <li><span class="math inline">C \in \textrm{Mat}_{l \times
-n}(\mathbb{K}) \mid C = A \cdot B</span> è il <strong>prodotto tra <span
+n}(\mathbb{K}) \mid C = AB</span> è il <strong>prodotto tra <span
 class="math inline">A</span> e <span
 class="math inline">B</span></strong>, ed è definito come <span
 class="math inline">\left(\begin{array}{ccc}a_{1, 1}b_{1, 1} + \ldots +
@@ -309,13 +283,14 @@ m}b_{m,n} \\ \vdots &amp; \ddots &amp; \vdots \\a_{l,1}b_{1, 1} + \ldots
 m}b_{m,n}\end{array}\right)</span></li>
 </ul>
 </blockquote>
-<h2 id="oss-2">Oss</h2>
+<h2 id="oss-1">Oss</h2>
 <ul>
 <li><strong>Hp</strong>
 <ul>
 <li><span class="math inline">\mathbb{K}</span> campo</li>
 <li><span class="math inline">\lambda \in \mathbb{K}</span></li>
-<li><span class="math inline">l, m, n \in \mathbb{N} - \{0\}</span></li>
+<li><span class="math inline">l, m, n, k \in \mathbb{N} -
+\{0\}</span></li>
 <li><span class="math inline">A \in \textrm{Mat}_{l \times
 m}(\mathbb{K})</span></li>
 <li><span class="math inline">B \in \textrm{Mat}_{m \times
@@ -323,14 +298,18 @@ n}(\mathbb{K})</span></li>
 </ul></li>
 <li><strong>Th</strong>
 <ul>
-<li><span class="math inline">(AB)C = A(BC)</span></li>
-<li><span class="math inline">A(B+C) = AB+AC</span></li>
-<li><span class="math inline">(A+B)C = AC+BC</span></li>
+<li><strong>⚠️ STA ROBA È TUTTA SBAGLIATA</strong></li>
+<li><span class="math inline">\forall C \in \textrm{Mat}_{n \times
+k}(\mathbb{K}) \quad (AB)C = A(BC)</span></li>
+<li><span class="math inline">\forall C \in \textrm{Mat}_{m \times
+n}(\mathbb{K}) \quad A(B+C) = AB+AC</span></li>
+<li><span class="math inline">\forall C \in \textrm{Mat}_{n \times
+k}(\mathbb{K}) \quad (A+B)C = AC+BC</span></li>
 <li><span class="math inline">\lambda(AB) = (\lambda A)B = A (\lambda
 B)</span></li>
 </ul></li>
 </ul>
-<h2 id="oss-3">Oss</h2>
+<h2 id="oss-2">Oss</h2>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -349,8 +328,80 @@ B)</span></li>
 </ul></li>
 </ul>
 <hr />
-<h1 id="matrici-particolari">Matrici particolari</h1>
+<h1 id="interpretazione-geometrica-dei-vettori">Interpretazione
+geometrica dei vettori</h1>
+<h2 id="def-3">Def</h2>
+<ul>
+<li><strong>Prodotto scalare</strong></li>
+</ul>
+<blockquote>
+<ul>
+<li><span class="math inline">\mathbb{K}</span> campo</li>
+<li><span class="math inline">n \in \mathbb{N} - \{0\}</span></li>
+<li><span class="math inline">u, v \in \mathbb{K}^n \mid u =
+\left(\begin{array}{c}x_1 \\ \vdots \\ x_n \end{array}\right), v =
+\left(\begin{array}{c}y_1 \\ \vdots \\ y_n
+\end{array}\right)</span></li>
+<li><span class="math inline">u \cdot v := \displaystyle \sum_{i =
+1}^n{x_i \cdot y_i}</span> è il <strong>prodotto scalare tra <span
+class="math inline">u</span> e <span
+class="math inline">v</span></strong></li>
+</ul>
+</blockquote>
+<h2 id="oss-3">Oss</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">n \in \mathbb{N} - \{0\}</span></li>
+<li><span class="math inline">u, v \in \mathbb{K}^n</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">u \cdot v = v \cdot u</span></li>
+<li><span class="math inline">\forall w \in \mathbb{K}^n \quad u \cdot
+(v + w) = u \cdot v + u \cdot w</span></li>
+<li><span class="math inline">u \cdot (\lambda v) = \lambda(u \cdot
+v)</span></li>
+</ul></li>
+</ul>
 <h2 id="def-4">Def</h2>
+<ul>
+<li><strong>Norma di un vettore</strong></li>
+</ul>
+<blockquote>
+<ul>
+<li><span class="math inline">\mathbb{K}</span> campo</li>
+<li><span class="math inline">n \in \mathbb{N} - \{0\}</span></li>
+<li><span class="math inline">u \in \mathbb{K}^n \mid u =
+\left(\begin{array}{c}x_1 \\ \vdots \\ x_n
+\end{array}\right)</span></li>
+<li><span class="math inline">||u|| := \sqrt{x_1^2 + \ldots +
+x_n^2}</span> è detta <strong>norma di <span
+class="math inline">u</span></strong>
+<ul>
+<li>graficamente, corrisponde alla lunghezza del vettore <span
+class="math inline">u</span> nel piano cartesiano</li>
+</ul></li>
+</ul>
+</blockquote>
+<h2 id="oss-4">Oss</h2>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\mathbb{K}</span> campo</li>
+<li><span class="math inline">n \in \mathbb{N} - \{0\}</span></li>
+<li><span class="math inline">u \in \mathbb{K}^n \mid u =
+\left(\begin{array}{c}x_1 \\ \vdots \\ x_n
+\end{array}\right)</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">||u|| = \sqrt{u \cdot u}</span></li>
+</ul></li>
+</ul>
+<hr />
+<h1 id="matrici-particolari">Matrici particolari</h1>
+<h2 id="def-5">Def</h2>
 <ul>
 <li><strong>Vettore trasposto</strong></li>
 </ul>
@@ -389,7 +440,7 @@ class="math inline">A</span> al posto delle colonne</li>
 </ul></li>
 </ul>
 </blockquote>
-<h2 id="oss-4">Oss</h2>
+<h2 id="oss-5">Oss</h2>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -405,7 +456,7 @@ n}(\mathbb{K})</span></li>
 <li><span class="math inline">(A\cdot B)^T = B^T\cdot A^T</span></li>
 </ul></li>
 </ul>
-<h2 id="def-5">Def</h2>
+<h2 id="def-6">Def</h2>
 <ul>
 <li><strong>Matrice identità</strong></li>
 </ul>
@@ -449,7 +500,7 @@ class="math inline">\}</span> è detto <strong>gruppo generale lineare
 invertibile</strong></li>
 </ul>
 </blockquote>
-<h2 id="oss-5">Oss</h2>
+<h2 id="oss-6">Oss</h2>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -466,7 +517,7 @@ invertibile</strong></li>
 <li><strong>⚠️ TODO</strong></li>
 </ul></li>
 </ul>
-<h2 id="oss-6">Oss</h2>
+<h2 id="oss-7">Oss</h2>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -484,7 +535,7 @@ invertibile</strong></li>
 <li><strong>⚠️ TODO</strong></li>
 </ul></li>
 </ul>
-<h2 id="def-6">Def</h2>
+<h2 id="def-7">Def</h2>
 <ul>
 <li><strong>Gruppo Speciale Lineare</strong></li>
 </ul>
@@ -497,7 +548,7 @@ invertibile</strong></li>
 <strong>gruppo generale lineare invertibile</strong></li>
 </ul>
 </blockquote>
-<h2 id="def-7">Def</h2>
+<h2 id="def-8">Def</h2>
 <ul>
 <li><strong>Matrici simili</strong></li>
 </ul>
@@ -512,7 +563,7 @@ class="math inline">B</span></strong> <span class="math inline">\iff
 \exists C \in \textrm{GL}(n, \mathbb{K}) \mid A = C^{-1}BC</span></li>
 </ul>
 </blockquote>
-<h2 id="def-8">Def</h2>
+<h2 id="def-9">Def</h2>
 <ul>
 <li><strong>Traccia</strong></li>
 </ul>
@@ -527,7 +578,7 @@ a_{n,n}</span> è detta <strong>traccia di <span
 class="math inline">A</span></strong></li>
 </ul>
 </blockquote>
-<h2 id="oss-7">Oss</h2>
+<h2 id="oss-8">Oss</h2>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -543,7 +594,7 @@ class="math inline">B</span></li>
 \textrm{tr}(B)</span></li>
 </ul></li>
 </ul>
-<h2 id="def-9">Def</h2>
+<h2 id="def-10">Def</h2>
 <ul>
 <li><strong>Matrice triangolare superiore</strong></li>
 </ul>
@@ -638,7 +689,7 @@ B \in \textrm{Mat}_{n \times n}(\mathbb{K}) \mid B</span> diagonale
 class="math inline">A</span></li>
 </ul>
 </blockquote>
-<h2 id="def-10">Def</h2>
+<h2 id="def-11">Def</h2>
 <ul>
 <li><strong>Sottomatrice di una matrice</strong></li>
 </ul>
@@ -691,7 +742,7 @@ class="math inline">M</span> si ottiene rimuovendo una riga e una
 colonna da <span class="math inline">M&#39;</span></li>
 </ul>
 </blockquote>
-<h2 id="oss-8">Oss</h2>
+<h2 id="oss-9">Oss</h2>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -711,7 +762,7 @@ class="math inline">(m-r)\cdot(n-r)</span> orlati in <span
 class="math inline">A</span></li>
 </ul></li>
 </ul>
-<h2 id="def-11">Def</h2>
+<h2 id="def-12">Def</h2>
 <ul>
 <li><strong>Matrice completa</strong></li>
 </ul>
@@ -731,7 +782,7 @@ b_m\end{array}\right)</span></li>
 </blockquote>
 <hr />
 <h1 id="rango">Rango</h1>
-<h2 id="def-12">Def</h2>
+<h2 id="def-13">Def</h2>
 <ul>
 <li><strong>Sottospazio ortogonale</strong></li>
 </ul>
@@ -752,7 +803,7 @@ loro, per osservazione precedente</li>
 </ul></li>
 </ul>
 </blockquote>
-<h2 id="oss-9">Oss</h2>
+<h2 id="oss-10">Oss</h2>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -771,7 +822,7 @@ di <span class="math inline">\mathbb{K}^n</span></li>
 <li><strong>⚠️ TODO</strong></li>
 </ul></li>
 </ul>
-<h2 id="oss-10">Oss</h2>
+<h2 id="oss-11">Oss</h2>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -790,7 +841,7 @@ vettoriale</li>
 <li><strong>⚠️ TODO</strong></li>
 </ul></li>
 </ul>
-<h2 id="def-13">Def</h2>
+<h2 id="def-14">Def</h2>
 <ul>
 <li><strong>Moltiplicazione sinistra</strong></li>
 </ul>
@@ -805,7 +856,7 @@ n}(\mathbb{K}) \quad L_A:\mathbb{K}^n \rightarrow \mathbb{K}^m: x
 \rightarrow A\cdot x</span></li>
 </ul>
 </blockquote>
-<h2 id="oss-11">Oss</h2>
+<h2 id="oss-12">Oss</h2>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -824,7 +875,7 @@ n}(\mathbb{K}) \quad L_A</span> è una trasformazione lineare</li>
 <li><strong>⚠️ TODO</strong></li>
 </ul></li>
 </ul>
-<h2 id="oss-12">Oss</h2>
+<h2 id="oss-13">Oss</h2>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -888,7 +939,7 @@ A^n) \quad \exists x_1, \ldots, x_n \in \mathbb{K} \mid v = x_1 A^1 +
 </ul></li>
 </ul></li>
 </ul>
-<h2 id="oss-13">Oss</h2>
+<h2 id="oss-14">Oss</h2>
 <ul>
 <li><strong>Rango di una matrice</strong></li>
 </ul>
@@ -904,7 +955,7 @@ n}(\mathbb{K})</span></li>
 il <strong>rango di <span class="math inline">A</span></strong></li>
 </ul>
 </blockquote>
-<h2 id="oss-14">Oss</h2>
+<h2 id="oss-15">Oss</h2>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -950,7 +1001,7 @@ class="math inline">\dim(\textrm{span}(A_1, \ldots, A_m)^\bot)=
 <hr />
 <h1 id="operazioni-su-righe-e-colonne">Operazioni su righe e
 colonne</h1>
-<h2 id="def-14">Def</h2>
+<h2 id="def-15">Def</h2>
 <ul>
 <li><strong>Scambio di righe di una matrice</strong></li>
 </ul>
@@ -1051,7 +1102,7 @@ class="math inline">\lambda \cdot A^j</span> lascia invariato <span
 class="math inline">\textrm{im}(L_A)</span></li>
 </ul>
 </blockquote>
-<h2 id="oss-15">Oss</h2>
+<h2 id="oss-16">Oss</h2>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -1070,7 +1121,7 @@ definite precedentemente</li>
 equivalenza</li>
 </ul></li>
 </ul>
-<h2 id="oss-16">Oss</h2>
+<h2 id="oss-17">Oss</h2>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -1089,7 +1140,7 @@ definite precedentemente</li>
 \land \textrm{rk}(A) = \textrm{rk}(B)</span></li>
 </ul></li>
 </ul>
-<h2 id="oss-17">Oss</h2>
+<h2 id="oss-18">Oss</h2>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -1108,7 +1159,7 @@ definite precedentemente</li>
 equivalenza</li>
 </ul></li>
 </ul>
-<h2 id="oss-18">Oss</h2>
+<h2 id="oss-19">Oss</h2>
 <ul>
 <li><strong>Hp</strong>
 <ul>

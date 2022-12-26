@@ -9,6 +9,12 @@
 > - $V$ è **spazio vettoriale su $\mathbb{K}$** $\iff (V, +)$ gruppo abeliano, è ben definita un'operazione di $\cdot: K \times V \rightarrow V$ che ammetta elemento neutro, inoltre $\forall s, t \in \mathbb{K}, v \in V \quad s\cdot (t \cdot v) = (s \cdot t) \cdot v, (s + t) \cdot v = s\cdot v + t \cdot v$ e infine $\forall s \in \mathbb{K}, v, w \in V \quad s \cdot (v + w) = s \cdot v + s \cdot w$
 > - $x \in V$ è detto **vettore**
 
+- **Spazio di Hilbert**
+
+> - $\mathbb{K}$ campo
+> - $V$ spazio vettoriale su $\mathbb{K}$
+> - $V$ spazio di Hilbert $\iff$ in $V$ è ben definito il prodotto scalare
+
 ## Ex
 
 - **Hp**
@@ -148,6 +154,25 @@
         - $v_1, \ldots , v_n \in V = \textrm{span}(w_1, \ldots, w_m) \implies n \le m$ per dimostrazione precedente
         - $w_1, \ldots, w_m \in V = \textrm{span}(v_1, \ldots, v_n) \implies m \le n$ per dimostrazione precedente
     - dunque $n \le m \land m \le n \implies n = m$
+
+## Def
+
+- **Base ortogonale di uno spazio di Hilbert**
+
+> - $n \in \mathbb{N}$
+> - $\mathbb{K}$ campo
+> - $V$ spazio di Hilbert su $\mathbb{K}$
+> - $v_1, \ldots, v_n$ base di $V$
+> - $v_1, \ldots, v_n$ **base ortogonale di $V$** $\iff \forall i, j \in [1, n], i \neq j \quad v_i \cdot v_j = 0$
+
+- **Base ortonormale di uno spazio di Hilbert**
+
+> - $n \in \mathbb{N}$
+> - $\mathbb{K}$ campo
+> - $V$ spazio di Hilbert su $\mathbb{K}$
+> - $v_1, \ldots, v_n$ base ortogonale di $V$
+> - $v_1, \ldots, v_n$ **base ortonormale** di $V \iff \forall i, j \in [1, n] \quad v_i \cdot v_j = \left\{\begin{array}{cc} 1 & i = j \\ 0 & i \neq j \end{array}\right.$
+>   - in particolare, è possibile ottenere $v_1, \ldots, v_n$ a partire da $e_1, \ldots, e_n$ tramite rotazioni e riflessioni
 
 ## Def
 
