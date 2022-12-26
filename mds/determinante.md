@@ -32,6 +32,15 @@
 - **Th**
     - **⚠️  DETERMINANTE ALTERNANTE**
 
+## Def
+
+- **Matrice singolare**
+
+> - $\mathbb{K}$ campo
+> - $n \in \mathbb{N} - \{0\}$
+> - $A \in \textrm{Mat}_{n \times n}(\mathbb{K})$
+> - $A$ è detta **singolare** $\iff \det(A) = 0$
+
 ## Oss
 
 - **Hp**
@@ -44,7 +53,7 @@
     4. $\textrm{rk}(A)=n$
     5. $\det(A) \neq 0$
     6. $A \equiv I_n$ tramite la relazione di equivalenza delle operazioni sulle righe
-    7. **⚠️  NON ANCHE PER COLONNE? CEH PENSO DE SI**
+    7. $A \equiv I_n$ tramite la relazione di equivalenza delle operazioni sulle colonne
 - **Th**
     - le proposizioni sono equivalenti
 - **Dim**
@@ -238,7 +247,7 @@
 
 ## Def
 
-- **Autovettore**
+- **Autovettore relativo ad un autovalore**
 
 > - $\mathbb{K}$ campo
 > - $n \in \mathbb{N} - \{0\}$
@@ -259,7 +268,7 @@
 
 ## Def
 
-- **Autospazio**
+- **Autospazio relativo ad un autovalore**
 
 > - $\mathbb{K}$ campo
 > - $n \in \mathbb{N} - \{0\}$

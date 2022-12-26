@@ -135,6 +135,13 @@
 > - $A^T = \left(\begin{array}{c} {A^1}^T \\ \vdots \\ {A^n}^T \end{array}\right)$ è la **matrice trasposta di $A$**
 >   - vale il ragionamento analogo considerando le righe di $A$ al posto delle colonne
 
+- **Matrice simmetrica**
+
+> - $m, n \in \mathbb{N} - \{0\}$
+> - $\mathbb{K}$ campo
+> - $A \in \textrm{Mat}_{m \times n}(\mathbb{K})$
+> - $A$ è detta **simmetrica** $\iff A^T = A$
+
 ## Oss
 
 - **Hp**
@@ -173,8 +180,6 @@
     - $n \in \mathbb{N} - \{0\}$
 - **Th**
     - $(\textrm{GL}(n, \mathbb{K}), \cdot)$ è un gruppo
-- **Dim**
-    - **⚠️  TODO**
 
 ## Oss
 
@@ -184,8 +189,23 @@
     - $f: \textrm{GL}(n, \mathbb{K}) \rightarrow \mathbb{K}^*$
 - **Th**
     - $f$ morfismo di gruppi
-- **Dim**
-    - **⚠️  TODO**
+
+## Def
+
+- **Matrice ortogonale**
+
+> - $\mathbb{K}$ campo
+> - $n \in \mathbb{N} - \{0\}$
+> - $A \in \textrm{GL}(n, \mathbb{K})$
+> - $A$ è detta **ortogonale** $\iff A \cdot A^T = A^T \cdot A = I_n$
+>   - in particolare $A^{-1} = A^T$
+
+- **Gruppo ortogonale**
+
+> - $\mathbb{K}$ campo
+> - $n \in \mathbb{N} - \{0\}$
+> - $A \in \textrm{GL}(n, \mathbb{K})$
+> - $O(n) := \{ A \in \textrm{GL}(n, \mathbb{K}) \mid A$ ortogonale$\}$ è detto **gruppo ortogonale**
 
 ## Def
 

@@ -413,3 +413,18 @@
     - $\det(A\cdot A^{-1})=\det(I_n)=1$
     - $\det(A \cdot A^{-1}) = \det(A) \cdot \det(A^{-1})$ per il teorema di Binet
     - allora $\det(A) \cdot \det(A^{-1}) = 1 \iff \det(A)^{-1}=\det(A^{-1})$
+
+****
+
+# Teorema spettrale
+
+- **Hp**
+    - $\mathbb{K}$ campo
+    - $n \in \mathbb{N} - \{0\}$
+    - $A \in \textrm{Mat}_{n \times n}(\mathbb{K}) \mid A$ simmetrica
+    1. $\forall \lambda \in \textrm{sp}(A) \quad \lambda \in \mathbb{R}$
+    2. $A$ diagonalizzabile
+    3. $\exists B^1, \ldots, B^n$ autovettori di $A \mid B^1, \ldots, B^n$ base ortonormale di $\mathbb{R}^n$
+    4. $\exists B \in O(n) \mid B^{-1}AB$ diagonale
+- **Th**
+    - le proposizioni sono equivalenti

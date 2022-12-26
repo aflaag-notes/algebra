@@ -126,6 +126,18 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
+## Definizione 3
+
+
+- **Matrice singolare**
+
+> - $\mathbb{K}$ campo
+> - $n \in \mathbb{N} - \{0\}$
+> - $A \in \textrm{Mat}_{n \times n}(\mathbb{K})$
+> - $A$ è detta **singolare** $\iff \det(A) = 0$
+
+
+
 ## Teorema 9
 
 
@@ -139,7 +151,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
     4. $\textrm{rk}(A)=n$
     5. $\det(A) \neq 0$
     6. $A \equiv I_n$ tramite la relazione di equivalenza delle operazioni sulle righe
-    7. **⚠️  NON ANCHE PER COLONNE? CEH PENSO DE SI**
+    7. $A \equiv I_n$ tramite la relazione di equivalenza delle operazioni sulle colonne
 - **Th**
     - le proposizioni sono equivalenti
 
@@ -249,7 +261,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Definizione 3
+## Definizione 4
 
 
 - **Aggiunta di una matrice**
@@ -289,7 +301,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Definizione 4
+## Definizione 5
 
 
 > - $\mathbb{K}$ campo
@@ -323,7 +335,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Definizione 5
+## Definizione 6
 
 
 - **Autovalore**
@@ -365,10 +377,10 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
     - $\lambda$ autovalore $\iff \exists v \in \mathbb{K}^n - \{0\} \mid A \cdot v = \lambda \cdot v$
 
-## Definizione 6
+## Definizione 7
 
 
-- **Autovettore**
+- **Autovettore relativo ad un autovalore**
 
 > - $\mathbb{K}$ campo
 > - $n \in \mathbb{N} - \{0\}$
@@ -392,10 +404,10 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Definizione 7
+## Definizione 8
 
 
-- **Autospazio**
+- **Autospazio relativo ad un autovalore**
 
 > - $\mathbb{K}$ campo
 > - $n \in \mathbb{N} - \{0\}$
@@ -419,7 +431,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Definizione 8
+## Definizione 9
 
 
 - **Molteplicità algebrica di un autovalore**
@@ -445,7 +457,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Definizione 9
+## Definizione 10
 
 
 - **Molteplicità geometrica di un autovalore**
@@ -563,7 +575,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Definizione 10
+## Definizione 11
 
 
 - **Gruppo diedrale**
@@ -613,7 +625,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
   - $\exists X \subset S_n$ sottogruppo di $S_n$ $\mid D_n \cong X$
     - $D_3 \cong S_3$
 
-## Definizione 11
+## Definizione 12
 
 
 - **Gruppo di Klein**
@@ -640,7 +652,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Definizione 12
+## Definizione 13
 
 
 - **Semigruppo**
@@ -711,7 +723,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Definizione 13
+## Definizione 14
 
 
 - **Anello**
@@ -741,7 +753,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Definizione 14
+## Definizione 15
 
 
 - **Invertibili**
@@ -769,7 +781,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
     - $(A^*, \cdot) \subset (A, \cdot)$ è un sottogruppo
 
-## Definizione 15
+## Definizione 16
 
 
 - **Divisori dello $0$**
@@ -802,7 +814,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
   - $A$ dominio di integrità
 
-## Definizione 16
+## Definizione 17
 
 
 - **Elementi irriducibili**
@@ -832,7 +844,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 # Sottogruppi
 
 
-## Definizione 17
+## Definizione 18
 
 
 - **Sottogruppo**
@@ -842,7 +854,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Definizione 18
+## Definizione 19
 
 
 - **Sottogruppo normale**
@@ -872,7 +884,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 # Ordine
 
 
-## Definizione 19
+## Definizione 20
 
 
 - **Ordine di un elemento in un gruppo**
@@ -980,7 +992,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Definizione 20
+## Definizione 21
 
 
 - **Ideali**
@@ -1027,7 +1039,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
   - $I(a_1, \ldots, a_n)$ è un ideale, e prende il nome di _ideale di $A$ generato dagli $a_1, \ldots, a_n \in A$_
 
-## Definizione 21
+## Definizione 22
 
 
 - **Congruenza modulo di un ideale**
@@ -1067,7 +1079,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
     - $d = \textrm{MCD}(a_1, \ldots, a_n)$
 
-## Definizione 22
+## Definizione 23
 
 
 - **Massimo Comun Divisore**
@@ -1098,7 +1110,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Definizione 23
+## Definizione 24
 
 
 - **$+$ tra ideali**
@@ -1118,7 +1130,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
   - $I + J$ è un ideale
 
-## Definizione 24
+## Definizione 25
 
 
 - **$\cap$ tra ideali**
@@ -1138,7 +1150,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
     - $I \cap J$ è un ideale
 
-## Definizione 25
+## Definizione 26
 
 
 - **Minimo Comune Multiplo**
@@ -1148,7 +1160,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Definizione 26
+## Definizione 27
 
 
 - **$\cdot$ tra ideali**
@@ -1191,7 +1203,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Definizione 27
+## Definizione 28
 
 
 - **Induzione**
@@ -1218,7 +1230,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Definizione 28
+## Definizione 29
 
 
 - **Insieme quoziente**
@@ -1230,7 +1242,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Definizione 29
+## Definizione 30
 
 
 - **Insieme quoziente $\mathbb{Z}_n$**
@@ -1299,7 +1311,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 # Funzione totiente di Eulero
 
 
-## Definizione 30
+## Definizione 31
 
 
 - **Funzione totiente di Eulero**
@@ -1351,7 +1363,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Definizione 31
+## Definizione 32
 
 
 - **Matrici**
@@ -1370,7 +1382,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Definizione 32
+## Definizione 33
 
 
 - **Somma tra matrici**
@@ -1394,7 +1406,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Definizione 33
+## Definizione 34
 
 
 - **Prodotto tra matrici**
@@ -1440,7 +1452,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 # Interpretazione geometrica dei vettori
 
 
-## Definizione 34
+## Definizione 35
 
 
 - **Prodotto scalare**
@@ -1466,7 +1478,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Definizione 35
+## Definizione 36
 
 
 - **Norma di un vettore**
@@ -1495,7 +1507,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Definizione 36
+## Definizione 37
 
 
 - **Vettore trasposto**
@@ -1514,6 +1526,13 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 > - $A^T = \left(\begin{array}{c} {A^1}^T \\ \vdots \\ {A^n}^T \end{array}\right)$ è la **matrice trasposta di $A$**
 >   - vale il ragionamento analogo considerando le righe di $A$ al posto delle colonne
 
+- **Matrice simmetrica**
+
+> - $m, n \in \mathbb{N} - \{0\}$
+> - $\mathbb{K}$ campo
+> - $A \in \textrm{Mat}_{m \times n}(\mathbb{K})$
+> - $A$ è detta **simmetrica** $\iff A^T = A$
+
 
 
 ## Teorema 90
@@ -1529,7 +1548,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Definizione 37
+## Definizione 38
 
 
 - **Matrice identità**
@@ -1562,6 +1581,8 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
     - $(\textrm{GL}(n, \mathbb{K}), \cdot)$ è un gruppo
 
+
+
 ## Teorema 92
 
 
@@ -1572,7 +1593,29 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
     - $f$ morfismo di gruppi
 
-## Definizione 38
+
+
+## Definizione 39
+
+
+- **Matrice ortogonale**
+
+> - $\mathbb{K}$ campo
+> - $n \in \mathbb{N} - \{0\}$
+> - $A \in \textrm{GL}(n, \mathbb{K})$
+> - $A$ è detta **ortogonale** $\iff A \cdot A^T = A^T \cdot A = I_n$
+>   - in particolare $A^{-1} = A^T$
+
+- **Gruppo ortogonale**
+
+> - $\mathbb{K}$ campo
+> - $n \in \mathbb{N} - \{0\}$
+> - $A \in \textrm{GL}(n, \mathbb{K})$
+> - $O(n) := \{ A \in \textrm{GL}(n, \mathbb{K}) \mid A$ ortogonale$\}$ è detto **gruppo ortogonale**
+
+
+
+## Definizione 40
 
 
 - **Gruppo Speciale Lineare**
@@ -1583,7 +1626,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Definizione 39
+## Definizione 41
 
 
 - **Matrici simili**
@@ -1595,7 +1638,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Definizione 40
+## Definizione 42
 
 
 - **Traccia**
@@ -1619,7 +1662,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Definizione 41
+## Definizione 43
  
 
 - **Matrice triangolare superiore**
@@ -1667,7 +1710,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Definizione 42
+## Definizione 44
 
 
 - **Sottomatrice di una matrice**
@@ -1707,7 +1750,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
     
 
 
-## Definizione 43
+## Definizione 45
 
 
 - **Matrice completa**
@@ -1724,7 +1767,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Definizione 44
+## Definizione 46
 
 
 - **Sottospazio ortogonale**
@@ -1757,7 +1800,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
     - $\dim(V^{\bot}) = \dim(\mathbb{K}^n) - \dim(V)$
 
-## Definizione 45
+## Definizione 47
 
 
 - **Moltiplicazione sinistra**
@@ -1789,7 +1832,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
     - $\forall A \in \textrm{Mat}_{m \times n}(\mathbb{K}) \quad \ker(L_A) = \textrm{span}(A_1, \ldots, A_m)^\bot \land \textrm{im}(L_A) = \textrm{span}(A^1, \ldots, A^n)$
 
-## Definizione 46
+## Definizione 48
 
 
 - **Rango di una matrice**
@@ -1818,7 +1861,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 # Operazioni su righe e colonne
 
 
-## Definizione 47
+## Definizione 49
 
 
 - **Scambio di righe di una matrice**
@@ -1927,7 +1970,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Definizione 48
+## Definizione 50
  
 
 - **Morfismo di gruppi**
@@ -1972,7 +2015,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 # Isomorfismi
 
 
-## Definizione 49
+## Definizione 51
 
 
 - **Isomorfismo**
@@ -2058,7 +2101,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 # Kernel e immagine
 
 
-## Definizione 50
+## Definizione 52
 
 
 - **Kernel e immagine di gruppi**
@@ -2147,7 +2190,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Definizione 51
+## Definizione 53
 
 
 - **Insieme dei complessi**
@@ -2170,7 +2213,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Definizione 52
+## Definizione 54
 
 
 - **Coniugato**
@@ -2204,7 +2247,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Definizione 53
+## Definizione 55
 
 
 - **Raggio**
@@ -2216,7 +2259,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Definizione 54
+## Definizione 56
 
 
 - **Forma polare**
@@ -2227,7 +2270,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Definizione 55
+## Definizione 57
 
 
 - **Soluzione principale**
@@ -2275,7 +2318,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Definizione 56
+## Definizione 58
 
 
 - **Permutazioni**
@@ -2294,7 +2337,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
   - $(S_X, \circ)$ è un gruppo, non abeliano se $|X| \ge 3$
 
-## Definizione 57
+## Definizione 59
 
 
 - **Ciclo di una permutazione**
@@ -2347,7 +2390,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 # Trasposizioni
 
 
-## Definizione 58
+## Definizione 60
 
 
 - **Trasposizione**
@@ -2380,7 +2423,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 # Segno
 
 
-## Definizione 59
+## Definizione 61
 
 
 - **Segno di una permutazione**
@@ -2464,7 +2507,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Definizione 60
+## Definizione 62
 
 
 - **Polinomi**
@@ -2484,7 +2527,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
     - $(\mathbb{K}[x], +, \cdot)$ è un anello
 
-## Definizione 61
+## Definizione 63
 
 
 - **Grado del polinomio**
@@ -2529,7 +2572,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
     - $\mathbb{K}[x]$ è un dominio di integrità
 
-## Definizione 62
+## Definizione 64
 
 
 - **Radici di un polinomio**
@@ -2659,7 +2702,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Definizione 63
+## Definizione 65
 
 
 - **Relazioni**
@@ -2772,7 +2815,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 # Partizioni
 
 
-## Definizione 64
+## Definizione 66
 
 
 - **Partizione**
@@ -2816,7 +2859,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
   - $x \sim_S y \iff x^{-1}y \in H$ è una relazione di equivalenza
 
-## Definizione 65
+## Definizione 67
  
 
 - **Classi laterali**
@@ -2889,7 +2932,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Definizione 66
+## Definizione 68
  
 
 - **Spazio vettoriale**
@@ -2916,7 +2959,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
     - $\mathbb{K}^n$ spazio vettoriale su $\mathbb{K}$
 
-## Definizione 67
+## Definizione 69
 
 
 - **Sottospazio vettoriale**
@@ -2927,7 +2970,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Definizione 68
+## Definizione 70
 
 
 - **Span di vettori**
@@ -2952,7 +2995,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
     - $\textrm{span}(v_1, \ldots, v_n)$ è un sottospazio vettoriale di $V$
 
-## Definizione 69
+## Definizione 71
 
 
 - **Vettori generatori**
@@ -3029,7 +3072,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
     - $n = m$, il che implica che la cardinalità delle basi di uno spazio vettoriale è unica
 
-## Definizione 70
+## Definizione 72
 
 
 - **Base ortogonale di uno spazio di Hilbert**
@@ -3051,7 +3094,32 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Definizione 71
+## Teorema 175
+
+
+- **Hp**
+    - $n \in \mathbb{N}$
+    - $\mathbb{K}$ campo
+    - $v \in \mathbb{K}^n$
+    - $v_1, \ldots, v_k$ base ortonormale di $\mathbb{K}^n$
+- **Th**
+    - $v = (v \cdot v_1)v_1 + \ldots + (v \cdot v_n)v_n$
+
+
+
+## Teorema 176
+
+
+- **Hp**
+    - $n \in \mathbb{N}$
+    - $\mathbb{K}$ campo
+    - $A \in O(n)$
+- **Th**
+    - $A_1, \ldots, A_n$ e $A^1, \ldots, A^n$ basi ortonormali di $\mathbb{K}^n$
+
+
+
+## Definizione 73
 
 
 - **Dimensione di uno spazio vettoriale**
@@ -3062,18 +3130,18 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 175
+## Teorema 177
 
 
 - **Hp**
-    - $\mathbb{K}$ campo
     - $n \in \mathbb{N}$
+    - $\mathbb{K}$ campo
     - $V$ spazio vettoriale su $\mathbb{K}$
     - $v_1, \ldots, v_n \in V$
 - **Th**
     - $v_1, \ldots, v_n$ base di $V \iff \forall v \in V \quad \exists ! \lambda_1, \ldots, \lambda_n \in \mathbb{K} \mid v = \lambda_1 v_1 + \ldots + \lambda_n v_n$
 
-## Teorema 176
+## Teorema 178
 
 
 - **Hp**
@@ -3085,7 +3153,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
     - $\exists w_{k + 1}, \ldots, w_n \in W \mid w_1, \ldots, w_n$ è una base di $W$
 
-## Teorema 177
+## Teorema 179
 
 
 - **Hp**
@@ -3097,7 +3165,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
     - $\exists 1 \le i_1, \ldots, i_n \le m \mid w_{i_1}, \ldots, w_{i_n}$ è una base di $W$
 
-## Teorema 178
+## Teorema 180
 
 
 - **Hp**
@@ -3108,7 +3176,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
     - $w_1, \ldots, w_n$ linearmente indipendenti $\iff w_1, \ldots, w_n$ generatori di $W$
 
-## Teorema 179
+## Teorema 181
 
 
 - **Hp**
@@ -3118,7 +3186,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
     - $\dim(U + V) = \dim(U) + \dim(V) - \dim(U \cap V)$
 
-## Teorema 180
+## Teorema 182
 
 
 - **Hp**
@@ -3128,7 +3196,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
     - $V/W$ sottospazio vettoriale
 
-## Teorema 181
+## Teorema 183
 
 
 - **Hp**
@@ -3138,7 +3206,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
     - $\dim(V/W) = \dim(V) - \dim(W)$
 
-## Teorema 182
+## Teorema 184
 
 
 - **Hp**
@@ -3154,7 +3222,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Definizione 72
+## Definizione 74
 
 
 - **Applicazioni lineari**
@@ -3166,7 +3234,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 183
+## Teorema 185
 
 
 - **Hp**
@@ -3176,14 +3244,14 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
     - $V \cong \mathbb{K}^n$
 
-## Teorema 184
+## Teorema 186
 
 
 - ⚠️ **QUI C'È UN BUCO DI COSE CHE NON HO CAPITO**
 
 
 
-## Teorema 185
+## Teorema 187
 
 
 - **Hp**
@@ -3192,7 +3260,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
     - $V \cong W \iff \dim(V) = \dim(W)$
 
-## Definizione 73
+## Definizione 75
 
 
 - **Kernel e immagine**
@@ -3205,7 +3273,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 186
+## Teorema 188
 
 
 - **Hp**
@@ -3215,7 +3283,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
     - $\ker(f) \subset V$ sottospazio
 
-## Teorema 187
+## Teorema 189
 
 
 - **Hp**
@@ -3225,7 +3293,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
     - $\textrm{im}(f) \subset W$ sottospazio
 
-## Definizione 74
+## Definizione 76
 
 
 - **Rango di un'applicazione lineare**
@@ -3241,7 +3309,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 188
+## Teorema 190
 
 
 - ⚠️ **TODO**
@@ -3250,7 +3318,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 189
+## Teorema 191
 
 
 - **Hp**
@@ -3286,7 +3354,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
   - $\exists !  \ q, r \in \mathbb{Z} \mid m=n q+r \quad 0 \leq r<n$
 
-## Teorema 190
+## Teorema 192
 
 
 - **Hp**
@@ -3324,7 +3392,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 # Teorema cinese dei resti
 
 
-## Teorema 191
+## Teorema 193
 
 
 - **Hp**
@@ -3333,7 +3401,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
   - $m = a_1 \cdot \ldots \cdot a_n$
 
-## Teorema 192
+## Teorema 194
 
 
 - **Hp**
@@ -3344,7 +3412,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
   - $\exists \phi \mid \phi: \mathbb{Z}_m \rightarrow \mathbb{Z}_{a_1} \times \ldots \times \mathbb{Z}_{a_n}: x \ (\bmod \ m) \rightarrow (x \ (\bmod \ a_1), \ldots, x \ (\bmod \ a_n))$
   - $\phi$ è una funzione ben definita, ed è iniettiva
 
-## Teorema 193
+## Teorema 195
 
 
 - **Hp**
@@ -3355,7 +3423,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
   - $\exists ! x \ (\bmod \ m) \mid$ $\left\{\begin{array}{c}x \equiv b_{1}\ \left(\bmod  \ a_{1}\right) \\ \vdots \\ x \equiv b_{n}\ \left(\bmod  \ a_{n}\right)\end{array}\right.$
 
-## Teorema 194
+## Teorema 196
 
 
 - **Hp**
@@ -3380,7 +3448,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
   - $(a+b )^n = \displaystyle{\sum_{k = 0}^{n}{\binom{n}{k} a^k b ^{n - k}}}$
 
-## Teorema 195
+## Teorema 197
 
 
 - ⚠️ **NON HO CAPITO UN CAZZO**
@@ -3398,7 +3466,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
   - $a^{p} \equiv a \ (\bmod \ p)$
 
-## Teorema 196
+## Teorema 198
 
 
 - **Hp**
@@ -3407,7 +3475,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
   - $[a]^{-1}=\left[a\right]^{p-2}$
 
-## Teorema 197
+## Teorema 199
 
 
 - **Hp**
@@ -3415,7 +3483,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
     - $\displaystyle \prod_{0 \lt a \lt p} (x - a) \equiv x^{p - 1} - 1 \ (\bmod \ p)$
 
-## Teorema 198
+## Teorema 200
 
 
 - ⚠️ **NON HO CAPITO UN CAZZO**
@@ -3443,7 +3511,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
     - $A / \textrm{ker}(f) \cong \textrm{im}(f)$, ovvero $\exists \varphi \mid \varphi : A / \textrm{ker}(f) \rightarrow \textrm{im}(f): [a] \rightarrow f(a)$ isomorfismo di anelli
 
-## Teorema 199
+## Teorema 201
 
 
 - **Hp**
@@ -3452,7 +3520,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
   - $G / \textrm{ker}(f) \cong \textrm{im}(f)$, o alternativamente $\exists \varphi \mid \varphi : G / \textrm{ker}(f) \rightarrow \textrm{im}(f): [g] \rightarrow f(g)$ isomorfismo di gruppi
 
-## Teorema 200
+## Teorema 202
 
 
 - **Hp**
@@ -3475,7 +3543,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
   - $\exists g \in G \mid o(g) = p$
 
 
-## Teorema 201
+## Teorema 203
 
 
 - **Hp**
@@ -3496,7 +3564,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
     - $||v - u||^2 = ||u||^2 + ||v||^2 - 2\cos(\theta) \cdot||u||\cdot ||v||$
 
 
-## Teorema 202
+## Teorema 204
 
 
 - **Hp**
@@ -3574,7 +3642,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
     - $\det(A \cdot B) = \det(A) \cdot \det(B)$
 
 
-## Teorema 203
+## Teorema 205
 
 
 - **Hp**
@@ -3583,3 +3651,20 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
     - $A \in \textrm{Mat}_{n \times n}(\mathbb{K})$
 - **Th**
     - $\det(A)^{-1}=\det(A^{-1})$
+
+****
+
+
+# Teorema spettrale
+
+- **Hp**
+    - $\mathbb{K}$ campo
+    - $n \in \mathbb{N} - \{0\}$
+    - $A \in \textrm{Mat}_{n \times n}(\mathbb{K}) \mid A$ simmetrica
+    1. $\forall \lambda \in \textrm{sp}(A) \quad \lambda \in \mathbb{R}$
+    2. $A$ diagonalizzabile
+    3. $\exists B^1, \ldots, B^n$ autovettori di $A \mid B^1, \ldots, B^n$ base ortonormale di $\mathbb{R}^n$
+    4. $\exists B \in O(n) \mid B^{-1}AB$ diagonale
+- **Th**
+    - le proposizioni sono equivalenti
+

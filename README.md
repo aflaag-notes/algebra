@@ -6,6 +6,5 @@ Se invece siete qui per la lista di teoremi, ecco [il link](https://ph04.github.
 
 ## TODO list
 
-- update index
 - fixa il quoziente, che $(G/H, \cdot)$ gruppo soltanto se $H$ normale
 

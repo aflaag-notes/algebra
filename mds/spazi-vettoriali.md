@@ -174,6 +174,25 @@
 > - $v_1, \ldots, v_n$ **base ortonormale** di $V \iff \forall i, j \in [1, n] \quad v_i \cdot v_j = \left\{\begin{array}{cc} 1 & i = j \\ 0 & i \neq j \end{array}\right.$
 >   - in particolare, è possibile ottenere $v_1, \ldots, v_n$ a partire da $e_1, \ldots, e_n$ tramite rotazioni e riflessioni
 
+## Oss
+
+- **Hp**
+    - $n \in \mathbb{N}$
+    - $\mathbb{K}$ campo
+    - $v \in \mathbb{K}^n$
+    - $v_1, \ldots, v_k$ base ortonormale di $\mathbb{K}^n$
+- **Th**
+    - $v = (v \cdot v_1)v_1 + \ldots + (v \cdot v_n)v_n$
+
+## Oss
+
+- **Hp**
+    - $n \in \mathbb{N}$
+    - $\mathbb{K}$ campo
+    - $A \in O(n)$
+- **Th**
+    - $A_1, \ldots, A_n$ e $A^1, \ldots, A^n$ basi ortonormali di $\mathbb{K}^n$
+
 ## Def
 
 - **Dimensione di uno spazio vettoriale**
@@ -185,8 +204,8 @@
 ## Oss
 
 - **Hp**
-    - $\mathbb{K}$ campo
     - $n \in \mathbb{N}$
+    - $\mathbb{K}$ campo
     - $V$ spazio vettoriale su $\mathbb{K}$
     - $v_1, \ldots, v_n \in V$
 - **Th**

@@ -440,6 +440,20 @@ class="math inline">A</span> al posto delle colonne</li>
 </ul></li>
 </ul>
 </blockquote>
+<ul>
+<li><strong>Matrice simmetrica</strong></li>
+</ul>
+<blockquote>
+<ul>
+<li><span class="math inline">m, n \in \mathbb{N} - \{0\}</span></li>
+<li><span class="math inline">\mathbb{K}</span> campo</li>
+<li><span class="math inline">A \in \textrm{Mat}_{m \times
+n}(\mathbb{K})</span></li>
+<li><span class="math inline">A</span> è detta
+<strong>simmetrica</strong> <span class="math inline">\iff A^T =
+A</span></li>
+</ul>
+</blockquote>
 <h2 id="oss-5">Oss</h2>
 <ul>
 <li><strong>Hp</strong>
@@ -512,10 +526,6 @@ invertibile</strong></li>
 <li><span class="math inline">(\textrm{GL}(n, \mathbb{K}), \cdot)</span>
 è un gruppo</li>
 </ul></li>
-<li><strong>Dim</strong>
-<ul>
-<li><strong>⚠️ TODO</strong></li>
-</ul></li>
 </ul>
 <h2 id="oss-7">Oss</h2>
 <ul>
@@ -530,12 +540,40 @@ invertibile</strong></li>
 <ul>
 <li><span class="math inline">f</span> morfismo di gruppi</li>
 </ul></li>
-<li><strong>Dim</strong>
-<ul>
-<li><strong>⚠️ TODO</strong></li>
-</ul></li>
 </ul>
 <h2 id="def-7">Def</h2>
+<ul>
+<li><strong>Matrice ortogonale</strong></li>
+</ul>
+<blockquote>
+<ul>
+<li><span class="math inline">\mathbb{K}</span> campo</li>
+<li><span class="math inline">n \in \mathbb{N} - \{0\}</span></li>
+<li><span class="math inline">A \in \textrm{GL}(n,
+\mathbb{K})</span></li>
+<li><span class="math inline">A</span> è detta
+<strong>ortogonale</strong> <span class="math inline">\iff A \cdot A^T =
+A^T \cdot A = I_n</span>
+<ul>
+<li>in particolare <span class="math inline">A^{-1} = A^T</span></li>
+</ul></li>
+</ul>
+</blockquote>
+<ul>
+<li><strong>Gruppo ortogonale</strong></li>
+</ul>
+<blockquote>
+<ul>
+<li><span class="math inline">\mathbb{K}</span> campo</li>
+<li><span class="math inline">n \in \mathbb{N} - \{0\}</span></li>
+<li><span class="math inline">A \in \textrm{GL}(n,
+\mathbb{K})</span></li>
+<li><span class="math inline">O(n) := \{ A \in \textrm{GL}(n,
+\mathbb{K}) \mid A</span> ortogonale<span class="math inline">\}</span>
+è detto <strong>gruppo ortogonale</strong></li>
+</ul>
+</blockquote>
+<h2 id="def-8">Def</h2>
 <ul>
 <li><strong>Gruppo Speciale Lineare</strong></li>
 </ul>
@@ -548,7 +586,7 @@ invertibile</strong></li>
 <strong>gruppo generale lineare invertibile</strong></li>
 </ul>
 </blockquote>
-<h2 id="def-8">Def</h2>
+<h2 id="def-9">Def</h2>
 <ul>
 <li><strong>Matrici simili</strong></li>
 </ul>
@@ -563,7 +601,7 @@ class="math inline">B</span></strong> <span class="math inline">\iff
 \exists C \in \textrm{GL}(n, \mathbb{K}) \mid A = C^{-1}BC</span></li>
 </ul>
 </blockquote>
-<h2 id="def-9">Def</h2>
+<h2 id="def-10">Def</h2>
 <ul>
 <li><strong>Traccia</strong></li>
 </ul>
@@ -594,7 +632,7 @@ class="math inline">B</span></li>
 \textrm{tr}(B)</span></li>
 </ul></li>
 </ul>
-<h2 id="def-10">Def</h2>
+<h2 id="def-11">Def</h2>
 <ul>
 <li><strong>Matrice triangolare superiore</strong></li>
 </ul>
@@ -689,7 +727,7 @@ B \in \textrm{Mat}_{n \times n}(\mathbb{K}) \mid B</span> diagonale
 class="math inline">A</span></li>
 </ul>
 </blockquote>
-<h2 id="def-11">Def</h2>
+<h2 id="def-12">Def</h2>
 <ul>
 <li><strong>Sottomatrice di una matrice</strong></li>
 </ul>
@@ -762,7 +800,7 @@ class="math inline">(m-r)\cdot(n-r)</span> orlati in <span
 class="math inline">A</span></li>
 </ul></li>
 </ul>
-<h2 id="def-12">Def</h2>
+<h2 id="def-13">Def</h2>
 <ul>
 <li><strong>Matrice completa</strong></li>
 </ul>
@@ -782,7 +820,7 @@ b_m\end{array}\right)</span></li>
 </blockquote>
 <hr />
 <h1 id="rango">Rango</h1>
-<h2 id="def-13">Def</h2>
+<h2 id="def-14">Def</h2>
 <ul>
 <li><strong>Sottospazio ortogonale</strong></li>
 </ul>
@@ -841,7 +879,7 @@ vettoriale</li>
 <li><strong>⚠️ TODO</strong></li>
 </ul></li>
 </ul>
-<h2 id="def-14">Def</h2>
+<h2 id="def-15">Def</h2>
 <ul>
 <li><strong>Moltiplicazione sinistra</strong></li>
 </ul>
@@ -1001,7 +1039,7 @@ class="math inline">\dim(\textrm{span}(A_1, \ldots, A_m)^\bot)=
 <hr />
 <h1 id="operazioni-su-righe-e-colonne">Operazioni su righe e
 colonne</h1>
-<h2 id="def-15">Def</h2>
+<h2 id="def-16">Def</h2>
 <ul>
 <li><strong>Scambio di righe di una matrice</strong></li>
 </ul>

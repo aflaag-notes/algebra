@@ -19,6 +19,7 @@
     - [Funzione totiente di Eulero](https://ph04.github.io/algebra/html/insieme-quoziente.html#funzione-totiente-di-eulero)
 - [Matrici](https://ph04.github.io/algebra/html/matrici.html)
     - [Matrici](https://ph04.github.io/algebra/html/matrici.html#matrici)
+    - [Interpretazione geometrica dei vettori](https://ph04.github.io/algebra/html/matrici.html#interpretazione-geometrica-dei-vettori)
     - [Matrici particolari](https://ph04.github.io/algebra/html/matrici.html#matrici-particolari)
     - [Rango](https://ph04.github.io/algebra/html/matrici.html#rango)
     - [Operazioni su righe e colonne](https://ph04.github.io/algebra/html/matrici.html#operazioni-su-righe-e-colonne)
@@ -57,5 +58,6 @@
     - [Teorema del Cramer](https://ph04.github.io/algebra/html/teoremi-fondamentali.html#teorema-di-cramer)
     - [Teorema del Kronecker](https://ph04.github.io/algebra/html/teoremi-fondamentali.html#teorema-di-kronecker)
     - [Teorema del Binet](https://ph04.github.io/algebra/html/teoremi-fondamentali.html#teorema-di-binet)
+    - [Teorema spettrale](https://ph04.github.io/algebra/html/teoremi-fondamentali.html#teorema-spettrale)
 - [Tutti i teoremi](https://ph04.github.io/algebra/html/everything.html)
 
