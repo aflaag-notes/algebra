@@ -445,9 +445,9 @@ class="math inline">A</span> al posto delle colonne</li>
 </ul>
 <blockquote>
 <ul>
-<li><span class="math inline">m, n \in \mathbb{N} - \{0\}</span></li>
+<li><span class="math inline">n \in \mathbb{N} - \{0\}</span></li>
 <li><span class="math inline">\mathbb{K}</span> campo</li>
-<li><span class="math inline">A \in \textrm{Mat}_{m \times
+<li><span class="math inline">A \in \textrm{Mat}_{n \times
 n}(\mathbb{K})</span></li>
 <li><span class="math inline">A</span> è detta
 <strong>simmetrica</strong> <span class="math inline">\iff A^T =
@@ -887,11 +887,11 @@ vettoriale</li>
 <ul>
 <li><span class="math inline">\mathbb{K}</span> campo</li>
 <li><span class="math inline">m,n \in \mathbb{N} - \{0\}</span></li>
-<li><span class="math inline">x \in \textrm{Mat}_{n \times
-1}(\mathbb{K})</span></li>
-<li><span class="math inline">\forall A \in \textrm{Mat}_{m \times
-n}(\mathbb{K}) \quad L_A:\mathbb{K}^n \rightarrow \mathbb{K}^m: x
-\rightarrow A\cdot x</span></li>
+<li><span class="math inline">A \in \textrm{Mat}_{m \times
+n}(\mathbb{K})</span></li>
+<li><span class="math inline">L_A:\mathbb{K}^n \rightarrow \mathbb{K}^m:
+x \rightarrow A\cdot x</span> è detta <strong>moltiplicazione sinistra
+di <span class="math inline">A</span></strong></li>
 </ul>
 </blockquote>
 <h2 id="oss-12">Oss</h2>
@@ -900,13 +900,13 @@ n}(\mathbb{K}) \quad L_A:\mathbb{K}^n \rightarrow \mathbb{K}^m: x
 <ul>
 <li><span class="math inline">\mathbb{K}</span> campo</li>
 <li><span class="math inline">m,n \in \mathbb{N} - \{0\}</span></li>
-<li><span class="math inline">x \in \textrm{Mat}_{n \times
-1}(\mathbb{K})</span></li>
+<li><span class="math inline">A \in \textrm{Mat}_{m \times
+n}(\mathbb{K})</span></li>
 </ul></li>
 <li><strong>Th</strong>
 <ul>
-<li><span class="math inline">\forall A \in \textrm{Mat}_{m \times
-n}(\mathbb{K}) \quad L_A</span> è una trasformazione lineare</li>
+<li><span class="math inline">L_A</span> è una trasformazione
+lineare</li>
 </ul></li>
 <li><strong>Dim</strong>
 <ul>
@@ -919,14 +919,15 @@ n}(\mathbb{K}) \quad L_A</span> è una trasformazione lineare</li>
 <ul>
 <li><span class="math inline">\mathbb{K}</span> campo</li>
 <li><span class="math inline">m,n \in \mathbb{N} - \{0\}</span></li>
-<li><span class="math inline">x \in \textrm{Mat}_{n \times
-1}(\mathbb{K})</span></li>
+<li><span class="math inline">A \in \textrm{Mat}_{m \times
+n}(\mathbb{K})</span></li>
 </ul></li>
 <li><strong>Th</strong>
 <ul>
-<li><span class="math inline">\forall A \in \textrm{Mat}_{m \times
-n}(\mathbb{K}) \quad \ker(L_A) = \textrm{span}(A_1, \ldots, A_m)^\bot
-\land \textrm{im}(L_A) = \textrm{span}(A^1, \ldots, A^n)</span></li>
+<li><span class="math inline">\ker(L_A) = \textrm{span}(A_1, \ldots,
+A_m)^\bot</span></li>
+<li><span class="math inline">\textrm{im}(L_A) = \textrm{span}(A^1,
+\ldots, A^n)</span></li>
 </ul></li>
 <li><strong>Dim</strong>
 <ul>
@@ -987,8 +988,6 @@ A^n) \quad \exists x_1, \ldots, x_n \in \mathbb{K} \mid v = x_1 A^1 +
 <li><span class="math inline">m,n \in \mathbb{N} - \{0\}</span></li>
 <li><span class="math inline">A \in \textrm{Mat}_{m \times
 n}(\mathbb{K})</span></li>
-<li><span class="math inline">x \in \textrm{Mat}_{n \times
-1}(\mathbb{K})</span></li>
 <li><span class="math inline">\textrm{rk}(A):=\textrm{rk}(L_A)</span> è
 il <strong>rango di <span class="math inline">A</span></strong></li>
 </ul>
@@ -1001,8 +1000,6 @@ il <strong>rango di <span class="math inline">A</span></strong></li>
 <li><span class="math inline">m,n \in \mathbb{N} - \{0\}</span></li>
 <li><span class="math inline">A \in \textrm{Mat}_{m \times
 n}(\mathbb{K})</span></li>
-<li><span class="math inline">x \in \textrm{Mat}_{n \times
-1}(\mathbb{K})</span></li>
 </ul></li>
 <li><strong>Th</strong>
 <ul>

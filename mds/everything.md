@@ -1528,9 +1528,9 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 - **Matrice simmetrica**
 
-> - $m, n \in \mathbb{N} - \{0\}$
+> - $n \in \mathbb{N} - \{0\}$
 > - $\mathbb{K}$ campo
-> - $A \in \textrm{Mat}_{m \times n}(\mathbb{K})$
+> - $A \in \textrm{Mat}_{n \times n}(\mathbb{K})$
 > - $A$ è detta **simmetrica** $\iff A^T = A$
 
 
@@ -1807,8 +1807,8 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 > - $\mathbb{K}$ campo
 > - $m,n \in \mathbb{N} - \{0\}$
-> - $x \in \textrm{Mat}_{n \times 1}(\mathbb{K})$
-> - $\forall A \in \textrm{Mat}_{m \times n}(\mathbb{K}) \quad L_A:\mathbb{K}^n \rightarrow \mathbb{K}^m: x \rightarrow A\cdot x$
+> - $A \in \textrm{Mat}_{m \times n}(\mathbb{K})$
+> - $L_A:\mathbb{K}^n \rightarrow \mathbb{K}^m: x \rightarrow A\cdot x$ è detta **moltiplicazione sinistra di $A$**
 
 
 
@@ -1818,9 +1818,9 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Hp**
     - $\mathbb{K}$ campo
     - $m,n \in \mathbb{N} - \{0\}$
-    - $x \in \textrm{Mat}_{n \times 1}(\mathbb{K})$
+    - $A \in \textrm{Mat}_{m \times n}(\mathbb{K})$
 - **Th**
-    - $\forall A \in \textrm{Mat}_{m \times n}(\mathbb{K}) \quad L_A$ è una trasformazione lineare
+    - $L_A$ è una trasformazione lineare
 
 ## Teorema 98
 
@@ -1828,9 +1828,10 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Hp**
     - $\mathbb{K}$ campo
     - $m,n \in \mathbb{N} - \{0\}$
-    - $x \in \textrm{Mat}_{n \times 1}(\mathbb{K})$
+    - $A \in \textrm{Mat}_{m \times n}(\mathbb{K})$
 - **Th**
-    - $\forall A \in \textrm{Mat}_{m \times n}(\mathbb{K}) \quad \ker(L_A) = \textrm{span}(A_1, \ldots, A_m)^\bot \land \textrm{im}(L_A) = \textrm{span}(A^1, \ldots, A^n)$
+    - $\ker(L_A) = \textrm{span}(A_1, \ldots, A_m)^\bot$
+    - $\textrm{im}(L_A) = \textrm{span}(A^1, \ldots, A^n)$
 
 ## Definizione 48
 
@@ -1840,7 +1841,6 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 > - $\mathbb{K}$ campo
 > - $m,n \in \mathbb{N} - \{0\}$
 > - $A \in \textrm{Mat}_{m \times n}(\mathbb{K})$
-> - $x \in \textrm{Mat}_{n \times 1}(\mathbb{K})$
 > - $\textrm{rk}(A):=\textrm{rk}(L_A)$ è il **rango di $A$**
 
 
@@ -1852,7 +1852,6 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
     - $\mathbb{K}$ campo
     - $m,n \in \mathbb{N} - \{0\}$
     - $A \in \textrm{Mat}_{m \times n}(\mathbb{K})$
-    - $x \in \textrm{Mat}_{n \times 1}(\mathbb{K})$
 - **Th**
     - $\textrm{rk}(A) =\dim(\textrm{span}(A^1, \ldots, A^n)) = \dim(\textrm{span}(A_1, \ldots, A_n)^\bot)$
 
