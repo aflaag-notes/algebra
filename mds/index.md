@@ -39,6 +39,7 @@
 - [Spazi vettoriali](https://ph04.github.io/algebra/html/spazi-vettoriali.html)
     - [Spazi vettoriali](https://ph04.github.io/algebra/html/spazi-vettoriali.html#spazi-vettoriali)
     - [Applicazioni lineari](https://ph04.github.io/algebra/html/spazi-vettoriali.html#applicazioni-lineari)
+    - [Sottospazi affini](https://ph04.github.io/algebra/html/spazi-vettoriali.html#sottospazi-affini)
 - [Teoremi fondamentali](https://ph04.github.io/algebra/html/teoremi-fondamentali.html)
     - [Teorema fondamentale dell'algebra](https://ph04.github.io/algebra/html/teoremi-fondamentali.html#teorema-fondamentale-dellalgebra)
     - [Teorema della divisione euclidea con il resto](https://ph04.github.io/algebra/html/teoremi-fondamentali.html#teorema-della-divisione-euclidea-con-il-resto)

@@ -137,7 +137,7 @@
 
 > - $\mathbb{K}$ campo
 > - $n \in \mathbb{N} - \{0\}$
-> - $\textrm{GL}(n, \mathbb{K}) := \{A \in \textrm{Mat}_{n \times n}(\mathbb{K}) \mid A$ invertibile $\}$ è detto **gruppo generale lineare invertibile**
+> - $\textrm{GL}(n, \mathbb{K}) := \{A \in \textrm{Mat}_{n \times n}(\mathbb{K}) \mid A$ invertibile$\}$ è detto **gruppo generale lineare invertibile**
 
 ## Oss
 
@@ -176,20 +176,6 @@
 > - $n \in \mathbb{N} - \{0\}$
 > - $A, B \in \textrm{Mat}_{n \times n}(\mathbb{K})$
 > - $A$ **simile a $B$** $\iff \exists C \in \textrm{GL}(n, \mathbb{K}) \mid A = C^{-1}BC$
-
-## Oss
-
-- **Hp**
-    - $\mathbb{K}$ campo
-    - $n \in \mathbb{N} - \{0\}$
-    - $A, B \in \textrm{Mat}_{n \times n}(\mathbb{K}) \mid A$ simile a $B$
-- **Th**
-    - $\det(A) = \det(B)$
-- **Dim**
-    - $A$ simile a $B \implies \exists C \in \textrm{GL}(n, \mathbb{K}) \mid A = C^{-1}BC$ per definizione
-    - allora $\det(B)= \det(C^{-1})\cdot \det(A)\cdot \det(C)$
-    - per dimostrazione precedente $\det(C^{-1}) \cdot \det(C)^{-1}$
-    - allora $\det(B)= \det(C)^{-1}\cdot \det(A)\cdot \det(C) = \det(A)$
 
 ## Def
 
@@ -231,6 +217,28 @@
 > - $n \in \mathbb{N} - \{0\}$
 > - $A \in \textrm{Mat}_{n \times n}(\mathbb{K})$
 > - $A$ è detta **triangolare $\iff$** $A$ triangolare superiore o triangolare inferiore
+
+- **Matrice triangolarizzabile**
+
+> - $\mathbb{K}$ campo
+> - $n \in \mathbb{N} - \{0\}$
+> - $A \in \textrm{Mat}_{n \times n}(\mathbb{K})$
+> - $A$ è detta **triangolarizzabile** $\iff \exists B \in \textrm{Mat}_{n \times n}(\mathbb{K}) \mid B$ triangolare $\land \ B$ simile ad $A$
+
+- **Matrice diagonale**
+
+> - $\mathbb{K}$ campo
+> - $n \in \mathbb{N} - \{0\}$
+> - $A \in \textrm{Mat}_{n \times n}(\mathbb{K})$
+> - $A$ è detta **diagonale** $\iff \forall i, j \in [1, n], i \neq j \quad a_{i, j} = 0$
+>   - in particolare, $A$ è diagonale $\iff A$ triangolare superiore ed inferiore
+
+- **Matrice diagonalizzabile**
+
+> - $\mathbb{K}$ campo
+> - $n \in \mathbb{N} - \{0\}$
+> - $A \in \textrm{Mat}_{n \times n}(\mathbb{K})$
+> - $A$ è detta **diagonalizzabile** $\iff \exists B \in \textrm{Mat}_{n \times n}(\mathbb{K}) \mid B$ diagonale $\land \ B$ simile ad $A$
 
 ## Def
 

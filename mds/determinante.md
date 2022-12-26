@@ -68,6 +68,20 @@
 - **Th**
     - $\det(A) = \det(A^T)$
 
+## Oss
+
+- **Hp**
+    - $\mathbb{K}$ campo
+    - $n \in \mathbb{N} - \{0\}$
+    - $A, B \in \textrm{Mat}_{n \times n}(\mathbb{K}) \mid A$ simile a $B$
+- **Th**
+    - $\det(A) = \det(B)$
+- **Dim**
+    - $A$ simile a $B \implies \exists C \in \textrm{GL}(n, \mathbb{K}) \mid A = C^{-1}BC$ per definizione
+    - allora $\det(B)= \det(C^{-1})\cdot \det(A)\cdot \det(C)$
+    - per dimostrazione precedente $\det(C^{-1}) \cdot \det(C)^{-1}$
+    - allora $\det(B)= \det(C)^{-1}\cdot \det(A)\cdot \det(C) = \det(A)$
+
 ## Formula di Leibniz
 
 - **Hp**
@@ -232,13 +246,27 @@
 > - $\lambda \in \textrm{sp}(A)$
 > - $v \in \mathbb{K}^n - \{0\}$ è detto **autovettore di $A$ relativo a $\lambda$** $\iff (A- \lambda \cdot I_n) \cdot v = 0$
 
+## Oss
+
+- **Hp**
+    - $\mathbb{K}$ campo
+    - $n \in \mathbb{N} - \{0\}$
+    - $A \in \textrm{Mat}_{n \times n}(\mathbb{K})$
+    - $\lambda_1, \ldots, \lambda_k \in \textrm{sp}(A)$
+    - $v_1, \ldots, v_k$ autovettori di $A$ relativi rispettivamente a $\lambda_1, \ldots, \lambda_k$
+- **Th**
+    - $v_1, \ldots, v_k$ linearmente indipendenti
+
+## Def
+
 - **Autospazio**
 
 > - $\mathbb{K}$ campo
 > - $n \in \mathbb{N} - \{0\}$
 > - $A \in \textrm{Mat}_{n \times n}(\mathbb{K})$
 > - $\lambda \in \textrm{sp}(A)$
-> - $\textrm{E}_\lambda(A) := \{v \in \mathbb{K}^n \mid A \cdot v = \lambda \cdot v\}$ è detto **autospazio di $A$ relativo a $\lambda$**
+> - $\textrm{E}_\lambda(A) := \{v \in \mathbb{K}^n \mid (A - \lambda \cdot I_n) \cdot v = 0\}$ è detto **autospazio di $A$ relativo a $\lambda$**
+>   - in particolare $0_{\mathbb{K}^n} \in \textrm{E}_\lambda(A)$
 
 ## Oss
 
@@ -250,3 +278,118 @@
 - **Th**
     - $\textrm{E}_\lambda(A) \subset \mathbb{K}$ sottospazio vettoriale
 
+## Def
+
+- **Molteplicità algebrica di un autovalore**
+
+> - $\mathbb{K}$ campo
+> - $n \in \mathbb{N} - \{0\}$
+> - $A \in \textrm{Mat}_{n \times n}(\mathbb{K})$
+> - $\lambda \in \textrm{sp}(A)$
+> - $\mu(\lambda) := \max(\{\varepsilon \in \mathbb{N} : (x - \lambda)^\varepsilon \mid p_A(x)\})$ è detta **molteplicità algebrica di $\lambda$**
+
+## Oss
+
+- **Hp**
+    - $\mathbb{K}$ campo
+    - $n \in \mathbb{N} - \{0\}$
+    - $A, B \in \textrm{Mat}_{n \times n}(\mathbb{K}) \mid A$ simile a $B$
+    - $\lambda \in \textrm{sp}(A) = \textrm{sp}(B)$
+- **Th**
+    - $\mu_A(\lambda) = \mu_B(\lambda)$
+
+## Def
+
+- **Molteplicità geometrica di un autovalore**
+
+> - $\mathbb{K}$ campo
+> - $n \in \mathbb{N} - \{0\}$
+> - $A \in \textrm{Mat}_{n \times n}(\mathbb{K})$
+> - $\lambda \in \textrm{sp}(A)$
+> - $\nu(\lambda):=\dim(\textrm{E}_\lambda(A))$ è detta **molteplicità geometrica di $\lambda$**
+
+## Oss
+
+- **Hp**
+    - $\mathbb{K}$ campo
+    - $n \in \mathbb{N} - \{0\}$
+    - $A, B \in \textrm{Mat}_{n \times n}(\mathbb{K}) \mid A$ simile a $B$
+    - $\lambda \in \textrm{sp}(A) = \textrm{sp}(B)$
+- **Th**
+    - $\nu_A(\lambda) = \nu_B(\lambda)$
+
+## Oss
+
+- **Hp**
+    - $\mathbb{K}$ campo
+    - $n \in \mathbb{N} - \{0\}$
+    - $A \in \textrm{Mat}_{n \times n}(\mathbb{K})$
+    - $\lambda \in \textrm{sp}(A)$
+- **Th**
+    - $\nu(\lambda) = n - \textrm{rk}(A - \lambda \cdot I_n)$
+- **Dim**
+    - $\nu(\lambda) = \dim(\textrm{E}_\lambda(A))$ per definizione
+    - $\textrm{E}_\lambda(A) := \{v \in \mathbb{K}^n \mid (A - \lambda \cdot I_n) \cdot v = 0\}$ per definizione, allora $\textrm{E}_\lambda(A) = \ker(L_{A- \lambda \cdot I_n})$
+    - allora, per il teorema del rango $\textrm{rk}(L_{A - \lambda \cdot I_n}) = n - \dim(\ker(L_{A - \lambda \cdot I_n})) \iff  \dim(\ker(L_{A - \lambda \cdot I_n})) = n - \textrm{rk}(L_{A - \lambda \cdot I_n}) = \dim(\textrm{E}_\lambda(A)) = \nu(\lambda)$
+
+## Oss
+
+- **Hp**
+    - $\mathbb{K}$ campo
+    - $n \in \mathbb{N} - \{0\}$
+    - $A \in \textrm{Mat}_{n \times n}(\mathbb{K})$
+    - $\lambda \in \textrm{sp}(A)$
+- **Th**
+    - $\nu(\lambda) \le \mu(\lambda)$
+
+## Oss
+
+- **Hp**
+    - $\mathbb{K}$ campo
+    - $n \in \mathbb{N} - \{0\}$
+    - $A \in \textrm{Mat}_{n \times n}(\mathbb{K})$
+    1. $A$ triangolarizzabile
+    2. $\displaystyle \sum_{\lambda \in \textrm{sp}(A)}{\mu(\lambda)} = n$
+    3. $\displaystyle p_A(x) = \prod_{\lambda \in \textrm{sp}(A)}{(x - \lambda)}^{\mu(\lambda)}$
+- **Th**
+    - **⚠️  c'è qualcosa che non va nelle ipotesi**
+
+## Oss
+
+- **Hp**
+    - $n \in \mathbb{N} - \{0\}$
+    - $A \in \textrm{Mat}_{n \times n}(\mathbb{C})$
+- **Th**
+    - $A$ è triangolarizzabile
+- **Dim**
+    - **⚠️  todo**
+
+## Oss
+
+- **Hp**
+    - $n \in \mathbb{N} - \{0\}$
+    - $A \in \textrm{Mat}_{n \times n}(\mathbb{R})$
+- **Th**
+    - $A$ triangolarizzabile $\iff \exists \lambda \in \textrm{sp}(A) \mid \lambda \in \mathbb{R}$
+
+## Oss
+
+- **Hp**
+    - $\mathbb{K}$ campo
+    - $n \in \mathbb{N} - \{0\}$
+    - $A \in \textrm{Mat}_{n \times n}(\mathbb{K})$
+    1. $A$ diagonalizzabile
+    2. $\displaystyle \sum_{\lambda \in \textrm{sp}(A)}{\nu(\lambda)} = n$
+    3. $\exists B^1, \ldots, B^n$ autovettori di $A \mid B^1, \ldots, B^n$ base di $\mathbb{K}^n$
+- **Th**
+    - le proposizioni sono equivalenti
+
+## Oss
+
+- **Hp**
+    - $\mathbb{K}$ campo
+    - $n \in \mathbb{N} - \{0\}$
+    - $A \in \textrm{Mat}_{n \times n}(\mathbb{K})$
+    - $B^1, \ldots, B^n$ autovettori di $A \mid B = (B^1, \ldots, B^n) \in \textrm{GL}(n, \mathbb{K}) \land B^1, \ldots, B^n$ base di $\mathbb{K}^n$
+- **Th**
+    - $A$ diagonalizzabile

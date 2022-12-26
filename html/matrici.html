@@ -444,7 +444,7 @@ n}(\mathbb{K}) \mid A\cdot A^{-1} = A^{-1} \cdot A = I_n</span></li>
 <li><span class="math inline">\mathbb{K}</span> campo</li>
 <li><span class="math inline">n \in \mathbb{N} - \{0\}</span></li>
 <li><span class="math inline">\textrm{GL}(n, \mathbb{K}) := \{A \in
-\textrm{Mat}_{n \times n}(\mathbb{K}) \mid A</span> invertibile <span
+\textrm{Mat}_{n \times n}(\mathbb{K}) \mid A</span> invertibile<span
 class="math inline">\}</span> è detto <strong>gruppo generale lineare
 invertibile</strong></li>
 </ul>
@@ -512,33 +512,6 @@ class="math inline">B</span></strong> <span class="math inline">\iff
 \exists C \in \textrm{GL}(n, \mathbb{K}) \mid A = C^{-1}BC</span></li>
 </ul>
 </blockquote>
-<h2 id="oss-7">Oss</h2>
-<ul>
-<li><strong>Hp</strong>
-<ul>
-<li><span class="math inline">\mathbb{K}</span> campo</li>
-<li><span class="math inline">n \in \mathbb{N} - \{0\}</span></li>
-<li><span class="math inline">A, B \in \textrm{Mat}_{n \times
-n}(\mathbb{K}) \mid A</span> simile a <span
-class="math inline">B</span></li>
-</ul></li>
-<li><strong>Th</strong>
-<ul>
-<li><span class="math inline">\det(A) = \det(B)</span></li>
-</ul></li>
-<li><strong>Dim</strong>
-<ul>
-<li><span class="math inline">A</span> simile a <span
-class="math inline">B \implies \exists C \in \textrm{GL}(n, \mathbb{K})
-\mid A = C^{-1}BC</span> per definizione</li>
-<li>allora <span class="math inline">\det(B)= \det(C^{-1})\cdot
-\det(A)\cdot \det(C)</span></li>
-<li>per dimostrazione precedente <span class="math inline">\det(C^{-1})
-\cdot \det(C)^{-1}</span></li>
-<li>allora <span class="math inline">\det(B)= \det(C)^{-1}\cdot
-\det(A)\cdot \det(C) = \det(A)</span></li>
-</ul></li>
-</ul>
 <h2 id="def-8">Def</h2>
 <ul>
 <li><strong>Traccia</strong></li>
@@ -554,7 +527,7 @@ a_{n,n}</span> è detta <strong>traccia di <span
 class="math inline">A</span></strong></li>
 </ul>
 </blockquote>
-<h2 id="oss-8">Oss</h2>
+<h2 id="oss-7">Oss</h2>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -614,6 +587,57 @@ class="math inline">A</span> triangolare superiore o triangolare
 inferiore</li>
 </ul>
 </blockquote>
+<ul>
+<li><strong>Matrice triangolarizzabile</strong></li>
+</ul>
+<blockquote>
+<ul>
+<li><span class="math inline">\mathbb{K}</span> campo</li>
+<li><span class="math inline">n \in \mathbb{N} - \{0\}</span></li>
+<li><span class="math inline">A \in \textrm{Mat}_{n \times
+n}(\mathbb{K})</span></li>
+<li><span class="math inline">A</span> è detta
+<strong>triangolarizzabile</strong> <span class="math inline">\iff
+\exists B \in \textrm{Mat}_{n \times n}(\mathbb{K}) \mid B</span>
+triangolare <span class="math inline">\land \ B</span> simile ad <span
+class="math inline">A</span></li>
+</ul>
+</blockquote>
+<ul>
+<li><strong>Matrice diagonale</strong></li>
+</ul>
+<blockquote>
+<ul>
+<li><span class="math inline">\mathbb{K}</span> campo</li>
+<li><span class="math inline">n \in \mathbb{N} - \{0\}</span></li>
+<li><span class="math inline">A \in \textrm{Mat}_{n \times
+n}(\mathbb{K})</span></li>
+<li><span class="math inline">A</span> è detta
+<strong>diagonale</strong> <span class="math inline">\iff \forall i, j
+\in [1, n], i \neq j \quad a_{i, j} = 0</span>
+<ul>
+<li>in particolare, <span class="math inline">A</span> è diagonale <span
+class="math inline">\iff A</span> triangolare superiore ed
+inferiore</li>
+</ul></li>
+</ul>
+</blockquote>
+<ul>
+<li><strong>Matrice diagonalizzabile</strong></li>
+</ul>
+<blockquote>
+<ul>
+<li><span class="math inline">\mathbb{K}</span> campo</li>
+<li><span class="math inline">n \in \mathbb{N} - \{0\}</span></li>
+<li><span class="math inline">A \in \textrm{Mat}_{n \times
+n}(\mathbb{K})</span></li>
+<li><span class="math inline">A</span> è detta
+<strong>diagonalizzabile</strong> <span class="math inline">\iff \exists
+B \in \textrm{Mat}_{n \times n}(\mathbb{K}) \mid B</span> diagonale
+<span class="math inline">\land \ B</span> simile ad <span
+class="math inline">A</span></li>
+</ul>
+</blockquote>
 <h2 id="def-10">Def</h2>
 <ul>
 <li><strong>Sottomatrice di una matrice</strong></li>
@@ -667,7 +691,7 @@ class="math inline">M</span> si ottiene rimuovendo una riga e una
 colonna da <span class="math inline">M&#39;</span></li>
 </ul>
 </blockquote>
-<h2 id="oss-9">Oss</h2>
+<h2 id="oss-8">Oss</h2>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -728,7 +752,7 @@ loro, per osservazione precedente</li>
 </ul></li>
 </ul>
 </blockquote>
-<h2 id="oss-10">Oss</h2>
+<h2 id="oss-9">Oss</h2>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -747,7 +771,7 @@ di <span class="math inline">\mathbb{K}^n</span></li>
 <li><strong>⚠️ TODO</strong></li>
 </ul></li>
 </ul>
-<h2 id="oss-11">Oss</h2>
+<h2 id="oss-10">Oss</h2>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -781,7 +805,7 @@ n}(\mathbb{K}) \quad L_A:\mathbb{K}^n \rightarrow \mathbb{K}^m: x
 \rightarrow A\cdot x</span></li>
 </ul>
 </blockquote>
-<h2 id="oss-12">Oss</h2>
+<h2 id="oss-11">Oss</h2>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -800,7 +824,7 @@ n}(\mathbb{K}) \quad L_A</span> è una trasformazione lineare</li>
 <li><strong>⚠️ TODO</strong></li>
 </ul></li>
 </ul>
-<h2 id="oss-13">Oss</h2>
+<h2 id="oss-12">Oss</h2>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -864,7 +888,7 @@ A^n) \quad \exists x_1, \ldots, x_n \in \mathbb{K} \mid v = x_1 A^1 +
 </ul></li>
 </ul></li>
 </ul>
-<h2 id="oss-14">Oss</h2>
+<h2 id="oss-13">Oss</h2>
 <ul>
 <li><strong>Rango di una matrice</strong></li>
 </ul>
@@ -880,7 +904,7 @@ n}(\mathbb{K})</span></li>
 il <strong>rango di <span class="math inline">A</span></strong></li>
 </ul>
 </blockquote>
-<h2 id="oss-15">Oss</h2>
+<h2 id="oss-14">Oss</h2>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -1027,7 +1051,7 @@ class="math inline">\lambda \cdot A^j</span> lascia invariato <span
 class="math inline">\textrm{im}(L_A)</span></li>
 </ul>
 </blockquote>
-<h2 id="oss-16">Oss</h2>
+<h2 id="oss-15">Oss</h2>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -1046,7 +1070,7 @@ definite precedentemente</li>
 equivalenza</li>
 </ul></li>
 </ul>
-<h2 id="oss-17">Oss</h2>
+<h2 id="oss-16">Oss</h2>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -1065,7 +1089,7 @@ definite precedentemente</li>
 \land \textrm{rk}(A) = \textrm{rk}(B)</span></li>
 </ul></li>
 </ul>
-<h2 id="oss-18">Oss</h2>
+<h2 id="oss-17">Oss</h2>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -1084,7 +1108,7 @@ definite precedentemente</li>
 equivalenza</li>
 </ul></li>
 </ul>
-<h2 id="oss-19">Oss</h2>
+<h2 id="oss-18">Oss</h2>
 <ul>
 <li><strong>Hp</strong>
 <ul>
