@@ -27,6 +27,9 @@
     - [Kernel e immagine](https://ph04.github.io/algebra/html/morfismi.html#kernel-e-immagine)
 - [Gruppi diedrali](https://ph04.github.io/algebra/html/gruppi-diedrali.html)
 - [Polinomi](https://ph04.github.io/algebra/html/polinomi.html)
+
+## Algebra lineare
+
 - [Spazi vettoriali](https://ph04.github.io/algebra/html/spazi-vettoriali.html)
     - [Spazi vettoriali](https://ph04.github.io/algebra/html/spazi-vettoriali.html#spazi-vettoriali)
     - [Applicazioni lineari](https://ph04.github.io/algebra/html/spazi-vettoriali.html#applicazioni-lineari)
