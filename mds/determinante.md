@@ -18,7 +18,7 @@
 > - 1. $\forall A \in \textrm{Mat}_{n \times n}(\mathbb{K}) \quad \det$ multilineare su $A_1, \ldots A_n$ e $A^1, \ldots, A^n$
 > - 2. $\forall A \in \textrm{Mat}_{n \times n}(\mathbb{K}) \quad A_1, \ldots A_n$ e $A^1, \ldots, A^n$ basi di $\mathbb{K}^n \iff \det(A) \neq 0$
 > - 3. $\det(I_n) = 1$
-> - 4. per $\mathbb{K} \mid 1 \neq -1 \quad$ **⚠️  SCRIVI DETERMINANTE ALTERNANTE**
+> - 4. per $\mathbb{K} \mid 1 \neq -1 \quad$ scambiando due righe o due colonne $\det(A)$ cambia segno
 > - $\det$ è il **determinante** $\iff \det$ verifica 1, 2 e 3, oppure 1, 3 e 4
 >   - poiché è possibile dimostrare che la funzione che verifica tali condizioni esiste ed è unica, allora il $\det$ è totalmente determinato da tali caratteristiche
 
@@ -48,16 +48,30 @@
     - $n \in \mathbb{N} - \{0\}$
     - $A \in \textrm{Mat}_{n \times n}(\mathbb{K})$
     1. $A$ invertibile
-    2. $A_1, \ldots, A_n$ base di $\mathbb{K}^n$
-    3. $A^1, \ldots, A^n$ base di $\mathbb{K}^n$
-    4. $\textrm{rk}(A)=n$
+    2. $\textrm{rk}(A)=n$
+    3. $A_1, \ldots, A_n$ base di $\mathbb{K}^n$
+    4. $A^1, \ldots, A^n$ base di $\mathbb{K}^n$
     5. $\det(A) \neq 0$
     6. $A \equiv I_n$ tramite la relazione di equivalenza delle operazioni sulle righe
     7. $A \equiv I_n$ tramite la relazione di equivalenza delle operazioni sulle colonne
 - **Th**
     - le proposizioni sono equivalenti
 - **Dim**
-    - **⚠️  alcune le ha fatte**
+    - 1 $\iff$ 2
+        - sia $B = (B^1, \ldots, B^n) \in \textrm{Mat}_{n \times n}(\mathbb{K}) \mid A \cdot B = B \cdot A = I_n$
+        - allora $I_n = A \cdot B = (A \cdot B^1, \ldots, A \cdot B^n) = (L_A(B^1), \ldots, L_A(B^n)) \iff L_A(B^1) = e_1, \ldots, L_A(B^n) = e_n \iff e_1, \ldots, e_n \in \textrm{im}(L_A)$
+        - $e_1, \ldots, e_n$ base di $\mathbb{K}^n$, inoltre $\textrm{im}(L_A) \subseteq \mathbb{K}^n$ necessariamente, allora $\textrm{im}(L_A) = \textrm{span}(e_1, \ldots, e_n) = \mathbb{K}^n$
+        - allora $\textrm{rk}(A) := \textrm{rk}(L_A) = \dim(\textrm{span}(A^1, \ldots, A^n)) = \dim(\textrm{im}(L_A)) = \dim(\mathbb{K}^n) = n$
+    - 2 $\iff$ 3 $\land$ 4
+        - sia $\textrm{rk}(A) = n$
+        - per dimostrazione precedente $n = \textrm{rk}(A) = \dim(\textrm{span}(A^1, \ldots, A^n)) = \dim(\textrm{span}(A_1, \ldots, A_n))$
+        - in particolare $\dim(\textrm{span}(A_1, \ldots, A_n)) = n \iff \textrm{span}(A_1, \ldots, A_n) = \mathbb{K}^n$
+        - per dimostrazione precedente $A_1, \ldots, A_n$ generatori di $\mathbb{K}^n \iff A_1, \ldots, A_n$ linearmente indipententi
+        - allora, $A_1, \ldots, A_n$ base di $\mathbb{K}^n$
+        - è possibile ripetere il ragionamento analogo per $A^1, \ldots, A^n$
+    - 3 $\land$ 4 $\iff$ 5
+        - per definizione di $\det$, $\det(A) \neq 0 \iff A_1, \ldots, A_n$ e $A^1, \ldots, A^n$ basi di $\mathbb{K}^n$
+    - **⚠️  TODO**
 
 ## Oss
 
@@ -137,8 +151,6 @@
     - $A' = \left(\begin{array}{c}A_1 \\ \vdots \\ \lambda A_i \\ \vdots \\ A_n \end{array}\right)$
 - **Th**
     - $\det(A')=\lambda \cdot \det(A)$
-- **Dim**
-    - **⚠️  credo abbia a che fare con la multilinearità, inoltre aggiungi anche il terzo tipo di operazione che non cambia un cazzo**
 
 ## Formula di Laplace
 
@@ -359,9 +371,9 @@
     - $A \in \textrm{Mat}_{n \times n}(\mathbb{K})$
     1. $A$ triangolarizzabile
     2. $\displaystyle \sum_{\lambda \in \textrm{sp}(A)}{\mu(\lambda)} = n$
-    3. $\displaystyle p_A(x) = \prod_{\lambda \in \textrm{sp}(A)}{(x - \lambda)}^{\mu(\lambda)}$
+    3. $\displaystyle p_A(x) = \prod_{\lambda \in \textrm{sp}(A)}{(x - \lambda)}^{\mu(\lambda)}$, ovvero $p_A(x)$ è completamente fattorizzabile
 - **Th**
-    - **⚠️  c'è qualcosa che non va nelle ipotesi**
+    - le proposizioni sono equivalenti
 
 ## Oss
 
@@ -371,7 +383,7 @@
 - **Th**
     - $A$ è triangolarizzabile
 - **Dim**
-    - **⚠️  todo**
+    - per dimostrazione precedente $A$ triangolarizzabile $\iff \displaystyle p_A(x) = \prod_{\lambda \in \textrm{sp}(A)}{(x - \lambda)}^{\mu(\lambda)}$, e per il teorema fondamentale dell'algebra, in $\mathbb{C}$ è sempre possibile fattorizzare un polinomio in polinomi di grado $1$
 
 ## Oss
 

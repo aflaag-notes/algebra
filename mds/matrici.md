@@ -53,7 +53,7 @@
     - $A \in \textrm{Mat}_{l \times m}(\mathbb{K})$
     - $B \in \textrm{Mat}_{m \times n}(\mathbb{K})$
 - **Th**
-    - **⚠️  STA ROBA È TUTTA SBAGLIATA**
+    - **⚠️  TODO**
     - $\forall C \in \textrm{Mat}_{n \times k}(\mathbb{K}) \quad (AB)C = A(BC)$
     - $\forall C \in \textrm{Mat}_{m \times n}(\mathbb{K}) \quad A(B+C) = AB+AC$
     - $\forall C \in \textrm{Mat}_{n \times k}(\mathbb{K}) \quad (A+B)C = AC+BC$
@@ -368,8 +368,6 @@
     - $V \subset \mathbb{K}^n$ sottospazio vettoriale
 - **Th**
     - $V^{\bot}$ è sottospazio vettoriale di $\mathbb{K}^n$
-- **Dim**
-    - **⚠️  TODO**
 
 ## Oss
 
@@ -379,8 +377,6 @@
     - $V \subset \mathbb{K}^n$ sottospazio vettoriale
 - **Th**
     - $\dim(V^{\bot}) = \dim(\mathbb{K}^n) - \dim(V)$
-- **Dim**
-    - **⚠️  TODO**
 
 ## Def
 
@@ -399,8 +395,6 @@
     - $A \in \textrm{Mat}_{m \times n}(\mathbb{K})$
 - **Th**
     - $L_A$ è una trasformazione lineare
-- **Dim**
-    - **⚠️  TODO**
 
 ## Oss
 
@@ -438,14 +432,14 @@
     - $m,n \in \mathbb{N} - \{0\}$
     - $A \in \textrm{Mat}_{m \times n}(\mathbb{K})$
 - **Th**
-    - $\textrm{rk}(A) =\dim(\textrm{span}(A^1, \ldots, A^n)) = \dim(\textrm{span}(A_1, \ldots, A_n)^\bot)$
+    - $\textrm{rk}(A) =\dim(\textrm{span}(A^1, \ldots, A^n)) = \dim(\textrm{span}(A_1, \ldots, A_n))$
 - **Dim**
     - per definizione $\textrm{rk}(A) = \textrm{rk}(L_A)$
     - per dimostrazione precedente $L_A$ è una trasforamzione lineare, allora per definizione $\textrm{rk}(L_A) = \dim(\textrm{im}(L_A))$
     - per dimostrazione precedente si ha che $\textrm{im}(L_A) = \textrm{span}(A^1, \ldots, A^n)$, allora $\dim(\textrm{im}(L_A)) = \dim(\textrm{span}(A^1, \ldots, A^n))$, e per ragionamento analogo $\dim(\ker(L_A)) = \dim(\textrm{span}(A_1, \ldots, A_m)^\bot)$
     - allora $\dim(\textrm{im}(L_A)) = \textrm{rk}(L_A) = \dim(\mathbb{K}^n) - \dim(\ker(L_A)) = \dim(\mathbb{K}^n) - \dim(\textrm{span}(A_1, \ldots, A_m)^\bot)$
     - per dimostrazione precedente si ha che $\dim(\textrm{span}(A_1, \ldots, A_m)^\bot)= \dim(\mathbb{K}^n) - \dim(\textrm{span}(A_1, \ldots, A_m))$
-    - allora $\textrm{rk}(A) = \dim(\textrm{span}(A^1, \ldots, A^n)) = \dim(\mathbb{K}) - (\dim(\mathbb{K}^n) - \dim(\textrm{span}(A_1, \ldots, A_m))) = \dim(\textrm{span}(A_1, \ldots, A_m))$
+    - allora $\textrm{rk}(A) = \dim(\textrm{span}(A^1, \ldots, A^n)) = \dim(\mathbb{K}^n) - (\dim(\mathbb{K}^n) - \dim(\textrm{span}(A_1, \ldots, A_m))) = \dim(\textrm{span}(A_1, \ldots, A_m))$
 
 ****
 

@@ -107,7 +107,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 > - 1. $\forall A \in \textrm{Mat}_{n \times n}(\mathbb{K}) \quad \det$ multilineare su $A_1, \ldots A_n$ e $A^1, \ldots, A^n$
 > - 2. $\forall A \in \textrm{Mat}_{n \times n}(\mathbb{K}) \quad A_1, \ldots A_n$ e $A^1, \ldots, A^n$ basi di $\mathbb{K}^n \iff \det(A) \neq 0$
 > - 3. $\det(I_n) = 1$
-> - 4. per $\mathbb{K} \mid 1 \neq -1 \quad$ **⚠️  SCRIVI DETERMINANTE ALTERNANTE**
+> - 4. per $\mathbb{K} \mid 1 \neq -1 \quad$ scambiando due righe o due colonne $\det(A)$ cambia segno
 > - $\det$ è il **determinante** $\iff \det$ verifica 1, 2 e 3, oppure 1, 3 e 4
 >   - poiché è possibile dimostrare che la funzione che verifica tali condizioni esiste ed è unica, allora il $\det$ è totalmente determinato da tali caratteristiche
 
@@ -146,9 +146,9 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
     - $n \in \mathbb{N} - \{0\}$
     - $A \in \textrm{Mat}_{n \times n}(\mathbb{K})$
     1. $A$ invertibile
-    2. $A_1, \ldots, A_n$ base di $\mathbb{K}^n$
-    3. $A^1, \ldots, A^n$ base di $\mathbb{K}^n$
-    4. $\textrm{rk}(A)=n$
+    2. $\textrm{rk}(A)=n$
+    3. $A_1, \ldots, A_n$ base di $\mathbb{K}^n$
+    4. $A^1, \ldots, A^n$ base di $\mathbb{K}^n$
     5. $\det(A) \neq 0$
     6. $A \equiv I_n$ tramite la relazione di equivalenza delle operazioni sulle righe
     7. $A \equiv I_n$ tramite la relazione di equivalenza delle operazioni sulle colonne
@@ -248,6 +248,8 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
     - $A' = \left(\begin{array}{c}A_1 \\ \vdots \\ \lambda A_i \\ \vdots \\ A_n \end{array}\right)$
 - **Th**
     - $\det(A')=\lambda \cdot \det(A)$
+
+
 
 ## Teorema 18
 
@@ -516,9 +518,9 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
     - $A \in \textrm{Mat}_{n \times n}(\mathbb{K})$
     1. $A$ triangolarizzabile
     2. $\displaystyle \sum_{\lambda \in \textrm{sp}(A)}{\mu(\lambda)} = n$
-    3. $\displaystyle p_A(x) = \prod_{\lambda \in \textrm{sp}(A)}{(x - \lambda)}^{\mu(\lambda)}$
+    3. $\displaystyle p_A(x) = \prod_{\lambda \in \textrm{sp}(A)}{(x - \lambda)}^{\mu(\lambda)}$, ovvero $p_A(x)$ è completamente fattorizzabile
 - **Th**
-    - **⚠️  c'è qualcosa che non va nelle ipotesi**
+    - le proposizioni sono equivalenti
 
 
 
@@ -1429,7 +1431,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
     - $A \in \textrm{Mat}_{l \times m}(\mathbb{K})$
     - $B \in \textrm{Mat}_{m \times n}(\mathbb{K})$
 - **Th**
-    - **⚠️  STA ROBA È TUTTA SBAGLIATA**
+    - **⚠️  TODO**
     - $\forall C \in \textrm{Mat}_{n \times k}(\mathbb{K}) \quad (AB)C = A(BC)$
     - $\forall C \in \textrm{Mat}_{m \times n}(\mathbb{K}) \quad A(B+C) = AB+AC$
     - $\forall C \in \textrm{Mat}_{n \times k}(\mathbb{K}) \quad (A+B)C = AC+BC$
@@ -1761,13 +1763,31 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 > - $b \in \textrm{Mat}_{m \times 1}(\mathbb{K})$
 > - $A_b:=\left(\begin{array}{cccc}a_{1, 1} & \cdots & a_{1, n} & b_1 \\ \vdots & \ddots & \vdots & \vdots \\ a_{m, 1} & \cdots & a_{m,n} & b_m\end{array}\right)$
 
+
+
+## Definizione 46
+
+
+- **Matrice di un'applicazione lineare**
+
+> - $\mathbb{K}$ campo
+> - $m, n \in \mathbb{N} - \{0\}$
+> - $V, W$ spazi vettoriali su $\mathbb{K}$
+> - $\mathcal{B}=\{v_1, \ldots, v_n\}$ base di $V$
+> - $\mathcal{C}=\{w_1, \ldots, w_m\}$ base di $W$
+> - $f: V \rightarrow W$ isomorfismo
+> - $\varphi_\mathcal{B}: \mathbb{K}^N \rightarrow V$ isomorfismo
+> - $\varphi_\mathcal{C}: \mathbb{K}^M \rightarrow W$ isomorfismo
+> - $A \in \textrm{Mat}_{m \times n}(\mathbb{K}) \mid f = \varphi_\mathcal{C}\cdot L_A \cdot \varphi_\mathcal{B}^{-1}$ è detta **matrice di $f$**
+>   - è possibile dimostrare che $\forall f$ applicazione lineare$\quad \exists ! A \in \textrm{Mat}_{m \times n}(\mathbb{K})$
+
 ****
 
 # Rango
 
 
 
-## Definizione 46
+## Definizione 47
 
 
 - **Sottospazio ortogonale**
@@ -1790,6 +1810,8 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
     - $V^{\bot}$ è sottospazio vettoriale di $\mathbb{K}^n$
 
+
+
 ## Teorema 96
 
 
@@ -1800,7 +1822,9 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
     - $\dim(V^{\bot}) = \dim(\mathbb{K}^n) - \dim(V)$
 
-## Definizione 47
+
+
+## Definizione 48
 
 
 - **Moltiplicazione sinistra**
@@ -1822,6 +1846,8 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
     - $L_A$ è una trasformazione lineare
 
+
+
 ## Teorema 98
 
 
@@ -1833,7 +1859,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
     - $\ker(L_A) = \textrm{span}(A_1, \ldots, A_m)^\bot$
     - $\textrm{im}(L_A) = \textrm{span}(A^1, \ldots, A^n)$
 
-## Definizione 48
+## Definizione 49
 
 
 - **Rango di una matrice**
@@ -1853,14 +1879,14 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
     - $m,n \in \mathbb{N} - \{0\}$
     - $A \in \textrm{Mat}_{m \times n}(\mathbb{K})$
 - **Th**
-    - $\textrm{rk}(A) =\dim(\textrm{span}(A^1, \ldots, A^n)) = \dim(\textrm{span}(A_1, \ldots, A_n)^\bot)$
+    - $\textrm{rk}(A) =\dim(\textrm{span}(A^1, \ldots, A^n)) = \dim(\textrm{span}(A_1, \ldots, A_n))$
 
 ****
 
 # Operazioni su righe e colonne
 
 
-## Definizione 49
+## Definizione 50
 
 
 - **Scambio di righe di una matrice**
@@ -1969,7 +1995,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Definizione 50
+## Definizione 51
  
 
 - **Morfismo di gruppi**
@@ -2014,7 +2040,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 # Isomorfismi
 
 
-## Definizione 51
+## Definizione 52
 
 
 - **Isomorfismo**
@@ -2100,7 +2126,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 # Kernel e immagine
 
 
-## Definizione 52
+## Definizione 53
 
 
 - **Kernel e immagine di gruppi**
@@ -2189,7 +2215,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Definizione 53
+## Definizione 54
 
 
 - **Insieme dei complessi**
@@ -2212,7 +2238,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Definizione 54
+## Definizione 55
 
 
 - **Coniugato**
@@ -2246,7 +2272,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Definizione 55
+## Definizione 56
 
 
 - **Raggio**
@@ -2258,7 +2284,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Definizione 56
+## Definizione 57
 
 
 - **Forma polare**
@@ -2269,7 +2295,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Definizione 57
+## Definizione 58
 
 
 - **Soluzione principale**
@@ -2317,7 +2343,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Definizione 58
+## Definizione 59
 
 
 - **Permutazioni**
@@ -2336,7 +2362,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
   - $(S_X, \circ)$ è un gruppo, non abeliano se $|X| \ge 3$
 
-## Definizione 59
+## Definizione 60
 
 
 - **Ciclo di una permutazione**
@@ -2389,7 +2415,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 # Trasposizioni
 
 
-## Definizione 60
+## Definizione 61
 
 
 - **Trasposizione**
@@ -2422,7 +2448,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 # Segno
 
 
-## Definizione 61
+## Definizione 62
 
 
 - **Segno di una permutazione**
@@ -2506,7 +2532,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Definizione 62
+## Definizione 63
 
 
 - **Polinomi**
@@ -2526,7 +2552,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
     - $(\mathbb{K}[x], +, \cdot)$ è un anello
 
-## Definizione 63
+## Definizione 64
 
 
 - **Grado del polinomio**
@@ -2571,7 +2597,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
     - $\mathbb{K}[x]$ è un dominio di integrità
 
-## Definizione 64
+## Definizione 65
 
 
 - **Radici di un polinomio**
@@ -2701,7 +2727,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Definizione 65
+## Definizione 66
 
 
 - **Relazioni**
@@ -2814,7 +2840,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 # Partizioni
 
 
-## Definizione 66
+## Definizione 67
 
 
 - **Partizione**
@@ -2858,7 +2884,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
   - $x \sim_S y \iff x^{-1}y \in H$ è una relazione di equivalenza
 
-## Definizione 67
+## Definizione 68
  
 
 - **Classi laterali**
@@ -2931,7 +2957,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Definizione 68
+## Definizione 69
  
 
 - **Spazio vettoriale**
@@ -2958,7 +2984,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
     - $\mathbb{K}^n$ spazio vettoriale su $\mathbb{K}$
 
-## Definizione 69
+## Definizione 70
 
 
 - **Sottospazio vettoriale**
@@ -2969,7 +2995,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Definizione 70
+## Definizione 71
 
 
 - **Span di vettori**
@@ -2994,7 +3020,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
     - $\textrm{span}(v_1, \ldots, v_n)$ è un sottospazio vettoriale di $V$
 
-## Definizione 71
+## Definizione 72
 
 
 - **Vettori generatori**
@@ -3071,7 +3097,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
     - $n = m$, il che implica che la cardinalità delle basi di uno spazio vettoriale è unica
 
-## Definizione 72
+## Definizione 73
 
 
 - **Base ortogonale di uno spazio di Hilbert**
@@ -3118,7 +3144,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Definizione 73
+## Definizione 74
 
 
 - **Dimensione di uno spazio vettoriale**
@@ -3221,7 +3247,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Definizione 74
+## Definizione 75
 
 
 - **Applicazioni lineari**
@@ -3259,7 +3285,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
     - $V \cong W \iff \dim(V) = \dim(W)$
 
-## Definizione 75
+## Definizione 76
 
 
 - **Kernel e immagine**
@@ -3282,6 +3308,8 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
     - $\ker(f) \subset V$ sottospazio
 
+
+
 ## Teorema 189
 
 
@@ -3292,7 +3320,9 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
     - $\textrm{im}(f) \subset W$ sottospazio
 
-## Definizione 76
+
+
+## Definizione 77
 
 
 - **Rango di un'applicazione lineare**
@@ -3657,9 +3687,8 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 # Teorema spettrale
 
 - **Hp**
-    - $\mathbb{K}$ campo
     - $n \in \mathbb{N} - \{0\}$
-    - $A \in \textrm{Mat}_{n \times n}(\mathbb{K}) \mid A$ simmetrica
+    - $A \in \textrm{Mat}_{n \times n}(\mathbb{R}) \mid A$ simmetrica
     1. $\forall \lambda \in \textrm{sp}(A) \quad \lambda \in \mathbb{R}$
     2. $A$ diagonalizzabile
     3. $\exists B^1, \ldots, B^n$ autovettori di $A \mid B^1, \ldots, B^n$ base ortonormale di $\mathbb{R}^n$

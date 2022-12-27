@@ -420,9 +420,8 @@
 # Teorema spettrale
 
 - **Hp**
-    - $\mathbb{K}$ campo
     - $n \in \mathbb{N} - \{0\}$
-    - $A \in \textrm{Mat}_{n \times n}(\mathbb{K}) \mid A$ simmetrica
+    - $A \in \textrm{Mat}_{n \times n}(\mathbb{R}) \mid A$ simmetrica
     1. $\forall \lambda \in \textrm{sp}(A) \quad \lambda \in \mathbb{R}$
     2. $A$ diagonalizzabile
     3. $\exists B^1, \ldots, B^n$ autovettori di $A \mid B^1, \ldots, B^n$ base ortonormale di $\mathbb{R}^n$

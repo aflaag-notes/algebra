@@ -350,7 +350,8 @@ class="math inline">\mathbb{K}^n \iff \det(A) \neq 0</span></li>
 </ol></li>
 <li><ol start="4" type="1">
 <li>per <span class="math inline">\mathbb{K} \mid 1 \neq -1 \quad</span>
-<strong>!!! SCRIVI DETERMINANTE ALTERNANTE</strong></li>
+scambiando due righe o due colonne <span
+class="math inline">\det(A)</span> cambia segno</li>
 </ol></li>
 <li><span class="math inline">\det</span> è il
 <strong>determinante</strong> <span class="math inline">\iff \det</span>
@@ -407,11 +408,11 @@ n}(\mathbb{K})</span></li>
 </ul>
 <ol type="1">
 <li><span class="math inline">A</span> invertibile</li>
+<li><span class="math inline">\textrm{rk}(A)=n</span></li>
 <li><span class="math inline">A_1, \ldots, A_n</span> base di <span
 class="math inline">\mathbb{K}^n</span></li>
 <li><span class="math inline">A^1, \ldots, A^n</span> base di <span
 class="math inline">\mathbb{K}^n</span></li>
-<li><span class="math inline">\textrm{rk}(A)=n</span></li>
 <li><span class="math inline">\det(A) \neq 0</span></li>
 <li><span class="math inline">A \equiv I_n</span> tramite la relazione
 di equivalenza delle operazioni sulle righe</li>
@@ -912,11 +913,12 @@ n}(\mathbb{K})</span></li>
 <li><span class="math inline">\displaystyle \sum_{\lambda \in
 \textrm{sp}(A)}{\mu(\lambda)} = n</span></li>
 <li><span class="math inline">\displaystyle p_A(x) = \prod_{\lambda \in
-\textrm{sp}(A)}{(x - \lambda)}^{\mu(\lambda)}</span></li>
+\textrm{sp}(A)}{(x - \lambda)}^{\mu(\lambda)}</span>, ovvero <span
+class="math inline">p_A(x)</span> è completamente fattorizzabile</li>
 </ol></li>
 <li><strong>Th</strong>
 <ul>
-<li><strong>!!! c’è qualcosa che non va nelle ipotesi</strong></li>
+<li>le proposizioni sono equivalenti</li>
 </ul></li>
 </ul>
 <h2 id="teorema-32">Teorema 32</h2>
@@ -2231,7 +2233,7 @@ n}(\mathbb{K})</span></li>
 </ul></li>
 <li><strong>Th</strong>
 <ul>
-<li><strong>!!! STA ROBA È TUTTA SBAGLIATA</strong></li>
+<li><strong>!!! TODO</strong></li>
 <li><span class="math inline">\forall C \in \textrm{Mat}_{n \times
 k}(\mathbb{K}) \quad (AB)C = A(BC)</span></li>
 <li><span class="math inline">\forall C \in \textrm{Mat}_{m \times
@@ -2747,9 +2749,39 @@ n}(\mathbb{K})</span></li>
 b_m\end{array}\right)</span></li>
 </ul>
 </blockquote>
+<h2 id="definizione-46">Definizione 46</h2>
+<ul>
+<li><strong>Matrice di un’applicazione lineare</strong></li>
+</ul>
+<blockquote>
+<ul>
+<li><span class="math inline">\mathbb{K}</span> campo</li>
+<li><span class="math inline">m, n \in \mathbb{N} - \{0\}</span></li>
+<li><span class="math inline">V, W</span> spazi vettoriali su <span
+class="math inline">\mathbb{K}</span></li>
+<li><span class="math inline">\mathcal{B}=\{v_1, \ldots, v_n\}</span>
+base di <span class="math inline">V</span></li>
+<li><span class="math inline">\mathcal{C}=\{w_1, \ldots, w_m\}</span>
+base di <span class="math inline">W</span></li>
+<li><span class="math inline">f: V \rightarrow W</span> isomorfismo</li>
+<li><span class="math inline">\varphi_\mathcal{B}: \mathbb{K}^N
+\rightarrow V</span> isomorfismo</li>
+<li><span class="math inline">\varphi_\mathcal{C}: \mathbb{K}^M
+\rightarrow W</span> isomorfismo</li>
+<li><span class="math inline">A \in \textrm{Mat}_{m \times
+n}(\mathbb{K}) \mid f = \varphi_\mathcal{C}\cdot L_A \cdot
+\varphi_\mathcal{B}^{-1}</span> è detta <strong>matrice di <span
+class="math inline">f</span></strong>
+<ul>
+<li>è possibile dimostrare che <span class="math inline">\forall
+f</span> applicazione lineare<span class="math inline">\quad \exists ! A
+\in \textrm{Mat}_{m \times n}(\mathbb{K})</span></li>
+</ul></li>
+</ul>
+</blockquote>
 <hr />
 <h1 id="rango">Rango</h1>
-<h2 id="definizione-46">Definizione 46</h2>
+<h2 id="definizione-47">Definizione 47</h2>
 <ul>
 <li><strong>Sottospazio ortogonale</strong></li>
 </ul>
@@ -2800,7 +2832,7 @@ vettoriale</li>
 \dim(V)</span></li>
 </ul></li>
 </ul>
-<h2 id="definizione-47">Definizione 47</h2>
+<h2 id="definizione-48">Definizione 48</h2>
 <ul>
 <li><strong>Moltiplicazione sinistra</strong></li>
 </ul>
@@ -2847,7 +2879,7 @@ A_m)^\bot</span></li>
 \ldots, A^n)</span></li>
 </ul></li>
 </ul>
-<h2 id="definizione-48">Definizione 48</h2>
+<h2 id="definizione-49">Definizione 49</h2>
 <ul>
 <li><strong>Rango di una matrice</strong></li>
 </ul>
@@ -2873,13 +2905,13 @@ n}(\mathbb{K})</span></li>
 <li><strong>Th</strong>
 <ul>
 <li><span class="math inline">\textrm{rk}(A) =\dim(\textrm{span}(A^1,
-\ldots, A^n)) = \dim(\textrm{span}(A_1, \ldots, A_n)^\bot)</span></li>
+\ldots, A^n)) = \dim(\textrm{span}(A_1, \ldots, A_n))</span></li>
 </ul></li>
 </ul>
 <hr />
 <h1 id="operazioni-su-righe-e-colonne">Operazioni su righe e
 colonne</h1>
-<h2 id="definizione-49">Definizione 49</h2>
+<h2 id="definizione-50">Definizione 50</h2>
 <ul>
 <li><strong>Scambio di righe di una matrice</strong></li>
 </ul>
@@ -3058,7 +3090,7 @@ definite precedentemente</li>
 </ul>
 <hr />
 <h1 id="morfismi">Morfismi</h1>
-<h2 id="definizione-50">Definizione 50</h2>
+<h2 id="definizione-51">Definizione 51</h2>
 <ul>
 <li><strong>Morfismo di gruppi</strong></li>
 </ul>
@@ -3121,7 +3153,7 @@ class="math inline">H</span></li>
 </ul>
 <hr />
 <h1 id="isomorfismi">Isomorfismi</h1>
-<h2 id="definizione-51">Definizione 51</h2>
+<h2 id="definizione-52">Definizione 52</h2>
 <ul>
 <li><strong>Isomorfismo</strong></li>
 </ul>
@@ -3254,7 +3286,7 @@ class="math inline">(G, \cdot)</span> e <span class="math inline">(G,
 </ul>
 <hr />
 <h1 id="kernel-e-immagine">Kernel e immagine</h1>
-<h2 id="definizione-52">Definizione 52</h2>
+<h2 id="definizione-53">Definizione 53</h2>
 <ul>
 <li><strong>Kernel e immagine di gruppi</strong></li>
 </ul>
@@ -3383,7 +3415,7 @@ sottogruppo normale</li>
 </ul>
 <hr />
 <h1 id="numeri-complessi">Numeri complessi</h1>
-<h2 id="definizione-53">Definizione 53</h2>
+<h2 id="definizione-54">Definizione 54</h2>
 <ul>
 <li><strong>Insieme dei complessi</strong></li>
 </ul>
@@ -3411,7 +3443,7 @@ b:=\operatorname{Im}(z)\end{array}\right.</span></li>
 <li><span class="math inline">z\cdot w=(a c-b d)+i(ad+ bc)</span></li>
 </ul></li>
 </ul>
-<h2 id="definizione-54">Definizione 54</h2>
+<h2 id="definizione-55">Definizione 55</h2>
 <ul>
 <li><strong>Coniugato</strong></li>
 </ul>
@@ -3451,7 +3483,7 @@ class="math inline">\overline{z}+\overline{w}=\overline{z+w}</span></li>
 \theta</span></li>
 </ul></li>
 </ul>
-<h2 id="definizione-55">Definizione 55</h2>
+<h2 id="definizione-56">Definizione 56</h2>
 <ul>
 <li><strong>Raggio</strong></li>
 </ul>
@@ -3467,7 +3499,7 @@ dall’origine nel piano di Gauss</li>
 </ul></li>
 </ul>
 </blockquote>
-<h2 id="definizione-56">Definizione 56</h2>
+<h2 id="definizione-57">Definizione 57</h2>
 <ul>
 <li><strong>Forma polare</strong></li>
 </ul>
@@ -3479,7 +3511,7 @@ dall’origine nel piano di Gauss</li>
 <strong>forma polare di <span class="math inline">z</span></strong></li>
 </ul>
 </blockquote>
-<h2 id="definizione-57">Definizione 57</h2>
+<h2 id="definizione-58">Definizione 58</h2>
 <ul>
 <li><strong>Soluzione principale</strong></li>
 </ul>
@@ -3544,7 +3576,7 @@ w)=\arg(z) + \arg(w)</span></li>
 </ul>
 <hr />
 <h1 id="permutazioni">Permutazioni</h1>
-<h2 id="definizione-58">Definizione 58</h2>
+<h2 id="definizione-59">Definizione 59</h2>
 <ul>
 <li><strong>Permutazioni</strong></li>
 </ul>
@@ -3572,7 +3604,7 @@ biiettiva <span class="math inline">\}</span></li>
 abeliano se <span class="math inline">|X| \ge 3</span></li>
 </ul></li>
 </ul>
-<h2 id="definizione-59">Definizione 59</h2>
+<h2 id="definizione-60">Definizione 60</h2>
 <ul>
 <li><strong>Ciclo di una permutazione</strong></li>
 </ul>
@@ -3640,7 +3672,7 @@ d_k)</span></li>
 </ul>
 <hr />
 <h1 id="trasposizioni">Trasposizioni</h1>
-<h2 id="definizione-60">Definizione 60</h2>
+<h2 id="definizione-61">Definizione 61</h2>
 <ul>
 <li><strong>Trasposizione</strong></li>
 </ul>
@@ -3691,7 +3723,7 @@ trasposizioni adiacenti</li>
 </ul>
 <hr />
 <h1 id="segno">Segno</h1>
-<h2 id="definizione-61">Definizione 61</h2>
+<h2 id="definizione-62">Definizione 62</h2>
 <ul>
 <li><strong>Segno di una permutazione</strong></li>
 </ul>
@@ -3832,7 +3864,7 @@ k}</span></li>
 </ul>
 <hr />
 <h1 id="polinomi">Polinomi</h1>
-<h2 id="definizione-62">Definizione 62</h2>
+<h2 id="definizione-63">Definizione 63</h2>
 <ul>
 <li><strong>Polinomi</strong></li>
 </ul>
@@ -3863,7 +3895,7 @@ class="math inline">\iff a_n = 1</span></li>
 anello</li>
 </ul></li>
 </ul>
-<h2 id="definizione-63">Definizione 63</h2>
+<h2 id="definizione-64">Definizione 64</h2>
 <ul>
 <li><strong>Grado del polinomio</strong></li>
 </ul>
@@ -3928,7 +3960,7 @@ anello</li>
 integrità</li>
 </ul></li>
 </ul>
-<h2 id="definizione-64">Definizione 64</h2>
+<h2 id="definizione-65">Definizione 65</h2>
 <ul>
 <li><strong>Radici di un polinomio</strong></li>
 </ul>
@@ -4108,7 +4140,7 @@ b) = 1</span></li>
 </ul>
 <hr />
 <h1 id="relazioni">Relazioni</h1>
-<h2 id="definizione-65">Definizione 65</h2>
+<h2 id="definizione-66">Definizione 66</h2>
 <ul>
 <li><strong>Relazioni</strong></li>
 </ul>
@@ -4299,7 +4331,7 @@ equivalenza</li>
 </ul>
 <hr />
 <h1 id="partizioni">Partizioni</h1>
-<h2 id="definizione-66">Definizione 66</h2>
+<h2 id="definizione-67">Definizione 67</h2>
 <ul>
 <li><strong>Partizione</strong></li>
 </ul>
@@ -4357,7 +4389,7 @@ X/\sim}[x]</span></li>
 relazione di equivalenza</li>
 </ul></li>
 </ul>
-<h2 id="definizione-67">Definizione 67</h2>
+<h2 id="definizione-68">Definizione 68</h2>
 <ul>
 <li><strong>Classi laterali</strong></li>
 </ul>
@@ -4452,7 +4484,7 @@ G/H</span></li>
 </ul>
 <hr />
 <h1 id="spazi-vettoriali">Spazi Vettoriali</h1>
-<h2 id="definizione-68">Definizione 68</h2>
+<h2 id="definizione-69">Definizione 69</h2>
 <ul>
 <li><strong>Spazio vettoriale</strong></li>
 </ul>
@@ -4500,7 +4532,7 @@ ben definito il prodotto scalare</li>
 <span class="math inline">\mathbb{K}</span></li>
 </ul></li>
 </ul>
-<h2 id="definizione-69">Definizione 69</h2>
+<h2 id="definizione-70">Definizione 70</h2>
 <ul>
 <li><strong>Sottospazio vettoriale</strong></li>
 </ul>
@@ -4516,7 +4548,7 @@ class="math inline">\iff (W, +) \subset (V, +)</span> sottogruppo, e
 \lambda \cdot w \in W</span></li>
 </ul>
 </blockquote>
-<h2 id="definizione-70">Definizione 70</h2>
+<h2 id="definizione-71">Definizione 71</h2>
 <ul>
 <li><strong>Span di vettori</strong></li>
 </ul>
@@ -4549,7 +4581,7 @@ class="math inline">\mathbb{K}</span></li>
 un sottospazio vettoriale di <span class="math inline">V</span></li>
 </ul></li>
 </ul>
-<h2 id="definizione-71">Definizione 71</h2>
+<h2 id="definizione-72">Definizione 72</h2>
 <ul>
 <li><strong>Vettori generatori</strong></li>
 </ul>
@@ -4679,7 +4711,7 @@ v_n</span> base di <span class="math inline">V</span></li>
 cardinalità delle basi di uno spazio vettoriale è unica</li>
 </ul></li>
 </ul>
-<h2 id="definizione-72">Definizione 72</h2>
+<h2 id="definizione-73">Definizione 73</h2>
 <ul>
 <li><strong>Base ortogonale di uno spazio di Hilbert</strong></li>
 </ul>
@@ -4750,7 +4782,7 @@ class="math inline">A^1, \ldots, A^n</span> basi ortonormali di <span
 class="math inline">\mathbb{K}^n</span></li>
 </ul></li>
 </ul>
-<h2 id="definizione-73">Definizione 73</h2>
+<h2 id="definizione-74">Definizione 74</h2>
 <ul>
 <li><strong>Dimensione di uno spazio vettoriale</strong></li>
 </ul>
@@ -4900,7 +4932,7 @@ su <span class="math inline">\mathbb{K}</span></li>
 </ul>
 <hr />
 <h1 id="applicazioni-lineari">Applicazioni lineari</h1>
-<h2 id="definizione-74">Definizione 74</h2>
+<h2 id="definizione-75">Definizione 75</h2>
 <ul>
 <li><strong>Applicazioni lineari</strong></li>
 </ul>
@@ -4953,7 +4985,7 @@ class="math inline">\mathbb{K}</span></li>
 \dim(W)</span></li>
 </ul></li>
 </ul>
-<h2 id="definizione-75">Definizione 75</h2>
+<h2 id="definizione-76">Definizione 76</h2>
 <ul>
 <li><strong>Kernel e immagine</strong></li>
 </ul>
@@ -5001,7 +5033,7 @@ lineare</li>
 sottospazio</li>
 </ul></li>
 </ul>
-<h2 id="definizione-76">Definizione 76</h2>
+<h2 id="definizione-77">Definizione 77</h2>
 <ul>
 <li><strong>Rango di un’applicazione lineare</strong></li>
 </ul>
@@ -5513,10 +5545,9 @@ n}(\mathbb{K})</span></li>
 <ul>
 <li><strong>Hp</strong>
 <ul>
-<li><span class="math inline">\mathbb{K}</span> campo</li>
 <li><span class="math inline">n \in \mathbb{N} - \{0\}</span></li>
 <li><span class="math inline">A \in \textrm{Mat}_{n \times
-n}(\mathbb{K}) \mid A</span> simmetrica</li>
+n}(\mathbb{R}) \mid A</span> simmetrica</li>
 </ul>
 <ol type="1">
 <li><span class="math inline">\forall \lambda \in \textrm{sp}(A) \quad

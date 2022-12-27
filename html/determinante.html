@@ -232,7 +232,8 @@ class="math inline">\mathbb{K}^n \iff \det(A) \neq 0</span></li>
 </ol></li>
 <li><ol start="4" type="1">
 <li>per <span class="math inline">\mathbb{K} \mid 1 \neq -1 \quad</span>
-<strong>⚠️ SCRIVI DETERMINANTE ALTERNANTE</strong></li>
+scambiando due righe o due colonne <span
+class="math inline">\det(A)</span> cambia segno</li>
 </ol></li>
 <li><span class="math inline">\det</span> è il
 <strong>determinante</strong> <span class="math inline">\iff \det</span>
@@ -289,11 +290,11 @@ n}(\mathbb{K})</span></li>
 </ul>
 <ol type="1">
 <li><span class="math inline">A</span> invertibile</li>
+<li><span class="math inline">\textrm{rk}(A)=n</span></li>
 <li><span class="math inline">A_1, \ldots, A_n</span> base di <span
 class="math inline">\mathbb{K}^n</span></li>
 <li><span class="math inline">A^1, \ldots, A^n</span> base di <span
 class="math inline">\mathbb{K}^n</span></li>
-<li><span class="math inline">\textrm{rk}(A)=n</span></li>
 <li><span class="math inline">\det(A) \neq 0</span></li>
 <li><span class="math inline">A \equiv I_n</span> tramite la relazione
 di equivalenza delle operazioni sulle righe</li>
@@ -306,7 +307,51 @@ di equivalenza delle operazioni sulle colonne</li>
 </ul></li>
 <li><strong>Dim</strong>
 <ul>
-<li><strong>⚠️ alcune le ha fatte</strong></li>
+<li>1 <span class="math inline">\iff</span> 2
+<ul>
+<li>sia <span class="math inline">B = (B^1, \ldots, B^n) \in
+\textrm{Mat}_{n \times n}(\mathbb{K}) \mid A \cdot B = B \cdot A =
+I_n</span></li>
+<li>allora <span class="math inline">I_n = A \cdot B = (A \cdot B^1,
+\ldots, A \cdot B^n) = (L_A(B^1), \ldots, L_A(B^n)) \iff L_A(B^1) = e_1,
+\ldots, L_A(B^n) = e_n \iff e_1, \ldots, e_n \in
+\textrm{im}(L_A)</span></li>
+<li><span class="math inline">e_1, \ldots, e_n</span> base di <span
+class="math inline">\mathbb{K}^n</span>, inoltre <span
+class="math inline">\textrm{im}(L_A) \subseteq \mathbb{K}^n</span>
+necessariamente, allora <span class="math inline">\textrm{im}(L_A) =
+\textrm{span}(e_1, \ldots, e_n) = \mathbb{K}^n</span></li>
+<li>allora <span class="math inline">\textrm{rk}(A) := \textrm{rk}(L_A)
+= \dim(\textrm{span}(A^1, \ldots, A^n)) = \dim(\textrm{im}(L_A)) =
+\dim(\mathbb{K}^n) = n</span></li>
+</ul></li>
+<li>2 <span class="math inline">\iff</span> 3 <span
+class="math inline">\land</span> 4
+<ul>
+<li>sia <span class="math inline">\textrm{rk}(A) = n</span></li>
+<li>per dimostrazione precedente <span class="math inline">n =
+\textrm{rk}(A) = \dim(\textrm{span}(A^1, \ldots, A^n)) =
+\dim(\textrm{span}(A_1, \ldots, A_n))</span></li>
+<li>in particolare <span class="math inline">\dim(\textrm{span}(A_1,
+\ldots, A_n)) = n \iff \textrm{span}(A_1, \ldots, A_n) =
+\mathbb{K}^n</span></li>
+<li>per dimostrazione precedente <span class="math inline">A_1, \ldots,
+A_n</span> generatori di <span class="math inline">\mathbb{K}^n \iff
+A_1, \ldots, A_n</span> linearmente indipententi</li>
+<li>allora, <span class="math inline">A_1, \ldots, A_n</span> base di
+<span class="math inline">\mathbb{K}^n</span></li>
+<li>è possibile ripetere il ragionamento analogo per <span
+class="math inline">A^1, \ldots, A^n</span></li>
+</ul></li>
+<li>3 <span class="math inline">\land</span> 4 <span
+class="math inline">\iff</span> 5
+<ul>
+<li>per definizione di <span class="math inline">\det</span>, <span
+class="math inline">\det(A) \neq 0 \iff A_1, \ldots, A_n</span> e <span
+class="math inline">A^1, \ldots, A^n</span> basi di <span
+class="math inline">\mathbb{K}^n</span></li>
+</ul></li>
+<li><strong>⚠️ TODO</strong></li>
 </ul></li>
 </ul>
 <h2 id="oss-2">Oss</h2>
@@ -448,12 +493,6 @@ n}(\mathbb{K})</span></li>
 <ul>
 <li><span class="math inline">\det(A&#39;)=\lambda \cdot
 \det(A)</span></li>
-</ul></li>
-<li><strong>Dim</strong>
-<ul>
-<li><strong>⚠️ credo abbia a che fare con la multilinearità, inoltre
-aggiungi anche il terzo tipo di operazione che non cambia un
-cazzo</strong></li>
 </ul></li>
 </ul>
 <h2 id="formula-di-laplace">Formula di Laplace</h2>
@@ -849,11 +888,12 @@ n}(\mathbb{K})</span></li>
 <li><span class="math inline">\displaystyle \sum_{\lambda \in
 \textrm{sp}(A)}{\mu(\lambda)} = n</span></li>
 <li><span class="math inline">\displaystyle p_A(x) = \prod_{\lambda \in
-\textrm{sp}(A)}{(x - \lambda)}^{\mu(\lambda)}</span></li>
+\textrm{sp}(A)}{(x - \lambda)}^{\mu(\lambda)}</span>, ovvero <span
+class="math inline">p_A(x)</span> è completamente fattorizzabile</li>
 </ol></li>
 <li><strong>Th</strong>
 <ul>
-<li><strong>⚠️ c’è qualcosa che non va nelle ipotesi</strong></li>
+<li>le proposizioni sono equivalenti</li>
 </ul></li>
 </ul>
 <h2 id="oss-22">Oss</h2>
@@ -870,7 +910,12 @@ n}(\mathbb{C})</span></li>
 </ul></li>
 <li><strong>Dim</strong>
 <ul>
-<li><strong>⚠️ todo</strong></li>
+<li>per dimostrazione precedente <span class="math inline">A</span>
+triangolarizzabile <span class="math inline">\iff \displaystyle p_A(x) =
+\prod_{\lambda \in \textrm{sp}(A)}{(x - \lambda)}^{\mu(\lambda)}</span>,
+e per il teorema fondamentale dell’algebra, in <span
+class="math inline">\mathbb{C}</span> è sempre possibile fattorizzare un
+polinomio in polinomi di grado <span class="math inline">1</span></li>
 </ul></li>
 </ul>
 <h2 id="oss-23">Oss</h2>

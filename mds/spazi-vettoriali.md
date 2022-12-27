@@ -59,7 +59,6 @@
 - **Th**
     - $\textrm{span}(v_1, \ldots, v_n)$ è un sottospazio vettoriale di $V$
 - **Dim**
-    - **⚠️ APPUNTO SU $0$ bla bla bla**
     - $(\textrm{span}(v_1, \ldots, v_n), +) \subset (V, +)$ sottogruppo
         - $0_V = 0v_1 + \ldots + 0v_n \implies 0 \in \textrm{span}(v_1, \ldots, v_n)$
         - $\forall u, v \in \textrm{span}(v_1, \ldots, v_n) \quad \exists \lambda_1, \ldots , \lambda_n, \mu_1 \ldots \mu_n \in \mathbb{K} \mid u= \lambda_1v_1 + \ldots + \lambda_n v_n \land w = \mu_1 v_1+ \ldots + \mu_1v_1 \implies v + w = (\lambda_1 \mu_1) v_1 + \ldots + (\lambda_n \mu_n) v_n \implies v + w \in \textrm{span}(v_1, \ldots, v_n)$
@@ -123,7 +122,7 @@
     - _prima implicazione_
         - è stata omessa dal professore, se stai leggendo questa frase sappi che hai dei bei piedi
     - _seconda implicazione_
-        - ⚠️ **MANCA LA DIMOSTRAZIONE**
+        - ⚠️ **TODO**
 
 ## Oss
 
@@ -136,7 +135,7 @@
 - **Th**
     - $k \le m$
 - **Dim**
-    - ⚠️ **MANCA LA DIMOSTRAZIONE, È NOIOSISSIMA TE GIURO**
+    - ⚠️ **TODO, CONTROLLA LE IPOTESI**
 
 ## Cor
 
@@ -212,8 +211,6 @@
     - $v_1, \ldots, v_n$ base di $V \iff \forall v \in V \quad \exists ! \lambda_1, \ldots, \lambda_n \in \mathbb{K} \mid v = \lambda_1 v_1 + \ldots + \lambda_n v_n$
 - **Dim**
     - ⚠️ **TODO**
-    - _prima implicazione_
-    - _seconda implicazione_
 
 ## Oss
 
@@ -362,12 +359,11 @@
     - $V \cong \mathbb{K}^n$
 - **Dim**
     - sia $v_1, \ldots, v_n \in V$ una base di $V$
-        - ⚠️ **MANCA LA DIMOSTRAZIONE PER CUI ALMENO UNA BASE ESISTE SEMPRE**
     - per dimostrare la tesi è necessario dimostrare che $f: \mathbb{K}^n \rightarrow V: (t_1, \ldots, t_n) \rightarrow t_1v_1 + \ldots + t_nv_n$ è un isomorfismo
     - $f$ morfismo
         - $\forall \lambda \in\mathbb{K}, x, y \in \mathbb{K}^n \mid x = (x_1, \ldots, x_n) \land y=(y_1, \ldots, y_n)$ si ha che $f(x + y) = (x_1 + y_1)v_1 + \ldots + (x_n + y_n) v_n = (x_1v_1+ \ldots + x_nv_n) + (y_1v_1 + \ldots + y_nv_n) = f(x) + f(y)$, dunque è verificata la prima condizione, e inoltre $f(\lambda x) = \lambda x_1v_1 + \ldots + \lambda x_n v_n = \lambda(x_1v_1 + \ldots + x_n v_n) = \lambda f(x)$, dunque è verificata anche la seconda
     - $f$ biiettiva
-        - ⚠️ **MANCA LA DIMOSTRAZIONE**
+        - ⚠️ **TODO**
 
 ## Oss
 
@@ -416,8 +412,6 @@
     - $f : V \rightarrow W$ trasformazione lineare
 - **Th**
     - $\ker(f) \subset V$ sottospazio
-- **Dim**
-    - ⚠️ **TODO**
 
 ## Oss
 
@@ -427,8 +421,6 @@
     - $f : V \rightarrow W$ trasformazione lineare
 - **Th**
     - $\textrm{im}(f) \subset W$ sottospazio
-- **Dim**
-    - ⚠️ **TODO**
 
 ## Def
 
