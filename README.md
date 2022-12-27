@@ -6,6 +6,10 @@ Se invece siete qui per la lista di teoremi, ecco [il link](https://ph04.github.
 
 ## TODO list
 
-- metti le matrici di transizione/matrici delle funzioni quella roba là
+- metti le graffe nelle basi
+- vedi matrice di transizione negli appunti di simone
+- algoritmi
+- matrice di vandermonde
+- interpolazione di lagrange
 - fixa il quoziente, che $(G/H, \cdot)$ gruppo soltanto se $H$ normale
 

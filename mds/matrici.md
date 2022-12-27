@@ -331,6 +331,21 @@
 > - $b \in \textrm{Mat}_{m \times 1}(\mathbb{K})$
 > - $A_b:=\left(\begin{array}{cccc}a_{1, 1} & \cdots & a_{1, n} & b_1 \\ \vdots & \ddots & \vdots & \vdots \\ a_{m, 1} & \cdots & a_{m,n} & b_m\end{array}\right)$
 
+## Def
+
+- **Matrice di un'applicazione lineare**
+
+> - $\mathbb{K}$ campo
+> - $m, n \in \mathbb{N} - \{0\}$
+> - $V, W$ spazi vettoriali su $\mathbb{K}$
+> - $\mathcal{B}=\{v_1, \ldots, v_n\}$ base di $V$
+> - $\mathcal{C}=\{w_1, \ldots, w_m\}$ base di $W$
+> - $f: V \rightarrow W$ isomorfismo
+> - $\varphi_\mathcal{B}: \mathbb{K}^N \rightarrow V$ isomorfismo
+> - $\varphi_\mathcal{C}: \mathbb{K}^M \rightarrow W$ isomorfismo
+> - $A \in \textrm{Mat}_{m \times n}(\mathbb{K}) \mid f = \varphi_\mathcal{C}\cdot L_A \cdot \varphi_\mathcal{B}^{-1}$ è detta **matrice di $f$**
+>   - è possibile dimostrare che $\forall f$ applicazione lineare$\quad \exists ! A \in \textrm{Mat}_{m \times n}(\mathbb{K})$
+
 ****
 
 # Rango

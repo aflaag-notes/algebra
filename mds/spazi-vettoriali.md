@@ -274,9 +274,9 @@
     - $m:=\dim(U)$
     - $n := \dim (V)$
     - $w_1, \ldots, w_k \in U \cap V$ base di $U \cap V$
-    - $\mathcal{B}_1 := w_1, \ldots, w_k, u_{k + 1}, \ldots, u_m \in U$ base di $U$
-    - $\mathcal{B}_2 := w_1, \ldots, w_k, v_{k + 1}, \ldots, v_n \in V$ base di $V$
-    - $\mathcal{B}_1 \cup \mathcal{B}_2 := w_1, \ldots w_k, u_{k + 1}, \ldots, u_m, v_{k + 1}, \ldots, v_n$
+    - $\mathcal{B}_1 := \{w_1, \ldots, w_k, u_{k + 1}, \ldots, u_m\}$ base di $U$
+    - $\mathcal{B}_2 := \{w_1, \ldots, w_k, v_{k + 1}, \ldots, v_n\}$ base di $V$
+    - $\mathcal{B}_1 \cup \mathcal{B}_2 := \{w_1, \ldots w_k, u_{k + 1}, \ldots, u_m, v_{k + 1}, \ldots, v_n\}$
     - $\forall u \in U, v \in V \mid u := \displaystyle \sum_{i = 1}^k{\lambda_iw_i} + \sum_{j = k + 1}^m{\lambda_j u_j} \land \displaystyle v :=\sum_{i = 1}^k{\mu_iw_i} + \sum_{h = k + 1}^n {\mu_hv_h} \quad u + v =\sum_{i = 1}^k{(\lambda_i + \mu_i)w_i} + \sum_{j = k + 1}^m{\lambda_j u_j} + \sum_{h = k + 1}^n {\mu_hv_h} \implies u + v \in \textrm{span}(w_1, \ldots w_k, u_{k + 1}, \ldots, u_m, v_{k + 1}, \ldots, v_n) \implies \mathcal{B}_1 \cup \mathcal{B}_2$ generatori di $U + V$, poiché $u + v \in U + V$
     - $a := \displaystyle \sum_{i = 1}^k{\lambda_iw_i}$
     - $b := \displaystyle \sum_{j = k +1}^m{\mu_j u_j } \implies b \in \textrm{span}(u_{k +1 }, \ldots, u_k) \subsetneqq U \implies b \in U$
