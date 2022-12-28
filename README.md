@@ -6,8 +6,7 @@ Se invece siete qui per la lista di teoremi, ecco [il link](https://ph04.github.
 
 ## TODO list
 
-- riscrivi il teorema spettrale
-- metti le graffe nelle basi
+- giacitura
 - vedi matrice di transizione negli appunti di simone
 - algoritmi
 - matrice di vandermonde
