@@ -17,7 +17,7 @@ def filter_content(parts):
 
     return text_part, "> -" in text_part
 
-out = "# DISCLAIMER\n\nQuesto è un file che contiene una lista di tutti i teoremi, osservazioni, definizioni, esempi, lemmi, corollari, formule e proposizioni **senza alcuna dimostrazione**, di conseguenza molte informazioni risulteranno essere senza alcun contesto se già non si conosce la materia. Detto questo, buona lettura.\n\n****\n"
+out = "# Everything\n\n## DISCLAIMER\n\nQuesto è un file che contiene una lista di tutti i teoremi, osservazioni, definizioni, esempi, lemmi, corollari, formule e proposizioni **senza alcuna dimostrazione**, di conseguenza molte informazioni risulteranno essere senza alcun contesto se già non si conosce la materia. Detto questo, buona lettura.\n\n****\n"
 
 i = 1
 d = 1

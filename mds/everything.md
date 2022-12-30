@@ -1,4 +1,6 @@
-# DISCLAIMER
+# Everything
+
+## DISCLAIMER
 
 Questo è un file che contiene una lista di tutti i teoremi, osservazioni, definizioni, esempi, lemmi, corollari, formule e proposizioni **senza alcuna dimostrazione**, di conseguenza molte informazioni risulteranno essere senza alcun contesto se già non si conosce la materia. Detto questo, buona lettura.
 
