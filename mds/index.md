@@ -65,10 +65,10 @@
     - [Teorema di Cauchy](https://ph04.github.io/algebra/html/teoremi-fondamentali.html#teorema-di-cauchy)
     - [Teorema di Carnot](https://ph04.github.io/algebra/html/teoremi-fondamentali.html#teorema-di-carnot)
     - [Teorema del rango](https://ph04.github.io/algebra/html/teoremi-fondamentali.html#teorema-del-rango)
-    - [Teorema del Rouché-Capelli](https://ph04.github.io/algebra/html/teoremi-fondamentali.html#teorema-di-rouché-capelli)
-    - [Teorema del Cramer](https://ph04.github.io/algebra/html/teoremi-fondamentali.html#teorema-di-cramer)
-    - [Teorema del Kronecker](https://ph04.github.io/algebra/html/teoremi-fondamentali.html#teorema-di-kronecker)
-    - [Teorema del Binet](https://ph04.github.io/algebra/html/teoremi-fondamentali.html#teorema-di-binet)
+    - [Teorema di Rouché-Capelli](https://ph04.github.io/algebra/html/teoremi-fondamentali.html#teorema-di-rouché-capelli)
+    - [Teorema di Cramer](https://ph04.github.io/algebra/html/teoremi-fondamentali.html#teorema-di-cramer)
+    - [Teorema di Kronecker](https://ph04.github.io/algebra/html/teoremi-fondamentali.html#teorema-di-kronecker)
+    - [Teorema di Binet](https://ph04.github.io/algebra/html/teoremi-fondamentali.html#teorema-di-binet)
     - [Teorema spettrale](https://ph04.github.io/algebra/html/teoremi-fondamentali.html#teorema-spettrale)
 
 ## Tutti i teoremi
