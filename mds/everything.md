@@ -5,658 +5,11 @@
 Questo è un file che contiene una lista di tutti i teoremi, osservazioni, definizioni, esempi, lemmi, corollari, formule e proposizioni **senza alcuna dimostrazione**, di conseguenza molte informazioni risulteranno essere senza alcun contesto se già non si conosce la materia. Detto questo, buona lettura.
 
 ****
-# Coefficienti binomiali
+# Gruppi e Anelli
 
 
 
 ## Definizione 1
-
-
-- **Coefficiente binomiale**
-
-> - $0! := 1$
-> - $n, k \in \mathbb{N}$
-> - $\displaystyle \binom{n}{k}:=\left\{\begin{array}{ll}\frac{n !}{n !(n-k) !} & k \leqslant n \\ 0 & k>n\end{array}\right.$
-
-
-
-## Teorema 1
-
-
-- **Hp**
-  - $n, k \in \mathbb{N}$
-- **Th**
-  - $\displaystyle \binom{n}{k} = \binom{n}{n-k}$
-
-## Teorema 2
-
-
-- **Hp**
-  - $n, k \in \mathbb{N}$
-- **Th**
-  - $\displaystyle \binom{n}{k + 1} = \binom{n - 1}{k + 1} \binom{n - 1}{ k}$
-
-## Teorema 3
-
-
-- **Hp**
-  - $p \in \mathbb{P}$
-  - $k \in \mathbb{N} \mid 0 \lt k \lt p$
-- **Th**
-  - $p \ \bigg\vert \displaystyle \binom{p}{k}$
-
-## Teorema 4
-
-
-- **Hp**
-  - $n \in \mathbb{Z}$
-  - $p \in \mathbb{P} : p \mid n$
-  - $[a] \in \mathbb{Z}_{p}$
-- **Th**
-  - $n \cdot [a] = [0]$ in $\mathbb{Z}_p$
-
-## Teorema 5
-
-
-- **Hp**
-  - $n \in \mathbb{Z}$
-  - $p \in \mathbb{P} : p \mid n$
-  - $[a] \in \mathbb{Z}_{p}$
-  - $k \in \mathbb{N} \mid 0 \lt k \lt p$
-- **Th**
-  - $\displaystyle \binom{p}{k} \cdot [a] = [0]$ in $\mathbb{Z}_p$
-
-## Teorema 6
-
-
-- **Hp**
-  - $p \in \mathbb{P}$
-  - $[a], [b] \in \mathbb{Z}_p$
-- **Th**
-  - $([a]+[b])^{p}=[a]^{p}+[b]^{p}$ in $\mathbb{Z}_p$
-
-## Teorema 7
-
-
-- **Hp**
-  - $p \in \mathbb{P}$
-  - $[a_1], \ldots, [a_n] \in \mathbb{Z}_p$
-- **Th**
-  - $\left(\left[a_{1}\right]+\ldots+\left[a_{n}\right]\right)^{p}=\left[a_{1}\right]^{p}+\ldots+\left[a_{n}\right]^{p}$ in $\mathbb{Z}_p$
-
-
-****
-# Determinante
-
-
-
-## Definizione 2
-
-
-- **Applicazione multilineare**
-
-> - $\mathbb{K}$ campo
-> - $k \in \mathbb{N}$
-> - $V_1, \ldots, V_k, W$ spazi vettoriali
-> - $f: V_1 \times \ldots \times V_k \rightarrow W:(v_1, \ldots, v_k) \rightarrow w$
-> - $f$ **multilineare** $\iff \forall i \in [1, k], \ \forall v_1 \in V_1, \ldots, v_i', v_i'' \in V_i, \ldots, v_k \in V_k, \ \forall \lambda, \mu \in \mathbb{K} \quad f(v_1, \ldots, \lambda v_i'+\mu v_i'', \ldots, v_k) = \lambda f(v_1, \ldots, v_i', \ldots, v_k) + \mu f(v_1, \ldots, v_i'', \ldots, v_k)$
-
-- **Determinante**
-
-> - $\mathbb{K}$ campo
-> - $n \in \mathbb{N} - \{0\}$
-> - $\det : \textrm{Mat}_{n \times n}(\mathbb{K}) \rightarrow \mathbb{K}$
-> - 1. $\forall A \in \textrm{Mat}_{n \times n}(\mathbb{K}) \quad \det$ multilineare su $A_1, \ldots A_n$ e $A^1, \ldots, A^n$
-> - 2. $\forall A \in \textrm{Mat}_{n \times n}(\mathbb{K}) \quad A_1, \ldots A_n$ e $A^1, \ldots, A^n$ basi di $\mathbb{K}^n \iff \det(A) \neq 0$
-> - 3. $\det(I_n) = 1$
-> - 4. per $\mathbb{K} \mid 1 \neq -1 \quad$ scambiando due righe o due colonne $\det(A)$ cambia segno
-> - $\det$ è il **determinante** $\iff \det$ verifica 1, 2 e 3, oppure 1, 3 e 4
->   - poiché è possibile dimostrare che la funzione che verifica tali condizioni esiste ed è unica, allora il $\det$ è totalmente determinato da tali caratteristiche
-
-
-
-## Teorema 8
-
-
-- **Hp**
-    - $\mathbb{K}$ campo $\mid 1 \neq -1$
-    - $n \in \mathbb{N} - \{0\}$
-    - $f : \textrm{Mat}_{n \times n}(\mathbb{K}) \rightarrow \mathbb{K}$
-    4. **⚠️  SCRIVI**
-- **Th**
-    - **⚠️  DETERMINANTE ALTERNANTE**
-
-
-
-## Definizione 3
-
-
-- **Matrice singolare**
-
-> - $\mathbb{K}$ campo
-> - $n \in \mathbb{N} - \{0\}$
-> - $A \in \textrm{Mat}_{n \times n}(\mathbb{K})$
-> - $A$ è detta **singolare** $\iff \det(A) = 0$
-
-
-
-## Teorema 9
-
-
-- **Hp**
-    - $\mathbb{K}$ campo
-    - $n \in \mathbb{N} - \{0\}$
-    - $A \in \textrm{Mat}_{n \times n}(\mathbb{K})$
-    1. $A$ invertibile
-    2. $\textrm{rk}(A)=n$
-    3. $A_1, \ldots, A_n$ base di $\mathbb{K}^n$
-    4. $A^1, \ldots, A^n$ base di $\mathbb{K}^n$
-    5. $\det(A) \neq 0$
-    6. $A \equiv I_n$ tramite la relazione di equivalenza delle operazioni sulle righe
-    7. $A \equiv I_n$ tramite la relazione di equivalenza delle operazioni sulle colonne
-- **Th**
-    - le proposizioni sono equivalenti
-
-## Teorema 10
-
-
-- **Hp**
-    - $\mathbb{K}$ campo
-    - $n \in \mathbb{N} - \{0\}$
-    - $A \in \textrm{Mat}_{n \times n}(\mathbb{K}) \mid \exists i \in [1, n] : A_i = 0_{\mathbb{K}^n} \lor \exists j \in [1, n] : A^j = 0_{\mathbb{K}^n}$, ovvero in $A$ è presente o una riga, o una colonna nulla
-- **Th**
-    - $\det(A) = 0$
-
-
-
-## Teorema 11
-
-
-- **Hp**
-    - $\mathbb{K}$ campo
-    - $n \in \mathbb{N} - \{0\}$
-    - $A \in \textrm{Mat}_{n \times n}(\mathbb{K})$
-- **Th**
-    - $\det(A) = \det(A^T)$
-
-
-
-## Teorema 12
-
-
-- **Hp**
-    - $\mathbb{K}$ campo
-    - $n \in \mathbb{N} - \{0\}$
-    - $A, B \in \textrm{Mat}_{n \times n}(\mathbb{K}) \mid A$ simile a $B$
-- **Th**
-    - $\det(A) = \det(B)$
-
-## Teorema 13
-
-
-- **Hp**
-    - $\mathbb{K}$ campo
-    - $n \in \mathbb{N} - \{0\}$
-    - $A \in \textrm{Mat}_{n \times n}(\mathbb{K})$
-- **Th**
-    - $\displaystyle{\det(A) = \sum_{\sigma \in S_n} \textrm{sgn}(\sigma) \cdot \prod_{i=1}^n{a_{i, \sigma_i}}}$
-
-
-
-## Teorema 14
-
-
-- **Hp**
-    - $\mathbb{K}$ campo
-    - $A \in \textrm{Mat}_{2 \times 2}(\mathbb{K})$
-    - $A = \left(\begin{array}{cc}a_{1,1} & a_{1, 2} \\ a_{2, 1} & a_{2, 2}\end{array}\right)$
-- **Th**
-    - $\det(A) = a_{1,1}a_{2,2}-a_{1,2}a_{2,1}$
-
-
-
-## Teorema 15
-
-
-- **Hp**
-    - $\mathbb{K}$ campo
-    - $A \in \textrm{Mat}_{3 \times 3}(\mathbb{K})$
-    - $A = \left(\begin{array}{ccc}a_{1,1} & a_{1, 2} & a_{1,3}\\ a_{2, 1} & a_{2, 2} & a_{2,3} \\ a_{3,1} & a_{3,2} & a_{3,3}\end{array}\right)$
-- **Th**
-    - $\det(A) = a_{1,1}a_{2,2}a_{3,3}+a_{1,3}a_{2,1}a_{3,2}+a_{1,2}a_{2,3}a_{3,1} - a_{1,3}a_{2,2}a_{3,1}-a_{1,1}a_{2,3}a_{3,2}-a_{1,2}a_{2,1}a_{3,3}$
-
-
-
-## Teorema 16
-
-
-- **Hp**
-    - $\mathbb{K}$ campo
-    - $n \in \mathbb{N} - \{0\}$
-    - $A \in \textrm{Mat}_{n \times n}(\mathbb{K}) \mid A$ triangolare
-- **Th**
-    - $\det(A) = a_{1,1} \cdot \ldots \cdot a_{n, n}$
-
-
-
-## Teorema 17
-
-
-- **Hp**
-    - $\mathbb{K}$ campo
-    - $n \in \mathbb{N} - \{0\}$
-    - $\lambda \in \mathbb{K}$
-    - $A \in \textrm{Mat}_{n \times n}(\mathbb{K})$
-    - $A' = \left(\begin{array}{c}A_1 \\ \vdots \\ \lambda A_i \\ \vdots \\ A_n \end{array}\right)$
-- **Th**
-    - $\det(A')=\lambda \cdot \det(A)$
-
-
-
-## Teorema 18
-
-
-- **Hp**
-    - $\mathbb{K}$ campo
-    - $n \in \mathbb{N} - \{0\}$
-    - $A \in \textrm{Mat}_{n \times n}(\mathbb{K})$
-- **Th**
-    - $\forall 1 \le i, j \le n \quad \det(A) = \displaystyle \sum_{k = 1}^{n}{(-1)^{i + k}\cdot a_{i, k} \cdot \det(A_i^k)} = \sum_{h = 1}^n{(-1)^{h + j}\cdot a_{h, j} \cdot \det(A_h^j)}$
-
-
-
-## Definizione 4
-
-
-- **Aggiunta di una matrice**
-
-> - $\mathbb{K}$ campo
-> - $n \in \mathbb{N} - \{0\}$
-> - $A \in \textrm{Mat}_{n \times n}(\mathbb{K})$
-> - $A^*$ è detta **aggiunta di $A$** $\iff \forall i, j \in [1, n] \quad a^*_{i, j} = (-1)^{i + j}\cdot \det(A_i^j)$
-
-
-
-## Teorema 19
-
-
-- **Hp**
-    - $\mathbb{K}$ campo
-    - $n \in \mathbb{N} - \{0\}$
-    - $A \in \textrm{Mat}_{n \times n}(\mathbb{K}) \mid \det(A) \neq 0$
-- **Th**
-    - $A^{-1}=\dfrac{(A^*)^T}{\det(A)}$
-
-
-
-## Teorema 20
-
-
-- **Hp**
-    - $\mathbb{K}$ campo
-    - $A \in \textrm{Mat}_{2 \times 2}(\mathbb{K}) \mid \det(A) \neq 0$
-    - $A = \left(\begin{array}{cc}a & b \\ c & d\end{array}\right)$
-- **Th**
-    - $A^{-1}=\dfrac{1}{ad - bc} \left(\begin{array}{cc}d & -b \\ -c & a\end{array}\right)$
-
-****
-
-# Polinomio caratteristico
-
-
-
-## Definizione 5
-
-
-> - $\mathbb{K}$ campo
-> - $n \in \mathbb{N} - \{0\}$
-> - $A \in \textrm{Mat}_{n \times n}(\mathbb{K})$
-> - $p_A(x) := \det(x\cdot I_n - A)$ è detto **polinomio caratteristico di $A$**
-
-
-
-## Teorema 21
-
-
-- **Hp**
-    - $\mathbb{K}$ campo
-    - $n \in \mathbb{N} - \{0\}$
-    - $A \in \textrm{Mat}_{n \times n}(\mathbb{K})$
-- **Th**
-    - $p_A(x) = x^n - \textrm{tr}(A)\cdot x^{n -1} + \ldots + (-1)^n \cdot \det(A)$
-
-
-
-## Teorema 22
-
-
-- **Hp**
-    - $\mathbb{K}$ campo
-    - $n \in \mathbb{N} - \{0\}$
-    - $A, B \in \textrm{Mat}_{n \times n}(\mathbb{K}) \mid A$ simile a $B$
-- **Th**
-    - $p_A(x) = p_B(x)$
-
-
-
-## Definizione 6
-
-
-- **Autovalore**
-
-> - $\mathbb{K}$ campo
-> - $n \in \mathbb{N} - \{0\}$
-> - $A \in \textrm{Mat}_{n \times n}(\mathbb{K})$
-> - $\lambda \in \mathbb{K} \mid p_A(\lambda) = 0$ è detto **autovalore di $A$**
-
-- **Spettro**
-
-> - $\mathbb{K}$ campo
-> - $n \in \mathbb{N} - \{0\}$
-> - $A \in \textrm{Mat}_{n \times n}(\mathbb{K})$
-> - $\textrm{sp}(A) := \{\lambda \in \mathbb{K} \mid p_A(\lambda) = 0\}$ è detto **spettro di $A$**
-
-
-
-## Teorema 23
-
-
-- **Hp**
-    - $\mathbb{K}$ campo
-    - $n \in \mathbb{N} - \{0\}$
-    - $A, B \in \textrm{Mat}_{n \times n}(\mathbb{K}) \mid A$ simile a $B$
-- **Th**
-    - $\textrm{sp}(A) = \textrm{sp}(B)$
-
-
-
-## Teorema 24
-
-
-- **Hp**
-    - $\mathbb{K}$ campo
-    - $n \in \mathbb{N} - \{0\}$
-    - $A \in \textrm{Mat}_{n \times n}(\mathbb{K})$
-    - $\lambda \in \mathbb{K}$
-- **Th**
-    - $\lambda$ autovalore $\iff \exists v \in \mathbb{K}^n - \{0\} \mid A \cdot v = \lambda \cdot v$
-
-## Definizione 7
-
-
-- **Autovettore relativo ad un autovalore**
-
-> - $\mathbb{K}$ campo
-> - $n \in \mathbb{N} - \{0\}$
-> - $A \in \textrm{Mat}_{n \times n}(\mathbb{K})$
-> - $\lambda \in \textrm{sp}(A)$
-> - $v \in \mathbb{K}^n - \{0\}$ è detto **autovettore di $A$ relativo a $\lambda$** $\iff (A- \lambda \cdot I_n) \cdot v = 0$
-
-
-
-## Teorema 25
-
-
-- **Hp**
-    - $\mathbb{K}$ campo
-    - $n \in \mathbb{N} - \{0\}$
-    - $A \in \textrm{Mat}_{n \times n}(\mathbb{K})$
-    - $\lambda_1, \ldots, \lambda_k \in \textrm{sp}(A)$
-    - $v_1, \ldots, v_k$ autovettori di $A$ relativi rispettivamente a $\lambda_1, \ldots, \lambda_k$
-- **Th**
-    - $v_1, \ldots, v_k$ linearmente indipendenti
-
-
-
-## Definizione 8
-
-
-- **Autospazio relativo ad un autovalore**
-
-> - $\mathbb{K}$ campo
-> - $n \in \mathbb{N} - \{0\}$
-> - $A \in \textrm{Mat}_{n \times n}(\mathbb{K})$
-> - $\lambda \in \textrm{sp}(A)$
-> - $\textrm{E}_\lambda(A) := \{v \in \mathbb{K}^n \mid (A - \lambda \cdot I_n) \cdot v = 0\}$ è detto **autospazio di $A$ relativo a $\lambda$**
->   - in particolare $0_{\mathbb{K}^n} \in \textrm{E}_\lambda(A)$
-
-
-
-## Teorema 26
-
-
-- **Hp**
-    - $\mathbb{K}$ campo
-    - $n \in \mathbb{N} - \{0\}$
-    - $A \in \textrm{Mat}_{n \times n}(\mathbb{K})$
-    - $\lambda \in \textrm{sp}(A)$
-- **Th**
-    - $\textrm{E}_\lambda(A) \subset \mathbb{K}$ sottospazio vettoriale
-
-
-
-## Definizione 9
-
-
-- **Molteplicità algebrica di un autovalore**
-
-> - $\mathbb{K}$ campo
-> - $n \in \mathbb{N} - \{0\}$
-> - $A \in \textrm{Mat}_{n \times n}(\mathbb{K})$
-> - $\lambda \in \textrm{sp}(A)$
-> - $\mu(\lambda) := \max(\{\varepsilon \in \mathbb{N} : (x - \lambda)^\varepsilon \mid p_A(x)\})$ è detta **molteplicità algebrica di $\lambda$**
-
-
-
-## Teorema 27
-
-
-- **Hp**
-    - $\mathbb{K}$ campo
-    - $n \in \mathbb{N} - \{0\}$
-    - $A, B \in \textrm{Mat}_{n \times n}(\mathbb{K}) \mid A$ simile a $B$
-    - $\lambda \in \textrm{sp}(A) = \textrm{sp}(B)$
-- **Th**
-    - $\mu_A(\lambda) = \mu_B(\lambda)$
-
-
-
-## Definizione 10
-
-
-- **Molteplicità geometrica di un autovalore**
-
-> - $\mathbb{K}$ campo
-> - $n \in \mathbb{N} - \{0\}$
-> - $A \in \textrm{Mat}_{n \times n}(\mathbb{K})$
-> - $\lambda \in \textrm{sp}(A)$
-> - $\nu(\lambda):=\dim(\textrm{E}_\lambda(A))$ è detta **molteplicità geometrica di $\lambda$**
-
-
-
-## Teorema 28
-
-
-- **Hp**
-    - $\mathbb{K}$ campo
-    - $n \in \mathbb{N} - \{0\}$
-    - $A, B \in \textrm{Mat}_{n \times n}(\mathbb{K}) \mid A$ simile a $B$
-    - $\lambda \in \textrm{sp}(A) = \textrm{sp}(B)$
-- **Th**
-    - $\nu_A(\lambda) = \nu_B(\lambda)$
-
-
-
-## Teorema 29
-
-
-- **Hp**
-    - $\mathbb{K}$ campo
-    - $n \in \mathbb{N} - \{0\}$
-    - $A \in \textrm{Mat}_{n \times n}(\mathbb{K})$
-    - $\lambda \in \textrm{sp}(A)$
-- **Th**
-    - $\nu(\lambda) = n - \textrm{rk}(A - \lambda \cdot I_n)$
-
-## Teorema 30
-
-
-- **Hp**
-    - $\mathbb{K}$ campo
-    - $n \in \mathbb{N} - \{0\}$
-    - $A \in \textrm{Mat}_{n \times n}(\mathbb{K})$
-    - $\lambda \in \textrm{sp}(A)$
-- **Th**
-    - $\nu(\lambda) \le \mu(\lambda)$
-
-
-
-## Teorema 31
-
-
-- **Hp**
-    - $\mathbb{K}$ campo
-    - $n \in \mathbb{N} - \{0\}$
-    - $A \in \textrm{Mat}_{n \times n}(\mathbb{K})$
-    1. $A$ triangolarizzabile
-    2. $\displaystyle \sum_{\lambda \in \textrm{sp}(A)}{\mu(\lambda)} = n$
-    3. $\displaystyle p_A(x) = \prod_{\lambda \in \textrm{sp}(A)}{(x - \lambda)}^{\mu(\lambda)}$, ovvero $p_A(x)$ è completamente fattorizzabile
-- **Th**
-    - le proposizioni sono equivalenti
-
-
-
-## Teorema 32
-
-
-- **Hp**
-    - $n \in \mathbb{N} - \{0\}$
-    - $A \in \textrm{Mat}_{n \times n}(\mathbb{C})$
-- **Th**
-    - $A$ è triangolarizzabile
-
-## Teorema 33
-
-
-- **Hp**
-    - $n \in \mathbb{N} - \{0\}$
-    - $A \in \textrm{Mat}_{n \times n}(\mathbb{R})$
-- **Th**
-    - $A$ triangolarizzabile $\iff \exists \lambda \in \textrm{sp}(A) \mid \lambda \in \mathbb{R}$
-
-
-
-## Teorema 34
-
-
-- **Hp**
-    - $\mathbb{K}$ campo
-    - $n \in \mathbb{N} - \{0\}$
-    - $A \in \textrm{Mat}_{n \times n}(\mathbb{K})$
-    1. $A$ diagonalizzabile
-    2. $\displaystyle \sum_{\lambda \in \textrm{sp}(A)}{\nu(\lambda)} = n$
-    3. $\exists B^1, \ldots, B^n$ autovettori di $A \mid B^1, \ldots, B^n$ base di $\mathbb{K}^n$
-- **Th**
-    - le proposizioni sono equivalenti
-
-
-
-## Teorema 35
-
-
-- **Hp**
-    - $\mathbb{K}$ campo
-    - $n \in \mathbb{N} - \{0\}$
-    - $A \in \textrm{Mat}_{n \times n}(\mathbb{K})$
-    - $B^1, \ldots, B^n$ autovettori di $A \mid B = (B^1, \ldots, B^n) \in \textrm{GL}(n, \mathbb{K}) \land B^1, \ldots, B^n$ base di $\mathbb{K}^n$
-- **Th**
-    - $A$ diagonalizzabile
-
-
-
-****
-# Gruppi diedrali
-
-
-
-## Definizione 11
-
-
-- **Gruppo diedrale**
-
-> - $n \in \mathbb{N}_{\ge 2}$
-> - $D_n$ è l'**insieme delle simmetrie dell'$n$-gono regolare**
->   - l'insieme delle rotazioni che lasciano l'$n$-gono invariato, e delle riflessioni rispetto agli assi di simmetria
-> - $\rho :=$ rotazione di $\frac{360°}{n}$ gradi di un $n$-gono regolare
-> - $\sigma_i :=$ riflessione rispetto all'$i$-esimo asse di simmetria dell'$n$-gono regolare
-
-
-
-## Teorema 36
-
-
-- **Hp**
-  - $n \in \mathbb{N}_{\ge 2}$
-  - $D_n$ insieme delle simmetrie dell'$n$-gono regolare
-- **Th**
-  - $|D_n| = 2n$
-
-## Teorema 37
-
-
-- **Hp**
-  - $n \in \mathbb{N}_{\ge 2}$
-  - $D_n$ insieme delle simmetrie dell'$n$-gono regolare
-  - $\cdot$ è l'operazione di composizione delle simmetrie
-- **Th**
-  - $(D_n, \cdot)$ è un gruppo
-
-## Teorema 38
-
-
-- **Hp**
-  - $D_2$ gruppo diedrale
-- **Th**
-  - $(D_2, \cdot)$ è l'unico gruppo diedrale abeliano
-
-## Teorema 39
-
-
-- **Hp**
-  - $D_n$ gruppo diedrale
-- **Th**
-  - $D_n \hookrightarrow S_n$
-  - $\exists X \subset S_n$ sottogruppo di $S_n$ $\mid D_n \cong X$
-    - $D_3 \cong S_3$
-
-## Definizione 12
-
-
-- **Gruppo di Klein**
-
-> - $K_4 := \{1, a, b, c\}$
-> - $a^2=b^2=c^2=1$
-> - $ab=c=ba$
-> - $ac=b=ca$
-> - $cb=a=bc$
-
-
-
-## Teorema 40
-
-
-- **Hp**
-  - $K_4$ è il gruppo di Klein
-- **Th**
-  - $K_4 \cong D_2$
-
-
-****
-# Gruppi
-
-
-
-## Definizione 13
 
 
 - **Semigruppo**
@@ -685,7 +38,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 41
+## Teorema 1
 
 
 - **Hp**
@@ -694,7 +47,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
   - $e$ è unico in $G$
 
-## Teorema 42
+## Teorema 2
 
 
 - **Hp**
@@ -704,7 +57,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
   - $x^{-1}$ è unico in $G$ per $x$ rispetto a $m$
 
-## Teorema 43
+## Teorema 3
 
 
 - **Hp**
@@ -713,7 +66,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
   - $(X^X, \circ)$ è monoide
 
-## Teorema 44
+## Teorema 4
 
 
 - **Hp**
@@ -721,13 +74,9 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
   - $\left| Y^X \right| = \left| Y \right| ^ {|X|}$
 
-****
-
-# Anelli
 
 
-
-## Definizione 14
+## Definizione 2
 
 
 - **Anello**
@@ -757,7 +106,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Definizione 15
+## Definizione 3
 
 
 - **Invertibili**
@@ -769,7 +118,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 45
+## Teorema 5
 
 
 - **Hp**
@@ -777,7 +126,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
   - $(A^*, \cdot)$ è un gruppo
 
-## Teorema 46
+## Teorema 6
 
 
 - **Hp**
@@ -785,7 +134,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
     - $(A^*, \cdot) \subset (A, \cdot)$ è un sottogruppo
 
-## Definizione 16
+## Definizione 4
 
 
 - **Divisori dello $0$**
@@ -802,7 +151,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 47
+## Teorema 7
 
 
 - **Hp**
@@ -810,7 +159,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
   - $x \mid 0 \iff x \notin A^*$
 
-## Teorema 48
+## Teorema 8
 
 
 - **Hp**
@@ -818,7 +167,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
   - $A$ dominio di integrità
 
-## Definizione 17
+## Definizione 5
 
 
 - **Elementi irriducibili**
@@ -835,7 +184,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 49
+## Teorema 9
 
 
 - **Hp**
@@ -848,7 +197,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 # Sottogruppi
 
 
-## Definizione 18
+## Definizione 6
 
 
 - **Sottogruppo**
@@ -858,7 +207,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Definizione 19
+## Definizione 7
 
 
 - **Sottogruppo normale**
@@ -872,7 +221,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 50
+## Teorema 10
 
 
 - **Hp**
@@ -888,7 +237,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 # Ordine
 
 
-## Definizione 20
+## Definizione 8
 
 
 - **Ordine di un elemento in un gruppo**
@@ -902,7 +251,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 51
+## Teorema 11
 
 
 - **Hp**
@@ -911,7 +260,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
     - $(H(g), +) \subset (G, +)$ sottogruppo
 
-## Teorema 52
+## Teorema 12
 
 
 - **Hp** 
@@ -920,7 +269,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
   - $(H(g), \cdot) \subset (G, \cdot)$  è sottogruppo
 
-## Teorema 53
+## Teorema 13
 
 
 - **Hp**
@@ -930,7 +279,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
   - $I(g)$ è un ideale
 
-## Teorema 54
+## Teorema 14
 
 
 - **Hp**
@@ -941,7 +290,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
   - $d = 0 \implies o(g) := |H(g)| = |\mathbb{Z}|$, dunque infinito
   - $d>0 \implies d = o(g)$
 
-## Teorema 55
+## Teorema 15
 
 
 - **Hp**
@@ -950,7 +299,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
   - $g^{|G|}=e$
 
-## Teorema 56
+## Teorema 16
 
 
 - **Hp**
@@ -959,7 +308,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
     - $o(g) = o(g^{-1})$
 
-## Teorema 57
+## Teorema 17
 
 
 - **Hp**
@@ -968,7 +317,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
     - $\forall g \in G \quad o(g^k) \mid o(g)$
 
-## Teorema 58
+## Teorema 18
 
 
 - **Hp**
@@ -979,7 +328,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
     - $\dfrac{m}{d} \mid o(gh) \land o(gh) \mid m$
 
-## Teorema 59
+## Teorema 19
 
 
 - **Hp**
@@ -996,7 +345,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Definizione 21
+## Definizione 9
 
 
 - **Ideali**
@@ -1006,7 +355,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 60
+## Teorema 20
 
 
 - **Hp**
@@ -1016,7 +365,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
   - $I(a)$ è un ideale, e prende il nome di _ideale di $A$ generato da $a \in A$_
 
-## Teorema 61
+## Teorema 21
 
 
 - **Hp**
@@ -1025,7 +374,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
     - $I(a)=I(b) \iff \exists c \in A^* \mid a = bc$
 
-## Teorema 62
+## Teorema 22
 
 
 - **Hp**
@@ -1033,7 +382,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
   - $I(a)=I(b) \iff a=\pm b$
 
-## Teorema 63
+## Teorema 23
 
 
 - **Hp**
@@ -1043,7 +392,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
   - $I(a_1, \ldots, a_n)$ è un ideale, e prende il nome di _ideale di $A$ generato dagli $a_1, \ldots, a_n \in A$_
 
-## Definizione 22
+## Definizione 10
 
 
 - **Congruenza modulo di un ideale**
@@ -1055,7 +404,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 64
+## Teorema 24
 
 
 - **Hp**
@@ -1066,7 +415,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
   - $(A/I, +, \cdot)$ è un anello
 
-## Teorema 65
+## Teorema 25
 
 
 - **Hp**
@@ -1074,7 +423,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
   -  $\exists ! \ d \in \mathbb{N} \mid I = I(d)$, o equivalentemente, in $\mathbb{Z}$ ogni ideale è principale
 
-## Teorema 66
+## Teorema 26
 
 
 - **Hp**
@@ -1083,7 +432,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
     - $d = \textrm{MCD}(a_1, \ldots, a_n)$
 
-## Definizione 23
+## Definizione 11
 
 
 - **Massimo Comun Divisore**
@@ -1094,7 +443,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 67
+## Teorema 27
 
 
 - **Hp**
@@ -1103,7 +452,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
   - $\exists x_1, \ldots, x_n \in \mathbb{Z} \mid a_1 x_1 + \ldots + a_nx_n=d$, che prende il nome di _identità di Bézout_
 
-## Teorema 68
+## Teorema 28
 
 
 - ⚠️ **MANCA DIMOSTRAZIONE SISTEMA DI IDENTITÀ DI BÉZOUT**
@@ -1114,7 +463,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Definizione 24
+## Definizione 12
 
 
 - **$+$ tra ideali**
@@ -1125,7 +474,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 69
+## Teorema 29
 
 
 - **Hp**
@@ -1134,7 +483,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
   - $I + J$ è un ideale
 
-## Definizione 25
+## Definizione 13
 
 
 - **$\cap$ tra ideali**
@@ -1145,7 +494,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 70
+## Teorema 30
 
 
 - **Hp**
@@ -1154,7 +503,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
     - $I \cap J$ è un ideale
 
-## Definizione 26
+## Definizione 14
 
 
 - **Minimo Comune Multiplo**
@@ -1164,7 +513,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Definizione 27
+## Definizione 15
 
 
 - **$\cdot$ tra ideali**
@@ -1175,7 +524,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 71
+## Teorema 31
 
 
 - **Hp**
@@ -1184,7 +533,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
   - $I \cdot J$ è un ideale
 
-## Teorema 72
+## Teorema 32
 
 
 - **Hp**
@@ -1193,7 +542,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
   - $I(a) + I(b) = I(d)$
 
-## Teorema 73
+## Teorema 33
 
 
 - **Hp**
@@ -1203,1533 +552,11 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 ****
-# Induzione
-
-
-
-## Definizione 28
-
-
-- **Induzione**
-
-> - successione di proposizioni infinita $P_{1}, P_{2}, P_{3}, \ldots$
->  - $\left\{\begin{array}{l}P_{1} \textrm{ vera}\\ P_{1}, P_{2}, P_{3}, \ldots, P_{n} \implies P_{n+1} \quad \forall n \ge 1 \end{array}\right.$
->  - allora $P_n$ vera $\forall n$
-
-
-
-## Teorema 74
-
-
-- **Hp**
-  - $\left\{\begin{array}{l}F_0 = 0 \\ F_1 = 1 \\ F_n = F_{n - 1} + F_{n - 2} \quad \forall n \ge 2\end{array}\right.$ è detta _sequenza di Fibonacci_
-
-  - $x^2 -x -1 = 0$ ha come soluzioni $\left\{\begin{array}{l}\phi := \dfrac{1+\sqrt{5}}{2} \\ \psi := \dfrac{1 - \sqrt{5}}{2}\end{array}\right.$
-- **Th**
-  - $\forall n \in \mathbb{N} \quad F_{n}=\dfrac{\varphi^{n}-\psi^{n}}{\varphi-\psi}=\dfrac{\varphi^{n}-\psi^{n}}{\sqrt{5}}$
-
-
-****
-# Insieme quoziente
-
-
-
-## Definizione 29
-
-
-- **Insieme quoziente**
-
-> - $G$ gruppo
-> - $\sim$ relazione di equivalenza in $G$
-> - $\forall x \in G \quad [x]:=\{y \in G \mid x \sim y\}$
-> - $G/\sim := \{[x] \mid x \in G\}$ è l'**insieme quoziente**, ovvero l'insieme delle classi di equivalenza determinate da $\sim$
-
-
-
-## Definizione 30
-
-
-- **Insieme quoziente $\mathbb{Z}_n$**
-
-> - $(\mathbb{Z}, +, \cdot)$ anello, in particolare $(\mathbb{Z}, +)$ gruppo
-> - $n \in \mathbb{Z}$
-> - $\mathbb{Z}/\equiv$ è l'insieme delle classi di equivalenza definite dalla relazione di equivalenza $\equiv$
-> - $m \equiv r \ (\bmod \ n)\iff r \equiv m \ (\bmod \ n) \implies n \mid m - r \implies \exists q: nq = m - r \implies m = nq + r \quad 0 \le r \lt n$
-> - $0 \le r \lt n \implies$ è possibile definire $\mathbb{Z}_n := \{[0], [1], \ldots, [n - 1]\}$, che coincide con $\mathbb{Z}/\equiv$
-
-
-
-## Teorema 75
-
-
-- **Hp**
-  - $n \in \mathbb{Z}$
-  - $I(n) := \{nk \mid k \in \mathbb{Z}\}$
-- **Th**
-  - $(\mathbb{Z}_n, +)$ è un gruppo
-
-## Teorema 76
-
-
-- **Hp**
-  - $p \in \mathbb{P}$
-  - $a, b \in \mathbb{Z}$
-  - $p \mid ab$
-- **Th**
-  - $p \mid a \lor p \mid b$
-
-## Teorema 77
-
-
-- **Hp**
-  - $n \in \mathbb{Z}$
-- **Th**
-  - $\mathbb{Z}_n$ dominio di integrità $\iff n \in \mathbb{P}$
-
-## Teorema 78
-
-
-- **Hp**
-  - $n \in \mathbb{Z}$
-- **Th**
-  - $\forall [a] \in \mathbb{Z}_n \quad \textrm{MCD}(a, n) = 1 \iff [a] \in \mathbb{Z}^*_n$
-
-## Teorema 79
-
-
-- **Hp**
-  - $p \in \mathbb{P}$
-- **Th**
-  - $\mathbb{Z}_p$ campo
-
-## Teorema 80
-
-
-- **Hp**
-    - $p \in \mathbb{P}$
-- **Th**
-    - $(\mathbb{Z}_p^*, \cdot)$ è ciclico
-
-****
-
-# Funzione totiente di Eulero
-
-
-## Definizione 31
-
-
-- **Funzione totiente di Eulero**
-
-> - $n \in \mathbb{N}$
-> - $\varphi(n) := |\mathbb{Z}_n^* |$
-
-
-
-## Teorema 81
-
-
-- **Hp**
-  - $n, m \in \mathbb{N} \mid \textrm{MCD}(a, n) = 1$
-- **Th**
-  - $[a]  \in \mathbb{Z}_{m n}^{*} \iff[a] \in \mathbb{Z}_{m}^{*} \land [a] \in \mathbb{Z}^*_{n}$
-
-## Teorema 82
-
-
-- **Hp**
-  - $m, n \in \mathbb{N} \mid \textrm{MCD}(m, n) = 1$
-- **Th**
-  - $\varphi(m \cdot n) = \varphi(m) \cdot \varphi(n)$
-
-## Teorema 83
-
-
-- **Hp**
-    - $p \in \mathbb{P}$
-    - $k \in \mathbb{N} \mid k \ge 1$
-- **Th**
-    - $\varphi(p^k) = p^{k -1}(p-1)$
-
-## Teorema 84
-
-
-- **Hp**
-    - $k \in \mathbb{N} \mid k \ge 1$
-    - $p_1, \ldots, p_k \in \mathbb{P}$
-    - $i_1, \ldots, i_k \ge 1$
-    - $n \in \mathbb{N} \mid n = p_1^{i_1} \cdot \ldots \cdot p_k^{i_k}$ 
-- **Th**
-    - $\displaystyle\varphi(n)=n \cdot \prod_{p \mid n}\left(1-\frac{1}{p}\right)$
-
-
-****
-# Matrici
-
-
-
-## Definizione 32
-
-
-- **Matrici**
-
-> - $\mathbb{K}$ campo
-> - $m, n \in \mathbb{N} - \{0\}$
-> - $\textrm{Mat}_{m \times n}(\mathbb{K})$ è l'**insieme delle matrici aventi $m$ righe e $n$ colonne a coefficienti in $\mathbb{K}$**
-
-- **Vettori riga e vettori colonna**
-
-> - $\mathbb{K}$ campo
-> - $m, n \in \mathbb{N} - \{0\}$
-> - $\forall A \in \textrm{Mat}_{1 \times n}(\mathbb{K}) \quad A = \left(x_1, \ldots, x_n\right)$ è detto **vettore riga**
-> - $\forall A \in \textrm{Mat}_{m \times 1}(\mathbb{K}) \quad A = \left(\begin{array}{ccc} x_1 \\ \vdots \\ x_m \end{array}\right)$ è detto **vettore colonna**
-> - $\forall A \in \textrm{Mat}_{m \times n}(\mathbb{K}) \quad \exists A^1, \ldots, A^n \in \mathbb{K}^m$ vettori colonna e $A_1, \ldots, A_m \in \mathbb{K}^n$ vettori riga $\mid A = \left(A^1, \ldots, A^n \right) = \left(\begin{array}{ccc} A_1 \\ \vdots \\ A_m\end{array}\right)$
-
-
-
-## Definizione 33
-
-
-- **Somma tra matrici**
-
-> - $\mathbb{K}$ campo
-> - $m, n \in \mathbb{N} - \{0\}$
-> - $\forall i \in [1, m], j \in [1, n] \quad a_{i, j}, b_{i, j} \in \mathbb{K}$
-> - $A, B \in \textrm{Mat}_{m \times n}(\mathbb{K}) \mid A = \left(\begin{array}{ccc} \ddots & & \\ & a_{i, j} & \\ & & \ddots \end{array}\right) \land B = \left(\begin{array}{ccc}\ddots & & \\ & b_{i, j} & \\ & & \ddots\end{array}\right)$
-> - $A + B = \left(\begin{array}{ccc}\ddots & & \\ & a_{i, j} + b_{i, j} & \\ & & \ddots\end{array}\right)$ è la **somma tra $A$ e $B$**
-
-
-
-## Teorema 85
-
-
-- **Hp**
-    - $\mathbb{K}$ campo
-    - $m, n \in \mathbb{N} - \{0\}$
-- **Th**
-    - $\textrm{Mat}_{m \times n}(\mathbb{K})$ è uno spazio vettoriale
-
-
-
-## Definizione 34
-
-
-- **Prodotto tra matrici**
-
-> - $\mathbb{K}$ campo
-> - $l, m, n \in \mathbb{N} - \{0\}$
-> - $A \in \textrm{Mat}_{l \times m}(\mathbb{K}) \mid A = \left(\begin{array}{ccc} a_{1, 1} & \cdots & a_{1, m} \\ \vdots & \ddots & \vdots \\ a_{l, 1} & \cdots & a_{l, m} \end{array}\right)$
-> - $B \in \textrm{Mat}_{m \times n}(\mathbb{K}) \mid B = \left(\begin{array}{ccc} b_{1, 1} & \cdots & b_{1, n} \\ \vdots & \ddots & \vdots \\ b_{m, 1} & \cdots & b_{m, n} \end{array}\right)$
-> - $C \in \textrm{Mat}_{l \times n}(\mathbb{K}) \mid C = AB$ è il **prodotto tra $A$ e $B$**, ed è definito come $\left(\begin{array}{ccc}a_{1, 1}b_{1, 1} + \ldots + a_{1, m}b_{m, 1} & \cdots & a_{1, 1}b_{1, n} + \ldots + a_{1, m}b_{m,n} \\ \vdots & \ddots & \vdots \\a_{l,1}b_{1, 1} + \ldots + a_{l,m}b_{m, 1} & \cdots & a_{l,1}b_{1,n} + \ldots + a_{l, m}b_{m,n}\end{array}\right)$
-
-
-
-## Teorema 86
-
-
-- **Hp**
-    - $\mathbb{K}$ campo
-    - $\lambda \in \mathbb{K}$
-    - $l, m, n, k \in \mathbb{N} - \{0\}$
-    - $A \in \textrm{Mat}_{l \times m}(\mathbb{K})$
-    - $B \in \textrm{Mat}_{m \times n}(\mathbb{K})$
-- **Th**
-    - **⚠️  TODO**
-    - $\forall C \in \textrm{Mat}_{n \times k}(\mathbb{K}) \quad (AB)C = A(BC)$
-    - $\forall C \in \textrm{Mat}_{m \times n}(\mathbb{K}) \quad A(B+C) = AB+AC$
-    - $\forall C \in \textrm{Mat}_{n \times k}(\mathbb{K}) \quad (A+B)C = AC+BC$
-    - $\lambda(AB) = (\lambda A)B = A (\lambda B)$
-
-
-
-## Teorema 87
-
-
-- **Hp**
-    - $\mathbb{K}$ campo
-    - $\lambda \in \mathbb{K}$
-    - $n \in \mathbb{N} - \{0\}$
-- **Th**
-    - $(\textrm{Mat}_{n \times n}(\mathbb{K}), +, \cdot)$ è un anello
-
-****
-
-# Interpretazione geometrica dei vettori
-
-
-## Definizione 35
-
-
-- **Prodotto scalare**
-
-> - $\mathbb{K}$ campo
-> - $n \in \mathbb{N} - \{0\}$
-> - $u, v \in \mathbb{K}^n \mid u = \left(\begin{array}{c}x_1 \\ \vdots \\ x_n \end{array}\right), v = \left(\begin{array}{c}y_1 \\ \vdots \\ y_n \end{array}\right)$
-> - $u \cdot v := \displaystyle \sum_{i = 1}^n{x_i \cdot y_i}$ è il **prodotto scalare tra $u$ e $v$**
-
-
-
-## Teorema 88
-
-
-- **Hp**
-    - $n \in \mathbb{N} - \{0\}$
-    - $u, v \in \mathbb{K}^n$
-- **Th**
-    - $u \cdot v = v \cdot u$
-    - $\forall w \in \mathbb{K}^n \quad u \cdot (v + w) = u \cdot v + u \cdot w$
-    - $u \cdot (\lambda v) = \lambda(u \cdot v)$
-    
-
-
-
-## Definizione 36
-
-
-- **Norma di un vettore**
-
-> - $\mathbb{K}$ campo
-> - $n \in \mathbb{N} - \{0\}$
-> - $u \in \mathbb{K}^n \mid u = \left(\begin{array}{c}x_1 \\ \vdots \\ x_n \end{array}\right)$
-> - $||u|| := \sqrt{x_1^2 + \ldots + x_n^2}$ è detta **norma di $u$**
->   - graficamente, corrisponde alla lunghezza del vettore $u$ nel piano cartesiano
-
-
-
-## Teorema 89
-
-
-- **Hp**
-    - $\mathbb{K}$ campo
-    - $n \in \mathbb{N} - \{0\}$
-    - $u \in \mathbb{K}^n \mid u = \left(\begin{array}{c}x_1 \\ \vdots \\ x_n \end{array}\right)$
-- **Th**
-    - $||u|| = \sqrt{u \cdot u}$
-
-****
-
-# Matrici particolari
-
-
-
-## Definizione 37
-
-
-- **Vettore trasposto**
-
-> - $\mathbb{K}$ campo
-> - $n \in \mathbb{N}$
-> - $v \in \textrm{Mat}_{n \times 1}(\mathbb{K}) \mid \exists x_1, \ldots, x_n \in \mathbb{K} : v = \left(\begin{array}{c}x_1 \\ \vdots \\ x_n \end{array}\right)$
-> - $v^T = \left(x_1, \ldots, x_n\right)$ è il **vettore trasposto di $v$**
->   - vicendevolmente, se $v$ è un vettore riga, il suo trasposto sarà il corrispondente vettore colonna
-
-- **Matrice trasposta**
-
-> - $m, n \in \mathbb{N} - \{0\}$
-> - $\mathbb{K}$ campo
-> - $A \in \textrm{Mat}_{m \times n}(\mathbb{K}) \mid A = \left(A^1, \ldots, A^n\right)$
-> - $A^T = \left(\begin{array}{c} {A^1}^T \\ \vdots \\ {A^n}^T \end{array}\right)$ è la **matrice trasposta di $A$**
->   - vale il ragionamento analogo considerando le righe di $A$ al posto delle colonne
-
-- **Matrice simmetrica**
-
-> - $n \in \mathbb{N} - \{0\}$
-> - $\mathbb{K}$ campo
-> - $A \in \textrm{Mat}_{n \times n}(\mathbb{K})$
-> - $A$ è detta **simmetrica** $\iff A^T = A$
-
-
-
-## Teorema 90
-
-
-- **Hp**
-    - $m, n \in \mathbb{N} - \{0\}$
-    - $\mathbb{K}$ campo
-    - $A \in \textrm{Mat}_{m \times n}(\mathbb{K})$
-    - $B \in \textrm{Mat}_{m \times n}(\mathbb{K})$
-- **Th**
-    - $(A\cdot B)^T = B^T\cdot A^T$
-
-
-
-## Definizione 38
-
-
-- **Matrice identità**
-
-> - $\mathbb{K}$ campo
-> - $n \in \mathbb{N} - \{0\}$
-> - $I_n = \left(\begin{array}{c}e_1 \\ \vdots \\ e_n \end{array}\right) = \left(e_1^T, \ldots, e_n^T\right) = \left(\begin{array}{ccccc}1 & 0 & \cdots & \cdots & 0 \\ \vdots & \ddots & & & \vdots\\ 0 & \cdots & 1 & \cdots & 0 \\ \vdots & & & \ddots & \vdots\\ 0 &\cdots & \cdots & 0 & 1\end{array}\right)$ è detta **matrice identità**
-
-- **Matrice invertibile**
-
-> - $\mathbb{K}$ campo
-> - $n \in \mathbb{N} - \{0\}$
-> - $A \in \textrm{Mat}_{n \times n}(\mathbb{K})$
-> - $A$ **invertibile** $\iff \exists A^{-1} \in \textrm{Mat}_{n \times n}(\mathbb{K}) \mid A\cdot A^{-1} = A^{-1} \cdot A = I_n$
-
-- **Gruppo Generale Lineare**
-
-> - $\mathbb{K}$ campo
-> - $n \in \mathbb{N} - \{0\}$
-> - $\textrm{GL}(n, \mathbb{K}) := \{A \in \textrm{Mat}_{n \times n}(\mathbb{K}) \mid A$ invertibile$\}$ è detto **gruppo generale lineare invertibile**
-
-
-
-## Teorema 91
-
-
-- **Hp**
-    - $\mathbb{K}$ campo
-    - $n \in \mathbb{N} - \{0\}$
-- **Th**
-    - $(\textrm{GL}(n, \mathbb{K}), \cdot)$ è un gruppo
-
-
-
-## Teorema 92
-
-
-- **Hp**
-    - $\mathbb{K}$ campo
-    - $n \in \mathbb{N} - \{0\}$
-    - $f: \textrm{GL}(n, \mathbb{K}) \rightarrow \mathbb{K}^*$
-- **Th**
-    - $f$ morfismo di gruppi
-
-
-
-## Definizione 39
-
-
-- **Matrice ortogonale**
-
-> - $\mathbb{K}$ campo
-> - $n \in \mathbb{N} - \{0\}$
-> - $A \in \textrm{GL}(n, \mathbb{K})$
-> - $A$ è detta **ortogonale** $\iff A \cdot A^T = A^T \cdot A = I_n$
->   - in particolare $A^{-1} = A^T$
-
-- **Gruppo ortogonale**
-
-> - $\mathbb{K}$ campo
-> - $n \in \mathbb{N} - \{0\}$
-> - $A \in \textrm{GL}(n, \mathbb{K})$
-> - $O(n) := \{ A \in \textrm{GL}(n, \mathbb{K}) \mid A$ ortogonale$\}$ è detto **gruppo ortogonale**
-
-
-
-## Definizione 40
-
-
-- **Gruppo Speciale Lineare**
-
-> - $\mathbb{K}$ campo
-> - $n \in \mathbb{N} - \{0\}$
-> - $\textrm{SL}(n, \mathbb{K}) := \{A \in \textrm{Mat}_{n \times n}(\mathbb{K}) \mid \det(A) = 1\}$ è detto **gruppo generale lineare invertibile**
-
-
-
-## Definizione 41
-
-
-- **Matrici simili**
-
-> - $\mathbb{K}$ campo
-> - $n \in \mathbb{N} - \{0\}$
-> - $A, B \in \textrm{Mat}_{n \times n}(\mathbb{K})$
-> - $A$ **simile a $B$** $\iff \exists C \in \textrm{GL}(n, \mathbb{K}) \mid A = C^{-1}BC$
-
-
-
-## Definizione 42
-
-
-- **Traccia**
-
-> - $\mathbb{K}$ campo
-> - $n \in \mathbb{N} - \{0\}$
-> - $A \in \textrm{Mat}_{n \times n}(\mathbb{K})$
-> - $\textrm{tr}(A) := a_{1,1}+ \ldots + a_{n,n}$ è detta **traccia di $A$**
-
-
-
-## Teorema 93
-
-
-- **Hp**
-    - $\mathbb{K}$ campo
-    - $n \in \mathbb{N} - \{0\}$
-    - $A, B \in \textrm{Mat}_{n \times n}(\mathbb{K}) \mid A$ simile a $B$
-- **Th**
-    - $\textrm{tr}(A) = \textrm{tr}(B)$
-
-
-
-## Definizione 43
- 
-
-- **Matrice triangolare superiore**
-
-> - $\mathbb{K}$ campo
-> - $n \in \mathbb{N} - \{0\}$
-> - $A \in \textrm{Mat}_{n \times n}(\mathbb{K})$
-> - $A$ è detta **triangolare superiore** $\iff \forall i, j \in [1, n], i \gt j \quad a_{i,j} = 0$
-
-- **Matrice triangolare inferiore**
-
-> - $\mathbb{K}$ campo
-> - $n \in \mathbb{N} - \{0\}$
-> - $A \in \textrm{Mat}_{n \times n}(\mathbb{K})$
-> - $A$ è detta **triangolare superiore** $\iff \forall i, j \in [1, n], i \lt j \quad a_{i,j} = 0$
-
-- **Matrice triangolare**
-
-> - $\mathbb{K}$ campo
-> - $n \in \mathbb{N} - \{0\}$
-> - $A \in \textrm{Mat}_{n \times n}(\mathbb{K})$
-> - $A$ è detta **triangolare $\iff$** $A$ triangolare superiore o triangolare inferiore
-
-- **Matrice triangolarizzabile**
-
-> - $\mathbb{K}$ campo
-> - $n \in \mathbb{N} - \{0\}$
-> - $A \in \textrm{Mat}_{n \times n}(\mathbb{K})$
-> - $A$ è detta **triangolarizzabile** $\iff \exists B \in \textrm{Mat}_{n \times n}(\mathbb{K}) \mid B$ triangolare $\land \ B$ simile ad $A$
-
-- **Matrice diagonale**
-
-> - $\mathbb{K}$ campo
-> - $n \in \mathbb{N} - \{0\}$
-> - $A \in \textrm{Mat}_{n \times n}(\mathbb{K})$
-> - $A$ è detta **diagonale** $\iff \forall i, j \in [1, n], i \neq j \quad a_{i, j} = 0$
->   - in particolare, $A$ è diagonale $\iff A$ triangolare superiore ed inferiore
-
-- **Matrice diagonalizzabile**
-
-> - $\mathbb{K}$ campo
-> - $n \in \mathbb{N} - \{0\}$
-> - $A \in \textrm{Mat}_{n \times n}(\mathbb{K})$
-> - $A$ è detta **diagonalizzabile** $\iff \exists B \in \textrm{Mat}_{n \times n}(\mathbb{K}) \mid B$ diagonale $\land \ B$ simile ad $A$
-
-
-
-## Definizione 44
-
-
-- **Sottomatrice di una matrice**
-
-> - $\mathbb{K}$ campo
-> - $m, n \in \mathbb{N} - \{0\}$
-> - $A \in \textrm{Mat}_{m \times n}(\mathbb{K})$
-> - $A_i^j$ è una **sottomatrice di $A$** $\iff A_i^j$ si ottiene rimuovendo $A_i$ e $A^j$ da $A$
-
-- **Minore di una matrice**
-
-> - $\mathbb{K}$ campo
-> - $m, n \in \mathbb{N} - \{0\}$
-> - $A \in \textrm{Mat}_{m \times n}(\mathbb{K})$
-> - $M$ è un **minore di $A$** $\iff M$ è una sottomatrice quadrata di $A$
-
-- **Orlato di un minore**
-
-> - $\mathbb{K}$ campo
-> - $m, n, r \in \mathbb{N} - \{0\} \mid r \lt m \land r \lt n$
-> - $A \in \textrm{Mat}_{m \times n}(\mathbb{K})$
-> - $M \in \textrm{Mat}_{r \times r}(\mathbb{K})$ è un minore di $A$
-> - $M' \in \textrm{Mat}_{(r + 1) \times (r + 1)}(\mathbb{K})$ è un **orlato di $M$** $\iff M'$ è un minore di $A$ e $M$ si ottiene rimuovendo una riga e una colonna da $M'$
-
-
-
-## Teorema 94
-
-
-- **Hp**
-    - $\mathbb{K}$ campo
-    - $m, n, r \in \mathbb{N} - \{0\} \mid r \lt m \land r \lt n$
-    - $A \in \textrm{Mat}_{m \times n}(\mathbb{K})$
-    - $M \in \textrm{Mat}_{r \times r}(\mathbb{K})$ è un minore di $A$
-- **Th**
-    - $M$ ha $(m-r)\cdot(n-r)$ orlati in $A$
-    
-
-
-## Definizione 45
-
-
-- **Matrice completa**
-
-> - $\mathbb{K}$ campo
-> - $m, n \in \mathbb{N} - \{0\}$
-> - $A \in \textrm{Mat}_{m \times n}(\mathbb{K})$
-> - $b \in \textrm{Mat}_{m \times 1}(\mathbb{K})$
-> - $A_b:=\left(\begin{array}{cccc}a_{1, 1} & \cdots & a_{1, n} & b_1 \\ \vdots & \ddots & \vdots & \vdots \\ a_{m, 1} & \cdots & a_{m,n} & b_m\end{array}\right)$
-
-
-
-## Definizione 46
-
-
-- **Matrice di un'applicazione lineare**
-
-> - $\mathbb{K}$ campo
-> - $m, n \in \mathbb{N} - \{0\}$
-> - $V, W$ spazi vettoriali su $\mathbb{K}$
-> - $\mathcal{B}=\{v_1, \ldots, v_n\}$ base di $V$
-> - $\mathcal{C}=\{w_1, \ldots, w_m\}$ base di $W$
-> - $f: V \rightarrow W$ isomorfismo
-> - $\varphi_\mathcal{B}: \mathbb{K}^N \rightarrow V$ isomorfismo
-> - $\varphi_\mathcal{C}: \mathbb{K}^M \rightarrow W$ isomorfismo
-> - $A \in \textrm{Mat}_{m \times n}(\mathbb{K}) \mid f = \varphi_\mathcal{C}\cdot L_A \cdot \varphi_\mathcal{B}^{-1}$ è detta **matrice di $f$**
->   - è possibile dimostrare che $\forall f$ applicazione lineare$\quad \exists ! A \in \textrm{Mat}_{m \times n}(\mathbb{K})$
-
-****
-
-# Rango
-
-
-
-## Definizione 47
-
-
-- **Sottospazio ortogonale**
-
-> - $\mathbb{K}$ campo
-> - $n \in \mathbb{N} - \{0\}$
-> - $V \subset \mathbb{K}^n$ sottospazio vettoriale
-> - $V^{\perp} := \{w \in \mathbb{K}^n \mid \forall v \in V \quad w \cdot v = 0_{\mathbb{K}^n}\}$ è detto **sottospazio ortogonale di $\mathbb{K}^n$**
->     - la definizione ha significato poiché il prodotto scalare tra due vettori è nullo esattamente quando i due vettori sono perpendicolari tra loro, per osservazione precedente
-
-
-
-## Teorema 95
-
-
-- **Hp**
-    - $\mathbb{K}$ campo
-    - $n \in \mathbb{N} - \{0\}$
-    - $V \subset \mathbb{K}^n$ sottospazio vettoriale
-- **Th**
-    - $V^{\bot}$ è sottospazio vettoriale di $\mathbb{K}^n$
-
-
-
-## Teorema 96
-
-
-- **Hp**
-    - $\mathbb{K}$ campo
-    - $n \in \mathbb{N} - \{0\}$
-    - $V \subset \mathbb{K}^n$ sottospazio vettoriale
-- **Th**
-    - $\dim(V^{\bot}) = \dim(\mathbb{K}^n) - \dim(V)$
-
-
-
-## Definizione 48
-
-
-- **Moltiplicazione sinistra**
-
-> - $\mathbb{K}$ campo
-> - $m,n \in \mathbb{N} - \{0\}$
-> - $A \in \textrm{Mat}_{m \times n}(\mathbb{K})$
-> - $L_A:\mathbb{K}^n \rightarrow \mathbb{K}^m: x \rightarrow A\cdot x$ è detta **moltiplicazione sinistra di $A$**
-
-
-
-## Teorema 97
-
-
-- **Hp**
-    - $\mathbb{K}$ campo
-    - $m,n \in \mathbb{N} - \{0\}$
-    - $A \in \textrm{Mat}_{m \times n}(\mathbb{K})$
-- **Th**
-    - $L_A$ è una trasformazione lineare
-
-
-
-## Teorema 98
-
-
-- **Hp**
-    - $\mathbb{K}$ campo
-    - $m,n \in \mathbb{N} - \{0\}$
-    - $A \in \textrm{Mat}_{m \times n}(\mathbb{K})$
-- **Th**
-    - $\ker(L_A) = \textrm{span}(A_1, \ldots, A_m)^\bot$
-    - $\textrm{im}(L_A) = \textrm{span}(A^1, \ldots, A^n)$
-
-## Definizione 49
-
-
-- **Rango di una matrice**
-
-> - $\mathbb{K}$ campo
-> - $m,n \in \mathbb{N} - \{0\}$
-> - $A \in \textrm{Mat}_{m \times n}(\mathbb{K})$
-> - $\textrm{rk}(A):=\textrm{rk}(L_A)$ è il **rango di $A$**
-
-
-
-## Teorema 99
-
-
-- **Hp**
-    - $\mathbb{K}$ campo
-    - $m,n \in \mathbb{N} - \{0\}$
-    - $A \in \textrm{Mat}_{m \times n}(\mathbb{K})$
-- **Th**
-    - $\textrm{rk}(A) =\dim(\textrm{span}(A^1, \ldots, A^n)) = \dim(\textrm{span}(A_1, \ldots, A_n))$
-
-****
-
-# Operazioni su righe e colonne
-
-
-## Definizione 50
-
-
-- **Scambio di righe di una matrice**
-
-> - $\mathbb{K}$ campo
-> - $m, n \in \mathbb{N} - \{0\}$
-> - $A \in \textrm{Mat}_{m \times n}(\mathbb{K})$
-> - $\forall A_1, \ldots, A_m$ righe di $A$, scambiare $A_i$ e $A_j$ lascia invariato $\ker(L_A)$
-
-- **Moltiplicazione di una riga per una costante**
-
-> - $\mathbb{K}$ campo
-> - $m, n \in \mathbb{N} - \{0\}$
-> - $A \in \textrm{Mat}_{m \times n}(\mathbb{K})$
-> - $\lambda \in \mathbb{K}^*$
-> - $\forall A_1, \ldots, A_m$ righe di $A$, moltiplicare $A_i$ per $\lambda$ lascia invariato $\ker(L_A)$
-
-- **Somma di una riga con un multiplo di un'altra**
-
-> - $\mathbb{K}$ campo
-> - $m, n \in \mathbb{N} - \{0\}$
-> - $A \in \textrm{Mat}_{m \times n}(\mathbb{K})$
-> - $\lambda \in \mathbb{K}^*$
-> - $\forall A_1, \ldots, A_m$ righe di $A$, sommare ad $A_i$ un certo $\lambda \cdot A_j$ lascia invariato $\ker(L_A)$
-
-- **Scambio di colonne di una matrice**
-
-> - $\mathbb{K}$ campo
-> - $m, n \in \mathbb{N} - \{0\}$
-> - $A \in \textrm{Mat}_{m \times n}(\mathbb{K})$
-> - $\forall A^1, \ldots, A^m$ colonne di $A$, scambiare $A^i$ e $A^j$ lascia invariato $\textrm{im}(L_A)$
-
-- **Moltiplicazione di una colonna per una costante**
-
-> - $\mathbb{K}$ campo
-> - $m, n \in \mathbb{N} - \{0\}$
-> - $A \in \textrm{Mat}_{m \times n}(\mathbb{K})$
-> - $\lambda \in \mathbb{K}^*$
-> - $\forall A^1, \ldots, A^m$ colonne di $A$, moltiplicare $A^i$ per $\lambda$ lascia invariato $\textrm{im}(L_A)$
-
-- **Somma di una colonna con un multiplo di un'altra**
-
-> - $\mathbb{K}$ campo
-> - $m, n \in \mathbb{N} - \{0\}$
-> - $A \in \textrm{Mat}_{m \times n}(\mathbb{K})$
-> - $\lambda \in \mathbb{K}^*$
-> - $\forall A^1, \ldots, A^m$ righe di $A$, sommare ad $A^i$ un certo $\lambda \cdot A^j$ lascia invariato $\textrm{im}(L_A)$
-
-
-
-## Teorema 100
-
-
-- **Hp**
-    - $\mathbb{K}$ campo
-    - $m, n \in \mathbb{N} - \{0\}$
-    - $A, B \in \textrm{Mat}_{m \times n}(\mathbb{K})$
-    - $A \equiv B \iff$ è possibile ricavare $B$ da $A$ eseguendo operazioni _tra righe_ definite precedentemente
-- **Th**
-    - $\equiv$ una relazione di equivalenza
-
-
-
-## Teorema 101
-
-
-- **Hp**
-    - $\mathbb{K}$ campo
-    - $m, n \in \mathbb{N} - \{0\}$
-    - $A, B \in \textrm{Mat}_{m \times n}(\mathbb{K})$
-    - $A \equiv B \iff$ è possibile ricavare $B$ da $A$ eseguendo operazioni _tra righe_ definite precedentemente
-- **Th**
-    - $A \equiv B \implies \ker(L_A) = \ker(L_B) \land \textrm{rk}(A) = \textrm{rk}(B)$
-
-
-
-## Teorema 102
-
-
-- **Hp**
-    - $\mathbb{K}$ campo
-    - $m, n \in \mathbb{N} - \{0\}$
-    - $A, B \in \textrm{Mat}_{m \times n}(\mathbb{K})$
-    - $A \equiv B \iff$ è possibile ricavare $B$ da $A$ eseguendo operazioni _tra colonne_ definite precedentemente
-- **Th**
-    - $\equiv$ una relazione di equivalenza
-
-
-
-## Teorema 103
-
-
-- **Hp**
-    - $\mathbb{K}$ campo
-    - $m, n \in \mathbb{N} - \{0\}$
-    - $A, B \in \textrm{Mat}_{m \times n}(\mathbb{K})$
-    - $A \equiv B \iff$ è possibile ricavare $B$ da $A$ eseguendo operazioni _tra colonne_ definite precedentemente
-- **Th**
-    - $A \equiv B \implies \textrm{im}(L_A) = \textrm{im}(L_B) \land \textrm{rk}(A) = \textrm{rk}(B)$
-
-
-
-
-****
-# Morfismi
-
-
-
-## Definizione 51
- 
-
-- **Morfismo di gruppi**
-
-> - $(G, \cdot), (H, \cdot)$ gruppi
-> - $f: G \rightarrow H$
-> - $f$ **morfismo di gruppi** $\iff \forall x, y \in G \quad f(x\cdot y)=f(x)\cdot f(y)$
-
-- **Morfismo di anelli**
-
-> - $(A, +, \cdot), (B, +, \cdot)$ anelli
-> - $f: A \rightarrow B$
-> - $f$ **morfismo di anelli** $\iff \forall x, y \in A \quad f(x+ y) = f(x) + f(y) \land f(x \cdot y) = f(x) \cdot f(y)$
->     -   la stessa definizione si applica per morfismo di campi
-
-
-
-## Teorema 104
-
-
-- **Hp**
-  - $(G, \cdot), (H, \cdot)$ gruppi
-  - $1_G$ neutro per $G$
-  - $1_H$ neutro per $H$
-  - $f: G \rightarrow H$ morfismo
-- **Th**
-  - $f(1_G) = 1_H$
-
-## Teorema 105
-
-
-- **Hp**
-  - $(G, \cdot), (H, \cdot)$ gruppi
-  - $1_G$ neutro per $G$
-  - $1_H$ neutro per $H$
-  - $f: G \rightarrow H$ morfismo
-- **Th**
-  - $f(g^{-1}) = f(g)^{-1}$
-
-****
-
-# Isomorfismi
-
-
-## Definizione 52
-
-
-- **Isomorfismo**
-
-> - $f$ isomorfismo $\iff f$ morfismo e $f$ biiettiva
-
-
-
-## Teorema 106
-
-
-- **Hp**
-  - $(G, \cdot), (H, \cdot)$ gruppi
-  - $f: G \rightarrow H$ isomorfismo
-- **Th**
-  - $f ^{-1}: H \rightarrow G$ isomorfismo
-
-## Teorema 107
-
-
-- **Hp**
-    - $\cong$ è la relazione di isomorfismo
-- **Th**
-    - $\cong$ è una relazione di equivalenza
-
-## Teorema 108
-
-
-- **Hp**
-  - $z \in \mathbb{C} \mid z^n = 1$ sono le radici $n$-esime di $1$
-  - $\zeta := e^{i \frac{2 \pi}{n}}$
-  - $H := \{\zeta ^0, \zeta^1, \zeta^k, \ldots, \zeta^{n-1}\}$ è l'insieme delle radici $n$-esime di $1$
-- **Th**
-  - $(H, \cdot) \subset (\mathbb{C}-\{0\}, \cdot)$ è un sottogruppo
-
-## Teorema 109
-
-
-- **Hp**
-  - $f: \mathbb{Z}_n \rightarrow H : [k] \rightarrow \zeta^k$
-- **Th**
-  - $f$ isomorfismo di gruppi $(\mathbb{Z}_n , +)$ e $(H, \cdot)$
-
-## Teorema 110
-
-
-- **Hp**
-  - $(G, \cdot)$ gruppo
-  - $g \in G$
-  - $f: \mathbb{Z} \rightarrow G: n \rightarrow g^n$
-- **Th**
-  - $f$ morfismo di gruppi $(\mathbb{Z}, +)$ e $(G, \cdot)$
-
-## Teorema 111
-
-
-- **Hp**
-  - $f: \mathbb{Z} \rightarrow \mathbb{Z}_n : k \rightarrow [k]$
-- **Th**
-  - $f$ morfismo di anelli $\left(\mathbb{Z},+, \cdot\right)$ e $\left(\mathbb{Z}_{n},+, \cdot\right)$
-
-## Teorema 112
-
-
-- **Hp**
-  - $n, m \in \mathbb{Z} : n \mid m$
-  - $f : \mathbb{Z}_m \rightarrow \mathbb{Z}_n: x \ (\bmod \ m) \rightarrow x \ (\bmod\ n)$
-- **Th**
-  - $f$ morfismo di anelli $\left(\mathbb{Z}_{m},+, \cdot\right)$ e $\left(\mathbb{Z}_{n},+, \cdot\right)$
-
-## Teorema 113
-
-
-- **Hp**
-  - $G$ gruppo
-  - $g \in G$
-  - $f: G \rightarrow G : h \rightarrow g \cdot h \cdot g^{-1}$
-- **Th**
-  - $f$ morfismo di gruppi $(G, \cdot)$ e $(G, \cdot)$
-
-****
-
-# Kernel e immagine
-
-
-## Definizione 53
-
-
-- **Kernel e immagine di gruppi**
-
-> - $G, H$ gruppi
-> - $f: G \rightarrow H$ morfismo
-> - $\textrm{ker}(f):=\{g \in G \mid f(g) = 1_H\}$ è detto **kernel/nucleo di $f$**
-> - $\textrm{im}(f):=\{h \in H \mid \exists g \in G : f(g) = h\}$ è detta **immagine di $f$**
-
-- **Kernel e immagine di anelli**
-
-> - $A, B$ gruppi
-> - $f: A \rightarrow B$ morfismo
-> - $\textrm{ker}(f):=\{a \in A \mid f(a)= 0_B\}$ è detto **kernel/nucleo di $f$**
-> - $\textrm{im}(f):=\{b \in B \mid \exists a \in A : f(a) = b\}$ è detto **immagine di $f$**
-
-
-
-## Teorema 114
-
-
-- **Hp**
-  - $G, H$ gruppi
-  - $f: G \rightarrow H$ morfismo
-- **Th**
-  - $\textrm{ker}(f) \subset G$ è sottogruppo
-
-## Teorema 115
-
-
-- **Hp**
-  - $G, H$ gruppi
-  - $f: G \rightarrow H$ morfismo
-- **Th**
-  - $\textrm{im}(f) \subset H$ è sottogruppo
-
-## Teorema 116
-
-
-- **Hp**
-  - $G, H$ gruppi
-  - $f: G \rightarrow H$ morfismo
-- **Th**
-  - $f$ iniettiva $\iff \textrm{ker}(f) = \{1_G\}$
-
-## Teorema 117
-
-
-- **Hp**
-  - $A, B$ anelli
-  - $f: A \rightarrow B$ morfismo di anelli
-- **Th**
-  - $\textrm{ker}(f)$ ideale
-
-## Teorema 118
-
-
-- **Hp**
-  - $A, B$ anelli
-  - $f: A \rightarrow B$ morfismo di anelli
-- **Th**
-  - $\textrm{im}(f) \subset B$ sottoanello
-
-## Teorema 119
-
-
-- **Hp**
-  - $f: \mathbb{Z} \rightarrow \mathbb{C} - \{0\} : k \rightarrow \zeta^k$
-  - $f$ morfismo di gruppi $(\mathbb{Z}, +)$ e $(\mathbb{C} - \{0\}, \cdot)$
-  - $I(n)$ ideale generato da $n$
-- **Th**
-  - $\textrm{ker}(f) = I(n)$
-
-## Teorema 120
-
-
-- **Hp**
-  - $G, H$ gruppi
-  - $f: G \rightarrow H$ morfismo
-- **Th**
-  - $\textrm{ker}(f) \subset G$ sottogruppo normale
-
-
-****
-# Numeri complessi
-
-
-
-## Definizione 54
-
-
-- **Insieme dei complessi**
-
-> - $\mathbb{C}:=\left\{a+i b \mid a, b \in \mathbb{R}, \  i : i^{2}=-1\right\}$ è l'**insieme dei complessi**
-> - $\forall z \in \mathbb{C} \quad \left\{\begin{array}{l}a:=\operatorname{Re}(z) \\ b:=\operatorname{Im}(z)\end{array}\right.$
-
-
-
-## Teorema 121
-
-
-- **Hp**
-    - $a, b, c, d \in \mathbb{R}$
-    - $z \in \mathbb{C} \mid z=a+i b$
-    - $w \in \mathbb{C} \mid w=c+i d$
-- **Th**
-    - $z + w = (a+b)+i (c +d)$
-    - $z\cdot w=(a c-b d)+i(ad+ bc)$
-
-
-
-## Definizione 55
-
-
-- **Coniugato**
-
-> - $a, b \in \mathbb{R}$
-> - $z \in \mathbb{C} \mid z=a+i b$
-> - $\bar{z}:=a-i b$ è il **coniugato** di $z$
-
-
-
-## Teorema 122
-
-
-- **Hp**
-    - $a,b, c, d, \in \mathbb{R}$
-    - $z \in \mathbb{C} \mid z=a+i b$
-    - $w \in \mathbb{C} \mid w=c+i d$
-- **Th**
-    - $\overline{z}+\overline{w}=\overline{z+w}$
-    - $\overline{z} \cdot \overline{w}=\overline{z \cdot w}$
-
-
-
-## Teorema 123
-
-
-- **Hp**
-    - $0 \le \theta \lt 2 \pi$
-- **Th**
-    - $e^{i \theta}=\cos \theta+i \sin \theta$
-
-
-
-## Definizione 56
-
-
-- **Raggio**
-
-> - $a, b \in \mathbb{R}$
-> - $z \in \mathbb{C} \mid z = a+ib$
-> - $|z|:=\sqrt{a^{2}+b^{2}}$ è il **raggio** di $z$
->   - corrisponde alla distanza di $z$ dall'origine nel piano di Gauss
-
-
-
-## Definizione 57
-
-
-- **Forma polare**
-
-> - $a, b \in \mathbb{C}$
-> - $z \in \mathbb{C}-\{0\}$
-> - $z=|z|\cdot e^{i \theta}$ è detta **forma polare di $z$**
-
-
-
-## Definizione 58
-
-
-- **Soluzione principale**
-
-> - $a, b \in \mathbb{R}$
-> - $z \in \mathbb{C} \mid z = a + i b$
-> - $\arg(z) \subset \mathbb{R}$ è l'**insieme delle soluzioni** del sistema $\left\{\begin{array}{l}\cos \theta=\frac{a}{|z|} \\ \sin \theta=\frac{b}{|z|}\end{array}\right.$
-> - per definizione, $\textrm{arg}(z) \implies \exists ! \theta \mid 0 \leq \theta \le 2 \pi$ tale che $\theta$ sia soluzione del sistema, e questo prende il nome di $\textrm{Arg}(z)$, detta **soluzione principale**
-
-
-
-## Teorema 124
-
-
-- **Hp**
-  - $(\mathbb{C}, +, \cdot)$ è un gruppo
-- **Th**
-  - $(\mathbb{C}, +, \cdot )$ è un campo
-
-## Teorema 125
-
-
-- **Hp**
-    - $z, w \in \mathbb{C}$
-- **Th**
-    - $|z \cdot w|=|z|\cdot |w| \quad \arg(z\cdot w)=\arg(z) + \arg(w)$
-    - $|\overline{w}|=|w| \quad \arg(\overline{w})=-\arg(w)$
-    - $|w^{-1}|={|w|}^{-1}\quad \arg(w^{-1})=-\arg(w)$
-    - $\left|\dfrac{z}{w}\right|=\dfrac{|z|}{|w|} \quad \arg\left(\dfrac{z}{w}\right)=\arg(z) - \arg(w)$
-
-
-
-## Teorema 126
-
-
-- **Hp**
-    - $z \in \mathbb{C}$
-- **Th**
-    - $z^{n}=|z|^{n} e^{i  \theta n} \quad \arg \left( z^{n} \right)=n \arg (z)$
-
-
-
-****
-# Permutazioni
-
-
-
-## Definizione 59
-
-
-- **Permutazioni**
-
-> - $X$ insieme
-> - $S_X := \{f \mid f:X \rightarrow X$ biiettiva $\}$ è l'**insieme delle permutazioni di $X$**
-> - $X = \{1, \ldots, n\} \implies S_n$ è detto **gruppo simmetrico di $n$**
-
-
-
-## Teorema 127
-
-
-- **Hp**
-  - $S_X := \{f \mid f : X \rightarrow Y$ biiettiva $\}$
-- **Th**
-  - $(S_X, \circ)$ è un gruppo, non abeliano se $|X| \ge 3$
-
-## Definizione 60
-
-
-- **Ciclo di una permutazione**
-
-> - $n \in \mathbb{N}$
-> - $\sigma \in S_n$
-> - $\exists 1 \leq i_1, \ldots, i_d \leq n \in \mathbb{N} \mid \left\{\begin{array}{c}
-\sigma\left(i_{1}\right)=i_{2} \\
-\sigma\left(i_{2}\right)=i_{3} \\
-\vdots \\
-\sigma\left(i_{d-1}\right)=i_{d} \\
-\sigma\left(i_{d}\right)=i_{1}
-\end{array}\right. \implies i_1, \ldots, i_n$ costituiscono un **ciclo di $\sigma$**
-
-
-
-## Teorema 128
-
-
-- **Hp**
-  - $n \in \mathbb{N}$
-  - $\sigma \in S_n$
-  - $1 \le i \lt n \in \mathbb{N}$
-  - $I(\sigma, i):=\left\{n \in \mathbb{Z} \mid \sigma^{n}(i)=i\right\}$
-- **Th**
-  - $(I(\sigma, i), +) \subset (\mathbb{Z}, +)$ è un ideale
-
-## Teorema 129
-
-
-- **Hp**
-    - ⚠️ **RISCRIVI TUTTO**
-    - $I(\sigma, i)$ è **ideale principale** in $\mathbb{Z}$ generato da $I(d)$, dove $d$ è la lunghezza del ciclo di $i$, quindi $I(\sigma, i) = I(d)$
-  - $I(\sigma, i) = I(d) \implies d \in I(\sigma, i)$
-
-## Teorema 130
-
-
-- **Hp**
-  - $n \in \mathbb{N}$
-  - $\sigma \in S_n \mid \sigma = \gamma_1 \ldots \gamma_k$ sia la sua decomposizione in cicli
-  - $d_j:=$ lunghezza di $\gamma_j \quad \forall j \in [1, k]$
-  - $m := \textrm{mcm}(d_1, \ldots, d_k)$
-  -  $I(\sigma):=\left\{n \in \mathbb{Z} \mid \sigma^{n}=\textrm{id}\right\}$
-- **Th**
-  - $o(\sigma) = m$
-
-****
-
-# Trasposizioni
-
-
-## Definizione 61
-
-
-- **Trasposizione**
-
-> - $n \in \mathbb{N}$
-> - $i, j \in \mathbb{N} \mid 1 \leq i \lt j \leq n \quad$
-> - $k \in [1, n]$
-> - $\tau_{i, j} \in S_n \mid \tau_{i, j} =$$\left\{\begin{array}{ll}j & k=i \\ i & k=j \\ k & k \neq i, j\end{array}\right.$ è detta **trasposizione**, ovvero una permutazione che inverte esclusivamente due elementi tra loro
->   - $\tau_{i, j}^2 = \textrm{id} \iff \tau_{i, j} = \tau_{i, j} ^{-1}$
-
-- **Trasposizione adiacente**
-
-> - $n \in \mathbb{N}$
-> - $i, j \in \mathbb{N} \mid 1 \le i \lt j \le  n \land  j = i + 1$
-> - $\tau_{i, j}=\tau_{i, i+1}$ è detta **trasposizione adiacente**, poiché inverte esclusivamente due elementi, adiacenti, tra loro
-
-
-
-## Teorema 131
-
-
-- **Hp**
-  - $n \in \mathbb{N}$
-  - $\sigma \in S_n$
-- **Th**
-  - $\exists 1 \leq i_1, \ldots, i_k \lt n \mid \sigma = \tau_{i_1, i_1 + 1} \ldots \tau_{i_k, i_k + 1}$, quindi ogni permutazione può essere riscritta come composizione di trasposizioni adiacenti
-     
-****
-
-# Segno
-
-
-## Definizione 62
-
-
-- **Segno di una permutazione**
-
-> - $n \in \mathbb{N}$
-> - $\sigma \in S_n$
-> - $\textrm{Inv}(\sigma) := \{ (i, j) \mid 1 \leq i \lt j \lt n : \sigma(i) \gt \sigma(j)\}$ è l'**insieme delle inversioni di $\sigma$**
-> - $\textrm{sgn}(\sigma) := (-1)^{|\textrm{Inv}(\sigma)|} =$$\left\{\begin{array}{ll}+1 & |\operatorname{Inv}(\sigma)| \equiv 0 \ (\bmod  \ 2) \\ -1 & |\operatorname{Inv}(\sigma)| \equiv 1 \ (\bmod \ 2)\end{array}\right. \implies \sigma$ **pari** $\iff \textrm{sgn}(\sigma) = +1$
->   - $\textrm{sgn}(\textrm{id}) = (-1)^0 = 1$, in quando la funzione identità non ha inversioni
-
-
-
-## Teorema 132
-
-
-- **Hp**
-    - $n \in \mathbb{N}$
-    - $A_n := \{\sigma \in S_n \mid \sigma$ pari$\}$
-- **Th**
-    - $A_n \subset S_n$ è un sottogruppo normale, detto _gruppo alterno di ordine $n$_
-
-## Teorema 133
-
-
-- **Hp**
-    - $n \in \mathbb{N}$
-    - $\sigma \in S_{n} \mid \sigma=\tau_{1} \ldots \tau_{k}$ dove $\forall j \in [1, k] \quad \tau_{j} = \tau_{j, j + 1}$, dunque tutte le trasposizioni sono adiacenti
-- **Th**
-    - $\textrm{sgn}(\sigma)= (-1)^k$
-
-## Teorema 134
-
-
-- **Hp**
-    - $n \in \mathbb{N}$
-    - $\sigma, \sigma^{\prime} \in S_{n} | \left\{\begin{array}{l}\sigma = \tau_1 \ldots \tau_k \\ \sigma ' = \tau_1^{\prime} \ldots \tau_h^{\prime}\end{array}\right.$, dove ogni trasposizione è adiacente
-- **Th**
-    - $\operatorname{sgn}\left(\sigma \sigma^{\prime}\right)=\operatorname{sgn}(\sigma)\cdot \textrm{sgn}(\sigma ')$
-
-## Teorema 135
-
-
-- **Hp**
-    - $n \in \mathbb{N}$
-    - $\sigma \in S_n$
-- **Th**
-    - $\textrm{sgn}(\sigma^{-1})=\textrm{sgn}(\sigma)$
-
-## Teorema 136
-
-
-- **Hp**
-    - $n \in \mathbb{N}$
-  - $\sigma, \sigma^\prime \in S_n$
-  - $\sigma \sim \sigma ^\prime \iff \exists\alpha \in S_n \mid \sigma^\prime = \alpha \sigma \alpha^{-1}$
-- **Th**
-    - $\textrm{sgn}(\sigma^\prime) = \textrm{sgn}(\sigma)$
-
-## Teorema 137
-
-
-- **Hp**
-    - $n \in \mathbb{N}$
-    - $\sigma, \sigma^\prime \in S_n \mid \sigma := \gamma_1 \ldots \gamma_k, \sigma^\prime := \gamma_1^\prime \ldots \gamma_h^\prime$
-    - $\sigma \sim \sigma ^\prime \iff \exists\alpha \in S_n \mid \sigma^\prime = \alpha \sigma \alpha^{-1}$, che costituisce dunque la relazione di coniugio
-- **Th**
-    - $\sigma \sim \sigma ^\prime \iff$$\left\{\begin{array}{c}k=h \\ d=d_{1}^{\prime} \\ \vdots \\ d_{k}=d_{h}^{\prime}=d_{k}^{\prime}\end{array}\right.$, dove $d_j$ è la lunghezza del ciclo $\gamma_j$ e $d_j^\prime$ è la lunghezza del ciclo $\gamma_j^\prime$
-
-## Teorema 138
-
-
-- **Hp**
-    - $n \in \mathbb{N}$
-    - $\sigma \in S_n \mid \sigma := \gamma_1 \ldots \gamma_k$
-- **Th**
-    - $\textrm{sgn}(\sigma)=(-1)^{n - k}$
-
-
-****
-# Polinomi
-
-
-
-## Definizione 63
-
-
-- **Polinomi**
-
-> - $\mathbb{K}$ campo
-> - $a(x) := \displaystyle{\sum_{k = 0}^na_kx^k} = a_0x^0 + \ldots + a_nx^n$ è un **polinomio**
-> - $\mathbb{K}[x] := \{a_0x^0 + \ldots + a_n x^n \mid a_0, \ldots, a_n \in \mathbb{K}\}$ è l'**insieme dei polinomi a coefficienti in $\mathbb{K}$**
-> - $p(x) = a_0x^0 + \ldots + a_nx^n \in \mathbb{K}[x]$ è detto **polinomio monico** $\iff a_n = 1$
-
-
-
-## Teorema 139
-
-
-- **Hp**
-    - ($\mathbb{K}, +, \cdot)$ anello
-- **Th**
-    - $(\mathbb{K}[x], +, \cdot)$ è un anello
-
-## Definizione 64
-
-
-- **Grado del polinomio**
-
-> - $\mathbb{K}$ campo
-> - $a(x) = a_0x^0 + \ldots + a_nx^n \in \mathbb{K}[x]$
-> - $\deg(a(x)):=\left\{\begin{array}{ll} n & a(x) \neq 0 \\ - \infty & a(x) = 0\end{array}\right.$
-
-
-
-## Teorema 140
-
-
-- **Hp**
-    - $\mathbb{K}$ campo
-    - $a(x), b(x) \in \mathbb{K}[x]$
-- **Th**
-    - $\deg(a(x) \cdot b(x)) = \deg(a(x)) + \deg(b(x))$
-
-## Teorema 141
-
-
-- **Hp**
-    - $\mathbb{K}$ campo
-    - $a(x) \in \mathbb{K}[x] \mid \deg(a(x)) \ge 1$
-- **Th**
-    - $\nexists a^{-1}(x) \in \mathbb{K}[x]$
-
-## Teorema 142
-
-
-- **Hp**
-    - $\mathbb{K}$ campo
-- **Th**
-    - $\mathbb{K}[x]^* = \mathbb{K}^* \subset \mathbb{K}[x]$
-
-## Teorema 143
-
-
-- **Hp**
-    - $\mathbb{K}$ campo
-- **Th**
-    - $\mathbb{K}[x]$ è un dominio di integrità
-
-## Definizione 65
-
-
-- **Radici di un polinomio**
-
-> - $\mathbb{K}$ campo
-> - $p(x) \in \mathbb{K}[x]$
-> - $\{c \in \mathbb{K}\ \mid p(c) = 0\}$ è l'**insieme delle radici di $p(x)$**
-
-
-
-## Teorema 144
-
-
-- **Hp**
-    - $\mathbb{K}$ campo
-    - $p(x) \in \mathbb{K}[x]$
-    - $c \in \mathbb{K}$
-- **Th**
-    - $p(c) = 0 \iff x - c \mid p(x)$
-
-## Teorema 145
-
-
-- **Hp**
-    - $\mathbb{K}$ campo
-    - $p(x) \in \mathbb{K}[x]$
-    - $n := \deg(p(x))$
-- **Th**
-    - $|\{c \in \mathbb{K} \mid p(c) = 0\}| \le n$
-
-## Teorema 146
-
-
-- **Hp**
-    - $\mathbb{K}$ campo
-    - $I \subset \mathbb{K}[x]$ ideale
-- **Th**
-    - $I$ è un ideale principale
-
-## Teorema 147
-
-
-- **Hp**
-    - $\mathbb{K}$ campo
-    - $I(a_1(x)), \ldots, I(a_n(x)) \subset \mathbb{K}[x]$ ideali
-    - $\exists d(x) \in \mathbb{K}[x]\mid I(a_1(x), \ldots, a_n(x)) = I(d(x))$
-- **Th**
-    - $d(x)=\textrm{MCD}(a_1(x), \ldots, a_n(x))$
-
-## Teorema 148
-
-
-- **Hp**
-    - $\mathbb{K}$ campo
-    - $I(a_1(x)), \ldots, I(a_n(x)) \subset \mathbb{K}[x]$ ideali
-    - $\exists m(x) \in \mathbb{K}[x] \mid I(a_1(x)) \cap \ldots \cap I(a_1(x)) = I(m(x))$
-- **Th**
-    - $m(x)=\textrm{mcm}(a_1(x), \ldots, a_n(x))$
-
-## Teorema 149
-
-
-- **Hp**
-    - $\mathbb{K}$ campo
-    - $a_1(x), \ldots ,a_n(x) \in \mathbb{K}[x]$
-    - $c \in \mathbb{K}$
-    - $d(x):= \textrm{MCD}(a_1(x), \ldots, a_n(x))$
-- **Th**
-    - $a_1(c) = \ldots = a_n(c) = 0 \iff d(c) = 0$
-
-## Teorema 150
-
-
-- **Hp**
-    - $\mathbb{K}$ campo
-    - $p(x) \in \mathbb{K}[x]$
-- **Th**
-    - $p(x) \in \mathbb{K}[x]$ irriducibile $\iff p(x)$ primo
-
-## Teorema 151
-
-
-- **Hp**
-    - $\mathbb{K}$ campo
-    - $p(x) \in \mathbb{K}[x] - \{0\}$
-- **Th**
-    - $\exists ! q_1(x), \ldots ,q_k(x) \in \mathbb{K}[x]$ irriducibili e monici$, c \in \mathbb{K} - \{0\} \mid p(x) = c \cdot q_1(x) \cdot \ldots \cdot q_k(x)$
-    - in particolare, i polinomi sono unici a meno di un riordinamento
-
-## Teorema 152
-
-
-- **Hp**
-    - $\mathbb{K}$ campo
-    - $p(x) \in \mathbb{K}[x]$
-- **Th**
-    - $p(x)$ irriducibile $\iff \deg(p(x)) = 1$
-
-## Teorema 153
-
-
-- **Hp**
-    - $p(x) \in \mathbb{R}[x]$
-- **Th**
-    - $p(x)$ irriducibile $\iff \deg(p(x)) = 1$ oppure $\deg(p(x)) = 2 \land \Delta \lt 0$
-
-## Teorema 154
-
-
-- **Hp**
-    - $a_0, \ldots, a_n \in \mathbb{Z} \mid a_0, a_n \neq 0$
-    - $p(x) \in \mathbb{Z}[x] \mid p(x) = a_0 + \ldots + a_nx^n$
-    - $a, b \in \mathbb{Z} \mid \textrm{MCD}(a, b) = 1$
-    - $p(\frac{a}{b}) = 0$
-- **Th**
-    - $a \mid a_0 \land b \mid a_n$
-
-## Teorema 155
-
-
-- ⚠️  **MANCA UN TEOREMA ENORME**
-
-
-
-****
 # Relazioni
 
 
 
-## Definizione 66
+## Definizione 16
 
 
 - **Relazioni**
@@ -2787,7 +614,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 156
+## Teorema 34
 
 
 - **Hp**
@@ -2796,7 +623,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
   - $\mid$ è ordine parziale
 
-## Teorema 157
+## Teorema 35
 
 
 - **Hp**
@@ -2805,7 +632,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
   - $\equiv$ è una relazione di equivalenza
 
-## Teorema 158
+## Teorema 36
 
 
 - **Hp**
@@ -2814,7 +641,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
   - $x \equiv y \ (\bmod  \ d)$
 
-## Teorema 159
+## Teorema 37
 
 
 - **Hp**
@@ -2827,7 +654,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 160
+## Teorema 38
 
 
 - **Hp**
@@ -2842,7 +669,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 # Partizioni
 
 
-## Definizione 67
+## Definizione 17
 
 
 - **Partizione**
@@ -2854,7 +681,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 161
+## Teorema 39
 
 
 - **Hp**
@@ -2862,7 +689,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
   - $\forall x, y \in G \quad x \nsim y \iff [x] \cap [y] = \varnothing \lor x \sim y \iff [x] = [y]$
 
-## Teorema 162
+## Teorema 40
 
 
 - **Hp**
@@ -2876,7 +703,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 # Classi laterali
 
 
-## Teorema 163
+## Teorema 41
 
 
 - **Hp**
@@ -2886,7 +713,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
   - $x \sim_S y \iff x^{-1}y \in H$ è una relazione di equivalenza
 
-## Definizione 68
+## Definizione 18
  
 
 - **Classi laterali**
@@ -2902,7 +729,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 164
+## Teorema 42
 
 
 - **Hp**
@@ -2913,7 +740,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
   - $a \sim_S b \iff a \equiv b \ (\bmod \ n)$
 
-## Teorema 165
+## Teorema 43
 
 
 - **Hp**
@@ -2922,7 +749,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
     - $H = [1] \in G/H$
 
-## Teorema 166
+## Teorema 44
 
 
 - **Hp**
@@ -2933,7 +760,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
   - $xH:= \{ xh \mid h \in H\} = [x]$
 
-## Teorema 167
+## Teorema 45
 
 
 - **Hp**
@@ -2943,7 +770,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
   - $| xH |= |H|$
 
-## Teorema 168
+## Teorema 46
 
 
 - **Hp**
@@ -2955,11 +782,825 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 ****
+# Insieme quoziente
+
+
+
+## Definizione 19
+
+
+- **Insieme quoziente**
+
+> - $G$ gruppo
+> - $\sim$ relazione di equivalenza in $G$
+> - $\forall x \in G \quad [x]:=\{y \in G \mid x \sim y\}$
+> - $G/\sim := \{[x] \mid x \in G\}$ è l'**insieme quoziente**, ovvero l'insieme delle classi di equivalenza determinate da $\sim$
+
+
+
+## Definizione 20
+
+
+- **Insieme quoziente $\mathbb{Z}_n$**
+
+> - $(\mathbb{Z}, +, \cdot)$ anello, in particolare $(\mathbb{Z}, +)$ gruppo
+> - $n \in \mathbb{Z}$
+> - $\mathbb{Z}/\equiv$ è l'insieme delle classi di equivalenza definite dalla relazione di equivalenza $\equiv$
+> - $m \equiv r \ (\bmod \ n)\iff r \equiv m \ (\bmod \ n) \implies n \mid m - r \implies \exists q: nq = m - r \implies m = nq + r \quad 0 \le r \lt n$
+> - $0 \le r \lt n \implies$ è possibile definire $\mathbb{Z}_n := \{[0], [1], \ldots, [n - 1]\}$, che coincide con $\mathbb{Z}/\equiv$
+
+
+
+## Teorema 47
+
+
+- **Hp**
+  - $n \in \mathbb{Z}$
+  - $I(n) := \{nk \mid k \in \mathbb{Z}\}$
+- **Th**
+  - $(\mathbb{Z}_n, +)$ è un gruppo
+
+## Teorema 48
+
+
+- **Hp**
+  - $p \in \mathbb{P}$
+  - $a, b \in \mathbb{Z}$
+  - $p \mid ab$
+- **Th**
+  - $p \mid a \lor p \mid b$
+
+## Teorema 49
+
+
+- **Hp**
+  - $n \in \mathbb{Z}$
+- **Th**
+  - $\mathbb{Z}_n$ dominio di integrità $\iff n \in \mathbb{P}$
+
+## Teorema 50
+
+
+- **Hp**
+  - $n \in \mathbb{Z}$
+- **Th**
+  - $\forall [a] \in \mathbb{Z}_n \quad \textrm{MCD}(a, n) = 1 \iff [a] \in \mathbb{Z}^*_n$
+
+## Teorema 51
+
+
+- **Hp**
+  - $p \in \mathbb{P}$
+- **Th**
+  - $\mathbb{Z}_p$ campo
+
+## Teorema 52
+
+
+- **Hp**
+    - $p \in \mathbb{P}$
+- **Th**
+    - $(\mathbb{Z}_p^*, \cdot)$ è ciclico
+
+****
+
+# Funzione totiente di Eulero
+
+
+## Definizione 21
+
+
+- **Funzione totiente di Eulero**
+
+> - $n \in \mathbb{N}$
+> - $\varphi(n) := |\mathbb{Z}_n^* |$
+
+
+
+## Teorema 53
+
+
+- **Hp**
+  - $n, m \in \mathbb{N} \mid \textrm{MCD}(a, n) = 1$
+- **Th**
+  - $[a]  \in \mathbb{Z}_{m n}^{*} \iff[a] \in \mathbb{Z}_{m}^{*} \land [a] \in \mathbb{Z}^*_{n}$
+
+## Teorema 54
+
+
+- **Hp**
+  - $m, n \in \mathbb{N} \mid \textrm{MCD}(m, n) = 1$
+- **Th**
+  - $\varphi(m \cdot n) = \varphi(m) \cdot \varphi(n)$
+
+## Teorema 55
+
+
+- **Hp**
+    - $p \in \mathbb{P}$
+    - $k \in \mathbb{N} \mid k \ge 1$
+- **Th**
+    - $\varphi(p^k) = p^{k -1}(p-1)$
+
+## Teorema 56
+
+
+- **Hp**
+    - $k \in \mathbb{N} \mid k \ge 1$
+    - $p_1, \ldots, p_k \in \mathbb{P}$
+    - $i_1, \ldots, i_k \ge 1$
+    - $n \in \mathbb{N} \mid n = p_1^{i_1} \cdot \ldots \cdot p_k^{i_k}$ 
+- **Th**
+    - $\displaystyle\varphi(n)=n \cdot \prod_{p \mid n}\left(1-\frac{1}{p}\right)$
+
+
+****
+# Permutazioni
+
+
+
+## Definizione 22
+
+
+- **Permutazioni**
+
+> - $X$ insieme
+> - $S_X := \{f \mid f:X \rightarrow X$ biiettiva $\}$ è l'**insieme delle permutazioni di $X$**
+> - $X = \{1, \ldots, n\} \implies S_n$ è detto **gruppo simmetrico di $n$**
+
+
+
+## Teorema 57
+
+
+- **Hp**
+  - $S_X := \{f \mid f : X \rightarrow Y$ biiettiva $\}$
+- **Th**
+  - $(S_X, \circ)$ è un gruppo, non abeliano se $|X| \ge 3$
+
+## Definizione 23
+
+
+- **Ciclo di una permutazione**
+
+> - $n \in \mathbb{N}$
+> - $\sigma \in S_n$
+> - $\exists 1 \leq i_1, \ldots, i_d \leq n \in \mathbb{N} \mid \left\{\begin{array}{c}
+\sigma\left(i_{1}\right)=i_{2} \\
+\sigma\left(i_{2}\right)=i_{3} \\
+\vdots \\
+\sigma\left(i_{d-1}\right)=i_{d} \\
+\sigma\left(i_{d}\right)=i_{1}
+\end{array}\right. \implies i_1, \ldots, i_n$ costituiscono un **ciclo di $\sigma$**
+
+
+
+## Teorema 58
+
+
+- **Hp**
+  - $n \in \mathbb{N}$
+  - $\sigma \in S_n$
+  - $1 \le i \lt n \in \mathbb{N}$
+  - $I(\sigma, i):=\left\{n \in \mathbb{Z} \mid \sigma^{n}(i)=i\right\}$
+- **Th**
+  - $(I(\sigma, i), +) \subset (\mathbb{Z}, +)$ è un ideale
+
+## Teorema 59
+
+
+- **Hp**
+    - ⚠️ **RISCRIVI TUTTO**
+    - $I(\sigma, i)$ è **ideale principale** in $\mathbb{Z}$ generato da $I(d)$, dove $d$ è la lunghezza del ciclo di $i$, quindi $I(\sigma, i) = I(d)$
+  - $I(\sigma, i) = I(d) \implies d \in I(\sigma, i)$
+
+## Teorema 60
+
+
+- **Hp**
+  - $n \in \mathbb{N}$
+  - $\sigma \in S_n \mid \sigma = \gamma_1 \ldots \gamma_k$ sia la sua decomposizione in cicli
+  - $d_j:=$ lunghezza di $\gamma_j \quad \forall j \in [1, k]$
+  - $m := \textrm{mcm}(d_1, \ldots, d_k)$
+  -  $I(\sigma):=\left\{n \in \mathbb{Z} \mid \sigma^{n}=\textrm{id}\right\}$
+- **Th**
+  - $o(\sigma) = m$
+
+****
+
+# Trasposizioni
+
+
+## Definizione 24
+
+
+- **Trasposizione**
+
+> - $n \in \mathbb{N}$
+> - $i, j \in \mathbb{N} \mid 1 \leq i \lt j \leq n \quad$
+> - $k \in [1, n]$
+> - $\tau_{i, j} \in S_n \mid \tau_{i, j} =$$\left\{\begin{array}{ll}j & k=i \\ i & k=j \\ k & k \neq i, j\end{array}\right.$ è detta **trasposizione**, ovvero una permutazione che inverte esclusivamente due elementi tra loro
+>   - $\tau_{i, j}^2 = \textrm{id} \iff \tau_{i, j} = \tau_{i, j} ^{-1}$
+
+- **Trasposizione adiacente**
+
+> - $n \in \mathbb{N}$
+> - $i, j \in \mathbb{N} \mid 1 \le i \lt j \le  n \land  j = i + 1$
+> - $\tau_{i, j}=\tau_{i, i+1}$ è detta **trasposizione adiacente**, poiché inverte esclusivamente due elementi, adiacenti, tra loro
+
+
+
+## Teorema 61
+
+
+- **Hp**
+  - $n \in \mathbb{N}$
+  - $\sigma \in S_n$
+- **Th**
+  - $\exists 1 \leq i_1, \ldots, i_k \lt n \mid \sigma = \tau_{i_1, i_1 + 1} \ldots \tau_{i_k, i_k + 1}$, quindi ogni permutazione può essere riscritta come composizione di trasposizioni adiacenti
+     
+****
+
+# Segno
+
+
+## Definizione 25
+
+
+- **Segno di una permutazione**
+
+> - $n \in \mathbb{N}$
+> - $\sigma \in S_n$
+> - $\textrm{Inv}(\sigma) := \{ (i, j) \mid 1 \leq i \lt j \lt n : \sigma(i) \gt \sigma(j)\}$ è l'**insieme delle inversioni di $\sigma$**
+> - $\textrm{sgn}(\sigma) := (-1)^{|\textrm{Inv}(\sigma)|} =$$\left\{\begin{array}{ll}+1 & |\operatorname{Inv}(\sigma)| \equiv 0 \ (\bmod  \ 2) \\ -1 & |\operatorname{Inv}(\sigma)| \equiv 1 \ (\bmod \ 2)\end{array}\right. \implies \sigma$ **pari** $\iff \textrm{sgn}(\sigma) = +1$
+>   - $\textrm{sgn}(\textrm{id}) = (-1)^0 = 1$, in quando la funzione identità non ha inversioni
+
+
+
+## Teorema 62
+
+
+- **Hp**
+    - $n \in \mathbb{N}$
+    - $A_n := \{\sigma \in S_n \mid \sigma$ pari$\}$
+- **Th**
+    - $A_n \subset S_n$ è un sottogruppo normale, detto _gruppo alterno di ordine $n$_
+
+## Teorema 63
+
+
+- **Hp**
+    - $n \in \mathbb{N}$
+    - $\sigma \in S_{n} \mid \sigma=\tau_{1} \ldots \tau_{k}$ dove $\forall j \in [1, k] \quad \tau_{j} = \tau_{j, j + 1}$, dunque tutte le trasposizioni sono adiacenti
+- **Th**
+    - $\textrm{sgn}(\sigma)= (-1)^k$
+
+## Teorema 64
+
+
+- **Hp**
+    - $n \in \mathbb{N}$
+    - $\sigma, \sigma^{\prime} \in S_{n} | \left\{\begin{array}{l}\sigma = \tau_1 \ldots \tau_k \\ \sigma ' = \tau_1^{\prime} \ldots \tau_h^{\prime}\end{array}\right.$, dove ogni trasposizione è adiacente
+- **Th**
+    - $\operatorname{sgn}\left(\sigma \sigma^{\prime}\right)=\operatorname{sgn}(\sigma)\cdot \textrm{sgn}(\sigma ')$
+
+## Teorema 65
+
+
+- **Hp**
+    - $n \in \mathbb{N}$
+    - $\sigma \in S_n$
+- **Th**
+    - $\textrm{sgn}(\sigma^{-1})=\textrm{sgn}(\sigma)$
+
+## Teorema 66
+
+
+- **Hp**
+    - $n \in \mathbb{N}$
+  - $\sigma, \sigma^\prime \in S_n$
+  - $\sigma \sim \sigma ^\prime \iff \exists\alpha \in S_n \mid \sigma^\prime = \alpha \sigma \alpha^{-1}$
+- **Th**
+    - $\textrm{sgn}(\sigma^\prime) = \textrm{sgn}(\sigma)$
+
+## Teorema 67
+
+
+- **Hp**
+    - $n \in \mathbb{N}$
+    - $\sigma, \sigma^\prime \in S_n \mid \sigma := \gamma_1 \ldots \gamma_k, \sigma^\prime := \gamma_1^\prime \ldots \gamma_h^\prime$
+    - $\sigma \sim \sigma ^\prime \iff \exists\alpha \in S_n \mid \sigma^\prime = \alpha \sigma \alpha^{-1}$, che costituisce dunque la relazione di coniugio
+- **Th**
+    - $\sigma \sim \sigma ^\prime \iff$$\left\{\begin{array}{c}k=h \\ d=d_{1}^{\prime} \\ \vdots \\ d_{k}=d_{h}^{\prime}=d_{k}^{\prime}\end{array}\right.$, dove $d_j$ è la lunghezza del ciclo $\gamma_j$ e $d_j^\prime$ è la lunghezza del ciclo $\gamma_j^\prime$
+
+## Teorema 68
+
+
+- **Hp**
+    - $n \in \mathbb{N}$
+    - $\sigma \in S_n \mid \sigma := \gamma_1 \ldots \gamma_k$
+- **Th**
+    - $\textrm{sgn}(\sigma)=(-1)^{n - k}$
+
+
+****
+# Morfismi
+
+
+
+## Definizione 26
+ 
+
+- **Morfismo di gruppi**
+
+> - $(G, \cdot), (H, \cdot)$ gruppi
+> - $f: G \rightarrow H$
+> - $f$ **morfismo di gruppi** $\iff \forall x, y \in G \quad f(x\cdot y)=f(x)\cdot f(y)$
+
+- **Morfismo di anelli**
+
+> - $(A, +, \cdot), (B, +, \cdot)$ anelli
+> - $f: A \rightarrow B$
+> - $f$ **morfismo di anelli** $\iff \forall x, y \in A \quad f(x+ y) = f(x) + f(y) \land f(x \cdot y) = f(x) \cdot f(y)$
+>     -   la stessa definizione si applica per morfismo di campi
+
+
+
+## Teorema 69
+
+
+- **Hp**
+  - $(G, \cdot), (H, \cdot)$ gruppi
+  - $1_G$ neutro per $G$
+  - $1_H$ neutro per $H$
+  - $f: G \rightarrow H$ morfismo
+- **Th**
+  - $f(1_G) = 1_H$
+
+## Teorema 70
+
+
+- **Hp**
+  - $(G, \cdot), (H, \cdot)$ gruppi
+  - $1_G$ neutro per $G$
+  - $1_H$ neutro per $H$
+  - $f: G \rightarrow H$ morfismo
+- **Th**
+  - $f(g^{-1}) = f(g)^{-1}$
+
+****
+
+# Isomorfismi
+
+
+## Definizione 27
+
+
+- **Isomorfismo**
+
+> - $f$ isomorfismo $\iff f$ morfismo e $f$ biiettiva
+
+
+
+## Teorema 71
+
+
+- **Hp**
+  - $(G, \cdot), (H, \cdot)$ gruppi
+  - $f: G \rightarrow H$ isomorfismo
+- **Th**
+  - $f ^{-1}: H \rightarrow G$ isomorfismo
+
+## Teorema 72
+
+
+- **Hp**
+    - $\cong$ è la relazione di isomorfismo
+- **Th**
+    - $\cong$ è una relazione di equivalenza
+
+## Teorema 73
+
+
+- **Hp**
+  - $z \in \mathbb{C} \mid z^n = 1$ sono le radici $n$-esime di $1$
+  - $\zeta := e^{i \frac{2 \pi}{n}}$
+  - $H := \{\zeta ^0, \zeta^1, \zeta^k, \ldots, \zeta^{n-1}\}$ è l'insieme delle radici $n$-esime di $1$
+- **Th**
+  - $(H, \cdot) \subset (\mathbb{C}-\{0\}, \cdot)$ è un sottogruppo
+
+## Teorema 74
+
+
+- **Hp**
+  - $f: \mathbb{Z}_n \rightarrow H : [k] \rightarrow \zeta^k$
+- **Th**
+  - $f$ isomorfismo di gruppi $(\mathbb{Z}_n , +)$ e $(H, \cdot)$
+
+## Teorema 75
+
+
+- **Hp**
+  - $(G, \cdot)$ gruppo
+  - $g \in G$
+  - $f: \mathbb{Z} \rightarrow G: n \rightarrow g^n$
+- **Th**
+  - $f$ morfismo di gruppi $(\mathbb{Z}, +)$ e $(G, \cdot)$
+
+## Teorema 76
+
+
+- **Hp**
+  - $f: \mathbb{Z} \rightarrow \mathbb{Z}_n : k \rightarrow [k]$
+- **Th**
+  - $f$ morfismo di anelli $\left(\mathbb{Z},+, \cdot\right)$ e $\left(\mathbb{Z}_{n},+, \cdot\right)$
+
+## Teorema 77
+
+
+- **Hp**
+  - $n, m \in \mathbb{Z} : n \mid m$
+  - $f : \mathbb{Z}_m \rightarrow \mathbb{Z}_n: x \ (\bmod \ m) \rightarrow x \ (\bmod\ n)$
+- **Th**
+  - $f$ morfismo di anelli $\left(\mathbb{Z}_{m},+, \cdot\right)$ e $\left(\mathbb{Z}_{n},+, \cdot\right)$
+
+## Teorema 78
+
+
+- **Hp**
+  - $G$ gruppo
+  - $g \in G$
+  - $f: G \rightarrow G : h \rightarrow g \cdot h \cdot g^{-1}$
+- **Th**
+  - $f$ morfismo di gruppi $(G, \cdot)$ e $(G, \cdot)$
+
+****
+
+# Kernel e immagine
+
+
+## Definizione 28
+
+
+- **Kernel e immagine di gruppi**
+
+> - $G, H$ gruppi
+> - $f: G \rightarrow H$ morfismo
+> - $\textrm{ker}(f):=\{g \in G \mid f(g) = 1_H\}$ è detto **kernel/nucleo di $f$**
+> - $\textrm{im}(f):=\{h \in H \mid \exists g \in G : f(g) = h\}$ è detta **immagine di $f$**
+
+- **Kernel e immagine di anelli**
+
+> - $A, B$ gruppi
+> - $f: A \rightarrow B$ morfismo
+> - $\textrm{ker}(f):=\{a \in A \mid f(a)= 0_B\}$ è detto **kernel/nucleo di $f$**
+> - $\textrm{im}(f):=\{b \in B \mid \exists a \in A : f(a) = b\}$ è detto **immagine di $f$**
+
+
+
+## Teorema 79
+
+
+- **Hp**
+  - $G, H$ gruppi
+  - $f: G \rightarrow H$ morfismo
+- **Th**
+  - $\textrm{ker}(f) \subset G$ è sottogruppo
+
+## Teorema 80
+
+
+- **Hp**
+  - $G, H$ gruppi
+  - $f: G \rightarrow H$ morfismo
+- **Th**
+  - $\textrm{im}(f) \subset H$ è sottogruppo
+
+## Teorema 81
+
+
+- **Hp**
+  - $G, H$ gruppi
+  - $f: G \rightarrow H$ morfismo
+- **Th**
+  - $f$ iniettiva $\iff \textrm{ker}(f) = \{1_G\}$
+
+## Teorema 82
+
+
+- **Hp**
+  - $A, B$ anelli
+  - $f: A \rightarrow B$ morfismo di anelli
+- **Th**
+  - $\textrm{ker}(f)$ ideale
+
+## Teorema 83
+
+
+- **Hp**
+  - $A, B$ anelli
+  - $f: A \rightarrow B$ morfismo di anelli
+- **Th**
+  - $\textrm{im}(f) \subset B$ sottoanello
+
+## Teorema 84
+
+
+- **Hp**
+  - $f: \mathbb{Z} \rightarrow \mathbb{C} - \{0\} : k \rightarrow \zeta^k$
+  - $f$ morfismo di gruppi $(\mathbb{Z}, +)$ e $(\mathbb{C} - \{0\}, \cdot)$
+  - $I(n)$ ideale generato da $n$
+- **Th**
+  - $\textrm{ker}(f) = I(n)$
+
+## Teorema 85
+
+
+- **Hp**
+  - $G, H$ gruppi
+  - $f: G \rightarrow H$ morfismo
+- **Th**
+  - $\textrm{ker}(f) \subset G$ sottogruppo normale
+
+
+****
+# Gruppi diedrali
+
+
+
+## Definizione 29
+
+
+- **Gruppo diedrale**
+
+> - $n \in \mathbb{N}_{\ge 2}$
+> - $D_n$ è l'**insieme delle simmetrie dell'$n$-gono regolare**
+>   - l'insieme delle rotazioni che lasciano l'$n$-gono invariato, e delle riflessioni rispetto agli assi di simmetria
+> - $\rho :=$ rotazione di $\frac{360°}{n}$ gradi di un $n$-gono regolare
+> - $\sigma_i :=$ riflessione rispetto all'$i$-esimo asse di simmetria dell'$n$-gono regolare
+
+
+
+## Teorema 86
+
+
+- **Hp**
+  - $n \in \mathbb{N}_{\ge 2}$
+  - $D_n$ insieme delle simmetrie dell'$n$-gono regolare
+- **Th**
+  - $|D_n| = 2n$
+
+## Teorema 87
+
+
+- **Hp**
+  - $n \in \mathbb{N}_{\ge 2}$
+  - $D_n$ insieme delle simmetrie dell'$n$-gono regolare
+  - $\cdot$ è l'operazione di composizione delle simmetrie
+- **Th**
+  - $(D_n, \cdot)$ è un gruppo
+
+## Teorema 88
+
+
+- **Hp**
+  - $D_2$ gruppo diedrale
+- **Th**
+  - $(D_2, \cdot)$ è l'unico gruppo diedrale abeliano
+
+## Teorema 89
+
+
+- **Hp**
+  - $D_n$ gruppo diedrale
+- **Th**
+  - $D_n \hookrightarrow S_n$
+  - $\exists X \subset S_n$ sottogruppo di $S_n$ $\mid D_n \cong X$
+    - $D_3 \cong S_3$
+
+## Definizione 30
+
+
+- **Gruppo di Klein**
+
+> - $K_4 := \{1, a, b, c\}$
+> - $a^2=b^2=c^2=1$
+> - $ab=c=ba$
+> - $ac=b=ca$
+> - $cb=a=bc$
+
+
+
+## Teorema 90
+
+
+- **Hp**
+  - $K_4$ è il gruppo di Klein
+- **Th**
+  - $K_4 \cong D_2$
+
+
+****
+# Polinomi
+
+
+
+## Definizione 31
+
+
+- **Polinomi**
+
+> - $\mathbb{K}$ campo
+> - $a(x) := \displaystyle{\sum_{k = 0}^na_kx^k} = a_0x^0 + \ldots + a_nx^n$ è un **polinomio**
+> - $\mathbb{K}[x] := \{a_0x^0 + \ldots + a_n x^n \mid a_0, \ldots, a_n \in \mathbb{K}\}$ è l'**insieme dei polinomi a coefficienti in $\mathbb{K}$**
+> - $p(x) = a_0x^0 + \ldots + a_nx^n \in \mathbb{K}[x]$ è detto **polinomio monico** $\iff a_n = 1$
+
+
+
+## Teorema 91
+
+
+- **Hp**
+    - ($\mathbb{K}, +, \cdot)$ anello
+- **Th**
+    - $(\mathbb{K}[x], +, \cdot)$ è un anello
+
+## Definizione 32
+
+
+- **Grado del polinomio**
+
+> - $\mathbb{K}$ campo
+> - $a(x) = a_0x^0 + \ldots + a_nx^n \in \mathbb{K}[x]$
+> - $\deg(a(x)):=\left\{\begin{array}{ll} n & a(x) \neq 0 \\ - \infty & a(x) = 0\end{array}\right.$
+
+
+
+## Teorema 92
+
+
+- **Hp**
+    - $\mathbb{K}$ campo
+    - $a(x), b(x) \in \mathbb{K}[x]$
+- **Th**
+    - $\deg(a(x) \cdot b(x)) = \deg(a(x)) + \deg(b(x))$
+
+## Teorema 93
+
+
+- **Hp**
+    - $\mathbb{K}$ campo
+    - $a(x) \in \mathbb{K}[x] \mid \deg(a(x)) \ge 1$
+- **Th**
+    - $\nexists a^{-1}(x) \in \mathbb{K}[x]$
+
+## Teorema 94
+
+
+- **Hp**
+    - $\mathbb{K}$ campo
+- **Th**
+    - $\mathbb{K}[x]^* = \mathbb{K}^* \subset \mathbb{K}[x]$
+
+## Teorema 95
+
+
+- **Hp**
+    - $\mathbb{K}$ campo
+- **Th**
+    - $\mathbb{K}[x]$ è un dominio di integrità
+
+## Definizione 33
+
+
+- **Radici di un polinomio**
+
+> - $\mathbb{K}$ campo
+> - $p(x) \in \mathbb{K}[x]$
+> - $\{c \in \mathbb{K}\ \mid p(c) = 0\}$ è l'**insieme delle radici di $p(x)$**
+
+
+
+## Teorema 96
+
+
+- **Hp**
+    - $\mathbb{K}$ campo
+    - $p(x) \in \mathbb{K}[x]$
+    - $c \in \mathbb{K}$
+- **Th**
+    - $p(c) = 0 \iff x - c \mid p(x)$
+
+## Teorema 97
+
+
+- **Hp**
+    - $\mathbb{K}$ campo
+    - $p(x) \in \mathbb{K}[x]$
+    - $n := \deg(p(x))$
+- **Th**
+    - $|\{c \in \mathbb{K} \mid p(c) = 0\}| \le n$
+
+## Teorema 98
+
+
+- **Hp**
+    - $\mathbb{K}$ campo
+    - $I \subset \mathbb{K}[x]$ ideale
+- **Th**
+    - $I$ è un ideale principale
+
+## Teorema 99
+
+
+- **Hp**
+    - $\mathbb{K}$ campo
+    - $I(a_1(x)), \ldots, I(a_n(x)) \subset \mathbb{K}[x]$ ideali
+    - $\exists d(x) \in \mathbb{K}[x]\mid I(a_1(x), \ldots, a_n(x)) = I(d(x))$
+- **Th**
+    - $d(x)=\textrm{MCD}(a_1(x), \ldots, a_n(x))$
+
+## Teorema 100
+
+
+- **Hp**
+    - $\mathbb{K}$ campo
+    - $I(a_1(x)), \ldots, I(a_n(x)) \subset \mathbb{K}[x]$ ideali
+    - $\exists m(x) \in \mathbb{K}[x] \mid I(a_1(x)) \cap \ldots \cap I(a_1(x)) = I(m(x))$
+- **Th**
+    - $m(x)=\textrm{mcm}(a_1(x), \ldots, a_n(x))$
+
+## Teorema 101
+
+
+- **Hp**
+    - $\mathbb{K}$ campo
+    - $a_1(x), \ldots ,a_n(x) \in \mathbb{K}[x]$
+    - $c \in \mathbb{K}$
+    - $d(x):= \textrm{MCD}(a_1(x), \ldots, a_n(x))$
+- **Th**
+    - $a_1(c) = \ldots = a_n(c) = 0 \iff d(c) = 0$
+
+## Teorema 102
+
+
+- **Hp**
+    - $\mathbb{K}$ campo
+    - $p(x) \in \mathbb{K}[x]$
+- **Th**
+    - $p(x) \in \mathbb{K}[x]$ irriducibile $\iff p(x)$ primo
+
+## Teorema 103
+
+
+- **Hp**
+    - $\mathbb{K}$ campo
+    - $p(x) \in \mathbb{K}[x] - \{0\}$
+- **Th**
+    - $\exists ! q_1(x), \ldots ,q_k(x) \in \mathbb{K}[x]$ irriducibili e monici$, c \in \mathbb{K} - \{0\} \mid p(x) = c \cdot q_1(x) \cdot \ldots \cdot q_k(x)$
+    - in particolare, i polinomi sono unici a meno di un riordinamento
+
+## Teorema 104
+
+
+- **Hp**
+    - $\mathbb{K}$ campo
+    - $p(x) \in \mathbb{K}[x]$
+- **Th**
+    - $p(x)$ irriducibile $\iff \deg(p(x)) = 1$
+
+## Teorema 105
+
+
+- **Hp**
+    - $p(x) \in \mathbb{R}[x]$
+- **Th**
+    - $p(x)$ irriducibile $\iff \deg(p(x)) = 1$ oppure $\deg(p(x)) = 2 \land \Delta \lt 0$
+
+## Teorema 106
+
+
+- **Hp**
+    - $a_0, \ldots, a_n \in \mathbb{Z} \mid a_0, a_n \neq 0$
+    - $p(x) \in \mathbb{Z}[x] \mid p(x) = a_0 + \ldots + a_nx^n$
+    - $a, b \in \mathbb{Z} \mid \textrm{MCD}(a, b) = 1$
+    - $p(\frac{a}{b}) = 0$
+- **Th**
+    - $a \mid a_0 \land b \mid a_n$
+
+## Teorema 107
+
+
+- ⚠️  **MANCA UN TEOREMA ENORME**
+
+
+
+****
 # Spazi Vettoriali
 
 
 
-## Definizione 69
+## Definizione 34
  
 
 - **Spazio vettoriale**
@@ -2977,7 +1618,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 169
+## Teorema 108
 
 
 - **Hp**
@@ -2986,7 +1627,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
     - $\mathbb{K}^n$ spazio vettoriale su $\mathbb{K}$
 
-## Definizione 70
+## Definizione 35
 
 
 - **Sottospazio vettoriale**
@@ -2997,7 +1638,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Definizione 71
+## Definizione 36
 
 
 - **Span di vettori**
@@ -3011,7 +1652,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 170
+## Teorema 109
 
 
 - **Hp**
@@ -3022,7 +1663,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
     - $\textrm{span}(v_1, \ldots, v_n)$ è un sottospazio vettoriale di $V$
 
-## Definizione 72
+## Definizione 37
 
 
 - **Vettori generatori**
@@ -3054,7 +1695,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 171
+## Teorema 110
 
 
 - **Hp**
@@ -3064,7 +1705,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
     - $e_1, \ldots, e_n$ sono una base di $\mathbb{K}^n$, ed è detta _base canonica_
 
-## Teorema 172
+## Teorema 111
 
 
 - **Hp**
@@ -3075,7 +1716,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
     - $v_1, \ldots, v_n$ linearmente indipendenti $\iff v_1, \ldots, v_{n - 1}$ linearmente indipendenti $\land v_n \notin \textrm{span}(v_1, \ldots, v_{n - 1})$
 
-## Teorema 173
+## Teorema 112
 
 
 - **Hp**
@@ -3087,7 +1728,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
     - $k \le m$
 
-## Teorema 174
+## Teorema 113
 
 
 - **Hp**
@@ -3099,7 +1740,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
     - $n = m$, il che implica che la cardinalità delle basi di uno spazio vettoriale è unica
 
-## Definizione 73
+## Definizione 38
 
 
 - **Base ortogonale di uno spazio di Hilbert**
@@ -3121,7 +1762,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 175
+## Teorema 114
 
 
 - **Hp**
@@ -3134,7 +1775,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 176
+## Teorema 115
 
 
 - **Hp**
@@ -3146,7 +1787,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Definizione 74
+## Definizione 39
 
 
 - **Dimensione di uno spazio vettoriale**
@@ -3157,7 +1798,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 177
+## Teorema 116
 
 
 - **Hp**
@@ -3168,7 +1809,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
     - $v_1, \ldots, v_n$ base di $V \iff \forall v \in V \quad \exists ! \lambda_1, \ldots, \lambda_n \in \mathbb{K} \mid v = \lambda_1 v_1 + \ldots + \lambda_n v_n$
 
-## Teorema 178
+## Teorema 117
 
 
 - **Hp**
@@ -3180,7 +1821,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
     - $\exists w_{k + 1}, \ldots, w_n \in W \mid w_1, \ldots, w_n$ è una base di $W$
 
-## Teorema 179
+## Teorema 118
 
 
 - **Hp**
@@ -3192,7 +1833,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
     - $\exists 1 \le i_1, \ldots, i_n \le m \mid w_{i_1}, \ldots, w_{i_n}$ è una base di $W$
 
-## Teorema 180
+## Teorema 119
 
 
 - **Hp**
@@ -3203,7 +1844,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
     - $w_1, \ldots, w_n$ linearmente indipendenti $\iff w_1, \ldots, w_n$ generatori di $W$
 
-## Teorema 181
+## Teorema 120
 
 
 - **Hp**
@@ -3213,7 +1854,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
     - $\dim(U + V) = \dim(U) + \dim(V) - \dim(U \cap V)$
 
-## Teorema 182
+## Teorema 121
 
 
 - **Hp**
@@ -3223,7 +1864,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
     - $V/W$ sottospazio vettoriale
 
-## Teorema 183
+## Teorema 122
 
 
 - **Hp**
@@ -3233,7 +1874,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
     - $\dim(V/W) = \dim(V) - \dim(W)$
 
-## Teorema 184
+## Teorema 123
 
 
 - **Hp**
@@ -3249,7 +1890,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Definizione 75
+## Definizione 40
 
 
 - **Applicazioni lineari**
@@ -3261,7 +1902,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 185
+## Teorema 124
 
 
 - **Hp**
@@ -3271,14 +1912,14 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
     - $V \cong \mathbb{K}^n$
 
-## Teorema 186
+## Teorema 125
 
 
 - ⚠️ **QUI C'È UN BUCO DI COSE CHE NON HO CAPITO**
 
 
 
-## Teorema 187
+## Teorema 126
 
 
 - **Hp**
@@ -3287,7 +1928,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
     - $V \cong W \iff \dim(V) = \dim(W)$
 
-## Definizione 76
+## Definizione 41
 
 
 - **Kernel e immagine**
@@ -3300,7 +1941,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 188
+## Teorema 127
 
 
 - **Hp**
@@ -3312,7 +1953,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 189
+## Teorema 128
 
 
 - **Hp**
@@ -3324,7 +1965,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Definizione 77
+## Definizione 42
 
 
 - **Rango di un'applicazione lineare**
@@ -3340,7 +1981,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 190
+## Teorema 129
 
 
 - ⚠️ **TODO**
@@ -3349,7 +1990,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 191
+## Teorema 130
 
 
 - **Hp**
@@ -3361,6 +2002,1361 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
     - $X \neq \varnothing$
 - **Th**
     - $X$ sottospazio affine di $\mathbb{K}^n$, con dimensione pari a $n - \textrm{rk}(A)$
+
+
+****
+# Matrici
+
+
+
+## Definizione 43
+
+
+- **Matrici**
+
+> - $\mathbb{K}$ campo
+> - $m, n \in \mathbb{N} - \{0\}$
+> - $\textrm{Mat}_{m \times n}(\mathbb{K})$ è l'**insieme delle matrici aventi $m$ righe e $n$ colonne a coefficienti in $\mathbb{K}$**
+
+- **Vettori riga e vettori colonna**
+
+> - $\mathbb{K}$ campo
+> - $m, n \in \mathbb{N} - \{0\}$
+> - $\forall A \in \textrm{Mat}_{1 \times n}(\mathbb{K}) \quad A = \left(x_1, \ldots, x_n\right)$ è detto **vettore riga**
+> - $\forall A \in \textrm{Mat}_{m \times 1}(\mathbb{K}) \quad A = \left(\begin{array}{ccc} x_1 \\ \vdots \\ x_m \end{array}\right)$ è detto **vettore colonna**
+> - $\forall A \in \textrm{Mat}_{m \times n}(\mathbb{K}) \quad \exists A^1, \ldots, A^n \in \mathbb{K}^m$ vettori colonna e $A_1, \ldots, A_m \in \mathbb{K}^n$ vettori riga $\mid A = \left(A^1, \ldots, A^n \right) = \left(\begin{array}{ccc} A_1 \\ \vdots \\ A_m\end{array}\right)$
+
+
+
+## Definizione 44
+
+
+- **Somma tra matrici**
+
+> - $\mathbb{K}$ campo
+> - $m, n \in \mathbb{N} - \{0\}$
+> - $\forall i \in [1, m], j \in [1, n] \quad a_{i, j}, b_{i, j} \in \mathbb{K}$
+> - $A, B \in \textrm{Mat}_{m \times n}(\mathbb{K}) \mid A = \left(\begin{array}{ccc} \ddots & & \\ & a_{i, j} & \\ & & \ddots \end{array}\right) \land B = \left(\begin{array}{ccc}\ddots & & \\ & b_{i, j} & \\ & & \ddots\end{array}\right)$
+> - $A + B = \left(\begin{array}{ccc}\ddots & & \\ & a_{i, j} + b_{i, j} & \\ & & \ddots\end{array}\right)$ è la **somma tra $A$ e $B$**
+
+
+
+## Teorema 131
+
+
+- **Hp**
+    - $\mathbb{K}$ campo
+    - $m, n \in \mathbb{N} - \{0\}$
+- **Th**
+    - $\textrm{Mat}_{m \times n}(\mathbb{K})$ è uno spazio vettoriale
+
+
+
+## Definizione 45
+
+
+- **Prodotto tra matrici**
+
+> - $\mathbb{K}$ campo
+> - $l, m, n \in \mathbb{N} - \{0\}$
+> - $A \in \textrm{Mat}_{l \times m}(\mathbb{K}) \mid A = \left(\begin{array}{ccc} a_{1, 1} & \cdots & a_{1, m} \\ \vdots & \ddots & \vdots \\ a_{l, 1} & \cdots & a_{l, m} \end{array}\right)$
+> - $B \in \textrm{Mat}_{m \times n}(\mathbb{K}) \mid B = \left(\begin{array}{ccc} b_{1, 1} & \cdots & b_{1, n} \\ \vdots & \ddots & \vdots \\ b_{m, 1} & \cdots & b_{m, n} \end{array}\right)$
+> - $C \in \textrm{Mat}_{l \times n}(\mathbb{K}) \mid C = AB$ è il **prodotto tra $A$ e $B$**, ed è definito come $\left(\begin{array}{ccc}a_{1, 1}b_{1, 1} + \ldots + a_{1, m}b_{m, 1} & \cdots & a_{1, 1}b_{1, n} + \ldots + a_{1, m}b_{m,n} \\ \vdots & \ddots & \vdots \\a_{l,1}b_{1, 1} + \ldots + a_{l,m}b_{m, 1} & \cdots & a_{l,1}b_{1,n} + \ldots + a_{l, m}b_{m,n}\end{array}\right)$
+
+
+
+## Teorema 132
+
+
+- **Hp**
+    - $\mathbb{K}$ campo
+    - $\lambda \in \mathbb{K}$
+    - $l, m, n, k \in \mathbb{N} - \{0\}$
+    - $A \in \textrm{Mat}_{l \times m}(\mathbb{K})$
+    - $B \in \textrm{Mat}_{m \times n}(\mathbb{K})$
+- **Th**
+    - **⚠️  TODO**
+    - $\forall C \in \textrm{Mat}_{n \times k}(\mathbb{K}) \quad (AB)C = A(BC)$
+    - $\forall C \in \textrm{Mat}_{m \times n}(\mathbb{K}) \quad A(B+C) = AB+AC$
+    - $\forall C \in \textrm{Mat}_{n \times k}(\mathbb{K}) \quad (A+B)C = AC+BC$
+    - $\lambda(AB) = (\lambda A)B = A (\lambda B)$
+
+
+
+## Teorema 133
+
+
+- **Hp**
+    - $\mathbb{K}$ campo
+    - $\lambda \in \mathbb{K}$
+    - $n \in \mathbb{N} - \{0\}$
+- **Th**
+    - $(\textrm{Mat}_{n \times n}(\mathbb{K}), +, \cdot)$ è un anello
+
+****
+
+# Interpretazione geometrica dei vettori
+
+
+## Definizione 46
+
+
+- **Prodotto scalare**
+
+> - $\mathbb{K}$ campo
+> - $n \in \mathbb{N} - \{0\}$
+> - $u, v \in \mathbb{K}^n \mid u = \left(\begin{array}{c}x_1 \\ \vdots \\ x_n \end{array}\right), v = \left(\begin{array}{c}y_1 \\ \vdots \\ y_n \end{array}\right)$
+> - $u \cdot v := \displaystyle \sum_{i = 1}^n{x_i \cdot y_i}$ è il **prodotto scalare tra $u$ e $v$**
+
+
+
+## Teorema 134
+
+
+- **Hp**
+    - $n \in \mathbb{N} - \{0\}$
+    - $u, v \in \mathbb{K}^n$
+- **Th**
+    - $u \cdot v = v \cdot u$
+    - $\forall w \in \mathbb{K}^n \quad u \cdot (v + w) = u \cdot v + u \cdot w$
+    - $u \cdot (\lambda v) = \lambda(u \cdot v)$
+    
+
+
+
+## Definizione 47
+
+
+- **Norma di un vettore**
+
+> - $\mathbb{K}$ campo
+> - $n \in \mathbb{N} - \{0\}$
+> - $u \in \mathbb{K}^n \mid u = \left(\begin{array}{c}x_1 \\ \vdots \\ x_n \end{array}\right)$
+> - $||u|| := \sqrt{x_1^2 + \ldots + x_n^2}$ è detta **norma di $u$**
+>   - graficamente, corrisponde alla lunghezza del vettore $u$ nel piano cartesiano
+
+
+
+## Teorema 135
+
+
+- **Hp**
+    - $\mathbb{K}$ campo
+    - $n \in \mathbb{N} - \{0\}$
+    - $u \in \mathbb{K}^n \mid u = \left(\begin{array}{c}x_1 \\ \vdots \\ x_n \end{array}\right)$
+- **Th**
+    - $||u|| = \sqrt{u \cdot u}$
+
+****
+
+# Matrici particolari
+
+
+
+## Definizione 48
+
+
+- **Vettore trasposto**
+
+> - $\mathbb{K}$ campo
+> - $n \in \mathbb{N}$
+> - $v \in \textrm{Mat}_{n \times 1}(\mathbb{K}) \mid \exists x_1, \ldots, x_n \in \mathbb{K} : v = \left(\begin{array}{c}x_1 \\ \vdots \\ x_n \end{array}\right)$
+> - $v^T = \left(x_1, \ldots, x_n\right)$ è il **vettore trasposto di $v$**
+>   - vicendevolmente, se $v$ è un vettore riga, il suo trasposto sarà il corrispondente vettore colonna
+
+- **Matrice trasposta**
+
+> - $m, n \in \mathbb{N} - \{0\}$
+> - $\mathbb{K}$ campo
+> - $A \in \textrm{Mat}_{m \times n}(\mathbb{K}) \mid A = \left(A^1, \ldots, A^n\right)$
+> - $A^T = \left(\begin{array}{c} {A^1}^T \\ \vdots \\ {A^n}^T \end{array}\right)$ è la **matrice trasposta di $A$**
+>   - vale il ragionamento analogo considerando le righe di $A$ al posto delle colonne
+
+- **Matrice simmetrica**
+
+> - $n \in \mathbb{N} - \{0\}$
+> - $\mathbb{K}$ campo
+> - $A \in \textrm{Mat}_{n \times n}(\mathbb{K})$
+> - $A$ è detta **simmetrica** $\iff A^T = A$
+
+
+
+## Teorema 136
+
+
+- **Hp**
+    - $m, n \in \mathbb{N} - \{0\}$
+    - $\mathbb{K}$ campo
+    - $A \in \textrm{Mat}_{m \times n}(\mathbb{K})$
+    - $B \in \textrm{Mat}_{m \times n}(\mathbb{K})$
+- **Th**
+    - $(A\cdot B)^T = B^T\cdot A^T$
+
+
+
+## Definizione 49
+
+
+- **Matrice identità**
+
+> - $\mathbb{K}$ campo
+> - $n \in \mathbb{N} - \{0\}$
+> - $I_n = \left(\begin{array}{c}e_1 \\ \vdots \\ e_n \end{array}\right) = \left(e_1^T, \ldots, e_n^T\right) = \left(\begin{array}{ccccc}1 & 0 & \cdots & \cdots & 0 \\ \vdots & \ddots & & & \vdots\\ 0 & \cdots & 1 & \cdots & 0 \\ \vdots & & & \ddots & \vdots\\ 0 &\cdots & \cdots & 0 & 1\end{array}\right)$ è detta **matrice identità**
+
+- **Matrice invertibile**
+
+> - $\mathbb{K}$ campo
+> - $n \in \mathbb{N} - \{0\}$
+> - $A \in \textrm{Mat}_{n \times n}(\mathbb{K})$
+> - $A$ **invertibile** $\iff \exists A^{-1} \in \textrm{Mat}_{n \times n}(\mathbb{K}) \mid A\cdot A^{-1} = A^{-1} \cdot A = I_n$
+
+- **Gruppo Generale Lineare**
+
+> - $\mathbb{K}$ campo
+> - $n \in \mathbb{N} - \{0\}$
+> - $\textrm{GL}(n, \mathbb{K}) := \{A \in \textrm{Mat}_{n \times n}(\mathbb{K}) \mid A$ invertibile$\}$ è detto **gruppo generale lineare invertibile**
+
+
+
+## Teorema 137
+
+
+- **Hp**
+    - $\mathbb{K}$ campo
+    - $n \in \mathbb{N} - \{0\}$
+- **Th**
+    - $(\textrm{GL}(n, \mathbb{K}), \cdot)$ è un gruppo
+
+
+
+## Teorema 138
+
+
+- **Hp**
+    - $\mathbb{K}$ campo
+    - $n \in \mathbb{N} - \{0\}$
+    - $f: \textrm{GL}(n, \mathbb{K}) \rightarrow \mathbb{K}^*$
+- **Th**
+    - $f$ morfismo di gruppi
+
+
+
+## Definizione 50
+
+
+- **Matrice ortogonale**
+
+> - $\mathbb{K}$ campo
+> - $n \in \mathbb{N} - \{0\}$
+> - $A \in \textrm{GL}(n, \mathbb{K})$
+> - $A$ è detta **ortogonale** $\iff A \cdot A^T = A^T \cdot A = I_n$
+>   - in particolare $A^{-1} = A^T$
+
+- **Gruppo ortogonale**
+
+> - $\mathbb{K}$ campo
+> - $n \in \mathbb{N} - \{0\}$
+> - $A \in \textrm{GL}(n, \mathbb{K})$
+> - $O(n) := \{ A \in \textrm{GL}(n, \mathbb{K}) \mid A$ ortogonale$\}$ è detto **gruppo ortogonale**
+
+
+
+## Definizione 51
+
+
+- **Gruppo Speciale Lineare**
+
+> - $\mathbb{K}$ campo
+> - $n \in \mathbb{N} - \{0\}$
+> - $\textrm{SL}(n, \mathbb{K}) := \{A \in \textrm{Mat}_{n \times n}(\mathbb{K}) \mid \det(A) = 1\}$ è detto **gruppo generale lineare invertibile**
+
+
+
+## Definizione 52
+
+
+- **Matrici simili**
+
+> - $\mathbb{K}$ campo
+> - $n \in \mathbb{N} - \{0\}$
+> - $A, B \in \textrm{Mat}_{n \times n}(\mathbb{K})$
+> - $A$ **simile a $B$** $\iff \exists C \in \textrm{GL}(n, \mathbb{K}) \mid A = C^{-1}BC$
+
+
+
+## Definizione 53
+
+
+- **Traccia**
+
+> - $\mathbb{K}$ campo
+> - $n \in \mathbb{N} - \{0\}$
+> - $A \in \textrm{Mat}_{n \times n}(\mathbb{K})$
+> - $\textrm{tr}(A) := a_{1,1}+ \ldots + a_{n,n}$ è detta **traccia di $A$**
+
+
+
+## Teorema 139
+
+
+- **Hp**
+    - $\mathbb{K}$ campo
+    - $n \in \mathbb{N} - \{0\}$
+    - $A, B \in \textrm{Mat}_{n \times n}(\mathbb{K}) \mid A$ simile a $B$
+- **Th**
+    - $\textrm{tr}(A) = \textrm{tr}(B)$
+
+
+
+## Definizione 54
+ 
+
+- **Matrice triangolare superiore**
+
+> - $\mathbb{K}$ campo
+> - $n \in \mathbb{N} - \{0\}$
+> - $A \in \textrm{Mat}_{n \times n}(\mathbb{K})$
+> - $A$ è detta **triangolare superiore** $\iff \forall i, j \in [1, n], i \gt j \quad a_{i,j} = 0$
+
+- **Matrice triangolare inferiore**
+
+> - $\mathbb{K}$ campo
+> - $n \in \mathbb{N} - \{0\}$
+> - $A \in \textrm{Mat}_{n \times n}(\mathbb{K})$
+> - $A$ è detta **triangolare superiore** $\iff \forall i, j \in [1, n], i \lt j \quad a_{i,j} = 0$
+
+- **Matrice triangolare**
+
+> - $\mathbb{K}$ campo
+> - $n \in \mathbb{N} - \{0\}$
+> - $A \in \textrm{Mat}_{n \times n}(\mathbb{K})$
+> - $A$ è detta **triangolare $\iff$** $A$ triangolare superiore o triangolare inferiore
+
+- **Matrice triangolarizzabile**
+
+> - $\mathbb{K}$ campo
+> - $n \in \mathbb{N} - \{0\}$
+> - $A \in \textrm{Mat}_{n \times n}(\mathbb{K})$
+> - $A$ è detta **triangolarizzabile** $\iff \exists B \in \textrm{Mat}_{n \times n}(\mathbb{K}) \mid B$ triangolare $\land \ B$ simile ad $A$
+
+- **Matrice diagonale**
+
+> - $\mathbb{K}$ campo
+> - $n \in \mathbb{N} - \{0\}$
+> - $A \in \textrm{Mat}_{n \times n}(\mathbb{K})$
+> - $A$ è detta **diagonale** $\iff \forall i, j \in [1, n], i \neq j \quad a_{i, j} = 0$
+>   - in particolare, $A$ è diagonale $\iff A$ triangolare superiore ed inferiore
+
+- **Matrice diagonalizzabile**
+
+> - $\mathbb{K}$ campo
+> - $n \in \mathbb{N} - \{0\}$
+> - $A \in \textrm{Mat}_{n \times n}(\mathbb{K})$
+> - $A$ è detta **diagonalizzabile** $\iff \exists B \in \textrm{Mat}_{n \times n}(\mathbb{K}) \mid B$ diagonale $\land \ B$ simile ad $A$
+
+
+
+## Definizione 55
+
+
+- **Sottomatrice di una matrice**
+
+> - $\mathbb{K}$ campo
+> - $m, n \in \mathbb{N} - \{0\}$
+> - $A \in \textrm{Mat}_{m \times n}(\mathbb{K})$
+> - $A_i^j$ è una **sottomatrice di $A$** $\iff A_i^j$ si ottiene rimuovendo $A_i$ e $A^j$ da $A$
+
+- **Minore di una matrice**
+
+> - $\mathbb{K}$ campo
+> - $m, n \in \mathbb{N} - \{0\}$
+> - $A \in \textrm{Mat}_{m \times n}(\mathbb{K})$
+> - $M$ è un **minore di $A$** $\iff M$ è una sottomatrice quadrata di $A$
+
+- **Orlato di un minore**
+
+> - $\mathbb{K}$ campo
+> - $m, n, r \in \mathbb{N} - \{0\} \mid r \lt m \land r \lt n$
+> - $A \in \textrm{Mat}_{m \times n}(\mathbb{K})$
+> - $M \in \textrm{Mat}_{r \times r}(\mathbb{K})$ è un minore di $A$
+> - $M' \in \textrm{Mat}_{(r + 1) \times (r + 1)}(\mathbb{K})$ è un **orlato di $M$** $\iff M'$ è un minore di $A$ e $M$ si ottiene rimuovendo una riga e una colonna da $M'$
+
+
+
+## Teorema 140
+
+
+- **Hp**
+    - $\mathbb{K}$ campo
+    - $m, n, r \in \mathbb{N} - \{0\} \mid r \lt m \land r \lt n$
+    - $A \in \textrm{Mat}_{m \times n}(\mathbb{K})$
+    - $M \in \textrm{Mat}_{r \times r}(\mathbb{K})$ è un minore di $A$
+- **Th**
+    - $M$ ha $(m-r)\cdot(n-r)$ orlati in $A$
+    
+
+
+## Definizione 56
+
+
+- **Matrice completa**
+
+> - $\mathbb{K}$ campo
+> - $m, n \in \mathbb{N} - \{0\}$
+> - $A \in \textrm{Mat}_{m \times n}(\mathbb{K})$
+> - $b \in \textrm{Mat}_{m \times 1}(\mathbb{K})$
+> - $A_b:=\left(\begin{array}{cccc}a_{1, 1} & \cdots & a_{1, n} & b_1 \\ \vdots & \ddots & \vdots & \vdots \\ a_{m, 1} & \cdots & a_{m,n} & b_m\end{array}\right)$
+
+
+
+## Definizione 57
+
+
+- **Matrice di un'applicazione lineare**
+
+> - $\mathbb{K}$ campo
+> - $m, n \in \mathbb{N} - \{0\}$
+> - $V, W$ spazi vettoriali su $\mathbb{K}$
+> - $\mathcal{B}=\{v_1, \ldots, v_n\}$ base di $V$
+> - $\mathcal{C}=\{w_1, \ldots, w_m\}$ base di $W$
+> - $f: V \rightarrow W$ isomorfismo
+> - $\varphi_\mathcal{B}: \mathbb{K}^N \rightarrow V$ isomorfismo
+> - $\varphi_\mathcal{C}: \mathbb{K}^M \rightarrow W$ isomorfismo
+> - $A \in \textrm{Mat}_{m \times n}(\mathbb{K}) \mid f = \varphi_\mathcal{C}\cdot L_A \cdot \varphi_\mathcal{B}^{-1}$ è detta **matrice di $f$**
+>   - è possibile dimostrare che $\forall f$ applicazione lineare$\quad \exists ! A \in \textrm{Mat}_{m \times n}(\mathbb{K})$
+
+****
+
+# Rango
+
+
+
+## Definizione 58
+
+
+- **Sottospazio ortogonale**
+
+> - $\mathbb{K}$ campo
+> - $n \in \mathbb{N} - \{0\}$
+> - $V \subset \mathbb{K}^n$ sottospazio vettoriale
+> - $V^{\perp} := \{w \in \mathbb{K}^n \mid \forall v \in V \quad w \cdot v = 0_{\mathbb{K}^n}\}$ è detto **sottospazio ortogonale di $\mathbb{K}^n$**
+>     - la definizione ha significato poiché il prodotto scalare tra due vettori è nullo esattamente quando i due vettori sono perpendicolari tra loro, per osservazione precedente
+
+
+
+## Teorema 141
+
+
+- **Hp**
+    - $\mathbb{K}$ campo
+    - $n \in \mathbb{N} - \{0\}$
+    - $V \subset \mathbb{K}^n$ sottospazio vettoriale
+- **Th**
+    - $V^{\bot}$ è sottospazio vettoriale di $\mathbb{K}^n$
+
+
+
+## Teorema 142
+
+
+- **Hp**
+    - $\mathbb{K}$ campo
+    - $n \in \mathbb{N} - \{0\}$
+    - $V \subset \mathbb{K}^n$ sottospazio vettoriale
+- **Th**
+    - $\dim(V^{\bot}) = \dim(\mathbb{K}^n) - \dim(V)$
+
+
+
+## Definizione 59
+
+
+- **Moltiplicazione sinistra**
+
+> - $\mathbb{K}$ campo
+> - $m,n \in \mathbb{N} - \{0\}$
+> - $A \in \textrm{Mat}_{m \times n}(\mathbb{K})$
+> - $L_A:\mathbb{K}^n \rightarrow \mathbb{K}^m: x \rightarrow A\cdot x$ è detta **moltiplicazione sinistra di $A$**
+
+
+
+## Teorema 143
+
+
+- **Hp**
+    - $\mathbb{K}$ campo
+    - $m,n \in \mathbb{N} - \{0\}$
+    - $A \in \textrm{Mat}_{m \times n}(\mathbb{K})$
+- **Th**
+    - $L_A$ è una trasformazione lineare
+
+
+
+## Teorema 144
+
+
+- **Hp**
+    - $\mathbb{K}$ campo
+    - $m,n \in \mathbb{N} - \{0\}$
+    - $A \in \textrm{Mat}_{m \times n}(\mathbb{K})$
+- **Th**
+    - $\ker(L_A) = \textrm{span}(A_1, \ldots, A_m)^\bot$
+    - $\textrm{im}(L_A) = \textrm{span}(A^1, \ldots, A^n)$
+
+## Definizione 60
+
+
+- **Rango di una matrice**
+
+> - $\mathbb{K}$ campo
+> - $m,n \in \mathbb{N} - \{0\}$
+> - $A \in \textrm{Mat}_{m \times n}(\mathbb{K})$
+> - $\textrm{rk}(A):=\textrm{rk}(L_A)$ è il **rango di $A$**
+
+
+
+## Teorema 145
+
+
+- **Hp**
+    - $\mathbb{K}$ campo
+    - $m,n \in \mathbb{N} - \{0\}$
+    - $A \in \textrm{Mat}_{m \times n}(\mathbb{K})$
+- **Th**
+    - $\textrm{rk}(A) =\dim(\textrm{span}(A^1, \ldots, A^n)) = \dim(\textrm{span}(A_1, \ldots, A_n))$
+
+****
+
+# Operazioni su righe e colonne
+
+
+## Definizione 61
+
+
+- **Scambio di righe di una matrice**
+
+> - $\mathbb{K}$ campo
+> - $m, n \in \mathbb{N} - \{0\}$
+> - $A \in \textrm{Mat}_{m \times n}(\mathbb{K})$
+> - $\forall A_1, \ldots, A_m$ righe di $A$, scambiare $A_i$ e $A_j$ lascia invariato $\ker(L_A)$
+
+- **Moltiplicazione di una riga per una costante**
+
+> - $\mathbb{K}$ campo
+> - $m, n \in \mathbb{N} - \{0\}$
+> - $A \in \textrm{Mat}_{m \times n}(\mathbb{K})$
+> - $\lambda \in \mathbb{K}^*$
+> - $\forall A_1, \ldots, A_m$ righe di $A$, moltiplicare $A_i$ per $\lambda$ lascia invariato $\ker(L_A)$
+
+- **Somma di una riga con un multiplo di un'altra**
+
+> - $\mathbb{K}$ campo
+> - $m, n \in \mathbb{N} - \{0\}$
+> - $A \in \textrm{Mat}_{m \times n}(\mathbb{K})$
+> - $\lambda \in \mathbb{K}^*$
+> - $\forall A_1, \ldots, A_m$ righe di $A$, sommare ad $A_i$ un certo $\lambda \cdot A_j$ lascia invariato $\ker(L_A)$
+
+- **Scambio di colonne di una matrice**
+
+> - $\mathbb{K}$ campo
+> - $m, n \in \mathbb{N} - \{0\}$
+> - $A \in \textrm{Mat}_{m \times n}(\mathbb{K})$
+> - $\forall A^1, \ldots, A^m$ colonne di $A$, scambiare $A^i$ e $A^j$ lascia invariato $\textrm{im}(L_A)$
+
+- **Moltiplicazione di una colonna per una costante**
+
+> - $\mathbb{K}$ campo
+> - $m, n \in \mathbb{N} - \{0\}$
+> - $A \in \textrm{Mat}_{m \times n}(\mathbb{K})$
+> - $\lambda \in \mathbb{K}^*$
+> - $\forall A^1, \ldots, A^m$ colonne di $A$, moltiplicare $A^i$ per $\lambda$ lascia invariato $\textrm{im}(L_A)$
+
+- **Somma di una colonna con un multiplo di un'altra**
+
+> - $\mathbb{K}$ campo
+> - $m, n \in \mathbb{N} - \{0\}$
+> - $A \in \textrm{Mat}_{m \times n}(\mathbb{K})$
+> - $\lambda \in \mathbb{K}^*$
+> - $\forall A^1, \ldots, A^m$ righe di $A$, sommare ad $A^i$ un certo $\lambda \cdot A^j$ lascia invariato $\textrm{im}(L_A)$
+
+
+
+## Teorema 146
+
+
+- **Hp**
+    - $\mathbb{K}$ campo
+    - $m, n \in \mathbb{N} - \{0\}$
+    - $A, B \in \textrm{Mat}_{m \times n}(\mathbb{K})$
+    - $A \equiv B \iff$ è possibile ricavare $B$ da $A$ eseguendo operazioni _tra righe_ definite precedentemente
+- **Th**
+    - $\equiv$ una relazione di equivalenza
+
+
+
+## Teorema 147
+
+
+- **Hp**
+    - $\mathbb{K}$ campo
+    - $m, n \in \mathbb{N} - \{0\}$
+    - $A, B \in \textrm{Mat}_{m \times n}(\mathbb{K})$
+    - $A \equiv B \iff$ è possibile ricavare $B$ da $A$ eseguendo operazioni _tra righe_ definite precedentemente
+- **Th**
+    - $A \equiv B \implies \ker(L_A) = \ker(L_B) \land \textrm{rk}(A) = \textrm{rk}(B)$
+
+
+
+## Teorema 148
+
+
+- **Hp**
+    - $\mathbb{K}$ campo
+    - $m, n \in \mathbb{N} - \{0\}$
+    - $A, B \in \textrm{Mat}_{m \times n}(\mathbb{K})$
+    - $A \equiv B \iff$ è possibile ricavare $B$ da $A$ eseguendo operazioni _tra colonne_ definite precedentemente
+- **Th**
+    - $\equiv$ una relazione di equivalenza
+
+
+
+## Teorema 149
+
+
+- **Hp**
+    - $\mathbb{K}$ campo
+    - $m, n \in \mathbb{N} - \{0\}$
+    - $A, B \in \textrm{Mat}_{m \times n}(\mathbb{K})$
+    - $A \equiv B \iff$ è possibile ricavare $B$ da $A$ eseguendo operazioni _tra colonne_ definite precedentemente
+- **Th**
+    - $A \equiv B \implies \textrm{im}(L_A) = \textrm{im}(L_B) \land \textrm{rk}(A) = \textrm{rk}(B)$
+
+
+
+
+****
+# Determinante
+
+
+
+## Definizione 62
+
+
+- **Applicazione multilineare**
+
+> - $\mathbb{K}$ campo
+> - $k \in \mathbb{N}$
+> - $V_1, \ldots, V_k, W$ spazi vettoriali
+> - $f: V_1 \times \ldots \times V_k \rightarrow W:(v_1, \ldots, v_k) \rightarrow w$
+> - $f$ **multilineare** $\iff \forall i \in [1, k], \ \forall v_1 \in V_1, \ldots, v_i', v_i'' \in V_i, \ldots, v_k \in V_k, \ \forall \lambda, \mu \in \mathbb{K} \quad f(v_1, \ldots, \lambda v_i'+\mu v_i'', \ldots, v_k) = \lambda f(v_1, \ldots, v_i', \ldots, v_k) + \mu f(v_1, \ldots, v_i'', \ldots, v_k)$
+
+- **Determinante**
+
+> - $\mathbb{K}$ campo
+> - $n \in \mathbb{N} - \{0\}$
+> - $\det : \textrm{Mat}_{n \times n}(\mathbb{K}) \rightarrow \mathbb{K}$
+> - 1. $\forall A \in \textrm{Mat}_{n \times n}(\mathbb{K}) \quad \det$ multilineare su $A_1, \ldots A_n$ e $A^1, \ldots, A^n$
+> - 2. $\forall A \in \textrm{Mat}_{n \times n}(\mathbb{K}) \quad A_1, \ldots A_n$ e $A^1, \ldots, A^n$ basi di $\mathbb{K}^n \iff \det(A) \neq 0$
+> - 3. $\det(I_n) = 1$
+> - 4. per $\mathbb{K} \mid 1 \neq -1 \quad$ scambiando due righe o due colonne $\det(A)$ cambia segno
+> - $\det$ è il **determinante** $\iff \det$ verifica 1, 2 e 3, oppure 1, 3 e 4
+>   - poiché è possibile dimostrare che la funzione che verifica tali condizioni esiste ed è unica, allora il $\det$ è totalmente determinato da tali caratteristiche
+
+
+
+## Teorema 150
+
+
+- **Hp**
+    - $\mathbb{K}$ campo $\mid 1 \neq -1$
+    - $n \in \mathbb{N} - \{0\}$
+    - $f : \textrm{Mat}_{n \times n}(\mathbb{K}) \rightarrow \mathbb{K}$
+    4. **⚠️  SCRIVI**
+- **Th**
+    - **⚠️  DETERMINANTE ALTERNANTE**
+
+
+
+## Definizione 63
+
+
+- **Matrice singolare**
+
+> - $\mathbb{K}$ campo
+> - $n \in \mathbb{N} - \{0\}$
+> - $A \in \textrm{Mat}_{n \times n}(\mathbb{K})$
+> - $A$ è detta **singolare** $\iff \det(A) = 0$
+
+
+
+## Teorema 151
+
+
+- **Hp**
+    - $\mathbb{K}$ campo
+    - $n \in \mathbb{N} - \{0\}$
+    - $A \in \textrm{Mat}_{n \times n}(\mathbb{K})$
+    1. $A$ invertibile
+    2. $\textrm{rk}(A)=n$
+    3. $A_1, \ldots, A_n$ base di $\mathbb{K}^n$
+    4. $A^1, \ldots, A^n$ base di $\mathbb{K}^n$
+    5. $\det(A) \neq 0$
+    6. $A \equiv I_n$ tramite la relazione di equivalenza delle operazioni sulle righe
+    7. $A \equiv I_n$ tramite la relazione di equivalenza delle operazioni sulle colonne
+- **Th**
+    - le proposizioni sono equivalenti
+
+## Teorema 152
+
+
+- **Hp**
+    - $\mathbb{K}$ campo
+    - $n \in \mathbb{N} - \{0\}$
+    - $A \in \textrm{Mat}_{n \times n}(\mathbb{K}) \mid \exists i \in [1, n] : A_i = 0_{\mathbb{K}^n} \lor \exists j \in [1, n] : A^j = 0_{\mathbb{K}^n}$, ovvero in $A$ è presente o una riga, o una colonna nulla
+- **Th**
+    - $\det(A) = 0$
+
+
+
+## Teorema 153
+
+
+- **Hp**
+    - $\mathbb{K}$ campo
+    - $n \in \mathbb{N} - \{0\}$
+    - $A \in \textrm{Mat}_{n \times n}(\mathbb{K})$
+- **Th**
+    - $\det(A) = \det(A^T)$
+
+
+
+## Teorema 154
+
+
+- **Hp**
+    - $\mathbb{K}$ campo
+    - $n \in \mathbb{N} - \{0\}$
+    - $A, B \in \textrm{Mat}_{n \times n}(\mathbb{K}) \mid A$ simile a $B$
+- **Th**
+    - $\det(A) = \det(B)$
+
+## Teorema 155
+
+
+- **Hp**
+    - $\mathbb{K}$ campo
+    - $n \in \mathbb{N} - \{0\}$
+    - $A \in \textrm{Mat}_{n \times n}(\mathbb{K})$
+- **Th**
+    - $\displaystyle{\det(A) = \sum_{\sigma \in S_n} \textrm{sgn}(\sigma) \cdot \prod_{i=1}^n{a_{i, \sigma_i}}}$
+
+
+
+## Teorema 156
+
+
+- **Hp**
+    - $\mathbb{K}$ campo
+    - $A \in \textrm{Mat}_{2 \times 2}(\mathbb{K})$
+    - $A = \left(\begin{array}{cc}a_{1,1} & a_{1, 2} \\ a_{2, 1} & a_{2, 2}\end{array}\right)$
+- **Th**
+    - $\det(A) = a_{1,1}a_{2,2}-a_{1,2}a_{2,1}$
+
+
+
+## Teorema 157
+
+
+- **Hp**
+    - $\mathbb{K}$ campo
+    - $A \in \textrm{Mat}_{3 \times 3}(\mathbb{K})$
+    - $A = \left(\begin{array}{ccc}a_{1,1} & a_{1, 2} & a_{1,3}\\ a_{2, 1} & a_{2, 2} & a_{2,3} \\ a_{3,1} & a_{3,2} & a_{3,3}\end{array}\right)$
+- **Th**
+    - $\det(A) = a_{1,1}a_{2,2}a_{3,3}+a_{1,3}a_{2,1}a_{3,2}+a_{1,2}a_{2,3}a_{3,1} - a_{1,3}a_{2,2}a_{3,1}-a_{1,1}a_{2,3}a_{3,2}-a_{1,2}a_{2,1}a_{3,3}$
+
+
+
+## Teorema 158
+
+
+- **Hp**
+    - $\mathbb{K}$ campo
+    - $n \in \mathbb{N} - \{0\}$
+    - $A \in \textrm{Mat}_{n \times n}(\mathbb{K}) \mid A$ triangolare
+- **Th**
+    - $\det(A) = a_{1,1} \cdot \ldots \cdot a_{n, n}$
+
+
+
+## Teorema 159
+
+
+- **Hp**
+    - $\mathbb{K}$ campo
+    - $n \in \mathbb{N} - \{0\}$
+    - $\lambda \in \mathbb{K}$
+    - $A \in \textrm{Mat}_{n \times n}(\mathbb{K})$
+    - $A' = \left(\begin{array}{c}A_1 \\ \vdots \\ \lambda A_i \\ \vdots \\ A_n \end{array}\right)$
+- **Th**
+    - $\det(A')=\lambda \cdot \det(A)$
+
+
+
+## Teorema 160
+
+
+- **Hp**
+    - $\mathbb{K}$ campo
+    - $n \in \mathbb{N} - \{0\}$
+    - $A \in \textrm{Mat}_{n \times n}(\mathbb{K})$
+- **Th**
+    - $\forall 1 \le i, j \le n \quad \det(A) = \displaystyle \sum_{k = 1}^{n}{(-1)^{i + k}\cdot a_{i, k} \cdot \det(A_i^k)} = \sum_{h = 1}^n{(-1)^{h + j}\cdot a_{h, j} \cdot \det(A_h^j)}$
+
+
+
+## Definizione 64
+
+
+- **Aggiunta di una matrice**
+
+> - $\mathbb{K}$ campo
+> - $n \in \mathbb{N} - \{0\}$
+> - $A \in \textrm{Mat}_{n \times n}(\mathbb{K})$
+> - $A^*$ è detta **aggiunta di $A$** $\iff \forall i, j \in [1, n] \quad a^*_{i, j} = (-1)^{i + j}\cdot \det(A_i^j)$
+
+
+
+## Teorema 161
+
+
+- **Hp**
+    - $\mathbb{K}$ campo
+    - $n \in \mathbb{N} - \{0\}$
+    - $A \in \textrm{Mat}_{n \times n}(\mathbb{K}) \mid \det(A) \neq 0$
+- **Th**
+    - $A^{-1}=\dfrac{(A^*)^T}{\det(A)}$
+
+
+
+## Teorema 162
+
+
+- **Hp**
+    - $\mathbb{K}$ campo
+    - $A \in \textrm{Mat}_{2 \times 2}(\mathbb{K}) \mid \det(A) \neq 0$
+    - $A = \left(\begin{array}{cc}a & b \\ c & d\end{array}\right)$
+- **Th**
+    - $A^{-1}=\dfrac{1}{ad - bc} \left(\begin{array}{cc}d & -b \\ -c & a\end{array}\right)$
+
+****
+
+# Polinomio caratteristico
+
+
+
+## Definizione 65
+
+
+> - $\mathbb{K}$ campo
+> - $n \in \mathbb{N} - \{0\}$
+> - $A \in \textrm{Mat}_{n \times n}(\mathbb{K})$
+> - $p_A(x) := \det(x\cdot I_n - A)$ è detto **polinomio caratteristico di $A$**
+
+
+
+## Teorema 163
+
+
+- **Hp**
+    - $\mathbb{K}$ campo
+    - $n \in \mathbb{N} - \{0\}$
+    - $A \in \textrm{Mat}_{n \times n}(\mathbb{K})$
+- **Th**
+    - $p_A(x) = x^n - \textrm{tr}(A)\cdot x^{n -1} + \ldots + (-1)^n \cdot \det(A)$
+
+
+
+## Teorema 164
+
+
+- **Hp**
+    - $\mathbb{K}$ campo
+    - $n \in \mathbb{N} - \{0\}$
+    - $A, B \in \textrm{Mat}_{n \times n}(\mathbb{K}) \mid A$ simile a $B$
+- **Th**
+    - $p_A(x) = p_B(x)$
+
+
+
+## Definizione 66
+
+
+- **Autovalore**
+
+> - $\mathbb{K}$ campo
+> - $n \in \mathbb{N} - \{0\}$
+> - $A \in \textrm{Mat}_{n \times n}(\mathbb{K})$
+> - $\lambda \in \mathbb{K} \mid p_A(\lambda) = 0$ è detto **autovalore di $A$**
+
+- **Spettro**
+
+> - $\mathbb{K}$ campo
+> - $n \in \mathbb{N} - \{0\}$
+> - $A \in \textrm{Mat}_{n \times n}(\mathbb{K})$
+> - $\textrm{sp}(A) := \{\lambda \in \mathbb{K} \mid p_A(\lambda) = 0\}$ è detto **spettro di $A$**
+
+
+
+## Teorema 165
+
+
+- **Hp**
+    - $\mathbb{K}$ campo
+    - $n \in \mathbb{N} - \{0\}$
+    - $A, B \in \textrm{Mat}_{n \times n}(\mathbb{K}) \mid A$ simile a $B$
+- **Th**
+    - $\textrm{sp}(A) = \textrm{sp}(B)$
+
+
+
+## Teorema 166
+
+
+- **Hp**
+    - $\mathbb{K}$ campo
+    - $n \in \mathbb{N} - \{0\}$
+    - $A \in \textrm{Mat}_{n \times n}(\mathbb{K})$
+    - $\lambda \in \mathbb{K}$
+- **Th**
+    - $\lambda$ autovalore $\iff \exists v \in \mathbb{K}^n - \{0\} \mid A \cdot v = \lambda \cdot v$
+
+## Definizione 67
+
+
+- **Autovettore relativo ad un autovalore**
+
+> - $\mathbb{K}$ campo
+> - $n \in \mathbb{N} - \{0\}$
+> - $A \in \textrm{Mat}_{n \times n}(\mathbb{K})$
+> - $\lambda \in \textrm{sp}(A)$
+> - $v \in \mathbb{K}^n - \{0\}$ è detto **autovettore di $A$ relativo a $\lambda$** $\iff (A- \lambda \cdot I_n) \cdot v = 0$
+
+
+
+## Teorema 167
+
+
+- **Hp**
+    - $\mathbb{K}$ campo
+    - $n \in \mathbb{N} - \{0\}$
+    - $A \in \textrm{Mat}_{n \times n}(\mathbb{K})$
+    - $\lambda_1, \ldots, \lambda_k \in \textrm{sp}(A)$
+    - $v_1, \ldots, v_k$ autovettori di $A$ relativi rispettivamente a $\lambda_1, \ldots, \lambda_k$
+- **Th**
+    - $v_1, \ldots, v_k$ linearmente indipendenti
+
+
+
+## Definizione 68
+
+
+- **Autospazio relativo ad un autovalore**
+
+> - $\mathbb{K}$ campo
+> - $n \in \mathbb{N} - \{0\}$
+> - $A \in \textrm{Mat}_{n \times n}(\mathbb{K})$
+> - $\lambda \in \textrm{sp}(A)$
+> - $\textrm{E}_\lambda(A) := \{v \in \mathbb{K}^n \mid (A - \lambda \cdot I_n) \cdot v = 0\}$ è detto **autospazio di $A$ relativo a $\lambda$**
+>   - in particolare $0_{\mathbb{K}^n} \in \textrm{E}_\lambda(A)$
+
+
+
+## Teorema 168
+
+
+- **Hp**
+    - $\mathbb{K}$ campo
+    - $n \in \mathbb{N} - \{0\}$
+    - $A \in \textrm{Mat}_{n \times n}(\mathbb{K})$
+    - $\lambda \in \textrm{sp}(A)$
+- **Th**
+    - $\textrm{E}_\lambda(A) \subset \mathbb{K}$ sottospazio vettoriale
+
+
+
+## Definizione 69
+
+
+- **Molteplicità algebrica di un autovalore**
+
+> - $\mathbb{K}$ campo
+> - $n \in \mathbb{N} - \{0\}$
+> - $A \in \textrm{Mat}_{n \times n}(\mathbb{K})$
+> - $\lambda \in \textrm{sp}(A)$
+> - $\mu(\lambda) := \max(\{\varepsilon \in \mathbb{N} : (x - \lambda)^\varepsilon \mid p_A(x)\})$ è detta **molteplicità algebrica di $\lambda$**
+
+
+
+## Teorema 169
+
+
+- **Hp**
+    - $\mathbb{K}$ campo
+    - $n \in \mathbb{N} - \{0\}$
+    - $A, B \in \textrm{Mat}_{n \times n}(\mathbb{K}) \mid A$ simile a $B$
+    - $\lambda \in \textrm{sp}(A) = \textrm{sp}(B)$
+- **Th**
+    - $\mu_A(\lambda) = \mu_B(\lambda)$
+
+
+
+## Definizione 70
+
+
+- **Molteplicità geometrica di un autovalore**
+
+> - $\mathbb{K}$ campo
+> - $n \in \mathbb{N} - \{0\}$
+> - $A \in \textrm{Mat}_{n \times n}(\mathbb{K})$
+> - $\lambda \in \textrm{sp}(A)$
+> - $\nu(\lambda):=\dim(\textrm{E}_\lambda(A))$ è detta **molteplicità geometrica di $\lambda$**
+
+
+
+## Teorema 170
+
+
+- **Hp**
+    - $\mathbb{K}$ campo
+    - $n \in \mathbb{N} - \{0\}$
+    - $A, B \in \textrm{Mat}_{n \times n}(\mathbb{K}) \mid A$ simile a $B$
+    - $\lambda \in \textrm{sp}(A) = \textrm{sp}(B)$
+- **Th**
+    - $\nu_A(\lambda) = \nu_B(\lambda)$
+
+
+
+## Teorema 171
+
+
+- **Hp**
+    - $\mathbb{K}$ campo
+    - $n \in \mathbb{N} - \{0\}$
+    - $A \in \textrm{Mat}_{n \times n}(\mathbb{K})$
+    - $\lambda \in \textrm{sp}(A)$
+- **Th**
+    - $\nu(\lambda) = n - \textrm{rk}(A - \lambda \cdot I_n)$
+
+## Teorema 172
+
+
+- **Hp**
+    - $\mathbb{K}$ campo
+    - $n \in \mathbb{N} - \{0\}$
+    - $A \in \textrm{Mat}_{n \times n}(\mathbb{K})$
+    - $\lambda \in \textrm{sp}(A)$
+- **Th**
+    - $\nu(\lambda) \le \mu(\lambda)$
+
+
+
+## Teorema 173
+
+
+- **Hp**
+    - $\mathbb{K}$ campo
+    - $n \in \mathbb{N} - \{0\}$
+    - $A \in \textrm{Mat}_{n \times n}(\mathbb{K})$
+    1. $A$ triangolarizzabile
+    2. $\displaystyle \sum_{\lambda \in \textrm{sp}(A)}{\mu(\lambda)} = n$
+    3. $\displaystyle p_A(x) = \prod_{\lambda \in \textrm{sp}(A)}{(x - \lambda)}^{\mu(\lambda)}$, ovvero $p_A(x)$ è completamente fattorizzabile
+- **Th**
+    - le proposizioni sono equivalenti
+
+
+
+## Teorema 174
+
+
+- **Hp**
+    - $n \in \mathbb{N} - \{0\}$
+    - $A \in \textrm{Mat}_{n \times n}(\mathbb{C})$
+- **Th**
+    - $A$ è triangolarizzabile
+
+## Teorema 175
+
+
+- **Hp**
+    - $n \in \mathbb{N} - \{0\}$
+    - $A \in \textrm{Mat}_{n \times n}(\mathbb{R})$
+- **Th**
+    - $A$ triangolarizzabile $\iff \exists \lambda \in \textrm{sp}(A) \mid \lambda \in \mathbb{R}$
+
+
+
+## Teorema 176
+
+
+- **Hp**
+    - $\mathbb{K}$ campo
+    - $n \in \mathbb{N} - \{0\}$
+    - $A \in \textrm{Mat}_{n \times n}(\mathbb{K})$
+    1. $A$ diagonalizzabile
+    2. $\displaystyle \sum_{\lambda \in \textrm{sp}(A)}{\nu(\lambda)} = n$
+    3. $\exists B^1, \ldots, B^n$ autovettori di $A \mid B^1, \ldots, B^n$ base di $\mathbb{K}^n$
+- **Th**
+    - le proposizioni sono equivalenti
+
+
+
+## Teorema 177
+
+
+- **Hp**
+    - $\mathbb{K}$ campo
+    - $n \in \mathbb{N} - \{0\}$
+    - $A \in \textrm{Mat}_{n \times n}(\mathbb{K})$
+    - $B^1, \ldots, B^n$ autovettori di $A \mid B = (B^1, \ldots, B^n) \in \textrm{GL}(n, \mathbb{K}) \land B^1, \ldots, B^n$ base di $\mathbb{K}^n$
+- **Th**
+    - $A$ diagonalizzabile
+
+
+
+****
+# Numeri complessi
+
+
+
+## Definizione 71
+
+
+- **Insieme dei complessi**
+
+> - $\mathbb{C}:=\left\{a+i b \mid a, b \in \mathbb{R}, \  i : i^{2}=-1\right\}$ è l'**insieme dei complessi**
+> - $\forall z \in \mathbb{C} \quad \left\{\begin{array}{l}a:=\operatorname{Re}(z) \\ b:=\operatorname{Im}(z)\end{array}\right.$
+
+
+
+## Teorema 178
+
+
+- **Hp**
+    - $a, b, c, d \in \mathbb{R}$
+    - $z \in \mathbb{C} \mid z=a+i b$
+    - $w \in \mathbb{C} \mid w=c+i d$
+- **Th**
+    - $z + w = (a+b)+i (c +d)$
+    - $z\cdot w=(a c-b d)+i(ad+ bc)$
+
+
+
+## Definizione 72
+
+
+- **Coniugato**
+
+> - $a, b \in \mathbb{R}$
+> - $z \in \mathbb{C} \mid z=a+i b$
+> - $\bar{z}:=a-i b$ è il **coniugato** di $z$
+
+
+
+## Teorema 179
+
+
+- **Hp**
+    - $a,b, c, d, \in \mathbb{R}$
+    - $z \in \mathbb{C} \mid z=a+i b$
+    - $w \in \mathbb{C} \mid w=c+i d$
+- **Th**
+    - $\overline{z}+\overline{w}=\overline{z+w}$
+    - $\overline{z} \cdot \overline{w}=\overline{z \cdot w}$
+
+
+
+## Teorema 180
+
+
+- **Hp**
+    - $0 \le \theta \lt 2 \pi$
+- **Th**
+    - $e^{i \theta}=\cos \theta+i \sin \theta$
+
+
+
+## Definizione 73
+
+
+- **Raggio**
+
+> - $a, b \in \mathbb{R}$
+> - $z \in \mathbb{C} \mid z = a+ib$
+> - $|z|:=\sqrt{a^{2}+b^{2}}$ è il **raggio** di $z$
+>   - corrisponde alla distanza di $z$ dall'origine nel piano di Gauss
+
+
+
+## Definizione 74
+
+
+- **Forma polare**
+
+> - $a, b \in \mathbb{C}$
+> - $z \in \mathbb{C}-\{0\}$
+> - $z=|z|\cdot e^{i \theta}$ è detta **forma polare di $z$**
+
+
+
+## Definizione 75
+
+
+- **Soluzione principale**
+
+> - $a, b \in \mathbb{R}$
+> - $z \in \mathbb{C} \mid z = a + i b$
+> - $\arg(z) \subset \mathbb{R}$ è l'**insieme delle soluzioni** del sistema $\left\{\begin{array}{l}\cos \theta=\frac{a}{|z|} \\ \sin \theta=\frac{b}{|z|}\end{array}\right.$
+> - per definizione, $\textrm{arg}(z) \implies \exists ! \theta \mid 0 \leq \theta \le 2 \pi$ tale che $\theta$ sia soluzione del sistema, e questo prende il nome di $\textrm{Arg}(z)$, detta **soluzione principale**
+
+
+
+## Teorema 181
+
+
+- **Hp**
+  - $(\mathbb{C}, +, \cdot)$ è un gruppo
+- **Th**
+  - $(\mathbb{C}, +, \cdot )$ è un campo
+
+## Teorema 182
+
+
+- **Hp**
+    - $z, w \in \mathbb{C}$
+- **Th**
+    - $|z \cdot w|=|z|\cdot |w| \quad \arg(z\cdot w)=\arg(z) + \arg(w)$
+    - $|\overline{w}|=|w| \quad \arg(\overline{w})=-\arg(w)$
+    - $|w^{-1}|={|w|}^{-1}\quad \arg(w^{-1})=-\arg(w)$
+    - $\left|\dfrac{z}{w}\right|=\dfrac{|z|}{|w|} \quad \arg\left(\dfrac{z}{w}\right)=\arg(z) - \arg(w)$
+
+
+
+## Teorema 183
+
+
+- **Hp**
+    - $z \in \mathbb{C}$
+- **Th**
+    - $z^{n}=|z|^{n} e^{i  \theta n} \quad \arg \left( z^{n} \right)=n \arg (z)$
+
+
+
+****
+# Coefficienti binomiali
+
+
+
+## Definizione 76
+
+
+- **Coefficiente binomiale**
+
+> - $0! := 1$
+> - $n, k \in \mathbb{N}$
+> - $\displaystyle \binom{n}{k}:=\left\{\begin{array}{ll}\frac{n !}{n !(n-k) !} & k \leqslant n \\ 0 & k>n\end{array}\right.$
+
+
+
+## Teorema 184
+
+
+- **Hp**
+  - $n, k \in \mathbb{N}$
+- **Th**
+  - $\displaystyle \binom{n}{k} = \binom{n}{n-k}$
+
+## Teorema 185
+
+
+- **Hp**
+  - $n, k \in \mathbb{N}$
+- **Th**
+  - $\displaystyle \binom{n}{k + 1} = \binom{n - 1}{k + 1} \binom{n - 1}{ k}$
+
+## Teorema 186
+
+
+- **Hp**
+  - $p \in \mathbb{P}$
+  - $k \in \mathbb{N} \mid 0 \lt k \lt p$
+- **Th**
+  - $p \ \bigg\vert \displaystyle \binom{p}{k}$
+
+## Teorema 187
+
+
+- **Hp**
+  - $n \in \mathbb{Z}$
+  - $p \in \mathbb{P} : p \mid n$
+  - $[a] \in \mathbb{Z}_{p}$
+- **Th**
+  - $n \cdot [a] = [0]$ in $\mathbb{Z}_p$
+
+## Teorema 188
+
+
+- **Hp**
+  - $n \in \mathbb{Z}$
+  - $p \in \mathbb{P} : p \mid n$
+  - $[a] \in \mathbb{Z}_{p}$
+  - $k \in \mathbb{N} \mid 0 \lt k \lt p$
+- **Th**
+  - $\displaystyle \binom{p}{k} \cdot [a] = [0]$ in $\mathbb{Z}_p$
+
+## Teorema 189
+
+
+- **Hp**
+  - $p \in \mathbb{P}$
+  - $[a], [b] \in \mathbb{Z}_p$
+- **Th**
+  - $([a]+[b])^{p}=[a]^{p}+[b]^{p}$ in $\mathbb{Z}_p$
+
+## Teorema 190
+
+
+- **Hp**
+  - $p \in \mathbb{P}$
+  - $[a_1], \ldots, [a_n] \in \mathbb{Z}_p$
+- **Th**
+  - $\left(\left[a_{1}\right]+\ldots+\left[a_{n}\right]\right)^{p}=\left[a_{1}\right]^{p}+\ldots+\left[a_{n}\right]^{p}$ in $\mathbb{Z}_p$
+
+
+****
+# Induzione
+
+
+
+## Definizione 77
+
+
+- **Induzione**
+
+> - successione di proposizioni infinita $P_{1}, P_{2}, P_{3}, \ldots$
+>  - $\left\{\begin{array}{l}P_{1} \textrm{ vera}\\ P_{1}, P_{2}, P_{3}, \ldots, P_{n} \implies P_{n+1} \quad \forall n \ge 1 \end{array}\right.$
+>  - allora $P_n$ vera $\forall n$
+
+
+
+## Teorema 191
+
+
+- **Hp**
+  - $\left\{\begin{array}{l}F_0 = 0 \\ F_1 = 1 \\ F_n = F_{n - 1} + F_{n - 2} \quad \forall n \ge 2\end{array}\right.$ è detta _sequenza di Fibonacci_
+
+  - $x^2 -x -1 = 0$ ha come soluzioni $\left\{\begin{array}{l}\phi := \dfrac{1+\sqrt{5}}{2} \\ \psi := \dfrac{1 - \sqrt{5}}{2}\end{array}\right.$
+- **Th**
+  - $\forall n \in \mathbb{N} \quad F_{n}=\dfrac{\varphi^{n}-\psi^{n}}{\varphi-\psi}=\dfrac{\varphi^{n}-\psi^{n}}{\sqrt{5}}$
 
 
 ****

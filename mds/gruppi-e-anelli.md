@@ -1,4 +1,4 @@
-# Gruppi
+# Gruppi e Anelli
 
 ## Def
 
@@ -64,10 +64,6 @@
   - $X, Y$ insiemi finiti
 - **Th**
   - $\left| Y^X \right| = \left| Y \right| ^ {|X|}$
-
-****
-
-# Anelli
 
 ## Def
 

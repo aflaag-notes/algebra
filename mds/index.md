@@ -3,8 +3,7 @@
 ## Teoria dei gruppi
 
 - [Gruppi e Anelli](https://ph04.github.io/algebra/html/gruppi-e-anelli.html)
-    - [Gruppi](https://ph04.github.io/algebra/html/gruppi-e-anelli.html#gruppi)
-    - [Anelli](https://ph04.github.io/algebra/html/gruppi-e-anelli.html#anelli)
+    - [Gruppi e Anelli](https://ph04.github.io/algebra/html/gruppi-e-anelli.html#gruppi-e-anelli)
     - [Sottogruppi](https://ph04.github.io/algebra/html/gruppi-e-anelli.html#sottogruppi)
     - [Ordine](https://ph04.github.io/algebra/html/gruppi-e-anelli.html#ordine)
 - [Ideali](https://ph04.github.io/algebra/html/ideali.html)

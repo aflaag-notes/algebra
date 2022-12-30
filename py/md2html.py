@@ -21,7 +21,7 @@ for file in os.listdir("mds"):
             content = re.sub("\\\\lt", "<", content)
             content = re.sub("\\\\gt", ">", content)
 
-        title = content.split("\n")[0]
+        title = content.split("\n")[0] if name_no_ext != "teoremi-fondamentali" else "Teoremi fondamentali"
 
     with open("temp/" + name_no_ext + ".md", "w") as NF:
         NF.write(content)
@@ -34,7 +34,6 @@ for file in os.listdir("mds"):
         content = re.sub("#1a1a1a", "#fdfdfd", content)
         content = re.sub("#606060", "#adbac7", content)
         content = re.sub("<title>.*</title>", "<title>" + title[2:] + "</title>", content)
-
 
         with open("html/" + name_no_ext + ".html", "w") as NB:
             NB.write(content)
