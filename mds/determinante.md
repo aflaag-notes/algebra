@@ -391,7 +391,7 @@
     - $n \in \mathbb{N} - \{0\}$
     - $A \in \textrm{Mat}_{n \times n}(\mathbb{R})$
 - **Th**
-    - $A$ triangolarizzabile $\iff \exists \lambda \in \textrm{sp}(A) \mid \lambda \in \mathbb{R}$
+    - $A$ triangolarizzabile $\iff \forall \lambda \in \textrm{sp}(A) \quad \lambda \in \mathbb{R}$
 
 ## Oss
 
