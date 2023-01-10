@@ -287,6 +287,15 @@
 > - $A \in \textrm{Mat}_{n \times n}(\mathbb{K})$
 > - $A$ è detta **diagonalizzabile** $\iff \exists B \in \textrm{Mat}_{n \times n}(\mathbb{K}) \mid B$ diagonale $\land \ B$ simile ad $A$
 
+## Oss
+
+- **Hp**
+    - $\mathbb{K}$ campo
+    - $n \in \mathbb{N} - \{0\}$
+    - $A \in \textrm{Mat}_{n \times n}(\mathbb{K}) \mid A$ diagonalizzabile
+- **Th**
+    - $A$ triangolarizzabile
+
 ## Def
 
 - **Sottomatrice di una matrice**
