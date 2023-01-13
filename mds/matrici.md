@@ -256,7 +256,7 @@
 > - $\mathbb{K}$ campo
 > - $n \in \mathbb{N} - \{0\}$
 > - $A \in \textrm{Mat}_{n \times n}(\mathbb{K})$
-> - $A$ è detta **triangolare superiore** $\iff \forall i, j \in [1, n], i \lt j \quad a_{i,j} = 0$
+> - $A$ è detta **triangolare inferiore** $\iff \forall i, j \in [1, n], i \lt j \quad a_{i,j} = 0$
 
 - **Matrice triangolare**
 
