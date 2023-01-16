@@ -171,7 +171,7 @@
 
 > - $\mathbb{K}$ campo
 > - $n \in \mathbb{N} - \{0\}$
-> - $\textrm{GL}(n, \mathbb{K}) := \{A \in \textrm{Mat}_{n \times n}(\mathbb{K}) \mid A$ invertibile$\}$ è detto **gruppo generale lineare invertibile**
+> - $\textrm{GL}(n, \mathbb{K}) := \{A \in \textrm{Mat}_{n \times n}(\mathbb{K}) \mid A$ invertibile$\}$ è detto **gruppo speciale lineare invertibile**
 
 ## Oss
 
