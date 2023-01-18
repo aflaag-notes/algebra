@@ -206,12 +206,12 @@ $f([x \cdot y])=f([x]) \cdot f([y])$
 - **Th**
   - $f$ iniettiva $\iff \textrm{ker}(f) = \{1_G\}$
 - **Dim**
-  - $f$ iniettiva $\implies \textrm{ker}(f) = \{1_G\}$
+  - _prima implicazione_
     - $f(1_G) = 1_H$ per dimostrazione precedente, dunque $1_G \in \textrm{ker}(f)$ per definizione
     - $f$ iniettiva $\implies \nexists x, y \in G \mid x \neq y \implies f(x) = f(y)$, di conseguenza è unico $1_G \in G \mid f(1_G) = 1_H$, dunque $\textrm{ker}(f)$ conterrà esclusivamente $1_G$ per definizione
-  - $f$ iniettiva $\impliedby \textrm{ker}(f) = \{1_G\}$
-    - $\forall g, g^\prime \in G \quad f(g) = f(g^\prime) \iff f(g)^{-1} \cdot f(g) = f(g)^{-1} \cdot f(g^\prime) \iff 1_H = f(g) \cdot f(g^\prime) = f(g \cdot g^\prime)$
-    - $\textrm{ker}(f) = \{1_G\} \implies f(1_G)=1_H$ per definizione, allora $f(g\cdot g^\prime) = 1_H \implies g \cdot g^\prime = 1_G$ necessariamente, e $g \cdot g^\prime = 1_G \iff g= g^\prime \implies f(g) = f(g^\prime) \implies g = g^\prime \implies f$ iniettiva
+  - _seconda implicazione_
+    - $\forall g, g^\prime \in G \quad f(g) = f(g^\prime) \iff f(g)^{-1} \cdot f(g) = f(g)^{-1} \cdot f(g^\prime) \iff 1_H = f(g^{-1}) \cdot f(g^\prime) = f(g ^{-1} \cdot g^\prime)$
+    - $\textrm{ker}(f) = \{1_G\} \implies f(1_G)=1_H$ per definizione, allora $f(g^{-1}\cdot g^\prime) = 1_H \implies g^{-1} \cdot g^\prime = 1_G$ necessariamente, e $g^{-1} \cdot g^\prime = 1_G \iff g= g^\prime \implies f$ iniettiva
 
 ## Oss
 
