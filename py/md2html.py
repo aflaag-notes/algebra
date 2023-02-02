@@ -35,6 +35,11 @@ for file in os.listdir("mds"):
         content = re.sub("#606060", "#adbac7", content)
         content = re.sub("<title>.*</title>", "<title>" + title[2:] + "</title>", content)
 
+        if name_no_ext != "index":
+            c = content.split("\n")
+            c[17] = "      max-width: 60em;"
+            content = "\n".join(c)
+
         with open("html/" + name_no_ext + ".html", "w") as NB:
             NB.write(content)
 
