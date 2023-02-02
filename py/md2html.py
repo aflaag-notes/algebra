@@ -38,6 +38,13 @@ for file in os.listdir("mds"):
         if name_no_ext != "index":
             c = content.split("\n")
             c[17] = "      max-width: 60em;"
+
+            for i in range(len(c)):
+                if c[i].startswith("<h2 id="):
+                    parts = c[i].split("\"")
+
+                    c[i] = "<a href=\"#" + parts[1] + "\">" + c[i] + "</a>"
+
             content = "\n".join(c)
 
         with open("html/" + name_no_ext + ".html", "w") as NB:
