@@ -5,7 +5,10 @@
 - **Ideali**
 
 > - $(A, +, \cdot)$ anello
-> - $I \subset A$ **ideale** $\iff (I, +) \subset (A, +)$ è un sottogruppo e $A \cdot I \subset I$ e $I \cdot A \subset I$
+> - $I \subset A$ è detto **ideale** $\iff$
+>    - $(I, +) \subset (A, +)$ sottogruppo
+>    - $A \cdot I \subseteq I$
+>    - $I \cdot A \subseteq I$
 
 ## Oss
 
@@ -14,19 +17,20 @@
   - $a \in \mathbb{Z}$
   - $I(a) := \{ax \mid x \in A\}$
 - **Th**
-  - $I(a)$ è un ideale, e prende il nome di _ideale di $A$ generato da $a \in A$_
+  - $I(a)$ è un ideale, e prende il nome di _ideale di $A$ generato da $a$_
 - **Dim**
   - $(I(a), + ) \subset(A, +)$ sottogruppo
     -  $0$ multiplo di $a \implies 0 \in I(a)$
     - $\forall ax, ay \in I(a) \quad ax + ay = a(x + y) \implies ax + ay \in I(a)$ per definizione
     - $\forall ax \in I(a) \quad a(-x) \in I(a)$ poiché $-x$ è un multiplo di $a$, e $a(-x) = -ax \in I(a)$, che corrisponde all'opposto di $ax$ rispetto a $+$
-  - $A \cdot I \subset I \iff \forall x \in I(a), b \in A \quad bx \in I(a)$
+  - $A \cdot I \subseteq I \iff \forall x \in I(a), b \in A \quad bx \in I(a)$
     - $x \in I(a) \iff \exists c \in A \mid x = ac \implies bx = b (ac) = a(bc)$, poiché il prodotto è commutativo, e dunque $bx \in I(a)$ per definizione
-  - poiché il prodotto è commutativo, $A \cdot I \subset I \implies I \cdot A \subset I$
+  - poiché il prodotto è commutativo, $A \cdot I \subseteq I \implies I \cdot A \subseteq I$
 
 ## Oss
 
 - **Hp**
+    - ⚠️ **ATTENZIONE: da rileggere
     - $A$ dominio di integrità
     - $a, b \in A$
 - **Th**
@@ -182,7 +186,7 @@
 
 > - $(A, +, \cdot)$ anello commutativo
 > - $I, J \subset A$ ideali
-> - $I + J = \{i + j \mid \forall i \in I, j \in J\}$
+> - $I + J = \{i + j \mid i \in I, j \in J\}$ è detta **somma tra $I$ e $J$**
 
 ## Oss
 
@@ -193,9 +197,9 @@
   - $I + J$ è un ideale
 - **Dim**
   - $0 \in I, 0 \in J, 0+0=0 \implies 0 \in I + J$ per definizione
-  - la chiusura rispetto a $+$ deve implicare che $\forall i_1, i_2 \in I, j_1, j_2 \in J \quad (i_1 + j_1) + (i_2 + j_2) \in I + J$, allora si ottiene che $(i_1 + j_1) + (i_2 + j_2) = (i_1 + i_2) + (j_1 + j_2)$, e $i_1 + i_2 \in I, j_1 + j_2 \in J \implies (i_1 + i_2) + (j_1 + j_2) \in I + J$ per definizione di $I + J$
+  - la chiusura rispetto a $+$ deve implicare che $\forall i_1, i_2 \in I, j_1, j_2 \in J \quad (i_1 + j_1) + (i_2 + j_2) \in I + J$, allora si ottiene che $(i_1 + j_1) + (i_2 + j_2) = (i_1 + i_2) + (j_1 + j_2)$, e $i_1 + i_2 \in I, j_1 + j_2 \in J \implies (i_1 + i_2) + (j_1 + j_2) \in I + J$ per definizione
   - $\forall i \in I, j \in J \quad i + j \in I + J$, l'opposto rispetto a $+$ di $i + j$ è $- (i + j) = (-i) + (-j)$, e $\forall i \in I, j \in J \quad -i \in I, -j \in J  \implies (-i) + (-j) \in I + J$ per definizione
-  - $A \cdot I \subset I \implies \forall a \in A, i \in I, j \in J \quad a(i + j) \in I + J$
+  - $A \cdot I \subseteq I \implies \forall a \in A, i \in I, j \in J \quad a(i + j) \in I + J$
     - $i + j \in I + J$ per definizione, e $a(i + j) = ai + aj$, e $ai \in I, aj \in J$ per definizione, quindi $ai + aj \in I + J$ per definizione
 
 ## Def
@@ -204,7 +208,7 @@
 
 > - $(A, +, \cdot)$ anello commutativo
 > - $I, J \subset A$ ideali
-> - $I \cap J = \{x \in I \land x \in J\}$
+> - $I \cap J = \{x \mid x \in I \land x \in J\}$ è detta **intersezione tra $I$ e $J$**
 
 ## Oss
 
@@ -232,7 +236,7 @@
 
 > - $(A, +, \cdot)$ anello commutativo
 > - $I, J \subset A$ ideali
-> - $I \cdot J = \{i_1 j_1 + \ldots + i_k j_k \mid k \ge  1, \forall i_1 , \ldots , i_k \in I, j_1 , \ldots , j_k \in J \}$
+> - $I \cdot J = \{i_1 j_1 + \ldots + i_k j_k \mid k \ge  1, i_1 , \ldots , i_k \in I, j_1 , \ldots , j_k \in J \}$ è detto **prodotto tra $I$ e $J$**
 
 ## Oss
 
@@ -243,9 +247,9 @@
   - $I \cdot J$ è un ideale
 - **Dim**
     - $0 \in I \land 0 \in J \implies 0 \cdot 0 = 0 \in I \cdot J$
-    - $\forall x, y \in I \cdot J \quad \exists i_1, \ldots, i_k, i_1', \ldots, i_h' \in I, j_1, \ldots, j_k, j_1', \ldots, j_h' \in J \mid x = i_1j_1 + \ldots + i_k j_k \land y = i_1'j_1' + \ldots + i_h'j_h' \implies x + y = i_1j_1 + \ldots + i_kj_k + i_1'j_1'+ \ldots + i_hj_h' \in I\cdot J$ per definizione di $I \cdot J$
-    - $\forall x \in I \cdot J \quad \exists i_1, \ldots, i_k \in I, j_1, \ldots, j_k \in J \mid x = i_1j_1 + \ldots + i_kj_k \implies -x = -i_1j_1 + \ldots + (-i_kj_k) \in I \cdot J$ per definizione di $I \cdot J$
-    - $I$ ideale $\implies \forall a \in A, i \in I \quad a\cdot i \in I$, allora $\forall x \in I \cdot J \quad \exists i_1, \ldots, i_k \in I, j_1, \ldots, j_k \in J \mid x = i_1j_1 + \ldots + i_kj_k \implies \forall a \in A \quad a\cdot x = a(i_1j_1 + \ldots + i_kj_k) = (ai_1)j_1 + \ldots + (ai_k)j_k \in I \cdot J$
+    - $\forall x, y \in I \cdot J \quad \exists i_1, \ldots, i_k, i_1', \ldots, i_h' \in I, j_1, \ldots, j_k, j_1', \ldots, j_h' \in J \mid x = i_1j_1 + \ldots + i_k j_k \land y = i_1'j_1' + \ldots + i_h'j_h' \implies x + y = i_1j_1 + \ldots + i_kj_k + i_1'j_1'+ \ldots + i_hj_h' \in I\cdot J$ per definizione
+    - $\forall x \in I \cdot J \quad \exists i_1, \ldots, i_k \in I, j_1, \ldots, j_k \in J \mid x = i_1j_1 + \ldots + i_kj_k \implies -x = (-i_1j_1) + \ldots + (-i_kj_k) \in I \cdot J$ per definizione
+    - $I$ ideale $\implies \forall a \in A, i \in I \quad a i \in I$, allora $\forall x \in I \cdot J \quad \exists i_1, \ldots, i_k \in I, j_1, \ldots, j_k \in J \mid x = i_1j_1 + \ldots + i_kj_k \implies \forall a \in A \quad a\cdot x = a(i_1j_1 + \ldots + i_kj_k) = (ai_1)j_1 + \ldots + (ai_k)j_k \in I \cdot J$
 
 ## Oss
 

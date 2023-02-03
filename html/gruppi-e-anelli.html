@@ -193,9 +193,12 @@
 <ul>
 <li><span class="math inline">S</span> insieme</li>
 <li><span class="math inline">m: S \times S \rightarrow S</span></li>
-<li><span class="math inline">(S, m)</span> <strong>semigruppo</strong>
-<span class="math inline">\iff \forall x, y, z \in S \quad m(x, m(y,
-z))=m(m(x, y),z) \quad</span></li>
+<li><span class="math inline">(S, m)</span> è detto
+<strong>semigruppo</strong> <span class="math inline">\iff \forall x, y,
+z \in S \quad m(x, m(y, z))=m(m(x, y),z) \quad</span>
+<ul>
+<li>in particolare, deve valere la <em>proprietà associativa</em></li>
+</ul></li>
 </ul>
 </blockquote>
 <ul>
@@ -205,10 +208,16 @@ z))=m(m(x, y),z) \quad</span></li>
 <ul>
 <li><span class="math inline">S</span> insieme</li>
 <li><span class="math inline">m: S \times S \rightarrow S</span></li>
-<li><span class="math inline">(S, m)</span> <strong>monoide</strong>
-<span class="math inline">\iff (S, m)</span> semigruppo e <span
-class="math inline">\forall x \in S \quad \exists e \in S \mid m(x, e) =
-m(e, x) = x</span></li>
+<li><span class="math inline">(S, m)</span> è detto
+<strong>monoide</strong> <span class="math inline">\iff</span>
+<ul>
+<li><span class="math inline">(S, m)</span> semigruppo</li>
+<li><span class="math inline">\exists e \in S \mid \forall x \in S \quad
+m(x, e) = m(e, x) = x</span>
+<ul>
+<li>in particolare, deve esistere l’<em>elemento neutro</em></li>
+</ul></li>
+</ul></li>
 </ul>
 </blockquote>
 <ul>
@@ -218,10 +227,17 @@ m(e, x) = x</span></li>
 <ul>
 <li><span class="math inline">S</span> insieme</li>
 <li><span class="math inline">m: S \times S \rightarrow S</span></li>
-<li><span class="math inline">(S, m)</span> <strong>gruppo</strong>
-<span class="math inline">\iff (S, m)</span> monoide e <span
-class="math inline">\forall x \in S \quad \exists x^{-1} \in S \mid m(x,
-x^{-1}) =m(x^{-1}, x) =e</span></li>
+<li><span class="math inline">(S, m)</span> è detto
+<strong>gruppo</strong> <span class="math inline">\iff</span>
+<ul>
+<li><span class="math inline">(S, m)</span> monoide</li>
+<li><span class="math inline">\forall x \in S \quad \exists x^{-1} \in S
+\mid m(x, x^{-1}) =m(x^{-1}, x) =e</span>
+<ul>
+<li>in particolare, per ogni elemento deve esistere
+l’<em>inverso</em></li>
+</ul></li>
+</ul></li>
 </ul>
 </blockquote>
 <ul>
@@ -231,10 +247,16 @@ x^{-1}) =m(x^{-1}, x) =e</span></li>
 <ul>
 <li><span class="math inline">S</span> insieme</li>
 <li><span class="math inline">m: S \times S \rightarrow S</span></li>
-<li><span class="math inline">(S, m)</span> <strong>gruppo
-abeliano</strong> <span class="math inline">\iff (S,m)</span> gruppo e
-<span class="math inline">\forall x, y \in S \quad m(x, y) = m(y,
-x)</span></li>
+<li><span class="math inline">(S, m)</span> è detto <strong>gruppo
+abeliano</strong> <span class="math inline">\iff</span>
+<ul>
+<li><span class="math inline">(S,m)</span> gruppo</li>
+<li><span class="math inline">\forall x, y \in S \quad m(x, y) = m(y,
+x)</span>
+<ul>
+<li>in particolare, deve valere la <em>proprietà commutativa</em></li>
+</ul></li>
+</ul></li>
 </ul>
 </blockquote>
 <a href="#oss"><h2 id="oss">Oss</h2></a>
@@ -242,18 +264,16 @@ x)</span></li>
 <li><strong>Hp</strong>
 <ul>
 <li><span class="math inline">G</span> monoide</li>
-<li><span class="math inline">\exists e \in G</span> elemento
-neutro</li>
 </ul></li>
 <li><strong>Th</strong>
 <ul>
-<li><span class="math inline">e</span> è unico in <span
-class="math inline">G</span></li>
+<li><span class="math inline">e \in G</span> elemento neutro è unico in
+<span class="math inline">G</span></li>
 </ul></li>
 <li><strong>Dim</strong>
 <ul>
-<li>per assurdo, <span class="math inline">\exists e_1, e_2 \mid e_1
-\neq e_2</span> elementi neutri, allora <span
+<li>per assurdo, ipotizzzando <span class="math inline">\exists e_1, e_2
+\in G \mid e_1 \neq e_2</span> elementi neutri, allora <span
 class="math inline">\left.\begin{array}{l}m\left(x,
 e_{1}\right)=m\left(e_{1}, x\right)=x \\ m\left(x,
 e_{2}\right)=m\left(e_{2}, x\right)=x\end{array}\right\} \implies
@@ -266,22 +286,19 @@ necessariamente, quindi è unico</li>
 <li><strong>Hp</strong>
 <ul>
 <li><span class="math inline">(G, m)</span> gruppo</li>
-<li><span class="math inline">x \in G</span></li>
-<li><span class="math inline">\exists x^{-1} \in G</span> inverso di
-<span class="math inline">x</span> rispetto ad <span
-class="math inline">m</span></li>
 </ul></li>
 <li><strong>Th</strong>
 <ul>
-<li><span class="math inline">x^{-1}</span> è unico in <span
-class="math inline">G</span> per <span class="math inline">x</span>
-rispetto a <span class="math inline">m</span></li>
+<li><span class="math inline">\forall x \in G \quad x^{-1}</span> è
+unico in <span class="math inline">G</span>, rispetto a <span
+class="math inline">m</span></li>
 </ul></li>
 <li><strong>Dim</strong>
 <ul>
-<li>per assurdo, per un certo <span class="math inline">x \in G \quad
-\exists x^{-1}_1, x^{-1}_2 \mid x^{-1}_1 \neq x^{-1}_2</span>, allora
-<span class="math inline">\left.\begin{array}{l}m\left(x,
+<li>per assurdo, ipotizzando che per un certo <span
+class="math inline">x \in G \quad \exists x^{-1}_1, x^{-1}_2 \mid
+x^{-1}_1 \neq x^{-1}_2</span>, allora <span
+class="math inline">\left.\begin{array}{l}m\left(x,
 x_{1}^{-1}\right)=m\left(x_{1}^{-1}, x\right)=e \\ m\left(x,
 x_{2}^{-1}\right)=m\left(x_{2}^{-1}, x\right)=e \end{array}\right\}
 \implies m\left(e_{1}^{-1}, x\right)=m\left(x_{2}^{-1}, x\right)
@@ -293,7 +310,7 @@ x_{2}^{-1}\right)=m\left(x_{2}^{-1}, x\right)=e \end{array}\right\}
 <li><strong>Hp</strong>
 <ul>
 <li><span class="math inline">X, Y</span> insiemi,</li>
-<li><span class="math inline">Y^X = \{f \mid f:X \rightarrow
+<li><span class="math inline">Y^X := \{f \mid f:X \rightarrow
 Y\}</span></li>
 </ul></li>
 <li><strong>Th</strong>
@@ -305,10 +322,10 @@ Y\}</span></li>
 <li><span class="math inline">\forall f, g, h \in Y^X \quad (f \circ g)
 \circ h=f \circ(g \circ h)</span>. poiché la composizione di funzioni è
 associativa</li>
-<li><span class="math inline">\forall X \quad \exists \textrm{id}_X \mid
-\textrm{id}_X : X \rightarrow X : x \rightarrow x</span>, che
-costituisce dunque l’elemento neutro, mappando ogni elemento in sé
-stesso</li>
+<li><span class="math inline">\textrm{id}_X \mid \textrm{id}_X : X
+\rightarrow X : x \rightarrow x</span>, è detta <em>funzione
+identità</em>, che costituisce dunque l’elemento neutro, mappando ogni
+elemento in sé stesso</li>
 </ul></li>
 </ul>
 <a href="#oss-2"><h2 id="oss-2">Oss</h2></a>
@@ -331,14 +348,41 @@ stesso</li>
 <ul>
 <li><span class="math inline">A</span> insieme</li>
 <li><span class="math inline">+: A \times A \rightarrow A</span></li>
-<li><span class="math inline">*: A \times A \rightarrow A</span></li>
-<li><span class="math inline">(A, +, *)</span> <strong>anello</strong>
-<span class="math inline">\iff (A, +)</span> gruppo abeliano, <span
-class="math inline">(A, *)</span> monoide e <span
-class="math inline">\forall a, b, c \in A \quad a*(b + c) = a * b + a *
-c</span></li>
-<li><span class="math inline">a * b=b * a \quad \forall a, b \in A
-\implies (A, *, +)</span> è un <strong>anello commutativo</strong></li>
+<li><span class="math inline">\cdot: A \times A \rightarrow
+A</span></li>
+<li><span class="math inline">(A, +, \cdot)</span> è detto
+<strong>anello</strong> <span class="math inline">\iff</span>
+<ul>
+<li><span class="math inline">(A, +)</span> gruppo abeliano</li>
+<li><span class="math inline">(A, \cdot)</span> monoide</li>
+<li><span class="math inline">\forall a, b, c \in A \quad a \cdot (b +
+c) = a \cdot b + a \cdot c</span>
+<ul>
+<li>in particolare, deve valere la <em>proprietà distributiva</em></li>
+</ul></li>
+</ul></li>
+</ul>
+</blockquote>
+<ul>
+<li><strong>Anello commutativo</strong></li>
+</ul>
+<blockquote>
+<ul>
+<li><span class="math inline">A</span> insieme</li>
+<li><span class="math inline">+: A \times A \rightarrow A</span></li>
+<li><span class="math inline">\cdot: A \times A \rightarrow
+A</span></li>
+<li><span class="math inline">(A, +, \cdot)</span> è detto
+<strong>anello commutativo</strong> <span
+class="math inline">\iff</span>
+<ul>
+<li><span class="math inline">(A, +, \cdot)</span> anello</li>
+<li><span class="math inline">\forall a, b \in A \quad a \cdot b=b \cdot
+a</span>
+<ul>
+<li>in particolare, deve valere la <em>proprietà commutativa</em></li>
+</ul></li>
+</ul></li>
 </ul>
 </blockquote>
 <ul>
@@ -346,11 +390,11 @@ c</span></li>
 </ul>
 <blockquote>
 <ul>
-<li><span class="math inline">(A, +, *)</span> anello</li>
-<li><span class="math inline">(A, +, *)</span> è un
+<li><span class="math inline">(A, +, \cdot)</span> anello</li>
+<li><span class="math inline">(A, +, \cdot)</span> è detto
 <strong>campo</strong> <span class="math inline">\iff \forall x \in A
 \quad \exists x^{-1}</span> rispetto a <span
-class="math inline">*</span></li>
+class="math inline">\cdot</span></li>
 </ul>
 </blockquote>
 <ul>
@@ -360,24 +404,19 @@ class="math inline">*</span></li>
 <ul>
 <li><span class="math inline">A</span> insieme</li>
 <li><span class="math inline">+: A \times A \rightarrow A</span></li>
-<li><span class="math inline">*: A \times A \rightarrow A</span></li>
-<li><span class="math inline">(A, +, *)</span> <strong>semianello
-commutativo</strong> <span class="math inline">\iff (A, +)</span> monide
-commutativo, <span class="math inline">(A, *)</span> monoide commutativo
-e <span class="math inline">\forall a, b, c \in A \quad a*(b + c) = a*b
-+ a*c</span></li>
-</ul>
-</blockquote>
+<li><span class="math inline">\cdot: A \times A \rightarrow
+A</span></li>
+<li><span class="math inline">(A, +, \cdot)</span> <strong>semianello
+commutativo</strong> <span class="math inline">\iff</span>
 <ul>
-<li><strong>Sottoanello</strong></li>
-</ul>
-<blockquote>
+<li><span class="math inline">(A, +)</span> monide commutativo</li>
+<li><span class="math inline">(A, \cdot)</span> monoide commutativo</li>
+<li><span class="math inline">\forall a, b, c \in A \quad a\cdot (b + c)
+= a \cdot b + a \cdot c</span>
 <ul>
-<li><span class="math inline">(A, +, \cdot)</span> anello</li>
-<li><span class="math inline">(B, + , \cdot) \subset (A, +,
-\cdot)</span> <strong>sottoanello</strong> <span
-class="math inline">\iff (B, +) \subset (A, +)</span> sottogruppo e
-<span class="math inline">B \cdot B \subset B</span></li>
+<li>in particolare, deve valere la <em>proprietà distributiva</em></li>
+</ul></li>
+</ul></li>
 </ul>
 </blockquote>
 <a href="#def-2"><h2 id="def-2">Def</h2></a>
@@ -388,14 +427,14 @@ class="math inline">\iff (B, +) \subset (A, +)</span> sottogruppo e
 <ul>
 <li><span class="math inline">(A, +, \cdot)</span> anello
 commutativo</li>
-<li><span class="math inline">a \in A</span>
+<li><span class="math inline">a \in A</span> è detto
 <strong>invertibile</strong> <span class="math inline">\iff \exists
-a^{-1} \in A \mid a \cdot a^{-1}=e</span>, dove <span
+a^{-1} \in A \mid a \cdot a^{-1}=a^{-1}\cdot a = e</span>, dove <span
 class="math inline">e</span> è l’elemento neutro dell’anello rispetto a
 <span class="math inline">\cdot</span></li>
 <li><span class="math inline">A^* := \{a \in A \mid a</span>
-invertibile<span class="math inline">\}</span> è l’<strong>insieme degli
-invertibili di <span class="math inline">A</span></strong></li>
+invertibile<span class="math inline">\}</span> è detto <strong>insieme
+degli invertibili di <span class="math inline">A</span></strong></li>
 </ul>
 </blockquote>
 <a href="#oss-3"><h2 id="oss-3">Oss</h2></a>
@@ -411,37 +450,28 @@ commutativo</li>
 </ul></li>
 <li><strong>Dim</strong>
 <ul>
+<li><em>associatività</em>
+<ul>
 <li><span class="math inline">(xy)z = x(yz)</span></li>
+</ul></li>
+<li><em>neutro</em>
+<ul>
 <li><span class="math inline">1^{-1} = 1 \implies 1</span> invertibile
 <span class="math inline">\implies 1 \in A^*</span> per definizione di
-<span class="math inline">A^* \implies \exists e \in A^*</span></li>
+<span class="math inline">A^*</span></li>
+</ul></li>
+<li><em>inversi</em>
+<ul>
 <li><span class="math inline">\forall x \in A^{*} \quad \exists
 x^{-1}</span> per definizione di <span class="math inline">A^*</span>,
 ma poiché <span class="math inline">x^{-1}</span> è inverso di <span
 class="math inline">x</span>, allora <span class="math inline">x^{-1}
-\in A^*</span> per definizione</li>
+\in A^*</span> per definizione
+<ul>
+<li><span class="math inline">x \in A^* \iff x, x^{-1} \in
+A^*</span></li>
 </ul></li>
-</ul>
-<a href="#oss-4"><h2 id="oss-4">Oss</h2></a>
-<ul>
-<li><strong>Hp</strong>
-<ul>
-<li><span class="math inline">(A, +, \cdot)</span> anello
-commutativo</li>
 </ul></li>
-<li><strong>Th</strong>
-<ul>
-<li><span class="math inline">(A^*, \cdot) \subset (A, \cdot)</span> è
-un sottogruppo</li>
-</ul></li>
-<li><strong>Dim</strong>
-<ul>
-<li>esiste il neutro per dimostrazione precedente</li>
-<li><span class="math inline">\forall x, y \in A^{*} \quad \exists
-x^{-1}, y^{-1} \in A^*</span>, e in particolare <span
-class="math inline">y^{-1}x^{-1} = (xy)^{-1} \implies xy \in A^*</span>
-per definizione</li>
-<li>è chiuso rispetto agli inversi per dimostrazione precedente</li>
 </ul></li>
 </ul>
 <a href="#def-3"><h2 id="def-3">Def</h2></a>
@@ -453,8 +483,8 @@ class="math inline">0</span></strong></li>
 <ul>
 <li><span class="math inline">(A, + , \cdot)</span> anello
 commutativo</li>
-<li><span class="math inline">a \in A</span> <strong>divisore dello
-<span class="math inline">0</span></strong> <span
+<li><span class="math inline">a \in A</span> è detto <strong>divisore
+dello <span class="math inline">0</span></strong> <span
 class="math inline">\iff \exists b \in A - \{0\} \mid a \cdot b =
 0</span></li>
 </ul>
@@ -466,16 +496,18 @@ class="math inline">\iff \exists b \in A - \{0\} \mid a \cdot b =
 <ul>
 <li><span class="math inline">(A, +, \cdot)</span> anello
 commutativo</li>
-<li><span class="math inline">A</span> <strong>dominio di
-integrità</strong> <span class="math inline">\iff \nexists x \neq 0 : x
-\mid 0</span></li>
-<li>alternativamente, <span class="math inline">A</span> è dominio di
+<li><span class="math inline">A</span> è detto <strong>dominio di
+integrità</strong> <span class="math inline">\iff \nexists x \in A,
+x\neq 0 : x \mid 0</span>
+<ul>
+<li>in particolare, <span class="math inline">A</span> è dominio di
 integrità <span class="math inline">\iff</span> in <span
 class="math inline">A</span> vale la legge di annullamento del
 prodotto</li>
+</ul></li>
 </ul>
 </blockquote>
-<a href="#oss-5"><h2 id="oss-5">Oss</h2></a>
+<a href="#oss-4"><h2 id="oss-4">Oss</h2></a>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -488,15 +520,17 @@ commutativo</li>
 </ul></li>
 <li><strong>Dim</strong>
 <ul>
-<li>ipotizzando che <span class="math inline">\exists a \in A \mid
-a</span> invertibile e divisore dello <span
+<li>⚠️ <strong>ATTENZIONE: mi pare sia una sola
+implicazione</strong></li>
+<li>per assurdo, ipotizzando <span class="math inline">\exists a \in A
+\mid a</span> invertibile e divisore dello <span
 class="math inline">0</span>, allora <span class="math inline">\exists
 a^{-1} \in A, b \in A - \{0\} \mid a^{-1}a = 1 \land ab = 0</span></li>
 <li><span class="math inline">b = 1 \cdot b = (a^{-1} a)\cdot b =
 a^{-1}\cdot(ab)=a^{-1}\cdot 0= 0 \ \bot</span></li>
 </ul></li>
 </ul>
-<a href="#oss-6"><h2 id="oss-6">Oss</h2></a>
+<a href="#oss-5"><h2 id="oss-5">Oss</h2></a>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -509,14 +543,13 @@ a^{-1}\cdot(ab)=a^{-1}\cdot 0= 0 \ \bot</span></li>
 <li><strong>Dim</strong>
 <ul>
 <li><span class="math inline">A</span> campo <span
-class="math inline">\implies</span> ogni elemento non nullo è
-invertibile, dunque <span class="math inline">A^*=A - \{0\}</span>
-<ul>
-<li><span class="math inline">0</span> è l’unico elemento non
+class="math inline">\implies</span> in <span
+class="math inline">A</span> ogni elemento non nullo è invertibile,
+dunque <span class="math inline">A^*=A - \{0\}</span>, e in particolare
+<span class="math inline">0</span> è l’unico elemento non
 invertibile</li>
 <li><span class="math inline">0 \notin A^* \iff 0 \mid 0</span> per
 dimostrazione precedente</li>
-</ul></li>
 <li>quindi <span class="math inline">A</span> è dominio di integrità
 poiché <span class="math inline">0</span> è l’unico divisore dello <span
 class="math inline">0</span></li>
@@ -524,19 +557,19 @@ class="math inline">0</span></li>
 </ul>
 <a href="#def-4"><h2 id="def-4">Def</h2></a>
 <ul>
-<li><strong>Elementi irriducibili</strong></li>
+<li><strong>Elemento irriducibile</strong></li>
 </ul>
 <blockquote>
 <ul>
 <li><span class="math inline">A</span> anello commutativo</li>
 <li><span class="math inline">a \in A - \{0\} \mid a \in A^*</span></li>
-<li><span class="math inline">a</span> <strong>irriducibile</strong>
-<span class="math inline">\iff \exists b, c \in A \mid a = b c \implies
-b \in A^* \lor c \in A^*</span></li>
+<li><span class="math inline">a</span> è detto
+<strong>irriducibile</strong> <span class="math inline">\iff \exists b,
+c \in A \mid a = b c \implies b \in A^* \lor c \in A^*</span></li>
 </ul>
 </blockquote>
 <ul>
-<li><strong>Elementi primi</strong></li>
+<li><strong>Elemento primo</strong></li>
 </ul>
 <blockquote>
 <ul>
@@ -547,7 +580,7 @@ class="math inline">\iff \exists b, c \in A : a \mid bc \implies a \mid
 b \lor a \mid c</span></li>
 </ul>
 </blockquote>
-<a href="#oss-7"><h2 id="oss-7">Oss</h2></a>
+<a href="#oss-6"><h2 id="oss-6">Oss</h2></a>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -568,7 +601,7 @@ riflessività</li>
 definizione <span class="math inline">\exists b, c \in A : a \mid bc
 \implies a \mid b \lor a \mid c</span>, ma poiché <span
 class="math inline">a \mid a = bc</span>, allora i coefficienti
-moltiplicativi sono proprio li stessi che compongono <span
+moltiplicativi sono proprio gli stessi che compongono <span
 class="math inline">a</span></li>
 <li>prendendo ad esempio <span class="math inline">a \mid b \implies
 \exists d \in A \mid ad = b \implies a = bc \iff a = adc \iff a \cdot( 1
@@ -594,27 +627,98 @@ definizione di irriducibilità di un elemento</li>
 </ul>
 <blockquote>
 <ul>
-<li><span class="math inline">(G, *)</span> gruppo</li>
-<li><span class="math inline">(H, *) \subset (G, *)</span>
-<strong>sottogruppo</strong> <span class="math inline">\iff \exists e
-\in H \mid e</span> è l’elemento neutro, <span class="math inline">H * H
-\subset H</span> e <span class="math inline">\exists x^{-1} \in H \quad
-\forall x \in H</span></li>
+<li><span class="math inline">G</span> insieme</li>
+<li><span class="math inline">\cdot: G \times G \rightarrow
+G</span></li>
+<li><span class="math inline">(G, \cdot)</span> gruppo</li>
+<li><span class="math inline">(H, \cdot) \subset (G, \cdot)</span>
+<strong>sottogruppo</strong> <span class="math inline">\iff</span>
+<ul>
+<li><span class="math inline">\exists e \in H \mid e</span> è l’elemento
+neutro di <span class="math inline">G</span> rispetto a <span
+class="math inline">\cdot</span></li>
+<li><span class="math inline">H \cdot H \subseteq H</span>
+<ul>
+<li>in particolare, deve essere <em>chiuso sull’operazione</em></li>
+</ul></li>
+<li><span class="math inline">\forall x \in H \quad \exists x^{-1} \in
+H</span>
+<ul>
+<li>in particolare, deve essere <em>chiuso sugli inversi</em></li>
+</ul></li>
+</ul></li>
 </ul>
 </blockquote>
+<a href="#oss-7"><h2 id="oss-7">Oss</h2></a>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">(A, +, \cdot)</span> anello
+commutativo</li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">(A^*, \cdot) \subset (A, \cdot)</span> è
+un sottogruppo</li>
+</ul></li>
+<li><strong>Dim</strong>
+<ul>
+<li><em>neutro</em>
+<ul>
+<li>esiste il neutro per dimostrazione precedente</li>
+</ul></li>
+<li><em>chiusura sull’operazione</em>
+<ul>
+<li><span class="math inline">\forall x, y \in A^{*} \quad \exists
+x^{-1}, y^{-1} \in A^*</span>, e in particolare <span
+class="math inline">y^{-1}x^{-1} = (xy)^{-1} \implies xy \in A^*</span>
+per definizione</li>
+</ul></li>
+<li><em>chiusura sugli inversi</em>
+<ul>
+<li>è chiuso rispetto agli inversi per dimostrazione precedente</li>
+</ul></li>
+</ul></li>
+</ul>
 <a href="#def-6"><h2 id="def-6">Def</h2></a>
+<ul>
+<li><strong>Sottoanello</strong></li>
+</ul>
+<blockquote>
+<ul>
+<li><span class="math inline">A, B</span> insiemi</li>
+<li><span class="math inline">+: A \times A \rightarrow A</span></li>
+<li><span class="math inline">\cdot: A \times A \rightarrow
+A</span></li>
+<li><span class="math inline">(B, + , \cdot) \subset (A, +,
+\cdot)</span> <strong>sottoanello</strong> <span
+class="math inline">\iff</span>
+<ul>
+<li><span class="math inline">(A, +, \cdot)</span> anello</li>
+<li><span class="math inline">(B, +) \subset (A, +)</span>
+sottogruppo</li>
+<li><span class="math inline">B \cdot B \subseteq B</span>
+<ul>
+<li>in particolare <span class="math inline">B \cdot B := \{b_1 \cdot
+b_2 \mid b_1, b_2 \in B\}</span></li>
+</ul></li>
+</ul></li>
+</ul>
+</blockquote>
+<a href="#def-7"><h2 id="def-7">Def</h2></a>
 <ul>
 <li><strong>Sottogruppo normale</strong></li>
 </ul>
 <blockquote>
 <ul>
-<li><span class="math inline">(G, *)</span> gruppo</li>
-<li><span class="math inline">(H, *) \subset (G, *)</span>
+<li><span class="math inline">G, H</span> insiemi</li>
+<li><span class="math inline">(G, \cdot)</span> gruppo</li>
+<li><span class="math inline">(H, \cdot) \subset (G, \cdot)</span>
 sottogruppo</li>
 <li><span class="math inline">x \in G</span></li>
 <li><span class="math inline">xH := \{xh \mid h \in H\}</span></li>
 <li><span class="math inline">Hx := \{hx \mid h \in H\}</span></li>
-<li><span class="math inline">H</span> <strong>sottogruppo
+<li><span class="math inline">H</span> è detto <strong>sottogruppo
 normale</strong> <span class="math inline">\iff \forall x \in G \quad xH
 = Hx</span></li>
 </ul>
@@ -641,9 +745,9 @@ normale</strong> <span class="math inline">\iff \forall x \in G \quad xH
 <li>1 <span class="math inline">\implies</span> 3
 <ul>
 <li><span class="math inline">gH = Hg</span> per ipotesi 1 <span
-class="math inline">\implies \forall gh \in gH = Hg = \{kg \mid k \in
-H\} \implies \exists k \in H \mid gh = kg</span> per definizione di
-<span class="math inline">Hg</span></li>
+class="math inline">\implies gH = Hg = \{kg \mid k \in H\} \implies
+\exists k \in H \mid gh = kg</span> per definizione di <span
+class="math inline">Hg</span></li>
 </ul></li>
 <li>3 <span class="math inline">\implies</span> 2
 <ul>
@@ -655,29 +759,25 @@ ipotesi, dunque <span class="math inline">ghg^{-1} \in H</span></li>
 </ul></li>
 <li>2 <span class="math inline">\implies</span> 1
 <ul>
-<li><span class="math inline">gH = Hg \iff gH \subset Hg \land Hg
-\subset gH</span></li>
-<li><span class="math inline">gH \subset Hg</span>
+<li><span class="math inline">gH = Hg \iff gH \subseteq Hg \land Hg
+\subseteq gH</span></li>
+<li><em>prima implicazione</em>
 <ul>
-<li><span class="math inline">\forall h \in H, g \in G \implies gh \in
-gH</span></li>
 <li><span class="math inline">k:= ghg^{-1} \in H</span> per ipotesi
 2</li>
 <li><span class="math inline">k = ghg^{-1} \iff k g= ghg^{-1}g \iff kg =
-gh</span>, e <span class="math inline">kg \in Hg</span> e <span
-class="math inline">gh \in gH</span>, quindi <span
-class="math inline">gH \subset Hg</span></li>
+gh</span>, e in particolare <span class="math inline">kg \in Hg</span> e
+<span class="math inline">gh \in gH</span></li>
 </ul></li>
-<li><span class="math inline">Hg \subset gH</span>
+<li><em>seconda implicazione</em>
 <ul>
 <li><span class="math inline">G</span> gruppo <span
 class="math inline">\implies \forall g \in G \quad \exists g^{-1} \in
 G</span></li>
 <li><span class="math inline">\forall g^{-1} \in G \quad \exists h \in H
-\mid h:= g^{-1}k(g^{-1})^{-1} \in H</span> per ipotesi</li>
+\mid h:= g^{-1}k(g^{-1})^{-1} \in H</span> per ipotesi 2</li>
 <li><span class="math inline">g^{-1}kg = h \iff gg^{-1}kg = gh \iff kg =
-gh</span>, ma <span class="math inline">h \in H \implies gh \in
-gH</span></li>
+gh \in gH</span></li>
 <li><span class="math inline">k \in H \implies kg \in Hg</span>, ma
 <span class="math inline">kg = gh \implies kg \in gH</span></li>
 </ul></li>
@@ -686,7 +786,7 @@ gH</span></li>
 </ul>
 <hr />
 <h1 id="ordine">Ordine</h1>
-<a href="#def-7"><h2 id="def-7">Def</h2></a>
+<a href="#def-8"><h2 id="def-8">Def</h2></a>
 <ul>
 <li><strong>Ordine di un elemento in un gruppo</strong></li>
 </ul>

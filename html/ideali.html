@@ -192,10 +192,14 @@
 <blockquote>
 <ul>
 <li><span class="math inline">(A, +, \cdot)</span> anello</li>
-<li><span class="math inline">I \subset A</span> <strong>ideale</strong>
-<span class="math inline">\iff (I, +) \subset (A, +)</span> è un
-sottogruppo e <span class="math inline">A \cdot I \subset I</span> e
-<span class="math inline">I \cdot A \subset I</span></li>
+<li><span class="math inline">I \subset A</span> è detto
+<strong>ideale</strong> <span class="math inline">\iff</span>
+<ul>
+<li><span class="math inline">(I, +) \subset (A, +)</span>
+sottogruppo</li>
+<li><span class="math inline">A \cdot I \subseteq I</span></li>
+<li><span class="math inline">I \cdot A \subseteq I</span></li>
+</ul></li>
 </ul>
 </blockquote>
 <a href="#oss"><h2 id="oss">Oss</h2></a>
@@ -210,7 +214,7 @@ sottogruppo e <span class="math inline">A \cdot I \subset I</span> e
 <ul>
 <li><span class="math inline">I(a)</span> è un ideale, e prende il nome
 di <em>ideale di <span class="math inline">A</span> generato da <span
-class="math inline">a \in A</span></em></li>
+class="math inline">a</span></em></li>
 </ul></li>
 <li><strong>Dim</strong>
 <ul>
@@ -228,7 +232,7 @@ I(a)</span> poiché <span class="math inline">-x</span> è un multiplo di
 class="math inline">ax</span> rispetto a <span
 class="math inline">+</span></li>
 </ul></li>
-<li><span class="math inline">A \cdot I \subset I \iff \forall x \in
+<li><span class="math inline">A \cdot I \subseteq I \iff \forall x \in
 I(a), b \in A \quad bx \in I(a)</span>
 <ul>
 <li><span class="math inline">x \in I(a) \iff \exists c \in A \mid x =
@@ -237,13 +241,14 @@ commutativo, e dunque <span class="math inline">bx \in I(a)</span> per
 definizione</li>
 </ul></li>
 <li>poiché il prodotto è commutativo, <span class="math inline">A \cdot
-I \subset I \implies I \cdot A \subset I</span></li>
+I \subseteq I \implies I \cdot A \subseteq I</span></li>
 </ul></li>
 </ul>
 <a href="#oss-1"><h2 id="oss-1">Oss</h2></a>
 <ul>
 <li><strong>Hp</strong>
 <ul>
+<li>⚠️ **ATTENZIONE: da rileggere</li>
 <li><span class="math inline">A</span> dominio di integrità</li>
 <li><span class="math inline">a, b \in A</span></li>
 </ul></li>
@@ -634,8 +639,9 @@ BÉZOUT</strong></li>
 <li><span class="math inline">(A, +, \cdot)</span> anello
 commutativo</li>
 <li><span class="math inline">I, J \subset A</span> ideali</li>
-<li><span class="math inline">I + J = \{i + j \mid \forall i \in I, j
-\in J\}</span></li>
+<li><span class="math inline">I + J = \{i + j \mid i \in I, j \in
+J\}</span> è detta <strong>somma tra <span class="math inline">I</span>
+e <span class="math inline">J</span></strong></li>
 </ul>
 </blockquote>
 <a href="#oss-9"><h2 id="oss-9">Oss</h2></a>
@@ -660,15 +666,15 @@ implicare che <span class="math inline">\forall i_1, i_2 \in I, j_1, j_2
 ottiene che <span class="math inline">(i_1 + j_1) + (i_2 + j_2) = (i_1 +
 i_2) + (j_1 + j_2)</span>, e <span class="math inline">i_1 + i_2 \in I,
 j_1 + j_2 \in J \implies (i_1 + i_2) + (j_1 + j_2) \in I + J</span> per
-definizione di <span class="math inline">I + J</span></li>
+definizione</li>
 <li><span class="math inline">\forall i \in I, j \in J \quad i + j \in I
 + J</span>, l’opposto rispetto a <span class="math inline">+</span> di
 <span class="math inline">i + j</span> è <span class="math inline">- (i
 + j) = (-i) + (-j)</span>, e <span class="math inline">\forall i \in I,
 j \in J \quad -i \in I, -j \in J \implies (-i) + (-j) \in I + J</span>
 per definizione</li>
-<li><span class="math inline">A \cdot I \subset I \implies \forall a \in
-A, i \in I, j \in J \quad a(i + j) \in I + J</span>
+<li><span class="math inline">A \cdot I \subseteq I \implies \forall a
+\in A, i \in I, j \in J \quad a(i + j) \in I + J</span>
 <ul>
 <li><span class="math inline">i + j \in I + J</span> per definizione, e
 <span class="math inline">a(i + j) = ai + aj</span>, e <span
@@ -687,8 +693,10 @@ ideali</strong></li>
 <li><span class="math inline">(A, +, \cdot)</span> anello
 commutativo</li>
 <li><span class="math inline">I, J \subset A</span> ideali</li>
-<li><span class="math inline">I \cap J = \{x \in I \land x \in
-J\}</span></li>
+<li><span class="math inline">I \cap J = \{x \mid x \in I \land x \in
+J\}</span> è detta <strong>intersezione tra <span
+class="math inline">I</span> e <span
+class="math inline">J</span></strong></li>
 </ul>
 </blockquote>
 <a href="#oss-10"><h2 id="oss-10">Oss</h2></a>
@@ -744,8 +752,10 @@ ideali</strong></li>
 commutativo</li>
 <li><span class="math inline">I, J \subset A</span> ideali</li>
 <li><span class="math inline">I \cdot J = \{i_1 j_1 + \ldots + i_k j_k
-\mid k \ge 1, \forall i_1 , \ldots , i_k \in I, j_1 , \ldots , j_k \in J
-\}</span></li>
+\mid k \ge 1, i_1 , \ldots , i_k \in I, j_1 , \ldots , j_k \in J
+\}</span> è detto <strong>prodotto tra <span
+class="math inline">I</span> e <span
+class="math inline">J</span></strong></li>
 </ul>
 </blockquote>
 <a href="#oss-11"><h2 id="oss-11">Oss</h2></a>
@@ -769,14 +779,13 @@ i_1, \ldots, i_k, i_1&#39;, \ldots, i_h&#39; \in I, j_1, \ldots, j_k,
 j_1&#39;, \ldots, j_h&#39; \in J \mid x = i_1j_1 + \ldots + i_k j_k
 \land y = i_1&#39;j_1&#39; + \ldots + i_h&#39;j_h&#39; \implies x + y =
 i_1j_1 + \ldots + i_kj_k + i_1&#39;j_1&#39;+ \ldots + i_hj_h&#39; \in
-I\cdot J</span> per definizione di <span class="math inline">I \cdot
-J</span></li>
+I\cdot J</span> per definizione</li>
 <li><span class="math inline">\forall x \in I \cdot J \quad \exists i_1,
 \ldots, i_k \in I, j_1, \ldots, j_k \in J \mid x = i_1j_1 + \ldots +
-i_kj_k \implies -x = -i_1j_1 + \ldots + (-i_kj_k) \in I \cdot J</span>
-per definizione di <span class="math inline">I \cdot J</span></li>
+i_kj_k \implies -x = (-i_1j_1) + \ldots + (-i_kj_k) \in I \cdot J</span>
+per definizione</li>
 <li><span class="math inline">I</span> ideale <span
-class="math inline">\implies \forall a \in A, i \in I \quad a\cdot i \in
+class="math inline">\implies \forall a \in A, i \in I \quad a i \in
 I</span>, allora <span class="math inline">\forall x \in I \cdot J \quad
 \exists i_1, \ldots, i_k \in I, j_1, \ldots, j_k \in J \mid x = i_1j_1 +
 \ldots + i_kj_k \implies \forall a \in A \quad a\cdot x = a(i_1j_1 +

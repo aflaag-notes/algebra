@@ -6,57 +6,64 @@
 
 > - $S$ insieme
 > - $m: S \times S \rightarrow S$
-> - $(S, m)$ **semigruppo** $\iff \forall x, y, z \in S \quad m(x, m(y, z))=m(m(x, y),z) \quad$
+> - $(S, m)$ è detto **semigruppo** $\iff \forall x, y, z \in S \quad m(x, m(y, z))=m(m(x, y),z) \quad$
+>   - in particolare, deve valere la _proprietà associativa_
 
 - **Monoide**
 
 > - $S$ insieme
 > - $m: S \times S \rightarrow S$
-> - $(S, m)$ **monoide** $\iff (S, m)$ semigruppo e $\forall x \in S \quad \exists e \in S  \mid m(x, e) = m(e, x) = x$
+> - $(S, m)$ è detto **monoide** $\iff$
+>   - $(S, m)$ semigruppo
+>   - $\exists e \in S \mid \forall x \in S \quad m(x, e) = m(e, x) = x$
+>     - in particolare, deve esistere l'_elemento neutro_
 
 - **Gruppo**
 
 > - $S$ insieme
 > - $m: S \times S \rightarrow S$
-> - $(S, m)$ **gruppo** $\iff (S, m)$ monoide e $\forall x \in S \quad \exists x^{-1} \in S \mid m(x, x^{-1}) =m(x^{-1}, x) =e$
+> - $(S, m)$ è detto **gruppo** $\iff$
+>   - $(S, m)$ monoide
+>   - $\forall x \in S \quad \exists x^{-1} \in S \mid m(x, x^{-1}) =m(x^{-1}, x) =e$
+>     - in particolare, per ogni elemento deve esistere l'_inverso_
 
 - **Gruppo abeliano**
 
 > - $S$ insieme
 > - $m: S \times S \rightarrow S$
-> - $(S, m)$ **gruppo abeliano** $\iff (S,m)$ gruppo e $\forall x, y \in S \quad m(x, y) = m(y, x)$
+> - $(S, m)$ è detto **gruppo abeliano** $\iff$
+>   - $(S,m)$ gruppo
+>   - $\forall x, y \in S \quad m(x, y) = m(y, x)$
+>     - in particolare, deve valere la _proprietà commutativa_
 
 ## Oss
 
 - **Hp**
   - $G$ monoide
-  - $\exists e \in G$ elemento neutro
 - **Th**
-  - $e$ è unico in $G$
+  - $e \in G$ elemento neutro è unico in $G$
 - **Dim**
-  - per assurdo, $\exists e_1, e_2 \mid e_1 \neq e_2$ elementi neutri, allora $\left.\begin{array}{l}m\left(x, e_{1}\right)=m\left(e_{1}, x\right)=x \\ m\left(x, e_{2}\right)=m\left(e_{2}, x\right)=x\end{array}\right\} \implies m\left(e_{1}, x\right)=m\left(e_{2}, x\right) \implies e_1=e_2$ necessariamente, quindi è unico
+  - per assurdo, ipotizzzando $\exists e_1, e_2 \in G \mid e_1 \neq e_2$ elementi neutri, allora $\left.\begin{array}{l}m\left(x, e_{1}\right)=m\left(e_{1}, x\right)=x \\ m\left(x, e_{2}\right)=m\left(e_{2}, x\right)=x\end{array}\right\} \implies m\left(e_{1}, x\right)=m\left(e_{2}, x\right) \implies e_1=e_2$ necessariamente, quindi è unico
 
 ## Oss
 
 - **Hp**
   - $(G, m)$ gruppo
-  - $x \in G$
-  - $\exists x^{-1} \in G$ inverso di $x$ rispetto ad $m$
 - **Th**
-  - $x^{-1}$ è unico in $G$ per $x$ rispetto a $m$
+  - $\forall x \in G \quad x^{-1}$ è unico in $G$, rispetto a $m$
 - **Dim**
-  - per assurdo, per un certo $x \in G \quad \exists x^{-1}_1, x^{-1}_2 \mid x^{-1}_1 \neq x^{-1}_2$, allora $\left.\begin{array}{l}m\left(x, x_{1}^{-1}\right)=m\left(x_{1}^{-1}, x\right)=e \\ m\left(x, x_{2}^{-1}\right)=m\left(x_{2}^{-1}, x\right)=e \end{array}\right\} \implies m\left(e_{1}^{-1}, x\right)=m\left(x_{2}^{-1}, x\right) \implies x_1^{-1}=x_2^{-1}$ necessariamente, quindi è unico
+  - per assurdo, ipotizzando che per un certo $x \in G \quad \exists x^{-1}_1, x^{-1}_2 \mid x^{-1}_1 \neq x^{-1}_2$, allora $\left.\begin{array}{l}m\left(x, x_{1}^{-1}\right)=m\left(x_{1}^{-1}, x\right)=e \\ m\left(x, x_{2}^{-1}\right)=m\left(x_{2}^{-1}, x\right)=e \end{array}\right\} \implies m\left(e_{1}^{-1}, x\right)=m\left(x_{2}^{-1}, x\right) \implies x_1^{-1}=x_2^{-1}$ necessariamente, quindi è unico
 
 ## Ex
 
 - **Hp**
   - $X, Y$ insiemi,
-  - $Y^X = \{f \mid f:X \rightarrow Y\}$
+  - $Y^X := \{f \mid f:X \rightarrow Y\}$
 - **Th**
   - $(X^X, \circ)$ è monoide
 - **Dim**
     - $\forall f, g, h \in Y^X \quad (f \circ g) \circ h=f \circ(g \circ h)$. poiché la composizione di funzioni è associativa
-    - $\forall X \quad \exists \textrm{id}_X \mid \textrm{id}_X : X \rightarrow X : x \rightarrow x$, che costituisce dunque l'elemento neutro, mappando ogni elemento in sé stesso
+    - $\textrm{id}_X \mid \textrm{id}_X : X \rightarrow X : x \rightarrow x$, è detta _funzione identità_, che costituisce dunque l'elemento neutro, mappando ogni elemento in sé stesso
 
 ## Oss
 
@@ -71,35 +78,46 @@
 
 > - $A$ insieme
 > - $+: A \times A \rightarrow A$
-> - $*: A \times A \rightarrow A$
-> - $(A, +, *)$ **anello** $\iff (A, +)$ gruppo abeliano, $(A, *)$ monoide e  $\forall a, b, c \in A \quad a*(b + c) = a * b + a * c$
-> - $a * b=b * a \quad \forall a, b \in A \implies   (A, *, +)$ è un **anello commutativo**
+> - $\cdot: A \times A \rightarrow A$
+> - $(A, +, \cdot)$ è detto **anello** $\iff$
+>   - $(A, +)$ gruppo abeliano
+>   - $(A, \cdot)$ monoide
+>   - $\forall a, b, c \in A \quad a \cdot (b + c) = a \cdot b + a \cdot c$
+>     - in particolare, deve valere la _proprietà distributiva_
+
+- **Anello commutativo**
+
+> - $A$ insieme
+> - $+: A \times A \rightarrow A$
+> - $\cdot: A \times A \rightarrow A$
+> - $(A, +, \cdot)$ è detto **anello commutativo** $\iff$
+>   - $(A, +, \cdot)$ anello
+>   - $\forall a, b \in A \quad a \cdot b=b \cdot a$
+>     - in particolare, deve valere la _proprietà commutativa_
 
 - **Campo**
 
-> - $(A, +, *)$ anello
-> - $(A, +, *)$ è un **campo** $\iff \forall x \in A \quad \exists x^{-1}$ rispetto a $*$
+> - $(A, +, \cdot)$ anello
+> - $(A, +, \cdot)$ è detto **campo** $\iff \forall x \in A \quad \exists x^{-1}$ rispetto a $\cdot$
 
 - **Semianello commutativo**
 
 > - $A$ insieme
 > - $+: A \times A \rightarrow A$
-> - $*: A \times A \rightarrow A$
-> - $(A, +, *)$ **semianello commutativo** $\iff (A, +)$ monide commutativo, $(A, *)$ monoide commutativo e $\forall a, b, c \in A \quad a*(b + c) = a*b + a*c$
-
-- **Sottoanello**
-
-> - $(A, +, \cdot)$ anello
-> - $(B, + , \cdot) \subset (A, +, \cdot)$ **sottoanello** $\iff (B, +) \subset (A, +)$ sottogruppo e $B \cdot B \subset B$
+> - $\cdot: A \times A \rightarrow A$
+> - $(A, +, \cdot)$ **semianello commutativo** $\iff$
+>   - $(A, +)$ monide commutativo
+>   - $(A, \cdot)$ monoide commutativo
+>   - $\forall a, b, c \in A \quad a\cdot (b + c) = a \cdot b + a \cdot c$
+>     - in particolare, deve valere la _proprietà distributiva_
 
 ## Def
 
 - **Invertibili**
 
 > - $(A, +, \cdot)$ anello commutativo
-> - $a \in A$ **invertibile** $\iff \exists a^{-1} \in A \mid a \cdot a^{-1}=e$, dove $e$ è l'elemento neutro dell'anello rispetto a $\cdot$
-> - $A^* := \{a \in A \mid a$ invertibile$\}$ è l'**insieme degli invertibili di $A$**
-
+> - $a \in A$ è detto **invertibile** $\iff \exists a^{-1} \in A \mid a \cdot a^{-1}=a^{-1}\cdot a = e$, dove $e$ è l'elemento neutro dell'anello rispetto a $\cdot$
+> - $A^* := \{a \in A \mid a$ invertibile$\}$ è detto **insieme degli invertibili di $A$**
 
 ## Oss
 
@@ -108,34 +126,26 @@
 - **Th**
   - $(A^*, \cdot)$ è un gruppo
 - **Dim**
-    - $(xy)z = x(yz)$
-    - $1^{-1} = 1 \implies 1$ invertibile $\implies 1 \in A^*$ per definizione di $A^* \implies \exists e \in A^*$
-    - $\forall x \in A^{*} \quad \exists x^{-1}$ per definizione di $A^*$, ma poiché $x^{-1}$ è inverso di $x$, allora $x^{-1} \in A^*$ per definizione
-
-## Oss
-
-- **Hp**
-  - $(A, +, \cdot)$ anello commutativo
-- **Th**
-    - $(A^*, \cdot) \subset (A, \cdot)$ è un sottogruppo
-- **Dim**
-  - esiste il neutro per dimostrazione precedente
-  - $\forall x, y \in A^{*} \quad \exists x^{-1}, y^{-1} \in A^*$, e in particolare $y^{-1}x^{-1} = (xy)^{-1} \implies xy \in A^*$ per definizione
-  - è chiuso rispetto agli inversi per dimostrazione precedente
+    - _associatività_
+        - $(xy)z = x(yz)$
+    - _neutro_
+        - $1^{-1} = 1 \implies 1$ invertibile $\implies 1 \in A^*$ per definizione di $A^*$
+    - _inversi_
+        - $\forall x \in A^{*} \quad \exists x^{-1}$ per definizione di $A^*$, ma poiché $x^{-1}$ è inverso di $x$, allora $x^{-1} \in A^*$ per definizione
+            - $x \in A^* \iff x, x^{-1} \in A^*$
 
 ## Def
 
 - **Divisori dello $0$**
 
 > - $(A, + , \cdot)$ anello commutativo
-> - $a \in A$ **divisore dello $0$** $\iff \exists b \in A - \{0\} \mid a \cdot b = 0$
+> - $a \in A$ è detto **divisore dello $0$** $\iff \exists b \in A - \{0\} \mid a \cdot b = 0$
 
 - **Dominio di integrità**
 
 > - $(A, +, \cdot)$ anello commutativo
-> - $A$ **dominio di integrità** $\iff \nexists x \neq 0 : x \mid 0$
-> - alternativamente, $A$ è dominio di integrità $\iff$ in $A$ vale la legge di annullamento del prodotto
-
+> - $A$ è detto **dominio di integrità** $\iff \nexists x \in A, x\neq 0 : x \mid 0$
+>   - in particolare, $A$ è dominio di integrità $\iff$ in $A$ vale la legge di annullamento del prodotto
 
 ## Oss
 
@@ -144,7 +154,8 @@
 - **Th**
   - $x \mid 0 \iff x \notin A^*$
 - **Dim**
-  - ipotizzando che $\exists a \in A \mid a$ invertibile e divisore dello $0$, allora $\exists a^{-1} \in A, b \in A - \{0\} \mid a^{-1}a = 1 \land ab = 0$
+  - ⚠️ **ATTENZIONE: mi pare sia una sola implicazione**
+  - per assurdo, ipotizzando $\exists a \in A \mid a$ invertibile e divisore dello $0$, allora $\exists a^{-1} \in A, b \in A - \{0\} \mid a^{-1}a = 1 \land ab = 0$
   - $b = 1 \cdot b = (a^{-1} a)\cdot b = a^{-1}\cdot(ab)=a^{-1}\cdot 0= 0 \ \bot$
 
 ## Oss
@@ -154,20 +165,19 @@
 - **Th**
   - $A$ dominio di integrità
 - **Dim**
-   - $A$ campo $\implies$ ogni elemento non nullo è invertibile, dunque $A^*=A - \{0\}$
-     - $0$ è l'unico elemento non invertibile
-     - $0 \notin A^* \iff 0 \mid 0$ per dimostrazione precedente
-   - quindi $A$ è dominio di integrità poiché $0$ è l'unico divisore dello $0$
+   - $A$ campo $\implies$ in $A$ ogni elemento non nullo è invertibile, dunque $A^*=A - \{0\}$, e in particolare $0$ è l'unico elemento non invertibile
+    - $0 \notin A^* \iff 0 \mid 0$ per dimostrazione precedente
+    - quindi $A$ è dominio di integrità poiché $0$ è l'unico divisore dello $0$
 
 ## Def
 
-- **Elementi irriducibili**
+- **Elemento irriducibile**
 
 > - $A$ anello commutativo
 > - $a \in A - \{0\} \mid a \in A^*$
-> - $a$ **irriducibile** $\iff \exists b, c \in A \mid a = b c \implies b \in A^* \lor c \in A^*$
+> - $a$ è detto **irriducibile** $\iff \exists b, c \in A \mid a = b c \implies b \in A^* \lor c \in A^*$
 
-- **Elementi primi**
+- **Elemento primo**
 
 > - $A$ anello commutativo
 > - $a \in A - \{0\} \mid a \in A^*$
@@ -182,7 +192,7 @@
 - **Dim**
     - si supponga $\exists b, c \in A \mid a = bc$
     - $\forall a \in A \quad a \mid a$ per riflessività
-    - per ipotesi $a$ primo, dunque per definizione $\exists b, c \in A : a \mid bc \implies a \mid b \lor a \mid c$, ma poiché $a \mid a = bc$, allora i coefficienti moltiplicativi sono proprio li stessi che compongono $a$
+    - per ipotesi $a$ primo, dunque per definizione $\exists b, c \in A : a \mid bc \implies a \mid b \lor a \mid c$, ma poiché $a \mid a = bc$, allora i coefficienti moltiplicativi sono proprio gli stessi che compongono $a$
     - prendendo ad esempio $a \mid b \implies \exists d \in A \mid ad = b \implies a = bc \iff a = adc \iff a \cdot( 1 - dc ) = 0$
     - $A$ dominio di integrità per ipotesi, e dunque in esso vale la legge di annullamento del prodotto
     - per definizione $a$ primo $\implies a \neq 0 \implies 1 - cd = 0 \iff -cd = -1 \iff cd = 1$, che per definizione implica che $d$ è l'inverso di $c$, e dunque $c \in A^*$
@@ -196,19 +206,54 @@
 
 - **Sottogruppo**
 
-> - $(G, *)$ gruppo 
-> - $(H, *) \subset (G, *)$ **sottogruppo** $\iff \exists e \in H \mid e$ è l'elemento neutro, $H * H \subset H$ e $\exists x^{-1} \in H \quad \forall x \in H$
+> - $G$ insieme
+> - $\cdot: G \times G \rightarrow G$
+> - $(G, \cdot)$ gruppo 
+> - $(H, \cdot) \subset (G, \cdot)$ **sottogruppo** $\iff$
+>   - $\exists e \in H \mid e$ è l'elemento neutro di $G$ rispetto a $\cdot$
+>   - $H \cdot H \subseteq H$
+>     - in particolare, deve essere _chiuso sull'operazione_
+>   - $\forall x \in H \quad \exists x^{-1} \in H$
+>     - in particolare, deve essere _chiuso sugli inversi_
+
+## Oss
+
+- **Hp**
+  - $(A, +, \cdot)$ anello commutativo
+- **Th**
+    - $(A^*, \cdot) \subset (A, \cdot)$ è un sottogruppo
+- **Dim**
+    - _neutro_
+        - esiste il neutro per dimostrazione precedente
+    - _chiusura sull'operazione_
+        - $\forall x, y \in A^{*} \quad \exists x^{-1}, y^{-1} \in A^*$, e in particolare $y^{-1}x^{-1} = (xy)^{-1} \implies xy \in A^*$ per definizione
+    - _chiusura sugli inversi_
+        - è chiuso rispetto agli inversi per dimostrazione precedente
+
+## Def
+
+- **Sottoanello**
+
+> - $A, B$ insiemi
+> - $+: A \times A \rightarrow A$
+> - $\cdot: A \times A \rightarrow A$
+> - $(B, + , \cdot) \subset (A, +, \cdot)$ **sottoanello** $\iff$
+>   - $(A, +, \cdot)$ anello
+>   - $(B, +) \subset (A, +)$ sottogruppo
+>   - $B \cdot B \subseteq B$
+>     - in particolare $B \cdot B := \{b_1 \cdot b_2 \mid b_1, b_2 \in B\}$
 
 ## Def
 
 - **Sottogruppo normale**
 
-> - $(G, *)$ gruppo
-> - $(H, *) \subset (G, *)$ sottogruppo
+> - $G, H$ insiemi
+> - $(G, \cdot)$ gruppo
+> - $(H, \cdot) \subset (G, \cdot)$ sottogruppo
 > - $x \in G$
 > - $xH := \{xh \mid h \in H\}$
 > - $Hx := \{hx \mid h \in H\}$
-> - $H$ **sottogruppo normale** $\iff \forall x \in G \quad xH = Hx$
+> - $H$ è detto **sottogruppo normale** $\iff \forall x \in G \quad xH = Hx$
 
 ## Oss
 
@@ -221,20 +266,19 @@
   - le proposizioni sono equivalenti
 - **Dim**
   - 1 $\implies$ 3
-    - $gH = Hg$ per ipotesi 1  $\implies \forall gh \in gH = Hg = \{kg \mid k \in H\} \implies \exists k \in H \mid gh = kg$ per definizione di $Hg$
+    - $gH = Hg$ per ipotesi 1  $\implies gH = Hg = \{kg \mid k \in H\} \implies \exists k \in H \mid gh = kg$ per definizione di $Hg$
   - 3 $\implies$ 2
     - $\forall g \in G, h \in H \quad \exists k \in H \mid gh = kg$ per ipotesi 3
     - $gh = kg \iff g h g^{-1} =k g g^{-1} \iff k = ghg^{-1}$, ma $k \in H$ per ipotesi, dunque $ghg^{-1} \in H$
   - 2 $\implies$ 1
-    - $gH = Hg \iff gH \subset Hg \land Hg \subset gH$
-    - $gH \subset Hg$
-      - $\forall h \in H, g \in G \implies gh \in gH$
+    - $gH = Hg \iff gH \subseteq Hg \land Hg \subseteq gH$
+    - _prima implicazione_
       - $k:= ghg^{-1} \in H$ per ipotesi 2
-      - $k = ghg^{-1} \iff k g= ghg^{-1}g \iff kg = gh$, e $kg \in Hg$ e $gh \in gH$, quindi $gH \subset Hg$
-    - $Hg \subset gH$
+      - $k = ghg^{-1} \iff k g= ghg^{-1}g \iff kg = gh$, e in particolare $kg \in Hg$ e $gh \in gH$
+    - _seconda implicazione_
       -  $G$ gruppo $\implies \forall g \in G \quad \exists g^{-1} \in G$
-      -  $\forall g^{-1} \in G \quad \exists h \in H \mid h:= g^{-1}k(g^{-1})^{-1} \in H$ per ipotesi
-      - $g^{-1}kg = h \iff gg^{-1}kg = gh \iff kg = gh$, ma $h \in H \implies gh \in gH$
+      -  $\forall g^{-1} \in G \quad \exists h \in H \mid h:= g^{-1}k(g^{-1})^{-1} \in H$ per ipotesi 2
+      - $g^{-1}kg = h \iff gg^{-1}kg = gh \iff kg = gh \in gH$
       - $k \in H \implies kg \in Hg$, ma $kg = gh \implies kg \in gH$
 
 ****

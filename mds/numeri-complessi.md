@@ -66,7 +66,7 @@
 > - $a, b \in \mathbb{R}$
 > - $z \in \mathbb{C} \mid z = a + i b$
 > - $\arg(z) \subset \mathbb{R}$ è l'**insieme delle soluzioni** del sistema $\left\{\begin{array}{l}\cos \theta=\frac{a}{|z|} \\ \sin \theta=\frac{b}{|z|}\end{array}\right.$
-> - per definizione, $\textrm{arg}(z) \implies \exists ! \theta \mid 0 \leq \theta \le 2 \pi$ tale che $\theta$ sia soluzione del sistema, e questo prende il nome di $\textrm{Arg}(z)$, detta **soluzione principale**
+> - per definizione di $\textrm{arg}(z) \quad \exists ! \theta \mid 0 \leq \theta \le 2 \pi$ tale che $\theta$ sia soluzione del sistema, e questo prende il nome di $\textrm{Arg}(z)$, detta **soluzione principale**
 
 ## Oss
 

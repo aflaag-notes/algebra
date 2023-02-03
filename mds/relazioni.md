@@ -5,55 +5,55 @@
 - **Relazioni**
 
 > - $S$ insieme
-> - ogni elemento $R \subseteq S \times S$ è una **relazione** su $S$
+> - $R \subseteq S \times S$ è detta **relazione** su $S$
 
 - **Relazione riflessiva**
 
 > - $S$ insieme
-> - $R$ relazione in $S \times S$
-> - $R$ **riflessiva** $\iff \forall x \in R \quad (x, x) \in R$
+> - $R \subseteq S \times S$ relazione su $S$
+> - $R$ è detta **riflessiva** $\iff \forall x \in R \quad (x, x) \in R$
 
 - **Relazione simmetrica**
 
 > - $S$ insieme
-> - $R$ relazione in $S \times S$
-> - $R$ **simmetrica** $\iff \forall x, y \in R \quad (x, y) \in R \implies (y, x) \in R$
+> - $R \subseteq S \times S$ relazione su $S$
+> - $R$ è detta **simmetrica** $\iff \forall x, y \in R \quad (x, y) \in R \implies (y, x) \in R$
 
 - **Relazione transitiva**
 
 > - $S$ insieme
-> - $R$ relazione in $S \times S$
-> - $R$ **transitiva** $\iff \forall x, y, z \in R \quad (x, y) \in R \land (y, z) \in R \implies (x, z) \in R$
+> - $R \subseteq S \times S$ relazione su $S$
+> - $R$ è detta **transitiva** $\iff \forall x, y, z \in R \quad (x, y), (y, z) \in R \implies (x, z) \in R$
 
 - **Relazione antisimmetrica**
 
 > - $S$ insieme
-> - $R$ relazione in $S \times S$
-> - $R$ **transitiva** $\iff \forall x, y \in R \quad (x, y) \in R \land (y, x) \in R \implies x = y$
+> - $R \subseteq S \times S$ relazione su $S$
+> - $R$ è detta **transitiva** $\iff \forall x, y \in R \quad (x, y), (y, x) \in R \implies x = y$
 
 - **Relazione totale**
 
 > - $S$ insieme
-> - $R$ relazione in $S \times S$
-> - $R$ **totale** $\iff \forall x, y \in R \quad (x, y) \in R \lor (y, x) \in R$
+> - $R \subseteq S \times S$ relazione su $S$
+> - $R$ è detta **totale** $\iff \forall x, y \in R \quad (x, y) \in R \lor (y, x) \in R$
 
 - **Relazione di equivalenza**
 
 > - $S$ insieme
-> - $R$ relazione in $S \times S$
-> - $R$ è una **relazione di equivalenza** $\iff R$ riflessiva, simmetrica e transitiva
+> - $R \subseteq S \times S$ relazione su $S$
+> - $R$ è detta **relazione di equivalenza** $\iff R$ riflessiva, simmetrica e transitiva
 
 - **Ordine parziale**
 
 > - $S$ insieme
-> - $R$ relazione in $S \times S$
-> - $R$ **ordine parziale** $\iff R$ riflessiva, transitiva e antisimmetrica
+> - $R \subseteq S \times S$ relazione su $S$
+> - $R$ è detto **ordine parziale** $\iff R$ riflessiva, transitiva e antisimmetrica
 
 - **Ordine totale**
 
 > - $S$ insieme
-> - $R$ relazione in $S \times S$
-> - $R$ **ordine totale** $\iff R$ ordine parziale in cui vale la totalità
+> - $R \subseteq S \times S$ relazione su $S$
+> - $R$ è detto **ordine totale** $\iff R$ ordine parziale in cui vale la totalità
 
 ## Ex
 
@@ -63,11 +63,11 @@
 - **Th**
   - $\mid$ è ordine parziale
 - **Dim**
-    - *riflessività*: $\forall x \in \mathbb{N} \quad x\mid x$
+    - *riflessività*
       - $x\mid x \iff \exists p \in \mathbb{N} \mid  x p=x \iff p = 1 \in \mathbb{N}$
-    - *transitività*: $\forall d, m, n \in \mathbb{N} \quad d \mid m \wedge m| n \implies d \mid n$
+    - *transitività*
       -  $\left.\begin{array}{l}d \mid m \iff \exists p_{1} \in \mathbb{N}\mid d p_{1}=m \\ m\mid n \iff \exists p_{2} \in \mathbb{N}\mid m p_{2}=n\end{array}\right\} \implies d p_{1} p_{2}=n \implies d \mid n$ poiché $p_1 \in \mathbb{N} \land p_2 \in \mathbb{N} \implies p_1 p_2 \in \mathbb{N}$
-    -  *antisimmetria*: $\forall m, n \in \mathbb{N}, \ m\mid n \wedge n\mid m \implies m=n$
+    -  *antisimmetria*
        - $\left.\begin{array}{l}m\mid n \iff \exists p_{1} \in \mathbb{N}\mid m p_{1}=n \\ n\mid m \iff \exists p_{2} \in \mathbb{N}\mid n p_{2}=m\end{array}\right\} \implies m p_{1} p_{2}=m \iff p_1 p_2 = 1 \iff p_1 = p_2 = 1$, e dunque $m p_1 =n \iff m = n$
 
 ## Ex
