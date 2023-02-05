@@ -11,31 +11,31 @@
 
 > - $S$ insieme
 > - $R \subseteq S \times S$ relazione su $S$
-> - $R$ è detta **riflessiva** $\iff \forall x \in R \quad (x, x) \in R$
+> - $R$ è detta **riflessiva** $\iff \forall x \in S \quad (x, x) \in R$
 
 - **Relazione simmetrica**
 
 > - $S$ insieme
 > - $R \subseteq S \times S$ relazione su $S$
-> - $R$ è detta **simmetrica** $\iff \forall x, y \in R \quad (x, y) \in R \implies (y, x) \in R$
+> - $R$ è detta **simmetrica** $\iff \forall x, y \in S \quad (x, y) \in R \implies (y, x) \in R$
 
 - **Relazione transitiva**
 
 > - $S$ insieme
 > - $R \subseteq S \times S$ relazione su $S$
-> - $R$ è detta **transitiva** $\iff \forall x, y, z \in R \quad (x, y), (y, z) \in R \implies (x, z) \in R$
+> - $R$ è detta **transitiva** $\iff \forall x, y, z \in S \quad (x, y), (y, z) \in R \implies (x, z) \in R$
 
 - **Relazione antisimmetrica**
 
 > - $S$ insieme
 > - $R \subseteq S \times S$ relazione su $S$
-> - $R$ è detta **transitiva** $\iff \forall x, y \in R \quad (x, y), (y, x) \in R \implies x = y$
+> - $R$ è detta **transitiva** $\iff \forall x, y \in S \quad (x, y), (y, x) \in R \implies x = y$
 
 - **Relazione totale**
 
 > - $S$ insieme
 > - $R \subseteq S \times S$ relazione su $S$
-> - $R$ è detta **totale** $\iff \forall x, y \in R \quad (x, y) \in R \lor (y, x) \in R$
+> - $R$ è detta **totale** $\iff \forall x, y \in S \quad (x, y) \in R \lor (y, x) \in R$
 
 - **Relazione di equivalenza**
 
@@ -78,15 +78,16 @@
 - **Th**
   - $\equiv$ è una relazione di equivalenza
 - **Dim**
-    - _riflessività_: $\forall a \in \mathbb{Z} \quad a \equiv a \ (\bmod \ n)$
+    - _riflessività_
       - $a \equiv a \ (\bmod \ n) \iff n \mid a - a \iff n \mid 0 \iff \exists p \in \mathbb{Z} \mid n p = 0 \iff p = 0 \in \mathbb{Z}$
-    - _simmetria_: $\forall a, b \in \mathbb{Z}\quad a \equiv b \ (\bmod \ n) \implies b \equiv a \ (\bmod \ n)$
+    - _simmetria_
+      - ⚠️ riscrivila è inguardabile
       - $a \equiv b \ (\bmod \ n) \iff n \mid b - a \iff \exists p_1 \in \mathbb{Z} \mid n  p_1 = b - a$
       - $b \equiv a \ (\bmod \ n) \iff n \mid a - b \iff \exists p_2 \in \mathbb{Z} \mid n  p_2 = a - b$
        - $\left.\begin{array}{l}n p_{1}=b-a \implies b=n p_{1}+a \\ n p_{2}=a-b\end{array}\right\} \implies np_2 = a - np_1 - a = -np_1$, e dunque $np_2 = -np_1 \iff np_2+np_1 = 0 \iff n(p_2 + p_1)=0$
        - $n \neq 0\implies n(p_2+p_1) 0 \iff p_{2}+p_{1}=0 \implies -p_{2}=p_{1}$
        - $n\mid b -a \iff np_1= b - a \iff n(-p_2) = b - a \iff np_2 = a - b \iff n \mid a- b$
-    - _transitivtà_: $\forall a, b, c \in \mathbb{Z} \quad a \equiv b \ (\bmod \ n) \land b \equiv c \ (\bmod \ n) \implies a \equiv c \ (\bmod \ n)$
+    - _transitivtà_
       - $a \equiv b \ (\bmod \ n) \iff n \mid b - a \iff \exists p_1 \in \mathbb{Z} \mid n p_1 = b - a$
       - $b \equiv c \ (\bmod \ n) \iff n \mid c - b \iff \exists p_2 \in \mathbb{Z} \mid n p_2 = c - b$
       - $\left.\begin{array}{l}n p_{1}=b-a \implies b=n p_{1}+a \\ n p_{2}=c-b\end{array}\right\} \implies np_2 = c - np_2 - a \iff np_2 + np_1 = c - a \implies n(p_2 + p_1)=c -a$
@@ -123,12 +124,12 @@
 - **Th**
   - $\sim$ è una relazione di equivalenza
 - **Dim**
-    - _riflessività_: $\forall g \in G \quad g \sim g$
+    - _riflessività_
       - $g = 1 \cdot g \cdot 1^{-1} \implies g \sim g$
-    - _simmetria_: $\forall g, h \in G \quad g \sim h \implies h \sim g$
+    - _simmetria_
       - $g \sim h \implies \exists a \in G \mid h = a \cdot g \cdot a^{-1} \iff a^{-1} \cdot h = a^{-1} \cdot a \cdot g \cdot a^{-1} \iff a^{-1} \cdot h = g \cdot a^{-1}\iff a^{-1} \cdot h \cdot a = g \cdot a^{-1} \cdot a \iff a ^{-1} \cdot h \cdot a = g$
       - $b := a^{-1} \implies b \cdot h \cdot b^{-1} = g \implies h \sim g$
-    - _transitività_: $\forall g, h, k \in G \quad g \sim h \land h \sim k \implies g \sim k$
+    - _transitività_
       - $g \sim h \land h \sim k \implies \exists a, b \mid h = a \cdot g \cdot a^{-1} \land k = b \cdot h \cdot b^{-1} \implies k = b \cdot a \cdot g \cdot a ^{-1} \cdot b^{-1}$
       - $c:= b \cdot a \implies c^{-1} = a^{-1} \cdot b^{-1} \implies k = c \cdot g \cdot c^{-1} \implies g \sim k$
 
@@ -157,7 +158,7 @@
       - $\forall x, y \in G \mid y \sim x$, sia $z \in [y] \implies z \sim y \land y \sim x \implies z \sim x$ per transitività si $\sim \implies z \in [x]$
       - poiché $\sim$ è relazione di equivalenza, allora $x \sim y \iff y \sim x$, allora $z \in [y] \land z \in [x] \implies[x] = [y]$ necessariamente
   - $x \nsim y \iff [x] \cap [y] = \varnothing$
-    - ipotizzando che $[x] \cap [y] \neq \varnothing \implies \exists z \in [x] \cap [y] \implies z \in [x] \land z \in [y] \implies z \sim x \land z \sim y$, che per simmetria e transitività di $\sim\implies x \sim y \ \bot$
+    - per assurdo, ipotizzando $[x] \cap [y] \neq \varnothing \implies \exists z \in [x] \cap [y] \implies z \in [x] \land z \in [y] \implies z \sim x \land z \sim y$, che per simmetria e transitività di $\sim\implies x \sim y \ \bot$
 
 ## Oss
 

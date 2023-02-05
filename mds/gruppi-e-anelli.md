@@ -152,9 +152,8 @@
 - **Hp**
   - $(A, +, \cdot)$ anello commutativo
 - **Th**
-  - $x \mid 0 \iff x \notin A^*$
+  - $x \mid 0 \implies x \notin A^*$
 - **Dim**
-  - ⚠️ **ATTENZIONE: mi pare sia una sola implicazione**
   - per assurdo, ipotizzando $\exists a \in A \mid a$ invertibile e divisore dello $0$, allora $\exists a^{-1} \in A, b \in A - \{0\} \mid a^{-1}a = 1 \land ab = 0$
   - $b = 1 \cdot b = (a^{-1} a)\cdot b = a^{-1}\cdot(ab)=a^{-1}\cdot 0= 0 \ \bot$
 
