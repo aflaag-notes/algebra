@@ -206,7 +206,7 @@
 <span class="math inline">S</span></li>
 <li><span class="math inline">R</span> è detta
 <strong>riflessiva</strong> <span class="math inline">\iff \forall x \in
-R \quad (x, x) \in R</span></li>
+S \quad (x, x) \in R</span></li>
 </ul>
 </blockquote>
 <ul>
@@ -219,7 +219,7 @@ R \quad (x, x) \in R</span></li>
 <span class="math inline">S</span></li>
 <li><span class="math inline">R</span> è detta
 <strong>simmetrica</strong> <span class="math inline">\iff \forall x, y
-\in R \quad (x, y) \in R \implies (y, x) \in R</span></li>
+\in S \quad (x, y) \in R \implies (y, x) \in R</span></li>
 </ul>
 </blockquote>
 <ul>
@@ -232,7 +232,7 @@ R \quad (x, x) \in R</span></li>
 <span class="math inline">S</span></li>
 <li><span class="math inline">R</span> è detta
 <strong>transitiva</strong> <span class="math inline">\iff \forall x, y,
-z \in R \quad (x, y), (y, z) \in R \implies (x, z) \in R</span></li>
+z \in S \quad (x, y), (y, z) \in R \implies (x, z) \in R</span></li>
 </ul>
 </blockquote>
 <ul>
@@ -245,7 +245,7 @@ z \in R \quad (x, y), (y, z) \in R \implies (x, z) \in R</span></li>
 <span class="math inline">S</span></li>
 <li><span class="math inline">R</span> è detta
 <strong>transitiva</strong> <span class="math inline">\iff \forall x, y
-\in R \quad (x, y), (y, x) \in R \implies x = y</span></li>
+\in S \quad (x, y), (y, x) \in R \implies x = y</span></li>
 </ul>
 </blockquote>
 <ul>
@@ -257,7 +257,7 @@ z \in R \quad (x, y), (y, z) \in R \implies (x, z) \in R</span></li>
 <li><span class="math inline">R \subseteq S \times S</span> relazione su
 <span class="math inline">S</span></li>
 <li><span class="math inline">R</span> è detta <strong>totale</strong>
-<span class="math inline">\iff \forall x, y \in R \quad (x, y) \in R
+<span class="math inline">\iff \forall x, y \in S \quad (x, y) \in R
 \lor (y, x) \in R</span></li>
 </ul>
 </blockquote>
@@ -354,17 +354,15 @@ equivalenza</li>
 </ul></li>
 <li><strong>Dim</strong>
 <ul>
-<li><em>riflessività</em>: <span class="math inline">\forall a \in
-\mathbb{Z} \quad a \equiv a \ (\bmod \ n)</span>
+<li><em>riflessività</em>
 <ul>
 <li><span class="math inline">a \equiv a \ (\bmod \ n) \iff n \mid a - a
 \iff n \mid 0 \iff \exists p \in \mathbb{Z} \mid n p = 0 \iff p = 0 \in
 \mathbb{Z}</span></li>
 </ul></li>
-<li><em>simmetria</em>: <span class="math inline">\forall a, b \in
-\mathbb{Z}\quad a \equiv b \ (\bmod \ n) \implies b \equiv a \ (\bmod \
-n)</span>
+<li><em>simmetria</em>
 <ul>
+<li>⚠️ riscrivila è inguardabile</li>
 <li><span class="math inline">a \equiv b \ (\bmod \ n) \iff n \mid b - a
 \iff \exists p_1 \in \mathbb{Z} \mid n p_1 = b - a</span></li>
 <li><span class="math inline">b \equiv a \ (\bmod \ n) \iff n \mid a - b
@@ -378,9 +376,7 @@ p_{2}+p_{1}=0 \implies -p_{2}=p_{1}</span></li>
 <li><span class="math inline">n\mid b -a \iff np_1= b - a \iff n(-p_2) =
 b - a \iff np_2 = a - b \iff n \mid a- b</span></li>
 </ul></li>
-<li><em>transitivtà</em>: <span class="math inline">\forall a, b, c \in
-\mathbb{Z} \quad a \equiv b \ (\bmod \ n) \land b \equiv c \ (\bmod \ n)
-\implies a \equiv c \ (\bmod \ n)</span>
+<li><em>transitivtà</em>
 <ul>
 <li><span class="math inline">a \equiv b \ (\bmod \ n) \iff n \mid b - a
 \iff \exists p_1 \in \mathbb{Z} \mid n p_1 = b - a</span></li>
@@ -453,14 +449,12 @@ equivalenza</li>
 </ul></li>
 <li><strong>Dim</strong>
 <ul>
-<li><em>riflessività</em>: <span class="math inline">\forall g \in G
-\quad g \sim g</span>
+<li><em>riflessività</em>
 <ul>
 <li><span class="math inline">g = 1 \cdot g \cdot 1^{-1} \implies g \sim
 g</span></li>
 </ul></li>
-<li><em>simmetria</em>: <span class="math inline">\forall g, h \in G
-\quad g \sim h \implies h \sim g</span>
+<li><em>simmetria</em>
 <ul>
 <li><span class="math inline">g \sim h \implies \exists a \in G \mid h =
 a \cdot g \cdot a^{-1} \iff a^{-1} \cdot h = a^{-1} \cdot a \cdot g
@@ -470,8 +464,7 @@ g</span></li>
 <li><span class="math inline">b := a^{-1} \implies b \cdot h \cdot
 b^{-1} = g \implies h \sim g</span></li>
 </ul></li>
-<li><em>transitività</em>: <span class="math inline">\forall g, h, k \in
-G \quad g \sim h \land h \sim k \implies g \sim k</span>
+<li><em>transitività</em>
 <ul>
 <li><span class="math inline">g \sim h \land h \sim k \implies \exists
 a, b \mid h = a \cdot g \cdot a^{-1} \land k = b \cdot h \cdot b^{-1}
@@ -529,7 +522,7 @@ x</span>, allora <span class="math inline">z \in [y] \land z \in [x]
 <li><span class="math inline">x \nsim y \iff [x] \cap [y] =
 \varnothing</span>
 <ul>
-<li>ipotizzando che <span class="math inline">[x] \cap [y] \neq
+<li>per assurdo, ipotizzando <span class="math inline">[x] \cap [y] \neq
 \varnothing \implies \exists z \in [x] \cap [y] \implies z \in [x] \land
 z \in [y] \implies z \sim x \land z \sim y</span>, che per simmetria e
 transitività di <span class="math inline">\sim\implies x \sim y \

@@ -215,8 +215,8 @@ particolare <span class="math inline">(\mathbb{Z}, +)</span> gruppo</li>
 classi di equivalenza definite dalla relazione di equivalenza <span
 class="math inline">\equiv</span></li>
 <li><span class="math inline">m \equiv r \ (\bmod \ n)\iff r \equiv m \
-(\bmod \ n) \implies n \mid m - r \implies \exists q: nq = m - r
-\implies m = nq + r \quad 0 \le r \lt n</span></li>
+(\bmod \ n) \implies n \mid m - r \implies \exists q \in \mathbb{Z} \mid
+nq = m - r \implies m = nq + r \quad 0 \le r \lt n</span></li>
 <li><span class="math inline">0 \le r \lt n \implies</span> è possibile
 definire <span class="math inline">\mathbb{Z}_n := \{[0], [1], \ldots,
 [n - 1]\}</span>, che coincide con <span
@@ -245,9 +245,12 @@ class="math inline">\mathbb{Z}</span> rispetto a <span
 class="math inline">I(n)</span>, che per dimostrazione precedente
 corrispondono alle classi di equivalenza definite da <span
 class="math inline">\equiv</span></li>
+<li>infatti, <span class="math inline">\mathbb{Z}/I(n):=\{[x] \mid x \in
+\mathbb{Z}\}</span> dove <span class="math inline">[x] := \{ y \in
+\mathbb{Z} \mid x \equiv y \ (\bmod \ n) \iff n \mid x - y \iff \exists
+q \in \mathbb{Z} \mid n q = x - y \iff x - y \in I(n)\}</span></li>
 <li>di conseguenza, <span class="math inline">\mathbb{Z}/I(n) =
-\mathbb{Z}/ \equiv \textrm{} = \mathbb{Z}_n</span> per definizione
-precedente</li>
+\mathbb{Z}/ \equiv \textrm{} = \mathbb{Z}_n</span></li>
 <li>per dimostrazione precedente, la somma tra classi di equivalenza è
 ben definita, di conseguenza è possibile definire la struttura di gruppo
 <span class="math inline">(\mathbb{Z}_n, +)</span></li>
