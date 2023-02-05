@@ -28,7 +28,7 @@
   - $(\mathbb{Z}_n, +)$ è un gruppo
 - **Dim**
   - per dimostrazione precedente, $I(n)$ è un sottogruppo, quindi ha senso definire $\mathbb{Z}/I(n)$, che conterrà le classi laterali sinistre definite in $\mathbb{Z}$ rispetto a $I(n)$, che per dimostrazione precedente corrispondono alle classi di equivalenza definite da $\equiv$
-  - infatti, $\mathbb{Z}/I(n):=\{[x] \mid x \in \mathbb{Z}\}$ dove $[x] := \{ y \in \mathbb{Z} \mid x \equiv y \ (\bmod \ n) \iff n \mid x - y \iff \exists q \in \mathbb{Z} \mid n q = x - y \iff x - y \in I(n)\}$
+  - infatti, $\mathbb{Z}/\equiv:=\{[x] \mid x \in \mathbb{Z}\}$ dove $[x] := \{ y \in \mathbb{Z} \mid x \equiv y \ (\bmod \ n) \iff n \mid x - y \iff \exists q \in \mathbb{Z} \mid n q = x - y \iff x - y \in I(n)\} =: \mathbb{Z}/I(n)$
   - di conseguenza, $\mathbb{Z}/I(n) = \mathbb{Z}/ \equiv \textrm{} = \mathbb{Z}_n$ 
   - per dimostrazione precedente, la somma tra classi di equivalenza è ben definita, di conseguenza è possibile definire la struttura di gruppo $(\mathbb{Z}_n, +)$
 
