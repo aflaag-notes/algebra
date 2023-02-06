@@ -39,11 +39,16 @@ for file in os.listdir("mds"):
             c = content.split("\n")
             c[17] = "      max-width: 60em;"
 
-            for i in range(len(c)):
+            for i in range(len(c) - 1):
                 if c[i].startswith("<h2 id=") or c[i].startswith("<h1 id="):
-                    parts = c[i].split("\"")
+                    k = c[i]
 
-                    c[i] = "<a href=\"#" + parts[1] + "\">" + c[i] + "</a>"
+                    if c[i + 1][0] != "<":
+                        k += c[i + 1]
+
+                    parts = k.split("\"")
+
+                    c[i] = "<a href=\"#" + parts[1] + "\">" + k + "</a>"
 
             content = "\n".join(c)
 
