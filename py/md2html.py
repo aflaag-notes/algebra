@@ -44,7 +44,8 @@ for file in os.listdir("mds"):
                     k = c[i]
 
                     if c[i + 1][0] != "<":
-                        k += c[i + 1]
+                        k += " " + c[i + 1]
+                        c[i + 1] = ""
 
                     parts = k.split("\"")
 
