@@ -89,9 +89,8 @@
   - $\mathbb{Z}_p$ campo
 - **Dim**
   - $\mathbb{Z}_p^* := \{[x] \in \mathbb{Z}_p \mid \exists[x]^{-1} \in \mathbb{Z}_p\}$
-  - $p \in \mathbb{P} \implies$ ogni numero è coprimo con $p$
-  - per dimostrazione precedente, allora tutti gli elementi di $\mathbb{Z}_p$ sono invertibili, tranne $[0]$ in quanto $[0]$ non ha inversi
-  - allora $\mathbb{Z}_p^* = \mathbb{Z}_p - \{[0]\}$, che per definizione implica che $\mathbb{Z}_p$ campo
+  - $p \in \mathbb{P} \implies \forall x \in [1, p - 1] \quad \textrm{MCD}(x, p) = 1$
+  - allora $\mathbb{Z}_p^* = \mathbb{Z}_p - \{[0]\} \implies \mathbb{Z}_p$ campo
  
 ## Oss
 

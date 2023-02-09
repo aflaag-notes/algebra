@@ -36,7 +36,8 @@ order = {
     "determinante.md": 10,
     "numeri-complessi.md": 11,
     "coefficienti-binomiali.md": 12,
-    "induzione.md": 12,
+    "induzione.md": 13,
+    "altro.md": 14,
 
     "index.md": -1,
     "teoremi-fondamentali.md": -1,
@@ -46,7 +47,7 @@ order = {
 for file in sorted(os.listdir("mds/"), key=lambda name: order[name]):
     if file != "everything.md" and file != "index.md" and file != "teoremi-fondamentali.md":
         with open("mds/" + file) as md:
-            parts = re.split("## Teorema cinese dei resti|## Ex|## Oss|## Def|## Lem|## Cor|## Formula di de Moivre|## Formula di Eulero|## Formula di Grassmann|## Formula di Leibniz|## Formula di Laplace", md.read())
+            parts = re.split("## Teorema cinese dei resti|## Ex|## Oss|## Def|## Lem|## Cor|## Alg|## Formula di de Moivre|## Formula di Eulero|## Formula di Grassmann|## Formula di Leibniz|## Formula di Laplace", md.read())
             
             for y, part in enumerate(parts):
                 if (a := filter_content(part)):

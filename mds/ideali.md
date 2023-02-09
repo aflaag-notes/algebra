@@ -111,11 +111,18 @@
         - l'unicità deriva dal fatto che $d:=\min(I \cap \mathbb{Z}_{\gt 0})$, e dunque nella dimostrazione $d > 0$, ma vale il ragionamento analogo per $d < 0$ considerando $I(-d)$, in quanto $I(d) = I(-d)$ per dimostrazione precedente
     - dunque, ogni ideale in $\mathbb{Z}$ è generato dall'insieme dei multipli di un certo $d \ge 0$, che esiste sempre ed è unico, e di conseguenza $\mathbb{Z}$ è un anello ad ideali principali
 
+## Def
+
+- **Massimo Comun Divisore**
+
+> - $a_{1}, \ldots , a_{n} \in \mathbb{Z}$
+> - $\exists !d \in \mathbb{N}  \mid I\left(a_{1}, \ldots , a_{n}\right)=I(d)$, ed è detto **massimo comun divisore degli $a_1, \ldots, a_n$**
+
 ## Oss
 
 - **Hp**
     - $a_1, \ldots, a_n \in \mathbb{Z}$
-    - $\exists ! d \in \mathbb{N} \mid I(a_1, \ldots, a_n) = I(d)$
+    - $\exists ! d \in \mathbb{N} \mid I(d) = I(a_1, \ldots, a_n)$
 - **Th**
     - $d = \textrm{MCD}(a_1, \ldots, a_n)$
 - **Dim**
@@ -124,18 +131,9 @@
         - preso ad esempio $a_1$, è possibile riscriverlo come $a_1 = a_1 \cdot 1 + a_2 \cdot 0 + \ldots + a_n \cdot 0$, di conseguenza $a_1 \in I(a_1, \ldots, a_n)$, dunque $d \mid a_1$
         - vale il ragionamento analogo per ogni $a_1, \ldots , a_n$, dunque $d \mid a_1, \ldots, a_n$
     - $d$ è il _massimo tra i divisori comuni_
-        - $d$ è il massimo tra i divisori comuni quando $\forall k \in \mathbb{Z} \mid a_1, \ldots, a_n \quad  k \mid d$
-        - in generale $\forall i \in [1, n] \quad k \mid a_i \implies \exists x_i \in \mathbb{Z} \mid kx_i = a_i$
+        - $d$ è il massimo tra i divisori comuni quando $\forall k \in \mathbb{Z}: k \mid a_1, \ldots, a_n \quad  k \mid d$
+        - $\forall i \in [1, n] \quad k \mid a_i \iff \exists x_i \in \mathbb{Z} \mid kx_i = a_i$
         - $d \in I(d) = I(a_1, \ldots, a_n) \iff d \in I(a_1, \ldots, a_n) \implies \exists b_1, \ldots b_n \in \mathbb{Z} \mid d = a_1 b_1 + \ldots + a_n b_n$, e per osservazione precedente si ottiene che $d = kx_1b_1 + \ldots + kx_nb_n = k(b_1x_1 + \ldots + b_nx_n) \implies k \mid d$
-
-## Def
-
-- **Massimo Comun Divisore**
-
-> - $a_{1}, \ldots , a_{n} \in \mathbb{Z}$
-> - $\exists !d \in \mathbb{N}  \mid I\left(a_{1}, \ldots , a_{n}\right)=I(d)$, ed è detto **massimo comun divisore degli $a_1, \ldots, a_n$**
->    - per dimostrazione precedente $I(a_1, \ldots, a_n)$ è un ideale, e per dimostrazione precedente ogni ideale in $\mathbb{Z}$ è principale, dunque per un certo $d$ coincide con $I(d)$, e in particolare $d$ è proprio il massimo comun divisore degli $a_1, \ldots, a_n$ per dimostrazione precedente
-
 ## Oss
 
 - **Hp**
@@ -148,7 +146,16 @@
 
 ## Oss
 
-- ⚠️ **MANCA DIMOSTRAZIONE SISTEMA DI IDENTITÀ DI BÉZOUT**
+- **Hp**
+    - $a, b \in \mathbb{Z}$
+    - $d := \textrm{MCD}(a, b)$
+    - $m := \textrm{mcm}(a, b)$
+    - $x_0, y_0 \in \mathbb{Z} \mid d = a x_0 + b y_0$, dunque $x_0, y_0$ soddisfano l'equazione di Bézout
+- **Th**
+    - $ax + by = d \iff \left \{ \begin{array}{l}x = x_0 + \dfrac{m}{a}k \\ \\ y = y_0 - \dfrac{m}{b}k\end{array}\right. \forall k \in \mathbb{Z}$
+- **Dim**
+    - $a \left (x_0 + \dfrac{m}{a}k \right) + b \left(y_0 - \dfrac{m}{b}k \right) = ax_0 + mk + by_0 -mk = ax_0 + by_0 = d \implies x_0$ e $y_0$ rispettano il sistema
+    - ⚠️ **non capisco come procede da qua**
 
 ****
 
@@ -204,6 +211,22 @@
 > - $a_{1}, \ldots, a_{n} \in \mathbb{Z}$
 > - $\displaystyle \exists ! m  \in \mathbb{N} \mid I(m) = I(a_1) \cap \ldots \cap I(a_n) = \bigcap_{i=1}^{n}{I(a_i)}$, ed è detto **minimo comune multiplo degli $a_1, \ldots, a_n$**
 
+## Oss
+
+
+- **Hp**
+    - $a_1, \ldots, a_n \in \mathbb{Z}$
+    - $\exists ! m \in \mathbb{N} \mid I(m) = \displaystyle \bigcap_{i=1}^n{I(a_i)}$
+- **Th**
+    - $m = \textrm{mcm}(a_1, \ldots, a_n)$
+- **Dim**
+    - $m$ è _multiplo comune_
+        - $I(m) = \displaystyle \bigcap_{i=1}^n{I(a_i)} \implies m \in I(a_1) \cap \ldots \cap I(a_n) \implies \forall i \in [1, n] \quad \exists x_i \in \mathbb{Z} : a_ix_i = m \iff a_i \mid k$
+    - $m$ è _minimo tra i multipli comuni_
+        - $m$ è il minimo tra i multipli comuni quando $\forall k \in \mathbb{Z} : a_1, \ldots, a_n \mid k \quad  m \mid k$
+        - $\forall i \in [1, n] \quad a_i \mid k \iff \exists x_i \in \mathbb{Z} \mid a_ix_i = k \iff k \in I(a_i)$, allora $k \in I(a_1) \cap \ldots \cap I(a_n) = I(m)$
+    - ⚠️ **e poi?**
+
 ## Def
 
 - **$\cdot$ tra ideali**
@@ -246,13 +269,13 @@
 - **Th**
   - $I(a) \cdot I(b)=I(a \cdot b)$
 - **Dim**
-  - $x \in I(a) \cdot I(b) \implies x \in I(a \cdot b)$
+  - $I(a) \cdot I(b) \subseteq I(a \cdot b)$
     - per dimostrazione precedente $I(a)$ e $I(b)$ sono ideali, e poiché il prodotto tra ideali è ben definito, allora $x \in I(a) \cdot I(b) \implies x = i_1 j_1 + \ldots + i_k j_k$ con $i_1 , \ldots , i_k \in I(a)$ e $j_1 , \ldots , j_k \in I(b)$
     - per definizione, $i \in I(a) \implies \exists x \in \mathbb{Z} \mid i = ax$, e dunque $i_1, \ldots, i_k = ax_1, \ldots, ax_k$ con $x_1, \ldots, x_k \in \mathbb{Z}$
     - analogamente $j_1, \ldots, j_k = by_1, \ldots, by_k$ con $y_1, \ldots, y_k \in \mathbb{Z}$
     - segue che $x = (ax_1)(by_1),+\ldots+ (ax_k)(by_k) = ab\cdot(x_1y_1+ \ldots+ x_ky_k)$
     - poiché $(x_1y_1+ \ldots+ x_ky_k) \in \mathbb{Z}$, segue che $ab \mid x \implies x \in I(a \cdot b)$
-  - $x \in I(a \cdot b)  \implies x \in I(a) \cdot I(b)$
+  - $I(a \cdot b) = I(a \cdot b)$
     - $x \in I(a \cdot b) \implies \exists k \in \mathbb{Z} \mid x = ab \cdot k$
     - $x = abk$, ma $a \in I(a) \land bk \in I(b) \implies x \in I(a) \cdot I(b)$
 

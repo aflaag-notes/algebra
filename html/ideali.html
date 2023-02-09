@@ -470,14 +470,28 @@ conseguenza <span class="math inline">\mathbb{Z}</span> è un anello ad
 ideali principali</li>
 </ul></li>
 </ul>
+<a href="#def-1"><h2 id="def-1">Def</h2></a>
+<ul>
+<li><strong>Massimo Comun Divisore</strong></li>
+</ul>
+<blockquote>
+<ul>
+<li><span class="math inline">a_{1}, \ldots , a_{n} \in
+\mathbb{Z}</span></li>
+<li><span class="math inline">\exists !d \in \mathbb{N} \mid
+I\left(a_{1}, \ldots , a_{n}\right)=I(d)</span>, ed è detto
+<strong>massimo comun divisore degli <span class="math inline">a_1,
+\ldots, a_n</span></strong></li>
+</ul>
+</blockquote>
 <a href="#oss-5"><h2 id="oss-5">Oss</h2></a>
 <ul>
 <li><strong>Hp</strong>
 <ul>
 <li><span class="math inline">a_1, \ldots, a_n \in
 \mathbb{Z}</span></li>
-<li><span class="math inline">\exists ! d \in \mathbb{N} \mid I(a_1,
-\ldots, a_n) = I(d)</span></li>
+<li><span class="math inline">\exists ! d \in \mathbb{N} \mid I(d) =
+I(a_1, \ldots, a_n)</span></li>
 </ul></li>
 <li><strong>Th</strong>
 <ul>
@@ -504,44 +518,18 @@ class="math inline">d \mid a_1</span></li>
 comuni</em>
 <ul>
 <li><span class="math inline">d</span> è il massimo tra i divisori
-comuni quando <span class="math inline">\forall k \in \mathbb{Z} \mid
+comuni quando <span class="math inline">\forall k \in \mathbb{Z}: k \mid
 a_1, \ldots, a_n \quad k \mid d</span></li>
-<li>in generale <span class="math inline">\forall i \in [1, n] \quad k
-\mid a_i \implies \exists x_i \in \mathbb{Z} \mid kx_i = a_i</span></li>
+<li><span class="math inline">\forall i \in [1, n] \quad k \mid a_i \iff
+\exists x_i \in \mathbb{Z} \mid kx_i = a_i</span></li>
 <li><span class="math inline">d \in I(d) = I(a_1, \ldots, a_n) \iff d
 \in I(a_1, \ldots, a_n) \implies \exists b_1, \ldots b_n \in \mathbb{Z}
 \mid d = a_1 b_1 + \ldots + a_n b_n</span>, e per osservazione
 precedente si ottiene che <span class="math inline">d = kx_1b_1 + \ldots
-+ kx_nb_n = k(b_1x_1 + \ldots + b_nx_n) \implies k \mid d</span></li>
++ kx_nb_n = k(b_1x_1 + \ldots + b_nx_n) \implies k \mid d</span> ##
+Oss</li>
 </ul></li>
 </ul></li>
-</ul>
-<a href="#def-1"><h2 id="def-1">Def</h2></a>
-<ul>
-<li><strong>Massimo Comun Divisore</strong></li>
-</ul>
-<blockquote>
-<ul>
-<li><span class="math inline">a_{1}, \ldots , a_{n} \in
-\mathbb{Z}</span></li>
-<li><span class="math inline">\exists !d \in \mathbb{N} \mid
-I\left(a_{1}, \ldots , a_{n}\right)=I(d)</span>, ed è detto
-<strong>massimo comun divisore degli <span class="math inline">a_1,
-\ldots, a_n</span></strong>
-<ul>
-<li>per dimostrazione precedente <span class="math inline">I(a_1,
-\ldots, a_n)</span> è un ideale, e per dimostrazione precedente ogni
-ideale in <span class="math inline">\mathbb{Z}</span> è principale,
-dunque per un certo <span class="math inline">d</span> coincide con
-<span class="math inline">I(d)</span>, e in particolare <span
-class="math inline">d</span> è proprio il massimo comun divisore degli
-<span class="math inline">a_1, \ldots, a_n</span> per dimostrazione
-precedente</li>
-</ul></li>
-</ul>
-</blockquote>
-<a href="#oss-6"><h2 id="oss-6">Oss</h2></a>
-<ul>
 <li><strong>Hp</strong>
 <ul>
 <li><span class="math inline">a_1, \ldots, a_n \in
@@ -564,10 +552,31 @@ quindi <span class="math inline">d \in I(a_1, \ldots, a_n) \implies
 d</span></li>
 </ul></li>
 </ul>
-<a href="#oss-7"><h2 id="oss-7">Oss</h2></a>
+<a href="#oss-6"><h2 id="oss-6">Oss</h2></a>
 <ul>
-<li>⚠️ <strong>MANCA DIMOSTRAZIONE SISTEMA DI IDENTITÀ DI
-BÉZOUT</strong></li>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">a, b \in \mathbb{Z}</span></li>
+<li><span class="math inline">d := \textrm{MCD}(a, b)</span></li>
+<li><span class="math inline">m := \textrm{mcm}(a, b)</span></li>
+<li><span class="math inline">x_0, y_0 \in \mathbb{Z} \mid d = a x_0 + b
+y_0</span>, dunque <span class="math inline">x_0, y_0</span> soddisfano
+l’equazione di Bézout</li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">ax + by = d \iff \left \{
+\begin{array}{l}x = x_0 + \dfrac{m}{a}k \\ \\ y = y_0 -
+\dfrac{m}{b}k\end{array}\right. \forall k \in \mathbb{Z}</span></li>
+</ul></li>
+<li><strong>Dim</strong>
+<ul>
+<li><span class="math inline">a \left (x_0 + \dfrac{m}{a}k \right) + b
+\left(y_0 - \dfrac{m}{b}k \right) = ax_0 + mk + by_0 -mk = ax_0 + by_0 =
+d \implies x_0</span> e <span class="math inline">y_0</span> rispettano
+il sistema</li>
+<li>⚠️ <strong>non capisco come procede da qua</strong></li>
+</ul></li>
 </ul>
 <hr />
 <a href="#operazioni-sugli-ideali"><h1 id="operazioni-sugli-ideali">Operazioni sugli ideali</h1></a>
@@ -585,7 +594,7 @@ J\}</span> è detta <strong>somma tra <span class="math inline">I</span>
 e <span class="math inline">J</span></strong></li>
 </ul>
 </blockquote>
-<a href="#oss-8"><h2 id="oss-8">Oss</h2></a>
+<a href="#oss-7"><h2 id="oss-7">Oss</h2></a>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -640,7 +649,7 @@ class="math inline">I</span> e <span
 class="math inline">J</span></strong></li>
 </ul>
 </blockquote>
-<a href="#oss-9"><h2 id="oss-9">Oss</h2></a>
+<a href="#oss-8"><h2 id="oss-8">Oss</h2></a>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -682,6 +691,43 @@ multiplo degli <span class="math inline">a_1, \ldots,
 a_n</span></strong></li>
 </ul>
 </blockquote>
+<a href="#oss-9"><h2 id="oss-9">Oss</h2></a>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">a_1, \ldots, a_n \in
+\mathbb{Z}</span></li>
+<li><span class="math inline">\exists ! m \in \mathbb{N} \mid I(m) =
+\displaystyle \bigcap_{i=1}^n{I(a_i)}</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">m = \textrm{mcm}(a_1, \ldots,
+a_n)</span></li>
+</ul></li>
+<li><strong>Dim</strong>
+<ul>
+<li><span class="math inline">m</span> è <em>multiplo comune</em>
+<ul>
+<li><span class="math inline">I(m) = \displaystyle
+\bigcap_{i=1}^n{I(a_i)} \implies m \in I(a_1) \cap \ldots \cap I(a_n)
+\implies \forall i \in [1, n] \quad \exists x_i \in \mathbb{Z} : a_ix_i
+= m \iff a_i \mid k</span></li>
+</ul></li>
+<li><span class="math inline">m</span> è <em>minimo tra i multipli
+comuni</em>
+<ul>
+<li><span class="math inline">m</span> è il minimo tra i multipli comuni
+quando <span class="math inline">\forall k \in \mathbb{Z} : a_1, \ldots,
+a_n \mid k \quad m \mid k</span></li>
+<li><span class="math inline">\forall i \in [1, n] \quad a_i \mid k \iff
+\exists x_i \in \mathbb{Z} \mid a_ix_i = k \iff k \in I(a_i)</span>,
+allora <span class="math inline">k \in I(a_1) \cap \ldots \cap I(a_n) =
+I(m)</span></li>
+</ul></li>
+<li>⚠️ <strong>e poi?</strong></li>
+</ul></li>
+</ul>
 <a href="#def-5"><h2 id="def-5">Def</h2></a>
 <ul>
 <li><strong><span class="math inline">\cdot</span> tra
@@ -776,8 +822,8 @@ I(\textrm{MCD}(a_1, \ldots, a_n))</span></li>
 </ul></li>
 <li><strong>Dim</strong>
 <ul>
-<li><span class="math inline">x \in I(a) \cdot I(b) \implies x \in I(a
-\cdot b)</span>
+<li><span class="math inline">I(a) \cdot I(b) \subseteq I(a \cdot
+b)</span>
 <ul>
 <li>per dimostrazione precedente <span class="math inline">I(a)</span> e
 <span class="math inline">I(b)</span> sono ideali, e poiché il prodotto
@@ -798,8 +844,7 @@ class="math inline">i_1, \ldots, i_k = ax_1, \ldots, ax_k</span> con
 \mathbb{Z}</span>, segue che <span class="math inline">ab \mid x
 \implies x \in I(a \cdot b)</span></li>
 </ul></li>
-<li><span class="math inline">x \in I(a \cdot b) \implies x \in I(a)
-\cdot I(b)</span>
+<li><span class="math inline">I(a \cdot b) = I(a \cdot b)</span>
 <ul>
 <li><span class="math inline">x \in I(a \cdot b) \implies \exists k \in
 \mathbb{Z} \mid x = ab \cdot k</span></li>

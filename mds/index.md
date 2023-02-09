@@ -48,6 +48,7 @@
 - [Numeri complessi](https://ph04.github.io/algebra/html/numeri-complessi.html)
 - [Coefficienti binomiali](https://ph04.github.io/algebra/html/coefficienti-binomiali.html)
 - [Induzione](https://ph04.github.io/algebra/html/induzione.html)
+- [Altro](https://ph04.github.io/algebra/html/altro.html)
 
 ## Teoremi fondamentali
 

@@ -113,6 +113,8 @@
 - **Th**
     - $d \nmid b \implies \nexists [x] \in \mathbb{Z}_n \mid ax \equiv b \ (\bmod \ n)$
     - $d \mid b \implies \forall [x] \in \mathbb{Z}_n \mid ax \equiv b \ (\bmod \ n) \quad x$ è anche tale che $\dfrac{a}{d}x \equiv \dfrac{b}{d} \ \left(\bmod \ \dfrac{n}{d}\right)$
+- **Dim**
+    - ⚠️ **tipo pag 40 appunti simone**
 
 ## Ex
 
@@ -143,7 +145,7 @@
 > - $X$ insieme
 > - $I$ insieme di indici
 > - $\forall i \in I \quad X_i \subset X$
-> - $\displaystyle X = \coprod_{i \in I}X_i$ è detta **partizione di $X$**
+> - $\displaystyle X = \bigsqcup_{i \in I}X_i$ è detta **partizione di $X$**
 >   - in particolare $\forall i, j \in I \quad \left \{ \begin{array}{ll} X_i = X_j && i = j \\ X_i \cap X_j = \varnothing && i \neq j \end{array}\right.$
 
 ## Oss
@@ -171,9 +173,9 @@
 - **Hp**
     - $X$ insieme
     - $I$ insieme di indici
-    - $\displaystyle X = \coprod_{i \in I}X_i$ partizione di $X$
+    - $\displaystyle X = \bigsqcup_{i \in I}X_i$ partizione di $X$
 - **Th**
-    - $\displaystyle X = \coprod_{[x] \in X/\sim}[x]$, ovvero una partizione _induce una relazione di equivalenza_, dove $x \sim y \iff \exists i \in I \mid x, y \in X_i$
+    - $\displaystyle X = \bigsqcup_{[x] \in X/\sim}[x]$, ovvero una partizione _induce una relazione di equivalenza_, dove $x \sim y \iff \exists i \in I \mid x, y \in X_i$
 - **Dim**
     - $\forall x \in X \quad \exists i \in I \mid x \in X_i \implies x \sim x$
     - $x \sim y \implies \exists i \in I \mid x, y \in X_i \implies y \sim x$

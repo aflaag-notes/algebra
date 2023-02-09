@@ -47,7 +47,7 @@
 - **Th**
   - $|G| = |G / H| \cdot |H|$
 - **Dim**
-  - $G = \displaystyle \coprod_{[x] \in G/H}{[x]}$ per dimostrazione precedente
+  - $G = \displaystyle \bigsqcup_{[x] \in G/H}{[x]}$ per dimostrazione precedente
   - $\forall x \in G \quad |[x]| = |xH| = |H|$ per dimostrazione precedente
   - poiché l'intersezione è disgiunta $|G| = k \cdot |[x]| = k \cdot |H|$
   - allora segue che $k = |G/H|$, ovvero al numero di partizioni, e dunque $|G| = |G/H| \cdot |H|$
