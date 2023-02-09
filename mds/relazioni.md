@@ -81,7 +81,6 @@
     - _riflessività_
       - $a \equiv a \ (\bmod \ n) \iff n \mid a - a \iff n \mid 0 \iff \exists p \in \mathbb{Z} \mid n p = 0 \iff p = 0 \in \mathbb{Z}$
     - _simmetria_
-      - ⚠️ riscrivila è inguardabile
       - $a \equiv b \ (\bmod \ n) \iff n \mid b - a \iff \exists p_1 \in \mathbb{Z} \mid n  p_1 = b - a$
       - $b \equiv a \ (\bmod \ n) \iff n \mid a - b \iff \exists p_2 \in \mathbb{Z} \mid n  p_2 = a - b$
        - $\left.\begin{array}{l}n p_{1}=b-a \implies b=n p_{1}+a \\ n p_{2}=a-b\end{array}\right\} \implies np_2 = a - np_1 - a = -np_1$, e dunque $np_2 = -np_1 \iff np_2+np_1 = 0 \iff n(p_2 + p_1)=0$
@@ -144,31 +143,41 @@
 > - $X$ insieme
 > - $I$ insieme di indici
 > - $\forall i \in I \quad X_i \subset X$
-> - $\displaystyle X = \coprod_{i \in I}X_i$
+> - $\displaystyle X = \coprod_{i \in I}X_i$ è detta **partizione di $X$**
+>   - in particolare $\forall i, j \in I \quad \left \{ \begin{array}{ll} X_i = X_j && i = j \\ X_i \cap X_j = \varnothing && i \neq j \end{array}\right.$
 
 ## Oss
 
 - **Hp**
-  - $G$ gruppo
+  - $X$ insieme
 - **Th**
-  - $\forall x, y \in G \quad x \nsim y \iff [x] \cap [y] = \varnothing \lor x \sim y \iff [x] = [y]$
+  - $\forall x, y \in X \quad \left \{ \begin{array}{ll}x \nsim y \iff [x] \cap [y] = \varnothing \\ x \sim y \iff [x] = [y]\end{array}\right.$, ovvero $\sim$ _induce una partizione_
 - **Dim**
-  - $x \sim y \iff [x] = [y]$
-      - $\forall x, y \in G \mid x \sim y$, sia $z \in [x] \implies z \sim x \land x \sim y \implies z \sim y$ per transitività di $\sim \implies z \in [y]$
-      - $\forall x, y \in G \mid y \sim x$, sia $z \in [y] \implies z \sim y \land y \sim x \implies z \sim x$ per transitività si $\sim \implies z \in [x]$
-      - poiché $\sim$ è relazione di equivalenza, allora $x \sim y \iff y \sim x$, allora $z \in [y] \land z \in [x] \implies[x] = [y]$ necessariamente
-  - $x \nsim y \iff [x] \cap [y] = \varnothing$
-    - per assurdo, ipotizzando $[x] \cap [y] \neq \varnothing \implies \exists z \in [x] \cap [y] \implies z \in [x] \land z \in [y] \implies z \sim x \land z \sim y$, che per simmetria e transitività di $\sim\implies x \sim y \ \bot$
+    - $x \sim y \iff [x] = [y]$
+        - _prima implicazione_
+            - $\forall x, y \in X \mid x \sim y$, sia $z \in [x] \implies z \sim x \land x \sim y \implies z \sim y$ per transitività di $\sim \implies z \in [y] \implies [x] \subseteq [y]$
+            - $\forall x, y \in G \mid y \sim x$, sia $z \in [y] \implies z \sim y \land y \sim x \implies z \sim x$ per transitività si $\sim \implies z \in [x] \implies [y] \subseteq [x]$
+            - allora necessariamente $[x] = [y]$
+        - _seconda implicazione_
+            - $[x] = [y] \implies x \sim y \land y \sim x$
+    - $x \nsim y \iff [x] \cap [y] = \varnothing$
+        - _prima implicazione_
+            - per assurdo, ipotizzando $[x] \cap [y] \neq \varnothing \implies \exists z \in [x] \cap [y] \implies z \in [x] \land z \in [y] \implies z \sim x \land z \sim y$, allora per simmetria e transitività di $\sim\implies x \sim y \ \bot$
+        - _seconda implicazione_
+            - $[x] \cap [y] = \varnothing \implies \nexists z \in [x] \cap [y]$, in particolare $x \notin [y] \land y \notin [x]$
 
 ## Oss
 
 - **Hp**
-  - $G$ gruppo
-  - $\sim$ è una relazione di equivalenza in $G$
+    - $X$ insieme
+    - $I$ insieme di indici
+    - $\displaystyle X = \coprod_{i \in I}X_i$ partizione di $X$
 - **Th**
-  - $\sim$ induce una partizione di $G$, dunque $\displaystyle G = \coprod_{[x] \in X/\sim}[x]$
+    - $\displaystyle X = \coprod_{[x] \in X/\sim}[x]$, ovvero una partizione _induce una relazione di equivalenza_, dove $x \sim y \iff \exists i \in I \mid x, y \in X_i$
 - **Dim**
-  - ⚠️ **MANCA LA DIMOSTRAZIONE**
+    - $\forall x \in X \quad \exists i \in I \mid x \in X_i \implies x \sim x$
+    - $x \sim y \implies \exists i \in I \mid x, y \in X_i \implies y \sim x$
+    - $x \sim y, y \sim z \implies \exists i, j \in I \mid x, y \in X_i \land y, z \in X_j \implies y \in X_i \cap X_j$, ma poiché $X_i$ e $X_j$ sono insiemi di una partizione allora $\left \{ \begin{array}{l} i = j \implies X_i = X_j \implies x \sim z \\ i \neq j \implies X_i \cap X_j = \varnothing \implies x \nsim y \land y \nsim z \end{array}\right.$
      
 ****
 
@@ -195,18 +204,38 @@
       - $a \in H$ perche $H$ sottogruppo, dunque chiuso su $\cdot$, e dunque $\implies a \in H \iff x^{-1}z \in H \iff x \sim z$
         - quindi basta considerare il prodotto $h \cdot k$ per ottenere l'elemento di transitività
 
+# Oss
+
+- **Hp**
+    - $G$ gruppo
+    - $H \subset G$ sottogruppo
+    - $x, y \in G$
+- **Th**
+    - $x \sim_D y \iff xy^{-1} \in H$ è una relazione di equivalenza
+- **Dim**
+    - la dimostrazione è analoga alla precedente
+
 ## Def 
 
-- **Classi laterali**
+- **Classi laterali su gruppi**
 
-> - $(G, \cdot)$ gruppo
-> - $(H, \cdot) \subset (G, \cdot)$ sottogruppo
-> - $\forall x,y \in G \quad x \sim_S y \iff x^{-1}y \in H$ è una relazione di equivalenza
-> - $\forall x, y \in G \quad x \sim_D y \iff xy^{-1} \in H$ è una relazione di equivalenza
+> - $G$ gruppo
+> - $H \subset G$ sottogruppo
 > - $x \in G$
 > - $[x] = \{y \in G \mid y \sim_S x\}$ è detta **classe laterale sinistra**
 > - $[x] = \{y \in G \mid y \sim_D x\}$ è detta **classe laterale destra**
 > - $G/H := \{[x] \mid x \in G\}$ è l'**insieme delle classi laterali sinistre o destre**
+>   - $G/H$ è un simbolismo ambiguo, poiché in base al contesto può voler significare l'insieme delle classi laterali sinistre o destre, ma all'interno di questi appunti, a meno di specifica, saranno sottointese le classi laterali sinistre
+>   - si noti che con $x^{-1}$ si intende l'inverso rispetto all'operazione considerata
+
+- **Classi laterali su anelli**
+
+> - $(A, +, \cdot)$ anello
+> - $I \subset A$ ideale
+> - $[x] = \{y \in A \mid y \sim_S x\}$ è detta **classe laterale sinistra**
+> - $[x] = \{y \in A \mid y \sim_D x\}$ è detta **classe laterale destra**
+> - $A/I := \{[x] \mid x \in A\}$ è l'**insieme delle classi laterali sinistre o destre**
+>   - $\sim_S$ e $\sim_D$ sono dette anche _congruenza modulo $I$_, e dunque $\forall a,b \in A \quad a \equiv b \ (\bmod \ I) \iff b - a \in I$
 
 ## Oss
 
@@ -242,9 +271,9 @@
 - **Th**
   - $xH:= \{ xh \mid h \in H\} = [x]$
 - **Dim**
-  - $[x] \subset xH$
+  - $[x] \subseteq xH$
     - $y \in[x] \implies y \sim x \implies x \sim y \implies \exists h:= x^{-1}y \in H$ $\implies xh = x(x^{-1}y)=(xx^{-1})y=y \in H$ in quanto $H$ è sottogruppo, quindi $y \in [x] \implies \exists h \in H \mid y = xh \in H \implies y \in xH$
-  - $xH \subset [x]$
+  - $xH \subseteq [x]$
     - $y \in x H \implies \exists h \in H \mid y=x h \implies x^{-1}y = x^{-1}xh= h$, quindi $h \in H \implies x^{-1}y \in H \implies x \sim y \implies y \in [x]$
 
 ## Oss
@@ -254,31 +283,61 @@
   - $H \subset G$ sottogruppo
   - $x \in G$
 - **Th**
-  - $| xH |= |H|$
+  - $|xH| = |H|$
 - **Dim**
-  - $\forall h, k \in H \quad h \neq k \iff xh \neq xk$, quindi simmetricamente $h = k \iff xh = xk$, di conseguenza è possibile definire una funzione $H \rightarrow xH : h \rightarrow xh$
-    - la funzione è suriettiva per costruzione, perché $\forall h \quad \exists xh$
-    - la funzione è iniettiva perché $xh$ è univoco $\forall x, h$
-    - la funzione è biiettiva, di conseguenza insieme di partenza e di arrivo hanno la stessa cardinalità, quindi $|H| = |xH|$
+    - è possibile definire una funzione $\varphi: H \rightarrow xH : h \rightarrow xh$
+    - $\forall h, k \in H \mid h \neq k \quad xh \neq xk \implies \varphi$ iniettiva
+    - $\forall xh \in xH \quad \exists h \in H \mid \varphi(x) = xh \implies \varphi$ suriettiva
+    - $\varphi$ biiettiva $\implies |H| = |xH|$
 
 ## Oss
 
 - **Hp**
-  - $G$ gruppo
+  - $(G, +)$ gruppo abeliano
   - $H \subset G$ sottogruppo
-  - $+: G/H \times G/H \rightarrow G/H$
 - **Th**
-  - $(G/H, +)$ è gruppo abeliano
+  - $(G/H, +)$ è gruppo abeliano, dove $+: G/H \times G/H \rightarrow G/H$
 - **Dim**
-  - bisogna dimostrare che $+$ è un operazione ben definita
-  - $+$ ben definita $\iff$$\left.\forall x, x^{\prime}, y, y' \in G \quad \begin{array}{l}{[x]=\left[x^{\prime}\right]} \\ {[y]=\left[y^{\prime}\right]}\end{array}\right\} \implies[x+y]=\left[x^{\prime}+y' \right]$
+  - $+$ ben definita $\iff\left.\forall x, x^{\prime}, y, y' \in G \quad \begin{array}{l}{[x]=\left[x^{\prime}\right]} \\ {[y]=\left[y^{\prime}\right]}\end{array}\right\} \implies[x+y]=\left[x^{\prime}+y' \right]$
     - $\forall k, k' \in G \quad [k]=\left[k^{\prime}\right] \iff k \sim k^{\prime}$, dunque il sistema precedente è equivalente a $\left.\begin{array}{l}x \sim x^{\prime} \\ y \sim y^{\prime}\end{array}\right\} \implies x+y \sim x^{\prime}+y^{\prime}$
-    - $x \sim x' \iff (-x)+x' \in H \implies x' - x \in H$
-    - $y \sim y' \iff (-y) +y' \in H \implies y' - y \in H$
-    - $H$ è sottogruppo, di conseguenza $(x'-x)+(y'-y) \in H \implies -(x+y)+(x'+y') \in H \iff x +y \sim x'+y'$
+    - $x \sim x' \iff (-x)+x' \in H \iff x' - x \in H$
+    - $y \sim y' \iff (-y) +y' \in H \iff y' - y \in H$
+    - $H$ è sottogruppo, allora $(x'-x)+(y'-y) \in H \implies -(x+y)+(x'+y') \in H \iff x +y \sim x'+y'$
   - $(G/H, +)$ gruppo abeliano
     - $\forall [x], [y], [z] \in G/H \quad ([x]+[y])+[z]=[x+y]+[z]=[(x+y)+z]= [x+(y+z)]=[x]+[y+z]=[x]+([y]+[z])$
     - $\forall [x] \in G/H \quad [x]+[0]=[0]+[x]=[x]$ e $[0] + [x] = [0 + x] = [x]$, e $[0] \in G/H$ perché $G$ gruppo
     - $\forall [x] \in G/H \quad [x]+[-x]=[x+(-x)]=[0]$ e $[-x] +[x]=[-x +x]=[0]$$\implies -[x] = [-x]$
     - $[x]+[y]=[x+y]=[y+x]=[y]+[x]$
+
+## Oss
+
+- **Hp**
+    - $(A, +, \cdot)$ anello commutativo
+    - $I \subset A$ ideale
+- **Th**
+    - $(A/I, +, \cdot)$ è anello commutativo, dove $+, \cdot : A/I \times A/I \rightarrow A/I$
+- **Dim**
+    - $+$ è ben definita per dimostrazione precedente, poiché $(I, +) \subset (A, +)$ gruppo abeliano per definizione di $I$
+    - $\cdot$ ben definita $\iff\left.\forall x, x^{\prime}, y, y' \in A \quad \begin{array}{l}{[x]=\left[x^{\prime}\right]} \\ {[y]=\left[y^{\prime}\right]}\end{array}\right\} \implies[xy]=\left[x^{\prime}y' \right]$
+        - $\forall k, k' \in A \quad [k]=\left[k^{\prime}\right] \iff k \sim k^{\prime}$, dunque il sistema precedente è equivalente a $\left.\begin{array}{l}x \sim x^{\prime} \\ y \sim y^{\prime}\end{array}\right\} \implies xy \sim x^{\prime}y^{\prime}$
+        - $x \sim x' \iff (-x)+x' \in I \iff i_1:=x' - x \in I$
+        - $y \sim y' \iff (-y) +y' \in I \iff i_2:=y' - y \in I$
+        - $I$ ideale $\implies A \cdot I \subseteq I \implies \forall a \in A, i \in I \quad a i \in I$, in particolare $i_1y', xi_2 \in I$
+        - $(I, +) \subset (A, +)$ sottogruppo, allora $i_1y' + xi_2 \in I$
+        - $i_1y' + xi_2 = (x'-x)y' + x(y'-y) = x'y' - xy' + xy' - xy = x'y' - xy \in I \iff x'y \sim xy$
+    - $(A/I, +, \cdot)$ anello commutativo
+        - $\forall [x], [y], [z] \in A/I \quad ([x][y])[x] = [xy][z] = [xyz] = [x][yz] = [x]([y][z])$
+        - $\forall [x] \in A/I \quad [x][1]=[1][x]=[x]$ e $[1] \cdot [x] = [1 \cdot x] = [x]$, e $[1] \in A/I$ perché $A$ anello
+        - $\forall [x] \in A/I \quad [x]\cdot[x^{-1}]=[x \cdot x^{-1}]=[1]$ e $[x^{-1}] \cdot[x]=[x^{-1} \cdot x]=[1] \implies [x]^{-1} = [x^{-1}]$
+        - $[x][y] = [xy] = [yx] = [y][x]$
+
+## Oss
+
+- **Hp**
+    - $(G, \cdot)$ gruppo
+    - $H \subset G$ sottogruppo normale
+- **Th**
+    - $(G/H, \cdot)$ è gruppo abeliano, dove $\cdot: G/H \times G/H \rightarrow G/H$
+- **Dim**
+    - ⚠️ todo
 

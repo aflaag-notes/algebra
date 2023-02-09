@@ -362,7 +362,6 @@ equivalenza</li>
 </ul></li>
 <li><em>simmetria</em>
 <ul>
-<li>⚠️ riscrivila è inguardabile</li>
 <li><span class="math inline">a \equiv b \ (\bmod \ n) \iff n \mid b - a
 \iff \exists p_1 \in \mathbb{Z} \mid n p_1 = b - a</span></li>
 <li><span class="math inline">b \equiv a \ (\bmod \ n) \iff n \mid a - b
@@ -488,45 +487,70 @@ k</span></li>
 <li><span class="math inline">\forall i \in I \quad X_i \subset
 X</span></li>
 <li><span class="math inline">\displaystyle X = \coprod_{i \in
-I}X_i</span></li>
+I}X_i</span> è detta <strong>partizione di <span
+class="math inline">X</span></strong>
+<ul>
+<li>in particolare <span class="math inline">\forall i, j \in I \quad
+\left \{ \begin{array}{ll} X_i = X_j &amp;&amp; i = j \\ X_i \cap X_j =
+\varnothing &amp;&amp; i \neq j \end{array}\right.</span></li>
+</ul></li>
 </ul>
 </blockquote>
 <a href="#oss-2"><h2 id="oss-2">Oss</h2></a>
 <ul>
 <li><strong>Hp</strong>
 <ul>
-<li><span class="math inline">G</span> gruppo</li>
+<li><span class="math inline">X</span> insieme</li>
 </ul></li>
 <li><strong>Th</strong>
 <ul>
-<li><span class="math inline">\forall x, y \in G \quad x \nsim y \iff
-[x] \cap [y] = \varnothing \lor x \sim y \iff [x] = [y]</span></li>
+<li><span class="math inline">\forall x, y \in X \quad \left \{
+\begin{array}{ll}x \nsim y \iff [x] \cap [y] = \varnothing \\ x \sim y
+\iff [x] = [y]\end{array}\right.</span>, ovvero <span
+class="math inline">\sim</span> <em>induce una partizione</em></li>
 </ul></li>
 <li><strong>Dim</strong>
 <ul>
 <li><span class="math inline">x \sim y \iff [x] = [y]</span>
 <ul>
-<li><span class="math inline">\forall x, y \in G \mid x \sim y</span>,
+<li><em>prima implicazione</em>
+<ul>
+<li><span class="math inline">\forall x, y \in X \mid x \sim y</span>,
 sia <span class="math inline">z \in [x] \implies z \sim x \land x \sim y
 \implies z \sim y</span> per transitività di <span
-class="math inline">\sim \implies z \in [y]</span></li>
+class="math inline">\sim \implies z \in [y] \implies [x] \subseteq
+[y]</span></li>
 <li><span class="math inline">\forall x, y \in G \mid y \sim x</span>,
 sia <span class="math inline">z \in [y] \implies z \sim y \land y \sim x
 \implies z \sim x</span> per transitività si <span
-class="math inline">\sim \implies z \in [x]</span></li>
-<li>poiché <span class="math inline">\sim</span> è relazione di
-equivalenza, allora <span class="math inline">x \sim y \iff y \sim
-x</span>, allora <span class="math inline">z \in [y] \land z \in [x]
-\implies[x] = [y]</span> necessariamente</li>
+class="math inline">\sim \implies z \in [x] \implies [y] \subseteq
+[x]</span></li>
+<li>allora necessariamente <span class="math inline">[x] =
+[y]</span></li>
+</ul></li>
+<li><em>seconda implicazione</em>
+<ul>
+<li><span class="math inline">[x] = [y] \implies x \sim y \land y \sim
+x</span></li>
+</ul></li>
 </ul></li>
 <li><span class="math inline">x \nsim y \iff [x] \cap [y] =
 \varnothing</span>
 <ul>
+<li><em>prima implicazione</em>
+<ul>
 <li>per assurdo, ipotizzando <span class="math inline">[x] \cap [y] \neq
 \varnothing \implies \exists z \in [x] \cap [y] \implies z \in [x] \land
-z \in [y] \implies z \sim x \land z \sim y</span>, che per simmetria e
-transitività di <span class="math inline">\sim\implies x \sim y \
+z \in [y] \implies z \sim x \land z \sim y</span>, allora per simmetria
+e transitività di <span class="math inline">\sim\implies x \sim y \
 \bot</span></li>
+</ul></li>
+<li><em>seconda implicazione</em>
+<ul>
+<li><span class="math inline">[x] \cap [y] = \varnothing \implies
+\nexists z \in [x] \cap [y]</span>, in particolare <span
+class="math inline">x \notin [y] \land y \notin [x]</span></li>
+</ul></li>
 </ul></li>
 </ul></li>
 </ul>
@@ -534,20 +558,31 @@ transitività di <span class="math inline">\sim\implies x \sim y \
 <ul>
 <li><strong>Hp</strong>
 <ul>
-<li><span class="math inline">G</span> gruppo</li>
-<li><span class="math inline">\sim</span> è una relazione di equivalenza
-in <span class="math inline">G</span></li>
+<li><span class="math inline">X</span> insieme</li>
+<li><span class="math inline">I</span> insieme di indici</li>
+<li><span class="math inline">\displaystyle X = \coprod_{i \in
+I}X_i</span> partizione di <span class="math inline">X</span></li>
 </ul></li>
 <li><strong>Th</strong>
 <ul>
-<li><span class="math inline">\sim</span> induce una partizione di <span
-class="math inline">G</span>, dunque <span
-class="math inline">\displaystyle G = \coprod_{[x] \in
-X/\sim}[x]</span></li>
+<li><span class="math inline">\displaystyle X = \coprod_{[x] \in
+X/\sim}[x]</span>, ovvero una partizione <em>induce una relazione di
+equivalenza</em>, dove <span class="math inline">x \sim y \iff \exists i
+\in I \mid x, y \in X_i</span></li>
 </ul></li>
 <li><strong>Dim</strong>
 <ul>
-<li>⚠️ <strong>MANCA LA DIMOSTRAZIONE</strong></li>
+<li><span class="math inline">\forall x \in X \quad \exists i \in I \mid
+x \in X_i \implies x \sim x</span></li>
+<li><span class="math inline">x \sim y \implies \exists i \in I \mid x,
+y \in X_i \implies y \sim x</span></li>
+<li><span class="math inline">x \sim y, y \sim z \implies \exists i, j
+\in I \mid x, y \in X_i \land y, z \in X_j \implies y \in X_i \cap
+X_j</span>, ma poiché <span class="math inline">X_i</span> e <span
+class="math inline">X_j</span> sono insiemi di una partizione allora
+<span class="math inline">\left \{ \begin{array}{l} i = j \implies X_i =
+X_j \implies x \sim z \\ i \neq j \implies X_i \cap X_j = \varnothing
+\implies x \nsim y \land y \nsim z \end{array}\right.</span></li>
 </ul></li>
 </ul>
 <hr />
@@ -612,29 +647,72 @@ z</span>
 </ul></li>
 </ul></li>
 </ul>
+<a href="#oss-5"><h1 id="oss-5">Oss</h1></a>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">G</span> gruppo</li>
+<li><span class="math inline">H \subset G</span> sottogruppo</li>
+<li><span class="math inline">x, y \in G</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">x \sim_D y \iff xy^{-1} \in H</span> è una
+relazione di equivalenza</li>
+</ul></li>
+<li><strong>Dim</strong>
+<ul>
+<li>la dimostrazione è analoga alla precedente</li>
+</ul></li>
+</ul>
 <a href="#def-2"><h2 id="def-2">Def</h2></a>
 <ul>
-<li><strong>Classi laterali</strong></li>
+<li><strong>Classi laterali su gruppi</strong></li>
 </ul>
 <blockquote>
 <ul>
-<li><span class="math inline">(G, \cdot)</span> gruppo</li>
-<li><span class="math inline">(H, \cdot) \subset (G, \cdot)</span>
-sottogruppo</li>
-<li><span class="math inline">\forall x,y \in G \quad x \sim_S y \iff
-x^{-1}y \in H</span> è una relazione di equivalenza</li>
-<li><span class="math inline">\forall x, y \in G \quad x \sim_D y \iff
-xy^{-1} \in H</span> è una relazione di equivalenza</li>
+<li><span class="math inline">G</span> gruppo</li>
+<li><span class="math inline">H \subset G</span> sottogruppo</li>
 <li><span class="math inline">x \in G</span></li>
 <li><span class="math inline">[x] = \{y \in G \mid y \sim_S x\}</span> è
 detta <strong>classe laterale sinistra</strong></li>
 <li><span class="math inline">[x] = \{y \in G \mid y \sim_D x\}</span> è
 detta <strong>classe laterale destra</strong></li>
 <li><span class="math inline">G/H := \{[x] \mid x \in G\}</span> è
-l’<strong>insieme delle classi laterali sinistre o destre</strong></li>
+l’<strong>insieme delle classi laterali sinistre o destre</strong>
+<ul>
+<li><span class="math inline">G/H</span> è un simbolismo ambiguo, poiché
+in base al contesto può voler significare l’insieme delle classi
+laterali sinistre o destre, ma all’interno di questi appunti, a meno di
+specifica, saranno sottointese le classi laterali sinistre</li>
+<li>si noti che con <span class="math inline">x^{-1}</span> si intende
+l’inverso rispetto all’operazione considerata</li>
+</ul></li>
 </ul>
 </blockquote>
-<a href="#oss-5"><h2 id="oss-5">Oss</h2></a>
+<ul>
+<li><strong>Classi laterali su anelli</strong></li>
+</ul>
+<blockquote>
+<ul>
+<li><span class="math inline">(A, +, \cdot)</span> anello</li>
+<li><span class="math inline">I \subset A</span> ideale</li>
+<li><span class="math inline">[x] = \{y \in A \mid y \sim_S x\}</span> è
+detta <strong>classe laterale sinistra</strong></li>
+<li><span class="math inline">[x] = \{y \in A \mid y \sim_D x\}</span> è
+detta <strong>classe laterale destra</strong></li>
+<li><span class="math inline">A/I := \{[x] \mid x \in A\}</span> è
+l’<strong>insieme delle classi laterali sinistre o destre</strong>
+<ul>
+<li><span class="math inline">\sim_S</span> e <span
+class="math inline">\sim_D</span> sono dette anche <em>congruenza modulo
+<span class="math inline">I</span></em>, e dunque <span
+class="math inline">\forall a,b \in A \quad a \equiv b \ (\bmod \ I)
+\iff b - a \in I</span></li>
+</ul></li>
+</ul>
+</blockquote>
+<a href="#oss-6"><h2 id="oss-6">Oss</h2></a>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -661,7 +739,7 @@ dimostrazione precedente, dunque <span class="math inline">b - a = (-a)
 + b \in I(n) \iff a \sim_S b</span></li>
 </ul></li>
 </ul>
-<a href="#oss-6"><h2 id="oss-6">Oss</h2></a>
+<a href="#oss-7"><h2 id="oss-7">Oss</h2></a>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -679,7 +757,7 @@ dimostrazione precedente, dunque <span class="math inline">b - a = (-a)
 x</span></li>
 </ul></li>
 </ul>
-<a href="#oss-7"><h2 id="oss-7">Oss</h2></a>
+<a href="#oss-8"><h2 id="oss-8">Oss</h2></a>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -696,7 +774,7 @@ x\}</span></li>
 </ul></li>
 <li><strong>Dim</strong>
 <ul>
-<li><span class="math inline">[x] \subset xH</span>
+<li><span class="math inline">[x] \subseteq xH</span>
 <ul>
 <li><span class="math inline">y \in[x] \implies y \sim x \implies x \sim
 y \implies \exists h:= x^{-1}y \in H</span> <span
@@ -705,41 +783,12 @@ in quanto <span class="math inline">H</span> è sottogruppo, quindi <span
 class="math inline">y \in [x] \implies \exists h \in H \mid y = xh \in H
 \implies y \in xH</span></li>
 </ul></li>
-<li><span class="math inline">xH \subset [x]</span>
+<li><span class="math inline">xH \subseteq [x]</span>
 <ul>
 <li><span class="math inline">y \in x H \implies \exists h \in H \mid
 y=x h \implies x^{-1}y = x^{-1}xh= h</span>, quindi <span
 class="math inline">h \in H \implies x^{-1}y \in H \implies x \sim y
 \implies y \in [x]</span></li>
-</ul></li>
-</ul></li>
-</ul>
-<a href="#oss-8"><h2 id="oss-8">Oss</h2></a>
-<ul>
-<li><strong>Hp</strong>
-<ul>
-<li><span class="math inline">G</span> gruppo</li>
-<li><span class="math inline">H \subset G</span> sottogruppo</li>
-<li><span class="math inline">x \in G</span></li>
-</ul></li>
-<li><strong>Th</strong>
-<ul>
-<li><span class="math inline">| xH |= |H|</span></li>
-</ul></li>
-<li><strong>Dim</strong>
-<ul>
-<li><span class="math inline">\forall h, k \in H \quad h \neq k \iff xh
-\neq xk</span>, quindi simmetricamente <span class="math inline">h = k
-\iff xh = xk</span>, di conseguenza è possibile definire una funzione
-<span class="math inline">H \rightarrow xH : h \rightarrow xh</span>
-<ul>
-<li>la funzione è suriettiva per costruzione, perché <span
-class="math inline">\forall h \quad \exists xh</span></li>
-<li>la funzione è iniettiva perché <span class="math inline">xh</span> è
-univoco <span class="math inline">\forall x, h</span></li>
-<li>la funzione è biiettiva, di conseguenza insieme di partenza e di
-arrivo hanno la stessa cardinalità, quindi <span class="math inline">|H|
-= |xH|</span></li>
 </ul></li>
 </ul></li>
 </ul>
@@ -749,21 +798,41 @@ arrivo hanno la stessa cardinalità, quindi <span class="math inline">|H|
 <ul>
 <li><span class="math inline">G</span> gruppo</li>
 <li><span class="math inline">H \subset G</span> sottogruppo</li>
-<li><span class="math inline">+: G/H \times G/H \rightarrow
-G/H</span></li>
+<li><span class="math inline">x \in G</span></li>
 </ul></li>
 <li><strong>Th</strong>
 <ul>
-<li><span class="math inline">(G/H, +)</span> è gruppo abeliano</li>
+<li><span class="math inline">|xH| = |H|</span></li>
 </ul></li>
 <li><strong>Dim</strong>
 <ul>
-<li>bisogna dimostrare che <span class="math inline">+</span> è un
-operazione ben definita</li>
+<li>è possibile definire una funzione <span class="math inline">\varphi:
+H \rightarrow xH : h \rightarrow xh</span></li>
+<li><span class="math inline">\forall h, k \in H \mid h \neq k \quad xh
+\neq xk \implies \varphi</span> iniettiva</li>
+<li><span class="math inline">\forall xh \in xH \quad \exists h \in H
+\mid \varphi(x) = xh \implies \varphi</span> suriettiva</li>
+<li><span class="math inline">\varphi</span> biiettiva <span
+class="math inline">\implies |H| = |xH|</span></li>
+</ul></li>
+</ul>
+<a href="#oss-10"><h2 id="oss-10">Oss</h2></a>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">(G, +)</span> gruppo abeliano</li>
+<li><span class="math inline">H \subset G</span> sottogruppo</li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">(G/H, +)</span> è gruppo abeliano, dove
+<span class="math inline">+: G/H \times G/H \rightarrow G/H</span></li>
+</ul></li>
+<li><strong>Dim</strong>
+<ul>
 <li><span class="math inline">+</span> ben definita <span
-class="math inline">\iff</span><span class="math inline">\left.\forall
-x, x^{\prime}, y, y&#39; \in G \quad
-\begin{array}{l}{[x]=\left[x^{\prime}\right]} \\
+class="math inline">\iff\left.\forall x, x^{\prime}, y, y&#39; \in G
+\quad \begin{array}{l}{[x]=\left[x^{\prime}\right]} \\
 {[y]=\left[y^{\prime}\right]}\end{array}\right\}
 \implies[x+y]=\left[x^{\prime}+y&#39; \right]</span>
 <ul>
@@ -773,12 +842,12 @@ sistema precedente è equivalente a <span
 class="math inline">\left.\begin{array}{l}x \sim x^{\prime} \\ y \sim
 y^{\prime}\end{array}\right\} \implies x+y \sim
 x^{\prime}+y^{\prime}</span></li>
-<li><span class="math inline">x \sim x&#39; \iff (-x)+x&#39; \in H
-\implies x&#39; - x \in H</span></li>
-<li><span class="math inline">y \sim y&#39; \iff (-y) +y&#39; \in H
-\implies y&#39; - y \in H</span></li>
-<li><span class="math inline">H</span> è sottogruppo, di conseguenza
-<span class="math inline">(x&#39;-x)+(y&#39;-y) \in H \implies
+<li><span class="math inline">x \sim x&#39; \iff (-x)+x&#39; \in H \iff
+x&#39; - x \in H</span></li>
+<li><span class="math inline">y \sim y&#39; \iff (-y) +y&#39; \in H \iff
+y&#39; - y \in H</span></li>
+<li><span class="math inline">H</span> è sottogruppo, allora <span
+class="math inline">(x&#39;-x)+(y&#39;-y) \in H \implies
 -(x+y)+(x&#39;+y&#39;) \in H \iff x +y \sim x&#39;+y&#39;</span></li>
 </ul></li>
 <li><span class="math inline">(G/H, +)</span> gruppo abeliano
@@ -795,6 +864,87 @@ x] = [x]</span>, e <span class="math inline">[0] \in G/H</span> perché
 +x]=[0]</span><span class="math inline">\implies -[x] = [-x]</span></li>
 <li><span class="math inline">[x]+[y]=[x+y]=[y+x]=[y]+[x]</span></li>
 </ul></li>
+</ul></li>
+</ul>
+<a href="#oss-11"><h2 id="oss-11">Oss</h2></a>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">(A, +, \cdot)</span> anello
+commutativo</li>
+<li><span class="math inline">I \subset A</span> ideale</li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">(A/I, +, \cdot)</span> è anello
+commutativo, dove <span class="math inline">+, \cdot : A/I \times A/I
+\rightarrow A/I</span></li>
+</ul></li>
+<li><strong>Dim</strong>
+<ul>
+<li><span class="math inline">+</span> è ben definita per dimostrazione
+precedente, poiché <span class="math inline">(I, +) \subset (A,
++)</span> gruppo abeliano per definizione di <span
+class="math inline">I</span></li>
+<li><span class="math inline">\cdot</span> ben definita <span
+class="math inline">\iff\left.\forall x, x^{\prime}, y, y&#39; \in A
+\quad \begin{array}{l}{[x]=\left[x^{\prime}\right]} \\
+{[y]=\left[y^{\prime}\right]}\end{array}\right\}
+\implies[xy]=\left[x^{\prime}y&#39; \right]</span>
+<ul>
+<li><span class="math inline">\forall k, k&#39; \in A \quad
+[k]=\left[k^{\prime}\right] \iff k \sim k^{\prime}</span>, dunque il
+sistema precedente è equivalente a <span
+class="math inline">\left.\begin{array}{l}x \sim x^{\prime} \\ y \sim
+y^{\prime}\end{array}\right\} \implies xy \sim
+x^{\prime}y^{\prime}</span></li>
+<li><span class="math inline">x \sim x&#39; \iff (-x)+x&#39; \in I \iff
+i_1:=x&#39; - x \in I</span></li>
+<li><span class="math inline">y \sim y&#39; \iff (-y) +y&#39; \in I \iff
+i_2:=y&#39; - y \in I</span></li>
+<li><span class="math inline">I</span> ideale <span
+class="math inline">\implies A \cdot I \subseteq I \implies \forall a
+\in A, i \in I \quad a i \in I</span>, in particolare <span
+class="math inline">i_1y&#39;, xi_2 \in I</span></li>
+<li><span class="math inline">(I, +) \subset (A, +)</span> sottogruppo,
+allora <span class="math inline">i_1y&#39; + xi_2 \in I</span></li>
+<li><span class="math inline">i_1y&#39; + xi_2 = (x&#39;-x)y&#39; +
+x(y&#39;-y) = x&#39;y&#39; - xy&#39; + xy&#39; - xy = x&#39;y&#39; - xy
+\in I \iff x&#39;y \sim xy</span></li>
+</ul></li>
+<li><span class="math inline">(A/I, +, \cdot)</span> anello commutativo
+<ul>
+<li><span class="math inline">\forall [x], [y], [z] \in A/I \quad
+([x][y])[x] = [xy][z] = [xyz] = [x][yz] = [x]([y][z])</span></li>
+<li><span class="math inline">\forall [x] \in A/I \quad
+[x][1]=[1][x]=[x]</span> e <span class="math inline">[1] \cdot [x] = [1
+\cdot x] = [x]</span>, e <span class="math inline">[1] \in A/I</span>
+perché <span class="math inline">A</span> anello</li>
+<li><span class="math inline">\forall [x] \in A/I \quad
+[x]\cdot[x^{-1}]=[x \cdot x^{-1}]=[1]</span> e <span
+class="math inline">[x^{-1}] \cdot[x]=[x^{-1} \cdot x]=[1] \implies
+[x]^{-1} = [x^{-1}]</span></li>
+<li><span class="math inline">[x][y] = [xy] = [yx] = [y][x]</span></li>
+</ul></li>
+</ul></li>
+</ul>
+<a href="#oss-12"><h2 id="oss-12">Oss</h2></a>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">(G, \cdot)</span> gruppo</li>
+<li><span class="math inline">H \subset G</span> sottogruppo
+normale</li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">(G/H, \cdot)</span> è gruppo abeliano,
+dove <span class="math inline">\cdot: G/H \times G/H \rightarrow
+G/H</span></li>
+</ul></li>
+<li><strong>Dim</strong>
+<ul>
+<li>⚠️ todo</li>
 </ul></li>
 </ul>
 </body>

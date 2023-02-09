@@ -11,17 +11,23 @@
 # Teorema della divisione euclidea con il resto
 
 - **Hp**
-  - $m \in \mathbb{Z}$
-  - $n \in \mathbb{Z} - \{0\}$
+    - $m \in \mathbb{Z}$
+    - $n \in \mathbb{Z} - \{0\}$
 - **Th**
-  - $\exists !  \ q, r \in \mathbb{Z} \mid m=n q+r \quad 0 \leq r<n$
+    - $\exists !  \ q, r \in \mathbb{Z} \mid m=n q+r \quad 0 \leq r<n$
 - **Dim**
-  - _esistenza_
-    - sia $[m] \in \mathbb{Z}_n$
-    - $a \equiv m \ (\bmod \ n) \iff \exists p_1 \in \mathbb{Z} \mid np_1 = m - a$
-    - $r:=\min(\{a \in \mathbb{Z} \mid a \in [m], a \ge 0\})$
-    - $r \in [m] \iff \exists p_2 \in \mathbb{Z} \mid np_2 = m - r  \iff r = m - np_2 \iff m = np_2 +r$
-    - ⚠️ **INCOMPLETA**
+    - _esistenza_
+        - $[m]_n := \{r \in \mathbb{Z} \mid x \equiv m \ (\bmod \ n) \iff \exists q \in \mathbb{Z} \mid nq = m - x \iff x = m - nq\}$
+        - allora esiste $r:=\min(\{a \in [m]_n \mid a \ge 0 \})$ per il principio del minimo numero
+        - in particolare, per definizione $r \ge 0$
+        - per assurdo $r \ge n \implies r - n \ge 0$
+        - $r \in [m]_n \implies \exists q \in \mathbb{Z} \mid r = m - nq \implies r - n = (m - nq) - n = m - nq - n = m - n (q + 1) \in [m]_n$ per definizione, e in particolare $r - n \in [m]_n$
+        - $n \neq 0 \implies r - n \lt r \implies r$ non è il minimo in $[m]_n \ \bot$
+    - _unicità_
+        - per assurdo $\exists q_1, q_2, r_1, r_2 \in \mathbb{Z} \mid \left \{ \begin{array}{l} m = nq_1 + r_1 && 0 \le r_1 \lt n \\ m = nq_2 + r_2 && 0 \le r_2 \lt n\end{array}\right.$
+        - allora $nq_1 + r_1 = m = nq_2 + r_2 \iff n(q_1 - q_2) = r_2 - r_1 \implies n \mid r_2 - r_1$
+        - $0 \le r_1, r_2 \lt n \implies -n \lt r_2 - r_1 \lt n$, e in particolare $r_2 - r_1 \neq \pm n$, allora poiché $n \mid r_2 - r_1$ necessariamente $r_2 - r_1 = 0$
+        - $n = 0 \implies nq_1 + r_1 = n q_2 + r_2 \iff r_1 = r_2$, e dagli stessi calcoli segue che $q_1 = q_2$
 
 ## Oss
 
@@ -37,14 +43,14 @@
 
 - **Hp**
   - $G$ gruppo finito
-  - $H \subset G$ sottogruppo finito
+  - $H \subset G$ sottogruppo
 - **Th**
-  - $|G| = |H| \cdot |G / H|$
+  - $|G| = |G / H| \cdot |H|$
 - **Dim**
-  - $G$ è decomponibile attraverso l'unione disgiunta delle sue classi laterali sinistre, poiché ogni relazione di equivalenza induce una partizione per dimostrazione precedente
-  - in particolare, ogni classe laterale sinistra è equivalente a $xH$ per opportuni $x \in G$, e hanno tutte cardinalità $|H|$ per dimostrazione precedente
-  - $G = X_1 \coprod X_2 \coprod \ldots \coprod X_k \implies |G| = |X_1| + |X_2| + \ldots  + |X_k|$ poiché ogni $X_i$ è una partizione, e dunque disgiunta con le altre, e poiché sono tutte classi laterali sinistre hanno tutte cardinalità $|H|$
-  - dunque, $|G| = k \cdot |H|$, dove $k$ corrisponde al numero di classi laterali, che è proprio $|G/H| \implies |G| = |H| \cdot |G/H|$
+  - $G = \displaystyle \coprod_{[x] \in G/H}{[x]}$ per dimostrazione precedente
+  - $\forall x \in G \quad |[x]| = |xH| = |H|$ per dimostrazione precedente
+  - poiché l'intersezione è disgiunta $|G| = k \cdot |[x]| = k \cdot |H|$
+  - allora segue che $k = |G/H|$, ovvero al numero di partizioni, e dunque $|G| = |G/H| \cdot |H|$
 
 ****
 
@@ -118,9 +124,9 @@
   - $|X|=|Y|<\infty \implies f: X \rightarrow Y$ iniettiva $\iff$ $f$ suriettiva
     - applicando questa osservazione, $\phi$ iniettiva $\implies \phi$ suriettiva, in quanto, per l'osservazione precedente, insieme di partenza e di arrivo di $\phi$ hanno la stessa cardinalità $\left| \mathbb{Z}_m \right|$
   - $\phi$ suriettiva $\implies$ $\exists x \mid x \ (\bmod m)$ è soluzione del sistema
-    - $\varphi(x \ (\bmod m))=\left(b_{1}\ \left( \bmod  a_{1}\right), \ldots, b_{n} \ (\bmod a_{n})\right)$, e poiché $\phi$ è suriettiva, allora ogni tupla di $n$ elementi dell'insieme di arrivo, che descrive un sistema come in ipotesi, ha una controimmagine $x \ (\bmod m)$, e $x \ (\bmod m)\in \mathbb{Z}_m$ per definizione, dunque _esiste sempre una soluzione_
-  - $\phi$ iniettiva $\implies$ $\exists ! x \mid x \ (\bmod m)$ è soluzione del sistema
-    - poiché $\phi$ è iniettiva, $x \ (\bmod m) \in \mathbb{Z}_m$ è unica, dunque _la soluzione è sempre unica_
+    - $\varphi(x \ (\bmod \ m))=\left(b_{1}\ \left( \bmod \  a_{1}\right), \ldots, b_{n} \ (\bmod a_{n})\right)$, e poiché $\phi$ è suriettiva, allora ogni tupla di $n$ elementi dell'insieme di arrivo, che descrive un sistema come in ipotesi, ha una controimmagine $x \ (\bmod \ m)$, e $x \ (\bmod \ m)\in \mathbb{Z}_m$ per definizione, dunque esiste sempre una soluzione
+  - $\phi$ iniettiva $\implies$ $\exists ! x \mid x \ (\bmod \ m)$ è soluzione del sistema
+    - poiché $\phi$ è iniettiva, $x \ (\bmod \ m) \in \mathbb{Z}_m$ è unico, dunque la soluzione è sempre unica
 
 ## Cor
 
@@ -148,19 +154,15 @@
 # Teorema del binomio di Newton
 
 - **Hp**
-  - $A$ anello commutativo
-  - $a, b \in A$
-  - $n \in \mathbb{N}$
+    - $A$ anello commutativo
+    - $a, b \in A$
+    - $n \in \mathbb{N}$
 - **Th**
-  - $(a+b )^n = \displaystyle{\sum_{k = 0}^{n}{\binom{n}{k} a^k b ^{n - k}}}$
+    - $(a+b )^n = \displaystyle{\sum_{k = 0}^{n}{\binom{n}{k} a^k b ^{n - k}}}$
 - **Dim**
-  - $n = 0 \implies (a+b)^0 = \displaystyle{\sum_{k = 0}^{0}{\binom{0}{k}a^kb^{0 - k}}} = \binom{0}{0}a^0b^0=1$
-  - $(a+ b)^{n + 1} = (a+b)^{n }\cdot (a+b)$
-  - ⚠️ **INCOMPLETA**
-
-## Cor
-
-- ⚠️ **NON HO CAPITO UN CAZZO**
+    - $n = 0 \implies (a+b)^0 = \displaystyle{\sum_{k = 0}^{0}{\binom{0}{k}a^kb^{0 - k}}} = \binom{0}{0}a^0b^0=1$
+    - $n \ge 1 \implies (a+ b)^{n + 1} = (a+b) \cdot (a+b)^n = (a + b) \cdot \displaystyle \sum_{k = 0}^{n}{\binom{n}{k} a^k b^{n - k}} = \sum_{k = 0}^n{\binom{n}{k} a^{k +1}b^{n - k}}$
+    - ⚠️ **NON HO CAPITO UN CAZZO**
 
 ****
 

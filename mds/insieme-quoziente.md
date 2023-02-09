@@ -7,32 +7,27 @@
 > - $G$ gruppo
 > - $\sim$ relazione di equivalenza in $G$
 > - $\forall x \in G \quad [x]:=\{y \in G \mid x \sim y\}$
-> - $G/\sim := \{[x] \mid x \in G\}$ è l'**insieme quoziente**, ovvero l'insieme delle classi di equivalenza determinate da $\sim$
+> - $G/\sim := \{[x] \mid x \in G\}$ è detto **insieme quoziente**, ovvero l'insieme delle classi di equivalenza determinate da $\sim$
 
 ## Def
 
 - **Insieme quoziente $\mathbb{Z}_n$**
 
-> - $(\mathbb{Z}, +, \cdot)$ anello, in particolare $(\mathbb{Z}, +)$ gruppo
 > - $n \in \mathbb{Z}$
-> - $\mathbb{Z}/\equiv$ è l'insieme delle classi di equivalenza definite dalla relazione di equivalenza $\equiv$
-> - $m \equiv r \ (\bmod \ n)\iff r \equiv m \ (\bmod \ n) \implies n \mid m - r \implies \exists q \in \mathbb{Z} \mid nq = m - r \implies m = nq + r \quad 0 \le r \lt n$
-> - $0 \le r \lt n \implies$ è possibile definire $\mathbb{Z}_n := \{[0], [1], \ldots, [n - 1]\}$, che coincide con $\mathbb{Z}/\equiv$
+> - $\mathbb{Z}_n := \mathbb{Z} / \equiv$ è detto **insieme quoziente $\mathbb{Z}_n$**
 
 ## Oss
 
 - **Hp**
-  - $n \in \mathbb{Z}$
-  - $I(n) := \{nk \mid k \in \mathbb{Z}\}$
+    - $n \in \mathbb{Z}$
+    - $I(n) := \{nk \mid k \in \mathbb{Z}\}$
 - **Th**
-  - $(\mathbb{Z}_n, +)$ è un gruppo
+    - inoltre, questo implica che $\mathbb{Z}_n = \{[0], \ldots, [n - 1]\}$
 - **Dim**
-  - per dimostrazione precedente, $I(n)$ è un sottogruppo, quindi ha senso definire $\mathbb{Z}/I(n)$, che conterrà le classi laterali sinistre definite in $\mathbb{Z}$ rispetto a $I(n)$, che per dimostrazione precedente corrispondono alle classi di equivalenza definite da $\equiv$
-  - infatti, $\mathbb{Z}/\equiv:=\{[x] \mid x \in \mathbb{Z}\}$ dove $[x] := \{ y \in \mathbb{Z} \mid x \equiv y \ (\bmod \ n) \iff n \mid x - y \iff \exists q \in \mathbb{Z} \mid n q = x - y \iff x - y \in I(n)\} =: \mathbb{Z}/I(n)$
-  - di conseguenza, $\mathbb{Z}/I(n) = \mathbb{Z}/ \equiv \textrm{} = \mathbb{Z}_n$ 
-  - per dimostrazione precedente, la somma tra classi di equivalenza è ben definita, di conseguenza è possibile definire la struttura di gruppo $(\mathbb{Z}_n, +)$
+    - $\forall x \in \mathbb{Z} \quad [x] := \{ y \in \mathbb{Z} \mid x \equiv y \ (\bmod \ n) \iff n \mid x - y \iff \exists q \in \mathbb{Z} \mid n q = x - y \iff x - y \in I(n)\} \implies \mathbb{Z}/I(n) = \mathbb{Z}/\equiv \ =: \mathbb{Z}_n$
+    - allora necessariamente $\mathbb{Z}_n = \{[0], \ldots, [n - 1]\}$
 
-## Lem
+## Oss
 
 - **Hp**
   - $p \in \mathbb{P}$
@@ -41,8 +36,8 @@
 - **Th**
   - $p \mid a \lor p \mid b$
 - **Dim**
-  - $p \mid ab \implies p$ compare nella fattorizzazione in numeri primi di $ab$
-  - allora $p$ è nella fattorizzazione di $a$, e quindi $p \mid a$, oppure $p$ è nella fattorizzazione di $b$, e quindi $p \mid b$
+  - $p \mid ab \implies p$ è nella fattorizzazione in numeri primi di $ab$
+  - $p \in \mathbb{P}$, allora $p$ è nella fattorizzazione di $a$, e quindi $p \mid a$, oppure $p$ è nella fattorizzazione di $b$, e quindi $p \mid b$
 
 ## Oss
 
@@ -52,13 +47,13 @@
   - $\mathbb{Z}_n$ dominio di integrità $\iff n \in \mathbb{P}$
 - **Dim**
   - _prima implicazione_
-    - ipotizzando che $n \notin \mathbb{P} \implies \exists a, b \in \mathbb{Z} \mid n = ab \quad 0 \lt a, b \lt n$ per definizione
+    - per assurdo, ipotizzando $n \notin \mathbb{P} \implies \exists a, b \in \mathbb{Z} \mid n = ab \quad 0 \lt a, b \lt n$ per definizione
         - in particolare $a, b \neq 0$
     - $n = ab \iff [n] = [ab]$ in $\mathbb{Z}_n$
     - $[n] = [0]$ in $\mathbb{Z}_n$, dunque $[ab] = [0]$
     - $\mathbb{Z}_n$ dominio di integrità $\implies$ in $\mathbb{Z}_n$ vale la legge di annullamento del prodotto, e dunque $[ab] = [0] \iff [a] = 0 \lor [b] = [0] \ \bot$
   - _seconda implicazione_
-    - ipotizzando che $\mathbb{Z}_n$ non sia dominio di integrità, e dunque $\exists[a] \in \mathbb{Z}_n : [a] \neq [0], a \mid 0$
+    - per assurdo, ipotizzando $\mathbb{Z}_n$ non sia dominio di integrità $\implies \exists[a] \in \mathbb{Z}_n : [a] \neq [0], a \mid 0$
     - $a \mid 0 \implies \exists b \in \mathbb{Z} \mid [a][b] = [0] \quad b \neq 0$
     - $[0]=[a][b] \iff [0]=[ab] \iff 0 \equiv ab \ (\bmod \  n) \iff n \mid ab - 0 \iff n \mid ab$
     - $n \in \mathbb{P}$, allora $n \mid ab \implies n \mid a \lor n \mid b$ per dimostrazione precedente
@@ -69,10 +64,11 @@
 
 - **Hp**
   - $n \in \mathbb{Z}$
+  - $[a] \in \mathbb{Z}_n \quad$
 - **Th**
-  - $\forall [a] \in \mathbb{Z}_n \quad \textrm{MCD}(a, n) = 1 \iff [a] \in \mathbb{Z}^*_n$
+  - $[a] \in \mathbb{Z}^*_n \iff \textrm{MCD}(a, n) = 1$
 - **Dim**
-  - $[a] \in \mathbb{Z}^*_n \implies \textrm{MCD}(a, n) = 1$
+  - _prima implicazione_
     - $[a] \in \mathbb{Z}_n^* \implies \exists b \in \mathbb{Z} \mid [a][b] = [1] \quad 0 \lt b \lt n \iff ab \equiv 1 \ (\bmod \ n) \iff n \mid 1 - ab \iff \exists k \in \mathbb{Z} \mid nk = 1 - ab$
     - allora $\exists b, k \in \mathbb{Z} \mid n k = 1 - ab \iff 1 = nk + ab$
     - $d : = \textrm{MCD}(a, n)$
@@ -81,7 +77,7 @@
       - $d \mid n \implies \exists y \in \mathbb{Z} \mid dy = n$
     - $1 = nk + ab \iff 1 = dyk + dxb = d(yk + xb) \implies \exists yk + xb \in \mathbb{Z} \mid 1 = d(yk +xb) \implies d \mid 1$
     - $d \mid 1 \iff d = \pm 1$, ma $d := \textrm{MCD}(a, n) \implies d \ge 0 \implies d = 1$
-  - $\textrm{MCD}(a, n) = 1 \implies [a] \in \mathbb{Z}^*_n$
+  - _seconda implicazione_
     - $d := \textrm{MCD}(a, n) = 1$
     - per dimostrazione precedente, $I(d) = I(a, n) \implies d \in I(a, n) \implies \exists b, k \in \mathbb{Z} \mid d = ab + nk$ per definizione di $I(a, n)$, allora $d = 1 = ab + nk \iff nk = 1 - ab \iff n \mid 1 - ab \iff ab \equiv 1 \ (\bmod \ n) \implies [a][b] = [1]$ in $\mathbb{Z}_n$, dunque sono uno l'inverso dell'altro, e in particolare $[a] = [b]^{-1} \implies \exists [b] \in \mathbb{Z}_n \mid [a]\in \mathbb{Z}_n^*$
 

@@ -248,7 +248,6 @@ I \subseteq I \implies I \cdot A \subseteq I</span></li>
 <ul>
 <li><strong>Hp</strong>
 <ul>
-<li>⚠️ **ATTENZIONE: da rileggere</li>
 <li><span class="math inline">A</span> dominio di integrità</li>
 <li><span class="math inline">a, b \in A</span></li>
 </ul></li>
@@ -373,67 +372,7 @@ a_1(-b_1) + \ldots + a_n(-b_n)</span>, che per definizione implica che
 class="math inline">cx \in I(a_1, \ldots, a_n)</span></li>
 </ul></li>
 </ul>
-<a href="#def-1"><h2 id="def-1">Def</h2></a>
-<ul>
-<li><strong>Congruenza modulo di un ideale</strong></li>
-</ul>
-<blockquote>
-<ul>
-<li><span class="math inline">(A, +, \cdot)</span> anello</li>
-<li><span class="math inline">I \subset A</span> ideale</li>
-<li>per definizione, <span class="math inline">I</span> ideale <span
-class="math inline">\implies(I, +) \subset (A, +)</span> sottogruppo,
-dunque ha senso definire <span class="math inline">A/I</span>, e infatti
-<span class="math inline">I</span> induce una relazione di equivalenza
-su <span class="math inline">A</span> detta <strong>congruenza modulo
-<span class="math inline">I</span></strong>, dove <span
-class="math inline">\forall a, b \in A \quad a \equiv b \ (\bmod \ I)
-\iff b - a \in I</span></li>
-<li><span class="math inline">b -a \in I \iff (-a) + b \in I</span>, di
-conseguenza questa congruenza coincide con la classe laterale sinistra
-di <span class="math inline">(A, +)</span></li>
-</ul>
-</blockquote>
 <a href="#oss-4"><h2 id="oss-4">Oss</h2></a>
-<ul>
-<li><strong>Hp</strong>
-<ul>
-<li><span class="math inline">(A, +, \cdot)</span> anello</li>
-<li><span class="math inline">I \subset A</span> ideale</li>
-<li><span class="math inline">+: A/I \times A/I \rightarrow
-A/I</span></li>
-<li><span class="math inline">\cdot : A/I \times A/I \rightarrow
-A/I</span></li>
-</ul></li>
-<li><strong>Th</strong>
-<ul>
-<li><span class="math inline">(A/I, +, \cdot)</span> è un anello</li>
-</ul></li>
-<li><strong>Dim</strong>
-<ul>
-<li><span class="math inline">(A/I, +)</span> è un gruppo abeliano
-<ul>
-<li><span class="math inline">+</span> è un’operazione ben definita per
-dimostrazione precedente, dunque le proprietà di gruppo abeliano sono
-rispettate per come l’operazione è definita</li>
-</ul></li>
-<li><span class="math inline">(A/I, \cdot)</span> è monoide
-<ul>
-<li><span class="math inline">\cdot</span> è un’operazione ben definita
-per dimostrazione analoga, dunque le proprietà di monoide sono
-rispettate per come l’operazione è definita</li>
-</ul></li>
-<li>proprietà distributiva
-<ul>
-<li>per come <span class="math inline">+</span> e <span
-class="math inline">\cdot</span> sono definite, segue che <span
-class="math inline">\forall [x],[y],[z] \in A/I \quad
-[x]([y]+[z])=[x][y+z]=[x(y+z)]=[x y+x z]=[x y]+[x z]
-=[x][y]+[x][z]</span></li>
-</ul></li>
-</ul></li>
-</ul>
-<a href="#oss-5"><h2 id="oss-5">Oss</h2></a>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -447,7 +386,10 @@ class="math inline">\mathbb{Z}</span> ogni ideale è principale</li>
 </ul></li>
 <li><strong>Dim</strong>
 <ul>
+<li>⚠️ da rivedere</li>
 <li><em>esistenza</em>
+<ul>
+<li><span class="math inline">d = 0</span>
 <ul>
 <li><span class="math inline">I = \{0\} \implies I = I(0)</span> poiché
 i multipli di <span class="math inline">0</span> sono tutti pari a <span
@@ -455,8 +397,7 @@ class="math inline">0</span></li>
 <li>se invece <span class="math inline">I \neq \{0\} \implies I \cap
 \mathbb{Z}_{&gt;0} \neq \varnothing</span>, dunque <span
 class="math inline">I</span> contiene almeno un numero non nullo, in
-particolare positivo
-<ul>
+particolare positivo</li>
 <li>è possibile considerare solo il caso dei positivi in quanto<span
 class="math inline">\forall x \in I - \{0\} \quad x &lt; 0 \iff
 (-x)&gt;0</span>, e <span class="math inline">(-x) \in I</span> per
@@ -469,7 +410,7 @@ contenuto in <span class="math inline">I</span></li>
 <li><span class="math inline">I(d)=I \implies I(d) \subset I \wedge I
 \subset I(d)</span>
 <ul>
-<li><span class="math inline">I(d) \subset I</span>
+<li><span class="math inline">I(d) \subseteq I</span>
 <ul>
 <li><span class="math inline">\forall x \in I(d) \quad \exists y \in
 \mathbb{Z} \mid x = dy</span> per definizione</li>
@@ -482,7 +423,7 @@ I</span></li>
 \implies d \in I \implies y \in \mathbb{Z} \land d \in I \implies dy \in
 I \implies x \in I \implies I(d) \subset I</span></li>
 </ul></li>
-<li><span class="math inline">I \subset I(d)</span>
+<li><span class="math inline">I \subseteq I(d)</span>
 <ul>
 <li><span class="math inline">d := \min(I \cap \mathbb{Z}_{\gt 0})
 \implies d \neq 0</span></li>
@@ -522,14 +463,14 @@ class="math inline">I(-d)</span>, in quanto <span
 class="math inline">I(d) = I(-d)</span> per dimostrazione
 precedente</li>
 </ul></li>
-<li>quindi, ogni ideale in <span class="math inline">\mathbb{Z}</span> è
+<li>dunque, ogni ideale in <span class="math inline">\mathbb{Z}</span> è
 generato dall’insieme dei multipli di un certo <span
 class="math inline">d \ge 0</span>, che esiste sempre ed è unico, e di
 conseguenza <span class="math inline">\mathbb{Z}</span> è un anello ad
 ideali principali</li>
 </ul></li>
 </ul>
-<a href="#oss-6"><h2 id="oss-6">Oss</h2></a>
+<a href="#oss-5"><h2 id="oss-5">Oss</h2></a>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -575,7 +516,7 @@ precedente si ottiene che <span class="math inline">d = kx_1b_1 + \ldots
 </ul></li>
 </ul></li>
 </ul>
-<a href="#def-2"><h2 id="def-2">Def</h2></a>
+<a href="#def-1"><h2 id="def-1">Def</h2></a>
 <ul>
 <li><strong>Massimo Comun Divisore</strong></li>
 </ul>
@@ -599,7 +540,7 @@ precedente</li>
 </ul></li>
 </ul>
 </blockquote>
-<a href="#oss-7"><h2 id="oss-7">Oss</h2></a>
+<a href="#oss-6"><h2 id="oss-6">Oss</h2></a>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -623,14 +564,14 @@ quindi <span class="math inline">d \in I(a_1, \ldots, a_n) \implies
 d</span></li>
 </ul></li>
 </ul>
-<a href="#oss-8"><h2 id="oss-8">Oss</h2></a>
+<a href="#oss-7"><h2 id="oss-7">Oss</h2></a>
 <ul>
 <li>⚠️ <strong>MANCA DIMOSTRAZIONE SISTEMA DI IDENTITÀ DI
 BÉZOUT</strong></li>
 </ul>
 <hr />
 <a href="#operazioni-sugli-ideali"><h1 id="operazioni-sugli-ideali">Operazioni sugli ideali</h1></a>
-<a href="#def-3"><h2 id="def-3">Def</h2></a>
+<a href="#def-2"><h2 id="def-2">Def</h2></a>
 <ul>
 <li><strong><span class="math inline">+</span> tra ideali</strong></li>
 </ul>
@@ -644,7 +585,7 @@ J\}</span> è detta <strong>somma tra <span class="math inline">I</span>
 e <span class="math inline">J</span></strong></li>
 </ul>
 </blockquote>
-<a href="#oss-9"><h2 id="oss-9">Oss</h2></a>
+<a href="#oss-8"><h2 id="oss-8">Oss</h2></a>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -683,7 +624,7 @@ class="math inline">ai \in I, aj \in J</span> per definizione, quindi
 </ul></li>
 </ul></li>
 </ul>
-<a href="#def-4"><h2 id="def-4">Def</h2></a>
+<a href="#def-3"><h2 id="def-3">Def</h2></a>
 <ul>
 <li><strong><span class="math inline">\cap</span> tra
 ideali</strong></li>
@@ -699,7 +640,7 @@ class="math inline">I</span> e <span
 class="math inline">J</span></strong></li>
 </ul>
 </blockquote>
-<a href="#oss-10"><h2 id="oss-10">Oss</h2></a>
+<a href="#oss-9"><h2 id="oss-9">Oss</h2></a>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -726,7 +667,7 @@ x \in J \implies x^{-1} \in I \land x ^{-1} \in J \implies x^{-1} \in I
 \cap J</span></li>
 </ul></li>
 </ul>
-<a href="#def-5"><h2 id="def-5">Def</h2></a>
+<a href="#def-4"><h2 id="def-4">Def</h2></a>
 <ul>
 <li><strong>Minimo Comune Multiplo</strong></li>
 </ul>
@@ -741,7 +682,7 @@ multiplo degli <span class="math inline">a_1, \ldots,
 a_n</span></strong></li>
 </ul>
 </blockquote>
-<a href="#def-6"><h2 id="def-6">Def</h2></a>
+<a href="#def-5"><h2 id="def-5">Def</h2></a>
 <ul>
 <li><strong><span class="math inline">\cdot</span> tra
 ideali</strong></li>
@@ -758,7 +699,7 @@ class="math inline">I</span> e <span
 class="math inline">J</span></strong></li>
 </ul>
 </blockquote>
-<a href="#oss-11"><h2 id="oss-11">Oss</h2></a>
+<a href="#oss-10"><h2 id="oss-10">Oss</h2></a>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -793,7 +734,7 @@ I</span>, allora <span class="math inline">\forall x \in I \cdot J \quad
 J</span></li>
 </ul></li>
 </ul>
-<a href="#oss-12"><h2 id="oss-12">Oss</h2></a>
+<a href="#oss-11"><h2 id="oss-11">Oss</h2></a>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -823,7 +764,7 @@ ideali, ottenendo <span class="math inline">I(a_1) + \ldots + I(a_n) =
 I(\textrm{MCD}(a_1, \ldots, a_n))</span></li>
 </ul></li>
 </ul>
-<a href="#oss-13"><h2 id="oss-13">Oss</h2></a>
+<a href="#oss-12"><h2 id="oss-12">Oss</h2></a>
 <ul>
 <li><strong>Hp</strong>
 <ul>

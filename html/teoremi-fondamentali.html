@@ -217,14 +217,39 @@ q+r \quad 0 \leq r&lt;n</span></li>
 <ul>
 <li><em>esistenza</em>
 <ul>
-<li>sia <span class="math inline">[m] \in \mathbb{Z}_n</span></li>
-<li><span class="math inline">a \equiv m \ (\bmod \ n) \iff \exists p_1
-\in \mathbb{Z} \mid np_1 = m - a</span></li>
-<li><span class="math inline">r:=\min(\{a \in \mathbb{Z} \mid a \in [m],
-a \ge 0\})</span></li>
-<li><span class="math inline">r \in [m] \iff \exists p_2 \in \mathbb{Z}
-\mid np_2 = m - r \iff r = m - np_2 \iff m = np_2 +r</span></li>
-<li>⚠️ <strong>INCOMPLETA</strong></li>
+<li><span class="math inline">[m]_n := \{r \in \mathbb{Z} \mid x \equiv
+m \ (\bmod \ n) \iff \exists q \in \mathbb{Z} \mid nq = m - x \iff x = m
+- nq\}</span></li>
+<li>allora esiste <span class="math inline">r:=\min(\{a \in [m]_n \mid a
+\ge 0 \})</span> per il principio del minimo numero</li>
+<li>in particolare, per definizione <span class="math inline">r \ge
+0</span></li>
+<li>per assurdo <span class="math inline">r \ge n \implies r - n \ge
+0</span></li>
+<li><span class="math inline">r \in [m]_n \implies \exists q \in
+\mathbb{Z} \mid r = m - nq \implies r - n = (m - nq) - n = m - nq - n =
+m - n (q + 1) \in [m]_n</span> per definizione, e in particolare <span
+class="math inline">r - n \in [m]_n</span></li>
+<li><span class="math inline">n \neq 0 \implies r - n \lt r \implies
+r</span> non è il minimo in <span class="math inline">[m]_n \
+\bot</span></li>
+</ul></li>
+<li><em>unicità</em>
+<ul>
+<li>per assurdo <span class="math inline">\exists q_1, q_2, r_1, r_2 \in
+\mathbb{Z} \mid \left \{ \begin{array}{l} m = nq_1 + r_1 &amp;&amp; 0
+\le r_1 \lt n \\ m = nq_2 + r_2 &amp;&amp; 0 \le r_2 \lt
+n\end{array}\right.</span></li>
+<li>allora <span class="math inline">nq_1 + r_1 = m = nq_2 + r_2 \iff
+n(q_1 - q_2) = r_2 - r_1 \implies n \mid r_2 - r_1</span></li>
+<li><span class="math inline">0 \le r_1, r_2 \lt n \implies -n \lt r_2 -
+r_1 \lt n</span>, e in particolare <span class="math inline">r_2 - r_1
+\neq \pm n</span>, allora poiché <span class="math inline">n \mid r_2 -
+r_1</span> necessariamente <span class="math inline">r_2 - r_1 =
+0</span></li>
+<li><span class="math inline">n = 0 \implies nq_1 + r_1 = n q_2 + r_2
+\iff r_1 = r_2</span>, e dagli stessi calcoli segue che <span
+class="math inline">q_1 = q_2</span></li>
 </ul></li>
 </ul></li>
 </ul>
@@ -250,31 +275,23 @@ tra polinomi</em></li>
 <li><strong>Hp</strong>
 <ul>
 <li><span class="math inline">G</span> gruppo finito</li>
-<li><span class="math inline">H \subset G</span> sottogruppo finito</li>
+<li><span class="math inline">H \subset G</span> sottogruppo</li>
 </ul></li>
 <li><strong>Th</strong>
 <ul>
-<li><span class="math inline">|G| = |H| \cdot |G / H|</span></li>
+<li><span class="math inline">|G| = |G / H| \cdot |H|</span></li>
 </ul></li>
 <li><strong>Dim</strong>
 <ul>
-<li><span class="math inline">G</span> è decomponibile attraverso
-l’unione disgiunta delle sue classi laterali sinistre, poiché ogni
-relazione di equivalenza induce una partizione per dimostrazione
-precedente</li>
-<li>in particolare, ogni classe laterale sinistra è equivalente a <span
-class="math inline">xH</span> per opportuni <span class="math inline">x
-\in G</span>, e hanno tutte cardinalità <span
-class="math inline">|H|</span> per dimostrazione precedente</li>
-<li><span class="math inline">G = X_1 \coprod X_2 \coprod \ldots \coprod
-X_k \implies |G| = |X_1| + |X_2| + \ldots + |X_k|</span> poiché ogni
-<span class="math inline">X_i</span> è una partizione, e dunque
-disgiunta con le altre, e poiché sono tutte classi laterali sinistre
-hanno tutte cardinalità <span class="math inline">|H|</span></li>
-<li>dunque, <span class="math inline">|G| = k \cdot |H|</span>, dove
-<span class="math inline">k</span> corrisponde al numero di classi
-laterali, che è proprio <span class="math inline">|G/H| \implies |G| =
-|H| \cdot |G/H|</span></li>
+<li><span class="math inline">G = \displaystyle \coprod_{[x] \in
+G/H}{[x]}</span> per dimostrazione precedente</li>
+<li><span class="math inline">\forall x \in G \quad |[x]| = |xH| =
+|H|</span> per dimostrazione precedente</li>
+<li>poiché l’intersezione è disgiunta <span class="math inline">|G| = k
+\cdot |[x]| = k \cdot |H|</span></li>
+<li>allora segue che <span class="math inline">k = |G/H|</span>, ovvero
+al numero di partizioni, e dunque <span class="math inline">|G| = |G/H|
+\cdot |H|</span></li>
 </ul></li>
 </ul>
 <hr />
@@ -488,22 +505,23 @@ class="math inline">\left| \mathbb{Z}_m \right|</span></li>
 class="math inline">\implies</span> <span class="math inline">\exists x
 \mid x \ (\bmod m)</span> è soluzione del sistema
 <ul>
-<li><span class="math inline">\varphi(x \ (\bmod m))=\left(b_{1}\ \left(
-\bmod a_{1}\right), \ldots, b_{n} \ (\bmod a_{n})\right)</span>, e
-poiché <span class="math inline">\phi</span> è suriettiva, allora ogni
-tupla di <span class="math inline">n</span> elementi dell’insieme di
-arrivo, che descrive un sistema come in ipotesi, ha una controimmagine
-<span class="math inline">x \ (\bmod m)</span>, e <span
-class="math inline">x \ (\bmod m)\in \mathbb{Z}_m</span> per
-definizione, dunque <em>esiste sempre una soluzione</em></li>
+<li><span class="math inline">\varphi(x \ (\bmod \ m))=\left(b_{1}\
+\left( \bmod \  a_{1}\right), \ldots, b_{n} \ (\bmod
+a_{n})\right)</span>, e poiché <span class="math inline">\phi</span> è
+suriettiva, allora ogni tupla di <span class="math inline">n</span>
+elementi dell’insieme di arrivo, che descrive un sistema come in
+ipotesi, ha una controimmagine <span class="math inline">x \ (\bmod \
+m)</span>, e <span class="math inline">x \ (\bmod \ m)\in
+\mathbb{Z}_m</span> per definizione, dunque esiste sempre una
+soluzione</li>
 </ul></li>
 <li><span class="math inline">\phi</span> iniettiva <span
 class="math inline">\implies</span> <span class="math inline">\exists !
-x \mid x \ (\bmod m)</span> è soluzione del sistema
+x \mid x \ (\bmod \ m)</span> è soluzione del sistema
 <ul>
 <li>poiché <span class="math inline">\phi</span> è iniettiva, <span
-class="math inline">x \ (\bmod m) \in \mathbb{Z}_m</span> è unica,
-dunque <em>la soluzione è sempre unica</em></li>
+class="math inline">x \ (\bmod \ m) \in \mathbb{Z}_m</span> è unico,
+dunque la soluzione è sempre unica</li>
 </ul></li>
 </ul></li>
 </ul>
@@ -584,14 +602,12 @@ m</span></li>
 <li><span class="math inline">n = 0 \implies (a+b)^0 =
 \displaystyle{\sum_{k = 0}^{0}{\binom{0}{k}a^kb^{0 - k}}} =
 \binom{0}{0}a^0b^0=1</span></li>
-<li><span class="math inline">(a+ b)^{n + 1} = (a+b)^{n }\cdot
-(a+b)</span></li>
-<li>⚠️ <strong>INCOMPLETA</strong></li>
-</ul></li>
-</ul>
-<a href="#cor-1"><h2 id="cor-1">Cor</h2></a>
-<ul>
+<li><span class="math inline">n \ge 1 \implies (a+ b)^{n + 1} = (a+b)
+\cdot (a+b)^n = (a + b) \cdot \displaystyle \sum_{k =
+0}^{n}{\binom{n}{k} a^k b^{n - k}} = \sum_{k = 0}^n{\binom{n}{k} a^{k
++1}b^{n - k}}</span></li>
 <li>⚠️ <strong>NON HO CAPITO UN CAZZO</strong></li>
+</ul></li>
 </ul>
 <hr />
 <a href="#piccolo-teorema-di-fermat"><h1 id="piccolo-teorema-di-fermat">Piccolo teorema di Fermat</h1></a>
@@ -641,7 +657,7 @@ class="math inline">[a]^{|\mathbb{Z}_p^*|}=[1] \iff [a]^{p - 1} = [1]
 </ul></li>
 </ul></li>
 </ul>
-<a href="#cor-2"><h2 id="cor-2">Cor</h2></a>
+<a href="#cor-1"><h2 id="cor-1">Cor</h2></a>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -662,7 +678,7 @@ class="math inline">\mathbb{Z}_p^* = \mathbb{Z_p} - \{0\}</span></li>
 \cdot [a]^{p -2} = [1]\iff [a]^{-1} = [a]^{p-2}</span></li>
 </ul></li>
 </ul>
-<a href="#cor-3"><h2 id="cor-3">Cor</h2></a>
+<a href="#cor-2"><h2 id="cor-2">Cor</h2></a>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -693,7 +709,7 @@ class="math inline">1</span>, allora necessariamente <span
 class="math inline">c = 1</span>, per cui segue la tesi</li>
 </ul></li>
 </ul>
-<a href="#cor-4"><h2 id="cor-4">Cor</h2></a>
+<a href="#cor-3"><h2 id="cor-3">Cor</h2></a>
 <ul>
 <li>⚠️ <strong>NON HO CAPITO UN CAZZO</strong></li>
 </ul>
@@ -935,7 +951,7 @@ class="math inline">u</span> e <span class="math inline">v</span></li>
 2\cos(\theta) \cdot||u||\cdot ||v||</span></li>
 </ul></li>
 </ul>
-<a href="#cor-5"><h2 id="cor-5">Cor</h2></a>
+<a href="#cor-4"><h2 id="cor-4">Cor</h2></a>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -1109,7 +1125,7 @@ n}(\mathbb{K})</span></li>
 \det(B)</span></li>
 </ul></li>
 </ul>
-<a href="#cor-6"><h2 id="cor-6">Cor</h2></a>
+<a href="#cor-5"><h2 id="cor-5">Cor</h2></a>
 <ul>
 <li><strong>Hp</strong>
 <ul>

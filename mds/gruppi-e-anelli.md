@@ -180,7 +180,7 @@
 
 > - $A$ anello commutativo
 > - $a \in A - \{0\} \mid a \in A^*$
-> - $a$ **primo** $\iff \exists b, c \in A : a \mid bc \implies a \mid b \lor a \mid c$
+> - $a$ è detto **primo** $\iff \exists b, c \in A : a \mid bc \implies a \mid b \lor a \mid c$
 
 ## Oss
 
@@ -380,9 +380,9 @@
 - **Th**
     - $o(g) = o(g^{-1})$
 - **Dim**
-    - $H(g) \subset H(g^{-1})$
+    - $H(g) \subseteq H(g^{-1})$
         - $\forall g^n \in H(g) \quad g^n = (g^{-1})^{-n} \implies g^n \in H(g^{-1})$
-    - $H(g^{-1}) \subset H(g)$
+    - $H(g^{-1}) \subseteq H(g)$
         - $\forall (g^{-1})^n \in H(g^{-1}) \quad (g^{-1})^n=g^{-n} \implies (g^{-1})^n \in H(g)$
     - dunque $H(g) = H(g^n) \implies o(g) = |H(g)| = |H(g^{-1})| = o(g^{-1})$
 

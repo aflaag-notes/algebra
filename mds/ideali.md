@@ -30,7 +30,6 @@
 ## Oss
 
 - **Hp**
-    - ⚠️ **ATTENZIONE: da rileggere
     - $A$ dominio di integrità
     - $a, b \in A$
 - **Th**
@@ -78,63 +77,39 @@
     - $\forall x \in I(a_1, \ldots, a_n) \quad x = a_1b_1 + \ldots + a_nb_n \iff -x = -a_1b_1 - \ldots - a_nb_n \iff -x = a_1(-b_1) + \ldots + a_n(-b_n)$, che per definizione implica che $-x \in I(a_1, \ldots, a_n)$
   - $\forall x \in I(a_1, \ldots, a_n), c \in A \quad x = a_1b_1 + \ldots + a_nb_n \implies c \cdot x = a_1 (b_1c)+ \ldots + a_n(b_nc)$, che per definizione implica che $cx \in I(a_1, \ldots, a_n)$
 
-## Def
-
-- **Congruenza modulo di un ideale**
-
-> - $(A, +, \cdot)$ anello
-> - $I \subset A$ ideale
-> - per definizione, $I$ ideale $\implies(I, +) \subset (A, +)$ sottogruppo, dunque ha senso definire $A/I$, e infatti $I$ induce una relazione di equivalenza su $A$ detta **congruenza modulo $I$**, dove $\forall a, b \in A \quad a \equiv b \ (\bmod \ I) \iff b - a \in I$
-> - $b -a \in I \iff  (-a) + b \in I$, di conseguenza questa congruenza coincide con la classe laterale sinistra di $(A, +)$
-
-## Oss
-
-- **Hp**
-  - $(A, +, \cdot)$ anello
-  - $I \subset A$ ideale
-  - $+: A/I \times A/I \rightarrow A/I$
-  - $\cdot : A/I \times A/I \rightarrow A/I$
-- **Th**
-  - $(A/I, +, \cdot)$ è un anello
-- **Dim**
-  - $(A/I, +)$ è un gruppo abeliano
-    - $+$ è un'operazione ben definita per dimostrazione precedente, dunque le proprietà di gruppo abeliano sono rispettate per come l'operazione è definita
-  - $(A/I, \cdot)$ è monoide
-    - $\cdot$ è un'operazione ben definita per dimostrazione analoga, dunque le proprietà di monoide sono rispettate per come l'operazione è definita
-  - proprietà distributiva
-    - per come $+$ e $\cdot$ sono definite, segue che $\forall [x],[y],[z] \in A/I \quad [x]([y]+[z])=[x][y+z]=[x(y+z)]=[x y+x z]=[x y]+[x z] =[x][y]+[x][z]$
-
 ## Oss
 
 - **Hp**
   - $I \subset \mathbb{Z}$ ideale
 - **Th**
-  -  $\exists ! \ d \in \mathbb{N} \mid I = I(d)$, o equivalentemente, in $\mathbb{Z}$ ogni ideale è principale
+  -  $\exists ! \ d  \in \mathbb{N} \mid I = I(d)$, o equivalentemente, in $\mathbb{Z}$ ogni ideale è principale
 - **Dim**
-  - *esistenza*
-      - $I = \{0\} \implies I = I(0)$ poiché i multipli di $0$ sono tutti pari a $0$
-      - se invece $I \neq \{0\} \implies I \cap \mathbb{Z}_{>0} \neq \varnothing$, dunque $I$ contiene almeno un numero non nullo, in particolare positivo
-        - è possibile considerare solo il caso dei positivi in quanto$\forall x \in I - \{0\} \quad x < 0 \iff (-x)>0$, e $(-x) \in I$ per definizione di $I$, dunque per valori negativi è sufficiente considerare il loro opposto, sicuramente contenuto in $I$
-    - dunque, ha senso considerare $d:=\min(I \cap \mathbb{Z}_{\gt 0})$
-    - $I(d)=I \implies I(d) \subset I \wedge I \subset I(d)$
-      - $I(d) \subset I$
-        - $\forall x \in I(d) \quad \exists y \in \mathbb{Z} \mid x = dy$ per definizione
-        - $\mathbb{Z}$ è anello commutativo
-        - $I \subset \mathbb{Z}$ ideale, e dunque $I \cdot \mathbb{Z} \subset I$ 
-        - $d := \min(I \cap \mathbb{Z}_{\gt 0}) \implies d \in I \implies y \in \mathbb{Z} \land d \in I \implies dy \in I \implies x \in I \implies I(d) \subset I$
-      - $I \subset I(d)$
-        - $d := \min(I \cap \mathbb{Z}_{\gt 0}) \implies d \neq 0$
-        - per il teorema della divisione euclidea con il resto $\forall x \in I \quad \exists ! q,r \in \mathbb{Z} \mid x=d q+r \quad 0 \leq r<d$
-          - $r = 0 \iff x = dq \implies x \in I(d)$ per definizione, dunque $I \subset I(d)$
-          - ipotizzando $r \neq 0$
-            - $dq \in I(d) \implies dq \in I$ per dimostrazione precedente
-            - quindi $x = dq + r \implies r = x - dq \in I$ poiché $I$ è un ideale
-            - $r \neq 0 \implies r \in I \cap \mathbb{Z}_{\gt 0}$
-            - per definizione, $0 \le r \lt d$, ma $d:=\min(I \cap \mathbb{Z}_{\gt 0})$, quindi il minimo numero che $d$ può assumere è $1$, e poiché $r < d \implies r = 0$ necessariamente, dunque segue la dimostrazione precedente
+    - ⚠️ da rivedere
+    - _esistenza_
+        - $d = 0$
+            - $I = \{0\} \implies I = I(0)$ poiché i multipli di $0$ sono tutti pari a $0$
+            - se invece $I \neq \{0\} \implies I \cap \mathbb{Z}_{>0} \neq \varnothing$, dunque $I$ contiene almeno un numero non nullo, in particolare positivo
+            - è possibile considerare solo il caso dei positivi in quanto$\forall x \in I - \{0\} \quad x < 0 \iff (-x)>0$, e $(-x) \in I$ per definizione di $I$, dunque per valori negativi è sufficiente considerare il loro opposto, sicuramente contenuto in $I$
+        - dunque, ha senso considerare $d:=\min(I \cap \mathbb{Z}_{\gt 0})$
+        - $I(d)=I \implies I(d) \subset I \wedge I \subset I(d)$
+          - $I(d) \subseteq I$
+            - $\forall x \in I(d) \quad \exists y \in \mathbb{Z} \mid x = dy$ per definizione
+            - $\mathbb{Z}$ è anello commutativo
+            - $I \subset \mathbb{Z}$ ideale, e dunque $I \cdot \mathbb{Z} \subset I$ 
+            - $d := \min(I \cap \mathbb{Z}_{\gt 0}) \implies d \in I \implies y \in \mathbb{Z} \land d \in I \implies dy \in I \implies x \in I \implies I(d) \subset I$
+          - $I \subseteq I(d)$
+            - $d := \min(I \cap \mathbb{Z}_{\gt 0}) \implies d \neq 0$
+            - per il teorema della divisione euclidea con il resto $\forall x \in I \quad \exists ! q,r \in \mathbb{Z} \mid x=d q+r \quad 0 \leq r<d$
+              - $r = 0 \iff x = dq \implies x \in I(d)$ per definizione, dunque $I \subset I(d)$
+              - ipotizzando $r \neq 0$
+                - $dq \in I(d) \implies dq \in I$ per dimostrazione precedente
+                - quindi $x = dq + r \implies r = x - dq \in I$ poiché $I$ è un ideale
+                - $r \neq 0 \implies r \in I \cap \mathbb{Z}_{\gt 0}$
+                - per definizione, $0 \le r \lt d$, ma $d:=\min(I \cap \mathbb{Z}_{\gt 0})$, quindi il minimo numero che $d$ può assumere è $1$, e poiché $r < d \implies r = 0$ necessariamente, dunque segue la dimostrazione precedente
 
-  - *unicità*
-      - l'unicità deriva dal fatto che $d:=\min(I \cap \mathbb{Z}_{\gt 0})$, e dunque nella dimostrazione $d > 0$, ma vale il ragionamento analogo per $d < 0$ considerando $I(-d)$, in quanto $I(d) = I(-d)$ per dimostrazione precedente
-  - quindi, ogni ideale in $\mathbb{Z}$ è generato dall'insieme dei multipli di un certo $d \ge 0$, che esiste sempre ed è unico, e di conseguenza $\mathbb{Z}$ è un anello ad ideali principali
+    - _unicità_
+        - l'unicità deriva dal fatto che $d:=\min(I \cap \mathbb{Z}_{\gt 0})$, e dunque nella dimostrazione $d > 0$, ma vale il ragionamento analogo per $d < 0$ considerando $I(-d)$, in quanto $I(d) = I(-d)$ per dimostrazione precedente
+    - dunque, ogni ideale in $\mathbb{Z}$ è generato dall'insieme dei multipli di un certo $d \ge 0$, che esiste sempre ed è unico, e di conseguenza $\mathbb{Z}$ è un anello ad ideali principali
 
 ## Oss
 
@@ -144,7 +119,7 @@
 - **Th**
     - $d = \textrm{MCD}(a_1, \ldots, a_n)$
 - **Dim**
-    - $d$ è *divisore comune*
+    - $d$ è _divisore comune_
         - $I(d) = I(a_1, \ldots, a_n) \implies \forall x \in I(a_1, \ldots, a_n) \quad x \in I(d) \implies d \mid x$ per definizione di $I(d)$
         - preso ad esempio $a_1$, è possibile riscriverlo come $a_1 = a_1 \cdot 1 + a_2 \cdot 0 + \ldots + a_n \cdot 0$, di conseguenza $a_1 \in I(a_1, \ldots, a_n)$, dunque $d \mid a_1$
         - vale il ragionamento analogo per ogni $a_1, \ldots , a_n$, dunque $d \mid a_1, \ldots, a_n$
@@ -152,7 +127,6 @@
         - $d$ è il massimo tra i divisori comuni quando $\forall k \in \mathbb{Z} \mid a_1, \ldots, a_n \quad  k \mid d$
         - in generale $\forall i \in [1, n] \quad k \mid a_i \implies \exists x_i \in \mathbb{Z} \mid kx_i = a_i$
         - $d \in I(d) = I(a_1, \ldots, a_n) \iff d \in I(a_1, \ldots, a_n) \implies \exists b_1, \ldots b_n \in \mathbb{Z} \mid d = a_1 b_1 + \ldots + a_n b_n$, e per osservazione precedente si ottiene che $d = kx_1b_1 + \ldots + kx_nb_n = k(b_1x_1 + \ldots + b_nx_n) \implies k \mid d$
-
 
 ## Def
 
