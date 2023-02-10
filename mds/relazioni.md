@@ -294,7 +294,7 @@
   - $(G, +)$ gruppo abeliano
   - $H \leqslant G$
 - **Th**
-  - $(G/H, +)$ è gruppo abeliano, dove $+: G/H \times G/H \rightarrow G/H$
+  - $(G/H, +)$ è gruppo abeliano
 - **Dim**
   - $+$ ben definita $\iff\left.\forall x, x^{\prime}, y, y' \in G \quad \begin{array}{l}{[x]=\left[x^{\prime}\right]} \\ {[y]=\left[y^{\prime}\right]}\end{array}\right\} \implies[x+y]=\left[x^{\prime}+y' \right]$
     - $\forall k, k' \in G \quad [k]=\left[k^{\prime}\right] \iff k \sim k^{\prime}$, dunque il sistema precedente è equivalente a $\left.\begin{array}{l}x \sim x^{\prime} \\ y \sim y^{\prime}\end{array}\right\} \implies x+y \sim x^{\prime}+y^{\prime}$
@@ -305,7 +305,7 @@
     - $\forall [x], [y], [z] \in G/H \quad ([x]+[y])+[z]=[x+y]+[z]=[(x+y)+z]= [x+(y+z)]=[x]+[y+z]=[x]+([y]+[z])$
     - $\forall [x] \in G/H \quad [x]+[0]=[0]+[x]=[x]$ e $[0] + [x] = [0 + x] = [x]$, e $[0] \in G/H$ perché $G$ gruppo
     - $\forall [x] \in G/H \quad [x]+[-x]=[x+(-x)]=[0]$ e $[-x] +[x]=[-x +x]=[0]$$\implies -[x] = [-x]$
-    - $[x]+[y]=[x+y]=[y+x]=[y]+[x]$
+    - $\forall [x], [y] \in G/H \quad [x]+[y]=[x+y]=[y+x]=[y]+[x]$
 
 ## Oss
 
@@ -313,7 +313,7 @@
     - $(A, +, \cdot)$ anello commutativo
     - $I \subset A$ ideale
 - **Th**
-    - $(A/I, +, \cdot)$ è anello commutativo, dove $+, \cdot : A/I \times A/I \rightarrow A/I$
+    - $(A/I, +, \cdot)$ è anello commutativo
 - **Dim**
     - $+$ è ben definita per dimostrazione precedente, poiché $(I, +) \leqslant (A, +)$ gruppo abeliano per definizione di $I$
     - $\cdot$ ben definita $\iff\left.\forall x, x^{\prime}, y, y' \in A \quad \begin{array}{l}{[x]=\left[x^{\prime}\right]} \\ {[y]=\left[y^{\prime}\right]}\end{array}\right\} \implies[xy]=\left[x^{\prime}y' \right]$
@@ -327,15 +327,22 @@
         - $\forall [x], [y], [z] \in A/I \quad ([x][y])[x] = [xy][z] = [xyz] = [x][yz] = [x]([y][z])$
         - $\forall [x] \in A/I \quad [x][1]=[1][x]=[x]$ e $[1] \cdot [x] = [1 \cdot x] = [x]$, e $[1] \in A/I$ perché $A$ anello
         - $\forall [x] \in A/I \quad [x]\cdot[x^{-1}]=[x \cdot x^{-1}]=[1]$ e $[x^{-1}] \cdot[x]=[x^{-1} \cdot x]=[1] \implies [x]^{-1} = [x^{-1}]$
-        - $[x][y] = [xy] = [yx] = [y][x]$
+        - $\forall [x], [y] \in A/I \quad [x] \cdot [y] = [x \cdot y] = [y \cdot x] = [y] \cdot [x]$
 
 ## Oss
 
 - **Hp**
-    - $(G, \cdot)$ gruppo
+    - $(G, \cdot)$ gruppo abeliano
     - $H \trianglelefteq G$
 - **Th**
-    - $(G/H, \cdot)$ è gruppo abeliano, dove $\cdot: G/H \times G/H \rightarrow G/H$
+    - $(G/H, \cdot)$ è gruppo abeliano
 - **Dim**
-    - ⚠️ todo
+    - $\cdot$ ben definita $\iff\left.\forall x, x^{\prime}, y, y' \in G \quad \begin{array}{l}{[x]=\left[x^{\prime}\right]} \\ {[y]=\left[y^{\prime}\right]}\end{array}\right\} \implies[xy]=\left[x^{\prime}y' \right]$
+        - $H \trianglelefteq G \implies \left \{ \begin{array}{l} xH = Hx = [x] = [x'] = x'H = Hx'\\ yH = Hy = [y] = [y'] = y'H = Hy' \end{array} \right.$
+        - allora $[xy] = xyH = xy'H = y'xH = y'x'H = x'y'H = [x'y']$
+    - $(G/H, \cdot)$ gruppo abeliano
+        - $\forall [x], [y], [z] \in G/H \quad ([x][y])[x] = [xy][z] = [xyz] = [x][yz] = [x]([y][z])$
+        - $\forall [x] \in G/H \quad [x][1]=[1][x]=[x]$ e $[1] \cdot [x] = [1 \cdot x] = [x]$, e $[1] \in G/H$ perché $G$ gruppo
+        - $\forall [x] \in G/H \quad [x]\cdot[x^{-1}]=[x \cdot x^{-1}]=[1]$ e $[x^{-1}] \cdot[x]=[x^{-1} \cdot x]=[1] \implies [x]^{-1} = [x^{-1}]$
+        - $\forall [x], [y] \in G/H \quad [x] \cdot [y] = [x \cdot y] = [y \cdot x] = [y] \cdot [x]$
 

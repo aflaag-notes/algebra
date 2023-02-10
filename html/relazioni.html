@@ -804,8 +804,7 @@ class="math inline">\implies |H| = |xH|</span></li>
 </ul></li>
 <li><strong>Th</strong>
 <ul>
-<li><span class="math inline">(G/H, +)</span> è gruppo abeliano, dove
-<span class="math inline">+: G/H \times G/H \rightarrow G/H</span></li>
+<li><span class="math inline">(G/H, +)</span> è gruppo abeliano</li>
 </ul></li>
 <li><strong>Dim</strong>
 <ul>
@@ -841,7 +840,8 @@ x] = [x]</span>, e <span class="math inline">[0] \in G/H</span> perché
 <li><span class="math inline">\forall [x] \in G/H \quad
 [x]+[-x]=[x+(-x)]=[0]</span> e <span class="math inline">[-x] +[x]=[-x
 +x]=[0]</span><span class="math inline">\implies -[x] = [-x]</span></li>
-<li><span class="math inline">[x]+[y]=[x+y]=[y+x]=[y]+[x]</span></li>
+<li><span class="math inline">\forall [x], [y] \in G/H \quad
+[x]+[y]=[x+y]=[y+x]=[y]+[x]</span></li>
 </ul></li>
 </ul></li>
 </ul>
@@ -856,8 +856,7 @@ commutativo</li>
 <li><strong>Th</strong>
 <ul>
 <li><span class="math inline">(A/I, +, \cdot)</span> è anello
-commutativo, dove <span class="math inline">+, \cdot : A/I \times A/I
-\rightarrow A/I</span></li>
+commutativo</li>
 </ul></li>
 <li><strong>Dim</strong>
 <ul>
@@ -903,7 +902,8 @@ perché <span class="math inline">A</span> anello</li>
 [x]\cdot[x^{-1}]=[x \cdot x^{-1}]=[1]</span> e <span
 class="math inline">[x^{-1}] \cdot[x]=[x^{-1} \cdot x]=[1] \implies
 [x]^{-1} = [x^{-1}]</span></li>
-<li><span class="math inline">[x][y] = [xy] = [yx] = [y][x]</span></li>
+<li><span class="math inline">\forall [x], [y] \in A/I \quad [x] \cdot
+[y] = [x \cdot y] = [y \cdot x] = [y] \cdot [x]</span></li>
 </ul></li>
 </ul></li>
 </ul>
@@ -911,18 +911,42 @@ class="math inline">[x^{-1}] \cdot[x]=[x^{-1} \cdot x]=[1] \implies
 <ul>
 <li><strong>Hp</strong>
 <ul>
-<li><span class="math inline">(G, \cdot)</span> gruppo</li>
+<li><span class="math inline">(G, \cdot)</span> gruppo abeliano</li>
 <li><span class="math inline">H \trianglelefteq G</span></li>
 </ul></li>
 <li><strong>Th</strong>
 <ul>
-<li><span class="math inline">(G/H, \cdot)</span> è gruppo abeliano,
-dove <span class="math inline">\cdot: G/H \times G/H \rightarrow
-G/H</span></li>
+<li><span class="math inline">(G/H, \cdot)</span> è gruppo abeliano</li>
 </ul></li>
 <li><strong>Dim</strong>
 <ul>
-<li>⚠️ todo</li>
+<li><span class="math inline">\cdot</span> ben definita <span
+class="math inline">\iff\left.\forall x, x^{\prime}, y, y&#39; \in G
+\quad \begin{array}{l}{[x]=\left[x^{\prime}\right]} \\
+{[y]=\left[y^{\prime}\right]}\end{array}\right\}
+\implies[xy]=\left[x^{\prime}y&#39; \right]</span>
+<ul>
+<li><span class="math inline">H \trianglelefteq G \implies \left \{
+\begin{array}{l} xH = Hx = [x] = [x&#39;] = x&#39;H = Hx&#39;\\ yH = Hy
+= [y] = [y&#39;] = y&#39;H = Hy&#39; \end{array} \right.</span></li>
+<li>allora <span class="math inline">[xy] = xyH = xy&#39;H = y&#39;xH =
+y&#39;x&#39;H = x&#39;y&#39;H = [x&#39;y&#39;]</span></li>
+</ul></li>
+<li><span class="math inline">(G/H, \cdot)</span> gruppo abeliano
+<ul>
+<li><span class="math inline">\forall [x], [y], [z] \in G/H \quad
+([x][y])[x] = [xy][z] = [xyz] = [x][yz] = [x]([y][z])</span></li>
+<li><span class="math inline">\forall [x] \in G/H \quad
+[x][1]=[1][x]=[x]</span> e <span class="math inline">[1] \cdot [x] = [1
+\cdot x] = [x]</span>, e <span class="math inline">[1] \in G/H</span>
+perché <span class="math inline">G</span> gruppo</li>
+<li><span class="math inline">\forall [x] \in G/H \quad
+[x]\cdot[x^{-1}]=[x \cdot x^{-1}]=[1]</span> e <span
+class="math inline">[x^{-1}] \cdot[x]=[x^{-1} \cdot x]=[1] \implies
+[x]^{-1} = [x^{-1}]</span></li>
+<li><span class="math inline">\forall [x], [y] \in G/H \quad [x] \cdot
+[y] = [x \cdot y] = [y \cdot x] = [y] \cdot [x]</span></li>
+</ul></li>
 </ul></li>
 </ul>
 </body>

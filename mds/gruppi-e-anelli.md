@@ -275,7 +275,6 @@
       - $k:= ghg^{-1} \in H$ per ipotesi 2
       - $k = ghg^{-1} \iff k g= ghg^{-1}g \iff kg = gh$, e in particolare $kg \in Hg$ e $gh \in gH$
     - _seconda implicazione_
-      -  $G$ gruppo $\implies \forall g \in G \quad \exists g^{-1} \in G$
       -  $\forall g^{-1} \in G \quad \exists h \in H \mid h:= g^{-1}k(g^{-1})^{-1} \in H$ per ipotesi 2
       - $g^{-1}kg = h \iff gg^{-1}kg = gh \iff kg = gh \in gH$
       - $k \in H \implies kg \in Hg$, ma $kg = gh \implies kg \in gH$
@@ -331,8 +330,8 @@
 - **Dim**
   - $(I(g), +) \leqslant (\mathbb{Z}, +)$
     - $0 \in \mathbb{Z} \land g^{0}=e \implies 0 \in I(g)$ per definizione di $I(g)$
-    - $m, n \in \mathbb{Z} \mid  g^{m}=g^{n}=e \implies g^{m} \cdot g^{n}= g^{m + n} \iff e \cdot e = e \implies m +n \in I(g)$ per definizoine di $I(g)$, quindi $I(g) + I(g) \subset I(g)$
-    - $n \in I(g) \mid g^n = e \iff (g^n)^{-1} = e ^{-1 } \iff g^{-n} =e \implies -n \in I(g)$ per definizione di $I(g)$
+    - $m, n \in \mathbb{Z} \mid  g^{m}=g^{n}=e \implies g^{m} \cdot g^{n}= g^{m + n} \iff e \cdot e = e \implies m +n \in I(g)$ per definizoine di $I(g)$, quindi $I(g) + I(g) \subseteq I(g)$
+    - $n \in I(g) \mid g^n = e \iff (g^n)^{-1} = e ^{-1 } \iff g^{-n} =e \implies -n \in I(g)$
   - $\forall n \in I(g), k \in \mathbb{Z} \quad g^{n \cdot k} = (g^n)^k = e^k = e \implies n \cdot k \in I(g)$
 
 ## Oss
@@ -398,7 +397,7 @@
     - $\forall g \in G \quad o(g^k) \mid o(g)$
 - **Dim**
     - $\forall (g^k)^n \in H(g^k) \quad (g^k)^n = g^{nk} \implies g^{nk} \in H(g) \implies H(g^k) \subseteq H(g)$
-    - per dimostrazione precedente $H(g^k) \subseteq H(g) \subset G$ sottogruppi, allora in particolare, per il teorema di Lagrange $o(g^k) = | H(g^k)| \bigg\vert |H(g)| = o(g)$
+    - per dimostrazione precedente $H(g^k) \subseteq H(g) \leqslant G$, allora in particolare, per il teorema di Lagrange $o(g^k) = | H(g^k)| \bigg\vert |H(g)| = o(g)$
 
 ## Oss
 

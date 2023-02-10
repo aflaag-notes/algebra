@@ -167,24 +167,19 @@ $f([x \cdot y])=f([x]) \cdot f([y]) \iff f$ morfismo
 > - $\textrm{ker}(f):=\{g \in G \mid f(g) = 1_H\}$ è detto **kernel/nucleo di $f$**
 > - $\textrm{im}(f):=\{h \in H \mid \exists g \in G : f(g) = h\}$ è detta **immagine di $f$**
 
-- **Kernel e immagine di anelli**
-
-> - $A, B$ anelli
-> - $f: A \rightarrow B$ morfismo
-> - $\textrm{ker}(f):=\{a \in A \mid f(a)= 0_B\}$ è detto **kernel/nucleo di $f$**
-> - $\textrm{im}(f):=\{b \in B \mid \exists a \in A : f(a) = b\}$ è detto **immagine di $f$**
-
 ## Oss
 
 - **Hp**
   - $G, H$ gruppi
   - $f: G \rightarrow H$ morfismo
 - **Th**
-  - $\textrm{ker}(f) \leqslant G$
+  - $\ker(f) \trianglelefteq G$
 - **Dim**
   - per dimostrazione precedente, $f(1_G) = 1_H \implies 1_G \in \textrm{ker}(f)$
   - $x, y \in \textrm{ker}(f) \iff f(x) = f(y) = 1_H \implies f(x) \cdot f(y) = 1_H \cdot 1_H = 1_H$, e $f(x) \cdot f(y) = f(x \cdot y) = 1_H$ perché $f$ morfismo, quindi $x \cdot y \in \textrm{ker}(f)$
   - $g \in \textrm{ker}(f) \iff f(g) =1_H \iff f(g)^{-1} = 1_H^{-1} = 1_H$, allora per dimostrazione precedente si ha che $f(g)^{-1} = f(g^{-1})= 1_H \implies g^{-1} \in \textrm{ker}(f)$
+  - $\ker(f) \trianglelefteq G \iff \forall g \in G, h \in \ker(f) \quad ghg^{-1} \in \ker(f)$
+  - $f(ghg^{-1}) = f(g) \cdot f(h) \cdot f(g^{-1})=f(g) \cdot 1_H \cdot f(g)^{-1} = 1_H \implies ghg ^{-1} \in \textrm{ker}(f)$
  
 ## Oss
 
@@ -194,10 +189,9 @@ $f([x \cdot y])=f([x]) \cdot f([y]) \iff f$ morfismo
 - **Th**
   - $\textrm{im}(f) \leqslant H$
 - **Dim**
-  - ⚠️ **da qua**
-  - per dimostrazione precedente $f(1_G)= 1_H \implies 1_H \in \textrm{im}(f)$ per definizione
-  - $x, y \in \textrm{im}(f) \implies \exists g, g^\prime \in G \mid x = f(g) \land y = f(g^\prime) \implies x \cdot y = f(g) \cdot f(g^\prime) = f(g\cdot g^\prime)$ perché $f$ morfismo, quindi $x \cdot y \in \textrm{Im}(f)$ per definizione
-  - $x \in \textrm{im}(f) \implies \exists g \in G \mid f(g) = x \implies x^{-1} = f(g)^{-1} = f(g^{-1})$ per dimostrazione precedente, quindi $x ^{-1} \in \textrm{Im}(f)$ per definizione
+  - per dimostrazione precedente $f(1_G)= 1_H \implies 1_H \in \textrm{im}(f)$
+  - $x, y \in \textrm{im}(f) \iff \exists g, g^\prime \in G \mid x = f(g) \land y = f(g^\prime) \implies x \cdot y = f(g) \cdot f(g^\prime) = f(g\cdot g^\prime)$ perché $f$ morfismo, quindi $x \cdot y \in \textrm{Im}(f)$
+  - $x \in \textrm{im}(f) \iff \exists g \in G \mid f(g) = x \iff x^{-1} = f(g)^{-1} = f(g^{-1})$ per dimostrazione precedente, quindi $x ^{-1} \in \textrm{Im}(f)$
  
 ## Oss
 
@@ -208,11 +202,20 @@ $f([x \cdot y])=f([x]) \cdot f([y]) \iff f$ morfismo
   - $f$ iniettiva $\iff \textrm{ker}(f) = \{1_G\}$
 - **Dim**
   - _prima implicazione_
-    - $f(1_G) = 1_H$ per dimostrazione precedente, dunque $1_G \in \textrm{ker}(f)$ per definizione
-    - $f$ iniettiva $\implies \nexists x, y \in G \mid x \neq y \implies f(x) = f(y)$, di conseguenza è unico $1_G \in G \mid f(1_G) = 1_H$, dunque $\textrm{ker}(f)$ conterrà esclusivamente $1_G$ per definizione
+    - $\ker(f) \leqslant G \implies 1_G \in \ker(f)$
+    - $f$ iniettiva $\implies \nexists x, y \in G \mid x \neq y \implies f(x) = f(y)$, di conseguenza è unico $1_G \in G \mid f(1_G) = 1_H$, dunque $\textrm{ker}(f)$ conterrà esclusivamente $1_G$
   - _seconda implicazione_
     - $\forall g, g^\prime \in G \quad f(g) = f(g^\prime) \iff f(g)^{-1} \cdot f(g) = f(g)^{-1} \cdot f(g^\prime) \iff 1_H = f(g^{-1}) \cdot f(g^\prime) = f(g ^{-1} \cdot g^\prime)$
-    - $\textrm{ker}(f) = \{1_G\} \implies f(1_G)=1_H$ per definizione, allora $f(g^{-1}\cdot g^\prime) = 1_H \implies g^{-1} \cdot g^\prime = 1_G$ necessariamente, e $g^{-1} \cdot g^\prime = 1_G \iff g= g^\prime \implies f$ iniettiva
+    - $\textrm{ker}(f) = \{1_G\} \implies f(1_G)=1_H$ solamente per $1_G$, allora $f(g^{-1}\cdot g^\prime) = 1_H \implies g^{-1} \cdot g^\prime = 1_G$ necessariamente, e $g^{-1} \cdot g^\prime = 1_G \iff g= g^\prime \implies f$ iniettiva
+
+## Def
+
+- **Kernel e immagine di anelli**
+
+> - $A, B$ anelli
+> - $f: A \rightarrow B$ morfismo
+> - $\textrm{ker}(f):=\{a \in A \mid f(a)= 0_B\}$ è detto **kernel/nucleo di $f$**
+> - $\textrm{im}(f):=\{b \in B \mid \exists a \in A : f(a) = b\}$ è detto **immagine di $f$**
 
 ## Oss
 
@@ -220,11 +223,11 @@ $f([x \cdot y])=f([x]) \cdot f([y]) \iff f$ morfismo
   - $A, B$ anelli
   - $f: A \rightarrow B$ morfismo di anelli
 - **Th**
-  - $\textrm{ker}(f)$ ideale
+  - $\textrm{ker}(f) \subset A$ ideale
 - **Dim**
-  - $(\textrm{ker}(f), +) \subset (A, +)$ sottogruppo per dimostrazione precedente
-  - per analogia con dimostrazione precedente, $f(0_A) = 0_B$
-  - $x \in \textrm{ker}(f) \implies f(x) = 0_B$ per definizione, quindi $\forall x \in \textrm{ker}(f), y \in A \quad f(x \cdot y )= f(x) \cdot f(y) )= 0_B \cdot f(y) = 0_B \implies x \cdot y \in \textrm{ker}(f)$ per definizione, quindi $\textrm{ker}(f) \cdot A \subset \textrm{ker}(f)$
+  - $(\textrm{ker}(f), +) \leqslant (A, +)$ per dimostrazione precedente
+  - per dimostrazione precedente $f(0_A) = 0_B$
+  - $\forall x \in \textrm{ker}(f), y \in A \quad f(x \cdot y )= f(x) \cdot f(y) = 0_B \cdot f(y) = 0_B \implies x \cdot y \in \textrm{ker}(f) \implies \textrm{ker}(f) \cdot A \subseteq \textrm{ker}(f)$
 
 ## Oss
 
@@ -234,8 +237,8 @@ $f([x \cdot y])=f([x]) \cdot f([y]) \iff f$ morfismo
 - **Th**
   - $\textrm{im}(f) \subset B$ sottoanello
 - **Dim**
-  - $(\textrm{im}(f), +) \subset (B, +)$ sottogruppo per dimostrazione precedente
-  - $x, y \in \textrm{im}(f) \implies \exists a, a^\prime \mid x = f(a) \land y = f(a^\prime) \implies x \cdot y = f(a) \cdot f(a^\prime) = f(a\cdot a^\prime)$ perche $f$ morfismo, quindi $\exists a \cdot a^\prime \mid x \cdot y = f(a \cdot a^\prime) \implies x\cdot y \in \textrm{Im}(f) \implies \textrm{Im}(f) \cdot \textrm{Im}(f) \subset \textrm{Im}(f)$
+  - $(\textrm{im}(f), +) \leqslant (B, +)$ per dimostrazione precedente
+  - $x, y \in \textrm{im}(f) \iff \exists a, a^\prime \in A\mid x = f(a) \land y = f(a^\prime) \implies x \cdot y = f(a) \cdot f(a^\prime) = f(a\cdot a^\prime)$ perche $f$ morfismo, quindi $\exists a \cdot a^\prime \mid x \cdot y = f(a \cdot a^\prime) \implies x\cdot y \in \textrm{Im}(f) \implies \textrm{Im}(f) \cdot \textrm{Im}(f) \subseteq \textrm{Im}(f)$
  
 ## Oss
 
@@ -245,19 +248,7 @@ $f([x \cdot y])=f([x]) \cdot f([y]) \iff f$ morfismo
   - $I(n)$ ideale generato da $n$
 - **Th**
   - $\textrm{ker}(f) = I(n)$
+  - $H(\zeta)=\textrm{im}(f) \cong \mathbb{Z}/\ker(f) = \mathbb{Z} /I(n) = \mathbb{Z}_n$
 - **Dim**
   - **⚠️ RISCRIVI TUTTO, ANCHE IPOTESI E TESI**
 
-## Oss
-
-- **Hp**
-  - $G, H$ gruppi
-  - $f: G \rightarrow H$ morfismo
-- **Th**
-  - $\textrm{ker}(f) \subset G$ sottogruppo normale
-- **Dim**
-  - per la formulazione 2 della definizione di sottogruppo normale, $\forall g \in G, h \in \textrm{ker}(f) \implies g h g^{-1} \in \textrm{ker}(f)$
-  - $f(ghg^{-1}) = f(g) \cdot f(h) \cdot f(g^{-1})$
-  - $h \in \textrm{ker}(f) \implies f(h) = 1_H$ per definizione
-  - per dimostrazione precedente $f(g^{-1}) = f(g)^{-1}$
-  - $f(ghg^{-1})= f(g) \cdot 1_H \cdot f(g)^{-1} = 1_H \implies ghg ^{-1} \in \textrm{ker}(f)$ per definizione

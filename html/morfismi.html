@@ -534,21 +534,6 @@ class="math inline">f</span></strong></li>
 class="math inline">f</span></strong></li>
 </ul>
 </blockquote>
-<ul>
-<li><strong>Kernel e immagine di anelli</strong></li>
-</ul>
-<blockquote>
-<ul>
-<li><span class="math inline">A, B</span> anelli</li>
-<li><span class="math inline">f: A \rightarrow B</span> morfismo</li>
-<li><span class="math inline">\textrm{ker}(f):=\{a \in A \mid f(a)=
-0_B\}</span> è detto <strong>kernel/nucleo di <span
-class="math inline">f</span></strong></li>
-<li><span class="math inline">\textrm{im}(f):=\{b \in B \mid \exists a
-\in A : f(a) = b\}</span> è detto <strong>immagine di <span
-class="math inline">f</span></strong></li>
-</ul>
-</blockquote>
 <a href="#oss-4"><h2 id="oss-4">Oss</h2></a>
 <ul>
 <li><strong>Hp</strong>
@@ -558,7 +543,7 @@ class="math inline">f</span></strong></li>
 </ul></li>
 <li><strong>Th</strong>
 <ul>
-<li><span class="math inline">\textrm{ker}(f) \leqslant G</span></li>
+<li><span class="math inline">\ker(f) \trianglelefteq G</span></li>
 </ul></li>
 <li><strong>Dim</strong>
 <ul>
@@ -573,6 +558,11 @@ class="math inline">x \cdot y \in \textrm{ker}(f)</span></li>
 f(g)^{-1} = 1_H^{-1} = 1_H</span>, allora per dimostrazione precedente
 si ha che <span class="math inline">f(g)^{-1} = f(g^{-1})= 1_H \implies
 g^{-1} \in \textrm{ker}(f)</span></li>
+<li><span class="math inline">\ker(f) \trianglelefteq G \iff \forall g
+\in G, h \in \ker(f) \quad ghg^{-1} \in \ker(f)</span></li>
+<li><span class="math inline">f(ghg^{-1}) = f(g) \cdot f(h) \cdot
+f(g^{-1})=f(g) \cdot 1_H \cdot f(g)^{-1} = 1_H \implies ghg ^{-1} \in
+\textrm{ker}(f)</span></li>
 </ul></li>
 </ul>
 <a href="#oss-5"><h2 id="oss-5">Oss</h2></a>
@@ -588,19 +578,17 @@ g^{-1} \in \textrm{ker}(f)</span></li>
 </ul></li>
 <li><strong>Dim</strong>
 <ul>
-<li>⚠️ <strong>da qua</strong></li>
 <li>per dimostrazione precedente <span class="math inline">f(1_G)= 1_H
-\implies 1_H \in \textrm{im}(f)</span> per definizione</li>
-<li><span class="math inline">x, y \in \textrm{im}(f) \implies \exists
-g, g^\prime \in G \mid x = f(g) \land y = f(g^\prime) \implies x \cdot y
-= f(g) \cdot f(g^\prime) = f(g\cdot g^\prime)</span> perché <span
+\implies 1_H \in \textrm{im}(f)</span></li>
+<li><span class="math inline">x, y \in \textrm{im}(f) \iff \exists g,
+g^\prime \in G \mid x = f(g) \land y = f(g^\prime) \implies x \cdot y =
+f(g) \cdot f(g^\prime) = f(g\cdot g^\prime)</span> perché <span
 class="math inline">f</span> morfismo, quindi <span
-class="math inline">x \cdot y \in \textrm{Im}(f)</span> per
-definizione</li>
-<li><span class="math inline">x \in \textrm{im}(f) \implies \exists g
-\in G \mid f(g) = x \implies x^{-1} = f(g)^{-1} = f(g^{-1})</span> per
+class="math inline">x \cdot y \in \textrm{Im}(f)</span></li>
+<li><span class="math inline">x \in \textrm{im}(f) \iff \exists g \in G
+\mid f(g) = x \iff x^{-1} = f(g)^{-1} = f(g^{-1})</span> per
 dimostrazione precedente, quindi <span class="math inline">x ^{-1} \in
-\textrm{Im}(f)</span> per definizione</li>
+\textrm{Im}(f)</span></li>
 </ul></li>
 </ul>
 <a href="#oss-6"><h2 id="oss-6">Oss</h2></a>
@@ -619,15 +607,14 @@ class="math inline">\iff \textrm{ker}(f) = \{1_G\}</span></li>
 <ul>
 <li><em>prima implicazione</em>
 <ul>
-<li><span class="math inline">f(1_G) = 1_H</span> per dimostrazione
-precedente, dunque <span class="math inline">1_G \in
-\textrm{ker}(f)</span> per definizione</li>
+<li><span class="math inline">\ker(f) \leqslant G \implies 1_G \in
+\ker(f)</span></li>
 <li><span class="math inline">f</span> iniettiva <span
 class="math inline">\implies \nexists x, y \in G \mid x \neq y \implies
 f(x) = f(y)</span>, di conseguenza è unico <span class="math inline">1_G
 \in G \mid f(1_G) = 1_H</span>, dunque <span
 class="math inline">\textrm{ker}(f)</span> conterrà esclusivamente <span
-class="math inline">1_G</span> per definizione</li>
+class="math inline">1_G</span></li>
 </ul></li>
 <li><em>seconda implicazione</em>
 <ul>
@@ -636,14 +623,30 @@ f(g^\prime) \iff f(g)^{-1} \cdot f(g) = f(g)^{-1} \cdot f(g^\prime) \iff
 1_H = f(g^{-1}) \cdot f(g^\prime) = f(g ^{-1} \cdot
 g^\prime)</span></li>
 <li><span class="math inline">\textrm{ker}(f) = \{1_G\} \implies
-f(1_G)=1_H</span> per definizione, allora <span
-class="math inline">f(g^{-1}\cdot g^\prime) = 1_H \implies g^{-1} \cdot
-g^\prime = 1_G</span> necessariamente, e <span
+f(1_G)=1_H</span> solamente per <span class="math inline">1_G</span>,
+allora <span class="math inline">f(g^{-1}\cdot g^\prime) = 1_H \implies
+g^{-1} \cdot g^\prime = 1_G</span> necessariamente, e <span
 class="math inline">g^{-1} \cdot g^\prime = 1_G \iff g= g^\prime
 \implies f</span> iniettiva</li>
 </ul></li>
 </ul></li>
 </ul>
+<a href="#def-3"><h2 id="def-3">Def</h2></a>
+<ul>
+<li><strong>Kernel e immagine di anelli</strong></li>
+</ul>
+<blockquote>
+<ul>
+<li><span class="math inline">A, B</span> anelli</li>
+<li><span class="math inline">f: A \rightarrow B</span> morfismo</li>
+<li><span class="math inline">\textrm{ker}(f):=\{a \in A \mid f(a)=
+0_B\}</span> è detto <strong>kernel/nucleo di <span
+class="math inline">f</span></strong></li>
+<li><span class="math inline">\textrm{im}(f):=\{b \in B \mid \exists a
+\in A : f(a) = b\}</span> è detto <strong>immagine di <span
+class="math inline">f</span></strong></li>
+</ul>
+</blockquote>
 <a href="#oss-7"><h2 id="oss-7">Oss</h2></a>
 <ul>
 <li><strong>Hp</strong>
@@ -654,20 +657,19 @@ anelli</li>
 </ul></li>
 <li><strong>Th</strong>
 <ul>
-<li><span class="math inline">\textrm{ker}(f)</span> ideale</li>
+<li><span class="math inline">\textrm{ker}(f) \subset A</span>
+ideale</li>
 </ul></li>
 <li><strong>Dim</strong>
 <ul>
-<li><span class="math inline">(\textrm{ker}(f), +) \subset (A, +)</span>
-sottogruppo per dimostrazione precedente</li>
-<li>per analogia con dimostrazione precedente, <span
-class="math inline">f(0_A) = 0_B</span></li>
-<li><span class="math inline">x \in \textrm{ker}(f) \implies f(x) =
-0_B</span> per definizione, quindi <span class="math inline">\forall x
-\in \textrm{ker}(f), y \in A \quad f(x \cdot y )= f(x) \cdot f(y) )= 0_B
-\cdot f(y) = 0_B \implies x \cdot y \in \textrm{ker}(f)</span> per
-definizione, quindi <span class="math inline">\textrm{ker}(f) \cdot A
-\subset \textrm{ker}(f)</span></li>
+<li><span class="math inline">(\textrm{ker}(f), +) \leqslant (A,
++)</span> per dimostrazione precedente</li>
+<li>per dimostrazione precedente <span class="math inline">f(0_A) =
+0_B</span></li>
+<li><span class="math inline">\forall x \in \textrm{ker}(f), y \in A
+\quad f(x \cdot y )= f(x) \cdot f(y) = 0_B \cdot f(y) = 0_B \implies x
+\cdot y \in \textrm{ker}(f) \implies \textrm{ker}(f) \cdot A \subseteq
+\textrm{ker}(f)</span></li>
 </ul></li>
 </ul>
 <a href="#oss-8"><h2 id="oss-8">Oss</h2></a>
@@ -685,15 +687,15 @@ sottoanello</li>
 </ul></li>
 <li><strong>Dim</strong>
 <ul>
-<li><span class="math inline">(\textrm{im}(f), +) \subset (B, +)</span>
-sottogruppo per dimostrazione precedente</li>
-<li><span class="math inline">x, y \in \textrm{im}(f) \implies \exists
-a, a^\prime \mid x = f(a) \land y = f(a^\prime) \implies x \cdot y =
+<li><span class="math inline">(\textrm{im}(f), +) \leqslant (B,
++)</span> per dimostrazione precedente</li>
+<li><span class="math inline">x, y \in \textrm{im}(f) \iff \exists a,
+a^\prime \in A\mid x = f(a) \land y = f(a^\prime) \implies x \cdot y =
 f(a) \cdot f(a^\prime) = f(a\cdot a^\prime)</span> perche <span
 class="math inline">f</span> morfismo, quindi <span
 class="math inline">\exists a \cdot a^\prime \mid x \cdot y = f(a \cdot
 a^\prime) \implies x\cdot y \in \textrm{Im}(f) \implies \textrm{Im}(f)
-\cdot \textrm{Im}(f) \subset \textrm{Im}(f)</span></li>
+\cdot \textrm{Im}(f) \subseteq \textrm{Im}(f)</span></li>
 </ul></li>
 </ul>
 <a href="#oss-9"><h2 id="oss-9">Oss</h2></a>
@@ -711,38 +713,12 @@ class="math inline">n</span></li>
 <li><strong>Th</strong>
 <ul>
 <li><span class="math inline">\textrm{ker}(f) = I(n)</span></li>
+<li><span class="math inline">H(\zeta)=\textrm{im}(f) \cong
+\mathbb{Z}/\ker(f) = \mathbb{Z} /I(n) = \mathbb{Z}_n</span></li>
 </ul></li>
 <li><strong>Dim</strong>
 <ul>
 <li><strong>⚠️ RISCRIVI TUTTO, ANCHE IPOTESI E TESI</strong></li>
-</ul></li>
-</ul>
-<a href="#oss-10"><h2 id="oss-10">Oss</h2></a>
-<ul>
-<li><strong>Hp</strong>
-<ul>
-<li><span class="math inline">G, H</span> gruppi</li>
-<li><span class="math inline">f: G \rightarrow H</span> morfismo</li>
-</ul></li>
-<li><strong>Th</strong>
-<ul>
-<li><span class="math inline">\textrm{ker}(f) \subset G</span>
-sottogruppo normale</li>
-</ul></li>
-<li><strong>Dim</strong>
-<ul>
-<li>per la formulazione 2 della definizione di sottogruppo normale,
-<span class="math inline">\forall g \in G, h \in \textrm{ker}(f)
-\implies g h g^{-1} \in \textrm{ker}(f)</span></li>
-<li><span class="math inline">f(ghg^{-1}) = f(g) \cdot f(h) \cdot
-f(g^{-1})</span></li>
-<li><span class="math inline">h \in \textrm{ker}(f) \implies f(h) =
-1_H</span> per definizione</li>
-<li>per dimostrazione precedente <span class="math inline">f(g^{-1}) =
-f(g)^{-1}</span></li>
-<li><span class="math inline">f(ghg^{-1})= f(g) \cdot 1_H \cdot
-f(g)^{-1} = 1_H \implies ghg ^{-1} \in \textrm{ker}(f)</span> per
-definizione</li>
 </ul></li>
 </ul>
 </body>
