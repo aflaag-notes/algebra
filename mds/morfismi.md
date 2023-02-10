@@ -6,14 +6,15 @@
 
 > - $(G, \cdot), (H, \cdot)$ gruppi
 > - $f: G \rightarrow H$
-> - $f$ **morfismo di gruppi** $\iff \forall x, y \in G \quad f(x\cdot y)=f(x)\cdot f(y)$
+> - $f$ è detto **morfismo di gruppi** $\iff \forall x, y \in G \quad f(x\cdot y)=f(x)\cdot f(y)$
 
 - **Morfismo di anelli**
 
 > - $(A, +, \cdot), (B, +, \cdot)$ anelli
 > - $f: A \rightarrow B$
-> - $f$ **morfismo di anelli** $\iff \forall x, y \in A \quad f(x+ y) = f(x) + f(y) \land f(x \cdot y) = f(x) \cdot f(y)$
->     -   la stessa definizione si applica per morfismo di campi
+> - $f$ è detto **morfismo di anelli** $\iff$
+>     - $\forall x, y \in A \quad f(x+ y) = f(x) + f(y)$
+>     - $\forall x, y, \in A \quad f(x \cdot y) = f(x) \cdot f(y)$
 
 ## Oss
 
@@ -26,7 +27,7 @@
   - $f(1_G) = 1_H$
 - **Dim**
   - $\forall g \in G \quad f(g) = f(1_G \cdot g) = f(1_G) \cdot f(g)$ poiché $f$ morfismo
-  - quindi $f(g) = f(1_G) \cdot f(g) \implies f(g) \cdot f(g)^{-1} = f(1_G) \cdot f(g) \cdot f(g)^{-1} \implies 1_H = f(1_G) \cdot 1_H \implies 1_H = f(1_G)$ (poiché $f(g), f(g)^{-1} \in H$ per definizione di $f$)
+  - quindi $f(g) = f(1_G) \cdot f(g) \iff f(g) \cdot f(g)^{-1} = f(1_G) \cdot f(g) \cdot f(g)^{-1} \iff 1_H = f(1_G) \cdot 1_H \implies 1_H = f(1_G)$
  
 ## Oss
 
@@ -38,7 +39,7 @@
 - **Th**
   - $f(g^{-1}) = f(g)^{-1}$
 - **Dim**
-  - per dimostrazione precedente, $1_H = f(1_G) = f(g \cdot g^{-1})=f(g) \cdot f(g^{-1}) \implies 1_H = f(g) \cdot f(g^{-1}) \implies f(g)^{-1} = f(g^{-1})$
+  - per dimostrazione precedente, $1_H = f(1_G) = f(g \cdot g^{-1})=f(g) \cdot f(g^{-1}) \iff f(g)^{-1} = f(g^{-1})$
 
 ****
 
@@ -48,7 +49,7 @@
 
 - **Isomorfismo**
 
-> - $f$ isomorfismo $\iff f$ morfismo e $f$ biiettiva
+> - $f$ è detto **isomorfismo** $\iff f$ morfismo biiettivo
 
 ## Oss
 
@@ -58,7 +59,7 @@
 - **Th**
   - $f ^{-1}: H \rightarrow G$ isomorfismo
 - **Dim**
-  - $\forall g \in G, h \in H \quad \exists !f^{-1} \mid \left\{\begin{array}{c}f^{-1}(f(g))=g \\ f\left(f^{-1}(h)\right)=h\end{array}\right.$
+  - $\forall g \in G, h \in H \quad \exists !f^{-1} \mid \left\{\begin{array}{l}f^{-1}(f(g))=g \\ f\left(f^{-1}(h)\right)=h\end{array}\right.$
   - $\forall h, h^{\prime} \in H \quad f^{-1}\left(h h^{\prime}\right)=f^{-1}(h) \cdot f^{-1}\left(h^{\prime}\right) \iff hh'=f\left(f^{-1}\left(h h^{\prime})\right)=f(f^{-1}(h)\cdot f^{-1}(h^\prime)) = f(f^{-1}(h))\cdot f(f^{-1}(h^\prime))\right. = hh'$, e dunque $f^{-1}$ è un morfismo, e poiché è invertibile è un isomorfismo
 
 ## Oss

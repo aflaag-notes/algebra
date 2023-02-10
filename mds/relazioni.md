@@ -272,10 +272,7 @@
 - **Th**
   - $xH:= \{ xh \mid h \in H\} = [x]$
 - **Dim**
-  - $[x] \subseteq xH$
-    - $y \in[x] \implies y \sim x \implies x \sim y \implies \exists h:= x^{-1}y \in H$ $\implies xh = x(x^{-1}y)=(xx^{-1})y=y \in H$ in quanto $H \leqslant G$, quindi $y \in [x] \implies \exists h \in H \mid y = xh \in H \implies y \in xH$
-  - $xH \subseteq [x]$
-    - $y \in x H \implies \exists h \in H \mid y=x h \implies x^{-1}y = x^{-1}xh= h$, quindi $h \in H \implies x^{-1}y \in H \implies x \sim y \implies y \in [x]$
+  - $y \in xH \iff \exists h \in H \mid y = xh \iff x^{-1}y = h \in H \iff x \sim_S y$
 
 ## Oss
 

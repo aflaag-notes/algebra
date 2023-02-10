@@ -193,7 +193,7 @@
 <ul>
 <li><span class="math inline">(G, \cdot), (H, \cdot)</span> gruppi</li>
 <li><span class="math inline">f: G \rightarrow H</span></li>
-<li><span class="math inline">f</span> <strong>morfismo di
+<li><span class="math inline">f</span> è detto <strong>morfismo di
 gruppi</strong> <span class="math inline">\iff \forall x, y \in G \quad
 f(x\cdot y)=f(x)\cdot f(y)</span></li>
 </ul>
@@ -206,11 +206,13 @@ f(x\cdot y)=f(x)\cdot f(y)</span></li>
 <li><span class="math inline">(A, +, \cdot), (B, +, \cdot)</span>
 anelli</li>
 <li><span class="math inline">f: A \rightarrow B</span></li>
-<li><span class="math inline">f</span> <strong>morfismo di
-anelli</strong> <span class="math inline">\iff \forall x, y \in A \quad
-f(x+ y) = f(x) + f(y) \land f(x \cdot y) = f(x) \cdot f(y)</span>
+<li><span class="math inline">f</span> è detto <strong>morfismo di
+anelli</strong> <span class="math inline">\iff</span>
 <ul>
-<li>la stessa definizione si applica per morfismo di campi</li>
+<li><span class="math inline">\forall x, y \in A \quad f(x+ y) = f(x) +
+f(y)</span></li>
+<li><span class="math inline">\forall x, y, \in A \quad f(x \cdot y) =
+f(x) \cdot f(y)</span></li>
 </ul></li>
 </ul>
 </blockquote>
@@ -234,11 +236,9 @@ class="math inline">H</span></li>
 <li><span class="math inline">\forall g \in G \quad f(g) = f(1_G \cdot
 g) = f(1_G) \cdot f(g)</span> poiché <span class="math inline">f</span>
 morfismo</li>
-<li>quindi <span class="math inline">f(g) = f(1_G) \cdot f(g) \implies
-f(g) \cdot f(g)^{-1} = f(1_G) \cdot f(g) \cdot f(g)^{-1} \implies 1_H =
-f(1_G) \cdot 1_H \implies 1_H = f(1_G)</span> (poiché <span
-class="math inline">f(g), f(g)^{-1} \in H</span> per definizione di
-<span class="math inline">f</span>)</li>
+<li>quindi <span class="math inline">f(g) = f(1_G) \cdot f(g) \iff f(g)
+\cdot f(g)^{-1} = f(1_G) \cdot f(g) \cdot f(g)^{-1} \iff 1_H = f(1_G)
+\cdot 1_H \implies 1_H = f(1_G)</span></li>
 </ul></li>
 </ul>
 <a href="#oss-1"><h2 id="oss-1">Oss</h2></a>
@@ -259,8 +259,8 @@ class="math inline">H</span></li>
 <li><strong>Dim</strong>
 <ul>
 <li>per dimostrazione precedente, <span class="math inline">1_H = f(1_G)
-= f(g \cdot g^{-1})=f(g) \cdot f(g^{-1}) \implies 1_H = f(g) \cdot
-f(g^{-1}) \implies f(g)^{-1} = f(g^{-1})</span></li>
+= f(g \cdot g^{-1})=f(g) \cdot f(g^{-1}) \iff f(g)^{-1} =
+f(g^{-1})</span></li>
 </ul></li>
 </ul>
 <hr />
@@ -271,9 +271,9 @@ f(g^{-1}) \implies f(g)^{-1} = f(g^{-1})</span></li>
 </ul>
 <blockquote>
 <ul>
-<li><span class="math inline">f</span> isomorfismo <span
-class="math inline">\iff f</span> morfismo e <span
-class="math inline">f</span> biiettiva</li>
+<li><span class="math inline">f</span> è detto
+<strong>isomorfismo</strong> <span class="math inline">\iff f</span>
+morfismo biiettivo</li>
 </ul>
 </blockquote>
 <a href="#oss-2"><h2 id="oss-2">Oss</h2></a>
@@ -291,7 +291,7 @@ isomorfismo</li>
 <li><strong>Dim</strong>
 <ul>
 <li><span class="math inline">\forall g \in G, h \in H \quad \exists
-!f^{-1} \mid \left\{\begin{array}{c}f^{-1}(f(g))=g \\
+!f^{-1} \mid \left\{\begin{array}{l}f^{-1}(f(g))=g \\
 f\left(f^{-1}(h)\right)=h\end{array}\right.</span></li>
 <li><span class="math inline">\forall h, h^{\prime} \in H \quad
 f^{-1}\left(h h^{\prime}\right)=f^{-1}(h) \cdot
