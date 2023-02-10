@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <title>Indice</title>
+  <title>Insieme quoziente</title>
   <style>
     html {
       line-height: 1.5;
@@ -15,7 +15,7 @@
     }
     body {
       margin: 0 auto;
-      max-width: 36em;
+      max-width: 60em;
       padding-left: 50px;
       padding-right: 50px;
       padding-top: 50px;
@@ -158,6 +158,24 @@
       vertical-align: middle;
     }
   </style>
+  <script defer=""
+  src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js"></script>
+  <script>document.addEventListener("DOMContentLoaded", function () {
+ var mathElements = document.getElementsByClassName("math");
+ var macros = [];
+ for (var i = 0; i < mathElements.length; i++) {
+  var texText = mathElements[i].firstChild;
+  if (mathElements[i].tagName == "SPAN") {
+   katex.render(texText.data, mathElements[i], {
+    displayMode: mathElements[i].classList.contains('display'),
+    throwOnError: false,
+    macros: macros,
+    fleqn: false
+   });
+}}});
+  </script>
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css" />
   <!--[if lt IE 9]>
     <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
   <![endif]-->
@@ -166,191 +184,378 @@
 <header id="title-block-header">
 <h1 class="title"> </h1>
 </header>
-<h1 id="indice">Indice</h1>
-<h2 id="teoria-dei-gruppi">Teoria dei gruppi</h2>
+<a href="#insieme-quoziente"><h1 id="insieme-quoziente">Insieme quoziente</h1></a>
+<a href="#def"><h2 id="def">Def</h2></a>
 <ul>
-<li><a
-href="https://ph04.github.io/algebra/html/gruppi-e-anelli.html">Gruppi e
-Anelli</a>
-<ul>
-<li><a
-href="https://ph04.github.io/algebra/html/gruppi-e-anelli.html#gruppi-e-anelli">Gruppi
-e Anelli</a></li>
-<li><a
-href="https://ph04.github.io/algebra/html/gruppi-e-anelli.html#sottogruppi">Sottogruppi</a></li>
-<li><a
-href="https://ph04.github.io/algebra/html/gruppi-e-anelli.html#ordine">Ordine</a></li>
-</ul></li>
-<li><a href="https://ph04.github.io/algebra/html/ideali.html">Ideali</a>
-<ul>
-<li><a
-href="https://ph04.github.io/algebra/html/ideali.html#ideali">Ideali</a></li>
-<li><a
-href="https://ph04.github.io/algebra/html/ideali.html#operazioni-sugli-ideali">Operazioni
-sugli ideali</a></li>
-</ul></li>
-<li><a
-href="https://ph04.github.io/algebra/html/relazioni.html">Relazioni</a>
-<ul>
-<li><a
-href="https://ph04.github.io/algebra/html/relazioni.html#relazioni">Relazioni</a></li>
-<li><a
-href="https://ph04.github.io/algebra/html/relazioni.html#partizioni">Partizioni</a></li>
-<li><a
-href="https://ph04.github.io/algebra/html/relazioni.html#classi-laterali">Classi
-laterali</a></li>
-</ul></li>
-<li><a
-href="https://ph04.github.io/algebra/html/insieme-quoziente.html">Insieme
-quoziente</a>
-<ul>
-<li><a
-href="https://ph04.github.io/algebra/html/insieme-quoziente.html#insieme-quoziente">Insieme
-quoziente</a></li>
-<li><a
-href="https://ph04.github.io/algebra/html/insieme-quoziente.html#funzione-totiente-di-eulero">Funzione
-totiente di Eulero</a></li>
-</ul></li>
-<li><a
-href="https://ph04.github.io/algebra/html/permutazioni.html">Permutazioni</a>
-<ul>
-<li><a
-href="https://ph04.github.io/algebra/html/permutazioni.html#permutazioni">Permutazioni</a></li>
-<li><a
-href="https://ph04.github.io/algebra/html/permutazioni.html#trasposizioni">Trasposizioni</a></li>
-<li><a
-href="https://ph04.github.io/algebra/html/permutazioni.html#segno">Segno</a></li>
-</ul></li>
-<li><a
-href="https://ph04.github.io/algebra/html/morfismi.html">Morfismi</a>
-<ul>
-<li><a
-href="https://ph04.github.io/algebra/html/morfismi.html#morfismi">Morfismi</a></li>
-<li><a
-href="https://ph04.github.io/algebra/html/morfismi.html#isomorfismi">Isomorfismi</a></li>
-<li><a
-href="https://ph04.github.io/algebra/html/morfismi.html#kernel-e-immagine">Kernel
-e immagine</a></li>
-</ul></li>
-<li><a
-href="https://ph04.github.io/algebra/html/gruppi-diedrali.html">Gruppi
-diedrali</a></li>
-<li><a
-href="https://ph04.github.io/algebra/html/polinomi.html">Polinomi</a></li>
+<li><strong>Insieme quoziente</strong></li>
 </ul>
-<h2 id="algebra-lineare">Algebra lineare</h2>
+<blockquote>
 <ul>
-<li><a
-href="https://ph04.github.io/algebra/html/spazi-vettoriali.html">Spazi
-vettoriali</a>
+<li><span class="math inline">G</span> gruppo</li>
+<li><span class="math inline">\sim</span> relazione di equivalenza in
+<span class="math inline">G</span></li>
+<li><span class="math inline">\forall x \in G \quad [x]:=\{y \in G \mid
+x \sim y\}</span></li>
+<li><span class="math inline">G/\sim := \{[x] \mid x \in G\}</span> è
+detto <strong>insieme quoziente</strong>, ovvero l’insieme delle classi
+di equivalenza determinate da <span class="math inline">\sim</span></li>
+</ul>
+</blockquote>
+<a href="#def-1"><h2 id="def-1">Def</h2></a>
 <ul>
-<li><a
-href="https://ph04.github.io/algebra/html/spazi-vettoriali.html#spazi-vettoriali">Spazi
-vettoriali</a></li>
-<li><a
-href="https://ph04.github.io/algebra/html/spazi-vettoriali.html#applicazioni-lineari">Applicazioni
-lineari</a></li>
-<li><a
-href="https://ph04.github.io/algebra/html/spazi-vettoriali.html#sottospazi-affini">Sottospazi
-affini</a></li>
+<li><strong>Insieme quoziente <span
+class="math inline">\mathbb{Z}_n</span></strong></li>
+</ul>
+<blockquote>
+<ul>
+<li><span class="math inline">n \in \mathbb{Z}</span></li>
+<li><span class="math inline">\mathbb{Z}_n := \mathbb{Z} / \equiv</span>
+è detto <strong>insieme quoziente <span
+class="math inline">\mathbb{Z}_n</span></strong></li>
+</ul>
+</blockquote>
+<a href="#oss"><h2 id="oss">Oss</h2></a>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">n \in \mathbb{Z}</span></li>
+<li><span class="math inline">I(n) := \{nk \mid k \in
+\mathbb{Z}\}</span></li>
 </ul></li>
-<li><a
-href="https://ph04.github.io/algebra/html/matrici.html">Matrici</a>
+<li><strong>Th</strong>
 <ul>
-<li><a
-href="https://ph04.github.io/algebra/html/matrici.html#matrici">Matrici</a></li>
-<li><a
-href="https://ph04.github.io/algebra/html/matrici.html#interpretazione-geometrica-dei-vettori">Interpretazione
-geometrica dei vettori</a></li>
-<li><a
-href="https://ph04.github.io/algebra/html/matrici.html#matrici-particolari">Matrici
-particolari</a></li>
-<li><a
-href="https://ph04.github.io/algebra/html/matrici.html#rango">Rango</a></li>
-<li><a
-href="https://ph04.github.io/algebra/html/matrici.html#operazioni-su-righe-e-colonne">Operazioni
-su righe e colonne</a></li>
+<li>inoltre, questo implica che <span class="math inline">\mathbb{Z}_n =
+\{[0], \ldots, [n - 1]\}</span></li>
 </ul></li>
-<li><a
-href="https://ph04.github.io/algebra/html/determinante.html">Determinante</a>
+<li><strong>Dim</strong>
 <ul>
-<li><a
-href="https://ph04.github.io/algebra/html/determinante.html#determinante">Determinante</a></li>
-<li><a
-href="https://ph04.github.io/algebra/html/determinante.html#polinomio-caratteristico">Polinomio
-caratteristico</a></li>
+<li><span class="math inline">\forall x \in \mathbb{Z} \quad [x] := \{ y
+\in \mathbb{Z} \mid x \equiv y \ (\bmod \ n) \iff n \mid x - y \iff
+\exists q \in \mathbb{Z} \mid n q = x - y \iff x - y \in I(n)\} \implies
+\mathbb{Z}/I(n) = \mathbb{Z}/\equiv \ =: \mathbb{Z}_n</span></li>
+<li>allora necessariamente <span class="math inline">\mathbb{Z}_n =
+\{[0], \ldots, [n - 1]\}</span></li>
 </ul></li>
 </ul>
-<h2 id="altro">Altro</h2>
+<a href="#oss-1"><h2 id="oss-1">Oss</h2></a>
 <ul>
-<li><a
-href="https://ph04.github.io/algebra/html/numeri-complessi.html">Numeri
-complessi</a></li>
-<li><a
-href="https://ph04.github.io/algebra/html/coefficienti-binomiali.html">Coefficienti
-binomiali</a></li>
-<li><a
-href="https://ph04.github.io/algebra/html/induzione.html">Induzione</a></li>
-<li><a
-href="https://ph04.github.io/algebra/html/altro.html">Altro</a></li>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">p \in \mathbb{P}</span></li>
+<li><span class="math inline">a, b \in \mathbb{Z}</span></li>
+<li><span class="math inline">p \mid ab</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">p \mid a \lor p \mid b</span></li>
+</ul></li>
+<li><strong>Dim</strong>
+<ul>
+<li><span class="math inline">p \mid ab \implies p</span> è nella
+fattorizzazione in numeri primi di <span
+class="math inline">ab</span></li>
+<li><span class="math inline">p \in \mathbb{P}</span>, allora <span
+class="math inline">p</span> è nella fattorizzazione di <span
+class="math inline">a</span>, e quindi <span class="math inline">p \mid
+a</span>, oppure <span class="math inline">p</span> è nella
+fattorizzazione di <span class="math inline">b</span>, e quindi <span
+class="math inline">p \mid b</span></li>
+</ul></li>
 </ul>
-<h2 id="teoremi-fondamentali">Teoremi fondamentali</h2>
+<a href="#oss-2"><h2 id="oss-2">Oss</h2></a>
 <ul>
-<li><a
-href="https://ph04.github.io/algebra/html/teoremi-fondamentali.html">Teoremi
-fondamentali</a>
+<li><strong>Hp</strong>
 <ul>
-<li><a
-href="https://ph04.github.io/algebra/html/teoremi-fondamentali.html#teorema-fondamentale-dellalgebra">Teorema
-fondamentale dell’algebra</a></li>
-<li><a
-href="https://ph04.github.io/algebra/html/teoremi-fondamentali.html#teorema-della-divisione-euclidea-con-il-resto">Teorema
-della divisione euclidea con il resto</a></li>
-<li><a
-href="https://ph04.github.io/algebra/html/teoremi-fondamentali.html#teorema-di-lagrange">Teorema
-di Lagrange</a></li>
-<li><a
-href="https://ph04.github.io/algebra/html/teoremi-fondamentali.html#teorema-fondamentale-dellaritmetica">Teorema
-fondamentale dell’aritmetica</a></li>
-<li><a
-href="https://ph04.github.io/algebra/html/teoremi-fondamentali.html#teorema-cinese-dei-resti">Teorema
-cinese dei resti</a></li>
-<li><a
-href="https://ph04.github.io/algebra/html/teoremi-fondamentali.html#teorema-del-binomio-di-newton">Teorema
-del binomio di Newton</a></li>
-<li><a
-href="https://ph04.github.io/algebra/html/teoremi-fondamentali.html#piccolo-teorema-di-fermat">Piccolo
-teorema di Fermat</a></li>
-<li><a
-href="https://ph04.github.io/algebra/html/teoremi-fondamentali.html#teorema-di-eulero">Teorema
-di Eulero</a></li>
-<li><a
-href="https://ph04.github.io/algebra/html/teoremi-fondamentali.html#teorema-fondamentale-di-isomorfismo">Teorema
-fondamentale di isomorfismo</a></li>
-<li><a
-href="https://ph04.github.io/algebra/html/teoremi-fondamentali.html#teorema-di-cauchy">Teorema
-di Cauchy</a></li>
-<li><a
-href="https://ph04.github.io/algebra/html/teoremi-fondamentali.html#teorema-di-carnot">Teorema
-di Carnot</a></li>
-<li><a
-href="https://ph04.github.io/algebra/html/teoremi-fondamentali.html#teorema-del-rango">Teorema
-del rango</a></li>
-<li><a
-href="https://ph04.github.io/algebra/html/teoremi-fondamentali.html#teorema-di-rouché-capelli">Teorema
-di Rouché-Capelli</a></li>
-<li><a
-href="https://ph04.github.io/algebra/html/teoremi-fondamentali.html#teorema-di-cramer">Teorema
-di Cramer</a></li>
-<li><a
-href="https://ph04.github.io/algebra/html/teoremi-fondamentali.html#teorema-di-kronecker">Teorema
-di Kronecker</a></li>
-<li><a
-href="https://ph04.github.io/algebra/html/teoremi-fondamentali.html#teorema-di-binet">Teorema
-di Binet</a></li>
-<li><a
-href="https://ph04.github.io/algebra/html/teoremi-fondamentali.html#teorema-spettrale">Teorema
-spettrale</a></li>
+<li><span class="math inline">n \in \mathbb{Z}</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\mathbb{Z}_n</span> dominio di integrità
+<span class="math inline">\iff n \in \mathbb{P}</span></li>
+</ul></li>
+<li><strong>Dim</strong>
+<ul>
+<li><em>prima implicazione</em>
+<ul>
+<li>per assurdo, ipotizzando <span class="math inline">n \notin
+\mathbb{P} \implies \exists a, b \in \mathbb{Z} \mid n = ab \quad 0 \lt
+a, b \lt n</span> per definizione
+<ul>
+<li>in particolare <span class="math inline">a, b \neq 0</span></li>
+</ul></li>
+<li><span class="math inline">n = ab \iff [n] = [ab]</span> in <span
+class="math inline">\mathbb{Z}_n</span></li>
+<li><span class="math inline">[n] = [0]</span> in <span
+class="math inline">\mathbb{Z}_n</span>, dunque <span
+class="math inline">[ab] = [0]</span></li>
+<li><span class="math inline">\mathbb{Z}_n</span> dominio di integrità
+<span class="math inline">\implies</span> in <span
+class="math inline">\mathbb{Z}_n</span> vale la legge di annullamento
+del prodotto, e dunque <span class="math inline">[ab] = [0] \iff [a] = 0
+\lor [b] = [0] \ \bot</span></li>
+</ul></li>
+<li><em>seconda implicazione</em>
+<ul>
+<li>per assurdo, ipotizzando <span
+class="math inline">\mathbb{Z}_n</span> non sia dominio di integrità
+<span class="math inline">\implies \exists[a] \in \mathbb{Z}_n : [a]
+\neq [0], a \mid 0</span></li>
+<li><span class="math inline">a \mid 0 \implies \exists b \in \mathbb{Z}
+\mid [a][b] = [0] \quad b \neq 0</span></li>
+<li><span class="math inline">[0]=[a][b] \iff [0]=[ab] \iff 0 \equiv ab
+\ (\bmod \  n) \iff n \mid ab - 0 \iff n \mid ab</span></li>
+<li><span class="math inline">n \in \mathbb{P}</span>, allora <span
+class="math inline">n \mid ab \implies n \mid a \lor n \mid b</span> per
+dimostrazione precedente
+<ul>
+<li><span class="math inline">n \mid a \implies [a] = [n] = [0]</span>
+in <span class="math inline">\mathbb{Z}_n \ \bot</span></li>
+<li><span class="math inline">n \mid b \implies [b] = [n] = [0]</span>
+in <span class="math inline">\mathbb{Z}_n</span>, ma <span
+class="math inline">b \neq 0</span> in ipotesi, dunque necessariamente
+<span class="math inline">[a] =[0] \ \bot</span></li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul>
+<a href="#oss-3"><h2 id="oss-3">Oss</h2></a>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">n \in \mathbb{Z}</span></li>
+<li><span class="math inline">[a] \in \mathbb{Z}_n \quad</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">[a] \in \mathbb{Z}^*_n \iff
+\textrm{MCD}(a, n) = 1</span></li>
+</ul></li>
+<li><strong>Dim</strong>
+<ul>
+<li><em>prima implicazione</em>
+<ul>
+<li><span class="math inline">[a] \in \mathbb{Z}_n^* \implies \exists b
+\in \mathbb{Z} \mid [a][b] = [1] \quad 0 \lt b \lt n \iff ab \equiv 1 \
+(\bmod \ n) \iff n \mid 1 - ab \iff \exists k \in \mathbb{Z} \mid nk = 1
+- ab</span></li>
+<li>allora <span class="math inline">\exists b, k \in \mathbb{Z} \mid n
+k = 1 - ab \iff 1 = nk + ab</span></li>
+<li><span class="math inline">d : = \textrm{MCD}(a, n)</span></li>
+<li>per definizione, <span class="math inline">d \mid a \land d \mid
+n</span>
+<ul>
+<li><span class="math inline">d \mid a \implies \exists x \in \mathbb{Z}
+\mid dx = a</span></li>
+<li><span class="math inline">d \mid n \implies \exists y \in \mathbb{Z}
+\mid dy = n</span></li>
+</ul></li>
+<li><span class="math inline">1 = nk + ab \iff 1 = dyk + dxb = d(yk +
+xb) \implies \exists yk + xb \in \mathbb{Z} \mid 1 = d(yk +xb) \implies
+d \mid 1</span></li>
+<li><span class="math inline">d \mid 1 \iff d = \pm 1</span>, ma <span
+class="math inline">d := \textrm{MCD}(a, n) \implies d \ge 0 \implies d
+= 1</span></li>
+</ul></li>
+<li><em>seconda implicazione</em>
+<ul>
+<li><span class="math inline">d := \textrm{MCD}(a, n) = 1</span></li>
+<li>per dimostrazione precedente, <span class="math inline">I(d) = I(a,
+n) \implies d \in I(a, n) \implies \exists b, k \in \mathbb{Z} \mid d =
+ab + nk</span> per definizione di <span class="math inline">I(a,
+n)</span>, allora <span class="math inline">d = 1 = ab + nk \iff nk = 1
+- ab \iff n \mid 1 - ab \iff ab \equiv 1 \ (\bmod \ n) \implies [a][b] =
+[1]</span> in <span class="math inline">\mathbb{Z}_n</span>, dunque sono
+uno l’inverso dell’altro, e in particolare <span class="math inline">[a]
+= [b]^{-1} \implies \exists [b] \in \mathbb{Z}_n \mid [a]\in
+\mathbb{Z}_n^*</span></li>
+</ul></li>
+</ul></li>
+</ul>
+<a href="#oss-4"><h2 id="oss-4">Oss</h2></a>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">p \in \mathbb{P}</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\mathbb{Z}_p</span> campo</li>
+</ul></li>
+<li><strong>Dim</strong>
+<ul>
+<li><span class="math inline">\mathbb{Z}_p^* := \{[x] \in \mathbb{Z}_p
+\mid \exists[x]^{-1} \in \mathbb{Z}_p\}</span></li>
+<li><span class="math inline">p \in \mathbb{P} \implies \forall x \in
+[1, p - 1] \quad \textrm{MCD}(x, p) = 1</span></li>
+<li>allora <span class="math inline">\mathbb{Z}_p^* = \mathbb{Z}_p -
+\{[0]\} \implies \mathbb{Z}_p</span> campo</li>
+</ul></li>
+</ul>
+<a href="#oss-5"><h2 id="oss-5">Oss</h2></a>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">p \in \mathbb{P}</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">(\mathbb{Z}_p^*, \cdot)</span> è
+ciclico</li>
+</ul></li>
+<li><strong>Dim</strong>
+<ul>
+<li><strong>⚠️ MANCA QUALSIASI TEOREMA</strong></li>
+</ul></li>
+</ul>
+<hr />
+<a href="#funzione-totiente-di-eulero"><h1 id="funzione-totiente-di-eulero">Funzione totiente di Eulero</h1></a>
+<a href="#def-2"><h2 id="def-2">Def</h2></a>
+<ul>
+<li><strong>Funzione totiente di Eulero</strong></li>
+</ul>
+<blockquote>
+<ul>
+<li><span class="math inline">n \in \mathbb{N}</span></li>
+<li><span class="math inline">\varphi(n) := |\mathbb{Z}_n^*
+|</span></li>
+</ul>
+</blockquote>
+<a href="#lem"><h2 id="lem">Lem</h2></a>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">n, m \in \mathbb{N} \mid \textrm{MCD}(a,
+n) = 1</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">[a] \in \mathbb{Z}_{m n}^{*} \iff[a] \in
+\mathbb{Z}_{m}^{*} \land [a] \in \mathbb{Z}^*_{n}</span></li>
+</ul></li>
+<li><strong>Dim</strong>
+<ul>
+<li><em>prima implicazione</em>
+<ul>
+<li><span class="math inline">a \ (\bmod \ \ n) \in \mathbb{Z}_{mn}^*
+\implies \exists x \in \mathbb{Z} \mid ax \equiv 1 \ (\bmod \ \
+mn)</span>
+<ul>
+<li>per dimostrazione precedente <span
+class="math inline">\left.\begin{array}{l}a \mid b \\ x \equiv y \
+(\bmod \ \ b)\end{array}\right\} x \equiv y \ (\bmod \ a) \implies
+\left\{\begin{array}{l}m, n \mid m n \\ a x \equiv 1\ (\bmod \ m
+n)\end{array}\iff\left\{\begin{array}{l}a x \equiv 1\ (\bmod \ m) \\ a x
+\equiv 1 \ ( \bmod \ n)\end{array}\right.\right.</span> <span
+class="math inline">\implies\left\{\begin{array}{l}{[a] \in
+\mathbb{Z}_{m}^{*}} \\ {[a] \in
+\mathbb{Z}_{n}^{*}}\end{array}\right.</span></li>
+</ul></li>
+</ul></li>
+<li><em>seconda implicazione</em>
+<ul>
+<li><span class="math inline">[a] \in \mathbb{Z}_{m}^{*} \wedge[a] \in
+\mathbb{Z}_{n}^{*} \Longrightarrow \exists y, z
+\mid\left\{\begin{array}{l}a y \equiv 1 \ (\bmod \ m) \\ a z \equiv 1\
+(\bmod \ n )\end{array}\right.</span>, e per il teorema cinese dei resti
+<span class="math inline">\exists ! [x] \in \mathbb{Z}_{mn}</span>, che
+si trova ponendo <span class="math inline">\left\{\begin{array}{l}x
+\equiv y\ (\bmod \ m) \\ x \equiv z\ (\bmod \ n)\end{array}\right.
+\implies \left\{\begin{array}{l}a x \equiv a y\ (\bmod \ m) \\ a x
+\equiv a z\ (\bmod \ n)\end{array}\right.</span> moltiplicando entrambe
+le equazioni per <span class="math inline">a</span>, e per il sistema
+precedente <span class="math inline">\left\{\begin{array}{ll}a x\equiv1
+\ (\bmod \ m) \\ a x\equiv1 \ (\bmod \ n)\end{array}\right.</span>, e
+poiché <span class="math inline">m</span> e <span
+class="math inline">n</span> sono coprimi in ipotesi, per il teorema
+cinese dei resti <span class="math inline">ax \equiv 1 \ (\bmod \ mn)
+\implies [a ] \in \mathbb{Z}_{mn}^*</span></li>
+</ul></li>
+</ul></li>
+</ul>
+<a href="#oss-6"><h2 id="oss-6">Oss</h2></a>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">m, n \in \mathbb{N} \mid \textrm{MCD}(m,
+n) = 1</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\varphi(m \cdot n) = \varphi(m) \cdot
+\varphi(n)</span></li>
+</ul></li>
+<li><strong>Dim</strong>
+<ul>
+<li>per dimostrazione precedente, esiste una biezione definita come
+<span class="math inline">\mathbb{Z}_{m n}^{*} \rightarrow
+\mathbb{Z}_{m}^{*} \times \mathbb{Z}_{n}^{*}</span></li>
+<li><span class="math inline">\varphi(m \cdot n):=\left|\mathbb{Z}_{m
+n}^{*}\right|=\left|\mathbb{Z}_{m}^{*} \times
+\mathbb{Z}_{n}^{*}\right|</span> perché è una biezione, e dunque è pari
+a <span class="math inline">\left|\mathbb{Z}_{m}^{*}\right|
+\cdot\left|\mathbb{Z}_{n}^{*}\right|=\varphi(m) \cdot \varphi(n)</span>
+per definizione</li>
+</ul></li>
+</ul>
+<a href="#oss-7"><h2 id="oss-7">Oss</h2></a>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">p \in \mathbb{P}</span></li>
+<li><span class="math inline">k \in \mathbb{N} \mid k \ge 1</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\varphi(p^k) = p^{k -1}(p-1)</span></li>
+</ul></li>
+<li><strong>Dim</strong>
+<ul>
+<li><span class="math inline">0 \le a \lt p^k \in \mathbb{Z}_{p^k}^*
+\iff \textrm{MCD}(a, p^k)=1</span>, che è vero quando <span
+class="math inline">p \nmid a</span> poiché <span class="math inline">p
+\in \mathbb{P}</span></li>
+<li>simmetricamente, <span class="math inline">0 \le a \lt p^k \notin
+\mathbb{Z}_{p^k}^* \iff \exists n \in \mathbb{Z} \mid a = np</span>
+<ul>
+<li>i multipli di <span class="math inline">p</span> sono tutti <span
+class="math inline">0 \leq n p&lt;p^{k} \implies 0 \leq n \lt p ^{k -
+1}</span></li>
+<li><strong>⚠️ INCOMPLETA</strong></li>
+</ul></li>
+<li><span class="math inline">\varphi \left(
+p^{k}\right):=\left|\mathbb{Z}_{p^{k}}^{*}\right|=</span><span
+class="math inline">\left| \mathbb{Z}_{p^{k}}-\left\{[a] \in
+\mathbb{Z}_{p^{k}} \mid\nexists[a]^{-1} \in \mathbb{Z}_{p^{k}}\right\}
+\right|</span> = <span class="math inline">p^k - p^{k - 1} = p^{k - 1}(p
+- 1)</span></li>
+</ul></li>
+</ul>
+<a href="#oss-8"><h2 id="oss-8">Oss</h2></a>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">k \in \mathbb{N} \mid k \ge 1</span></li>
+<li><span class="math inline">p_1, \ldots, p_k \in
+\mathbb{P}</span></li>
+<li><span class="math inline">i_1, \ldots, i_k \ge 1</span></li>
+<li><span class="math inline">n \in \mathbb{N} \mid n = p_1^{i_1} \cdot
+\ldots \cdot p_k^{i_k}</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\displaystyle\varphi(n)=n \cdot \prod_{p
+\mid n}\left(1-\frac{1}{p}\right)</span></li>
+</ul></li>
+<li><strong>Dim</strong>
+<ul>
+<li>per dimostrazione precedente <span class="math inline">\varphi(n)
+=\varphi\left(p_{1}^{i_{1}}\right) \cdot \ldots \cdot
+\varphi\left(p_{k}^{i_{k}}\right)= p_1^{i_1 - 1}(p_1 - 1) \cdot \ldots
+\cdot p_k^{i_k - 1}(p_k -1) = p_1^{i_1} \cdot \ldots \cdot p_k^{i_k}
+\cdot \dfrac{p_1 - 1}{p_1} \cdot \ldots \cdot \dfrac{p_k - 1}{p_k}= n
+\cdot \dfrac{p_1 - 1}{p_1} \cdot \ldots \cdot \dfrac{p_k - 1}{p_k}
+\implies</span> <span class="math inline">\displaystyle{ \varphi(n)=n
+\cdot \prod_{p \mid n}\left(1-\frac{1}{p}\right) }</span></li>
 </ul></li>
 </ul>
 </body>
