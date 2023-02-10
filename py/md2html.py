@@ -35,32 +35,33 @@ for file in os.listdir("mds"):
         content = re.sub("#606060", "#adbac7", content)
         content = re.sub("<title>.*</title>", "<title>" + title[2:] + "</title>", content)
 
+        c = content.split("\n")
+
         if name_no_ext != "index":
-            c = content.split("\n")
             c[17] = "      max-width: 60em;"
 
-            for i in range(len(c) - 1):
-                if c[i].startswith("<h2 id=") or c[i].startswith("<h1 id="):
-                    k = c[i]
+        for i in range(len(c) - 1):
+            if c[i].startswith("<h2 id=") or c[i].startswith("<h1 id="):
+                k = c[i]
 
-                    if c[i + 1][0] != "<":
-                        k += " " + c[i + 1]
-                        c[i + 1] = ""
+                if c[i + 1][0] != "<":
+                    k += " " + c[i + 1]
+                    c[i + 1] = ""
 
-                    parts = k.split("\"")
+                parts = k.split("\"")
 
-                    c[i] = "<a href=\"#" + parts[1] + "\">" + k + "</a>"
+                c[i] = "<a href=\"#" + parts[1] + "\">" + k + "</a>"
 
-            content = "\n".join(c)
+        content = "\n".join(c)
 
         with open("html/" + name_no_ext + ".html", "w") as NB:
             NB.write(content)
 
     print(name_no_ext + ".html was successfully created")
 
-    if name_no_ext == "everything":
-        os.system("pandoc temp/" + name_no_ext + ".md -t pdf -V geometry:a4paper -o " + name_no_ext + ".pdf")
-
-        print(name_no_ext + ".pdf was successfully created")
+    # if name_no_ext == "everything":
+    #     os.system("pandoc temp/" + name_no_ext + ".md -t pdf -V geometry:a4paper -o " + name_no_ext + ".pdf")
+    #
+    #     print(name_no_ext + ".pdf was successfully created")
 
 os.system("rm -rf ./temp")
