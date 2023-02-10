@@ -130,7 +130,7 @@
   - $f$ morfismo di anelli tra $\left(\mathbb{Z},+, \cdot\right)$ e $\left(\mathbb{Z}_{n},+, \cdot\right)$
 - **Dim**
   - per come le operazioni $+$ e $\cdot$ sono state definite, $f([x+y])=f([x])+f([y])$ e
-$f([x \cdot y])=f([x]) \cdot f([y])$
+$f([x \cdot y])=f([x]) \cdot f([y]) \iff f$ morfismo
 
 ## Ex
 
@@ -152,7 +152,7 @@ $f([x \cdot y])=f([x]) \cdot f([y])$
 - **Th**
   - $f$ morfismo di gruppi tra $(G, \cdot)$ e $(G, \cdot)$
 - **Dim**
-  - $\forall h, h^\prime \in G \quad f(h) \cdot f\left(h^{\prime}\right)=\left(g h g^{-1}\right)\cdot \left(g h^{\prime} g^{-1}\right)=gh(g^{-1} \cdot g)h^\prime g^{-1}=g h h^{\prime} g^{-1}=f\left(h h^{\prime})\right. \implies f$ morfismo
+  - $\forall h, h^\prime \in G \quad f(h) \cdot f\left(h^{\prime}\right)=\left(g h g^{-1}\right)\cdot \left(g h^{\prime} g^{-1}\right)=gh(g^{-1} \cdot g)h^\prime g^{-1}=g h h^{\prime} g^{-1}=f\left(h h^{\prime})\right. \iff f$ morfismo
 
 ****
 
