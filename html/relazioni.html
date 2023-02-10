@@ -596,7 +596,7 @@ X_j \implies x \sim z \\ i \neq j \implies X_i \cap X_j = \varnothing
 <li><strong>Hp</strong>
 <ul>
 <li><span class="math inline">G</span> gruppo</li>
-<li><span class="math inline">H \subset G</span> sottogruppo</li>
+<li><span class="math inline">H \leqslant G</span></li>
 <li><span class="math inline">x, y \in G</span></li>
 </ul></li>
 <li><strong>Th</strong>
@@ -606,15 +606,12 @@ relazione di equivalenza</li>
 </ul></li>
 <li><strong>Dim</strong>
 <ul>
-<li><em>riflessività</em>: <span class="math inline">x \sim x</span>
+<li><em>riflessività</em>
 <ul>
-<li><span class="math inline">x^{-1}x \in H \quad \forall x</span>
-perché <span class="math inline">H</span> sottogruppo, dunque chiuso
-rispetto a prodotto ed inversi, e <span class="math inline">x^{-1}x = 1
-\in H</span></li>
+<li><span class="math inline">H \leqslant G \implies x^{-1}x = 1 \in
+H</span></li>
 </ul></li>
-<li><em>simmetria</em>: <span class="math inline">x \sim y \implies y
-\sim x</span>
+<li><em>simmetria</em>
 <ul>
 <li><span class="math inline">x \sim y \implies x^{-1}y \in H,\quad y
 \sim x \implies y^{-1}x \in H</span>
@@ -628,26 +625,18 @@ class="math inline">xx^{-1} = 1</span>, dunque necessariamente <span
 class="math inline">(xy)^{-1}=(y^{-1}x^{-1})</span>, e in particolare,
 <span class="math inline">(x^{-1}y)^{-1}=(y^{-1}x)</span></li>
 </ul></li>
-<li><span class="math inline">h:=x^{-1}y \implies h^{-1} =y^{-1}x \in
-H</span> perché <span class="math inline">H</span> sottogruppo <span
-class="math inline">\iff h^{-1} \in H \iff y \sim x</span></li>
+<li><span class="math inline">h:=x^{-1}y \implies h^{-1} =y^{-1}x \in H
+\iff h^{-1} \in H \iff y \sim x</span></li>
 </ul></li>
 </ul></li>
 <li><em>transitività</em>: <span class="math inline">x \sim y \land y
 \sim z \implies x \sim z</span>
 <ul>
 <li><span class="math inline">\left.\begin{array}{l}h:=x^{-1} y \in H \\
-k:=y^{-1} z \in H\end{array}\right\} \implies a:=h \cdot k=x^{-1} y
-\cdot y^{-1} z= x^{-1} z</span></li>
-<li><span class="math inline">a \in H</span> perche <span
-class="math inline">H</span> sottogruppo, dunque chiuso su <span
-class="math inline">\cdot</span>, e dunque <span
-class="math inline">\implies a \in H \iff x^{-1}z \in H \iff x \sim
-z</span>
-<ul>
-<li>quindi basta considerare il prodotto <span class="math inline">h
-\cdot k</span> per ottenere l’elemento di transitività</li>
-</ul></li>
+k:=y^{-1} z \in H\end{array}\right\} \implies h \cdot k=x^{-1} y \cdot
+y^{-1} z= x^{-1} z</span></li>
+<li><span class="math inline">H \leqslant G \implies h \cdot k \in H
+\implies x^{-1} z \in H \iff x \sim z</span></li>
 </ul></li>
 </ul></li>
 </ul>
@@ -656,7 +645,7 @@ z</span>
 <li><strong>Hp</strong>
 <ul>
 <li><span class="math inline">G</span> gruppo</li>
-<li><span class="math inline">H \subset G</span> sottogruppo</li>
+<li><span class="math inline">H \leqslant G</span></li>
 <li><span class="math inline">x, y \in G</span></li>
 </ul></li>
 <li><strong>Th</strong>
@@ -676,7 +665,7 @@ relazione di equivalenza</li>
 <blockquote>
 <ul>
 <li><span class="math inline">G</span> gruppo</li>
-<li><span class="math inline">H \subset G</span> sottogruppo</li>
+<li><span class="math inline">H \leqslant G</span></li>
 <li><span class="math inline">x \in G</span></li>
 <li><span class="math inline">[x] = \{y \in G \mid y \sim_S x\}</span> è
 detta <strong>classe laterale sinistra</strong></li>
@@ -748,7 +737,7 @@ dimostrazione precedente, dunque <span class="math inline">b - a = (-a)
 <li><strong>Hp</strong>
 <ul>
 <li><span class="math inline">G</span> gruppo</li>
-<li><span class="math inline">H \subset G</span> sottogruppo</li>
+<li><span class="math inline">H \leqslant G</span></li>
 </ul></li>
 <li><strong>Th</strong>
 <ul>
@@ -766,7 +755,7 @@ x</span></li>
 <li><strong>Hp</strong>
 <ul>
 <li><span class="math inline">G</span> gruppo</li>
-<li><span class="math inline">H \subset G</span> sottogruppo</li>
+<li><span class="math inline">H \leqslant G</span></li>
 <li><span class="math inline">x \in G</span></li>
 <li><span class="math inline">[x] = \{y \in G \mid y \sim_S
 x\}</span></li>
@@ -783,7 +772,7 @@ x\}</span></li>
 <li><span class="math inline">y \in[x] \implies y \sim x \implies x \sim
 y \implies \exists h:= x^{-1}y \in H</span> <span
 class="math inline">\implies xh = x(x^{-1}y)=(xx^{-1})y=y \in H</span>
-in quanto <span class="math inline">H</span> è sottogruppo, quindi <span
+in quanto <span class="math inline">H \leqslant G</span>, quindi <span
 class="math inline">y \in [x] \implies \exists h \in H \mid y = xh \in H
 \implies y \in xH</span></li>
 </ul></li>
@@ -801,7 +790,7 @@ class="math inline">h \in H \implies x^{-1}y \in H \implies x \sim y
 <li><strong>Hp</strong>
 <ul>
 <li><span class="math inline">G</span> gruppo</li>
-<li><span class="math inline">H \subset G</span> sottogruppo</li>
+<li><span class="math inline">H \leqslant G</span></li>
 <li><span class="math inline">x \in G</span></li>
 </ul></li>
 <li><strong>Th</strong>
@@ -825,7 +814,7 @@ class="math inline">\implies |H| = |xH|</span></li>
 <li><strong>Hp</strong>
 <ul>
 <li><span class="math inline">(G, +)</span> gruppo abeliano</li>
-<li><span class="math inline">H \subset G</span> sottogruppo</li>
+<li><span class="math inline">H \leqslant G</span></li>
 </ul></li>
 <li><strong>Th</strong>
 <ul>
@@ -850,9 +839,9 @@ x^{\prime}+y^{\prime}</span></li>
 x&#39; - x \in H</span></li>
 <li><span class="math inline">y \sim y&#39; \iff (-y) +y&#39; \in H \iff
 y&#39; - y \in H</span></li>
-<li><span class="math inline">H</span> è sottogruppo, allora <span
-class="math inline">(x&#39;-x)+(y&#39;-y) \in H \implies
--(x+y)+(x&#39;+y&#39;) \in H \iff x +y \sim x&#39;+y&#39;</span></li>
+<li><span class="math inline">H \leqslant G \implies
+(x&#39;-x)+(y&#39;-y) \in H \implies -(x+y)+(x&#39;+y&#39;) \in H \iff x
++y \sim x&#39;+y&#39;</span></li>
 </ul></li>
 <li><span class="math inline">(G/H, +)</span> gruppo abeliano
 <ul>
@@ -887,7 +876,7 @@ commutativo, dove <span class="math inline">+, \cdot : A/I \times A/I
 <li><strong>Dim</strong>
 <ul>
 <li><span class="math inline">+</span> è ben definita per dimostrazione
-precedente, poiché <span class="math inline">(I, +) \subset (A,
+precedente, poiché <span class="math inline">(I, +) \leqslant (A,
 +)</span> gruppo abeliano per definizione di <span
 class="math inline">I</span></li>
 <li><span class="math inline">\cdot</span> ben definita <span
@@ -910,8 +899,8 @@ i_2:=y&#39; - y \in I</span></li>
 class="math inline">\implies A \cdot I \subseteq I \implies \forall a
 \in A, i \in I \quad a i \in I</span>, in particolare <span
 class="math inline">i_1y&#39;, xi_2 \in I</span></li>
-<li><span class="math inline">(I, +) \subset (A, +)</span> sottogruppo,
-allora <span class="math inline">i_1y&#39; + xi_2 \in I</span></li>
+<li><span class="math inline">(I, +) \leqslant (A, +) \implies i_1y&#39;
++ xi_2 \in I</span></li>
 <li><span class="math inline">i_1y&#39; + xi_2 = (x&#39;-x)y&#39; +
 x(y&#39;-y) = x&#39;y&#39; - xy&#39; + xy&#39; - xy = x&#39;y&#39; - xy
 \in I \iff x&#39;y \sim xy</span></li>
@@ -937,8 +926,7 @@ class="math inline">[x^{-1}] \cdot[x]=[x^{-1} \cdot x]=[1] \implies
 <li><strong>Hp</strong>
 <ul>
 <li><span class="math inline">(G, \cdot)</span> gruppo</li>
-<li><span class="math inline">H \subset G</span> sottogruppo
-normale</li>
+<li><span class="math inline">H \trianglelefteq G</span></li>
 </ul></li>
 <li><strong>Th</strong>
 <ul>

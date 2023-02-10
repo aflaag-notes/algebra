@@ -6,7 +6,7 @@
 
 > - $(A, +, \cdot)$ anello
 > - $I \subset A$ è detto **ideale** $\iff$
->    - $(I, +) \subset (A, +)$ sottogruppo
+>    - $(I, +) \leqslant (A, +)$
 >    - $A \cdot I \subseteq I$
 >    - $I \cdot A \subseteq I$
 
@@ -19,7 +19,7 @@
 - **Th**
   - $I(a)$ è un ideale, e prende il nome di _ideale di $A$ generato da $a$_
 - **Dim**
-  - $(I(a), + ) \subset(A, +)$ sottogruppo
+  - $(I(a), + ) \leqslant (A, +)$
     -  $0$ multiplo di $a \implies 0 \in I(a)$
     - $\forall ax, ay \in I(a) \quad ax + ay = a(x + y) \implies ax + ay \in I(a)$ per definizione
     - $\forall ax \in I(a) \quad a(-x) \in I(a)$ poiché $-x$ è un multiplo di $a$, e $a(-x) = -ax \in I(a)$, che corrisponde all'opposto di $ax$ rispetto a $+$
@@ -84,7 +84,6 @@
 - **Th**
   -  $\exists ! \ d  \in \mathbb{N} \mid I = I(d)$, o equivalentemente, in $\mathbb{Z}$ ogni ideale è principale
 - **Dim**
-    - ⚠️ da rivedere
     - _esistenza_
         - $d = 0$
             - $I = \{0\} \implies I = I(0)$ poiché i multipli di $0$ sono tutti pari a $0$
@@ -153,7 +152,7 @@
     - $ax + by = d \iff \left \{ \begin{array}{l}x = x_0 + \dfrac{m}{a}k \\ \\ y = y_0 - \dfrac{m}{b}k\end{array}\right. \forall k \in \mathbb{Z}$
 - **Dim**
     - $a \left (x_0 + \dfrac{m}{a}k \right) + b \left(y_0 - \dfrac{m}{b}k \right) = ax_0 + mk + by_0 -mk = ax_0 + by_0 = d \implies x_0$ e $y_0$ rispettano il sistema
-    - ⚠️ **non capisco come procede da qua**
+    - per verificare che ogni soluzione è di questa forma, presi $x_1, y_1 \in \mathbb{Z} \mid a x_1 + by_1 = d$ si ha che $\left \{ \begin{array}{l} ax_0 + by_0 = d \\ a x_1 + by_1 = d \end{array} \right. \implies ax_0 + by_0 = ax_1 + by_1 \iff a(x_1 - x_0) = b(y_0 - y_1) =: N \implies a, b \mid N \implies m \mid N \iff \exists k \in \mathbb{Z} \mid mk = N \iff \left \{ \begin{array}{l} a(x_1 - x_0) = mk \\ \\ b(y_0 - y_1) = mk \end{array} \right . \iff \left \{\begin{array}{l} x_1 - x_0 = \dfrac{m}{a}k \\ \\ y_0 - y_1 = \dfrac{m}{b}k \end{array} \right. \iff \left \{ \begin{array}{l} x_1 = x_0 + \dfrac{m}{a}k \\ \\ y_1 = y_0 - \dfrac{m}{b}k \end{array} \right.$
 
 ****
 
@@ -223,7 +222,7 @@
     - $m$ è _minimo tra i multipli comuni_
         - $m$ è il minimo tra i multipli comuni quando $\forall k \in \mathbb{Z} : a_1, \ldots, a_n \mid k \quad  m \mid k$
         - $\forall i \in [1, n] \quad a_i \mid k \iff \exists x_i \in \mathbb{Z} \mid a_ix_i = k \iff k \in I(a_i)$, allora $k \in I(a_1) \cap \ldots \cap I(a_n) = I(m)$
-    - ⚠️ **e poi?**
+        - in particolare $k \in I(m) \iff m \mid k$
 
 ## Def
 

@@ -1,4 +1,4 @@
-# Teorema fondamentale dell'algebra
+# Teorema fondamentale dell'algebra$
 
 - **Hp**
   - $\mathbb{K}$ campo
@@ -43,7 +43,7 @@
 
 - **Hp**
   - $G$ gruppo finito
-  - $H \subset G$ sottogruppo
+  - $H \leqslant G$
 - **Th**
   - $|G| = |G / H| \cdot |H|$
 - **Dim**
@@ -146,7 +146,7 @@
     - per dimostrazione precedente, $o_1$ è il più piccolo esponente di $[a]$ per cui $[a]^{o_1} = [1]$ in $\mathbb{Z}_{n_1}^*$, ma questo implica che $\forall k \in \mathbb{Z} \quad ([a]^{o_1})^k = [1]$ in $\mathbb{Z}_{n_1}^*$, e allora necessariamente $a^o \equiv 1 \ (\bmod \ n_1)$ implica che $o$ sia un multiplo di $o_1$
     - per ragionamento analogo, vale il seguente sistema $\left\{\begin{array}{c}o_1 \mid o \\ \vdots \\ o_k \mid o \end{array}\right. \implies m \mid o$
     - per definizione $\left\{\begin{array}{c}o_1 \mid m \\ \vdots \\ o_k \mid m \end{array}\right.$
-    - per ragionamento analogo all'osservazione precedente, $o_1 \mid m \land [a]^{o_1}=[1] \implies [a]^m = [1]$ in $\mathbb{Z}_{n_1}^*$, e dunque si ottiene che $\left\{\begin{array}{c}a^m \equiv 1 \ (\bmod \ n_1) \\ \vdots \\ a^m \equiv  1 \ (\bmod \ n_k)\end{array}\right. \implies a^m \equiv 1 \ (\bmod \ N) \implies o \mid m$ ⚠️ **perche?**
+    - per ragionamento analogo all'osservazione precedente, $o_1 \mid m \land [a]^{o_1}=[1] \implies [a]^m = [1]$ in $\mathbb{Z}_{n_1}^*$, e dunque si ottiene che $\left\{\begin{array}{c}a^m \equiv 1 \ (\bmod \ n_1) \\ \vdots \\ a^m \equiv  1 \ (\bmod \ n_k)\end{array}\right. \implies a^m \equiv 1 \ (\bmod \ N) \implies m$ è multiplo di $o \implies o \mid m$
     - $m \mid o \land o \mid m \implies o = m$
 
 ****

@@ -189,28 +189,27 @@
 
 - **Hp**
   - $G$ gruppo
-  - $H \subset G$ sottogruppo
+  - $H \leqslant G$
   - $x, y \in G$
 - **Th**
   - $x \sim_S y \iff x^{-1}y \in H$ è una relazione di equivalenza
 - **Dim**
-    - _riflessività_: $x \sim x$
-      - $x^{-1}x \in H \quad \forall x$ perché $H$ sottogruppo, dunque chiuso rispetto a prodotto ed inversi, e $x^{-1}x = 1 \in H$
-    - _simmetria_: $x \sim y \implies y \sim x$
+    - _riflessività_
+      - $H \leqslant G \implies x^{-1}x = 1 \in H$
+    - _simmetria_
       - $x \sim y \implies x^{-1}y \in H,\quad y \sim x \implies y^{-1}x \in H$
         - $\forall x, y \in G \quad (x^{-1}y)^{-1} = (y^{-1} x)$
           - $(xy)(y^{-1}x^{-1})=x(yy^{-1})x^{-1}$ per associatività di $G$, e $xx^{-1} = 1$, dunque necessariamente $(xy)^{-1}=(y^{-1}x^{-1})$, e in particolare, $(x^{-1}y)^{-1}=(y^{-1}x)$
-        - $h:=x^{-1}y \implies h^{-1} =y^{-1}x \in H$ perché $H$ sottogruppo $\iff h^{-1} \in H \iff y \sim x$
+        - $h:=x^{-1}y \implies h^{-1} =y^{-1}x \in H \iff h^{-1} \in H \iff y \sim x$
     - _transitività_: $x \sim y \land y \sim z \implies x \sim z$
-      - $\left.\begin{array}{l}h:=x^{-1} y \in H \\ k:=y^{-1} z \in H\end{array}\right\} \implies a:=h \cdot k=x^{-1} y \cdot y^{-1} z= x^{-1} z$
-      - $a \in H$ perche $H$ sottogruppo, dunque chiuso su $\cdot$, e dunque $\implies a \in H \iff x^{-1}z \in H \iff x \sim z$
-        - quindi basta considerare il prodotto $h \cdot k$ per ottenere l'elemento di transitività
+      - $\left.\begin{array}{l}h:=x^{-1} y \in H \\ k:=y^{-1} z \in H\end{array}\right\} \implies h \cdot k=x^{-1} y \cdot y^{-1} z= x^{-1} z$
+      - $H \leqslant G \implies h \cdot k \in H \implies x^{-1} z \in H \iff x \sim z$
 
 # Oss
 
 - **Hp**
     - $G$ gruppo
-    - $H \subset G$ sottogruppo
+    - $H \leqslant G$
     - $x, y \in G$
 - **Th**
     - $x \sim_D y \iff xy^{-1} \in H$ è una relazione di equivalenza
@@ -222,7 +221,7 @@
 - **Classi laterali su gruppi**
 
 > - $G$ gruppo
-> - $H \subset G$ sottogruppo
+> - $H \leqslant G$
 > - $x \in G$
 > - $[x] = \{y \in G \mid y \sim_S x\}$ è detta **classe laterale sinistra**
 > - $[x] = \{y \in G \mid y \sim_D x\}$ è detta **classe laterale destra**
@@ -256,7 +255,7 @@
 
 - **Hp**
     - $G$ gruppo
-    - $H \subset G$ sottogruppo
+    - $H \leqslant G$
 - **Th**
     - $H = [1] \in G/H$
 - **Dim**
@@ -267,14 +266,14 @@
 
 - **Hp**
   - $G$ gruppo
-  - $H \subset G$ sottogruppo
+  - $H \leqslant G$
   - $x \in G$
   - $[x] = \{y \in G \mid y \sim_S x\}$
 - **Th**
   - $xH:= \{ xh \mid h \in H\} = [x]$
 - **Dim**
   - $[x] \subseteq xH$
-    - $y \in[x] \implies y \sim x \implies x \sim y \implies \exists h:= x^{-1}y \in H$ $\implies xh = x(x^{-1}y)=(xx^{-1})y=y \in H$ in quanto $H$ è sottogruppo, quindi $y \in [x] \implies \exists h \in H \mid y = xh \in H \implies y \in xH$
+    - $y \in[x] \implies y \sim x \implies x \sim y \implies \exists h:= x^{-1}y \in H$ $\implies xh = x(x^{-1}y)=(xx^{-1})y=y \in H$ in quanto $H \leqslant G$, quindi $y \in [x] \implies \exists h \in H \mid y = xh \in H \implies y \in xH$
   - $xH \subseteq [x]$
     - $y \in x H \implies \exists h \in H \mid y=x h \implies x^{-1}y = x^{-1}xh= h$, quindi $h \in H \implies x^{-1}y \in H \implies x \sim y \implies y \in [x]$
 
@@ -282,7 +281,7 @@
 
 - **Hp**
   - $G$ gruppo
-  - $H \subset G$ sottogruppo
+  - $H \leqslant G$
   - $x \in G$
 - **Th**
   - $|xH| = |H|$
@@ -296,7 +295,7 @@
 
 - **Hp**
   - $(G, +)$ gruppo abeliano
-  - $H \subset G$ sottogruppo
+  - $H \leqslant G$
 - **Th**
   - $(G/H, +)$ è gruppo abeliano, dove $+: G/H \times G/H \rightarrow G/H$
 - **Dim**
@@ -304,7 +303,7 @@
     - $\forall k, k' \in G \quad [k]=\left[k^{\prime}\right] \iff k \sim k^{\prime}$, dunque il sistema precedente è equivalente a $\left.\begin{array}{l}x \sim x^{\prime} \\ y \sim y^{\prime}\end{array}\right\} \implies x+y \sim x^{\prime}+y^{\prime}$
     - $x \sim x' \iff (-x)+x' \in H \iff x' - x \in H$
     - $y \sim y' \iff (-y) +y' \in H \iff y' - y \in H$
-    - $H$ è sottogruppo, allora $(x'-x)+(y'-y) \in H \implies -(x+y)+(x'+y') \in H \iff x +y \sim x'+y'$
+    - $H \leqslant G \implies (x'-x)+(y'-y) \in H \implies -(x+y)+(x'+y') \in H \iff x +y \sim x'+y'$
   - $(G/H, +)$ gruppo abeliano
     - $\forall [x], [y], [z] \in G/H \quad ([x]+[y])+[z]=[x+y]+[z]=[(x+y)+z]= [x+(y+z)]=[x]+[y+z]=[x]+([y]+[z])$
     - $\forall [x] \in G/H \quad [x]+[0]=[0]+[x]=[x]$ e $[0] + [x] = [0 + x] = [x]$, e $[0] \in G/H$ perché $G$ gruppo
@@ -319,13 +318,13 @@
 - **Th**
     - $(A/I, +, \cdot)$ è anello commutativo, dove $+, \cdot : A/I \times A/I \rightarrow A/I$
 - **Dim**
-    - $+$ è ben definita per dimostrazione precedente, poiché $(I, +) \subset (A, +)$ gruppo abeliano per definizione di $I$
+    - $+$ è ben definita per dimostrazione precedente, poiché $(I, +) \leqslant (A, +)$ gruppo abeliano per definizione di $I$
     - $\cdot$ ben definita $\iff\left.\forall x, x^{\prime}, y, y' \in A \quad \begin{array}{l}{[x]=\left[x^{\prime}\right]} \\ {[y]=\left[y^{\prime}\right]}\end{array}\right\} \implies[xy]=\left[x^{\prime}y' \right]$
         - $\forall k, k' \in A \quad [k]=\left[k^{\prime}\right] \iff k \sim k^{\prime}$, dunque il sistema precedente è equivalente a $\left.\begin{array}{l}x \sim x^{\prime} \\ y \sim y^{\prime}\end{array}\right\} \implies xy \sim x^{\prime}y^{\prime}$
         - $x \sim x' \iff (-x)+x' \in I \iff i_1:=x' - x \in I$
         - $y \sim y' \iff (-y) +y' \in I \iff i_2:=y' - y \in I$
         - $I$ ideale $\implies A \cdot I \subseteq I \implies \forall a \in A, i \in I \quad a i \in I$, in particolare $i_1y', xi_2 \in I$
-        - $(I, +) \subset (A, +)$ sottogruppo, allora $i_1y' + xi_2 \in I$
+        - $(I, +) \leqslant (A, +) \implies i_1y' + xi_2 \in I$
         - $i_1y' + xi_2 = (x'-x)y' + x(y'-y) = x'y' - xy' + xy' - xy = x'y' - xy \in I \iff x'y \sim xy$
     - $(A/I, +, \cdot)$ anello commutativo
         - $\forall [x], [y], [z] \in A/I \quad ([x][y])[x] = [xy][z] = [xyz] = [x][yz] = [x]([y][z])$
@@ -337,7 +336,7 @@
 
 - **Hp**
     - $(G, \cdot)$ gruppo
-    - $H \subset G$ sottogruppo normale
+    - $H \trianglelefteq G$
 - **Th**
     - $(G/H, \cdot)$ è gruppo abeliano, dove $\cdot: G/H \times G/H \rightarrow G/H$
 - **Dim**

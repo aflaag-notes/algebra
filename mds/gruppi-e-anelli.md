@@ -208,7 +208,7 @@
 > - $G$ insieme
 > - $\cdot: G \times G \rightarrow G$
 > - $(G, \cdot)$ gruppo 
-> - $(H, \cdot) \subset (G, \cdot)$ **sottogruppo** $\iff$
+> - $(H, \cdot) \leqslant (G, \cdot)$ è detto **sottogruppo** $\iff$
 >   - $\exists e \in H \mid e$ è l'elemento neutro di $G$ rispetto a $\cdot$
 >   - $H \cdot H \subseteq H$
 >     - in particolare, deve essere _chiuso sull'operazione_
@@ -220,7 +220,7 @@
 - **Hp**
   - $(A, +, \cdot)$ anello commutativo
 - **Th**
-    - $(A^*, \cdot) \subset (A, \cdot)$ è un sottogruppo
+    - $(A^*, \cdot) \leqslant (A, \cdot)$
 - **Dim**
     - _neutro_
         - esiste il neutro per dimostrazione precedente
@@ -236,9 +236,9 @@
 > - $A, B$ insiemi
 > - $+: A \times A \rightarrow A$
 > - $\cdot: A \times A \rightarrow A$
-> - $(B, + , \cdot) \subset (A, +, \cdot)$ **sottoanello** $\iff$
+> - $(B, + , \cdot) \leqslant (A, +, \cdot)$ è detto **sottoanello** $\iff$
 >   - $(A, +, \cdot)$ anello
->   - $(B, +) \subset (A, +)$ sottogruppo
+>   - $(B, +) \leqslant (A, +)$
 >   - $B \cdot B \subseteq B$
 >     - in particolare $B \cdot B := \{b_1 \cdot b_2 \mid b_1, b_2 \in B\}$
 
@@ -248,17 +248,17 @@
 
 > - $G, H$ insiemi
 > - $(G, \cdot)$ gruppo
-> - $(H, \cdot) \subset (G, \cdot)$ sottogruppo
+> - $(H, \cdot) \leqslant (G, \cdot)$
 > - $x \in G$
 > - $xH := \{xh \mid h \in H\}$
 > - $Hx := \{hx \mid h \in H\}$
-> - $H$ è detto **sottogruppo normale** $\iff \forall x \in G \quad xH = Hx$
+> - $H \trianglelefteq G$ è detto **sottogruppo normale** $\iff \forall x \in G \quad xH = Hx$
 
 ## Oss
 
 - **Hp**
   - $G$ gruppo
-  1) $H$ è sottogruppo normale
+  1) $H \trianglelefteq G$
   2) $\forall g \in G, h \in H \quad g \cdot h \cdot g^{-1} \in H$
   3) $\forall g \in G, h \in H \quad \exists k \in H \mid g \cdot h = k \cdot g$
 - **Th**
@@ -302,7 +302,7 @@
     - $(G, +)$ gruppo
     - $g \in G$
 - **Th**
-    - $(H(g), +) \subset (G, +)$ sottogruppo
+    - $(H(g), +) \leqslant (G, +)$
 - **Dim**
     - $0 = 0 \cdot g \implies 0 \in H(g)$ per definizione di $H(g)$
     - $\forall xg, yg \in H(g) \quad xg + yg = (x + y)g \in H(g)$ per definizione di $H(g)$
@@ -314,7 +314,7 @@
   - $(G, \cdot)$ gruppo
   - $g \in G$
 - **Th**
-  - $(H(g), \cdot) \subset (G, \cdot)$  è sottogruppo
+  - $(H(g), \cdot) \leqslant (G, \cdot)$
 - **Dim**
   - $e=g^{0} \implies e \in H(g)$ per definizione di $H(g)$
   - $\forall m, n \in \mathbb{Z} \quad m + n \in \mathbb{Z} \implies g^m \cdot g^n = g^{m + n} \in H(g)$ per definizione di $H(g)$, quindi $H(g) \cdot Hg(g) \subseteq H(g)$
@@ -329,7 +329,7 @@
 - **Th**
   - $I(g)$ è un ideale
 - **Dim**
-  - $(I(g), +) \subset (\mathbb{Z}, +)$ è sottogruppo
+  - $(I(g), +) \leqslant (\mathbb{Z}, +)$
     - $0 \in \mathbb{Z} \land g^{0}=e \implies 0 \in I(g)$ per definizione di $I(g)$
     - $m, n \in \mathbb{Z} \mid  g^{m}=g^{n}=e \implies g^{m} \cdot g^{n}= g^{m + n} \iff e \cdot e = e \implies m +n \in I(g)$ per definizoine di $I(g)$, quindi $I(g) + I(g) \subset I(g)$
     - $n \in I(g) \mid g^n = e \iff (g^n)^{-1} = e ^{-1 } \iff g^{-n} =e \implies -n \in I(g)$ per definizione di $I(g)$
@@ -346,7 +346,7 @@
   - $d>0 \implies d = o(g)$, e questo implica che in $I(g)$ sono presenti tutti i multipli di $o(g)$
 - **Dim**
   - $d = 0$
-    - si consideri $f: \mathbb{Z} \rightarrow H(g) : n \rightarrow g^n$ è biiettiva
+    - si consideri $f: \mathbb{Z} \rightarrow H(g) : n \rightarrow g^n$
     - $f$ iniettiva $\iff \forall m, n \in \mathbb{Z} \quad g^n =g^m \implies n = m$
     - $m, n \in \mathbb{Z} \mid g^m = g^n \implies g^{-m} \cdot g^m=g^{-m} \cdot g^n \iff e = g^{n - m} \implies n - m \in I(g) = I(d) \implies d \mid n - m$
     - $d = 0 \implies 0 \mid n - m \iff n -m = 0 \iff n = m$, di conseguenza $g^m = g^n \implies n = m$
@@ -363,7 +363,6 @@
         - $0 \le x, y \lt d \implies -d \lt x - y \lt d$
         - allora, segue che $g^{x-y} = g^{dk} \iff x - y = dk \iff d \mid x- y$, ma poiché $-d \lt x - y \lt d$, allora necessariamente $x - y =0 \iff x = y$, e dunque $g^x$ e $g^y$ sono la stessa potenza, e dunque le potenze di $g$ non sono meno di $d$
     - di conseguenza, si ottiene che $H(g) = \{g^0, g^1, \ldots, g^{d-1}\} \implies |H(g)|=d$
-    - ⚠️ **il secondo lato non mi è chiaro perche dovrebbe funzionare**
 
 ## Oss
 

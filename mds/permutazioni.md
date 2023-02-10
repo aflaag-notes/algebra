@@ -27,7 +27,7 @@
   - $\textrm{id}$ è biiettiva $\implies \textrm{id} \in \mathcal{S}_X$ per definizione, e costituisce l'elemento neutro
   - $\forall f \in \mathcal{S}_X \quad \exists f^{-1} \in \mathcal{S}_X$ poiché $f \in \mathcal{S}_X \implies f$ biiettiva, e dunque invertibile per dimostrazione precedente
   - $\forall f \in \mathcal{S}_X \quad f$ biiettiva $\iff f$ invertibile $\iff \exists f^{-1} \in \mathcal{S}_X$, poiché $f^{-1}$ anch'essa biiettiva
-  - $|X| = 2 \implies X$ è della forma $X = \{a, b\}$, quindi $\mathcal{S}_X =\left\{\begin{array}{l}a \rightarrow a \\ b \rightarrow b\end{array}\right. \ ,\ \left.\begin{array}{l}a \rightarrow b \\ b \rightarrow a\end{array}\right\}$, dove uno dei due elementi è $\rm id$
+  - $|X| = 2 \implies X$ è della forma $X = \{a, b\}$, quindi $\mathcal{S}_X =\left\{\begin{array}{l}a \rightarrow a \\ b \rightarrow b\end{array}\right. , \left.\begin{array}{l}a \rightarrow b \\ b \rightarrow a\end{array}\right\}$, dove uno dei due elementi è $\rm id$
     - $\rm id \circ id = id$
     - $\rm \sigma \circ id = id \circ \sigma = \sigma$
     - $\rm \sigma \circ \sigma = id$ per costruzione
@@ -69,7 +69,7 @@
 - **Th**
   - $(I(\sigma, i), +) \subset (\mathbb{Z}, +)$ è un ideale
 - **Dim**
-  - $(I(\sigma, i), +) \subset (\mathbb{Z}, +)$ è un sottogruppo
+  - $(I(\sigma, i), +) \leqslant (\mathbb{Z}, +)$
     - $\sigma ^0 = \textrm{id} \implies \forall i \quad \sigma ^0(i) = \textrm{id}(i) = i \implies 0 \in I(\sigma, i)$
     - $m, n \in I(\sigma, i) \implies \sigma^m (i) = \sigma^n(i) = i$, ma $\sigma^{m+n}(i)=\sigma^{m}\left(\sigma^{n}(i)\right) = \sigma^m(i)=i \implies m + n \in I(\sigma, i)$
     - $n \in I(\sigma, i) \implies \sigma ^n (i) = i$, ma per simmetria della permutazione $\sigma^ {-n} (i) = i \implies -n \in I(\sigma, i)$
@@ -211,7 +211,7 @@
     - $\textrm{sgn}(\sigma^\prime) = \textrm{sgn}(\sigma)$
 - **Dim**
   - $\sigma \sim \sigma' \implies \textrm{sgn}(\sigma^\prime) = \textrm{sgn}(\alpha)\cdot \textrm{sgn}(\sigma)\cdot \textrm{sgn}(\alpha^{-1})$
-  - per dimostrazione precedente $\forall \alpha \in \mathcal{S}_n \quad \textrm{sgn}(\alpha)= \textrm{sgn}(\alpha^{-1})$, dunque entrambe $1$ o entrambe $-1
+  - per dimostrazione precedente $\forall \alpha \in \mathcal{S}_n \quad \textrm{sgn}(\alpha)= \textrm{sgn}(\alpha^{-1})$, dunque entrambe $1$ o entrambe $-1$
   - quindi $\textrm{sgn}(\alpha) \cdot \textrm{sgn}(\alpha^{-1}) = 1 \implies \textrm{sgn}(\sigma^\prime) = \textrm{sgn}(\sigma)$
 
 ## Oss
@@ -253,12 +253,12 @@
 - **Hp**
     - $n \in \mathbb{N}$
 - **Th**
-    - $\mathcal{A}_n \subset \mathcal{S}_n$ è un sottogruppo normale
+    - $\mathcal{A}_n \trianglelefteq \mathcal{S}_n$
 - **Dim**
     - $\textrm{sgn}(\textrm{id}) = (-1)^0 = 1$, in quanto $\textrm{id}$ non ha inversioni, dunque $\textrm{id} \in \mathcal{A}_n$
     - $\sigma, \sigma' \in \mathcal{A}_n \implies \textrm{sgn}(\sigma)=\textrm{sgn}(\sigma')=1 \implies \textrm{sgn}(\sigma)\cdot\textrm{sgn}(\sigma') = 1 = \textrm{sgn}(\sigma \sigma')$ per dimostrazione precedente $\implies \sigma \sigma' \in \mathcal{A}_n$
     - $\sigma \in \mathcal{A}_n \implies \textrm{sgn}(\sigma) = 1 = \textrm{sgn}(\sigma^{-1})$ per dimostrazione predecente $\implies \sigma^{-1} \in \mathcal{A}_n$
-    - $\mathcal{A}_n \subset \mathcal{S}_n$ sottogruppo normale $\iff \forall \sigma \in \mathcal{A}_n, \alpha \in \mathcal{S}_n \quad \sigma \alpha \sigma^{-1} \in \mathcal{A}_n$ per dimostrazione precedente
+    - $\mathcal{A}_n \trianglelefteq \mathcal{S}_n \iff \forall \sigma \in \mathcal{A}_n, \alpha \in \mathcal{S}_n \quad \sigma \alpha \sigma^{-1} \in \mathcal{A}_n$ per dimostrazione precedente
     - inoltre, per dimostrazione precedente $\textrm{sgn}(\sigma) = 1 = \textrm{sgn}(\sigma \alpha \sigma^{-1}) \implies \sigma \alpha \sigma^{-1} \in \mathcal{A}_n$
 
 ## Oss
@@ -268,7 +268,7 @@
 - **Th**
     - $|\mathcal{A}_n| = \dfrac{n!}{2}$
 - **Dim**
-    - $\mathcal{A}_n \subset \mathcal{S}_n$ sottogruppo normale $\implies \mathcal{S}_n/\mathcal{A}_n$ è ben definito
+    - $\mathcal{A}_n \trianglelefteq \mathcal{S}_n \implies \mathcal{S}_n/\mathcal{A}_n$ è ben definito
     - in particolare, considerando la relazione di classe laterale sinistra, si ha che $\forall \sigma, \sigma' \in \mathcal{S}_n \quad \sigma \sim_S \sigma' \iff \sigma^{-1}\sigma' \in \mathcal{A}_n \iff \textrm{sgn}(\sigma^{-1}\sigma') = 1 = \textrm{sgn}(\sigma^{-1})\cdot \textrm{sgn}(\sigma)=\textrm{sgn}(\sigma)\cdot\textrm{sgn}(\sigma') \iff \textrm{sgn}(\sigma) = \textrm{sgn}(\sigma')$
     - poiché $\textrm{sgn}(\sigma) = \pm 1$ per definizione, si ha che $\mathcal{S}_n/\mathcal{A}_n=\{[\textrm{id}]_{+1}, [\alpha]_{-1}\}$, dove $\alpha$ è dispari, e in particolare $|\mathcal{S}_n/\mathcal{A}_n| = 2$
     - inoltre, per il teorema di Lagrange si ha che $|\mathcal{S}_n| = |\mathcal{A}_n| \cdot |\mathcal{S}_n/\mathcal{A}_n| \iff |\mathcal{A}_n| = \dfrac{|\mathcal{S}_n|}{|\mathcal{S}_n/\mathcal{A}_n|} = \dfrac{n!}{2}$

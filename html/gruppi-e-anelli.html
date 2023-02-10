@@ -629,8 +629,8 @@ definizione di irriducibilità di un elemento</li>
 <li><span class="math inline">\cdot: G \times G \rightarrow
 G</span></li>
 <li><span class="math inline">(G, \cdot)</span> gruppo</li>
-<li><span class="math inline">(H, \cdot) \subset (G, \cdot)</span>
-<strong>sottogruppo</strong> <span class="math inline">\iff</span>
+<li><span class="math inline">(H, \cdot) \leqslant (G, \cdot)</span> è
+detto <strong>sottogruppo</strong> <span class="math inline">\iff</span>
 <ul>
 <li><span class="math inline">\exists e \in H \mid e</span> è l’elemento
 neutro di <span class="math inline">G</span> rispetto a <span
@@ -656,8 +656,8 @@ commutativo</li>
 </ul></li>
 <li><strong>Th</strong>
 <ul>
-<li><span class="math inline">(A^*, \cdot) \subset (A, \cdot)</span> è
-un sottogruppo</li>
+<li><span class="math inline">(A^*, \cdot) \leqslant (A,
+\cdot)</span></li>
 </ul></li>
 <li><strong>Dim</strong>
 <ul>
@@ -688,13 +688,12 @@ per definizione</li>
 <li><span class="math inline">+: A \times A \rightarrow A</span></li>
 <li><span class="math inline">\cdot: A \times A \rightarrow
 A</span></li>
-<li><span class="math inline">(B, + , \cdot) \subset (A, +,
-\cdot)</span> <strong>sottoanello</strong> <span
+<li><span class="math inline">(B, + , \cdot) \leqslant (A, +,
+\cdot)</span> è detto <strong>sottoanello</strong> <span
 class="math inline">\iff</span>
 <ul>
 <li><span class="math inline">(A, +, \cdot)</span> anello</li>
-<li><span class="math inline">(B, +) \subset (A, +)</span>
-sottogruppo</li>
+<li><span class="math inline">(B, +) \leqslant (A, +)</span></li>
 <li><span class="math inline">B \cdot B \subseteq B</span>
 <ul>
 <li>in particolare <span class="math inline">B \cdot B := \{b_1 \cdot
@@ -711,14 +710,14 @@ b_2 \mid b_1, b_2 \in B\}</span></li>
 <ul>
 <li><span class="math inline">G, H</span> insiemi</li>
 <li><span class="math inline">(G, \cdot)</span> gruppo</li>
-<li><span class="math inline">(H, \cdot) \subset (G, \cdot)</span>
-sottogruppo</li>
+<li><span class="math inline">(H, \cdot) \leqslant (G,
+\cdot)</span></li>
 <li><span class="math inline">x \in G</span></li>
 <li><span class="math inline">xH := \{xh \mid h \in H\}</span></li>
 <li><span class="math inline">Hx := \{hx \mid h \in H\}</span></li>
-<li><span class="math inline">H</span> è detto <strong>sottogruppo
-normale</strong> <span class="math inline">\iff \forall x \in G \quad xH
-= Hx</span></li>
+<li><span class="math inline">H \trianglelefteq G</span> è detto
+<strong>sottogruppo normale</strong> <span class="math inline">\iff
+\forall x \in G \quad xH = Hx</span></li>
 </ul>
 </blockquote>
 <a href="#oss-8"><h2 id="oss-8">Oss</h2></a>
@@ -728,7 +727,7 @@ normale</strong> <span class="math inline">\iff \forall x \in G \quad xH
 <li><span class="math inline">G</span> gruppo</li>
 </ul>
 <ol type="1">
-<li><span class="math inline">H</span> è sottogruppo normale</li>
+<li><span class="math inline">H \trianglelefteq G</span></li>
 <li><span class="math inline">\forall g \in G, h \in H \quad g \cdot h
 \cdot g^{-1} \in H</span></li>
 <li><span class="math inline">\forall g \in G, h \in H \quad \exists k
@@ -819,8 +818,7 @@ maggiori le potenze cicleranno infinitamente</li>
 </ul></li>
 <li><strong>Th</strong>
 <ul>
-<li><span class="math inline">(H(g), +) \subset (G, +)</span>
-sottogruppo</li>
+<li><span class="math inline">(H(g), +) \leqslant (G, +)</span></li>
 </ul></li>
 <li><strong>Dim</strong>
 <ul>
@@ -843,8 +841,8 @@ class="math inline">H(g)</span></li>
 </ul></li>
 <li><strong>Th</strong>
 <ul>
-<li><span class="math inline">(H(g), \cdot) \subset (G, \cdot)</span> è
-sottogruppo</li>
+<li><span class="math inline">(H(g), \cdot) \leqslant (G,
+\cdot)</span></li>
 </ul></li>
 <li><strong>Dim</strong>
 <ul>
@@ -874,8 +872,7 @@ e\}</span></li>
 </ul></li>
 <li><strong>Dim</strong>
 <ul>
-<li><span class="math inline">(I(g), +) \subset (\mathbb{Z}, +)</span> è
-sottogruppo
+<li><span class="math inline">(I(g), +) \leqslant (\mathbb{Z}, +)</span>
 <ul>
 <li><span class="math inline">0 \in \mathbb{Z} \land g^{0}=e \implies 0
 \in I(g)</span> per definizione di <span
@@ -916,7 +913,7 @@ i multipli di <span class="math inline">o(g)</span></li>
 <li><span class="math inline">d = 0</span>
 <ul>
 <li>si consideri <span class="math inline">f: \mathbb{Z} \rightarrow
-H(g) : n \rightarrow g^n</span> è biiettiva</li>
+H(g) : n \rightarrow g^n</span></li>
 <li><span class="math inline">f</span> iniettiva <span
 class="math inline">\iff \forall m, n \in \mathbb{Z} \quad g^n =g^m
 \implies n = m</span></li>
@@ -981,8 +978,6 @@ class="math inline">d</span></li>
 </ul></li>
 <li>di conseguenza, si ottiene che <span class="math inline">H(g) =
 \{g^0, g^1, \ldots, g^{d-1}\} \implies |H(g)|=d</span></li>
-<li>⚠️ <strong>il secondo lato non mi è chiaro perche dovrebbe
-funzionare</strong></li>
 </ul></li>
 </ul></li>
 </ul>

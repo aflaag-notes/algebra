@@ -195,8 +195,7 @@
 <li><span class="math inline">I \subset A</span> è detto
 <strong>ideale</strong> <span class="math inline">\iff</span>
 <ul>
-<li><span class="math inline">(I, +) \subset (A, +)</span>
-sottogruppo</li>
+<li><span class="math inline">(I, +) \leqslant (A, +)</span></li>
 <li><span class="math inline">A \cdot I \subseteq I</span></li>
 <li><span class="math inline">I \cdot A \subseteq I</span></li>
 </ul></li>
@@ -218,8 +217,7 @@ class="math inline">a</span></em></li>
 </ul></li>
 <li><strong>Dim</strong>
 <ul>
-<li><span class="math inline">(I(a), + ) \subset(A, +)</span>
-sottogruppo
+<li><span class="math inline">(I(a), + ) \leqslant (A, +)</span>
 <ul>
 <li><span class="math inline">0</span> multiplo di <span
 class="math inline">a \implies 0 \in I(a)</span></li>
@@ -386,7 +384,6 @@ class="math inline">\mathbb{Z}</span> ogni ideale è principale</li>
 </ul></li>
 <li><strong>Dim</strong>
 <ul>
-<li>⚠️ da rivedere</li>
 <li><em>esistenza</em>
 <ul>
 <li><span class="math inline">d = 0</span>
@@ -573,7 +570,17 @@ l’equazione di Bézout</li>
 \left(y_0 - \dfrac{m}{b}k \right) = ax_0 + mk + by_0 -mk = ax_0 + by_0 =
 d \implies x_0</span> e <span class="math inline">y_0</span> rispettano
 il sistema</li>
-<li>⚠️ <strong>non capisco come procede da qua</strong></li>
+<li>per verificare che ogni soluzione è di questa forma, presi <span
+class="math inline">x_1, y_1 \in \mathbb{Z} \mid a x_1 + by_1 = d</span>
+si ha che <span class="math inline">\left \{ \begin{array}{l} ax_0 +
+by_0 = d \\ a x_1 + by_1 = d \end{array} \right. \implies ax_0 + by_0 =
+ax_1 + by_1 \iff a(x_1 - x_0) = b(y_0 - y_1) =: N \implies a, b \mid N
+\implies m \mid N \iff \exists k \in \mathbb{Z} \mid mk = N \iff \left
+\{ \begin{array}{l} a(x_1 - x_0) = mk \\ \\ b(y_0 - y_1) = mk
+\end{array} \right . \iff \left \{\begin{array}{l} x_1 - x_0 =
+\dfrac{m}{a}k \\ \\ y_0 - y_1 = \dfrac{m}{b}k \end{array} \right. \iff
+\left \{ \begin{array}{l} x_1 = x_0 + \dfrac{m}{a}k \\ \\ y_1 = y_0 -
+\dfrac{m}{b}k \end{array} \right.</span></li>
 </ul></li>
 </ul>
 <hr />
@@ -722,8 +729,9 @@ a_n \mid k \quad m \mid k</span></li>
 \exists x_i \in \mathbb{Z} \mid a_ix_i = k \iff k \in I(a_i)</span>,
 allora <span class="math inline">k \in I(a_1) \cap \ldots \cap I(a_n) =
 I(m)</span></li>
+<li>in particolare <span class="math inline">k \in I(m) \iff m \mid
+k</span></li>
 </ul></li>
-<li>⚠️ <strong>e poi?</strong></li>
 </ul></li>
 </ul>
 <a href="#def-5"><h2 id="def-5">Def</h2></a>
