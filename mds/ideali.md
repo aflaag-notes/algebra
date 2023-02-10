@@ -174,11 +174,11 @@
 - **Th**
   - $I + J$ è un ideale
 - **Dim**
-  - $0 \in I, 0 \in J, 0+0=0 \implies 0 \in I + J$ per definizione
-  - la chiusura rispetto a $+$ deve implicare che $\forall i_1, i_2 \in I, j_1, j_2 \in J \quad (i_1 + j_1) + (i_2 + j_2) \in I + J$, allora si ottiene che $(i_1 + j_1) + (i_2 + j_2) = (i_1 + i_2) + (j_1 + j_2)$, e $i_1 + i_2 \in I, j_1 + j_2 \in J \implies (i_1 + i_2) + (j_1 + j_2) \in I + J$ per definizione
-  - $\forall i \in I, j \in J \quad i + j \in I + J$, l'opposto rispetto a $+$ di $i + j$ è $- (i + j) = (-i) + (-j)$, e $\forall i \in I, j \in J \quad -i \in I, -j \in J  \implies (-i) + (-j) \in I + J$ per definizione
+  - $0 \in I, 0 \in J, 0+0=0 \implies 0 \in I + J$
+  - la chiusura rispetto a $+$ deve implicare che $\forall i_1, i_2 \in I, j_1, j_2 \in J \quad (i_1 + j_1) + (i_2 + j_2) \in I + J$, allora si ottiene che $(i_1 + j_1) + (i_2 + j_2) = (i_1 + i_2) + (j_1 + j_2)$, e $i_1 + i_2 \in I, j_1 + j_2 \in J \implies (i_1 + i_2) + (j_1 + j_2) \in I + J$
+  - $\forall i \in I, j \in J \quad i + j \in I + J$, l'opposto rispetto a $+$ di $i + j$ è $- (i + j) = (-i) + (-j)$, e $\forall i \in I, j \in J \quad -i \in I, -j \in J  \implies (-i) + (-j) \in I + J$
   - $A \cdot I \subseteq I \implies \forall a \in A, i \in I, j \in J \quad a(i + j) \in I + J$
-    - $i + j \in I + J$ per definizione, e $a(i + j) = ai + aj$, e $ai \in I, aj \in J$ per definizione, quindi $ai + aj \in I + J$ per definizione
+    - $i + j \in I + J$ per definizione, e $a(i + j) = ai + aj$, e $ai \in I, aj \in J$ per definizione, quindi $ai + aj \in I + J$
 
 ## Def
 
@@ -197,8 +197,8 @@
     - $I \cap J$ è un ideale
 - **Dim**
     - $0 \in I \land 0 \in J \implies 0 \in I \cap J$
-    - $\forall x, y \in I \cap J \quad x, y \in I \land x, y \in J \implies x + y \in I \land x + y \in J \implies x + y \in I \cap J$ per definizione
-    - $\forall x \in I \cap J \quad x \in I \land x \in J \implies x^{-1} \in I \land x ^{-1} \in J \implies x^{-1} \in I \cap J$ per definizione
+    - $\forall x, y \in I \cap J \quad x, y \in I \land x, y \in J \implies x + y \in I \land x + y \in J \implies x + y \in I \cap J$
+    - $\forall x \in I \cap J \quad x \in I \land x \in J \implies x^{-1} \in I \land x ^{-1} \in J \implies x^{-1} \in I \cap J$
     - $\forall a \in A, x \in I \cap J \quad x \in I \land x \in J \implies ax \in I \land ax \in J \implies ax \in I \cap J$
 
 ## Def
@@ -241,8 +241,8 @@
   - $I \cdot J$ è un ideale
 - **Dim**
     - $0 \in I \land 0 \in J \implies 0 \cdot 0 = 0 \in I \cdot J$
-    - $\forall x, y \in I \cdot J \quad \exists i_1, \ldots, i_k, i_1', \ldots, i_h' \in I, j_1, \ldots, j_k, j_1', \ldots, j_h' \in J \mid x = i_1j_1 + \ldots + i_k j_k \land y = i_1'j_1' + \ldots + i_h'j_h' \implies x + y = i_1j_1 + \ldots + i_kj_k + i_1'j_1'+ \ldots + i_hj_h' \in I\cdot J$ per definizione
-    - $\forall x \in I \cdot J \quad \exists i_1, \ldots, i_k \in I, j_1, \ldots, j_k \in J \mid x = i_1j_1 + \ldots + i_kj_k \implies -x = (-i_1j_1) + \ldots + (-i_kj_k) \in I \cdot J$ per definizione
+    - $\forall x, y \in I \cdot J \quad \exists i_1, \ldots, i_k, i_1', \ldots, i_h' \in I, j_1, \ldots, j_k, j_1', \ldots, j_h' \in J \mid x = i_1j_1 + \ldots + i_k j_k \land y = i_1'j_1' + \ldots + i_h'j_h' \implies x + y = i_1j_1 + \ldots + i_kj_k + i_1'j_1'+ \ldots + i_hj_h' \in I\cdot J$
+    - $\forall x \in I \cdot J \quad \exists i_1, \ldots, i_k \in I, j_1, \ldots, j_k \in J \mid x = i_1j_1 + \ldots + i_kj_k \implies -x = (-i_1j_1) + \ldots + (-i_kj_k) \in I \cdot J$
     - $I$ ideale $\implies \forall a \in A, i \in I \quad a i \in I$, allora $\forall x \in I \cdot J \quad \exists i_1, \ldots, i_k \in I, j_1, \ldots, j_k \in J \mid x = i_1j_1 + \ldots + i_kj_k \implies \forall a \in A \quad a\cdot x = a(i_1j_1 + \ldots + i_kj_k) = (ai_1)j_1 + \ldots + (ai_k)j_k \in I \cdot J$
 
 ## Oss

@@ -285,7 +285,7 @@
 - **Dim**
     - è possibile definire una funzione $\varphi: H \rightarrow xH : h \rightarrow xh$
     - $\forall h, k \in H \mid h \neq k \quad xh \neq xk \implies \varphi$ iniettiva
-    - $\forall xh \in xH \quad \exists h \in H \mid \varphi(x) = xh \implies \varphi$ suriettiva
+    - $\forall xh \in xH \quad \exists h \in H \mid \varphi(h) = xh \implies \varphi$ suriettiva
     - $\varphi$ biiettiva $\implies |H| = |xH|$
 
 ## Oss

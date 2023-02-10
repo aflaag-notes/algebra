@@ -297,9 +297,9 @@ f\left(f^{-1}(h)\right)=h\end{array}\right.</span></li>
 f^{-1}\left(h h^{\prime}\right)=f^{-1}(h) \cdot
 f^{-1}\left(h^{\prime}\right) \iff hh&#39;=f\left(f^{-1}\left(h
 h^{\prime})\right)=f(f^{-1}(h)\cdot f^{-1}(h^\prime)) =
-f(f^{-1}(h))\cdot f(f^{-1}(h^\prime))\right. = hh&#39;</span>, e dunque
-<span class="math inline">f^{-1}</span> è un morfismo, e poiché è
-invertibile è un isomorfismo</li>
+f(f^{-1}(h))\cdot f(f^{-1}(h^\prime))\right. = hh&#39; \implies
+f^{-1}</span> morfismo, e poiché è invertibile allora <span
+class="math inline">f</span> isomorfismo</li>
 </ul></li>
 </ul>
 <a href="#oss-3"><h2 id="oss-3">Oss</h2></a>
@@ -343,7 +343,7 @@ allora <span class="math inline">f : H \rightarrow G</span> isomorfismo
 <span class="math inline">\implies H \cong G</span></li>
 </ul></li>
 <li><em>transitività</em>: <span class="math inline">\forall G, H,
-K</span> gruppi <span class="math inline">G \cong H \land H \cong K
+K</span> gruppi<span class="math inline">\quad G \cong H \land H \cong K
 \implies G \cong K</span>
 <ul>
 <li><span class="math inline">G \cong H \implies \exists f: G
@@ -376,19 +376,17 @@ class="math inline">1</span></li>
 </ul></li>
 <li><strong>Th</strong>
 <ul>
-<li><span class="math inline">(H, \cdot) \subset (\mathbb{C}-\{0\},
-\cdot)</span> è un sottogruppo</li>
+<li><span class="math inline">(H, \cdot) \leqslant (\mathbb{C}-\{0\},
+\cdot)</span></li>
 </ul></li>
 <li><strong>Dim</strong>
 <ul>
 <li><span class="math inline">\zeta ^0 = 1 \implies 1 \in H</span></li>
 <li><span class="math inline">z, w \in H \iff z^n=w^n = 1</span>, allora
 <span class="math inline">1 = z^n \cdot w^n = (z \cdot w)^n = 1 \implies
-z \cdot w \in H</span> per definizione di <span
-class="math inline">H</span></li>
-<li><span class="math inline">z^n = 1 \implies \dfrac{1}{z^n} = 1 \iff
-(z^{-1})^n = 1 \implies z^{-1} \in H</span> per definizione di <span
-class="math inline">H</span></li>
+z \cdot w \in H</span></li>
+<li><span class="math inline">z^n = 1 \iff \dfrac{1}{z^n} = 1 \iff
+(z^{-1})^n = 1 \implies z^{-1} \in H</span></li>
 </ul></li>
 </ul>
 <a href="#ex-1"><h2 id="ex-1">Ex</h2></a>
@@ -400,18 +398,17 @@ class="math inline">H</span></li>
 </ul></li>
 <li><strong>Th</strong>
 <ul>
-<li><span class="math inline">f</span> isomorfismo di gruppi <span
+<li><span class="math inline">f</span> isomorfismo di gruppi tra <span
 class="math inline">(\mathbb{Z}_n , +)</span> e <span
 class="math inline">(H, \cdot)</span></li>
 </ul></li>
 <li><strong>Dim</strong>
 <ul>
+<li>⚠️ <strong>ma che c’è scritto</strong></li>
 <li><span class="math inline">f</span> è biiettiva per costruzione di
 <span class="math inline">\mathbb{Z}_n := \{[0], [1], \ldots, [n -
 1]\}</span> e <span class="math inline">H := \{\zeta ^0, \zeta^1,
 \ldots, \zeta^{n-1}\}</span></li>
-<li><span class="math inline">f</span> morfismo
-<ul>
 <li><span class="math inline">f([i]+[j])=f([i]) \cdot f([j])</span>
 <ul>
 <li><span class="math inline">[i] + [j] = [k]</span> per un certo <span
@@ -427,7 +424,6 @@ class="math inline">\zeta \implies</span> entrambe i membri
 dell’equazione sono pari a <span class="math inline">\zeta^k</span></li>
 </ul></li>
 </ul></li>
-</ul></li>
 </ul>
 <a href="#ex-2"><h2 id="ex-2">Ex</h2></a>
 <ul>
@@ -440,14 +436,14 @@ g^n</span></li>
 </ul></li>
 <li><strong>Th</strong>
 <ul>
-<li><span class="math inline">f</span> morfismo di gruppi <span
+<li><span class="math inline">f</span> morfismo di gruppi tra <span
 class="math inline">(\mathbb{Z}, +)</span> e <span
 class="math inline">(G, \cdot)</span></li>
 </ul></li>
 <li><strong>Dim</strong>
 <ul>
 <li><span class="math inline">f(n + m ) = g^{n + m} = g^m \cdot g^n =
-f(m) \cdot f(n) \implies f</span> morfismo</li>
+f(m) \cdot f(n) \iff f</span> morfismo</li>
 </ul></li>
 </ul>
 <a href="#ex-3"><h2 id="ex-3">Ex</h2></a>
@@ -459,7 +455,7 @@ f(m) \cdot f(n) \implies f</span> morfismo</li>
 </ul></li>
 <li><strong>Th</strong>
 <ul>
-<li><span class="math inline">f</span> morfismo di anelli <span
+<li><span class="math inline">f</span> morfismo di anelli tra <span
 class="math inline">\left(\mathbb{Z},+, \cdot\right)</span> e <span
 class="math inline">\left(\mathbb{Z}_{n},+, \cdot\right)</span></li>
 </ul></li>
@@ -481,19 +477,19 @@ x \ (\bmod \ m) \rightarrow x \ (\bmod\ n)</span></li>
 </ul></li>
 <li><strong>Th</strong>
 <ul>
-<li><span class="math inline">f</span> morfismo di anelli <span
+<li><span class="math inline">f</span> morfismo di anelli tra <span
 class="math inline">\left(\mathbb{Z}_{m},+, \cdot\right)</span> e <span
 class="math inline">\left(\mathbb{Z}_{n},+, \cdot\right)</span></li>
 </ul></li>
 <li><strong>Dim</strong>
 <ul>
-<li><span class="math inline">\forall [x], [y] \in \mathbb{Z}_m \quad x
-\ (\bmod \ m) + y \ (\bmod \ m) = x +y \ (\bmod \ m)</span></li>
-<li><span class="math inline">f(x + y \ (\bmod \ m)) = x +y \ (\bmod \
-n) = x \ (\bmod \ n)+ y \ (\bmod \ n) = f(x \ (\bmod \ m)) + f(y \
-(\bmod \ m))</span></li>
-<li>il ragionamento è analogo per l’operazione <span
-class="math inline">\cdot</span>, e dunque segue la tesi</li>
+<li><span class="math inline">\forall [x], [y] \in \mathbb{Z}_m \quad
+f(x + y \ (\bmod \ m)) = x +y \ (\bmod \ n) = x \ (\bmod \ n)+ y \
+(\bmod \ n) = f(x \ (\bmod \ m)) + f(y \ (\bmod \ m))</span></li>
+<li><span class="math inline">\forall [x], [y] \in \mathbb{Z}_m \quad
+f(x \cdot y \ (\bmod \ m)) = x \cdot y \ (\bmod \ n) = x \ (\bmod \
+n)\cdot y \ (\bmod \ n) = f(x \ (\bmod \ m)) \cdot f(y \ (\bmod \
+m))</span></li>
 </ul></li>
 </ul>
 <a href="#ex-5"><h2 id="ex-5">Ex</h2></a>
@@ -507,7 +503,7 @@ h \cdot g^{-1}</span></li>
 </ul></li>
 <li><strong>Th</strong>
 <ul>
-<li><span class="math inline">f</span> morfismo di gruppi <span
+<li><span class="math inline">f</span> morfismo di gruppi tra <span
 class="math inline">(G, \cdot)</span> e <span class="math inline">(G,
 \cdot)</span></li>
 </ul></li>
@@ -516,7 +512,7 @@ class="math inline">(G, \cdot)</span> e <span class="math inline">(G,
 <li><span class="math inline">\forall h, h^\prime \in G \quad f(h) \cdot
 f\left(h^{\prime}\right)=\left(g h g^{-1}\right)\cdot \left(g h^{\prime}
 g^{-1}\right)=gh(g^{-1} \cdot g)h^\prime g^{-1}=g h h^{\prime}
-g^{-1}=f\left(h h^{\prime})\right.</span></li>
+g^{-1}=f\left(h h^{\prime})\right. \implies f</span> morfismo</li>
 </ul></li>
 </ul>
 <hr />
@@ -542,7 +538,7 @@ class="math inline">f</span></strong></li>
 </ul>
 <blockquote>
 <ul>
-<li><span class="math inline">A, B</span> gruppi</li>
+<li><span class="math inline">A, B</span> anelli</li>
 <li><span class="math inline">f: A \rightarrow B</span> morfismo</li>
 <li><span class="math inline">\textrm{ker}(f):=\{a \in A \mid f(a)=
 0_B\}</span> è detto <strong>kernel/nucleo di <span
@@ -561,25 +557,21 @@ class="math inline">f</span></strong></li>
 </ul></li>
 <li><strong>Th</strong>
 <ul>
-<li><span class="math inline">\textrm{ker}(f) \subset G</span> è
-sottogruppo</li>
+<li><span class="math inline">\textrm{ker}(f) \leqslant G</span></li>
 </ul></li>
 <li><strong>Dim</strong>
 <ul>
 <li>per dimostrazione precedente, <span class="math inline">f(1_G) = 1_H
-\implies 1_G \in \textrm{ker}(f)</span> per definizione</li>
-<li><span class="math inline">x, y \in \textrm{ker}(f) \implies f(x) =
-f(y ) = 1_H</span> per definizione, dunque <span
-class="math inline">f(x) \cdot f(y) = 1_H \cdot 1_H = 1_H</span>, e
-<span class="math inline">f(x) \cdot f(y) = f(x \cdot y) = 1_H</span>
-perché <span class="math inline">f</span> morfismo, quindi <span
-class="math inline">x \cdot y \in \textrm{ker}(f)</span> per
-definizione</li>
-<li><span class="math inline">g \in \textrm{ker}(f) \implies f(g) =1_H
-\implies f(g)^{-1} = 1_H^{-1} = 1_H</span>, ma poiché per dimostrazione
-precedente <span class="math inline">f(g)^{-1} = f(g^{-1}) \implies
-f(g^{-1})= 1_H \implies g^{-1} \in \textrm{ker}(f)</span> per
-definizione</li>
+\implies 1_G \in \textrm{ker}(f)</span></li>
+<li><span class="math inline">x, y \in \textrm{ker}(f) \iff f(x) = f(y)
+= 1_H \implies f(x) \cdot f(y) = 1_H \cdot 1_H = 1_H</span>, e <span
+class="math inline">f(x) \cdot f(y) = f(x \cdot y) = 1_H</span> perché
+<span class="math inline">f</span> morfismo, quindi <span
+class="math inline">x \cdot y \in \textrm{ker}(f)</span></li>
+<li><span class="math inline">g \in \textrm{ker}(f) \iff f(g) =1_H \iff
+f(g)^{-1} = 1_H^{-1} = 1_H</span>, allora per dimostrazione precedente
+si ha che <span class="math inline">f(g)^{-1} = f(g^{-1})= 1_H \implies
+g^{-1} \in \textrm{ker}(f)</span></li>
 </ul></li>
 </ul>
 <a href="#oss-5"><h2 id="oss-5">Oss</h2></a>
@@ -591,11 +583,11 @@ definizione</li>
 </ul></li>
 <li><strong>Th</strong>
 <ul>
-<li><span class="math inline">\textrm{im}(f) \subset H</span> è
-sottogruppo</li>
+<li><span class="math inline">\textrm{im}(f) \leqslant H</span></li>
 </ul></li>
 <li><strong>Dim</strong>
 <ul>
+<li>⚠️ <strong>da qua</strong></li>
 <li>per dimostrazione precedente <span class="math inline">f(1_G)= 1_H
 \implies 1_H \in \textrm{im}(f)</span> per definizione</li>
 <li><span class="math inline">x, y \in \textrm{im}(f) \implies \exists
