@@ -542,10 +542,10 @@ class="math inline">\textrm{sgn}(\alpha) =
 <li><strong>Hp</strong>
 <ul>
 <li><span class="math inline">n \in \mathbb{N}</span></li>
-<li><span class="math inline">\sigma \in S_{n} \mid \sigma=\tau_{1}
-\ldots \tau_{k}</span> dove <span class="math inline">\forall j \in [1,
-k] \quad \tau_{j} = \tau_{j, j + 1}</span>, dunque tutte le
-trasposizioni sono adiacenti</li>
+<li><span class="math inline">\sigma \in \mathcal{S}_n \mid
+\sigma=\tau_{1} \ldots \tau_{k}</span> dove <span
+class="math inline">\forall j \in [1, k] \quad \tau_{j} = \tau_{j, j +
+1}</span>, dunque tutte le trasposizioni sono adiacenti</li>
 </ul></li>
 <li><strong>Th</strong>
 <ul>
@@ -606,8 +606,8 @@ class="math inline">\textrm{sgn}(\sigma) = (-1)^k</span></li>
 <li><strong>Hp</strong>
 <ul>
 <li><span class="math inline">n \in \mathbb{N}</span></li>
-<li><span class="math inline">\sigma, \sigma^{\prime} \in S_{n} |
-\left\{\begin{array}{l}\sigma = \tau_1 \ldots \tau_k \\ \sigma &#39; =
+<li><span class="math inline">\sigma, \sigma^{\prime} \in \mathcal{S}_n
+| \left\{\begin{array}{l}\sigma = \tau_1 \ldots \tau_k \\ \sigma &#39; =
 \tau_1^{\prime} \ldots \tau_h^{\prime}\end{array}\right.</span>, dove
 ogni trasposizione è adiacente</li>
 </ul></li>
@@ -805,9 +805,9 @@ class="math inline">\sigma \sim \sigma&#39;</span></li>
 <blockquote>
 <ul>
 <li><span class="math inline">n \in \mathbb{N}</span></li>
-<li><span class="math inline">A_n := \{\sigma \in \mathcal{S}_n \mid
-\sigma</span> pari<span class="math inline">\}</span> è detto
-<strong>gruppo alterno di ordine <span
+<li><span class="math inline">\mathcal{A}_n := \{\sigma \in
+\mathcal{S}_n \mid \sigma</span> pari<span class="math inline">\}</span>
+è detto <strong>gruppo alterno di ordine <span
 class="math inline">n</span></strong></li>
 </ul>
 </blockquote>
@@ -819,33 +819,33 @@ class="math inline">n</span></strong></li>
 </ul></li>
 <li><strong>Th</strong>
 <ul>
-<li><span class="math inline">A_n \subset \mathcal{S}_n</span> è un
-sottogruppo normale</li>
+<li><span class="math inline">\mathcal{A}_n \subset \mathcal{S}_n</span>
+è un sottogruppo normale</li>
 </ul></li>
 <li><strong>Dim</strong>
 <ul>
 <li><span class="math inline">\textrm{sgn}(\textrm{id}) = (-1)^0 =
 1</span>, in quanto <span class="math inline">\textrm{id}</span> non ha
 inversioni, dunque <span class="math inline">\textrm{id} \in
-A_n</span></li>
-<li><span class="math inline">\sigma, \sigma&#39; \in A_n \implies
-\textrm{sgn}(\sigma)=\textrm{sgn}(\sigma&#39;)=1 \implies
+\mathcal{A}_n</span></li>
+<li><span class="math inline">\sigma, \sigma&#39; \in \mathcal{A}_n
+\implies \textrm{sgn}(\sigma)=\textrm{sgn}(\sigma&#39;)=1 \implies
 \textrm{sgn}(\sigma)\cdot\textrm{sgn}(\sigma&#39;) = 1 =
 \textrm{sgn}(\sigma \sigma&#39;)</span> per dimostrazione precedente
 <span class="math inline">\implies \sigma \sigma&#39; \in
-A_n</span></li>
-<li><span class="math inline">\sigma \in A_n \implies
+\mathcal{A}_n</span></li>
+<li><span class="math inline">\sigma \in \mathcal{A}_n \implies
 \textrm{sgn}(\sigma) = 1 = \textrm{sgn}(\sigma^{-1})</span> per
 dimostrazione predecente <span class="math inline">\implies \sigma^{-1}
-\in A_n</span></li>
-<li><span class="math inline">A_n \subset \mathcal{S}_n</span>
+\in \mathcal{A}_n</span></li>
+<li><span class="math inline">\mathcal{A}_n \subset \mathcal{S}_n</span>
 sottogruppo normale <span class="math inline">\iff \forall \sigma \in
-A_n, \alpha \in \mathcal{S}_n \quad \sigma \alpha \sigma^{-1} \in
-A_n</span> per dimostrazione precedente</li>
+\mathcal{A}_n, \alpha \in \mathcal{S}_n \quad \sigma \alpha \sigma^{-1}
+\in \mathcal{A}_n</span> per dimostrazione precedente</li>
 <li>inoltre, per dimostrazione precedente <span
 class="math inline">\textrm{sgn}(\sigma) = 1 = \textrm{sgn}(\sigma
 \alpha \sigma^{-1}) \implies \sigma \alpha \sigma^{-1} \in
-A_n</span></li>
+\mathcal{A}_n</span></li>
 </ul></li>
 </ul>
 <a href="#oss-12"><h2 id="oss-12">Oss</h2></a>
@@ -856,29 +856,32 @@ A_n</span></li>
 </ul></li>
 <li><strong>Th</strong>
 <ul>
-<li><span class="math inline">|A_n| = \dfrac{n!}{2}</span></li>
+<li><span class="math inline">|\mathcal{A}_n| =
+\dfrac{n!}{2}</span></li>
 </ul></li>
 <li><strong>Dim</strong>
 <ul>
-<li><span class="math inline">A_n \subset \mathcal{S}_n</span>
+<li><span class="math inline">\mathcal{A}_n \subset \mathcal{S}_n</span>
 sottogruppo normale <span class="math inline">\implies
-\mathcal{S}_n/A_n</span> è ben definito</li>
+\mathcal{S}_n/\mathcal{A}_n</span> è ben definito</li>
 <li>in particolare, considerando la relazione di classe laterale
 sinistra, si ha che <span class="math inline">\forall \sigma,
 \sigma&#39; \in \mathcal{S}_n \quad \sigma \sim_S \sigma&#39; \iff
-\sigma^{-1}\sigma&#39; \in A_n \iff \textrm{sgn}(\sigma^{-1}\sigma&#39;)
-= 1 = \textrm{sgn}(\sigma^{-1})\cdot
+\sigma^{-1}\sigma&#39; \in \mathcal{A}_n \iff
+\textrm{sgn}(\sigma^{-1}\sigma&#39;) = 1 =
+\textrm{sgn}(\sigma^{-1})\cdot
 \textrm{sgn}(\sigma)=\textrm{sgn}(\sigma)\cdot\textrm{sgn}(\sigma&#39;)
 \iff \textrm{sgn}(\sigma) = \textrm{sgn}(\sigma&#39;)</span></li>
 <li>poiché <span class="math inline">\textrm{sgn}(\sigma) = \pm 1</span>
 per definizione, si ha che <span
-class="math inline">\mathcal{S}_n/A_n=\{[\textrm{id}]_{+1},
+class="math inline">\mathcal{S}_n/\mathcal{A}_n=\{[\textrm{id}]_{+1},
 [\alpha]_{-1}\}</span>, dove <span class="math inline">\alpha</span> è
-dispari, e in particolare <span class="math inline">|\mathcal{S}_n/A_n|
-= 2</span></li>
+dispari, e in particolare <span
+class="math inline">|\mathcal{S}_n/\mathcal{A}_n| = 2</span></li>
 <li>inoltre, per il teorema di Lagrange si ha che <span
-class="math inline">|\mathcal{S}_n| = |A_n| \cdot |\mathcal{S}_n/A_n|
-\iff |A_n| = \dfrac{|\mathcal{S}_n|}{|\mathcal{S}_n/A_n|} =
+class="math inline">|\mathcal{S}_n| = |\mathcal{A}_n| \cdot
+|\mathcal{S}_n/\mathcal{A}_n| \iff |\mathcal{A}_n| =
+\dfrac{|\mathcal{S}_n|}{|\mathcal{S}_n/\mathcal{A}_n|} =
 \dfrac{n!}{2}</span></li>
 </ul></li>
 </ul>

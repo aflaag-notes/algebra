@@ -165,7 +165,7 @@
 
 - **Hp**
     - $n \in \mathbb{N}$
-    - $\sigma \in S_{n} \mid \sigma=\tau_{1} \ldots \tau_{k}$ dove $\forall j \in [1, k] \quad \tau_{j} = \tau_{j, j + 1}$, dunque tutte le trasposizioni sono adiacenti
+    - $\sigma \in \mathcal{S}_n \mid \sigma=\tau_{1} \ldots \tau_{k}$ dove $\forall j \in [1, k] \quad \tau_{j} = \tau_{j, j + 1}$, dunque tutte le trasposizioni sono adiacenti
 - **Th**
     - $\textrm{sgn}(\sigma)= (-1)^k$
 - **Dim**
@@ -184,7 +184,7 @@
 
 - **Hp**
     - $n \in \mathbb{N}$
-    - $\sigma, \sigma^{\prime} \in S_{n} | \left\{\begin{array}{l}\sigma = \tau_1 \ldots \tau_k \\ \sigma ' = \tau_1^{\prime} \ldots \tau_h^{\prime}\end{array}\right.$, dove ogni trasposizione è adiacente
+    - $\sigma, \sigma^{\prime} \in \mathcal{S}_n | \left\{\begin{array}{l}\sigma = \tau_1 \ldots \tau_k \\ \sigma ' = \tau_1^{\prime} \ldots \tau_h^{\prime}\end{array}\right.$, dove ogni trasposizione è adiacente
 - **Th**
     - $\operatorname{sgn}\left(\sigma \sigma^{\prime}\right)=\operatorname{sgn}(\sigma)\cdot \textrm{sgn}(\sigma ')$
 - **Dim**
@@ -246,32 +246,32 @@
 - **Gruppo alterno**
 
 > - $n \in \mathbb{N}$
-> - $A_n := \{\sigma \in \mathcal{S}_n \mid \sigma$ pari$\}$ è detto **gruppo alterno di ordine $n$**
+> - $\mathcal{A}_n := \{\sigma \in \mathcal{S}_n \mid \sigma$ pari$\}$ è detto **gruppo alterno di ordine $n$**
 
 ## Oss
 
 - **Hp**
     - $n \in \mathbb{N}$
 - **Th**
-    - $A_n \subset \mathcal{S}_n$ è un sottogruppo normale
+    - $\mathcal{A}_n \subset \mathcal{S}_n$ è un sottogruppo normale
 - **Dim**
-    - $\textrm{sgn}(\textrm{id}) = (-1)^0 = 1$, in quanto $\textrm{id}$ non ha inversioni, dunque $\textrm{id} \in A_n$
-    - $\sigma, \sigma' \in A_n \implies \textrm{sgn}(\sigma)=\textrm{sgn}(\sigma')=1 \implies \textrm{sgn}(\sigma)\cdot\textrm{sgn}(\sigma') = 1 = \textrm{sgn}(\sigma \sigma')$ per dimostrazione precedente $\implies \sigma \sigma' \in A_n$
-    - $\sigma \in A_n \implies \textrm{sgn}(\sigma) = 1 = \textrm{sgn}(\sigma^{-1})$ per dimostrazione predecente $\implies \sigma^{-1} \in A_n$
-    - $A_n \subset \mathcal{S}_n$ sottogruppo normale $\iff \forall \sigma \in A_n, \alpha \in \mathcal{S}_n \quad \sigma \alpha \sigma^{-1} \in A_n$ per dimostrazione precedente
-    - inoltre, per dimostrazione precedente $\textrm{sgn}(\sigma) = 1 = \textrm{sgn}(\sigma \alpha \sigma^{-1}) \implies \sigma \alpha \sigma^{-1} \in A_n$
+    - $\textrm{sgn}(\textrm{id}) = (-1)^0 = 1$, in quanto $\textrm{id}$ non ha inversioni, dunque $\textrm{id} \in \mathcal{A}_n$
+    - $\sigma, \sigma' \in \mathcal{A}_n \implies \textrm{sgn}(\sigma)=\textrm{sgn}(\sigma')=1 \implies \textrm{sgn}(\sigma)\cdot\textrm{sgn}(\sigma') = 1 = \textrm{sgn}(\sigma \sigma')$ per dimostrazione precedente $\implies \sigma \sigma' \in \mathcal{A}_n$
+    - $\sigma \in \mathcal{A}_n \implies \textrm{sgn}(\sigma) = 1 = \textrm{sgn}(\sigma^{-1})$ per dimostrazione predecente $\implies \sigma^{-1} \in \mathcal{A}_n$
+    - $\mathcal{A}_n \subset \mathcal{S}_n$ sottogruppo normale $\iff \forall \sigma \in \mathcal{A}_n, \alpha \in \mathcal{S}_n \quad \sigma \alpha \sigma^{-1} \in \mathcal{A}_n$ per dimostrazione precedente
+    - inoltre, per dimostrazione precedente $\textrm{sgn}(\sigma) = 1 = \textrm{sgn}(\sigma \alpha \sigma^{-1}) \implies \sigma \alpha \sigma^{-1} \in \mathcal{A}_n$
 
 ## Oss
 
 - **Hp**
     - $n \in \mathbb{N}$
 - **Th**
-    - $|A_n| = \dfrac{n!}{2}$
+    - $|\mathcal{A}_n| = \dfrac{n!}{2}$
 - **Dim**
-    - $A_n \subset \mathcal{S}_n$ sottogruppo normale $\implies \mathcal{S}_n/A_n$ è ben definito
-    - in particolare, considerando la relazione di classe laterale sinistra, si ha che $\forall \sigma, \sigma' \in \mathcal{S}_n \quad \sigma \sim_S \sigma' \iff \sigma^{-1}\sigma' \in A_n \iff \textrm{sgn}(\sigma^{-1}\sigma') = 1 = \textrm{sgn}(\sigma^{-1})\cdot \textrm{sgn}(\sigma)=\textrm{sgn}(\sigma)\cdot\textrm{sgn}(\sigma') \iff \textrm{sgn}(\sigma) = \textrm{sgn}(\sigma')$
-    - poiché $\textrm{sgn}(\sigma) = \pm 1$ per definizione, si ha che $\mathcal{S}_n/A_n=\{[\textrm{id}]_{+1}, [\alpha]_{-1}\}$, dove $\alpha$ è dispari, e in particolare $|\mathcal{S}_n/A_n| = 2$
-    - inoltre, per il teorema di Lagrange si ha che $|\mathcal{S}_n| = |A_n| \cdot |\mathcal{S}_n/A_n| \iff |A_n| = \dfrac{|\mathcal{S}_n|}{|\mathcal{S}_n/A_n|} = \dfrac{n!}{2}$
+    - $\mathcal{A}_n \subset \mathcal{S}_n$ sottogruppo normale $\implies \mathcal{S}_n/\mathcal{A}_n$ è ben definito
+    - in particolare, considerando la relazione di classe laterale sinistra, si ha che $\forall \sigma, \sigma' \in \mathcal{S}_n \quad \sigma \sim_S \sigma' \iff \sigma^{-1}\sigma' \in \mathcal{A}_n \iff \textrm{sgn}(\sigma^{-1}\sigma') = 1 = \textrm{sgn}(\sigma^{-1})\cdot \textrm{sgn}(\sigma)=\textrm{sgn}(\sigma)\cdot\textrm{sgn}(\sigma') \iff \textrm{sgn}(\sigma) = \textrm{sgn}(\sigma')$
+    - poiché $\textrm{sgn}(\sigma) = \pm 1$ per definizione, si ha che $\mathcal{S}_n/\mathcal{A}_n=\{[\textrm{id}]_{+1}, [\alpha]_{-1}\}$, dove $\alpha$ è dispari, e in particolare $|\mathcal{S}_n/\mathcal{A}_n| = 2$
+    - inoltre, per il teorema di Lagrange si ha che $|\mathcal{S}_n| = |\mathcal{A}_n| \cdot |\mathcal{S}_n/\mathcal{A}_n| \iff |\mathcal{A}_n| = \dfrac{|\mathcal{S}_n|}{|\mathcal{S}_n/\mathcal{A}_n|} = \dfrac{n!}{2}$
 
 ## Oss
 
