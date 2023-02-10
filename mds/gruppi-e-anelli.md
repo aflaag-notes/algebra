@@ -397,7 +397,11 @@
     - $\forall g \in G \quad o(g^k) \mid o(g)$
 - **Dim**
     - $\forall (g^k)^n \in H(g^k) \quad (g^k)^n = g^{nk} \implies g^{nk} \in H(g) \implies H(g^k) \subseteq H(g)$
-    - per dimostrazione precedente $H(g^k) \subseteq H(g) \leqslant G$, allora in particolare, per il teorema di Lagrange $o(g^k) = | H(g^k)| \bigg\vert |H(g)| = o(g)$
+    - ⚠️ **dimostra che $H(g^k) \leqslant G$**
+    - per dimostrazione precedente $H(g^k), H(g) \leqslant G$
+    - per il teorema di Lagrange $o(g) = | H(g)| \bigg\vert |G|$
+    - inoltre, per il teorema di Lagrange $o(g^k) = | H(g^k)| \bigg\vert |G|$
+    - allora, poiché $H(g^k) \subseteq H(g)$, necessariamente $o(g^k) = | H(g^k)| \bigg\vert |H(g)| = o(g)$
 
 ## Oss
 
