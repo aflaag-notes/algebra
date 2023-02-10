@@ -292,8 +292,9 @@
 > - $g \in G$
 > - $H(g):=\left\{g^{n} \mid n \in \mathbb{Z}\right\}$ è detto **sottogruppo ciclico**
 >   - prende il nome di _sottogruppo ciclico_ poiché, a seconda del gruppo, le potenze di $g$ possono essere infinite o finite, ma quest'ultimo caso si verifica esclusivamente quando le potenze ciclano su loro stesse
-> - $o(g):= |H(g)|$ è detto **ordine di $g \in G$**
->   - tale valore può dunque essere infinito o finito, e in quest'ultimo caso l'ordine costituisce il valore più piccolo, non nullo, per cui $g^{o(g)} = e$, poiché per valori maggiori le potenze ricicleranno infinitamente
+> - $o(g):= |H(g)|$ è detto **ordine di $g$**
+>   - tale valore può dunque essere infinito o finito, e in quest'ultimo caso l'ordine costituisce il valore più piccolo, non nullo, per cui $g^{o(g)} = e$, poiché per valori maggiori le potenze cicleranno infinitamente
+>   
 
 ## Oss
 
@@ -316,7 +317,7 @@
   - $(H(g), \cdot) \subset (G, \cdot)$  è sottogruppo
 - **Dim**
   - $e=g^{0} \implies e \in H(g)$ per definizione di $H(g)$
-  - $\forall m, n \in \mathbb{Z} \quad m + n \in \mathbb{Z} \implies g^m \cdot g^n = g^{m + n} \in H(g)$ per definizione di $H(g)$, quindi $H(g) \cdot Hg(g) \subset H(g)$
+  - $\forall m, n \in \mathbb{Z} \quad m + n \in \mathbb{Z} \implies g^m \cdot g^n = g^{m + n} \in H(g)$ per definizione di $H(g)$, quindi $H(g) \cdot Hg(g) \subseteq H(g)$
   - $\forall n \in \mathbb{Z} \quad -n \in \mathbb{Z} \implies (g^n)^{-1} = g^{-n} \in H(g)$ per definizione di $H(g)$
 
 ## Oss
@@ -339,27 +340,30 @@
 - **Hp**
   - $G$ gruppo
   - $g \in G$
-  - $\exists! d \geq 0 \mid I(g)=I(d)$
 - **Th**
+  - $\exists! d \in \mathbb{N} \mid I(g)=I(d)$
   - $d = 0 \implies o(g) := |H(g)| = |\mathbb{Z}|$, dunque infinito
-  - $d>0 \implies d = o(g)$
+  - $d>0 \implies d = o(g)$, e questo implica che in $I(g)$ sono presenti tutti i multipli di $o(g)$
 - **Dim**
   - $d = 0$
-    - la funzione $f: \mathbb{Z} \rightarrow H(g) : n \rightarrow g^n$ è biiettiva
-      - $f$ iniettiva $\iff \forall m, n \in \mathbb{Z} \quad g^n =g^m \implies n = m$
-        - $m, n \in \mathbb{Z} \mid g^m = g^n \implies g^{-m} \cdot g^m=g^{-m} \cdot g^n \iff e = g^{n - m} \implies n - m \in I(g) = I(d) \implies d \mid n - m$
-        - $d = 0 \implies 0 \mid n - m \iff n -m = 0 \iff n = m$, di conseguenza $g^m = g^n \implies n = m$
-      - la suriettività di $f$ è data al fatto che l'immagine di $f$ coincide con $H(g)$ per definizione di $H(g)$
-    - $f$ è biiettiva $\implies |\mathbb{Z} | = |H(g)| = o(g)$, dunque infinito
+    - si consideri $f: \mathbb{Z} \rightarrow H(g) : n \rightarrow g^n$ è biiettiva
+    - $f$ iniettiva $\iff \forall m, n \in \mathbb{Z} \quad g^n =g^m \implies n = m$
+    - $m, n \in \mathbb{Z} \mid g^m = g^n \implies g^{-m} \cdot g^m=g^{-m} \cdot g^n \iff e = g^{n - m} \implies n - m \in I(g) = I(d) \implies d \mid n - m$
+    - $d = 0 \implies 0 \mid n - m \iff n -m = 0 \iff n = m$, di conseguenza $g^m = g^n \implies n = m$
+    - la suriettività di $f$ è data al fatto che l'immagine di $f$ coincide con $H(g)$
+    - $f$ biiettiva $\implies |\mathbb{Z} | = |H(g)| = o(g)$, dunque infinito
   - $d \gt 0$
-    - $I(g) = I(d) \land d \in I(d) \implies d \in I(g) \implies g^d = e$
-    - $d \gt 0 \implies \forall n \in \mathbb{Z} \quad \exists q, r \mid n = dq + r \quad 0 \le r \lt d$ per il teorema della divisione euclidea con il resto, dunque $g^n = g^{dq +r}=(g^d)^q \cdot g^r=e^q \cdot g^r =e \cdot g^r = g^r$
-    - $g^n = g^r \iff n = r$, e inoltre $0 \le r \lt d \implies 0 \le n \lt d$
-    - poiché è stato scelto $n \in \mathbb{Z}$ senza restrizioni, allora il fatto che $0 \le n \lt d$ implica necessariamente che ogni esponente di $g$ deve essere un valore intero compreso tra $0$ e $d - 1$, dunque il numero di potenze di $g$ è al massimo $d$
-    - $\forall x, y \in \mathbb{Z} \mid 0 \le x, y \lt d \quad g^x = g^y \iff g^x \cdot g^{-y} = e \iff g^{x - y} = e$, ma per osservazione precedente $\forall k \in \mathbb{Z} \quad e = (g^d)^k = g^{dk}$
-    - $0 \le x, y \lt d \implies -d \lt x, y \lt d \implies -d \lt x - y \lt d$ poiché la differenza non può uscire mai dall'intervallo
-    - allora, segue che $g^{x-y} = g^{dk} \iff x - y = dk \iff d \mid x- y$, ma poiché $-d \lt x - y \lt d$, allora necessariamente $x - y =0 \iff x = y$, e dunque $g^x$ e $g^y$ sono la stessa potenza, e dunque le potenze di $g$ non sono meno di $d$
+    - $|H(g)| \le d$, ovvero $g$ ha _al massimo $d$_ potenze
+        - $I(g) = I(d) \land d \in I(d) \implies d \in I(g) \implies g^d = e$
+        - $d \gt 0 \implies \forall n \in \mathbb{Z} \quad \exists q, r \in \mathbb{Z} \mid n = dq + r \quad 0 \le r \lt d$ per il teorema della divisione euclidea con il resto, dunque $g^n = g^{dq +r}=(g^d)^q \cdot g^r=e^q \cdot g^r =e \cdot g^r = g^r$
+        - $g^n = g^r \iff n = r$ poiché $f$ biiettiva per dimostrazione precedente, e inoltre $0 \le r \lt d \implies 0 \le n \lt d$
+        - poiché è stato scelto $n \in \mathbb{Z}$ senza restrizioni, allora il fatto che $0 \le n \lt d$ implica necessariamente che ogni esponente di $g$ deve essere un valore intero compreso tra $0$ e $d - 1$, dunque il numero di potenze di $g$ è al massimo $d$
+    - $|H(g)| \ge d$, ovvero $g$ ha _al minimo_ $d$ potenze
+        - $\forall x, y \in \mathbb{Z} \mid 0 \le x, y \lt d \quad g^x = g^y \iff g^x \cdot g^{-y} = e \iff g^{x - y} = e$, ma per osservazione precedente $\forall k \in \mathbb{Z} \quad e = (g^d)^k = g^{dk}$
+        - $0 \le x, y \lt d \implies -d \lt x - y \lt d$
+        - allora, segue che $g^{x-y} = g^{dk} \iff x - y = dk \iff d \mid x- y$, ma poiché $-d \lt x - y \lt d$, allora necessariamente $x - y =0 \iff x = y$, e dunque $g^x$ e $g^y$ sono la stessa potenza, e dunque le potenze di $g$ non sono meno di $d$
     - di conseguenza, si ottiene che $H(g) = \{g^0, g^1, \ldots, g^{d-1}\} \implies |H(g)|=d$
+    - ⚠️ **il secondo lato non mi è chiaro perche dovrebbe funzionare**
 
 ## Oss
 
@@ -369,7 +373,7 @@
 - **Th**
   - $g^{|G|}=e$
 - **Dim**
-  - per dimostrazione precedente $I(d) = I(g)$, allora $d \in I(d) \implies d \in  I(g) \implies g^d = e$
+  - $I(d) = I(g)$, allora $d \in I(d) \implies d \in  I(g) \implies g^d = e$
   - $d = o(g) = |H(g)| \bigg\vert |G|$ per il teorema di Lagrange, e dunque $\exists k \in \mathbb{Z} : |G|=d \cdot k \implies g^{|G|} = g^{d \cdot k} = (g^d)^k = e^k = e$
 
 ## Oss
@@ -394,8 +398,8 @@
 - **Th**
     - $\forall g \in G \quad o(g^k) \mid o(g)$
 - **Dim**
-    - $\forall (g^k)^n \in H(g^k) \quad (g^k)^n = g^{nk} \implies g^{nk} \in H(g) \implies H(g^k) \subset H(g)$
-    - per dimostrazione precedente $H(g^k) \subset H(g) \subset G$ sottogruppi, allora in particolare, per il teorema di Lagrange $o(g^k) = | H(g^k)| \bigg\vert |H(g)| = o(g)$
+    - $\forall (g^k)^n \in H(g^k) \quad (g^k)^n = g^{nk} \implies g^{nk} \in H(g) \implies H(g^k) \subseteq H(g)$
+    - per dimostrazione precedente $H(g^k) \subseteq H(g) \subset G$ sottogruppi, allora in particolare, per il teorema di Lagrange $o(g^k) = | H(g^k)| \bigg\vert |H(g)| = o(g)$
 
 ## Oss
 

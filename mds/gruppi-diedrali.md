@@ -5,7 +5,7 @@
 - **Gruppo diedrale**
 
 > - $n \in \mathbb{N}_{\ge 2}$
-> - $D_n$ è l'**insieme delle simmetrie dell'$n$-gono regolare**
+> - $\mathcal{D}_n$ è l'**insieme delle simmetrie dell'$n$-gono regolare**
 >   - l'insieme delle rotazioni che lasciano l'$n$-gono invariato, e delle riflessioni rispetto agli assi di simmetria
 > - $\rho :=$ rotazione di $\frac{360°}{n}$ gradi di un $n$-gono regolare
 > - $\sigma_i :=$ riflessione rispetto all'$i$-esimo asse di simmetria dell'$n$-gono regolare
@@ -14,22 +14,22 @@
 
 - **Hp**
   - $n \in \mathbb{N}_{\ge 2}$
-  - $D_n$ insieme delle simmetrie dell'$n$-gono regolare
+  - $\mathcal{D}_n$ insieme delle simmetrie dell'$n$-gono regolare
 - **Th**
-  - $|D_n| = 2n$
+  - $|\mathcal{D}_n| = 2n$
 - **Dim**
   - $\rho := \frac{360°}{n} \implies$le rotazioni che lasciano l'$n$-gono invariato sono esattamente $n$
   - gli assi di simmetria di un $n$-gono sono $n$, dunque si hanno esattamente $n$ possibili riflessioni
-  - $D_n := \{\rho^0, \ldots, \rho^{n - 1}, \sigma_0, \ldots, \sigma_{n-1}\} \implies |D_n| = 2n$
+  - $\mathcal{D}_n := \{\rho^0, \ldots, \rho^{n - 1}, \sigma_0, \ldots, \sigma_{n-1}\} \implies |\mathcal{D}_n| = 2n$
 
 ## Oss
 
 - **Hp**
   - $n \in \mathbb{N}_{\ge 2}$
-  - $D_n$ insieme delle simmetrie dell'$n$-gono regolare
+  - $\mathcal{D}_n$ insieme delle simmetrie dell'$n$-gono regolare
   - $\cdot$ è l'operazione di composizione delle simmetrie
 - **Th**
-  - $(D_n, \cdot)$ è un gruppo
+  - $(\mathcal{D}_n, \cdot)$ è un gruppo
 - **Dim**
   - la composizione di funzioni è associativa
   - $\rho^0 = 1 = \textrm{id}$ è l'elemento neutro
@@ -48,13 +48,13 @@
 ## Oss
 
 - **Hp**
-  - $D_n$ gruppo diedrale
+  - $\mathcal{D}_n$ gruppo diedrale
 - **Th**
-  - $D_n \hookrightarrow S_n$
-  - $\exists X \subset S_n$ sottogruppo di $S_n$ $\mid D_n \cong X$
-    - $D_3 \cong S_3$
+  - $\mathcal{D}_n \hookrightarrow \mathcal{S}_n$
+  - $\exists X \subset \mathcal{S}_n$ sottogruppo di $\mathcal{S}_n$ $\mid \mathcal{D}_n \cong X$
+    - $\mathcal{D}_3 \cong \mathcal{S}_3$
 - **Dim**
-  - per ogni simmetria in $D_n$, è possibile trovare l'unica permutazione equivalente in $S_n$
+  - per ogni simmetria in $\mathcal{D}_n$, è possibile trovare l'unica permutazione equivalente in $\mathcal{S}_n$
     - ad esempio, con $n = 3$, numerando ogni vertice del triangolo equilatero, partendo dal vertice in basso a destra, si ottiene
       - $\rho^0=$$\left(\begin{array}{lll}1 & 2 & 3 \\ 1&2&3\end{array}\right)$$=\textrm{id}$
       - $\rho^1=$$\left(\begin{array}{lll}1 & 2 & 3 \\ 2 & 3 & 1\end{array}\right)$
@@ -62,14 +62,14 @@
       - $\sigma_0=$$\left(\begin{array}{lll}1 & 2 & 3 \\ 1&3&2\end{array}\right)$
       - $\sigma_1=$$\left(\begin{array}{lll}1 & 2 & 3 \\ 2&1&3\end{array}\right)$
       - $\sigma_2=$$\left(\begin{array}{lll}1 & 2 & 3 \\ 3&2&1\end{array}\right)$
-  - poiché la permutazione equivalente è unica, funzione che manda una simmetria in $D_n$ nella corrispondente permutazione in $S_n$ è iniettiva
-  - allora $D_n \hookrightarrow S_n$, ovvero, l'inclusione è iniettiva ma non suriettiva in generale
-    - $|D_n| \le |S_n|$, poiché in generale $S_n$ contiene più permutazioni di $D_n$
-  - ma per ragionamento analogo, è sempre possibile trovare un sottogruppo $X \subset S_n \mid |X| = |D_n| \implies$ l'inclusione è biiettiva
-    - dunque, $D_3$ risulta essere il caso particolare in cui $X = S_n$
-  - $|D_n| \cong X$
+  - poiché la permutazione equivalente è unica, funzione che manda una simmetria in $\mathcal{D}_n$ nella corrispondente permutazione in $\mathcal{S}_n$ è iniettiva
+  - allora $\mathcal{D}_n \hookrightarrow \mathcal{S}_n$, ovvero, l'inclusione è iniettiva ma non suriettiva in generale
+    - $|\mathcal{D}_n| \le |\mathcal{S}_n|$, poiché in generale $\mathcal{S}_n$ contiene più permutazioni di $\mathcal{D}_n$
+  - ma per ragionamento analogo, è sempre possibile trovare un sottogruppo $X \subset \mathcal{S}_n \mid |X| = |\mathcal{D}_n| \implies$ l'inclusione è biiettiva
+    - dunque, $\mathcal{D}_3$ risulta essere il caso particolare in cui $X = \mathcal{S}_n$
+  - $|\mathcal{D}_n| \cong X$
     
-    - $f: D_n \rightarrow S_n : a \rightarrow \sigma_a$ è un morfismo
+    - $f: \mathcal{D}_n \rightarrow \mathcal{S}_n : a \rightarrow \sigma_a$ è un morfismo
       - $v_i$ vertice $i$-esimo
       - $a: v_i \rightarrow v_j$ è la simmetria che manda $v_i$ in $v_j$, che corrisponde a $\sigma_a: i \rightarrow j$ attraverso $f$
         - $f(a) = \sigma_a$
@@ -79,8 +79,8 @@
           - $\left.\begin{array}{l}a(v_i) = v_j \\ b(v_j) = v_k\end{array}\right\} \implies b \cdot a = b(a(v_i)) = v_k$
           - $\left.\begin{array}{l}\sigma_a(i) = j \\ \sigma_b(j) = k\end{array}\right\} \implies \sigma_b \cdot \sigma_a =\sigma_b(\sigma_a(i)) = k$
           - quinidi $b \cdot a = b(a(v_i)) = v_k = v_{\sigma_b(\sigma_a(i))} = v_{\sigma_b \cdot \sigma_a}$
-    - poiché $|D_n| = |X|$, allora l'inclusione data da $f$ è anche suriettiva, e quindi biiettiva, dunque $f$ è un isomorfismo
-  - in particolare, $D_3 \cong S_3$, poiché $X$ è tutto $S_3$
+    - poiché $|\mathcal{D}_n| = |X|$, allora l'inclusione data da $f$ è anche suriettiva, e quindi biiettiva, dunque $f$ è un isomorfismo
+  - in particolare, $\mathcal{D}_3 \cong \mathcal{S}_3$, poiché $X$ è tutto $\mathcal{S}_3$
 
 ## Def
 

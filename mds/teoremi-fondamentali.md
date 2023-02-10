@@ -123,8 +123,8 @@
     - $\mathbb{Z}_n := \{[0],[1], \cdots,[n-1]\} \implies \left|\mathbb{Z}_{n}\right|=n$, quindi $\left|\mathbb{Z}_{a_{1}}\right| \cdot\ldots\cdot\left|\mathbb{Z}_{a_{n}}\right|  = a_1 \cdot \ldots \cdot a_n = m = \left| \mathbb{Z}_m \right|$ per ragionamento analogo
   - $|X|=|Y|<\infty \implies f: X \rightarrow Y$ iniettiva $\iff$ $f$ suriettiva
     - applicando questa osservazione, $\phi$ iniettiva $\implies \phi$ suriettiva, in quanto, per l'osservazione precedente, insieme di partenza e di arrivo di $\phi$ hanno la stessa cardinalità $\left| \mathbb{Z}_m \right|$
-  - $\phi$ suriettiva $\implies$ $\exists x \mid x \ (\bmod m)$ è soluzione del sistema
-    - $\varphi(x \ (\bmod \ m))=\left(b_{1}\ \left( \bmod \  a_{1}\right), \ldots, b_{n} \ (\bmod a_{n})\right)$, e poiché $\phi$ è suriettiva, allora ogni tupla di $n$ elementi dell'insieme di arrivo, che descrive un sistema come in ipotesi, ha una controimmagine $x \ (\bmod \ m)$, e $x \ (\bmod \ m)\in \mathbb{Z}_m$ per definizione, dunque esiste sempre una soluzione
+  - $\phi$ suriettiva $\implies$ $\exists x \mid x \ (\bmod \ m)$ è soluzione del sistema
+    - $\varphi(x \ (\bmod \ m))=\left(b_{1}\ \left( \bmod \ a_{1}\right), \ldots, b_{n} \ (\bmod \ a_{n})\right)$, e poiché $\phi$ è suriettiva, allora ogni tupla di $n$ elementi dell'insieme di arrivo, che descrive un sistema come in ipotesi, ha una controimmagine $x \ (\bmod \ m)$, e $x \ (\bmod \ m)\in \mathbb{Z}_m$ per definizione, dunque esiste sempre una soluzione
   - $\phi$ iniettiva $\implies$ $\exists ! x \mid x \ (\bmod \ m)$ è soluzione del sistema
     - poiché $\phi$ è iniettiva, $x \ (\bmod \ m) \in \mathbb{Z}_m$ è unico, dunque la soluzione è sempre unica
 
@@ -137,16 +137,16 @@
     - $[a] \in \mathbb{Z}_N^*$
     - $o := o([a])$ in $\mathbb{Z}_N^*$
     - $\forall h \in [1, k] \quad o_h := o([a])$ in $\mathbb{Z}_{n_h}^*$
+    - $m := \textrm{mcm}(o_1, \ldots, o_k)$
 - **Th**
-    - $o = \textrm{mcm}(o_1, \ldots, o_k)$
+    - $o = m$
 - **Dim**
     - per il primo lemma del teorema cinese dei resti $N = n_1 \cdot \ldots \cdot n_k$ poiché coprimi a due a due in ipotesi
     - per il teorema cinese dei resti $a^o \equiv 1 \ (\bmod \ N) \implies \left\{\begin{array}{c}a^o \equiv 1 \ (\bmod \ n_1) \\ \vdots \\ a^o \equiv 1 \ (\bmod \ n_k)\end{array}\right.$ poiché $n_1, \ldots, n_k$ coprimi a due a due in ipotesi
-    - per dimostrazione precedente, $o_1$ è il più piccolo esponente di $[a]$ per cui $[a]^{o_1} = 1$ in $\mathbb{Z}_{n_1}^*$, ma questo implica che $\forall k \in \mathbb{Z} \quad ([a]^{o_1})^k = 1$ in $\mathbb{Z}_{n_1}^*$, e allora necessariamente $a^o \equiv 1 \ (\bmod \ n_1)$ implica che $o$ sia un multiplo di $o_1$
-    - per ragionamento analogo, vale il seguente sistema $\left\{\begin{array}{c}o_1 \mid o \\ \vdots \\ o_k \mid o \end{array}\right. \implies \textrm{mcm}(o_1, \ldots, o_k) \mid o$
-    - sia $m := \textrm{mcm}(o_1, \ldots, o_k)$
+    - per dimostrazione precedente, $o_1$ è il più piccolo esponente di $[a]$ per cui $[a]^{o_1} = [1]$ in $\mathbb{Z}_{n_1}^*$, ma questo implica che $\forall k \in \mathbb{Z} \quad ([a]^{o_1})^k = [1]$ in $\mathbb{Z}_{n_1}^*$, e allora necessariamente $a^o \equiv 1 \ (\bmod \ n_1)$ implica che $o$ sia un multiplo di $o_1$
+    - per ragionamento analogo, vale il seguente sistema $\left\{\begin{array}{c}o_1 \mid o \\ \vdots \\ o_k \mid o \end{array}\right. \implies m \mid o$
     - per definizione $\left\{\begin{array}{c}o_1 \mid m \\ \vdots \\ o_k \mid m \end{array}\right.$
-    - per ragionamento analogo all'osservazione precedente, si ottiene che $\left\{\begin{array}{c}a^m \equiv 1 \ (\bmod \ n_1) \\ \vdots \\ a^m \equiv  1 \ (\bmod \ n_k)\end{array}\right. \implies a^m \equiv 1 \ (\bmod \ N) \implies o \mid m$
+    - per ragionamento analogo all'osservazione precedente, $o_1 \mid m \land [a]^{o_1}=[1] \implies [a]^m = [1]$ in $\mathbb{Z}_{n_1}^*$, e dunque si ottiene che $\left\{\begin{array}{c}a^m \equiv 1 \ (\bmod \ n_1) \\ \vdots \\ a^m \equiv  1 \ (\bmod \ n_k)\end{array}\right. \implies a^m \equiv 1 \ (\bmod \ N) \implies o \mid m$ ⚠️ **perche?**
     - $m \mid o \land o \mid m \implies o = m$
 
 ****
@@ -181,9 +181,9 @@
       - $[a+1]^{p}=[a+1] \iff [a]^{p}+[1]^{p}=[a+1] \implies [a]^p + [1] = [a + 1] \iff [a]^p = [a + 1] -[1] = [a]$, che coincide con l'ipotesi induttiva
   - _seconda dimostrazione_
     - $p \in \mathbb{P} \implies \mathbb{Z}_p^* = \mathbb{Z} - \{[0]\}$ per dimostrazione precedente, e dunque $|\mathbb{Z}_p^*| = p - 1$
-    - $[a] \in \mathbb{Z}_p \mid [a] = [0] \implies [0^p]=[0]$, che è vero $\forall p \in \mathbb{P}$
+    - $[a] \in \mathbb{Z}_p \mid [a] = [0] \implies [0^p]=[0]$
     - $[a] \in \mathbb{Z}_p \mid [a] \neq [0] \implies [a] \in \mathbb{Z}_p^*$ per osservazione precedente
-      - per dimostrazione precedente, $[a]^{|\mathbb{Z}_p^*|}=[1] \iff [a]^{p - 1} = [1] \iff [a]^p \cdot [a]^{-1} = [1] \iff [a]^p = [a]$
+    - per dimostrazione precedente si ha che $g^{|G|} = e$, allora $[a]^{|\mathbb{Z}_p^*|}=[1] \iff [a]^{p - 1} = [1] \iff [a]^p \cdot [a]^{-1} = [1] \iff [a]^p = [a]eq$
    
 ## Cor
 
@@ -193,7 +193,7 @@
 - **Th**
   - $[a]^{-1}=\left[a\right]^{p-2}$
 - **Dim**
-  - $[a] \neq [0] \implies \exists[a]^{-1} \in \mathbb{Z}_p$, poiché, per dimostrazione precedente $\mathbb{Z}_p^* = \mathbb{Z_p} - \{0\}$
+  - $[a] \neq [0] \implies \exists[a]^{-1} \in \mathbb{Z}_p$, poiché, per dimostrazione precedente $\mathbb{Z}_p^* = \mathbb{Z_p} - \{[0]\}$
   -  per il teorema di Fermat $[a]^p = [a] \iff [a]^p \cdot [a]^{-1} = [a] \cdot [a]^{-1} \iff [a]^{p -1} = [1] \iff [a] \cdot [a]^{p -2} = [1]\iff [a]^{-1} = [a]^{p-2}$
 
 ## Cor

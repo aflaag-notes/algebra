@@ -503,10 +503,10 @@ class="math inline">\left| \mathbb{Z}_m \right|</span></li>
 </ul></li>
 <li><span class="math inline">\phi</span> suriettiva <span
 class="math inline">\implies</span> <span class="math inline">\exists x
-\mid x \ (\bmod m)</span> è soluzione del sistema
+\mid x \ (\bmod \ m)</span> è soluzione del sistema
 <ul>
 <li><span class="math inline">\varphi(x \ (\bmod \ m))=\left(b_{1}\
-\left( \bmod \  a_{1}\right), \ldots, b_{n} \ (\bmod
+\left( \bmod \ a_{1}\right), \ldots, b_{n} \ (\bmod \
 a_{n})\right)</span>, e poiché <span class="math inline">\phi</span> è
 suriettiva, allora ogni tupla di <span class="math inline">n</span>
 elementi dell’insieme di arrivo, che descrive un sistema come in
@@ -541,11 +541,12 @@ class="math inline">\mathbb{Z}_N^*</span></li>
 <li><span class="math inline">\forall h \in [1, k] \quad o_h :=
 o([a])</span> in <span
 class="math inline">\mathbb{Z}_{n_h}^*</span></li>
+<li><span class="math inline">m := \textrm{mcm}(o_1, \ldots,
+o_k)</span></li>
 </ul></li>
 <li><strong>Th</strong>
 <ul>
-<li><span class="math inline">o = \textrm{mcm}(o_1, \ldots,
-o_k)</span></li>
+<li><span class="math inline">o = m</span></li>
 </ul></li>
 <li><strong>Dim</strong>
 <ul>
@@ -559,25 +560,26 @@ poiché <span class="math inline">n_1, \ldots, n_k</span> coprimi a due a
 due in ipotesi</li>
 <li>per dimostrazione precedente, <span class="math inline">o_1</span> è
 il più piccolo esponente di <span class="math inline">[a]</span> per cui
-<span class="math inline">[a]^{o_1} = 1</span> in <span
+<span class="math inline">[a]^{o_1} = [1]</span> in <span
 class="math inline">\mathbb{Z}_{n_1}^*</span>, ma questo implica che
 <span class="math inline">\forall k \in \mathbb{Z} \quad ([a]^{o_1})^k =
-1</span> in <span class="math inline">\mathbb{Z}_{n_1}^*</span>, e
+[1]</span> in <span class="math inline">\mathbb{Z}_{n_1}^*</span>, e
 allora necessariamente <span class="math inline">a^o \equiv 1 \ (\bmod \
 n_1)</span> implica che <span class="math inline">o</span> sia un
 multiplo di <span class="math inline">o_1</span></li>
 <li>per ragionamento analogo, vale il seguente sistema <span
 class="math inline">\left\{\begin{array}{c}o_1 \mid o \\ \vdots \\ o_k
-\mid o \end{array}\right. \implies \textrm{mcm}(o_1, \ldots, o_k) \mid
-o</span></li>
-<li>sia <span class="math inline">m := \textrm{mcm}(o_1, \ldots,
-o_k)</span></li>
+\mid o \end{array}\right. \implies m \mid o</span></li>
 <li>per definizione <span class="math inline">\left\{\begin{array}{c}o_1
 \mid m \\ \vdots \\ o_k \mid m \end{array}\right.</span></li>
-<li>per ragionamento analogo all’osservazione precedente, si ottiene che
-<span class="math inline">\left\{\begin{array}{c}a^m \equiv 1 \ (\bmod \
-n_1) \\ \vdots \\ a^m \equiv 1 \ (\bmod \ n_k)\end{array}\right.
-\implies a^m \equiv 1 \ (\bmod \ N) \implies o \mid m</span></li>
+<li>per ragionamento analogo all’osservazione precedente, <span
+class="math inline">o_1 \mid m \land [a]^{o_1}=[1] \implies [a]^m =
+[1]</span> in <span class="math inline">\mathbb{Z}_{n_1}^*</span>, e
+dunque si ottiene che <span
+class="math inline">\left\{\begin{array}{c}a^m \equiv 1 \ (\bmod \ n_1)
+\\ \vdots \\ a^m \equiv 1 \ (\bmod \ n_k)\end{array}\right. \implies a^m
+\equiv 1 \ (\bmod \ N) \implies o \mid m</span> ⚠️
+<strong>perche?</strong></li>
 <li><span class="math inline">m \mid o \land o \mid m \implies o =
 m</span></li>
 </ul></li>
@@ -645,15 +647,13 @@ che coincide con l’ipotesi induttiva</li>
 \mathbb{Z} - \{[0]\}</span> per dimostrazione precedente, e dunque <span
 class="math inline">|\mathbb{Z}_p^*| = p - 1</span></li>
 <li><span class="math inline">[a] \in \mathbb{Z}_p \mid [a] = [0]
-\implies [0^p]=[0]</span>, che è vero <span class="math inline">\forall
-p \in \mathbb{P}</span></li>
+\implies [0^p]=[0]</span></li>
 <li><span class="math inline">[a] \in \mathbb{Z}_p \mid [a] \neq [0]
-\implies [a] \in \mathbb{Z}_p^*</span> per osservazione precedente
-<ul>
-<li>per dimostrazione precedente, <span
+\implies [a] \in \mathbb{Z}_p^*</span> per osservazione precedente</li>
+<li>per dimostrazione precedente si ha che <span
+class="math inline">g^{|G|} = e</span>, allora <span
 class="math inline">[a]^{|\mathbb{Z}_p^*|}=[1] \iff [a]^{p - 1} = [1]
-\iff [a]^p \cdot [a]^{-1} = [1] \iff [a]^p = [a]</span></li>
-</ul></li>
+\iff [a]^p \cdot [a]^{-1} = [1] \iff [a]^p = [a]eq</span></li>
 </ul></li>
 </ul></li>
 </ul>
@@ -672,7 +672,7 @@ class="math inline">[a]^{|\mathbb{Z}_p^*|}=[1] \iff [a]^{p - 1} = [1]
 <ul>
 <li><span class="math inline">[a] \neq [0] \implies \exists[a]^{-1} \in
 \mathbb{Z}_p</span>, poiché, per dimostrazione precedente <span
-class="math inline">\mathbb{Z}_p^* = \mathbb{Z_p} - \{0\}</span></li>
+class="math inline">\mathbb{Z}_p^* = \mathbb{Z_p} - \{[0]\}</span></li>
 <li>per il teorema di Fermat <span class="math inline">[a]^p = [a] \iff
 [a]^p \cdot [a]^{-1} = [a] \cdot [a]^{-1} \iff [a]^{p -1} = [1] \iff [a]
 \cdot [a]^{p -2} = [1]\iff [a]^{-1} = [a]^{p-2}</span></li>

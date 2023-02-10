@@ -89,24 +89,22 @@
         - $d = 0$
             - $I = \{0\} \implies I = I(0)$ poiché i multipli di $0$ sono tutti pari a $0$
             - se invece $I \neq \{0\} \implies I \cap \mathbb{Z}_{>0} \neq \varnothing$, dunque $I$ contiene almeno un numero non nullo, in particolare positivo
-            - è possibile considerare solo il caso dei positivi in quanto$\forall x \in I - \{0\} \quad x < 0 \iff (-x)>0$, e $(-x) \in I$ per definizione di $I$, dunque per valori negativi è sufficiente considerare il loro opposto, sicuramente contenuto in $I$
-        - dunque, ha senso considerare $d:=\min(I \cap \mathbb{Z}_{\gt 0})$
-        - $I(d)=I \implies I(d) \subset I \wedge I \subset I(d)$
+            - è possibile considerare solo il caso dei positivi in quanto $\forall x \in I - \{0\} \quad x < 0 \iff (-x)>0$, e $(-x) \in I$ per definizione di $I$, dunque per valori negativi è sufficiente considerare il loro opposto, sicuramente contenuto in $I$ poiché ideale
+        - dunque, ha senso considerare $d:=\min(I \cap \mathbb{Z}_{\gt 0})$, che esiste per principio del minimo numero
+        - $I(d)=I \implies I(d) \subseteq I \wedge I \subseteq I(d)$
           - $I(d) \subseteq I$
             - $\forall x \in I(d) \quad \exists y \in \mathbb{Z} \mid x = dy$ per definizione
-            - $\mathbb{Z}$ è anello commutativo
-            - $I \subset \mathbb{Z}$ ideale, e dunque $I \cdot \mathbb{Z} \subset I$ 
-            - $d := \min(I \cap \mathbb{Z}_{\gt 0}) \implies d \in I \implies y \in \mathbb{Z} \land d \in I \implies dy \in I \implies x \in I \implies I(d) \subset I$
+            - $I \subset \mathbb{Z}$ ideale $\implies I \cdot \mathbb{Z} \subset I$ 
+            - $d := \min(I \cap \mathbb{Z}_{\gt 0}) \implies d \in I \implies y \in \mathbb{Z} \land d \in I \implies dy \in I \implies x \in I \implies I(d) \subseteq I$
           - $I \subseteq I(d)$
             - $d := \min(I \cap \mathbb{Z}_{\gt 0}) \implies d \neq 0$
             - per il teorema della divisione euclidea con il resto $\forall x \in I \quad \exists ! q,r \in \mathbb{Z} \mid x=d q+r \quad 0 \leq r<d$
-              - $r = 0 \iff x = dq \implies x \in I(d)$ per definizione, dunque $I \subset I(d)$
+              - $r = 0 \iff x = dq \implies x \in I(d)$ per definizione, dunque $I \subseteq I(d)$
               - ipotizzando $r \neq 0$
                 - $dq \in I(d) \implies dq \in I$ per dimostrazione precedente
                 - quindi $x = dq + r \implies r = x - dq \in I$ poiché $I$ è un ideale
                 - $r \neq 0 \implies r \in I \cap \mathbb{Z}_{\gt 0}$
                 - per definizione, $0 \le r \lt d$, ma $d:=\min(I \cap \mathbb{Z}_{\gt 0})$, quindi il minimo numero che $d$ può assumere è $1$, e poiché $r < d \implies r = 0$ necessariamente, dunque segue la dimostrazione precedente
-
     - _unicità_
         - l'unicità deriva dal fatto che $d:=\min(I \cap \mathbb{Z}_{\gt 0})$, e dunque nella dimostrazione $d > 0$, ma vale il ragionamento analogo per $d < 0$ considerando $I(-d)$, in quanto $I(d) = I(-d)$ per dimostrazione precedente
     - dunque, ogni ideale in $\mathbb{Z}$ è generato dall'insieme dei multipli di un certo $d \ge 0$, che esiste sempre ed è unico, e di conseguenza $\mathbb{Z}$ è un anello ad ideali principali
@@ -275,7 +273,7 @@
     - analogamente $j_1, \ldots, j_k = by_1, \ldots, by_k$ con $y_1, \ldots, y_k \in \mathbb{Z}$
     - segue che $x = (ax_1)(by_1),+\ldots+ (ax_k)(by_k) = ab\cdot(x_1y_1+ \ldots+ x_ky_k)$
     - poiché $(x_1y_1+ \ldots+ x_ky_k) \in \mathbb{Z}$, segue che $ab \mid x \implies x \in I(a \cdot b)$
-  - $I(a \cdot b) = I(a \cdot b)$
+  - $I(a \cdot b) = I(a) \cdot I(b)$
     - $x \in I(a \cdot b) \implies \exists k \in \mathbb{Z} \mid x = ab \cdot k$
     - $x = abk$, ma $a \in I(a) \land bk \in I(b) \implies x \in I(a) \cdot I(b)$
 

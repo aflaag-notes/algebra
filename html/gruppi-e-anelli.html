@@ -801,12 +801,12 @@ infinite o finite, ma quest’ultimo caso si verifica esclusivamente
 quando le potenze ciclano su loro stesse</li>
 </ul></li>
 <li><span class="math inline">o(g):= |H(g)|</span> è detto
-<strong>ordine di <span class="math inline">g \in G</span></strong>
+<strong>ordine di <span class="math inline">g</span></strong>
 <ul>
 <li>tale valore può dunque essere infinito o finito, e in quest’ultimo
 caso l’ordine costituisce il valore più piccolo, non nullo, per cui
 <span class="math inline">g^{o(g)} = e</span>, poiché per valori
-maggiori le potenze ricicleranno infinitamente</li>
+maggiori le potenze cicleranno infinitamente</li>
 </ul></li>
 </ul>
 </blockquote>
@@ -853,7 +853,7 @@ definizione di <span class="math inline">H(g)</span></li>
 <li><span class="math inline">\forall m, n \in \mathbb{Z} \quad m + n
 \in \mathbb{Z} \implies g^m \cdot g^n = g^{m + n} \in H(g)</span> per
 definizione di <span class="math inline">H(g)</span>, quindi <span
-class="math inline">H(g) \cdot Hg(g) \subset H(g)</span></li>
+class="math inline">H(g) \cdot Hg(g) \subseteq H(g)</span></li>
 <li><span class="math inline">\forall n \in \mathbb{Z} \quad -n \in
 \mathbb{Z} \implies (g^n)^{-1} = g^{-n} \in H(g)</span> per definizione
 di <span class="math inline">H(g)</span></li>
@@ -900,53 +900,55 @@ I(g)</span></li>
 <ul>
 <li><span class="math inline">G</span> gruppo</li>
 <li><span class="math inline">g \in G</span></li>
-<li><span class="math inline">\exists! d \geq 0 \mid
-I(g)=I(d)</span></li>
 </ul></li>
 <li><strong>Th</strong>
 <ul>
+<li><span class="math inline">\exists! d \in \mathbb{N} \mid
+I(g)=I(d)</span></li>
 <li><span class="math inline">d = 0 \implies o(g) := |H(g)| =
 |\mathbb{Z}|</span>, dunque infinito</li>
-<li><span class="math inline">d&gt;0 \implies d = o(g)</span></li>
+<li><span class="math inline">d&gt;0 \implies d = o(g)</span>, e questo
+implica che in <span class="math inline">I(g)</span> sono presenti tutti
+i multipli di <span class="math inline">o(g)</span></li>
 </ul></li>
 <li><strong>Dim</strong>
 <ul>
 <li><span class="math inline">d = 0</span>
 <ul>
-<li>la funzione <span class="math inline">f: \mathbb{Z} \rightarrow H(g)
-: n \rightarrow g^n</span> è biiettiva
-<ul>
+<li>si consideri <span class="math inline">f: \mathbb{Z} \rightarrow
+H(g) : n \rightarrow g^n</span> è biiettiva</li>
 <li><span class="math inline">f</span> iniettiva <span
 class="math inline">\iff \forall m, n \in \mathbb{Z} \quad g^n =g^m
-\implies n = m</span>
-<ul>
+\implies n = m</span></li>
 <li><span class="math inline">m, n \in \mathbb{Z} \mid g^m = g^n
 \implies g^{-m} \cdot g^m=g^{-m} \cdot g^n \iff e = g^{n - m} \implies n
 - m \in I(g) = I(d) \implies d \mid n - m</span></li>
 <li><span class="math inline">d = 0 \implies 0 \mid n - m \iff n -m = 0
 \iff n = m</span>, di conseguenza <span class="math inline">g^m = g^n
 \implies n = m</span></li>
-</ul></li>
 <li>la suriettività di <span class="math inline">f</span> è data al
 fatto che l’immagine di <span class="math inline">f</span> coincide con
-<span class="math inline">H(g)</span> per definizione di <span
-class="math inline">H(g)</span></li>
-</ul></li>
-<li><span class="math inline">f</span> è biiettiva <span
+<span class="math inline">H(g)</span></li>
+<li><span class="math inline">f</span> biiettiva <span
 class="math inline">\implies |\mathbb{Z} | = |H(g)| = o(g)</span>,
 dunque infinito</li>
 </ul></li>
 <li><span class="math inline">d \gt 0</span>
 <ul>
+<li><span class="math inline">|H(g)| \le d</span>, ovvero <span
+class="math inline">g</span> ha <em>al massimo <span
+class="math inline">d</span></em> potenze
+<ul>
 <li><span class="math inline">I(g) = I(d) \land d \in I(d) \implies d
 \in I(g) \implies g^d = e</span></li>
 <li><span class="math inline">d \gt 0 \implies \forall n \in \mathbb{Z}
-\quad \exists q, r \mid n = dq + r \quad 0 \le r \lt d</span> per il
-teorema della divisione euclidea con il resto, dunque <span
-class="math inline">g^n = g^{dq +r}=(g^d)^q \cdot g^r=e^q \cdot g^r =e
-\cdot g^r = g^r</span></li>
-<li><span class="math inline">g^n = g^r \iff n = r</span>, e inoltre
-<span class="math inline">0 \le r \lt d \implies 0 \le n \lt
+\quad \exists q, r \in \mathbb{Z} \mid n = dq + r \quad 0 \le r \lt
+d</span> per il teorema della divisione euclidea con il resto, dunque
+<span class="math inline">g^n = g^{dq +r}=(g^d)^q \cdot g^r=e^q \cdot
+g^r =e \cdot g^r = g^r</span></li>
+<li><span class="math inline">g^n = g^r \iff n = r</span> poiché <span
+class="math inline">f</span> biiettiva per dimostrazione precedente, e
+inoltre <span class="math inline">0 \le r \lt d \implies 0 \le n \lt
 d</span></li>
 <li>poiché è stato scelto <span class="math inline">n \in
 \mathbb{Z}</span> senza restrizioni, allora il fatto che <span
@@ -956,14 +958,18 @@ valore intero compreso tra <span class="math inline">0</span> e <span
 class="math inline">d - 1</span>, dunque il numero di potenze di <span
 class="math inline">g</span> è al massimo <span
 class="math inline">d</span></li>
+</ul></li>
+<li><span class="math inline">|H(g)| \ge d</span>, ovvero <span
+class="math inline">g</span> ha <em>al minimo</em> <span
+class="math inline">d</span> potenze
+<ul>
 <li><span class="math inline">\forall x, y \in \mathbb{Z} \mid 0 \le x,
 y \lt d \quad g^x = g^y \iff g^x \cdot g^{-y} = e \iff g^{x - y} =
 e</span>, ma per osservazione precedente <span
 class="math inline">\forall k \in \mathbb{Z} \quad e = (g^d)^k =
 g^{dk}</span></li>
-<li><span class="math inline">0 \le x, y \lt d \implies -d \lt x, y \lt
-d \implies -d \lt x - y \lt d</span> poiché la differenza non può uscire
-mai dall’intervallo</li>
+<li><span class="math inline">0 \le x, y \lt d \implies -d \lt x - y \lt
+d</span></li>
 <li>allora, segue che <span class="math inline">g^{x-y} = g^{dk} \iff x
 - y = dk \iff d \mid x- y</span>, ma poiché <span class="math inline">-d
 \lt x - y \lt d</span>, allora necessariamente <span
@@ -972,8 +978,11 @@ class="math inline">g^x</span> e <span class="math inline">g^y</span>
 sono la stessa potenza, e dunque le potenze di <span
 class="math inline">g</span> non sono meno di <span
 class="math inline">d</span></li>
+</ul></li>
 <li>di conseguenza, si ottiene che <span class="math inline">H(g) =
 \{g^0, g^1, \ldots, g^{d-1}\} \implies |H(g)|=d</span></li>
+<li>⚠️ <strong>il secondo lato non mi è chiaro perche dovrebbe
+funzionare</strong></li>
 </ul></li>
 </ul></li>
 </ul>
@@ -990,9 +999,9 @@ class="math inline">d</span></li>
 </ul></li>
 <li><strong>Dim</strong>
 <ul>
-<li>per dimostrazione precedente <span class="math inline">I(d) =
-I(g)</span>, allora <span class="math inline">d \in I(d) \implies d \in
-I(g) \implies g^d = e</span></li>
+<li><span class="math inline">I(d) = I(g)</span>, allora <span
+class="math inline">d \in I(d) \implies d \in I(g) \implies g^d =
+e</span></li>
 <li><span class="math inline">d = o(g) = |H(g)| \bigg\vert |G|</span>
 per il teorema di Lagrange, e dunque <span class="math inline">\exists k
 \in \mathbb{Z} : |G|=d \cdot k \implies g^{|G|} = g^{d \cdot k} =
@@ -1041,10 +1050,11 @@ o(g)</span></li>
 <li><strong>Dim</strong>
 <ul>
 <li><span class="math inline">\forall (g^k)^n \in H(g^k) \quad (g^k)^n =
-g^{nk} \implies g^{nk} \in H(g) \implies H(g^k) \subset H(g)</span></li>
+g^{nk} \implies g^{nk} \in H(g) \implies H(g^k) \subseteq
+H(g)</span></li>
 <li>per dimostrazione precedente <span class="math inline">H(g^k)
-\subset H(g) \subset G</span> sottogruppi, allora in particolare, per il
-teorema di Lagrange <span class="math inline">o(g^k) = | H(g^k)|
+\subseteq H(g) \subset G</span> sottogruppi, allora in particolare, per
+il teorema di Lagrange <span class="math inline">o(g^k) = | H(g^k)|
 \bigg\vert |H(g)| = o(g)</span></li>
 </ul></li>
 </ul>

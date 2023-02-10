@@ -398,30 +398,28 @@ class="math inline">0</span></li>
 \mathbb{Z}_{&gt;0} \neq \varnothing</span>, dunque <span
 class="math inline">I</span> contiene almeno un numero non nullo, in
 particolare positivo</li>
-<li>è possibile considerare solo il caso dei positivi in quanto<span
+<li>è possibile considerare solo il caso dei positivi in quanto <span
 class="math inline">\forall x \in I - \{0\} \quad x &lt; 0 \iff
 (-x)&gt;0</span>, e <span class="math inline">(-x) \in I</span> per
 definizione di <span class="math inline">I</span>, dunque per valori
 negativi è sufficiente considerare il loro opposto, sicuramente
-contenuto in <span class="math inline">I</span></li>
+contenuto in <span class="math inline">I</span> poiché ideale</li>
 </ul></li>
 <li>dunque, ha senso considerare <span class="math inline">d:=\min(I
-\cap \mathbb{Z}_{\gt 0})</span></li>
-<li><span class="math inline">I(d)=I \implies I(d) \subset I \wedge I
-\subset I(d)</span>
+\cap \mathbb{Z}_{\gt 0})</span>, che esiste per principio del minimo
+numero</li>
+<li><span class="math inline">I(d)=I \implies I(d) \subseteq I \wedge I
+\subseteq I(d)</span>
 <ul>
 <li><span class="math inline">I(d) \subseteq I</span>
 <ul>
 <li><span class="math inline">\forall x \in I(d) \quad \exists y \in
 \mathbb{Z} \mid x = dy</span> per definizione</li>
-<li><span class="math inline">\mathbb{Z}</span> è anello
-commutativo</li>
-<li><span class="math inline">I \subset \mathbb{Z}</span> ideale, e
-dunque <span class="math inline">I \cdot \mathbb{Z} \subset
-I</span></li>
+<li><span class="math inline">I \subset \mathbb{Z}</span> ideale <span
+class="math inline">\implies I \cdot \mathbb{Z} \subset I</span></li>
 <li><span class="math inline">d := \min(I \cap \mathbb{Z}_{\gt 0})
 \implies d \in I \implies y \in \mathbb{Z} \land d \in I \implies dy \in
-I \implies x \in I \implies I(d) \subset I</span></li>
+I \implies x \in I \implies I(d) \subseteq I</span></li>
 </ul></li>
 <li><span class="math inline">I \subseteq I(d)</span>
 <ul>
@@ -432,8 +430,8 @@ class="math inline">\forall x \in I \quad \exists ! q,r \in \mathbb{Z}
 \mid x=d q+r \quad 0 \leq r&lt;d</span>
 <ul>
 <li><span class="math inline">r = 0 \iff x = dq \implies x \in
-I(d)</span> per definizione, dunque <span class="math inline">I \subset
-I(d)</span></li>
+I(d)</span> per definizione, dunque <span class="math inline">I
+\subseteq I(d)</span></li>
 <li>ipotizzando <span class="math inline">r \neq 0</span>
 <ul>
 <li><span class="math inline">dq \in I(d) \implies dq \in I</span> per
@@ -844,7 +842,7 @@ class="math inline">i_1, \ldots, i_k = ax_1, \ldots, ax_k</span> con
 \mathbb{Z}</span>, segue che <span class="math inline">ab \mid x
 \implies x \in I(a \cdot b)</span></li>
 </ul></li>
-<li><span class="math inline">I(a \cdot b) = I(a \cdot b)</span>
+<li><span class="math inline">I(a \cdot b) = I(a) \cdot I(b)</span>
 <ul>
 <li><span class="math inline">x \in I(a \cdot b) \implies \exists k \in
 \mathbb{Z} \mid x = ab \cdot k</span></li>

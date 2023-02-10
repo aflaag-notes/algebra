@@ -112,7 +112,7 @@
     - $n \in \mathbb{N} - \{0\}$
     - $A \in \textrm{Mat}_{n \times n}(\mathbb{K})$
 - **Th**
-    - $\displaystyle{\det(A) = \sum_{\sigma \in S_n} \textrm{sgn}(\sigma) \cdot \prod_{i=1}^n{a_{i, \sigma_i}}}$
+    - $\displaystyle{\det(A) = \sum_{\sigma \in \mathcal{S}_n} \textrm{sgn}(\sigma) \cdot \prod_{i=1}^n{a_{i, \sigma_i}}}$
 
 ## Oss
 

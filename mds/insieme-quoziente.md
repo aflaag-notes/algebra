@@ -101,7 +101,6 @@
 - **Dim**
     - **⚠️  MANCA QUALSIASI TEOREMA**
 
-
 ****
 
 # Funzione totiente di Eulero

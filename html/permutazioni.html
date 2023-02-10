@@ -192,42 +192,62 @@
 <blockquote>
 <ul>
 <li><span class="math inline">X</span> insieme</li>
-<li><span class="math inline">S_X := \{f \mid f:X \rightarrow X</span>
-biiettiva <span class="math inline">\}</span> è l’<strong>insieme delle
-permutazioni di <span class="math inline">X</span></strong></li>
-<li><span class="math inline">X = \{1, \ldots, n\} \implies S_n</span> è
-detto <strong>gruppo simmetrico di <span
-class="math inline">n</span></strong></li>
+<li><span class="math inline">\mathcal{S}_X := \{f \mid f:X \rightarrow
+X</span> biiettiva<span class="math inline">\}</span> è
+l’<strong>insieme delle permutazioni di <span
+class="math inline">X</span></strong>
+<ul>
+<li>in particolare, una <em>permutazione</em> è una biezione <span
+class="math inline">X \rightarrow X</span></li>
+<li>inoltre, si ha che <span class="math inline">|\mathcal{S}_X| =
+|X|!</span></li>
+</ul></li>
 </ul>
 </blockquote>
 <a href="#oss"><h2 id="oss">Oss</h2></a>
 <ul>
 <li><strong>Hp</strong>
 <ul>
-<li><span class="math inline">S_X := \{f \mid f : X \rightarrow Y</span>
-biiettiva <span class="math inline">\}</span></li>
+<li><span class="math inline">f</span> funzione</li>
 </ul></li>
 <li><strong>Th</strong>
 <ul>
-<li><span class="math inline">(S_X, \circ)</span> è un gruppo, non
-abeliano se <span class="math inline">|X| \ge 3</span></li>
+<li><span class="math inline">f</span> biiettiva <span
+class="math inline">\iff f</span> invertibile</li>
+</ul></li>
+</ul>
+<a href="#oss-1"><h2 id="oss-1">Oss</h2></a>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\mathcal{S}_X := \{f \mid f : X
+\rightarrow X</span> biiettiva<span class="math inline">\}</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">(\mathcal{S}_X, \circ)</span> è un gruppo,
+non abeliano se <span class="math inline">|X| \ge 3</span></li>
 </ul></li>
 <li><strong>Dim</strong>
 <ul>
 <li>la composizione di funzioni è associativa</li>
 <li><span class="math inline">\textrm{id}</span> è biiettiva <span
-class="math inline">\implies \textrm{id} \in S_X</span> per definizione,
-e costituisce l’elemento neutro</li>
-<li><span class="math inline">\forall f:X \rightarrow Y \in S_X \quad
-\exists f^{-1}: Y \rightarrow X</span>, poiché <span
-class="math inline">f \in S_X \implies f</span> biiettiva, e ogni
-funzione biiettiva è invertibile</li>
+class="math inline">\implies \textrm{id} \in \mathcal{S}_X</span> per
+definizione, e costituisce l’elemento neutro</li>
+<li><span class="math inline">\forall f \in \mathcal{S}_X \quad \exists
+f^{-1} \in \mathcal{S}_X</span> poiché <span class="math inline">f \in
+\mathcal{S}_X \implies f</span> biiettiva, e dunque invertibile per
+dimostrazione precedente</li>
+<li><span class="math inline">\forall f \in \mathcal{S}_X \quad f</span>
+biiettiva <span class="math inline">\iff f</span> invertibile <span
+class="math inline">\iff \exists f^{-1} \in \mathcal{S}_X</span>, poiché
+<span class="math inline">f^{-1}</span> anch’essa biiettiva</li>
 <li><span class="math inline">|X| = 2 \implies X</span> è della forma
 <span class="math inline">X = \{a, b\}</span>, quindi <span
-class="math inline">S_X =\left\{\begin{array}{l}a \rightarrow a \\ b
-\rightarrow b\end{array}\right. \ ,\ \left.\begin{array}{l}a \rightarrow
-b \\ b \rightarrow a\end{array}\right\}</span>, dove uno dei due
-elementi è <span class="math inline">\rm id</span>
+class="math inline">\mathcal{S}_X =\left\{\begin{array}{l}a \rightarrow
+a \\ b \rightarrow b\end{array}\right. \ ,\ \left.\begin{array}{l}a
+\rightarrow b \\ b \rightarrow a\end{array}\right\}</span>, dove uno dei
+due elementi è <span class="math inline">\rm id</span>
 <ul>
 <li><span class="math inline">\rm id \circ id = id</span></li>
 <li><span class="math inline">\rm \sigma \circ id = id \circ \sigma =
@@ -235,34 +255,63 @@ elementi è <span class="math inline">\rm id</span>
 <li><span class="math inline">\rm \sigma \circ \sigma = id</span> per
 costruzione</li>
 </ul></li>
-<li>quindi <span class="math inline">|X| = 2 \implies S_X</span> è
-abeliano, mentre <span class="math inline">|X| = 1 \implies S_X</span> è
-abeliano perché contiene un solo elemento</li>
+<li>quindi <span class="math inline">|X| = 2 \implies
+\mathcal{S}_X</span> è abeliano, mentre <span class="math inline">|X| =
+1 \implies \mathcal{S}_X</span> è abeliano perché contiene un solo
+elemento</li>
+<li>se <span class="math inline">|X| \ge 3</span>, allora non è abeliano
+poiché <span class="math inline">\circ</span> non è commutativo</li>
 </ul></li>
 </ul>
 <a href="#def-1"><h2 id="def-1">Def</h2></a>
+<ul>
+<li><strong>Gruppo simmetrico</strong></li>
+</ul>
+<blockquote>
+<ul>
+<li><span class="math inline">n \in \mathbb{N} - \{0\}</span></li>
+<li><span class="math inline">X = \{1, \ldots, n\}</span></li>
+<li><span class="math inline">\mathcal{S}_n := \{f \mid f: X \rightarrow
+X</span> biiettiva<span class="math inline">\}</span> è detto
+<strong>gruppo simmetrico di <span class="math inline">n</span></strong>
+<ul>
+<li>inoltre, si ha che <span class="math inline">|\mathcal{S}_n| =
+n!</span></li>
+</ul></li>
+</ul>
+</blockquote>
+<a href="#def-2"><h2 id="def-2">Def</h2></a>
 <ul>
 <li><strong>Ciclo di una permutazione</strong></li>
 </ul>
 <blockquote>
 <ul>
 <li><span class="math inline">n \in \mathbb{N}</span></li>
-<li><span class="math inline">\sigma \in S_n</span></li>
+<li><span class="math inline">\sigma \in \mathcal{S}_n</span></li>
 <li><span class="math inline">\exists 1 \leq i_1, \ldots, i_d \leq n \in
 \mathbb{N} \mid \left\{\begin{array}{c} \sigma\left(i_{1}\right)=i_{2}
 \\ \sigma\left(i_{2}\right)=i_{3} \\ \vdots \\
 \sigma\left(i_{d-1}\right)=i_{d} \\ \sigma\left(i_{d}\right)=i_{1}
 \end{array}\right. \implies i_1, \ldots, i_n</span> costituiscono un
-<strong>ciclo di <span class="math inline">\sigma</span></strong></li>
+<strong>ciclo di <span class="math inline">\sigma</span></strong>
+<ul>
+<li>in tal caso, <span class="math inline">d</span> è detta
+<strong>lunghezza del ciclo</strong> <span class="math inline">i_1,
+\ldots, i_d</span></li>
+<li>in generale, è possibile scomporre <span class="math inline">\sigma
+= \gamma_1, \ldots, \gamma_k</span>, dove ogni <span
+class="math inline">\gamma_i</span> è un ciclo di <span
+class="math inline">\sigma</span></li>
+</ul></li>
 </ul>
 </blockquote>
-<a href="#oss-1"><h2 id="oss-1">Oss</h2></a>
+<a href="#oss-2"><h2 id="oss-2">Oss</h2></a>
 <ul>
 <li><strong>Hp</strong>
 <ul>
 <li><span class="math inline">n \in \mathbb{N}</span></li>
-<li><span class="math inline">\sigma \in S_n</span></li>
-<li><span class="math inline">1 \le i \lt n \in \mathbb{N}</span></li>
+<li><span class="math inline">\sigma \in \mathcal{S}_n</span></li>
+<li><span class="math inline">1 \le i \le n \in \mathbb{N}</span></li>
 <li><span class="math inline">I(\sigma, i):=\left\{n \in \mathbb{Z} \mid
 \sigma^{n}(i)=i\right\}</span></li>
 </ul></li>
@@ -288,15 +337,12 @@ class="math inline">\sigma^{m+n}(i)=\sigma^{m}\left(\sigma^{n}(i)\right)
 class="math inline">\sigma^ {-n} (i) = i \implies -n \in I(\sigma,
 i)</span></li>
 </ul></li>
-<li><span class="math inline">\forall \tau \in S_n \mid \tau (i) = i
-\implies \forall k \in \mathbb{Z} \quad \tau ^k (i) = i</span>, ma
-allora <span class="math inline">\forall n \in I(\sigma, i) \quad
-\sigma^n(i) = i</span> si può riscrivere come <span
-class="math inline">(\sigma^n)^k(i) = i \quad \forall k \in \mathbb{Z}
+<li><span class="math inline">\forall n \in I(\sigma, i) \quad
+\sigma^n(i) = i \iff \forall k \in \mathbb{Z} \quad (\sigma^n)^k(i) = i
 \implies \sigma^{nk}(i) = i \implies nk \in I(\sigma, i)</span></li>
 </ul></li>
 </ul>
-<a href="#oss-2"><h2 id="oss-2">Oss</h2></a>
+<a href="#oss-3"><h2 id="oss-3">Oss</h2></a>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -320,10 +366,10 @@ I(\sigma, i)</span></li>
 <li><strong>Hp</strong>
 <ul>
 <li><span class="math inline">n \in \mathbb{N}</span></li>
-<li><span class="math inline">\sigma \in S_n \mid \sigma = \gamma_1
-\ldots \gamma_k</span> sia la sua decomposizione in cicli</li>
-<li><span class="math inline">d_j:=</span> lunghezza di <span
-class="math inline">\gamma_j \quad \forall j \in [1, k]</span></li>
+<li><span class="math inline">\sigma \in \mathcal{S}_n \mid \sigma =
+\gamma_1 \ldots \gamma_k</span> sia la sua decomposizione in cicli</li>
+<li><span class="math inline">\forall j \in [1, k] \quad d_j:=</span>
+lunghezza di <span class="math inline">\gamma_j</span></li>
 <li><span class="math inline">m := \textrm{mcm}(d_1, \ldots,
 d_k)</span></li>
 <li><span class="math inline">I(\sigma):=\left\{n \in \mathbb{Z} \mid
@@ -339,23 +385,19 @@ d_k)</span></li>
 \sigma^{n}=\textrm{id} \iff \forall 1 \leq i \leq n \quad
 \sigma^{n}(i)=i \iff \forall 1 \leq i \leq n \quad n \in I(\sigma, i)
 \iff n \in I(\sigma, 1) \cap \ldots \cap I(\sigma, n)</span></li>
-<li>di conseguenza <span class="math inline">n \in I(\sigma) \iff n \in
-I(\sigma, 1) \cap \ldots \cap I(\sigma, n)</span> e dunque <span
-class="math inline">I(\sigma) =I(\sigma, 1) \cap \ldots \cap I(\sigma,
-n)</span></li>
 <li>inoltre, per dimostrazione precedente <span
 class="math inline">I(\sigma) = I(\sigma, 1) \cap \ldots \cap I(\sigma,
 n) = I(d_1) \cap \ldots \cap I(d_k)</span></li>
-<li>per dimostrazione precedente <span class="math inline">I(d_1) \cap
-\ldots \cap I(d_k) = I(m) = I(\sigma)</span></li>
-<li>dato <span class="math inline">d := o(\sigma)</span>, per
-dimostrazione precedente <span class="math inline">I(m) = I(\sigma) =
-I(d) \implies m = d</span></li>
+<li><span class="math inline">m:= \textrm{mcm}(d_1, \ldots, d_k)
+\implies I(d_1) \cap \ldots \cap I(d_k) = I(m)</span></li>
+<li>allora <span class="math inline">I(\sigma) = I(m)</span></li>
+<li>⚠️ <strong>manca un pezzo dato dalla dimostrazione
+prima</strong></li>
 </ul></li>
 </ul>
 <hr />
 <a href="#trasposizioni"><h1 id="trasposizioni">Trasposizioni</h1></a>
-<a href="#def-2"><h2 id="def-2">Def</h2></a>
+<a href="#def-3"><h2 id="def-3">Def</h2></a>
 <ul>
 <li><strong>Trasposizione</strong></li>
 </ul>
@@ -365,14 +407,14 @@ I(d) \implies m = d</span></li>
 <li><span class="math inline">i, j \in \mathbb{N} \mid 1 \leq i \lt j
 \leq n \quad</span></li>
 <li><span class="math inline">k \in [1, n]</span></li>
-<li><span class="math inline">\tau_{i, j} \in S_n \mid \tau_{i, j}
-=</span><span class="math inline">\left\{\begin{array}{ll}j &amp; k=i \\
-i &amp; k=j \\ k &amp; k \neq i, j\end{array}\right.</span> è detta
-<strong>trasposizione</strong>, ovvero una permutazione che inverte
-esclusivamente due elementi tra loro
+<li><span class="math inline">\tau_{i, j} \in \mathcal{S}_n \mid
+\tau_{i, j} =</span><span class="math inline">\left\{\begin{array}{ll}j
+&amp; k=i \\ i &amp; k=j \\ k &amp; k \neq i, j\end{array}\right.</span>
+è detta <strong>trasposizione</strong>, ovvero una permutazione che
+inverte esclusivamente due elementi tra loro
 <ul>
-<li><span class="math inline">\tau_{i, j}^2 = \textrm{id} \iff \tau_{i,
-j} = \tau_{i, j} ^{-1}</span></li>
+<li>in particolare, si ha che <span class="math inline">\tau_{i, j}^2 =
+\textrm{id} \iff \tau_{i, j} = \tau_{i, j} ^{-1}</span></li>
 </ul></li>
 </ul>
 </blockquote>
@@ -382,23 +424,27 @@ j} = \tau_{i, j} ^{-1}</span></li>
 <blockquote>
 <ul>
 <li><span class="math inline">n \in \mathbb{N}</span></li>
-<li><span class="math inline">i, j \in \mathbb{N} \mid 1 \le i \lt j \le
-n \land j = i + 1</span></li>
-<li><span class="math inline">\tau_{i, j}=\tau_{i, i+1}</span> è detta
-<strong>trasposizione adiacente</strong>, poiché inverte esclusivamente
-due elementi, adiacenti, tra loro</li>
+<li><span class="math inline">i, j \in \mathbb{N} \mid 1 \le i \le
+n</span></li>
+<li><span class="math inline">\tau_{i, i+1}</span> è detta
+<strong>trasposizione adiacente</strong>
+<ul>
+<li>in particolare, inverte esclusivamente due elementi <span
+class="math inline">i</span> e <span class="math inline">i + 1</span>
+adiacenti</li>
+</ul></li>
 </ul>
 </blockquote>
-<a href="#oss-3"><h2 id="oss-3">Oss</h2></a>
+<a href="#oss-4"><h2 id="oss-4">Oss</h2></a>
 <ul>
 <li><strong>Hp</strong>
 <ul>
 <li><span class="math inline">n \in \mathbb{N}</span></li>
-<li><span class="math inline">\sigma \in S_n</span></li>
+<li><span class="math inline">\sigma \in \mathcal{S}_n</span></li>
 </ul></li>
 <li><strong>Th</strong>
 <ul>
-<li><span class="math inline">\exists 1 \leq i_1, \ldots, i_k \lt n \mid
+<li><span class="math inline">\exists 1 \leq i_1, \ldots, i_k \le n \mid
 \sigma = \tau_{i_1, i_1 + 1} \ldots \tau_{i_k, i_k + 1}</span>, quindi
 ogni permutazione può essere riscritta come composizione di
 trasposizioni adiacenti</li>
@@ -408,7 +454,7 @@ trasposizioni adiacenti</li>
 <li><span class="math inline">\tau_{i, j}=\left(\begin{array}{ccccccc}1
 &amp; \cdots &amp; i &amp; \cdots &amp; j &amp; \cdots &amp; n \\ 1
 &amp; \cdots &amp; j &amp; \cdots &amp; i &amp; \cdots &amp;
-n\end{array}\right)</span> è una trasposizione qualsiasi</li>
+n\end{array}\right)</span> è una trasposizione</li>
 <li><span class="math inline">\sigma=\left(\begin{array}{ccccccc}1 &amp;
 \cdots &amp; i &amp; \cdots &amp; j &amp; \cdots &amp; n \\ \sigma(1)
 &amp; \cdots &amp; \sigma(i) &amp; \cdots &amp; \sigma(j) &amp; \cdots
@@ -443,51 +489,55 @@ class="math inline">\sigma \tau_{34} \tau_{23} \tau_{12}
 </ul>
 <hr />
 <a href="#segno"><h1 id="segno">Segno</h1></a>
-<a href="#def-3"><h2 id="def-3">Def</h2></a>
+<a href="#def-4"><h2 id="def-4">Def</h2></a>
 <ul>
 <li><strong>Segno di una permutazione</strong></li>
 </ul>
 <blockquote>
 <ul>
 <li><span class="math inline">n \in \mathbb{N}</span></li>
-<li><span class="math inline">\sigma \in S_n</span></li>
+<li><span class="math inline">\sigma \in \mathcal{S}_n</span></li>
 <li><span class="math inline">\textrm{Inv}(\sigma) := \{ (i, j) \mid 1
-\leq i \lt j \lt n : \sigma(i) \gt \sigma(j)\}</span> è
-l’<strong>insieme delle inversioni di <span
+\leq i \lt j \le n : \sigma(i) \gt \sigma(j)\}</span> è detto
+<strong>insieme delle inversioni di <span
 class="math inline">\sigma</span></strong></li>
 <li><span class="math inline">\textrm{sgn}(\sigma) :=
 (-1)^{|\textrm{Inv}(\sigma)|} =</span><span
 class="math inline">\left\{\begin{array}{ll}+1 &amp;
 |\operatorname{Inv}(\sigma)| \equiv 0 \ (\bmod \ 2) \\ -1 &amp;
-|\operatorname{Inv}(\sigma)| \equiv 1 \ (\bmod \ 2)\end{array}\right.
-\implies \sigma</span> <strong>pari</strong> <span
-class="math inline">\iff \textrm{sgn}(\sigma) = +1</span>
+|\operatorname{Inv}(\sigma)| \equiv 1 \ (\bmod \
+2)\end{array}\right.</span>
 <ul>
-<li><span class="math inline">\textrm{sgn}(\textrm{id}) = (-1)^0 =
-1</span>, in quando la funzione identità non ha inversioni</li>
+<li>in particolare <span class="math inline">\sigma</span> <em>pari</em>
+<span class="math inline">\iff \textrm{sgn}(\sigma) = +1</span>, e
+vivecersa</li>
 </ul></li>
 </ul>
 </blockquote>
-<a href="#oss-4"><h2 id="oss-4">Oss</h2></a>
+<a href="#oss-5"><h2 id="oss-5">Oss</h2></a>
 <ul>
 <li><strong>Hp</strong>
 <ul>
 <li><span class="math inline">n \in \mathbb{N}</span></li>
-<li><span class="math inline">A_n := \{\sigma \in S_n \mid \sigma</span>
-pari<span class="math inline">\}</span></li>
+<li><span class="math inline">\alpha, \beta \in \mathcal{S}_n \mid
+\textrm{sgn}(\alpha) \cdot \textrm{sgn}(\beta) = 1</span></li>
 </ul></li>
 <li><strong>Th</strong>
 <ul>
-<li><span class="math inline">A_n \subset S_n</span> è un sottogruppo
-normale, detto <em>gruppo alterno di ordine <span
-class="math inline">n</span></em></li>
+<li><span class="math inline">\textrm{sgn}(\alpha)=
+\textrm{sgn}(\beta)</span></li>
 </ul></li>
 <li><strong>Dim</strong>
 <ul>
-<li>⚠️ <strong>MANCA DIMOSTRAZIONE</strong></li>
+<li><span class="math inline">\textrm{sgn}(\alpha), \textrm{sgn}(\beta)
+= \pm 1</span> per definizione, allora necessariamente i due segni
+devono essere o entrambi <span class="math inline">1</span> o entrambi
+<span class="math inline">-1</span>, e dunque <span
+class="math inline">\textrm{sgn}(\alpha) =
+\textrm{sgn}(\beta)</span></li>
 </ul></li>
 </ul>
-<a href="#oss-5"><h2 id="oss-5">Oss</h2></a>
+<a href="#oss-6"><h2 id="oss-6">Oss</h2></a>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -517,43 +567,31 @@ adiacente</li>
 &amp; \cdots &amp; n \\ \sigma(1) &amp; \cdots &amp; \sigma(i + 1) &amp;
 &amp; \sigma(i) &amp; \cdots &amp; \sigma(n)
 \end{array}\right)</span></li>
-<li>di conseguenza <span class="math inline">\textrm{Inv}(\sigma
-\tau_{i, i + 1})=</span><span
-class="math inline">\left\{\begin{array}{ll}\operatorname{Inv}(\sigma)
-\cup\{(i, i+1)\} &amp; (i, i+1) \notin \operatorname{Inv}(\sigma) \\
+<li><span class="math inline">\forall i \in [1, n] \quad i \lt i + 1
+\implies \sigma \tau_{i, i + 1}(i + 1) \gt \sigma \tau_{i, i + 1}(i)
+\iff (i, i + 1) \in \textrm{Inv}(\sigma \tau_{i, i + 1})</span> per
+definizione</li>
+<li>allora <span class="math inline">\textrm{Inv}(\sigma \tau_{i, i +
+1})=\left\{\begin{array}{ll}\operatorname{Inv}(\sigma) \cup\{(i, i+1)\}
+&amp; (i, i+1) \notin \operatorname{Inv}(\sigma) \\
 \operatorname{Inv}(\sigma)-\{(i, i+1)\} &amp; (i, i+1) \in
-\operatorname{Inv}(\sigma)\end{array}\right.</span>
-<ul>
-<li><span class="math inline">\forall i \mid i \lt i + 1 \quad (i, i +
-1) \in \textrm{Inv}(\sigma) \iff \sigma(i) \gt \sigma(i + 1)</span></li>
-<li>in <span class="math inline">\sigma \tau_{i, i + 1}</span> le
-colonne <span class="math inline">i</span> e <span class="math inline">i
-+ 1</span> si invertono, e di conseguenza <span
-class="math inline">\sigma \tau_{i, i + 1}(i) \lt \sigma \tau_{i, i +
-1}(i +1) \implies (i, i + 1) \notin \textrm{Inv}(\sigma \tau_{i, i +
-1})</span> per definizione</li>
-</ul></li>
+\operatorname{Inv}(\sigma)\end{array}\right.</span></li>
 <li>dunque <span class="math inline">|\textrm{Inv}(\sigma \tau_{i, i +
-1}) | = | \textrm{Inv}(\sigma) | \pm 1 \implies (-1)^{\mid
+1}) | = | \textrm{Inv}(\sigma) | \pm 1 \iff (-1)^{\mid
 \textrm{Inv}(\sigma \tau_{i, i + 1})\mid} = (-1)^{\mid
-\textrm{Inv}(\sigma) \mid \pm 1} \implies \textrm{sgn}(\sigma \tau_{i, i
-+ 1}) = - \textrm{sgn}(\sigma)</span> poiché <span
+\textrm{Inv}(\sigma) \mid \pm 1} \iff \textrm{sgn}(\sigma \tau_{i, i +
+1}) = - \textrm{sgn}(\sigma)</span>, poiché <span
 class="math inline">\pm 1</span> all’esponente di <span
-class="math inline">(-1)</span> ne invertirà il segno
-<ul>
+class="math inline">(-1)</span> ne invertirà il segno</li>
 <li>dunque aggiungendo o togliendo una trasposizione adiacente ad una
 permutazione, si inverte il segno della composizione</li>
-</ul></li>
 <li><span class="math inline">\sigma =\tau_{1} \ldots \tau_{k} \implies
 \textrm{id} = \sigma \tau_k \ldots \tau_1</span> poiché ogni
 trasposizione è l’inversa di sé stessa, e dunque <span
 class="math inline">\textrm{sgn}(\textrm{id}) = 1 = \textrm{sgn}(\sigma
-\tau_k \ldots \tau_1)</span> poiché se sono uguali, saranno uguali anche
-i loro segni</li>
-<li><span class="math inline">\textrm{sgn}(\sigma \tau_k \ldots \tau_1)
-= -\textrm{sgn}(\sigma \tau_k \ldots \tau_2) = \textrm{sgn}(\sigma
-\tau_k \ldots \tau_3) = \ldots = (-1)^k \cdot
-\textrm{sgn}(\sigma)</span> poiché sono state rimosse esattamente <span
+\tau_k \ldots \tau_1)= -\textrm{sgn}(\sigma \tau_k \ldots \tau_2) =
+\textrm{sgn}(\sigma \tau_k \ldots \tau_3) = \ldots = (-1)^k \cdot
+\textrm{sgn}(\sigma)</span>, poiché sono state rimosse esattamente <span
 class="math inline">k</span> trasposizioni adiacenti</li>
 <li>allora <span class="math inline">(-1)^k \cdot \textrm{sgn}(\sigma) =
 \textrm{sgn}(\textrm{id}) = 1</span></li>
@@ -563,7 +601,7 @@ poiché <span class="math inline">(-1)^k \cdot \textrm{sgn}(\sigma) =
 class="math inline">\textrm{sgn}(\sigma) = (-1)^k</span></li>
 </ul></li>
 </ul>
-<a href="#oss-6"><h2 id="oss-6">Oss</h2></a>
+<a href="#oss-7"><h2 id="oss-7">Oss</h2></a>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -591,12 +629,12 @@ class="math inline">\textrm{sgn}(\sigma \sigma^\prime) = (-1)^ {k + h} =
 \textrm{sgn}(\sigma^\prime)</span></li>
 </ul></li>
 </ul>
-<a href="#oss-7"><h2 id="oss-7">Oss</h2></a>
+<a href="#oss-8"><h2 id="oss-8">Oss</h2></a>
 <ul>
 <li><strong>Hp</strong>
 <ul>
 <li><span class="math inline">n \in \mathbb{N}</span></li>
-<li><span class="math inline">\sigma \in S_n</span></li>
+<li><span class="math inline">\sigma \in \mathcal{S}_n</span></li>
 </ul></li>
 <li><strong>Th</strong>
 <ul>
@@ -613,29 +651,19 @@ class="math inline">\left.\begin{array}{l}\operatorname{sgn}(\textrm{id})=1
 \operatorname{sgn}\left(\sigma
 \sigma^{-1}\right)=\operatorname{sgn}(\sigma) \cdot
 \operatorname{sgn}\left(\sigma^{-1}\right)\end{array}\right\} \implies
-\textrm{sgn}(\sigma) \cdot \textrm{sgn}(\sigma^{-1})= 1</span>
-<ul>
-<li><span class="math inline">\forall \sigma \in S_n \quad
-\textrm{sgn}(\sigma) = \pm 1</span>, di conseguenza se esistono due
-permutazioni <span class="math inline">\alpha, \beta \in S_n \mid
-\textrm{sgn}(\alpha) \cdot \textrm{sgn}(\beta) = 1</span>, allora
-necessariamente i due segni devono essere o entrambi <span
-class="math inline">1</span> o entrambi <span
-class="math inline">-1</span>, e dunque i segni coincidono</li>
-</ul></li>
-<li>dunque <span class="math inline">\textrm{sgn}(\sigma) \cdot
-\textrm{sgn}(\sigma^{-1})= 1 \implies \textrm{sgn}(\sigma)=
-\textrm{sgn}(\sigma^{-1})</span></li>
+\textrm{sgn}(\sigma) \cdot \textrm{sgn}(\sigma^{-1})= 1 \implies
+\textrm{sgn}(\sigma^{-1}) = \textrm{sgn}(\sigma)</span></li>
 </ul></li>
 </ul>
-<a href="#oss-8"><h2 id="oss-8">Oss</h2></a>
+<a href="#oss-9"><h2 id="oss-9">Oss</h2></a>
 <ul>
 <li><strong>Hp</strong>
 <ul>
 <li><span class="math inline">n \in \mathbb{N}</span></li>
-<li><span class="math inline">\sigma, \sigma^\prime \in S_n</span></li>
+<li><span class="math inline">\sigma, \sigma^\prime \in
+\mathcal{S}_n</span></li>
 <li><span class="math inline">\sigma \sim \sigma ^\prime \iff
-\exists\alpha \in S_n \mid \sigma^\prime = \alpha \sigma
+\exists\alpha \in \mathcal{S}_n \mid \sigma^\prime = \alpha \sigma
 \alpha^{-1}</span></li>
 </ul></li>
 <li><strong>Th</strong>
@@ -649,7 +677,7 @@ class="math inline">-1</span>, e dunque i segni coincidono</li>
 \textrm{sgn}(\sigma^\prime) = \textrm{sgn}(\alpha)\cdot
 \textrm{sgn}(\sigma)\cdot \textrm{sgn}(\alpha^{-1})</span></li>
 <li>per dimostrazione precedente <span class="math inline">\forall
-\alpha \in S_n \quad \textrm{sgn}(\alpha)=
+\alpha \in \mathcal{S}_n \quad \textrm{sgn}(\alpha)=
 \textrm{sgn}(\alpha^{-1})</span>, dunque entrambe <span
 class="math inline">1</span> o entrambe $-1</li>
 <li>quindi <span class="math inline">\textrm{sgn}(\alpha) \cdot
@@ -657,16 +685,16 @@ class="math inline">1</span> o entrambe $-1</li>
 \textrm{sgn}(\sigma)</span></li>
 </ul></li>
 </ul>
-<a href="#oss-9"><h2 id="oss-9">Oss</h2></a>
+<a href="#oss-10"><h2 id="oss-10">Oss</h2></a>
 <ul>
 <li><strong>Hp</strong>
 <ul>
 <li><span class="math inline">n \in \mathbb{N}</span></li>
-<li><span class="math inline">\sigma, \sigma^\prime \in S_n \mid \sigma
-:= \gamma_1 \ldots \gamma_k, \sigma^\prime := \gamma_1^\prime \ldots
-\gamma_h^\prime</span></li>
+<li><span class="math inline">\sigma, \sigma^\prime \in \mathcal{S}_n
+\mid \sigma := \gamma_1 \ldots \gamma_k, \sigma^\prime :=
+\gamma_1^\prime \ldots \gamma_h^\prime</span></li>
 <li><span class="math inline">\sigma \sim \sigma ^\prime \iff
-\exists\alpha \in S_n \mid \sigma^\prime = \alpha \sigma
+\exists\alpha \in \mathcal{S}_n \mid \sigma^\prime = \alpha \sigma
 \alpha^{-1}</span>, che costituisce dunque la relazione di coniugio</li>
 </ul></li>
 <li><strong>Th</strong>
@@ -687,8 +715,8 @@ class="math inline">\gamma_j^\prime</span></li>
 <li>⚠️ <strong>NIENTE HA SENSO DI QUELLO CHE C’È SCRITTO IN QUESTA
 IMPLICAZIONE</strong></li>
 <li>per definizione <span class="math inline">\sigma \sim \sigma^\prime
-\implies \exists\alpha \in S_n \mid \sigma^\prime = \alpha \sigma
-\alpha^{-1}</span></li>
+\implies \exists\alpha \in \mathcal{S}_n \mid \sigma^\prime = \alpha
+\sigma \alpha^{-1}</span></li>
 <li><span class="math inline">\forall i_1, \ldots, i_d \mid (i_1 \ldots
 i_d)</span> è un ciclo di <span class="math inline">\sigma</span>, per
 la relazione di coniugio si ottiene che <span
@@ -720,18 +748,18 @@ ovvero i cicli hanno la stessa lunghezza</li>
 </ul></li>
 <li><em>seconda implicazione</em>
 <ul>
-<li><p><span class="math inline">\sigma = (i_1 \ldots i_{d_1}) \ldots
-(j_1 \ldots j_{d_k})</span> è la decomposizione in cicli di <span
-class="math inline">\sigma</span></p></li>
-<li><p><span class="math inline">\sigma^\prime =(a_1 \ldots a_{d_1})
-\ldots (b_1 \ldots b_{d_k})</span> è la decomposizione in cicli di <span
-class="math inline">\sigma&#39;</span></p></li>
-<li><p>poiché in ipotesi <span class="math inline">\sigma</span> e <span
+<li><span class="math inline">\sigma = (i_1 \ldots i_{d_1}) \ldots (j_1
+\ldots j_{d_k})</span> è la decomposizione in cicli di <span
+class="math inline">\sigma</span></li>
+<li><span class="math inline">\sigma^\prime =(a_1 \ldots a_{d_1}) \ldots
+(b_1 \ldots b_{d_k})</span> è la decomposizione in cicli di <span
+class="math inline">\sigma&#39;</span></li>
+<li>poiché in ipotesi <span class="math inline">\sigma</span> e <span
 class="math inline">\sigma&#39;</span> hanno stesso numero di cicli, e
 cicli di stessa lunghezza, allora <span class="math inline">\exists
-\alpha \in S_n \mid</span><span
+\alpha \in \mathcal{S}_n \mid</span><span
 class="math inline">\left\{\begin{array}{c}\alpha\left(i_{p}\right)=a_{p}
-\\ \vdots \\ \alpha\left(j_{q}\right)=b_{q}\end{array}\right.</span></p>
+\\ \vdots \\ \alpha\left(j_{q}\right)=b_{q}\end{array}\right.</span>
 <ul>
 <li><em>esempio</em>
 <ul>
@@ -745,38 +773,122 @@ class="math inline">\alpha=\left(\begin{array}{llllllll}1 &amp; 2 &amp;
 &amp; 8 &amp; 6 &amp; 7 &amp; 3\end{array}\right)</span></li>
 </ul></li>
 </ul></li>
-<li><p>scelto <span class="math inline">\alpha \in S_n</span> in questo
-modo, allora ad esempio <span class="math inline">\forall i_p \in (i_1
-\ldots i_{d_1})</span> primo ciclo di <span class="math inline">\sigma
-\implies i_p = \alpha^{-1}(a_p)</span> per definizione di <span
-class="math inline">\alpha \implies \alpha \sigma \alpha^{-1} (a_p) =
-\alpha \sigma (i_p) =</span><span
+<li>scelto <span class="math inline">\alpha \in \mathcal{S}_n</span> in
+questo modo, allora ad esempio <span class="math inline">\forall i_p \in
+(i_1 \ldots i_{d_1})</span> primo ciclo di <span
+class="math inline">\sigma \implies i_p = \alpha^{-1}(a_p)</span> per
+definizione di <span class="math inline">\alpha \implies \alpha \sigma
+\alpha^{-1} (a_p) = \alpha \sigma (i_p) =</span><span
 class="math inline">\left\{\begin{array}{ll}\alpha\left(i_{p+1}\right)
 &amp; p&lt;d_1 \\ \alpha\left(i_{1}\right) &amp;
 p=d_{1}\end{array}\right. \iff \left\{\begin{array}{ll}a_{p+1} &amp;
 p&lt;d_{1} \\ a_{1} &amp; p=d_{1}\end{array}\right. =
 \sigma^\prime(a_p)</span> per definizione di <span
-class="math inline">\sigma^\prime</span></p>
+class="math inline">\sigma^\prime</span>
 <ul>
 <li>poiché in questa osservazione non è stato fatto uso dell’ipotesi per
 cui <span class="math inline">i_p</span> fosse stato scelto all’interno
 del primo ciclo, il ragionamento vale analogamente per ogni altro
 elemento in ogni altro ciclo</li>
 </ul></li>
-<li><p>allora, <span class="math inline">\alpha</span> è proprio scelto
+<li>allora, <span class="math inline">\alpha</span> è proprio scelto
 tale che <span class="math inline">\sigma^\prime = \alpha \sigma \alpha
 ^{-1}</span>, che per definizione implica che <span
-class="math inline">\sigma \sim \sigma&#39;</span></p></li>
+class="math inline">\sigma \sim \sigma&#39;</span></li>
 </ul></li>
 </ul></li>
 </ul>
-<a href="#oss-10"><h2 id="oss-10">Oss</h2></a>
+<a href="#def-5"><h2 id="def-5">Def</h2></a>
+<ul>
+<li><strong>Gruppo alterno</strong></li>
+</ul>
+<blockquote>
+<ul>
+<li><span class="math inline">n \in \mathbb{N}</span></li>
+<li><span class="math inline">A_n := \{\sigma \in \mathcal{S}_n \mid
+\sigma</span> pari<span class="math inline">\}</span> è detto
+<strong>gruppo alterno di ordine <span
+class="math inline">n</span></strong></li>
+</ul>
+</blockquote>
+<a href="#oss-11"><h2 id="oss-11">Oss</h2></a>
 <ul>
 <li><strong>Hp</strong>
 <ul>
 <li><span class="math inline">n \in \mathbb{N}</span></li>
-<li><span class="math inline">\sigma \in S_n \mid \sigma := \gamma_1
-\ldots \gamma_k</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">A_n \subset \mathcal{S}_n</span> è un
+sottogruppo normale</li>
+</ul></li>
+<li><strong>Dim</strong>
+<ul>
+<li><span class="math inline">\textrm{sgn}(\textrm{id}) = (-1)^0 =
+1</span>, in quanto <span class="math inline">\textrm{id}</span> non ha
+inversioni, dunque <span class="math inline">\textrm{id} \in
+A_n</span></li>
+<li><span class="math inline">\sigma, \sigma&#39; \in A_n \implies
+\textrm{sgn}(\sigma)=\textrm{sgn}(\sigma&#39;)=1 \implies
+\textrm{sgn}(\sigma)\cdot\textrm{sgn}(\sigma&#39;) = 1 =
+\textrm{sgn}(\sigma \sigma&#39;)</span> per dimostrazione precedente
+<span class="math inline">\implies \sigma \sigma&#39; \in
+A_n</span></li>
+<li><span class="math inline">\sigma \in A_n \implies
+\textrm{sgn}(\sigma) = 1 = \textrm{sgn}(\sigma^{-1})</span> per
+dimostrazione predecente <span class="math inline">\implies \sigma^{-1}
+\in A_n</span></li>
+<li><span class="math inline">A_n \subset \mathcal{S}_n</span>
+sottogruppo normale <span class="math inline">\iff \forall \sigma \in
+A_n, \alpha \in \mathcal{S}_n \quad \sigma \alpha \sigma^{-1} \in
+A_n</span> per dimostrazione precedente</li>
+<li>inoltre, per dimostrazione precedente <span
+class="math inline">\textrm{sgn}(\sigma) = 1 = \textrm{sgn}(\sigma
+\alpha \sigma^{-1}) \implies \sigma \alpha \sigma^{-1} \in
+A_n</span></li>
+</ul></li>
+</ul>
+<a href="#oss-12"><h2 id="oss-12">Oss</h2></a>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">n \in \mathbb{N}</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">|A_n| = \dfrac{n!}{2}</span></li>
+</ul></li>
+<li><strong>Dim</strong>
+<ul>
+<li><span class="math inline">A_n \subset \mathcal{S}_n</span>
+sottogruppo normale <span class="math inline">\implies
+\mathcal{S}_n/A_n</span> è ben definito</li>
+<li>in particolare, considerando la relazione di classe laterale
+sinistra, si ha che <span class="math inline">\forall \sigma,
+\sigma&#39; \in \mathcal{S}_n \quad \sigma \sim_S \sigma&#39; \iff
+\sigma^{-1}\sigma&#39; \in A_n \iff \textrm{sgn}(\sigma^{-1}\sigma&#39;)
+= 1 = \textrm{sgn}(\sigma^{-1})\cdot
+\textrm{sgn}(\sigma)=\textrm{sgn}(\sigma)\cdot\textrm{sgn}(\sigma&#39;)
+\iff \textrm{sgn}(\sigma) = \textrm{sgn}(\sigma&#39;)</span></li>
+<li>poiché <span class="math inline">\textrm{sgn}(\sigma) = \pm 1</span>
+per definizione, si ha che <span
+class="math inline">\mathcal{S}_n/A_n=\{[\textrm{id}]_{+1},
+[\alpha]_{-1}\}</span>, dove <span class="math inline">\alpha</span> è
+dispari, e in particolare <span class="math inline">|\mathcal{S}_n/A_n|
+= 2</span></li>
+<li>inoltre, per il teorema di Lagrange si ha che <span
+class="math inline">|\mathcal{S}_n| = |A_n| \cdot |\mathcal{S}_n/A_n|
+\iff |A_n| = \dfrac{|\mathcal{S}_n|}{|\mathcal{S}_n/A_n|} =
+\dfrac{n!}{2}</span></li>
+</ul></li>
+</ul>
+<a href="#oss-13"><h2 id="oss-13">Oss</h2></a>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">n \in \mathbb{N}</span></li>
+<li><span class="math inline">\sigma \in \mathcal{S}_n \mid \sigma :=
+\gamma_1 \ldots \gamma_k</span></li>
 </ul></li>
 <li><strong>Th</strong>
 <ul>
@@ -787,9 +899,9 @@ k}</span></li>
 <ul>
 <li><span class="math inline">\sigma = (i_1 \ldots i_{d_1}) \ldots (j_1
 \ldots j_{d_k})</span></li>
-<li><span class="math inline">\forall \sigma \in S_n \quad \exists
-\sigma&#39; \in S_n \mid \sigma^\prime := (1 \ldots d_1)(d_1 + 1 \ldots
-d_1 + d_2) \ldots (n -d_k + 1 \ldots n)</span>
+<li><span class="math inline">\forall \sigma \in \mathcal{S}_n \quad
+\exists \sigma&#39; \in \mathcal{S}_n \mid \sigma^\prime := (1 \ldots
+d_1)(d_1 + 1 \ldots d_1 + d_2) \ldots (n -d_k + 1 \ldots n)</span>
 <ul>
 <li>dunque <span class="math inline">\sigma^\prime</span> è composta da
 cicli lunghi esattamente come i cicli di <span
@@ -824,8 +936,9 @@ applicare <span class="math inline">(d_1 -1) + (d_2 - 1) + \ldots + (d_k
 class="math inline">d_1 + \ldots + d_k - 1 \cdot k = n - k</span>
 <ul>
 <li><span class="math inline">d_1 + \ldots + d_k</span> è il numero di
-colonne di <span class="math inline">\sigma^\prime \in S_n</span>,
-dunque è pari a <span class="math inline">n</span></li>
+colonne di <span class="math inline">\sigma^\prime \in
+\mathcal{S}_n</span>, dunque è pari a <span
+class="math inline">n</span></li>
 <li><span class="math inline">k</span> è il numero di cicli, quindi
 nell’equazione <span class="math inline">-1</span> appare esattamente
 <span class="math inline">k</span> volte</li>
