@@ -71,3 +71,7 @@
     - [Teorema di Binet](https://ph04.github.io/algebra/html/teoremi-fondamentali.html#teorema-di-binet)
     - [Teorema spettrale](https://ph04.github.io/algebra/html/teoremi-fondamentali.html#teorema-spettrale)
 
+## Tutto
+
+- [Tutto](https://ph04.github.io/algebra/html/everything.md)
+
