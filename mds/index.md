@@ -73,5 +73,5 @@
 
 ## Tutto
 
-- [Tutto](https://ph04.github.io/algebra/html/everything.md)
+- [Tutto](https://ph04.github.io/algebra/html/everything.html)
 
