@@ -490,7 +490,7 @@ class="math inline">\left|\mathbb{Z}_{a_{1}}\right|
 a_n = m = \left| \mathbb{Z}_m \right|</span> per ragionamento
 analogo</li>
 </ul></li>
-<li><span class="math inline">|X|=|Y|&lt;\infty \implies f: X
+<li><span class="math inline">|X|=|Y|&lt;+\infty \implies f: X
 \rightarrow Y</span> iniettiva <span class="math inline">\iff</span>
 <span class="math inline">f</span> suriettiva
 <ul>
@@ -757,41 +757,28 @@ anelli</li>
 </ul></li>
 <li><strong>Dim</strong>
 <ul>
-<li><span class="math inline">\varphi</span> è ben definita</li>
 <li><span class="math inline">\varphi</span> è ben definita <span
-class="math inline">\iff [x] = [y] \implies f(x) = f(y) \quad \forall x,
-y \in A</span></li>
-<li><span class="math inline">[x] = [y] \iff x \equiv y \ (\bmod \
-\textrm{ker}(f)) \implies y - x \in \textrm{ker}(f) \implies f(y - x) =
-0_B</span> per definizione</li>
-<li><span class="math inline">f(y - x) = f(y + (-x))</span>, e <span
-class="math inline">-x \in A</span> perche <span
-class="math inline">A</span> è un anello</li>
+class="math inline">\iff \forall x, y \in A \quad [x] = [y] \implies
+\varphi([x]) = f(x) = f(y) = \varphi([y])</span>
+<ul>
 <li>per dimostrazione precedente <span class="math inline">f</span>
 morfismo <span class="math inline">\implies f(x^{-1}) =
 f(x)^{-1}</span>, e dunque rispetto a <span class="math inline">+</span>
 in <span class="math inline">A</span> si ottiene che <span
 class="math inline">\forall x \in A \quad f(-x) = -f(x)</span></li>
-<li>dunque, <span class="math inline">f(y-x) = f(y)-f(x) \iff 0_B = f(y)
-- f(x) \iff f(y) = f(x)</span></li>
-<li><span class="math inline">\varphi</span> morfismo di anelli</li>
+<li>allora <span class="math inline">[x] = [y] \iff x \equiv y \ (\bmod
+\ \ker(f)) \iff y - x \in \textrm{ker}(f) \iff 0_B = f(y - x) = f(y +
+(-x)) = f(y) + f(-x) = f(y)-f(x) \iff f(y) = f(x) \iff \varphi([y]) =
+\varphi([x])</span></li>
+</ul></li>
 <li><span class="math inline">\varphi</span> morfismo di anelli <span
-class="math inline">\iff \varphi([a]) \cdot \varphi([b]) =
-\varphi([a]\cdot [b])</span> e <span class="math inline">\varphi([a]) +
-\varphi([b]) = \varphi([a]+ [b])</span>
+class="math inline">\iff \left \{ \begin{array}{l} \varphi([a]) +
+\varphi([b]) = \varphi([a]+ [b]) \\ \varphi([a]) \cdot \varphi([b]) =
+\varphi([a]\cdot [b]) \end{array} \right.</span>
 <ul>
-<li><span class="math inline">\varphi([a]) \cdot \varphi([b]) = f(a)
-\cdot f(b)</span> per definizione di <span
-class="math inline">\varphi</span></li>
-<li><span class="math inline">f(a) \cdot f(b) = f(a\cdot b)</span> per
-morfismo di <span class="math inline">f</span></li>
-<li><span class="math inline">f(a \cdot b ) = \varphi([a \cdot
-b])</span> per definizione di <span
-class="math inline">\varphi</span></li>
-<li><span class="math inline">\varphi([a \cdot b]) = \varphi([a] \cdot
-[b])</span> per definizione di <span
-class="math inline">\cdot</span></li>
-<li>per <span class="math inline">+</span> vale il ragionamento
+<li><span class="math inline">\varphi([a]) + \varphi([b]) = f(a) + f(b)
+= f(a + b) = \varphi([a + b]) = \varphi([a] + [b])</span></li>
+<li>per <span class="math inline">\cdot</span> vale il ragionamento
 analogo</li>
 </ul></li>
 <li><span class="math inline">\varphi</span> isomorfismo di anelli <span
@@ -802,18 +789,19 @@ class="math inline">\iff \varphi</span> iniettiva e suriettiva</li>
 class="math inline">\iff \textrm{ker}(\varphi)=\{[0_A]\}</span> per
 dimostrazione precedente</li>
 <li><span class="math inline">x \in \textrm{ker}(f) \iff x - 0_A \in
-\textrm{ker}(f) \implies x \equiv 0_A \ (\bmod \ \textrm{ker}(f))
-\implies [x] = [0_A] \implies \varphi([x]) = \varphi([0_A])</span>,
-poiché <span class="math inline">\varphi</span> è ben definita, dunque
-<span class="math inline">f(x) = 0_B</span></li>
+\textrm{ker}(f) \iff x \equiv 0_A \ (\bmod \ \textrm{ker}(f)) \iff [x] =
+[0_A] \implies \varphi([x]) = \varphi([0_A])</span>, poiché <span
+class="math inline">\varphi</span> è ben definita</li>
+<li>allora <span class="math inline">\varphi([x])= \varphi([0_A]) =
+f(0_A) = 0_B</span> per dimostrazione precedente <span
+class="math inline">\implies x = 0_A</span> necessariamente <span
+class="math inline">\implies \ker(f) = \{[0_A]\}</span></li>
 </ul></li>
 <li><span class="math inline">\varphi</span> suriettiva
 <ul>
-<li><span class="math inline">\varphi : A / \textrm{ker}(f) \rightarrow
-\textrm{im}(f) \implies</span> l’insieme di arrivo di <span
-class="math inline">\varphi</span> coincide è proprio l’insieme delle
-immagini di <span class="math inline">f</span>, quindi <span
-class="math inline">\varphi</span> è suriettiva per costruzione</li>
+<li><span class="math inline">\textrm{im}(\varphi) := \{f(a) \mid
+\exists [a] \in A/\ker(f) : \varphi([a]) = f(a)\} =:
+\textrm{im}(f)</span></li>
 </ul></li>
 </ul></li>
 </ul>
@@ -833,10 +821,6 @@ class="math inline">\exists \varphi \mid \varphi : G / \textrm{ker}(f)
 \rightarrow \textrm{im}(f): [g] \rightarrow f(g)</span> isomorfismo di
 gruppi</li>
 </ul></li>
-<li><strong>Dim</strong>
-<ul>
-<li>la dimostrazione è analoga al caso degli anelli</li>
-</ul></li>
 </ul>
 <a href="#oss-2"><h2 id="oss-2">Oss</h2></a>
 <ul>
@@ -853,10 +837,6 @@ lineare</li>
 <li><span class="math inline">V/\ker(f) \cong \textrm{im}(f)</span>, o
 alternativamente <span class="math inline">\exists \varphi \mid \varphi
 : V/\ker(f) \rightarrow \textrm{im}(f):[v] \rightarrow f(v)</span></li>
-</ul></li>
-<li><strong>Dim</strong>
-<ul>
-<li>la dimostrazione è analoga al caso degli anelli</li>
 </ul></li>
 </ul>
 <hr />

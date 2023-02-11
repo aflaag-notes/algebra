@@ -332,10 +332,10 @@
 ## Oss
 
 - **Hp**
-    - $(G, \cdot)$ gruppo abeliano
+    - $(G, \cdot)$ gruppo
     - $H \trianglelefteq G$
 - **Th**
-    - $(G/H, \cdot)$ è gruppo abeliano
+    - $(G/H, \cdot)$ è gruppo
 - **Dim**
     - $\cdot$ ben definita $\iff\left.\forall x, x^{\prime}, y, y' \in G \quad \begin{array}{l}{[x]=\left[x^{\prime}\right]} \\ {[y]=\left[y^{\prime}\right]}\end{array}\right\} \implies[xy]=\left[x^{\prime}y' \right]$
         - $H \trianglelefteq G \implies \left \{ \begin{array}{l} xH = Hx = [x] = [x'] = x'H = Hx'\\ yH = Hy = [y] = [y'] = y'H = Hy' \end{array} \right.$
@@ -344,5 +344,4 @@
         - $\forall [x], [y], [z] \in G/H \quad ([x][y])[x] = [xy][z] = [xyz] = [x][yz] = [x]([y][z])$
         - $\forall [x] \in G/H \quad [x][1]=[1][x]=[x]$ e $[1] \cdot [x] = [1 \cdot x] = [x]$, e $[1] \in G/H$ perché $G$ gruppo
         - $\forall [x] \in G/H \quad [x]\cdot[x^{-1}]=[x \cdot x^{-1}]=[1]$ e $[x^{-1}] \cdot[x]=[x^{-1} \cdot x]=[1] \implies [x]^{-1} = [x^{-1}]$
-        - $\forall [x], [y] \in G/H \quad [x] \cdot [y] = [x \cdot y] = [y \cdot x] = [y] \cdot [x]$
 

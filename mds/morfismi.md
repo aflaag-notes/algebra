@@ -59,7 +59,6 @@
 - **Th**
   - $f ^{-1}: H \rightarrow G$ isomorfismo
 - **Dim**
-  - $\forall g \in G, h \in H \quad \exists !f^{-1} \mid \left\{\begin{array}{l}f^{-1}(f(g))=g \\ f\left(f^{-1}(h)\right)=h\end{array}\right.$
   - $\forall h, h^{\prime} \in H \quad f^{-1}\left(h h^{\prime}\right)=f^{-1}(h) \cdot f^{-1}\left(h^{\prime}\right) \iff hh'=f\left(f^{-1}\left(h h^{\prime})\right)=f(f^{-1}(h)\cdot f^{-1}(h^\prime)) = f(f^{-1}(h))\cdot f(f^{-1}(h^\prime))\right. = hh' \implies f^{-1}$ morfismo, e poiché è invertibile allora $f$ isomorfismo
 
 ## Oss
@@ -86,11 +85,11 @@
 ## Ex
 
 - **Hp**
-  - $z \in \mathbb{C} \mid z^n = 1$ sono le radici $n$-esime di $1$
+  - $n \in \mathbb{N}$
   - $\zeta := e^{i \frac{2 \pi}{n}}$
-  - $H := \{\zeta ^0, \zeta^1, \zeta^k, \ldots, \zeta^{n-1}\}$ è l'insieme delle radici $n$-esime di $1$
+  - $H := \{\zeta ^0, \zeta^1, \zeta^k, \ldots, \zeta^{n-1}\}$ è l'insieme delle radici $n$-esime di $1$, in particolare $\zeta^n=1$
 - **Th**
-  - $(H, \cdot) \leqslant (\mathbb{C}-\{0\}, \cdot)$
+  - $(H, \cdot) \leqslant (\mathbb{C}^*, \cdot)$
 - **Dim**
   - $\zeta ^0 = 1 \implies 1 \in H$
   - $z, w \in H \iff z^n=w^n = 1$, allora $1 = z^n \cdot w^n = (z \cdot w)^n = 1 \implies z \cdot w \in H$
@@ -99,6 +98,9 @@
 ## Ex
 
 - **Hp**
+    - $n \in \mathbb{N}$
+    - $\zeta := e^{i \frac{2 \pi}{n}}$
+    - $H := \{\zeta ^0, \zeta^1, \zeta^k, \ldots, \zeta^{n-1}\}$ è l'insieme delle radici $n$-esime di $1$, in particolare $\zeta^n = 1$
     - $f: \mathbb{Z}_n \rightarrow H : [k] \rightarrow \zeta^k$
 - **Th**
     - $f$ isomorfismo di gruppi tra $(\mathbb{Z}_n , +)$ e $(H, \cdot)$
@@ -238,17 +240,23 @@ $f([x \cdot y])=f([x]) \cdot f([y]) \iff f$ morfismo
   - $\textrm{im}(f) \subset B$ sottoanello
 - **Dim**
   - $(\textrm{im}(f), +) \leqslant (B, +)$ per dimostrazione precedente
-  - $x, y \in \textrm{im}(f) \iff \exists a, a^\prime \in A\mid x = f(a) \land y = f(a^\prime) \implies x \cdot y = f(a) \cdot f(a^\prime) = f(a\cdot a^\prime)$ perche $f$ morfismo, quindi $\exists a \cdot a^\prime \mid x \cdot y = f(a \cdot a^\prime) \implies x\cdot y \in \textrm{Im}(f) \implies \textrm{Im}(f) \cdot \textrm{Im}(f) \subseteq \textrm{Im}(f)$
+  - $x, y \in \textrm{im}(f) \iff \exists a, a^\prime \in A\mid x = f(a) \land y = f(a^\prime) \implies x \cdot y = f(a) \cdot f(a^\prime) = f(a\cdot a^\prime)$ perche $f$ morfismo, quindi $\exists a \cdot a^\prime \mid x \cdot y = f(a \cdot a^\prime) \implies x\cdot y \in \textrm{im}(f) \implies \textrm{im}(f) \cdot \textrm{im}(f) \subseteq \textrm{im}(f)$
  
 ## Oss
 
 - **Hp**
-  - $f: \mathbb{Z} \rightarrow \mathbb{C} - \{0\} : k \rightarrow \zeta^k$
-  - $f$ morfismo di gruppi $(\mathbb{Z}, +)$ e $(\mathbb{C} - \{0\}, \cdot)$
-  - $I(n)$ ideale generato da $n$
+    - $f: \mathbb{Z} \rightarrow \mathbb{C}^* : k \rightarrow \zeta^k$
+    - $n \in \mathbb{N}$
+    - $\zeta := e^{i \frac{2 \pi}{n}}$
+    - $H := \{\zeta ^0, \zeta^1, \zeta^k, \ldots, \zeta^{n-1}\}$ è l'insieme delle radici $n$-esime di $1$, in particolare $\zeta ^n = 1$
+    - $H(\zeta) := \{\zeta^k \mid k \in \mathbb{Z}\}$
 - **Th**
-  - $\textrm{ker}(f) = I(n)$
-  - $H(\zeta)=\textrm{im}(f) \cong \mathbb{Z}/\ker(f) = \mathbb{Z} /I(n) = \mathbb{Z}_n$
+    - $H(\zeta) \cong \mathbb{Z}_n$
 - **Dim**
-  - **⚠️ RISCRIVI TUTTO, ANCHE IPOTESI E TESI**
+    - $\forall k, h \in \mathbb{Z} \quad f(k + h) = \zeta^{k + h} = \zeta^{k} \cdot \zeta^{h} = f(k) \cdot f(h) \iff f$ morfismo di gruppi tra $(\mathbb{Z}, +)$ e $(\mathbb{C}^*, \cdot)$
+    - $k \in \ker(f) \iff f(k) = 1 \in \mathbb{C} \iff \exists h \in \mathbb{Z} \mid f(k) = 1 = \zeta^k = (\zeta^n)^h \iff k \in I(n)$, allora $\ker(f) = I(n)$
+    - per definizione $\mathbb{Z}_n = \mathbb{Z}/\equiv \ = \mathbb{Z}/I(n)$
+    - allora $\mathbb{Z}/I(n) = \mathbb{Z}/\ker(f) \cong \textrm{im}(f)$ per il teorema di isomorfismo
+    - $\textrm{im}(f) := \{\zeta ^k \mid \exists k \in \mathbb{Z} : f(k) = \zeta^k\} =: H(\zeta)$
+    - allora $H(\zeta) = \textrm{im}(f) \cong \mathbb{Z}/\ker(f) = \mathbb{Z}/I(n)=\mathbb{Z}_n$
 

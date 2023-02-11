@@ -121,7 +121,7 @@
   - per il secondo lemma $m = \textrm{mcm}(a_1, \ldots, a_n) \implies \exists \phi : \mathbb{Z}_m \rightarrow \mathbb{Z}_ {a_1} \times \cdots \times \mathbb{Z}_{a_n}$ ben definita e iniettiva
   - $\left|X_{1} \times \cdots \times X_{n}\right|=\left|X_{1}\right| \cdot\ldots\cdot\left|X_{n}\right| \implies$ $\left|\mathbb{Z}_{a_{1}} \times \ldots \times \mathbb{Z}_{a_{n}}\right|=\left|\mathbb{Z}_{a_{1}}\right| \cdot\ldots\cdot\left|\mathbb{Z}_{a_{n}}\right|$
     - $\mathbb{Z}_n := \{[0],[1], \cdots,[n-1]\} \implies \left|\mathbb{Z}_{n}\right|=n$, quindi $\left|\mathbb{Z}_{a_{1}}\right| \cdot\ldots\cdot\left|\mathbb{Z}_{a_{n}}\right|  = a_1 \cdot \ldots \cdot a_n = m = \left| \mathbb{Z}_m \right|$ per ragionamento analogo
-  - $|X|=|Y|<\infty \implies f: X \rightarrow Y$ iniettiva $\iff$ $f$ suriettiva
+  - $|X|=|Y|<+\infty \implies f: X \rightarrow Y$ iniettiva $\iff$ $f$ suriettiva
     - applicando questa osservazione, $\phi$ iniettiva $\implies \phi$ suriettiva, in quanto, per l'osservazione precedente, insieme di partenza e di arrivo di $\phi$ hanno la stessa cardinalità $\left| \mathbb{Z}_m \right|$
   - $\phi$ suriettiva $\implies$ $\exists x \mid x \ (\bmod \ m)$ è soluzione del sistema
     - $\varphi(x \ (\bmod \ m))=\left(b_{1}\ \left( \bmod \ a_{1}\right), \ldots, b_{n} \ (\bmod \ a_{n})\right)$, e poiché $\phi$ è suriettiva, allora ogni tupla di $n$ elementi dell'insieme di arrivo, che descrive un sistema come in ipotesi, ha una controimmagine $x \ (\bmod \ m)$, e $x \ (\bmod \ m)\in \mathbb{Z}_m$ per definizione, dunque esiste sempre una soluzione
@@ -234,25 +234,19 @@
 - **Th**
     - $A / \textrm{ker}(f) \cong \textrm{im}(f)$, ovvero $\exists \varphi \mid \varphi : A / \textrm{ker}(f) \rightarrow \textrm{im}(f): [a] \rightarrow f(a)$ isomorfismo di anelli
 - **Dim**
-    - $\varphi$ è ben definita
-    - $\varphi$ è ben definita $\iff [x] = [y] \implies f(x) = f(y) \quad \forall x, y \in A$
-    - $[x] = [y] \iff x \equiv y \ (\bmod \ \textrm{ker}(f)) \implies y - x \in \textrm{ker}(f) \implies f(y - x) = 0_B$ per definizione
-    - $f(y - x) = f(y + (-x))$, e $-x \in A$ perche $A$ è un anello
-    - per dimostrazione precedente $f$ morfismo $\implies f(x^{-1}) = f(x)^{-1}$, e dunque rispetto a $+$ in $A$ si ottiene che $\forall x \in A \quad f(-x) = -f(x)$
-    - dunque, $f(y-x) = f(y)-f(x) \iff 0_B = f(y) - f(x) \iff f(y) = f(x)$
-    - $\varphi$ morfismo di anelli
-    - $\varphi$ morfismo di anelli $\iff \varphi([a]) \cdot \varphi([b]) = \varphi([a]\cdot [b])$ e $\varphi([a]) + \varphi([b]) = \varphi([a]+ [b])$
-      - $\varphi([a]) \cdot \varphi([b]) = f(a) \cdot f(b)$ per definizione di $\varphi$
-      - $f(a) \cdot f(b) = f(a\cdot b)$ per morfismo di $f$
-      - $f(a \cdot b ) = \varphi([a \cdot b])$ per definizione di $\varphi$
-      - $\varphi([a \cdot b]) = \varphi([a] \cdot [b])$ per definizione di $\cdot$
-      - per $+$ vale il ragionamento analogo
+    - $\varphi$ è ben definita $\iff \forall x, y \in A \quad [x] = [y] \implies \varphi([x]) = f(x) = f(y) = \varphi([y])$
+        - per dimostrazione precedente $f$ morfismo $\implies f(x^{-1}) = f(x)^{-1}$, e dunque rispetto a $+$ in $A$ si ottiene che $\forall x \in A \quad f(-x) = -f(x)$
+        - allora $[x] = [y] \iff x \equiv y \ (\bmod \ \ker(f)) \iff y - x \in \textrm{ker}(f) \iff 0_B = f(y - x) = f(y + (-x)) = f(y) + f(-x) = f(y)-f(x) \iff f(y) = f(x) \iff \varphi([y]) = \varphi([x])$
+    - $\varphi$ morfismo di anelli $\iff \left \{ \begin{array}{l} \varphi([a]) + \varphi([b]) = \varphi([a]+ [b]) \\ \varphi([a]) \cdot \varphi([b]) = \varphi([a]\cdot [b]) \end{array} \right.$
+      - $\varphi([a]) + \varphi([b]) = f(a) + f(b) = f(a + b) = \varphi([a + b]) = \varphi([a] + [b])$
+      - per $\cdot$ vale il ragionamento analogo
     - $\varphi$ isomorfismo di anelli $\iff \varphi$ iniettiva e suriettiva
     - $\varphi$ iniettiva
       - $\varphi$ iniettiva $\iff \textrm{ker}(\varphi)=\{[0_A]\}$ per dimostrazione precedente
-      - $x \in \textrm{ker}(f) \iff x - 0_A \in \textrm{ker}(f) \implies x \equiv 0_A \ (\bmod \ \textrm{ker}(f)) \implies [x] = [0_A] \implies \varphi([x]) = \varphi([0_A])$, poiché $\varphi$ è ben definita, dunque $f(x) = 0_B$
+      - $x \in \textrm{ker}(f) \iff x - 0_A \in \textrm{ker}(f) \iff x \equiv 0_A \ (\bmod \ \textrm{ker}(f)) \iff [x] = [0_A] \implies \varphi([x]) = \varphi([0_A])$, poiché $\varphi$ è ben definita
+      - allora $\varphi([x])= \varphi([0_A]) = f(0_A) = 0_B$ per dimostrazione precedente $\implies x = 0_A$ necessariamente $\implies \ker(f) = \{[0_A]\}$
     - $\varphi$ suriettiva
-      - $\varphi : A / \textrm{ker}(f) \rightarrow \textrm{im}(f) \implies$ l'insieme di arrivo di $\varphi$ coincide è proprio l'insieme delle immagini di $f$, quindi $\varphi$ è suriettiva per costruzione
+      - $\textrm{im}(\varphi) := \{f(a) \mid \exists [a] \in A/\ker(f) : \varphi([a]) = f(a)\} =: \textrm{im}(f)$
 
 ## Oss
 
@@ -261,8 +255,6 @@
   - $f: G \rightarrow H$ morfismo di gruppi
 - **Th**
   - $G / \textrm{ker}(f) \cong \textrm{im}(f)$, o alternativamente $\exists \varphi \mid \varphi : G / \textrm{ker}(f) \rightarrow \textrm{im}(f): [g] \rightarrow f(g)$ isomorfismo di gruppi
-- **Dim**
-  - la dimostrazione è analoga al caso degli anelli
 
 ## Oss
 
@@ -272,8 +264,6 @@
     - $f:V \rightarrow W$ trasformazione lineare
 - **Th**
     - $V/\ker(f) \cong \textrm{im}(f)$, o alternativamente $\exists \varphi \mid \varphi : V/\ker(f) \rightarrow \textrm{im}(f):[v] \rightarrow f(v)$
-- **Dim**
-    - la dimostrazione è analoga al caso degli anelli
 
 ****
 
