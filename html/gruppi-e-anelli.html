@@ -578,7 +578,45 @@ c \in A \mid a = b c \implies b \in A^* \lor c \in A^*</span></li>
 \mid b \lor a \mid c</span></li>
 </ul>
 </blockquote>
+<ul>
+<li><strong>Insieme <span
+class="math inline">\mathbb{P}</span></strong></li>
+</ul>
+<blockquote>
+<ul>
+<li><span class="math inline">\mathbb{P} := \{x \in \mathbb{N} - \{0,
+1\} \mid \nexists y \in \mathbb{N} - \{1, p\} : y \mid x\}</span> è
+detto <strong>insieme degli interi primi</strong>
+<ul>
+<li>si noti che <span class="math inline">\mathbb{P}</span> <em>non
+coincide necessariamente</em> con gli <em>elementi primi</em></li>
+</ul></li>
+</ul>
+</blockquote>
 <a href="#oss-6"><h2 id="oss-6">Oss</h2></a>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">p \in \mathbb{P}</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">p</span> primo</li>
+</ul></li>
+<li><strong>Dim</strong>
+<ul>
+<li>siano <span class="math inline">a, b \in \mathbb{Z} : p \mid ab
+\implies p</span> è nella fattorizzazione di <span
+class="math inline">ab \implies</span> o <span
+class="math inline">p</span> è nella fattorizzazione di <span
+class="math inline">a</span>, e quindi <span class="math inline">p \mid
+a</span>, oppure <span class="math inline">p</span> è nella
+fattorizzazione di <span class="math inline">b</span>, e quindi <span
+class="math inline">p \mid b</span>, e dunque <span
+class="math inline">p</span> primo</li>
+</ul></li>
+</ul>
+<a href="#oss-7"><h2 id="oss-7">Oss</h2></a>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -586,7 +624,7 @@ c \in A \mid a = b c \implies b \in A^* \lor c \in A^*</span></li>
 </ul></li>
 <li><strong>Th</strong>
 <ul>
-<li><span class="math inline">a</span> primo <span
+<li><span class="math inline">\forall a \in A \quad a</span> primo <span
 class="math inline">\implies a</span> irriducibile</li>
 </ul></li>
 <li><strong>Dim</strong>
@@ -615,6 +653,38 @@ A^*</span></li>
 <li>dunque, avendo preso un numero primo in ipotesi che si potesse
 scrivere come prodotto di altri due numeri nel dominio, si è ottenuta la
 definizione di irriducibilità di un elemento</li>
+</ul></li>
+</ul>
+<a href="#oss-8"><h2 id="oss-8">Oss</h2></a>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">a \in \mathbb{Z} \mid a</span>
+irriducibile</li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">a \in \mathbb{P}</span></li>
+</ul></li>
+<li><strong>Dim</strong>
+<ul>
+<li><span class="math inline">a</span> irriducibile <span
+class="math inline">\iff \exists b, c \in A \mid a = bc \implies b \in
+\mathbb{Z}^* \lor c \in \mathbb{Z}^*</span></li>
+<li>inoltre <span class="math inline">\mathbb{Z}^* = \{+1, -1\}</span>
+poiché sono gli unici elementi invertibili rispetto a <span
+class="math inline">\cdot</span> sono <span class="math inline">\pm
+1</span></li>
+<li>allora <span class="math inline">a = bc \implies \left \{
+\begin{array}{l}b = \pm 1 \\ c = a \end{array}\right. \lor \left \{
+\begin{array}{l} b = a \\ c = \pm 1 \end{array} \right. \implies a \in
+\mathbb{P}</span>
+<ul>
+<li>si noti che <span class="math inline">\mathbb{P} \subset
+\mathbb{N}</span>, dunque nel caso di <span
+class="math inline">-1</span> si tratta di “estendere” la definizione di
+<span class="math inline">\mathbb{P} \subset \mathbb{Z}</span></li>
+</ul></li>
 </ul></li>
 </ul>
 <hr />
@@ -647,7 +717,7 @@ H</span>
 </ul></li>
 </ul>
 </blockquote>
-<a href="#oss-7"><h2 id="oss-7">Oss</h2></a>
+<a href="#oss-9"><h2 id="oss-9">Oss</h2></a>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -720,7 +790,7 @@ b_2 \mid b_1, b_2 \in B\}</span></li>
 \forall x \in G \quad xH = Hx</span></li>
 </ul>
 </blockquote>
-<a href="#oss-8"><h2 id="oss-8">Oss</h2></a>
+<a href="#oss-10"><h2 id="oss-10">Oss</h2></a>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -806,7 +876,7 @@ maggiori le potenze cicleranno infinitamente</li>
 </ul></li>
 </ul>
 </blockquote>
-<a href="#oss-9"><h2 id="oss-9">Oss</h2></a>
+<a href="#oss-11"><h2 id="oss-11">Oss</h2></a>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -829,7 +899,7 @@ H(g)</span> per definizione di <span
 class="math inline">H(g)</span></li>
 </ul></li>
 </ul>
-<a href="#oss-10"><h2 id="oss-10">Oss</h2></a>
+<a href="#oss-12"><h2 id="oss-12">Oss</h2></a>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -854,7 +924,7 @@ class="math inline">H(g) \cdot Hg(g) \subseteq H(g)</span></li>
 di <span class="math inline">H(g)</span></li>
 </ul></li>
 </ul>
-<a href="#oss-11"><h2 id="oss-11">Oss</h2></a>
+<a href="#oss-13"><h2 id="oss-13">Oss</h2></a>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -887,7 +957,7 @@ g^{n \cdot k} = (g^n)^k = e^k = e \implies n \cdot k \in
 I(g)</span></li>
 </ul></li>
 </ul>
-<a href="#oss-12"><h2 id="oss-12">Oss</h2></a>
+<a href="#oss-14"><h2 id="oss-14">Oss</h2></a>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -977,7 +1047,7 @@ class="math inline">d</span></li>
 </ul></li>
 </ul></li>
 </ul>
-<a href="#oss-13"><h2 id="oss-13">Oss</h2></a>
+<a href="#oss-15"><h2 id="oss-15">Oss</h2></a>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -999,7 +1069,7 @@ per il teorema di Lagrange, e dunque <span class="math inline">\exists k
 (g^d)^k = e^k = e</span></li>
 </ul></li>
 </ul>
-<a href="#oss-14"><h2 id="oss-14">Oss</h2></a>
+<a href="#oss-16"><h2 id="oss-16">Oss</h2></a>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -1026,7 +1096,7 @@ per il teorema di Lagrange, e dunque <span class="math inline">\exists k
 |H(g)| = |H(g^{-1})| = o(g^{-1})</span></li>
 </ul></li>
 </ul>
-<a href="#oss-15"><h2 id="oss-15">Oss</h2></a>
+<a href="#oss-17"><h2 id="oss-17">Oss</h2></a>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -1056,7 +1126,7 @@ H(g)</span>, necessariamente <span class="math inline">o(g^k) = |
 H(g^k)| \bigg\vert |H(g)| = o(g)</span></li>
 </ul></li>
 </ul>
-<a href="#oss-16"><h2 id="oss-16">Oss</h2></a>
+<a href="#oss-18"><h2 id="oss-18">Oss</h2></a>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -1075,7 +1145,7 @@ m</span></li>
 <li>⚠️ <strong>frate c’ho veramente 0 sbatta</strong></li>
 </ul></li>
 </ul>
-<a href="#oss-17"><h2 id="oss-17">Oss</h2></a>
+<a href="#oss-19"><h2 id="oss-19">Oss</h2></a>
 <ul>
 <li><strong>Hp</strong>
 <ul>

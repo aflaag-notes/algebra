@@ -30,18 +30,6 @@
 ## Oss
 
 - **Hp**
-  - $p \in \mathbb{P}$
-  - $a, b \in \mathbb{Z}$
-  - $p \mid ab$
-- **Th**
-  - $p \mid a \lor p \mid b$
-- **Dim**
-  - $p \mid ab \implies p$ è nella fattorizzazione in numeri primi di $ab$
-  - $p \in \mathbb{P}$, allora $p$ è nella fattorizzazione di $a$, e quindi $p \mid a$, oppure $p$ è nella fattorizzazione di $b$, e quindi $p \mid b$
-
-## Oss
-
-- **Hp**
   - $n \in \mathbb{Z}$
 - **Th**
   - $\mathbb{Z}_n$ dominio di integrità $\iff n \in \mathbb{P}$

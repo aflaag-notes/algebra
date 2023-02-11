@@ -182,12 +182,26 @@
 > - $a \in A - \{0\} \mid a \in A^*$
 > - $a$ è detto **primo** $\iff \exists b, c \in A : a \mid bc \implies a \mid b \lor a \mid c$
 
+- **Insieme $\mathbb{P}$**
+
+> - $\mathbb{P} := \{x \in \mathbb{N} - \{0, 1\} \mid \nexists y \in \mathbb{N} - \{1, p\} : y \mid x\}$ è detto **insieme degli interi primi**
+>   - si noti che $\mathbb{P}$ _non coincide necessariamente_ con gli _elementi primi_
+
+## Oss
+
+- **Hp**
+  - $p \in \mathbb{P}$
+- **Th**
+  - $p$ primo
+- **Dim**
+  - siano $a, b \in \mathbb{Z} : p \mid ab \implies p$ è nella fattorizzazione di $ab \implies$ o $p$ è nella fattorizzazione di $a$, e quindi $p \mid a$, oppure $p$ è nella fattorizzazione di $b$, e quindi $p \mid b$, e dunque $p$ primo
+
 ## Oss
 
 - **Hp**
     - $A$ dominio di integrità
 - **Th**
-    - $a$ primo $\implies a$ irriducibile
+    - $\forall a \in A \quad a$ primo $\implies a$ irriducibile
 - **Dim**
     - si supponga $\exists b, c \in A \mid a = bc$
     - $\forall a \in A \quad a \mid a$ per riflessività
@@ -196,6 +210,18 @@
     - $A$ dominio di integrità per ipotesi, e dunque in esso vale la legge di annullamento del prodotto
     - per definizione $a$ primo $\implies a \neq 0 \implies 1 - cd = 0 \iff -cd = -1 \iff cd = 1$, che per definizione implica che $d$ è l'inverso di $c$, e dunque $c \in A^*$
     - dunque, avendo preso un numero primo in ipotesi che si potesse scrivere come prodotto di altri due numeri nel dominio, si è ottenuta la definizione di irriducibilità di un elemento
+
+## Oss
+
+- **Hp**
+    - $a \in \mathbb{Z} \mid a$ irriducibile
+- **Th**
+    - $a \in \mathbb{P}$
+- **Dim**
+    - $a$ irriducibile $\iff \exists b, c \in A \mid a = bc \implies b \in \mathbb{Z}^* \lor c \in \mathbb{Z}^*$
+    - inoltre $\mathbb{Z}^* = \{+1, -1\}$ poiché sono gli unici elementi invertibili rispetto a $\cdot$ sono $\pm 1$
+    - allora $a = bc \implies \left \{ \begin{array}{l}b = \pm 1 \\ c = a \end{array}\right. \lor \left \{ \begin{array}{l} b = a \\ c = \pm 1 \end{array} \right. \implies a \in \mathbb{P}$
+        - si noti che $\mathbb{P} \subset \mathbb{N}$, dunque nel caso di $-1$ si tratta di "estendere" la definizione di $\mathbb{P} \subset \mathbb{Z}$
 
 ****
 

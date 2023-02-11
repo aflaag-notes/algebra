@@ -63,7 +63,6 @@
 - **Dim**
   - $a = 0 \lor b = 0 \lor a = b = 0 \implies \textrm{mcm}(a, b) = 0$
   - $a, b \gt 0$
-    - $\mathbb{P} := \{p \in \mathbb{N} \mid p$ primo$\}$
     - $\forall n \in \mathbb{N} - \{0\} \quad \exists ! n_2, n_3, n_5, \ldots, n_p \in \mathbb{N} \mid p \in \mathbb{P} : n = 2^{n_2} \cdot 3 ^ {n_3} \cdot \ldots \cdot p ^ {n_p}$
       - $p \nmid n \implies n_p = 0 \implies p ^  {n_p} = 1$, dunque non influisce nella produttoria
     - $\displaystyle{n = \prod_{p \in \mathbb{P}}^{} p ^{n_p}}$, quindi è possibile riscrivere anche $a$ e $b$ tramite i loro fattori primi come  $\displaystyle{a=\prod_{p \in \mathbb{P}} p^{a_{p}}}$ e $\displaystyle{b=\prod_{p \in \mathbb{P}} p^{b_{p}} }$
