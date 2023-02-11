@@ -262,7 +262,7 @@
     - $V, W$ spazi vettoriali su $\mathbb{K}$
     - $f:V \rightarrow W$ trasformazione lineare
 - **Th**
-    - $V/\ker(f) \cong \textrm{im}(f)$, o alternativamente $\exists \varphi \mid \varphi : V/\ker(f) \rightarrow \textrm{im}(f):[v] \rightarrow f(v)$
+    - $V/\ker(f) \cong \textrm{im}(f)$, o alternativamente $\exists \varphi \mid \varphi : V/\ker(f) \rightarrow \textrm{im}(f):[v] \rightarrow f(v)$ trasformazione lineare
 
 ****
 

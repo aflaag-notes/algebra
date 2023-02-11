@@ -287,9 +287,9 @@
       - $\sigma^{\prime}=\left(\begin{array}{cccccccc}1 & 2 & \cdots & d_{1} & d_{1}+1 & \cdots & d_{1}+d_{2} & \cdots \\ 2 & 3 & \cdots & 1 & d_{1}+2 & \cdots & d_{1}+1 & \cdots \end{array}\right)$
   - per portare $1$ nella prima colonna, devo applicare $d_1 - 1$ trasposizioni adiacenti
     - _esempio_
-      - in $(2 \ 3 \ 4\ 5\ 6\ 1)$ devo applicare $5$ trasposizioni adiacenti per ottenere $(1\ 2\ 3\ 4\ 5)$
-  - per portare $d_1 + 1$ nella colonna corretta, devo applicare $d_2 - 1$ trasposizioni adiacenti, e vale il ragionamento analogo per ogni altro ciclo
-  - allora, per ottenere $\textrm{id}$ a partire da $\sigma^\prime$, devo applicare $(d_1 -1) + (d_2 - 1) + \ldots + (d_k - 1)$ trasposizioni adiacenti, ovvero $d_1 + \ldots + d_k - 1 \cdot k = n - k$
+      - in $(2 \ 3 \ 4\ 5\ 6\ 1)$ devo applicare $5$ trasposizioni adiacenti per ottenere $(1\ 2\ 3\ 4\ 5 \ 6)$
+  - per portare $d_1 + 1$ nella colonna corretta, bisogna applicare $d_2 - 1$ trasposizioni adiacenti, e vale il ragionamento analogo per ogni altro ciclo
+  - allora, per ottenere $\textrm{id}$ a partire da $\sigma^\prime$, bisogna applicare $(d_1 -1) + (d_2 - 1) + \ldots + (d_k - 1)$ trasposizioni adiacenti, ovvero $d_1 + \ldots + d_k - 1 \cdot k = n - k$
     - $d_1 + \ldots + d_k$ è il numero di colonne di $\sigma^\prime \in \mathcal{S}_n$, dunque è pari a $n$
     - $k$ è il numero di cicli, quindi nell'equazione $-1$ appare esattamente $k$ volte
   - di conseguenza, $\textrm{id} = \sigma^\prime \tau_1 \ldots \tau_{n -k} \iff \sigma^\prime = \tau_{n - k} \ldots \tau_1 \iff \textrm{sgn}(\sigma^\prime) = \textrm{sgn}(\tau_{n-k} \ldots \tau_1)$, e dunque rimuovendo ogni trasposizione adiacente si ottiene che $\textrm{sgn}(\sigma^\prime) = (-1)^{n -k}$ per osservazione in dimostrazione precedente

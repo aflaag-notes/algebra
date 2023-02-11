@@ -1,4 +1,4 @@
-# Gruppi e Anelli
+bisogna# Gruppi e Anelli
 
 ## Def
 
@@ -214,13 +214,14 @@
 ## Oss
 
 - **Hp**
-    - $a \in \mathbb{Z} \mid a$ irriducibile
+    - $a \in \mathbb{Z}_{\ge 2} \mid a$ irriducibile
 - **Th**
     - $a \in \mathbb{P}$
 - **Dim**
     - $a$ irriducibile $\iff \exists b, c \in A \mid a = bc \implies b \in \mathbb{Z}^* \lor c \in \mathbb{Z}^*$
     - inoltre $\mathbb{Z}^* = \{+1, -1\}$ poiché sono gli unici elementi invertibili rispetto a $\cdot$ sono $\pm 1$
-    - allora $a = bc \implies \left \{ \begin{array}{l}b = \pm 1 \\ c = a \end{array}\right. \lor \left \{ \begin{array}{l} b = a \\ c = \pm 1 \end{array} \right. \implies a \in \mathbb{P}$
+    - allora $a = bc \implies \left \{ \begin{array}{l}b = \pm 1 \\ c = a \end{array}\right. \lor \left \{ \begin{array}{l} b = a \\ c = \pm 1 \end{array} \right. \lor \left \{ \begin{array}{l} b = \pm 1 \\ c = \pm \end{array} \right.$
+    - per i primi due casi, si ha che $a \in \mathbb{P}$, per l'ultimo caso si avrebbe $bc = a = \pm 1$, ma $a \in \mathbb{Z}_{\ge 2} \ \bot$
         - si noti che $\mathbb{P} \subset \mathbb{N}$, dunque nel caso di $-1$ si tratta di "estendere" la definizione di $\mathbb{P} \subset \mathbb{Z}$
 
 ****
