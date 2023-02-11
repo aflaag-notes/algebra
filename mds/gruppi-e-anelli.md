@@ -1,4 +1,4 @@
-bisogna# Gruppi e Anelli
+# Gruppi e Anelli
 
 ## Def
 
