@@ -77,7 +77,7 @@ with open("mds/teoremi-fondamentali.md") as TF:
             if line == "- **Dim**":
                 indim = True
 
-            if line.startswith("## Oss") or line.startswith("## Cor") or line.startswith("## Lem") or line.startswith("## Teorema cinese dei resti"):
+            if line.startswith("## Oss") or line.startswith("## Cor") or line.startswith("## Lem") or line.startswith("## Ex") or line.startswith("## Alg"):
                 s2.append("\n## Teorema " + str(i) + "\n")
                 i += 1
 

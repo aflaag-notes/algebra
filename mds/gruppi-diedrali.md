@@ -100,3 +100,10 @@
     - siano $a, b, x \in G \mid ab = x$ per un certo elemento $x = 1 \lor x = a \lor x = b \lor x = c$, allora si ha che $\left \{ \begin{array}{l} ab = 1 \implies b = a^{-1} = a \ \bot \\ ab = a \implies b = 1 \ \bot \\ ab = b \implies a = 1 \ \bot \end{array} \right. \implies ab = c$ necessariamente
     - il ragionamento è analogo per tutti gli altri prodotti, il che dimostra che presi $3$ elementi in $G - \{1\}$, moltiplicandone due tra loro si ottiene il terzo $\implies G \cong K_4$
 
+## Oss
+
+- **Hp**
+    - $G$ gruppo $\bigg\vert |G| = 6$
+- **Th**
+    - $G \cong \mathbb{Z}_6 \lor G \cong \mathcal{S}_3$
+
