@@ -312,7 +312,7 @@
 
 ## Def
 
-- **Ordine di un elemento in un gruppo**
+- **Ordine di un elemento**
 
 > - $G$ gruppo
 > - $g \in G$

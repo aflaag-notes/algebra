@@ -302,7 +302,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 ## Definizione 9
 
 
-- **Ordine di un elemento in un gruppo**
+- **Ordine di un elemento**
 
 > - $G$ gruppo
 > - $g \in G$
