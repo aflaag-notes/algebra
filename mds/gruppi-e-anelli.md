@@ -330,9 +330,9 @@
 - **Th**
     - $(H(g), +) \leqslant (G, +)$
 - **Dim**
-    - $0 = 0 \cdot g \implies 0 \in H(g)$ per definizione di $H(g)$
-    - $\forall xg, yg \in H(g) \quad xg + yg = (x + y)g \in H(g)$ per definizione di $H(g)$
-    - $\forall xg \in H(g) \quad -xg = (-x)g \in H(g)$ per definizione di $H(g)$
+    - $0 = 0 \cdot g \implies 0 \in H(g)$
+    - $\forall xg, yg \in H(g) \quad xg + yg = (x + y)g \in H(g)$
+    - $\forall xg \in H(g) \quad -xg = (-x)g \in H(g)$
 
 ## Oss
 
@@ -342,9 +342,9 @@
 - **Th**
   - $(H(g), \cdot) \leqslant (G, \cdot)$
 - **Dim**
-  - $e=g^{0} \implies e \in H(g)$ per definizione di $H(g)$
+  - $e=g^{0} \implies e \in H(g)$
   - $\forall m, n \in \mathbb{Z} \quad m + n \in \mathbb{Z} \implies g^m \cdot g^n = g^{m + n} \in H(g)$ per definizione di $H(g)$, quindi $H(g) \cdot Hg(g) \subseteq H(g)$
-  - $\forall n \in \mathbb{Z} \quad -n \in \mathbb{Z} \implies (g^n)^{-1} = g^{-n} \in H(g)$ per definizione di $H(g)$
+  - $\forall n \in \mathbb{Z} \quad -n \in \mathbb{Z} \implies (g^n)^{-1} = g^{-n} \in H(g)$
 
 ## Oss
 
@@ -356,7 +356,7 @@
   - $I(g)$ è un ideale
 - **Dim**
   - $(I(g), +) \leqslant (\mathbb{Z}, +)$
-    - $0 \in \mathbb{Z} \land g^{0}=e \implies 0 \in I(g)$ per definizione di $I(g)$
+    - $0 \in \mathbb{Z} \land g^{0}=e \implies 0 \in I(g)$
     - $m, n \in \mathbb{Z} \mid  g^{m}=g^{n}=e \implies g^{m} \cdot g^{n}= g^{m + n} \iff e \cdot e = e \implies m +n \in I(g)$ per definizoine di $I(g)$, quindi $I(g) + I(g) \subseteq I(g)$
     - $n \in I(g) \mid g^n = e \iff (g^n)^{-1} = e ^{-1 } \iff g^{-n} =e \implies -n \in I(g)$
   - $\forall n \in I(g), k \in \mathbb{Z} \quad g^{n \cdot k} = (g^n)^k = e^k = e \implies n \cdot k \in I(g)$
@@ -460,18 +460,17 @@
 
 > - $G$ gruppo
 > - $G$ è detto **ciclico** $\iff \exists g \in G \mid H(g) = G$
->   - ovvero, $G$ è l'insieme delle potenze di $g$ stesso
+>   - ovvero, $G$ è l'insieme delle potenze di $g$
 
 ## Oss
 
 - **Hp**
     - $G$ gruppo
-    - $n := |G| \in \mathbb{N}$
-    - $\exists g \in G \mid o(g) = n$
+    - $g \in G \mid o(g) = |G|$
 - **Th**
     - $G$ ciclico
 - **Dim**
-    - $H(g) \leqslant G \implies H(g) \subseteq G \implies o(g) = |H(g)| = n = |G| \iff G = H(g) \iff G$ ciclico
+    - $\left .\begin{array}{l} H(g) \leqslant G \implies H(g) \subseteq G \\ o(g) := |H(g)| = |G| \end{array} \right \} \implies G = H(g) \implies G$ ciclico
 
 ## Oss
 
@@ -498,4 +497,13 @@
 - **Dim**
     - $\forall g \in G \quad |H(g)| \bigg\vert |G|$ per il teorema di Lagrange
     - $p \in \mathbb{P} \implies |H(g)| = \left \{ \begin{array}{ll} 1 & g = 1_G \\ p & g \neq 1_G \end{array} \right. \implies \forall g \in G - \{1_G\} \quad |H(g)| = p =|G| \implies H(g) \iff G = H(g) \cong \mathbb{Z}_p$ per dimostrazione precedente
+
+## Oss
+
+- **Hp**
+    - $G$ gruppo ciclico
+- **Th**
+    - $G \cong \mathbb{Z}_{|G|}$
+- **Dim**
+    - $G$ ciclico $\iff \exists g \in G \mid G = H(g) \cong \mathbb{Z}_{o(g)}= \mathbb{Z}_{|G|}$
 

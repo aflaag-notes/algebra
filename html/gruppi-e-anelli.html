@@ -892,14 +892,12 @@ maggiori le potenze cicleranno infinitamente</li>
 </ul></li>
 <li><strong>Dim</strong>
 <ul>
-<li><span class="math inline">0 = 0 \cdot g \implies 0 \in H(g)</span>
-per definizione di <span class="math inline">H(g)</span></li>
+<li><span class="math inline">0 = 0 \cdot g \implies 0 \in
+H(g)</span></li>
 <li><span class="math inline">\forall xg, yg \in H(g) \quad xg + yg = (x
-+ y)g \in H(g)</span> per definizione di <span
-class="math inline">H(g)</span></li>
++ y)g \in H(g)</span></li>
 <li><span class="math inline">\forall xg \in H(g) \quad -xg = (-x)g \in
-H(g)</span> per definizione di <span
-class="math inline">H(g)</span></li>
+H(g)</span></li>
 </ul></li>
 </ul>
 <a href="#oss-12"><h2 id="oss-12">Oss</h2></a>
@@ -916,15 +914,13 @@ class="math inline">H(g)</span></li>
 </ul></li>
 <li><strong>Dim</strong>
 <ul>
-<li><span class="math inline">e=g^{0} \implies e \in H(g)</span> per
-definizione di <span class="math inline">H(g)</span></li>
+<li><span class="math inline">e=g^{0} \implies e \in H(g)</span></li>
 <li><span class="math inline">\forall m, n \in \mathbb{Z} \quad m + n
 \in \mathbb{Z} \implies g^m \cdot g^n = g^{m + n} \in H(g)</span> per
 definizione di <span class="math inline">H(g)</span>, quindi <span
 class="math inline">H(g) \cdot Hg(g) \subseteq H(g)</span></li>
 <li><span class="math inline">\forall n \in \mathbb{Z} \quad -n \in
-\mathbb{Z} \implies (g^n)^{-1} = g^{-n} \in H(g)</span> per definizione
-di <span class="math inline">H(g)</span></li>
+\mathbb{Z} \implies (g^n)^{-1} = g^{-n} \in H(g)</span></li>
 </ul></li>
 </ul>
 <a href="#oss-13"><h2 id="oss-13">Oss</h2></a>
@@ -945,8 +941,7 @@ e\}</span></li>
 <li><span class="math inline">(I(g), +) \leqslant (\mathbb{Z}, +)</span>
 <ul>
 <li><span class="math inline">0 \in \mathbb{Z} \land g^{0}=e \implies 0
-\in I(g)</span> per definizione di <span
-class="math inline">I(g)</span></li>
+\in I(g)</span></li>
 <li><span class="math inline">m, n \in \mathbb{Z} \mid g^{m}=g^{n}=e
 \implies g^{m} \cdot g^{n}= g^{m + n} \iff e \cdot e = e \implies m +n
 \in I(g)</span> per definizoine di <span
@@ -1179,7 +1174,7 @@ m</span></li>
 <span class="math inline">\iff \exists g \in G \mid H(g) = G</span>
 <ul>
 <li>ovvero, <span class="math inline">G</span> è l’insieme delle potenze
-di <span class="math inline">g</span> stesso</li>
+di <span class="math inline">g</span></li>
 </ul></li>
 </ul>
 </blockquote>
@@ -1188,8 +1183,7 @@ di <span class="math inline">g</span> stesso</li>
 <li><strong>Hp</strong>
 <ul>
 <li><span class="math inline">G</span> gruppo</li>
-<li><span class="math inline">n := |G| \in \mathbb{N}</span></li>
-<li><span class="math inline">\exists g \in G \mid o(g) = n</span></li>
+<li><span class="math inline">g \in G \mid o(g) = |G|</span></li>
 </ul></li>
 <li><strong>Th</strong>
 <ul>
@@ -1197,9 +1191,9 @@ di <span class="math inline">g</span> stesso</li>
 </ul></li>
 <li><strong>Dim</strong>
 <ul>
-<li><span class="math inline">H(g) \leqslant G \implies H(g) \subseteq G
-\implies o(g) = |H(g)| = n = |G| \iff G = H(g) \iff G</span>
-ciclico</li>
+<li><span class="math inline">\left .\begin{array}{l} H(g) \leqslant G
+\implies H(g) \subseteq G \\ o(g) := |H(g)| = |G| \end{array} \right \}
+\implies G = H(g) \implies G</span> ciclico</li>
 </ul></li>
 </ul>
 <a href="#oss-21"><h2 id="oss-21">Oss</h2></a>
@@ -1259,6 +1253,23 @@ class="math inline">\big\vert p := |G| \in \mathbb{P}</span></li>
 \right. \implies \forall g \in G - \{1_G\} \quad |H(g)| = p =|G|
 \implies H(g) \iff G = H(g) \cong \mathbb{Z}_p</span> per dimostrazione
 precedente</li>
+</ul></li>
+</ul>
+<a href="#oss-23"><h2 id="oss-23">Oss</h2></a>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">G</span> gruppo ciclico</li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">G \cong \mathbb{Z}_{|G|}</span></li>
+</ul></li>
+<li><strong>Dim</strong>
+<ul>
+<li><span class="math inline">G</span> ciclico <span
+class="math inline">\iff \exists g \in G \mid G = H(g) \cong
+\mathbb{Z}_{o(g)}= \mathbb{Z}_{|G|}</span></li>
 </ul></li>
 </ul>
 </body>
