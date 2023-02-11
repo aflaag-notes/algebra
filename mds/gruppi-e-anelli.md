@@ -182,7 +182,7 @@
 > - $a \in A - \{0\} \mid a \in A^*$
 > - $a$ è detto **primo** $\iff \exists b, c \in A : a \mid bc \implies a \mid b \lor a \mid c$
 
-- **Insieme $\mathbb{P}$**
+- **Interi primi**
 
 > - $\mathbb{P} := \{x \in \mathbb{N} - \{0, 1\} \mid \nexists y \in \mathbb{N} - \{1, p\} : y \mid x\}$ è detto **insieme degli interi primi**
 >   - si noti che $\mathbb{P}$ _non coincide necessariamente_ con gli _elementi primi_
