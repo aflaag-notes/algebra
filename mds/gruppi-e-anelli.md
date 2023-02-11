@@ -453,3 +453,49 @@ bisogna# Gruppi e Anelli
     - $o(gh) = o(hg) = m$
 - **Dim**
     - per dimostrazione precedente, $d = 1 \implies m \mid o(gh) \land o(gh) \mid m \implies m = o(gh)$
+
+## Def
+
+- **Gruppo ciclico**
+
+> - $G$ gruppo
+> - $G$ è detto **ciclico** $\iff \exists g \in G \mid H(g) = G$
+>   - ovvero, $G$ è l'insieme delle potenze di $g$ stesso
+
+## Oss
+
+- **Hp**
+    - $G$ gruppo
+    - $n := |G| \in \mathbb{N}$
+    - $\exists g \in G \mid o(g) = n$
+- **Th**
+    - $G$ ciclico
+- **Dim**
+    - $H(g) \leqslant G \implies H(g) \subseteq G \implies o(g) = |H(g)| = n = |G| \iff G = H(g) \iff G$ ciclico
+
+## Oss
+
+- **Hp**
+    - $G$ gruppo
+    - $g \in G$
+- **Th**
+    - $H(g) \cong \left \{ \begin{array}{ll} \mathbb{Z} & o(g) = + \infty \\ \mathbb{Z}_d & o(g) = d\end{array} \right.$
+- **Dim**
+    - sia $f: \mathbb{Z} \rightarrow H(g): n \rightarrow g^n$
+    - $\forall n, m \in \mathbb{Z} \quad f(n + m) = g^{n + m} = g^n \cdot g^m = f(n) \cdot f(m) \iff f$ morfismo di gruppi tra $(\mathbb{Z}, +)$ e $(H(g), \cdot)$
+    - $\ker(f) := \{n \in \mathbb{Z} \mid f(n) = g^n = 1_{H(g)}\} =: I(g)$
+    - allora $\mathbb{Z} / I(g) = \mathbb{Z} / \ker(f) \cong \textrm{im}(f)$ per il teorema di isomorfismo
+    - $\textrm{im}(f) := \{g^n \in H(g) \mid \exists n \in \mathbb{Z} : f(n) = g^n\} =: H(g)$
+    - per dimostrazione precedente $\exists ! d \in \mathbb{N} \mid I(d) = I(g)$, dove $\left \{ \begin{array}{l} d = 0 \implies o(g) = + \infty \\ d \gt 0 \implies o(g) = d \end{array} \right.$
+    - allora $H(g) = \textrm{im}(f) \cong \mathbb{Z}/ \ker(f) = \mathbb{Z}/I(d) = \left \{ \begin{array}{ll} \mathbb{Z} & o(g) = + \infty \\ \mathbb{Z}_d & o(g) = d\end{array} \right.$
+
+## Oss
+
+- **Hp**
+    - $G$ gruppo $\big\vert p := |G| \in \mathbb{P}$
+- **Th**
+    - $G \cong \mathbb{Z}_p$
+- **Dim**
+    - $\forall g \in G \quad |H(g)| \bigg\vert |G|$ per il teorema di Lagrange
+    - $p \in \mathbb{P} \implies |H(g)| = \left \{ \begin{array}{ll} 1 & g = 1_G \\ p & g \neq 1_G \end{array} \right. \implies \forall g \in G - \{1_G\} \quad |H(g)| = p =|G| \implies H(g) \iff G = H(g) \cong \mathbb{Z}_p$ per dimostrazione precedente
+

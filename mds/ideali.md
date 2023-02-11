@@ -82,7 +82,7 @@
 - **Hp**
   - $I \subset \mathbb{Z}$ ideale
 - **Th**
-  -  $\exists ! \ d  \in \mathbb{N} \mid I = I(d)$, o equivalentemente, in $\mathbb{Z}$ ogni ideale è principale
+  -  $\exists ! d  \in \mathbb{N} \mid I = I(d)$, o equivalentemente, in $\mathbb{Z}$ ogni ideale è principale
 - **Dim**
     - _esistenza_
         - $d = 0$
@@ -131,6 +131,7 @@
         - $d$ è il massimo tra i divisori comuni quando $\forall k \in \mathbb{Z}: k \mid a_1, \ldots, a_n \quad  k \mid d$
         - $\forall i \in [1, n] \quad k \mid a_i \iff \exists x_i \in \mathbb{Z} \mid kx_i = a_i$
         - $d \in I(d) = I(a_1, \ldots, a_n) \iff d \in I(a_1, \ldots, a_n) \implies \exists b_1, \ldots b_n \in \mathbb{Z} \mid d = a_1 b_1 + \ldots + a_n b_n$, e per osservazione precedente si ottiene che $d = kx_1b_1 + \ldots + kx_nb_n = k(b_1x_1 + \ldots + b_nx_n) \implies k \mid d$
+
 ## Oss
 
 - **Hp**

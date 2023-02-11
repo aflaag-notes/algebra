@@ -8,7 +8,7 @@ Questi sono i miei [appunti di algebra](https://ph04.github.io/algebra/html/inde
 
 ## TODO list
 
-- fixa il quoziente, che $(G/H, \cdot)$ gruppo soltanto se $H$ normale
+- dimostrazione per cui $|G| = 6 \implies G \cong \mathbb{Z}_6 \lor G \cong \mathcal{S}_3$
 - giacitura
 - vedi matrice di transizione negli appunti di simone
 - algoritmi

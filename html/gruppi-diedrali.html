@@ -194,9 +194,10 @@
 <li><span class="math inline">n \in \mathbb{N}_{\ge 2}</span></li>
 <li><span class="math inline">\mathcal{D}_n</span> è l’<strong>insieme
 delle simmetrie dell’<span class="math inline">n</span>-gono
-regolare</strong>
+regolare</strong>, ed è detto <strong>gruppo diedrale di ordine <span
+class="math inline">n</span></strong>
 <ul>
-<li>l’insieme delle rotazioni che lasciano l’<span
+<li>è formato dall’insieme delle rotazioni che lasciano l’<span
 class="math inline">n</span>-gono invariato, e delle riflessioni
 rispetto agli assi di simmetria</li>
 </ul></li>
@@ -266,18 +267,19 @@ utilizzando queste regole</li>
 <ul>
 <li><strong>Hp</strong>
 <ul>
-<li><span class="math inline">D_2</span> gruppo diedrale</li>
+<li><span class="math inline">\mathcal{D}_2</span> gruppo diedrale</li>
 </ul></li>
 <li><strong>Th</strong>
 <ul>
-<li><span class="math inline">(D_2, \cdot)</span> è l’unico gruppo
-diedrale abeliano</li>
+<li><span class="math inline">(\mathcal{D}_2, \cdot)</span> è l’unico
+gruppo diedrale abeliano</li>
 </ul></li>
 <li><strong>Dim</strong>
 <ul>
-<li><span class="math inline">D_2 = \{1, \rho, \sigma_0, \sigma_1\}
-\implies</span> per le regole di composizione definite precedentemente
-<span class="math inline">\left\{\begin{array}{l}\rho^{0} \cdot
+<li><span class="math inline">\mathcal{D}_2 = \{1, \rho, \sigma_0,
+\sigma_1\} \implies</span> per le regole di composizione definite
+precedentemente <span
+class="math inline">\left\{\begin{array}{l}\rho^{0} \cdot
 \sigma_{0}=\sigma_{0+0 \ (\bmod \ 2)}=\sigma_{0}=\sigma_{0-0 \ (\bmod \
 2)}=\sigma_{0} \cdot \rho^{0} \quad i=j=0 \\ \rho^{0} \cdot
 \sigma_{1}=\sigma_{0+1 \ (\bmod \ 2)}=\sigma_{1}=\sigma_{1-0 \ (\bmod \
@@ -286,12 +288,11 @@ diedrale abeliano</li>
 2 )}=\sigma_{0} \cdot \rho^1 \quad i = 1, j = 0 \\ \rho^{1} \cdot
 \sigma_{1}= \sigma_{1 + 1 \ (\bmod \ 2)} = \sigma_0 = \sigma_{1-1 \
 (\bmod\  2)} = \sigma_1 \cdot \rho ^1 \quad i = j =
-1\end{array}\right.</span>, quindi il gruppo è commutativo, e dunque
-abeliano</li>
+1\end{array}\right.</span>, dunque il gruppo è abeliano</li>
 <li>per le regole di composizione definite precedentemente, per <span
 class="math inline">n \ge 3</span> la commutatività non è sempre
-rispettata, quindi <span class="math inline">(D_2, \cdot)</span> è anche
-l’unico gruppo abeliano</li>
+rispettata, quindi <span class="math inline">(\mathcal{D}_2,
+\cdot)</span> è anche l’unico gruppo abeliano</li>
 </ul></li>
 </ul>
 <a href="#oss-3"><h2 id="oss-3">Oss</h2></a>
@@ -304,112 +305,73 @@ l’unico gruppo abeliano</li>
 <ul>
 <li><span class="math inline">\mathcal{D}_n \hookrightarrow
 \mathcal{S}_n</span></li>
-<li><span class="math inline">\exists X \subset \mathcal{S}_n</span>
-sottogruppo di <span class="math inline">\mathcal{S}_n</span> <span
-class="math inline">\mid \mathcal{D}_n \cong X</span>
-<ul>
-<li><span class="math inline">\mathcal{D}_3 \cong
+<li><span class="math inline">\exists \mathcal{X} \leqslant
+\mathcal{S}_n \mid \mathcal{D}_n \cong \mathcal{X}</span>, e in
+particolare <span class="math inline">\mathcal{D}_3 \cong
 \mathcal{S}_3</span></li>
-</ul></li>
 </ul></li>
 <li><strong>Dim</strong>
 <ul>
-<li><p>per ogni simmetria in <span
+<li>per ogni simmetria in <span
 class="math inline">\mathcal{D}_n</span>, è possibile trovare l’unica
 permutazione equivalente in <span
-class="math inline">\mathcal{S}_n</span></p>
+class="math inline">\mathcal{S}_n</span>, e dunque è ben definita <span
+class="math inline">f: \mathcal{D}_n \rightarrow \mathcal{S}_n</span>
 <ul>
-<li>ad esempio, con <span class="math inline">n = 3</span>, numerando
-ogni vertice del triangolo equilatero, partendo dal vertice in basso a
-destra, si ottiene
+<li><em>esempio</em>
 <ul>
-<li><span class="math inline">\rho^0=</span><span
-class="math inline">\left(\begin{array}{lll}1 &amp; 2 &amp; 3 \\
-1&amp;2&amp;3\end{array}\right)</span><span
-class="math inline">=\textrm{id}</span></li>
-<li><span class="math inline">\rho^1=</span><span
-class="math inline">\left(\begin{array}{lll}1 &amp; 2 &amp; 3 \\ 2 &amp;
-3 &amp; 1\end{array}\right)</span></li>
-<li><span class="math inline">\rho^2=</span><span
-class="math inline">\left(\begin{array}{lll}1 &amp; 2 &amp; 3 \\
-3&amp;1&amp;2\end{array}\right)</span></li>
-<li><span class="math inline">\sigma_0=</span><span
-class="math inline">\left(\begin{array}{lll}1 &amp; 2 &amp; 3 \\
-1&amp;3&amp;2\end{array}\right)</span></li>
-<li><span class="math inline">\sigma_1=</span><span
-class="math inline">\left(\begin{array}{lll}1 &amp; 2 &amp; 3 \\
-2&amp;1&amp;3\end{array}\right)</span></li>
-<li><span class="math inline">\sigma_2=</span><span
-class="math inline">\left(\begin{array}{lll}1 &amp; 2 &amp; 3 \\
-3&amp;2&amp;1\end{array}\right)</span></li>
+<li>per <span class="math inline">n = 3</span>, numerando ogni vertice
+del triangolo equilatero, partendo dal vertice in basso a destra, si
+ottiene <span class="math inline">\left \{ \begin{array}{l}
+\varphi(\rho^0)=\left(\begin{array}{lll}1 &amp; 2 &amp; 3 \\
+1&amp;2&amp;3\end{array}\right)=\textrm{id} \\
+\varphi(\rho^1)=\left(\begin{array}{lll}1 &amp; 2 &amp; 3 \\ 2 &amp; 3
+&amp; 1\end{array}\right) \\ \varphi(\rho^2)=\left(\begin{array}{lll}1
+&amp; 2 &amp; 3 \\ 3&amp;1&amp;2\end{array}\right) \\
+\varphi(\sigma_0)=\left(\begin{array}{lll}1 &amp; 2 &amp; 3 \\
+1&amp;3&amp;2\end{array}\right) \\
+\varphi(\sigma_1)=\left(\begin{array}{lll}1 &amp; 2 &amp; 3 \\
+2&amp;1&amp;3\end{array}\right) \\
+\varphi(\sigma_2)=\left(\begin{array}{lll}1 &amp; 2 &amp; 3 \\
+3&amp;2&amp;1\end{array}\right) \end{array} \right.</span></li>
 </ul></li>
 </ul></li>
-<li><p>poiché la permutazione equivalente è unica, funzione che manda
-una simmetria in <span class="math inline">\mathcal{D}_n</span> nella
-corrispondente permutazione in <span
-class="math inline">\mathcal{S}_n</span> è iniettiva</p></li>
-<li><p>allora <span class="math inline">\mathcal{D}_n \hookrightarrow
-\mathcal{S}_n</span>, ovvero, l’inclusione è iniettiva ma non suriettiva
-in generale</p>
+<li>poiché la permutazione equivalente è unica, <span
+class="math inline">f</span> iniettiva</li>
+<li>allora <span class="math inline">\mathcal{D}_n \hookrightarrow
+\mathcal{S}_n</span>, ovvero, l’inclusione è iniettiva ma non
+necessariamente suriettiva, infatti in generale si ha <span
+class="math inline">|\mathcal{D}_n| \le |\mathcal{S}_n|</span></li>
+<li>ma per ragionamento analogo <span class="math inline">\exists
+\mathcal{X} \leqslant \mathcal{S}_n \ \big\vert \ |\mathcal{X}| =
+|\mathcal{D}_n| \implies f</span> suriettiva <span
+class="math inline">\implies f</span> biiettiva</li>
+<li>in particolare, <span class="math inline">\mathcal{D}_3</span>
+risulta essere il caso particolare in cui <span
+class="math inline">\mathcal{X} = \mathcal{S}_n</span></li>
+<li><span class="math inline">\mathcal{D}_n \cong \mathcal{X}</span>
 <ul>
-<li><span class="math inline">|\mathcal{D}_n| \le
-|\mathcal{S}_n|</span>, poiché in generale <span
-class="math inline">\mathcal{S}_n</span> contiene più permutazioni di
-<span class="math inline">\mathcal{D}_n</span></li>
-</ul></li>
-<li><p>ma per ragionamento analogo, è sempre possibile trovare un
-sottogruppo <span class="math inline">X \subset \mathcal{S}_n \mid |X| =
-|\mathcal{D}_n| \implies</span> l’inclusione è biiettiva</p>
+<li>sia <span class="math inline">f: \mathcal{D}_n \rightarrow
+\mathcal{S}_n : \alpha \rightarrow \sigma_\alpha</span></li>
+<li>siano <span class="math inline">\alpha, \beta \in \mathcal{D}_n,
+\sigma_\alpha, \sigma_\beta \in \mathcal{S}_n \mid \left \{
+\begin{array}{l} f(\alpha)= \sigma_\alpha \\ f(\beta) = \sigma_\beta \\
+\alpha, \sigma_\alpha: i \rightarrow j \\ \beta, \sigma_\beta : j
+\rightarrow k \end{array} \implies \beta \alpha, \sigma_\beta
+\sigma_\alpha : i \rightarrow k \right .</span></li>
+<li>allora <span class="math inline">f(\beta \alpha) =
+\sigma_{\beta\alpha} = \sigma_\beta \sigma_\alpha= f(\beta ) f(\alpha)
+\iff f</span> morfismo
 <ul>
-<li>dunque, <span class="math inline">\mathcal{D}_3</span> risulta
-essere il caso particolare in cui <span class="math inline">X =
-\mathcal{S}_n</span></li>
-</ul></li>
-<li><p><span class="math inline">|\mathcal{D}_n| \cong X</span></p>
+<li>in particolare, restringendo <span class="math inline">f:
+\mathcal{D}_n \rightarrow \mathcal{X} \implies f</span> suriettiva <span
+class="math inline">\implies f</span> isomorfismo
 <ul>
-<li><span class="math inline">f: \mathcal{D}_n \rightarrow \mathcal{S}_n
-: a \rightarrow \sigma_a</span> è un morfismo
-<ul>
-<li><span class="math inline">v_i</span> vertice <span
-class="math inline">i</span>-esimo</li>
-<li><span class="math inline">a: v_i \rightarrow v_j</span> è la
-simmetria che manda <span class="math inline">v_i</span> in <span
-class="math inline">v_j</span>, che corrisponde a <span
-class="math inline">\sigma_a: i \rightarrow j</span> attraverso <span
-class="math inline">f</span>
-<ul>
-<li><span class="math inline">f(a) = \sigma_a</span></li>
-</ul></li>
-<li><span class="math inline">b: v_j \rightarrow v_k</span> è la
-simmetria che manda <span class="math inline">v_j</span> in <span
-class="math inline">v_k</span>, che corrisponde a <span
-class="math inline">\sigma_b: j \rightarrow k</span> attraverso <span
-class="math inline">f</span>
-<ul>
-<li><span class="math inline">f(b) = \sigma_b</span></li>
-</ul></li>
-<li><span class="math inline">f</span> morfismo <span
-class="math inline">\iff b \cdot a = v_{\sigma_b \cdot
-\sigma_{a}}</span>
-<ul>
-<li><span class="math inline">\left.\begin{array}{l}a(v_i) = v_j \\
-b(v_j) = v_k\end{array}\right\} \implies b \cdot a = b(a(v_i)) =
-v_k</span></li>
-<li><span class="math inline">\left.\begin{array}{l}\sigma_a(i) = j \\
-\sigma_b(j) = k\end{array}\right\} \implies \sigma_b \cdot \sigma_a
-=\sigma_b(\sigma_a(i)) = k</span></li>
-<li>quinidi <span class="math inline">b \cdot a = b(a(v_i)) = v_k =
-v_{\sigma_b(\sigma_a(i))} = v_{\sigma_b \cdot \sigma_a}</span></li>
+<li>in particolare, <span class="math inline">\mathcal{D}_3 \cong
+\mathcal{S}_3</span></li>
 </ul></li>
 </ul></li>
-<li>poiché <span class="math inline">|\mathcal{D}_n| = |X|</span>,
-allora l’inclusione data da <span class="math inline">f</span> è anche
-suriettiva, e quindi biiettiva, dunque <span
-class="math inline">f</span> è un isomorfismo</li>
 </ul></li>
-<li><p>in particolare, <span class="math inline">\mathcal{D}_3 \cong
-\mathcal{S}_3</span>, poiché <span class="math inline">X</span> è tutto
-<span class="math inline">\mathcal{S}_3</span></p></li>
 </ul></li>
 </ul>
 <a href="#def-1"><h2 id="def-1">Def</h2></a>
@@ -418,30 +380,82 @@ class="math inline">f</span> è un isomorfismo</li>
 </ul>
 <blockquote>
 <ul>
-<li><span class="math inline">K_4 := \{1, a, b, c\}</span></li>
-<li><span class="math inline">a^2=b^2=c^2=1</span></li>
-<li><span class="math inline">ab=c=ba</span></li>
-<li><span class="math inline">ac=b=ca</span></li>
-<li><span class="math inline">cb=a=bc</span></li>
+<li><span class="math inline">a, b, c \mid \left \{ \begin{array}{l}
+a^2=b^2=c^2=1 \\ ab=c=ba \\ ac=b=ca \\ cb=a=bc \end{array}
+\right.</span></li>
+<li><span class="math inline">\mathcal{K}_4 := \{1, a, b, c\}</span> è
+detto <strong>gruppo di Klein</strong>
+<ul>
+<li>in particolare <span class="math inline">\left \{ \begin{array}{l}
+o(1) = 1 \\ o(a) = o(b) = o(c) = 2 \end{array} \right .</span></li>
+<li>in particolare, presi <span class="math inline">3</span> elementi in
+<span class="math inline">\mathcal{K}_4 - \{1\}</span>, moltiplicandone
+due tra loro si ottiene il terzo</li>
+</ul></li>
 </ul>
 </blockquote>
 <a href="#oss-4"><h2 id="oss-4">Oss</h2></a>
 <ul>
 <li><strong>Hp</strong>
 <ul>
-<li><span class="math inline">K_4</span> è il gruppo di Klein</li>
+<li><span class="math inline">\mathcal{K}_4</span> è il gruppo di
+Klein</li>
 </ul></li>
 <li><strong>Th</strong>
 <ul>
-<li><span class="math inline">K_4 \cong D_2</span></li>
+<li><span class="math inline">\mathcal{K}_4 \cong
+\mathcal{D}_2</span></li>
 </ul></li>
 <li><strong>Dim</strong>
 <ul>
-<li><span class="math inline">K_4:=\{1, a, b, c\}</span></li>
-<li><span class="math inline">D_2 = \{1, \rho, \sigma_0,
-\sigma_1\}</span>, quindi associando gli elementi <span
+<li><span class="math inline">\mathcal{K}_4:=\{1, a, b, c\}</span></li>
+<li><span class="math inline">\mathcal{D}_2 = \{1, \rho, \sigma_0,
+\sigma_1\}</span>, allora associando gli elementi <span
 class="math inline">a=\rho, b= \sigma_0, c= \sigma_1</span> si ottiene
 lo stesso gruppo</li>
+</ul></li>
+</ul>
+<a href="#oss-5"><h2 id="oss-5">Oss</h2></a>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">G</span> gruppo <span
+class="math inline">\bigg\vert |G|=4</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">G \cong \mathbb{Z}_4 \lor G \cong
+\mathcal{K}_4</span></li>
+</ul></li>
+<li><strong>Dim</strong>
+<ul>
+<li><span class="math inline">\forall a \in G - \{1\} \quad</span>per il
+teorema di Lagrange <span class="math inline">o(a) \bigg\vert |G|
+\implies o(a)=1 \lor o(a) =2 \lor o(a) = 4</span></li>
+<li><span class="math inline">a \neq 1 \implies o(a) \neq 1 \implies
+o(a) = 2 \lor o(a) = 4</span></li>
+<li>se <span class="math inline">o(a)=4 \implies G</span> cicliico <span
+class="math inline">\implies G \cong \mathbb{Z}_4</span></li>
+<li>in particolare <span class="math inline">\exists x \in G \mid o(x) =
+4 = |G| \iff G</span> ciclico, allora è necessario studiare il caso in
+cui <span class="math inline">G</span> non ciclico <span
+class="math inline">\iff \nexists x \in G \mid o(x) = 4 \implies \forall
+x \in G - \{1\} \quad o(x) = 2</span> per ragionamento precedente <span
+class="math inline">\implies G = \{1, a, b, c\}</span>, dove <span
+class="math inline">o(a)=o(b)=o(c)=2 \implies a^2=b^2=c^2=1
+\implies</span><span class="math inline">\left\{\begin{array}{l}a=a^{-1}
+\\ b=b^{-1} \\ c=c^{-1}\end{array}\right.</span></li>
+<li>siano <span class="math inline">a, b, x \in G \mid ab = x</span> per
+un certo elemento <span class="math inline">x = 1 \lor x = a \lor x = b
+\lor x = c</span>, allora si ha che <span class="math inline">\left \{
+\begin{array}{l} ab = 1 \implies b = a^{-1} = a \ \bot \\ ab = a
+\implies b = 1 \ \bot \\ ab = b \implies a = 1 \ \bot \end{array}
+\right. \implies ab = c</span> necessariamente</li>
+<li>il ragionamento è analogo per tutti gli altri prodotti, il che
+dimostra che presi <span class="math inline">3</span> elementi in <span
+class="math inline">G - \{1\}</span>, moltiplicandone due tra loro si
+ottiene il terzo <span class="math inline">\implies G \cong
+K_4</span></li>
 </ul></li>
 </ul>
 </body>

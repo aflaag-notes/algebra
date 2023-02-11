@@ -115,17 +115,6 @@
 ## Ex
 
 - **Hp**
-  - $(G, \cdot)$ gruppo
-  - $g \in G$
-  - $f: \mathbb{Z} \rightarrow G: n \rightarrow g^n$
-- **Th**
-  - $f$ morfismo di gruppi tra $(\mathbb{Z}, +)$ e $(G, \cdot)$
-- **Dim**
-  - $f(n + m ) = g^{n + m} = g^m \cdot g^n = f(m) \cdot f(n) \iff f$ morfismo
-
-## Ex
-
-- **Hp**
   - $f: \mathbb{Z} \rightarrow \mathbb{Z}_n : k \rightarrow [k]$
 - **Th**
   - $f$ morfismo di anelli tra $\left(\mathbb{Z},+, \cdot\right)$ e $\left(\mathbb{Z}_{n},+, \cdot\right)$
@@ -149,7 +138,7 @@ $f([x \cdot y])=f([x]) \cdot f([y]) \iff f$ morfismo
 - **Hp**
   - $G$ gruppo
   - $g \in G$
-  - $f: G \rightarrow G : h \rightarrow g \cdot h \cdot g^{-1}$
+  - $f: G \rightarrow G : h \rightarrow ghg^{-1}$
 - **Th**
   - $f$ morfismo di gruppi tra $(G, \cdot)$ e $(G, \cdot)$
 - **Dim**
@@ -244,7 +233,6 @@ $f([x \cdot y])=f([x]) \cdot f([y]) \iff f$ morfismo
 ## Oss
 
 - **Hp**
-    - $f: \mathbb{Z} \rightarrow \mathbb{C}^* : k \rightarrow \zeta^k$
     - $n \in \mathbb{N}$
     - $\zeta := e^{i \frac{2 \pi}{n}}$
     - $H := \{\zeta ^0, \zeta^1, \zeta^k, \ldots, \zeta^{n-1}\}$ è l'insieme delle radici $n$-esime di $1$, in particolare $\zeta ^n = 1$
@@ -252,6 +240,7 @@ $f([x \cdot y])=f([x]) \cdot f([y]) \iff f$ morfismo
 - **Th**
     - $H(\zeta) \cong \mathbb{Z}_n$
 - **Dim**
+    - sia $f: \mathbb{Z} \rightarrow \mathbb{C}^* : k \rightarrow \zeta^k$
     - $\forall k, h \in \mathbb{Z} \quad f(k + h) = \zeta^{k + h} = \zeta^{k} \cdot \zeta^{h} = f(k) \cdot f(h) \iff f$ morfismo di gruppi tra $(\mathbb{Z}, +)$ e $(\mathbb{C}^*, \cdot)$
     - $k \in \ker(f) \iff f(k) = 1 \in \mathbb{C} \iff \exists h \in \mathbb{Z} \mid f(k) = 1 = \zeta^k = (\zeta^n)^h \iff k \in I(n)$, allora $\ker(f) = I(n)$
     - per definizione $\mathbb{Z}_n = \mathbb{Z}/\equiv \ = \mathbb{Z}/I(n)$

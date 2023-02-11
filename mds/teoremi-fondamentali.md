@@ -270,35 +270,9 @@
 
 - **Hp**
   - $G$ gruppo finito
-  - $p \in \mathbb{P}$
-  - $p \bigg\vert |G|$
+  - $p \in \mathbb{P} : p \bigg\vert |G|$
 - **Th**
   - $\exists g \in G \mid o(g) = p$
-
-## Oss
-
-- **Hp**
-  - $G$ gruppo $\bigg\vert |G|=4$
-- **Th**
-  - $G \cong \mathbb{Z}_4$ oppure $G \cong K_4$
-- **Dim**
-  - ⚠️ **L'HO SCRITTA MA NON HO CAPITO NIENTE IN QUESTA DIMOSTRAZIONE**
-  - preso $a \in G \mid a \neq 1$, per dimostrazione precedente $o(a) \bigg\vert |G| \implies o(a)=1 \lor o(a) =2 \lor o(a) = 4$, ma $a \neq 1 \implies o(a) \neq 1$
-  - 2 casi
-    - $\exists x \in G \mid o(x)=4 \implies G \cong \mathbb{Z}_4$ **⚠️ PERCHÉ?**
-    - $\nexists x \in G \mid o(x) =4$
-      - $|G| = 4 \implies G$ è della forma $\{1, a, b, c\}$ con $o(a)=o(b)=o(c)=2$ **⚠️ PERCHÉ?**
-        - $1 \in G$ perché $G$ gruppo in ipotesi
-        - $a \neq b \neq c \neq 1$, altrimenti $|G| \lt 4$
-      - $a^2=b^2=c^2=1 \implies$$\left\{\begin{array}{l}a=a^{-1} \\ b=b^{-1} \\ c=c^{-1}\end{array}\right.$
-      - $G$ abeliano $\iff$ presi i 3 elementi non neutri, moltiplicandone due tra loro si ottiene il terzo **⚠️ PERCHÉ?**
-        - $ab = c$
-          - $ab = 1 \implies b = a^{-1} = a \ \bot$
-          - $ab = a \implies b = 1 \ \bot$
-          - $ab = b \implies a = 1 \ \bot$
-          - quindi necessariamente $ab = c$
-          - il ragionamento è analogo per tutti gli altri prodotti
-      - quindi $G \cong K_4$ **⚠️ PERCHÉ? non mancano altre cose?**
 
 ****
 

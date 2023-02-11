@@ -1169,5 +1169,98 @@ m</span></li>
 \implies m \mid o(gh) \land o(gh) \mid m \implies m = o(gh)</span></li>
 </ul></li>
 </ul>
+<a href="#def-9"><h2 id="def-9">Def</h2></a>
+<ul>
+<li><strong>Gruppo ciclico</strong></li>
+</ul>
+<blockquote>
+<ul>
+<li><span class="math inline">G</span> gruppo</li>
+<li><span class="math inline">G</span> è detto <strong>ciclico</strong>
+<span class="math inline">\iff \exists g \in G \mid H(g) = G</span>
+<ul>
+<li>ovvero, <span class="math inline">G</span> è l’insieme delle potenze
+di <span class="math inline">g</span> stesso</li>
+</ul></li>
+</ul>
+</blockquote>
+<a href="#oss-20"><h2 id="oss-20">Oss</h2></a>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">G</span> gruppo</li>
+<li><span class="math inline">n := |G| \in \mathbb{N}</span></li>
+<li><span class="math inline">\exists g \in G \mid o(g) = n</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">G</span> ciclico</li>
+</ul></li>
+<li><strong>Dim</strong>
+<ul>
+<li><span class="math inline">H(g) \leqslant G \implies H(g) \subseteq G
+\implies o(g) = |H(g)| = n = |G| \iff G = H(g) \iff G</span>
+ciclico</li>
+</ul></li>
+</ul>
+<a href="#oss-21"><h2 id="oss-21">Oss</h2></a>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">G</span> gruppo</li>
+<li><span class="math inline">g \in G</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">H(g) \cong \left \{ \begin{array}{ll}
+\mathbb{Z} &amp; o(g) = + \infty \\ \mathbb{Z}_d &amp; o(g) =
+d\end{array} \right.</span></li>
+</ul></li>
+<li><strong>Dim</strong>
+<ul>
+<li>sia <span class="math inline">f: \mathbb{Z} \rightarrow H(g): n
+\rightarrow g^n</span></li>
+<li><span class="math inline">\forall n, m \in \mathbb{Z} \quad f(n + m)
+= g^{n + m} = g^n \cdot g^m = f(n) \cdot f(m) \iff f</span> morfismo di
+gruppi tra <span class="math inline">(\mathbb{Z}, +)</span> e <span
+class="math inline">(H(g), \cdot)</span></li>
+<li><span class="math inline">\ker(f) := \{n \in \mathbb{Z} \mid f(n) =
+g^n = 1_{H(g)}\} =: I(g)</span></li>
+<li>allora <span class="math inline">\mathbb{Z} / I(g) = \mathbb{Z} /
+\ker(f) \cong \textrm{im}(f)</span> per il teorema di isomorfismo</li>
+<li><span class="math inline">\textrm{im}(f) := \{g^n \in H(g) \mid
+\exists n \in \mathbb{Z} : f(n) = g^n\} =: H(g)</span></li>
+<li>per dimostrazione precedente <span class="math inline">\exists ! d
+\in \mathbb{N} \mid I(d) = I(g)</span>, dove <span
+class="math inline">\left \{ \begin{array}{l} d = 0 \implies o(g) = +
+\infty \\ d \gt 0 \implies o(g) = d \end{array} \right.</span></li>
+<li>allora <span class="math inline">H(g) = \textrm{im}(f) \cong
+\mathbb{Z}/ \ker(f) = \mathbb{Z}/I(d) = \left \{ \begin{array}{ll}
+\mathbb{Z} &amp; o(g) = + \infty \\ \mathbb{Z}_d &amp; o(g) =
+d\end{array} \right.</span></li>
+</ul></li>
+</ul>
+<a href="#oss-22"><h2 id="oss-22">Oss</h2></a>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">G</span> gruppo <span
+class="math inline">\big\vert p := |G| \in \mathbb{P}</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">G \cong \mathbb{Z}_p</span></li>
+</ul></li>
+<li><strong>Dim</strong>
+<ul>
+<li><span class="math inline">\forall g \in G \quad |H(g)| \bigg\vert
+|G|</span> per il teorema di Lagrange</li>
+<li><span class="math inline">p \in \mathbb{P} \implies |H(g)| = \left
+\{ \begin{array}{ll} 1 &amp; g = 1_G \\ p &amp; g \neq 1_G \end{array}
+\right. \implies \forall g \in G - \{1_G\} \quad |H(g)| = p =|G|
+\implies H(g) \iff G = H(g) \cong \mathbb{Z}_p</span> per dimostrazione
+precedente</li>
+</ul></li>
+</ul>
 </body>
 </html>
