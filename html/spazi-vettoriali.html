@@ -753,6 +753,36 @@ possono essere meno di <span class="math inline">n \ \bot</span></li>
 </ul></li>
 </ul></li>
 </ul>
+<a href="#def-5"><h2 id="def-5">Def</h2></a>
+<ul>
+<li><strong><span class="math inline">+</span> tra spazi
+vettoriali</strong></li>
+</ul>
+<blockquote>
+<ul>
+<li><span class="math inline">\mathbb{K}</span> campo</li>
+<li><span class="math inline">U, V</span> spazi vettoriali su <span
+class="math inline">\mathbb{K}</span></li>
+<li><span class="math inline">U + V := \{u + v \mid u \in U, v \in
+V\}</span> è detta <strong>somma tra <span class="math inline">U</span>
+e <span class="math inline">V</span></strong></li>
+</ul>
+</blockquote>
+<ul>
+<li><strong><span class="math inline">\cap</span> tra spazi
+vettoriali</strong></li>
+</ul>
+<blockquote>
+<ul>
+<li><span class="math inline">\mathbb{K}</span> campo</li>
+<li><span class="math inline">U, V</span> spazi vettoriali su <span
+class="math inline">\mathbb{K}</span></li>
+<li><span class="math inline">U \cap V := \{w \mid w \in U \land w \in
+V\}</span> è detta <strong>intersezione tra <span
+class="math inline">U</span> e <span
+class="math inline">V</span></strong></li>
+</ul>
+</blockquote>
 <a href="#formula-di-grassmann"><h2 id="formula-di-grassmann">Formula di Grassmann</h2></a>
 <ul>
 <li><strong>Hp</strong>
@@ -783,15 +813,21 @@ class="math inline">U</span></li>
 class="math inline">V</span></li>
 <li><span class="math inline">\mathcal{B}_1 \cup \mathcal{B}_2 := \{w_1,
 \ldots w_k, u_{k + 1}, \ldots, u_m, v_{k + 1}, \ldots, v_n\}</span></li>
-<li><span class="math inline">\forall u \in U, v \in V \mid u :=
-\displaystyle \sum_{i = 1}^k{\lambda_iw_i} + \sum_{j = k +
-1}^m{\lambda_j u_j} \land \displaystyle v :=\sum_{i = 1}^k{\mu_iw_i} +
-\sum_{h = k + 1}^n {\mu_hv_h} \quad u + v =\sum_{i = 1}^k{(\lambda_i +
+<li>per definizione, si ha che <span
+class="math inline">\textrm{span}(\mathcal{B}_1 \cup \mathcal{B}_2)
+\subseteq U + V</span></li>
+<li><span class="math inline">\forall u \in U, v \in V \mid \left \{
+\begin{array}{l}u := \displaystyle \sum_{i = 1}^k{\lambda_iw_i} +
+\sum_{j = k + 1}^m{\lambda_j u_j} \\ \displaystyle v :=\sum_{i =
+1}^k{\mu_iw_i} + \sum_{h = k + 1}^n {\mu_hv_h} \end{array}
+\right.\implies \displaystyle u + v =\sum_{i = 1}^k{(\lambda_i +
 \mu_i)w_i} + \sum_{j = k + 1}^m{\lambda_j u_j} + \sum_{h = k + 1}^n
-{\mu_hv_h} \implies u + v \in \textrm{span}(w_1, \ldots w_k, u_{k + 1},
-\ldots, u_m, v_{k + 1}, \ldots, v_n) \implies \mathcal{B}_1 \cup
+{\mu_hv_h} \implies u + v \in \textrm{span}(\mathcal{B}_1 \cup
+\mathcal{B}_2) \implies U + V \subseteq \textrm{span}(\mathcal{B} \cup
+\mathcal{B}_2)</span></li>
+<li>allora <span class="math inline">\mathcal{B}_1 \cup
 \mathcal{B}_2</span> generatori di <span class="math inline">U +
-V</span>, poiché <span class="math inline">u + v \in U + V</span></li>
+V</span></li>
 <li><span class="math inline">a := \displaystyle \sum_{i =
 1}^k{\lambda_iw_i}</span></li>
 <li><span class="math inline">b := \displaystyle \sum_{j = k +1}^m{\mu_j
@@ -803,10 +839,9 @@ u_j } \implies b \in \textrm{span}(u_{k +1 }, \ldots, u_k) \subsetneqq U
 0_W \iff b = - a - c</span></li>
 <li><span class="math inline">b \in U</span> per osservazione
 precedente, mentre <span class="math inline">a + c = v \in V \implies
--(a + c) \in V \implies - a- c \in V</span>, e dunque <span
-class="math inline">b \in U \cap V</span></li>
-<li>allora, <span class="math inline">b</span> deve essere generato
-dalla base <span class="math inline">w_1, \ldots, w_k</span> di <span
+-(a + c) \in V \implies b = - a- c \in V \implies b \in U \cap V</span>,
+allora <span class="math inline">b</span> deve essere generato dalla
+base <span class="math inline">w_1, \ldots, w_k</span> di <span
 class="math inline">U \cap V \implies \displaystyle \exists \alpha_1,
 \ldots, \alpha_k \in \mathbb{K} \mid \sum_{j = k +1}^m{\mu_j u_j }=:b =
 \displaystyle \sum_{i = 1}^k {\alpha_i w_i} \implies \sum_{j = k
@@ -835,19 +870,19 @@ nulli</li>
 = 0_W</span> è verificata solamente per coefficienti di <span
 class="math inline">a</span>, <span class="math inline">b</span> e <span
 class="math inline">c</span> nulli, il che implica che i vettori che
-generano <span class="math inline">a + b + c</span> sono linearmente
-indipendenti</li>
-<li><span class="math inline">\mathcal{B}_1 \cup \mathcal{B}_2</span>
-generatori di <span class="math inline">U + V \implies a + b + c \in U +
-V</span>, e poiché <span class="math inline">w_1, \ldots, w_k, u_{k +
-1}, \ldots, u_m, v_{k + 1}, \ldots, v_n</span> sono sia generatori che
-linearmente indipendenti, allora sono una base di <span
-class="math inline">U + V</span></li>
+generano <span class="math inline">a + b + c</span>, ovvero <span
+class="math inline">\mathcal{B}_1 \cup \mathcal{B}_2</span>, sono
+linearmente indipendenti</li>
+<li>allora, poiché generatori di <span class="math inline">U + V</span>
+e linearmente indipendenti, <span class="math inline">\mathcal{B}_1 \cup
+\mathcal{B}_2</span> sono una base di <span class="math inline">U +
+V</span></li>
 <li>per definizione, la dimensione di uno spazio vettoriale è la
 cardinalità di una delle sue basi, e dunque la cardinalità di <span
 class="math inline">\mathcal{B}_1 \cup \mathcal{B}_2</span> è pari a
 <span class="math inline">k + (m - k) + (n - k) = k + m - k + n - k = m
-+ n - k</span></li>
++ n - k \implies \dim(U + V) = \dim(U) + \dim(V) - \dim(U \cap
+V)</span></li>
 </ul></li>
 </ul>
 <a href="#oss-6"><h2 id="oss-6">Oss</h2></a>
@@ -974,7 +1009,7 @@ su <span class="math inline">\mathbb{K}</span></li>
 </ul>
 <hr />
 <a href="#applicazioni-lineari"><h1 id="applicazioni-lineari">Applicazioni lineari</h1></a>
-<a href="#def-5"><h2 id="def-5">Def</h2></a>
+<a href="#def-6"><h2 id="def-6">Def</h2></a>
 <ul>
 <li><strong>Applicazioni lineari</strong></li>
 </ul>
@@ -1112,7 +1147,7 @@ W</span></li>
 </ul></li>
 </ul></li>
 </ul>
-<a href="#def-6"><h2 id="def-6">Def</h2></a>
+<a href="#def-7"><h2 id="def-7">Def</h2></a>
 <ul>
 <li><strong>Kernel e immagine</strong></li>
 </ul>
@@ -1160,7 +1195,7 @@ lineare</li>
 sottospazio</li>
 </ul></li>
 </ul>
-<a href="#def-7"><h2 id="def-7">Def</h2></a>
+<a href="#def-8"><h2 id="def-8">Def</h2></a>
 <ul>
 <li><strong>Rango di un’applicazione lineare</strong></li>
 </ul>
@@ -1179,7 +1214,7 @@ class="math inline">f</span></strong></li>
 </blockquote>
 <hr />
 <a href="#sottospazi-affini"><h1 id="sottospazi-affini">Sottospazi affini</h1></a>
-<a href="#def-8"><h2 id="def-8">Def</h2></a>
+<a href="#def-9"><h2 id="def-9">Def</h2></a>
 <ul>
 <li>⚠️ <strong>TODO</strong></li>
 </ul>

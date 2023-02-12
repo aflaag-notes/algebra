@@ -487,15 +487,12 @@ class="math inline">p(x) = q_2(x)(x-c_2)(x-c_1)</span></li>
 </ul></li>
 <li><strong>Th</strong>
 <ul>
-<li><span class="math inline">\exists ! p(x) \in \mathbb{K}[x] \mid I =
+<li><span class="math inline">\exists p(x) \in I \mid I =
 I(p(x))</span>, o equivalentemente, in <span
 class="math inline">\mathbb{K}[x]</span> ogni ideale è principale</li>
 </ul></li>
 <li><strong>Dim</strong>
 <ul>
-<li><em>unicità</em>
-<ul>
-<li>⚠️ <strong>che vuol dire sta roba</strong></li>
 <li><span class="math inline">I = \{0\} \implies I = I(0)</span>, ovvero
 l’ideale principale generato da <span class="math inline">0</span></li>
 <li>preso <span class="math inline">p(x) \in I - \{0\} \mid
@@ -504,13 +501,12 @@ class="math inline">\forall q(x) \in I \mid \deg(q(x)) \lt \deg(p(x))
 \implies q(x) \in I(0) \implies q(x) = 0</span>, di conseguenza è unico
 in quanto l’elemento minore in <span class="math inline">I -
 \{0\}</span> è unico</li>
-</ul></li>
-<li><em>esistenza</em>
-<ul>
-<li>per il principio del minimo numero <span class="math inline">\exists
-p(x) \in I - \{0\} \mid I = I(p(x))</span>, dove <span
+<li>per osservazione precedente <span class="math inline">\exists p(x)
+\in I - \{0\} \mid I = I(p(x))</span>, dove <span
 class="math inline">p(x)</span> è il polinomio di grado minore in <span
-class="math inline">I - \{0\}</span>
+class="math inline">I - \{0\}</span></li>
+<li><span class="math inline">I = I(p(x)) \iff I \subseteq I(p(x)) \land
+I(p(x)) \subseteq I</span>
 <ul>
 <li><span class="math inline">I \subseteq I(p(x))</span>
 <ul>
@@ -538,7 +534,6 @@ I</span>, allora <span class="math inline">\forall q(x) \in
 <li><span class="math inline">\forall a(x) \in I(p(x)) \quad \exists
 q(x) \in \mathbb{K}[x] \mid q(x)\cdot p(x) = a(x)</span>, dunque <span
 class="math inline">a(x) \in I</span></li>
-</ul></li>
 </ul></li>
 </ul></li>
 </ul></li>
@@ -625,50 +620,22 @@ a_n(x))</span></li>
 <ul>
 <li><em>prima implicazione</em>
 <ul>
-<li>⚠️ <strong>perche <span class="math inline">h</span> è una
-costante?</strong></li>
-<li>in ipotesi <span class="math inline">\forall i \in [1, n] \quad
-\exists c \in \mathbb{K} \mid a_i(c) = 0</span></li>
-<li>per dimostrazione precedente <span class="math inline">\forall i \in
-[1, n] \quad a_i(c) = 0 \iff (x - c) \mid a_i(x)</span>
-<ul>
-<li>ad esempio, per <span class="math inline">i = 1</span> si ha che
-<span class="math inline">\exists k \in \mathbb{K} \mid (x - c) \cdot k
-= a_1(x)</span></li>
-</ul></li>
+<li><span class="math inline">\forall i \in [1, n] \quad a_i(c) = 0 \iff
+(x - c) \mid a_i(x)</span></li>
 <li>per definizione <span class="math inline">\forall i \in [1, n] \quad
-d(x) \mid a_i(x)</span>
-<ul>
-<li>ad esempio, per <span class="math inline">i = 1</span> si ha che
-<span class="math inline">\exists h \in \mathbb{K} \mid d(x) \cdot h =
-a_1(x)</span></li>
-</ul></li>
-<li>allora sostituendo, si ha che <span class="math inline">d(x) \cdot h
-= (x - c) \cdot k</span></li>
-<li><span class="math inline">h \in \mathbb{K} \implies \exists h^{-1}
-\in \mathbb{K}</span> poiché <span class="math inline">\mathbb{K}</span>
-è un campo</li>
-<li>allora <span class="math inline">d(x) = (x- c) \cdot kh^{-1}</span>,
-dove <span class="math inline">kh^{-1} \in \mathbb{K}</span> poiché
-<span class="math inline">\mathbb{K}</span> è un campo, e dunque <span
-class="math inline">\exists kh^{-1} \in \mathbb{K} : (x - c) \mid
-d(x)</span>, che per dimostrazione precedente implica che <span
-class="math inline">d(c) = 0</span></li>
+d(x) \mid a_i(x)</span>, e poiché <span class="math inline">d(x)</span>
+è il massimo tra i divisori comuni, allora necessariamente <span
+class="math inline">(x - c) \mid d(x) \iff d(c) = 0</span></li>
 </ul></li>
 <li><em>seconda implicazione</em>
 <ul>
-<li>⚠️ <strong>probabilmente si può usare in due versi perche <span
-class="math inline">d(x)</span> esiste sempre</strong></li>
 <li>per definizione <span class="math inline">\forall i \in [1, n] \quad
 d(x) \mid a_i(x)</span></li>
 <li>per dimostrazione precedente <span class="math inline">d(c) = 0 \iff
 (x - c) \mid d(x)</span></li>
-<li>per dimostrazione precedente, <span class="math inline">\mid</span>
-è un ordine parziale, e in particolare transitiva, e dunque <span
-class="math inline">\forall i \in [1, n] \quad (x - c) \mid d(x) \land
-d(x) \mid a_i(x) \implies (x - c) \mid a_i(x)</span>, e riapplicando lo
-stesso teorema <span class="math inline">\forall i \in [1, n]\quad (x -
-c) \mid a_i(x) \iff a_i(c) = 0</span></li>
+<li>allora <span class="math inline">\forall i \in [1, n] \quad (x - c)
+\mid d(x) \land d(x) \mid a_i(x) \implies (x - c) \mid a_i(x) \iff
+a_i(c) = 0</span></li>
 </ul></li>
 </ul></li>
 </ul>
@@ -681,27 +648,34 @@ c) \mid a_i(x) \iff a_i(c) = 0</span></li>
 </ul></li>
 <li><strong>Th</strong>
 <ul>
-<li><span class="math inline">p(x) \in \mathbb{K}[x]</span> irriducibile
-<span class="math inline">\iff p(x)</span> primo</li>
+<li><span class="math inline">p(x)</span> irriducibile <span
+class="math inline">\iff p(x)</span> primo</li>
 </ul></li>
 <li><strong>Dim</strong>
 <ul>
 <li><em>prima implicazione</em>
 <ul>
 <li><span class="math inline">p(x) \in \mathbb{K}[x]</span>
-irriducibile$</li>
-<li>si supponga <span class="math inline">\exists d(x) \in \mathbb{K}[x]
-: d(x) \mid p(x) \implies \exists e(x) \in \mathbb{K}[x] \mid p(x) =
-p(x) \cdot e(x)</span></li>
-<li>⚠️ <strong>NON HO CAPITO NULLA QUI C’È UN BUCO</strong></li>
-<li><span class="math inline">p(x) \nmid a(x) \implies
-\textrm{MCD}(a(x), p(x))= 1</span> ⚠️ <strong>NON SO IL PERCHÉ</strong>
-<ul>
-<li>per l’identità di Bézout <span class="math inline">\exists f(x),
-g(x) \in \mathbb{K}[x] \mid 1 = f(x)a(x) + g(x)p(x) \iff b(x) =
-a(x)b(x)f(x) + p(x)g(x)b(x)</span></li>
-</ul></li>
-<li>⚠️ <strong>NON HO CAPITO NULLA QUI C’È UN BUCO</strong></li>
+irriducibile, allora per definizione <span class="math inline">\exists
+d(x), q(x) \in \mathbb{K}[x] \mid p(x) = d(x) q(x) \implies d(x) \in
+\mathbb{K}[x]^*=\mathbb{K}^* \lor q(x) \in \mathbb{K}[x]^* =
+\mathbb{K}^*</span></li>
+<li>siano <span class="math inline">a(x), b(x) \in \mathbb{K}[x] : p(x)
+\mid a(x)b(x) \iff \exists k(x) \in \mathbb{K}[x] \mid p(x)k(x) =
+a(x)b(x)</span></li>
+<li>se <span class="math inline">p(x) \nmid a(x) \implies
+\textrm{MCD}(a(x), p(x))= 1</span>, allora per l’identità di Bézout
+<span class="math inline">\exists f(x), g(x) \in \mathbb{K}[x] \mid 1 =
+f(x)a(x) + g(x)p(x) \iff b(x) = a(x)b(x)f(x) + p(x)g(x)b(x) =
+p(x)k(x)f(x) +p(x)g(x)b(x) = p(x)[k(x)f(x) + g(x)b(x)] \implies p(x)
+\mid b(x)</span></li>
+<li>allora <span class="math inline">p(x) \mid a(x)b(x) \land p(x) \nmid
+a(x) \implies p(x) \mid b(x)</span></li>
+<li>ripetendo analogamente il ragionamento, è possibile dimostrare che
+<span class="math inline">p(x) \mid a(x)b(x) \land p(x) \nmid b(x)
+\implies p(x) \mid a(x)</span></li>
+<li>allora, per definizione <span class="math inline">p(x)</span>
+primo</li>
 </ul></li>
 <li><em>seconda implicazione</em>
 <ul>
@@ -712,56 +686,6 @@ elemento primo è anche irriducibile</li>
 </ul></li>
 </ul>
 <a href="#oss-11"><h2 id="oss-11">Oss</h2></a>
-<ul>
-<li><strong>Hp</strong>
-<ul>
-<li><span class="math inline">\mathbb{K}</span> campo</li>
-<li><span class="math inline">p(x) \in \mathbb{K}[x] - \{0\}</span></li>
-</ul></li>
-<li><strong>Th</strong>
-<ul>
-<li><span class="math inline">\exists ! q_1(x), \ldots ,q_k(x) \in
-\mathbb{K}[x]</span> irriducibili e monici<span class="math inline">, c
-\in \mathbb{K} - \{0\} \mid p(x) = c \cdot q_1(x) \cdot \ldots \cdot
-q_k(x)</span></li>
-<li>in particolare, i polinomi sono unici a meno di un
-riordinamento</li>
-</ul></li>
-<li><strong>Dim</strong>
-<ul>
-<li><em>esistenza</em>:
-<ul>
-<li><span class="math inline">\deg(p(x)) = 1</span>
-<ul>
-<li>⚠️ <strong>NON HO CAPITO NULLA</strong></li>
-</ul></li>
-<li><span class="math inline">\deg(p(x)) \gt 1</span>
-<ul>
-<li>⚠️ <strong>NON HO CAPITO NULLA</strong></li>
-</ul></li>
-</ul></li>
-<li><em>unicità</em>
-<ul>
-<li>⚠️ <strong>NON HO CAPITO SU COS’È L’INDUZIONE</strong></li>
-<li><span class="math inline">\deg(p(x)) = 0</span>
-<ul>
-<li>⚠️ <strong>NON HO CAPITO NULLA</strong></li>
-</ul></li>
-<li><span class="math inline">\deg(p(x)) \gt 0</span>
-<ul>
-<li>si supponga <span class="math inline">\exists q_1(x), \ldots q_k(x),
-q_1&#39;(x), \ldots, q_j&#39;(x) \in \mathbb{K}[x], c, c&#39; \in
-\mathbb{K} \mid c \cdot q_1(x) \cdot \ldots \cdot q_i(x) = p(x) =
-c&#39;\cdot q_1&#39;(x) \cdot \ldots \cdot q_j&#39;(x)</span> dove <span
-class="math inline">c \neq c&#39;, \forall k \in [1, i] \quad q_k(x)
-\neq q_k&#39;(x)</span></li>
-<li>⚠️ <strong>DOVE HA DIMOSTRATO CHE <span class="math inline">i =
-k</span>????</strong></li>
-</ul></li>
-</ul></li>
-</ul></li>
-</ul>
-<a href="#oss-12"><h2 id="oss-12">Oss</h2></a>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -806,6 +730,71 @@ a(x) \cdot b(x)</span>, allora <span class="math inline">\deg(p(x)) =
 class="math inline">p(x)</span> è dato dal prodotto di un polinomio
 irriducibile e una costante, e dunque <span
 class="math inline">p(x)</span> è irriducibile</li>
+</ul></li>
+</ul></li>
+</ul>
+<a href="#oss-12"><h2 id="oss-12">Oss</h2></a>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\mathbb{K}</span> campo</li>
+<li><span class="math inline">p(x) \in \mathbb{K}[x] - \{0\}</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\exists ! q_1(x), \ldots ,q_k(x) \in
+\mathbb{K}[x]</span> irriducibili e monici<span class="math inline">, c
+\in \mathbb{K}^* \mid p(x) = c \cdot q_1(x) \cdot \ldots \cdot
+q_k(x)</span>
+<ul>
+<li>in particolare, i polinomi sono unici a meno di un
+riordinamento</li>
+</ul></li>
+</ul></li>
+<li><strong>Dim</strong>
+<ul>
+<li><em>esistenza</em>:
+<ul>
+<li>dimostrazione per induzione sul grado di <span
+class="math inline">p(x)</span></li>
+<li><span class="math inline">\deg(p(x)) = 1</span>
+<ul>
+<li>allora <span class="math inline">p(x)</span> è della forma <span
+class="math inline">p(x) = ax + b</span>, con <span
+class="math inline">a, b, k \in \mathbb{K}^* \implies p(x) = a \cdot
+\left(x + \dfrac{b}{a}\right)</span>, dove <span
+class="math inline">\deg \left( x + \dfrac{b}{a}\right ) = 1 \iff \left(
+x + \dfrac{b}{a}\right)</span> irriducibile</li>
+</ul></li>
+<li><span class="math inline">\deg(p(x)) \gt 1</span>
+<ul>
+<li>per dimostrazione precedente <span class="math inline">\deg(p(x))
+\neq 1 \iff p(x)</span> non irriducibile <span class="math inline">\iff
+\exists a(x), b(x) \in \mathbb{K}[x] - \mathbb{K}[x]^* \mid p(x) = a(x)
+b(x)</span></li>
+</ul></li>
+<li>⚠️ <strong>poi?</strong></li>
+</ul></li>
+<li><em>unicità</em>
+<ul>
+<li><span class="math inline">\deg(p(x)) = 0</span>
+<ul>
+<li>allora <span class="math inline">p(x)</span> è della forma <span
+class="math inline">p(x) = c</span>, con <span class="math inline">c \in
+\mathbb{K}</span>, allora <span class="math inline">p(x) = c \cdot (1
+\cdot x^0)</span></li>
+</ul></li>
+<li><span class="math inline">\deg(p(x)) \gt 0</span>
+<ul>
+<li>si supponga <span class="math inline">\exists q_1(x), \ldots,
+q_k(x), q_1&#39;(x), \ldots, q_j&#39;(x) \in \mathbb{K}[x], c, c&#39;
+\in \mathbb{K}^*\mid c \cdot q_1(x) \cdot \ldots \cdot q_i(x) = p(x) =
+c&#39;\cdot q_1&#39;(x) \cdot \ldots \cdot q_j&#39;(x)</span> dove <span
+class="math inline">c \neq c&#39;, \forall k \in [1, i] \quad q_k(x)
+\neq q_k&#39;(x)</span></li>
+<li>⚠️ <strong>DOVE HA DIMOSTRATO CHE <span class="math inline">i =
+k</span>????</strong></li>
+</ul></li>
 </ul></li>
 </ul></li>
 </ul>

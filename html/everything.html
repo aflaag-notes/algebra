@@ -736,13 +736,13 @@ e\}</span></li>
 <ul>
 <li><span class="math inline">G</span> gruppo</li>
 <li><span class="math inline">g \in G</span></li>
+<li><span class="math inline">\exists! d \in \mathbb{N} \mid
+I(g)=I(d)</span></li>
 </ul></li>
 <li><strong>Th</strong>
 <ul>
-<li><span class="math inline">\exists! d \in \mathbb{N} \mid
-I(g)=I(d)</span></li>
-<li><span class="math inline">d = 0 \implies o(g) := |H(g)| =
-|\mathbb{Z}|</span>, dunque infinito</li>
+<li><span class="math inline">d = 0 \implies o(g) = |\mathbb{Z}| = +
+\infty</span></li>
 <li><span class="math inline">d&gt;0 \implies d = o(g)</span>, e questo
 implica che in <span class="math inline">I(g)</span> sono presenti tutti
 i multipli di <span class="math inline">o(g)</span></li>
@@ -953,6 +953,19 @@ generato dagli <span class="math inline">a_1, \ldots, a_n \in
 A</span></em></li>
 </ul></li>
 </ul>
+<a href="#definizione-12"><h2 id="definizione-12">Definizione 12</h2></a>
+<ul>
+<li><strong>Dominio ad ideali principali</strong></li>
+</ul>
+<blockquote>
+<ul>
+<li><span class="math inline">A</span> dominio di integrità</li>
+<li><span class="math inline">A</span> è detto <strong>ad ideali
+principali</strong> <span class="math inline">\iff \forall I \subset
+A</span> ideale<span class="math inline">\quad \exists d \in I \mid I =
+I(d)</span></li>
+</ul>
+</blockquote>
 <a href="#teorema-30"><h2 id="teorema-30">Teorema 30</h2></a>
 <ul>
 <li><strong>Hp</strong>
@@ -961,12 +974,12 @@ A</span></em></li>
 </ul></li>
 <li><strong>Th</strong>
 <ul>
-<li><span class="math inline">\exists ! d \in \mathbb{N} \mid I =
-I(d)</span>, o equivalentemente, in <span
-class="math inline">\mathbb{Z}</span> ogni ideale è principale</li>
+<li><span class="math inline">\exists d \in I \mid I = I(d)</span>, o
+equivalentemente, in <span class="math inline">\mathbb{Z}</span> ogni
+ideale è principale</li>
 </ul></li>
 </ul>
-<a href="#definizione-12"><h2 id="definizione-12">Definizione 12</h2></a>
+<a href="#definizione-13"><h2 id="definizione-13">Definizione 13</h2></a>
 <ul>
 <li><strong>Massimo Comun Divisore</strong></li>
 </ul>
@@ -977,7 +990,18 @@ class="math inline">\mathbb{Z}</span> ogni ideale è principale</li>
 <li><span class="math inline">\exists !d \in \mathbb{N} \mid
 I\left(a_{1}, \ldots , a_{n}\right)=I(d)</span>, ed è detto
 <strong>massimo comun divisore degli <span class="math inline">a_1,
-\ldots, a_n</span></strong></li>
+\ldots, a_n</span></strong>
+<ul>
+<li>poiché <span class="math inline">\mathbb{Z}</span> è dominio ad
+ideali principali, esiste <span class="math inline">d \in I(a_1, \ldots,
+a_n) \mid I(a_1, \ldots, a_n) = I(d)</span>, poiché <span
+class="math inline">I(a_1, \ldots, a_n)</span> è ideale per
+dimostrazione precedente</li>
+<li>allora considerando la definizione canonica di <span
+class="math inline">d :=\textrm{MCD}(a_1, \ldots, a_n)</span> in cui
+<span class="math inline">d \ge0</span>, si ha che <span
+class="math inline">d \in \mathbb{N}</span> è unico</li>
+</ul></li>
 </ul>
 </blockquote>
 <a href="#teorema-31"><h2 id="teorema-31">Teorema 31</h2></a>
@@ -1031,7 +1055,7 @@ l’equazione di Bézout</li>
 </ul>
 <hr />
 <a href="#operazioni-sugli-ideali"><h1 id="operazioni-sugli-ideali">Operazioni sugli ideali</h1></a>
-<a href="#definizione-13"><h2 id="definizione-13">Definizione 13</h2></a>
+<a href="#definizione-14"><h2 id="definizione-14">Definizione 14</h2></a>
 <ul>
 <li><strong><span class="math inline">+</span> tra ideali</strong></li>
 </ul>
@@ -1058,7 +1082,7 @@ commutativo</li>
 <li><span class="math inline">I + J</span> è un ideale</li>
 </ul></li>
 </ul>
-<a href="#definizione-14"><h2 id="definizione-14">Definizione 14</h2></a>
+<a href="#definizione-15"><h2 id="definizione-15">Definizione 15</h2></a>
 <ul>
 <li><strong><span class="math inline">\cap</span> tra
 ideali</strong></li>
@@ -1087,7 +1111,7 @@ commutativo</li>
 <li><span class="math inline">I \cap J</span> è un ideale</li>
 </ul></li>
 </ul>
-<a href="#definizione-15"><h2 id="definizione-15">Definizione 15</h2></a>
+<a href="#definizione-16"><h2 id="definizione-16">Definizione 16</h2></a>
 <ul>
 <li><strong>Minimo Comune Multiplo</strong></li>
 </ul>
@@ -1099,7 +1123,19 @@ commutativo</li>
 \mid I(m) = I(a_1) \cap \ldots \cap I(a_n) =
 \bigcap_{i=1}^{n}{I(a_i)}</span>, ed è detto <strong>minimo comune
 multiplo degli <span class="math inline">a_1, \ldots,
-a_n</span></strong></li>
+a_n</span></strong>
+<ul>
+<li>poiché <span class="math inline">\mathbb{Z}</span> è dominio ad
+ideali principali, <span class="math inline">\exists m \in \displaystyle
+\bigcap_{i = 1}^n{I(a_i)} \mid \bigcap_{i = 1}^n{I(a_i)} = I(m)</span>,
+poiché <span class="math inline">\displaystyle
+\bigcap_{i=1}^{n}{I(a_i)}</span> è ideale per dimostrazione
+precedente</li>
+<li>allora considerando la definizione canonica di <span
+class="math inline">m :=\textrm{mcm}(a_1, \ldots, a_n)</span> in cui
+<span class="math inline">m \ge0</span>, si ha che <span
+class="math inline">m \in \mathbb{N}</span> è unico</li>
+</ul></li>
 </ul>
 </blockquote>
 <a href="#teorema-36"><h2 id="teorema-36">Teorema 36</h2></a>
@@ -1117,7 +1153,7 @@ a_n</span></strong></li>
 a_n)</span></li>
 </ul></li>
 </ul>
-<a href="#definizione-16"><h2 id="definizione-16">Definizione 16</h2></a>
+<a href="#definizione-17"><h2 id="definizione-17">Definizione 17</h2></a>
 <ul>
 <li><strong><span class="math inline">\cdot</span> tra
 ideali</strong></li>
@@ -1172,7 +1208,7 @@ commutativo</li>
 </ul>
 <hr />
 <a href="#relazioni"><h1 id="relazioni">Relazioni</h1></a>
-<a href="#definizione-17"><h2 id="definizione-17">Definizione 17</h2></a>
+<a href="#definizione-18"><h2 id="definizione-18">Definizione 18</h2></a>
 <ul>
 <li><strong>Relazioni</strong></li>
 </ul>
@@ -1363,7 +1399,7 @@ equivalenza</li>
 </ul>
 <hr />
 <a href="#partizioni"><h1 id="partizioni">Partizioni</h1></a>
-<a href="#definizione-18"><h2 id="definizione-18">Definizione 18</h2></a>
+<a href="#definizione-19"><h2 id="definizione-19">Definizione 19</h2></a>
 <ul>
 <li><strong>Partizione</strong></li>
 </ul>
@@ -1430,7 +1466,7 @@ equivalenza</em>, dove <span class="math inline">x \sim y \iff \exists i
 relazione di equivalenza</li>
 </ul></li>
 </ul>
-<a href="#definizione-19"><h2 id="definizione-19">Definizione 19</h2></a>
+<a href="#definizione-20"><h2 id="definizione-20">Definizione 20</h2></a>
 <ul>
 <li><strong>Classi laterali su gruppi</strong></li>
 </ul>
@@ -1590,7 +1626,7 @@ commutativo</li>
 </ul>
 <hr />
 <a href="#insieme-quoziente"><h1 id="insieme-quoziente">Insieme quoziente</h1></a>
-<a href="#definizione-20"><h2 id="definizione-20">Definizione 20</h2></a>
+<a href="#definizione-21"><h2 id="definizione-21">Definizione 21</h2></a>
 <ul>
 <li><strong>Insieme quoziente</strong></li>
 </ul>
@@ -1606,7 +1642,7 @@ detto <strong>insieme quoziente</strong>, ovvero l’insieme delle classi
 di equivalenza determinate da <span class="math inline">\sim</span></li>
 </ul>
 </blockquote>
-<a href="#definizione-21"><h2 id="definizione-21">Definizione 21</h2></a>
+<a href="#definizione-22"><h2 id="definizione-22">Definizione 22</h2></a>
 <ul>
 <li><strong>Insieme quoziente <span
 class="math inline">\mathbb{Z}_n</span></strong></li>
@@ -1671,7 +1707,7 @@ class="math inline">\mathbb{Z}_n</span></strong></li>
 </ul>
 <hr />
 <a href="#funzione-totiente-di-eulero"><h1 id="funzione-totiente-di-eulero">Funzione totiente di Eulero</h1></a>
-<a href="#definizione-22"><h2 id="definizione-22">Definizione 22</h2></a>
+<a href="#definizione-23"><h2 id="definizione-23">Definizione 23</h2></a>
 <ul>
 <li><strong>Funzione totiente di Eulero</strong></li>
 </ul>
@@ -1739,7 +1775,7 @@ n) = 1</span></li>
 </ul>
 <hr />
 <a href="#permutazioni"><h1 id="permutazioni">Permutazioni</h1></a>
-<a href="#definizione-23"><h2 id="definizione-23">Definizione 23</h2></a>
+<a href="#definizione-24"><h2 id="definizione-24">Definizione 24</h2></a>
 <ul>
 <li><strong>Permutazioni</strong></li>
 </ul>
@@ -1783,7 +1819,7 @@ class="math inline">\iff f</span> invertibile</li>
 non abeliano se <span class="math inline">|X| \ge 3</span></li>
 </ul></li>
 </ul>
-<a href="#definizione-24"><h2 id="definizione-24">Definizione 24</h2></a>
+<a href="#definizione-25"><h2 id="definizione-25">Definizione 25</h2></a>
 <ul>
 <li><strong>Gruppo simmetrico</strong></li>
 </ul>
@@ -1800,7 +1836,7 @@ n!</span></li>
 </ul></li>
 </ul>
 </blockquote>
-<a href="#definizione-25"><h2 id="definizione-25">Definizione 25</h2></a>
+<a href="#definizione-26"><h2 id="definizione-26">Definizione 26</h2></a>
 <ul>
 <li><strong>Ciclo di una permutazione</strong></li>
 </ul>
@@ -1877,7 +1913,7 @@ d_k)</span></li>
 </ul>
 <hr />
 <a href="#trasposizioni"><h1 id="trasposizioni">Trasposizioni</h1></a>
-<a href="#definizione-26"><h2 id="definizione-26">Definizione 26</h2></a>
+<a href="#definizione-27"><h2 id="definizione-27">Definizione 27</h2></a>
 <ul>
 <li><strong>Trasposizione</strong></li>
 </ul>
@@ -1932,7 +1968,7 @@ trasposizioni adiacenti</li>
 </ul>
 <hr />
 <a href="#segno"><h1 id="segno">Segno</h1></a>
-<a href="#definizione-27"><h2 id="definizione-27">Definizione 27</h2></a>
+<a href="#definizione-28"><h2 id="definizione-28">Definizione 28</h2></a>
 <ul>
 <li><strong>Segno di una permutazione</strong></li>
 </ul>
@@ -2057,7 +2093,7 @@ class="math inline">d_j^\prime</span> è la lunghezza del ciclo <span
 class="math inline">\gamma_j^\prime</span></li>
 </ul></li>
 </ul>
-<a href="#definizione-28"><h2 id="definizione-28">Definizione 28</h2></a>
+<a href="#definizione-29"><h2 id="definizione-29">Definizione 29</h2></a>
 <ul>
 <li><strong>Gruppo alterno</strong></li>
 </ul>
@@ -2110,7 +2146,7 @@ k}</span></li>
 </ul>
 <hr />
 <a href="#morfismi"><h1 id="morfismi">Morfismi</h1></a>
-<a href="#definizione-29"><h2 id="definizione-29">Definizione 29</h2></a>
+<a href="#definizione-30"><h2 id="definizione-30">Definizione 30</h2></a>
 <ul>
 <li><strong>Morfismo di gruppi</strong></li>
 </ul>
@@ -2175,7 +2211,7 @@ class="math inline">H</span></li>
 </ul>
 <hr />
 <a href="#isomorfismi"><h1 id="isomorfismi">Isomorfismi</h1></a>
-<a href="#definizione-30"><h2 id="definizione-30">Definizione 30</h2></a>
+<a href="#definizione-31"><h2 id="definizione-31">Definizione 31</h2></a>
 <ul>
 <li><strong>Isomorfismo</strong></li>
 </ul>
@@ -2298,7 +2334,7 @@ class="math inline">(G, \cdot)</span> e <span class="math inline">(G,
 </ul>
 <hr />
 <a href="#kernel-e-immagine"><h1 id="kernel-e-immagine">Kernel e immagine</h1></a>
-<a href="#definizione-31"><h2 id="definizione-31">Definizione 31</h2></a>
+<a href="#definizione-32"><h2 id="definizione-32">Definizione 32</h2></a>
 <ul>
 <li><strong>Kernel e immagine di gruppi</strong></li>
 </ul>
@@ -2351,7 +2387,7 @@ class="math inline">f</span></strong></li>
 class="math inline">\iff \textrm{ker}(f) = \{1_G\}</span></li>
 </ul></li>
 </ul>
-<a href="#definizione-32"><h2 id="definizione-32">Definizione 32</h2></a>
+<a href="#definizione-33"><h2 id="definizione-33">Definizione 33</h2></a>
 <ul>
 <li><strong>Kernel e immagine di anelli</strong></li>
 </ul>
@@ -2416,7 +2452,7 @@ class="math inline">\zeta ^n = 1</span></li>
 </ul>
 <hr />
 <a href="#gruppi-diedrali"><h1 id="gruppi-diedrali">Gruppi diedrali</h1></a>
-<a href="#definizione-33"><h2 id="definizione-33">Definizione 33</h2></a>
+<a href="#definizione-34"><h2 id="definizione-34">Definizione 34</h2></a>
 <ul>
 <li><strong>Gruppo diedrale</strong></li>
 </ul>
@@ -2497,7 +2533,7 @@ particolare <span class="math inline">\mathcal{D}_3 \cong
 \mathcal{S}_3</span></li>
 </ul></li>
 </ul>
-<a href="#definizione-34"><h2 id="definizione-34">Definizione 34</h2></a>
+<a href="#definizione-35"><h2 id="definizione-35">Definizione 35</h2></a>
 <ul>
 <li><strong>Gruppo di Klein</strong></li>
 </ul>
@@ -2558,7 +2594,7 @@ class="math inline">\bigg\vert |G| = 6</span></li>
 </ul>
 <hr />
 <a href="#polinomi"><h1 id="polinomi">Polinomi</h1></a>
-<a href="#definizione-35"><h2 id="definizione-35">Definizione 35</h2></a>
+<a href="#definizione-36"><h2 id="definizione-36">Definizione 36</h2></a>
 <ul>
 <li><strong>Polinomio</strong></li>
 </ul>
@@ -2601,7 +2637,7 @@ commutativo</li>
 anello commutativo</li>
 </ul></li>
 </ul>
-<a href="#definizione-36"><h2 id="definizione-36">Definizione 36</h2></a>
+<a href="#definizione-37"><h2 id="definizione-37">Definizione 37</h2></a>
 <ul>
 <li><strong>Grado di un polinomio</strong></li>
 </ul>
@@ -2664,7 +2700,7 @@ class="math inline">a(x)</span></strong></li>
 integrità</li>
 </ul></li>
 </ul>
-<a href="#definizione-37"><h2 id="definizione-37">Definizione 37</h2></a>
+<a href="#definizione-38"><h2 id="definizione-38">Definizione 38</h2></a>
 <ul>
 <li><strong>Radici di un polinomio</strong></li>
 </ul>
@@ -2717,7 +2753,7 @@ n</span></li>
 </ul></li>
 <li><strong>Th</strong>
 <ul>
-<li><span class="math inline">\exists ! p(x) \in \mathbb{K}[x] \mid I =
+<li><span class="math inline">\exists p(x) \in I \mid I =
 I(p(x))</span>, o equivalentemente, in <span
 class="math inline">\mathbb{K}[x]</span> ogni ideale è principale</li>
 </ul></li>
@@ -2778,28 +2814,11 @@ a_n(x))</span></li>
 </ul></li>
 <li><strong>Th</strong>
 <ul>
-<li><span class="math inline">p(x) \in \mathbb{K}[x]</span> irriducibile
-<span class="math inline">\iff p(x)</span> primo</li>
+<li><span class="math inline">p(x)</span> irriducibile <span
+class="math inline">\iff p(x)</span> primo</li>
 </ul></li>
 </ul>
 <a href="#teorema-112"><h2 id="teorema-112">Teorema 112</h2></a>
-<ul>
-<li><strong>Hp</strong>
-<ul>
-<li><span class="math inline">\mathbb{K}</span> campo</li>
-<li><span class="math inline">p(x) \in \mathbb{K}[x] - \{0\}</span></li>
-</ul></li>
-<li><strong>Th</strong>
-<ul>
-<li><span class="math inline">\exists ! q_1(x), \ldots ,q_k(x) \in
-\mathbb{K}[x]</span> irriducibili e monici<span class="math inline">, c
-\in \mathbb{K} - \{0\} \mid p(x) = c \cdot q_1(x) \cdot \ldots \cdot
-q_k(x)</span></li>
-<li>in particolare, i polinomi sono unici a meno di un
-riordinamento</li>
-</ul></li>
-</ul>
-<a href="#teorema-113"><h2 id="teorema-113">Teorema 113</h2></a>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -2810,6 +2829,25 @@ riordinamento</li>
 <ul>
 <li><span class="math inline">p(x)</span> irriducibile <span
 class="math inline">\iff \deg(p(x)) = 1</span></li>
+</ul></li>
+</ul>
+<a href="#teorema-113"><h2 id="teorema-113">Teorema 113</h2></a>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\mathbb{K}</span> campo</li>
+<li><span class="math inline">p(x) \in \mathbb{K}[x] - \{0\}</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\exists ! q_1(x), \ldots ,q_k(x) \in
+\mathbb{K}[x]</span> irriducibili e monici<span class="math inline">, c
+\in \mathbb{K}^* \mid p(x) = c \cdot q_1(x) \cdot \ldots \cdot
+q_k(x)</span>
+<ul>
+<li>in particolare, i polinomi sono unici a meno di un
+riordinamento</li>
+</ul></li>
 </ul></li>
 </ul>
 <a href="#teorema-114"><h2 id="teorema-114">Teorema 114</h2></a>
@@ -2848,7 +2886,7 @@ b) = 1</span></li>
 </ul>
 <hr />
 <a href="#spazi-vettoriali"><h1 id="spazi-vettoriali">Spazi Vettoriali</h1></a>
-<a href="#definizione-38"><h2 id="definizione-38">Definizione 38</h2></a>
+<a href="#definizione-39"><h2 id="definizione-39">Definizione 39</h2></a>
 <ul>
 <li><strong>Spazio vettoriale</strong></li>
 </ul>
@@ -2908,7 +2946,7 @@ prodotto per scalare</em></li>
 <span class="math inline">\mathbb{K}</span></li>
 </ul></li>
 </ul>
-<a href="#definizione-39"><h2 id="definizione-39">Definizione 39</h2></a>
+<a href="#definizione-40"><h2 id="definizione-40">Definizione 40</h2></a>
 <ul>
 <li><strong>Sottospazio vettoriale</strong></li>
 </ul>
@@ -2928,7 +2966,7 @@ class="math inline">\iff</span>
 </ul></li>
 </ul>
 </blockquote>
-<a href="#definizione-40"><h2 id="definizione-40">Definizione 40</h2></a>
+<a href="#definizione-41"><h2 id="definizione-41">Definizione 41</h2></a>
 <ul>
 <li><strong>Span di vettori</strong></li>
 </ul>
@@ -2966,7 +3004,7 @@ class="math inline">\mathbb{K}</span></li>
 un sottospazio vettoriale di <span class="math inline">V</span></li>
 </ul></li>
 </ul>
-<a href="#definizione-41"><h2 id="definizione-41">Definizione 41</h2></a>
+<a href="#definizione-42"><h2 id="definizione-42">Definizione 42</h2></a>
 <ul>
 <li><strong>Generatori di uno spazio vettoriale</strong></li>
 </ul>
@@ -3105,7 +3143,7 @@ v_n</span> base di <span class="math inline">V</span></li>
 cardinalità delle basi di uno spazio vettoriale è unica</li>
 </ul></li>
 </ul>
-<a href="#definizione-42"><h2 id="definizione-42">Definizione 42</h2></a>
+<a href="#definizione-43"><h2 id="definizione-43">Definizione 43</h2></a>
 <ul>
 <li><strong>Dimensione di uno spazio vettoriale</strong></li>
 </ul>
@@ -3198,6 +3236,36 @@ indipendenti <span class="math inline">\iff w_1, \ldots, w_n</span>
 generatori di <span class="math inline">W</span></li>
 </ul></li>
 </ul>
+<a href="#definizione-44"><h2 id="definizione-44">Definizione 44</h2></a>
+<ul>
+<li><strong><span class="math inline">+</span> tra spazi
+vettoriali</strong></li>
+</ul>
+<blockquote>
+<ul>
+<li><span class="math inline">\mathbb{K}</span> campo</li>
+<li><span class="math inline">U, V</span> spazi vettoriali su <span
+class="math inline">\mathbb{K}</span></li>
+<li><span class="math inline">U + V := \{u + v \mid u \in U, v \in
+V\}</span> è detta <strong>somma tra <span class="math inline">U</span>
+e <span class="math inline">V</span></strong></li>
+</ul>
+</blockquote>
+<ul>
+<li><strong><span class="math inline">\cap</span> tra spazi
+vettoriali</strong></li>
+</ul>
+<blockquote>
+<ul>
+<li><span class="math inline">\mathbb{K}</span> campo</li>
+<li><span class="math inline">U, V</span> spazi vettoriali su <span
+class="math inline">\mathbb{K}</span></li>
+<li><span class="math inline">U \cap V := \{w \mid w \in U \land w \in
+V\}</span> è detta <strong>intersezione tra <span
+class="math inline">U</span> e <span
+class="math inline">V</span></strong></li>
+</ul>
+</blockquote>
 <a href="#teorema-127"><h2 id="teorema-127">Teorema 127</h2></a>
 <ul>
 <li><strong>Hp</strong>
@@ -3261,7 +3329,7 @@ su <span class="math inline">\mathbb{K}</span></li>
 </ul>
 <hr />
 <a href="#applicazioni-lineari"><h1 id="applicazioni-lineari">Applicazioni lineari</h1></a>
-<a href="#definizione-43"><h2 id="definizione-43">Definizione 43</h2></a>
+<a href="#definizione-45"><h2 id="definizione-45">Definizione 45</h2></a>
 <ul>
 <li><strong>Applicazioni lineari</strong></li>
 </ul>
@@ -3314,7 +3382,7 @@ class="math inline">\mathbb{K}</span></li>
 \dim(W)</span></li>
 </ul></li>
 </ul>
-<a href="#definizione-44"><h2 id="definizione-44">Definizione 44</h2></a>
+<a href="#definizione-46"><h2 id="definizione-46">Definizione 46</h2></a>
 <ul>
 <li><strong>Kernel e immagine</strong></li>
 </ul>
@@ -3362,7 +3430,7 @@ lineare</li>
 sottospazio</li>
 </ul></li>
 </ul>
-<a href="#definizione-45"><h2 id="definizione-45">Definizione 45</h2></a>
+<a href="#definizione-47"><h2 id="definizione-47">Definizione 47</h2></a>
 <ul>
 <li><strong>Rango di un’applicazione lineare</strong></li>
 </ul>
@@ -3409,7 +3477,7 @@ class="math inline">n - \textrm{rk}(A)</span></li>
 </ul>
 <hr />
 <a href="#matrici"><h1 id="matrici">Matrici</h1></a>
-<a href="#definizione-46"><h2 id="definizione-46">Definizione 46</h2></a>
+<a href="#definizione-48"><h2 id="definizione-48">Definizione 48</h2></a>
 <ul>
 <li><strong>Matrici</strong></li>
 </ul>
@@ -3445,7 +3513,7 @@ vettori colonna e <span class="math inline">A_1, \ldots, A_m \in
 \\ A_m\end{array}\right)</span></li>
 </ul>
 </blockquote>
-<a href="#definizione-47"><h2 id="definizione-47">Definizione 47</h2></a>
+<a href="#definizione-49"><h2 id="definizione-49">Definizione 49</h2></a>
 <ul>
 <li><strong>Somma tra matrici</strong></li>
 </ul>
@@ -3480,7 +3548,7 @@ class="math inline">B</span></strong></li>
 n}(\mathbb{K})</span> è uno spazio vettoriale</li>
 </ul></li>
 </ul>
-<a href="#definizione-48"><h2 id="definizione-48">Definizione 48</h2></a>
+<a href="#definizione-50"><h2 id="definizione-50">Definizione 50</h2></a>
 <ul>
 <li><strong>Prodotto tra matrici</strong></li>
 </ul>
@@ -3549,7 +3617,7 @@ B)</span></li>
 </ul>
 <hr />
 <a href="#matrici-particolari"><h1 id="matrici-particolari">Matrici particolari</h1></a>
-<a href="#definizione-49"><h2 id="definizione-49">Definizione 49</h2></a>
+<a href="#definizione-51"><h2 id="definizione-51">Definizione 51</h2></a>
 <ul>
 <li><strong>Vettore trasposto</strong></li>
 </ul>
@@ -3618,7 +3686,7 @@ n}(\mathbb{K})</span></li>
 <li><span class="math inline">(A\cdot B)^T = B^T\cdot A^T</span></li>
 </ul></li>
 </ul>
-<a href="#definizione-50"><h2 id="definizione-50">Definizione 50</h2></a>
+<a href="#definizione-52"><h2 id="definizione-52">Definizione 52</h2></a>
 <ul>
 <li><strong>Matrice identità</strong></li>
 </ul>
@@ -3689,7 +3757,7 @@ invertibile</strong></li>
 <li><span class="math inline">f</span> morfismo di gruppi</li>
 </ul></li>
 </ul>
-<a href="#definizione-51"><h2 id="definizione-51">Definizione 51</h2></a>
+<a href="#definizione-53"><h2 id="definizione-53">Definizione 53</h2></a>
 <ul>
 <li><strong>Matrice ortogonale</strong></li>
 </ul>
@@ -3721,7 +3789,7 @@ A^T \cdot A = I_n</span>
 è detto <strong>gruppo ortogonale</strong></li>
 </ul>
 </blockquote>
-<a href="#definizione-52"><h2 id="definizione-52">Definizione 52</h2></a>
+<a href="#definizione-54"><h2 id="definizione-54">Definizione 54</h2></a>
 <ul>
 <li><strong>Gruppo Speciale Lineare</strong></li>
 </ul>
@@ -3734,7 +3802,7 @@ A^T \cdot A = I_n</span>
 <strong>gruppo generale lineare invertibile</strong></li>
 </ul>
 </blockquote>
-<a href="#definizione-53"><h2 id="definizione-53">Definizione 53</h2></a>
+<a href="#definizione-55"><h2 id="definizione-55">Definizione 55</h2></a>
 <ul>
 <li><strong>Matrici simili</strong></li>
 </ul>
@@ -3749,7 +3817,7 @@ class="math inline">B</span></strong> <span class="math inline">\iff
 \exists C \in \textrm{GL}(n, \mathbb{K}) \mid A = C^{-1}BC</span></li>
 </ul>
 </blockquote>
-<a href="#definizione-54"><h2 id="definizione-54">Definizione 54</h2></a>
+<a href="#definizione-56"><h2 id="definizione-56">Definizione 56</h2></a>
 <ul>
 <li><strong>Traccia</strong></li>
 </ul>
@@ -3780,7 +3848,7 @@ class="math inline">B</span></li>
 \textrm{tr}(B)</span></li>
 </ul></li>
 </ul>
-<a href="#definizione-55"><h2 id="definizione-55">Definizione 55</h2></a>
+<a href="#definizione-57"><h2 id="definizione-57">Definizione 57</h2></a>
 <ul>
 <li><strong>Matrice triangolare superiore</strong></li>
 </ul>
@@ -3889,7 +3957,7 @@ n}(\mathbb{K}) \mid A</span> diagonalizzabile</li>
 <li><span class="math inline">A</span> triangolarizzabile</li>
 </ul></li>
 </ul>
-<a href="#definizione-56"><h2 id="definizione-56">Definizione 56</h2></a>
+<a href="#definizione-58"><h2 id="definizione-58">Definizione 58</h2></a>
 <ul>
 <li><strong>Sottomatrice di una matrice</strong></li>
 </ul>
@@ -3962,7 +4030,7 @@ class="math inline">(m-r)\cdot(n-r)</span> orlati in <span
 class="math inline">A</span></li>
 </ul></li>
 </ul>
-<a href="#definizione-57"><h2 id="definizione-57">Definizione 57</h2></a>
+<a href="#definizione-59"><h2 id="definizione-59">Definizione 59</h2></a>
 <ul>
 <li><strong>Matrice completa</strong></li>
 </ul>
@@ -3980,7 +4048,7 @@ n}(\mathbb{K})</span></li>
 b_m\end{array}\right)</span></li>
 </ul>
 </blockquote>
-<a href="#definizione-58"><h2 id="definizione-58">Definizione 58</h2></a>
+<a href="#definizione-60"><h2 id="definizione-60">Definizione 60</h2></a>
 <ul>
 <li><strong>Matrice di un’applicazione lineare</strong></li>
 </ul>
@@ -4012,7 +4080,7 @@ f</span> applicazione lineare<span class="math inline">\quad \exists ! A
 </blockquote>
 <hr />
 <a href="#rango"><h1 id="rango">Rango</h1></a>
-<a href="#definizione-59"><h2 id="definizione-59">Definizione 59</h2></a>
+<a href="#definizione-61"><h2 id="definizione-61">Definizione 61</h2></a>
 <ul>
 <li><strong>Sottospazio ortogonale</strong></li>
 </ul>
@@ -4063,7 +4131,7 @@ vettoriale</li>
 \dim(V)</span></li>
 </ul></li>
 </ul>
-<a href="#definizione-60"><h2 id="definizione-60">Definizione 60</h2></a>
+<a href="#definizione-62"><h2 id="definizione-62">Definizione 62</h2></a>
 <ul>
 <li><strong>Moltiplicazione sinistra</strong></li>
 </ul>
@@ -4110,7 +4178,7 @@ A_m)^\bot</span></li>
 \ldots, A^n)</span></li>
 </ul></li>
 </ul>
-<a href="#definizione-61"><h2 id="definizione-61">Definizione 61</h2></a>
+<a href="#definizione-63"><h2 id="definizione-63">Definizione 63</h2></a>
 <ul>
 <li><strong>Rango di una matrice</strong></li>
 </ul>
@@ -4142,7 +4210,7 @@ n}(\mathbb{K})</span></li>
 <hr />
 <a href="#operazioni-su-righe-e-colonne"><h1 id="operazioni-su-righe-e-colonne">Operazioni su righe e colonne</h1></a>
 
-<a href="#definizione-62"><h2 id="definizione-62">Definizione 62</h2></a>
+<a href="#definizione-64"><h2 id="definizione-64">Definizione 64</h2></a>
 <ul>
 <li><strong>Scambio di righe di una matrice</strong></li>
 </ul>
@@ -4322,7 +4390,7 @@ definite precedentemente</li>
 <hr />
 <a href="#interpretazione-geometrica-dei-vettori"><h1 id="interpretazione-geometrica-dei-vettori">Interpretazione geometrica dei vettori</h1></a>
 
-<a href="#definizione-63"><h2 id="definizione-63">Definizione 63</h2></a>
+<a href="#definizione-65"><h2 id="definizione-65">Definizione 65</h2></a>
 <ul>
 <li><strong>Prodotto scalare</strong></li>
 </ul>
@@ -4416,7 +4484,7 @@ e_n</span> tramite rotazioni e riflessioni</li>
 v)</span></li>
 </ul></li>
 </ul>
-<a href="#definizione-64"><h2 id="definizione-64">Definizione 64</h2></a>
+<a href="#definizione-66"><h2 id="definizione-66">Definizione 66</h2></a>
 <ul>
 <li><strong>Norma di un vettore</strong></li>
 </ul>
@@ -4484,7 +4552,7 @@ class="math inline">\mathbb{K}^n</span></li>
 </ul>
 <hr />
 <a href="#determinante"><h1 id="determinante">Determinante</h1></a>
-<a href="#definizione-65"><h2 id="definizione-65">Definizione 65</h2></a>
+<a href="#definizione-67"><h2 id="definizione-67">Definizione 67</h2></a>
 <ul>
 <li><strong>Applicazione multilineare</strong></li>
 </ul>
@@ -4563,7 +4631,7 @@ class="math inline">\mid 1 \neq -1</span></li>
 <li><strong>⚠️ DETERMINANTE ALTERNANTE</strong></li>
 </ul></li>
 </ul>
-<a href="#definizione-66"><h2 id="definizione-66">Definizione 66</h2></a>
+<a href="#definizione-68"><h2 id="definizione-68">Definizione 68</h2></a>
 <ul>
 <li><strong>Matrice singolare</strong></li>
 </ul>
@@ -4751,7 +4819,7 @@ n}(\mathbb{K})</span></li>
 \det(A_h^j)}</span></li>
 </ul></li>
 </ul>
-<a href="#definizione-67"><h2 id="definizione-67">Definizione 67</h2></a>
+<a href="#definizione-69"><h2 id="definizione-69">Definizione 69</h2></a>
 <ul>
 <li><strong>Aggiunta di una matrice</strong></li>
 </ul>
@@ -4801,7 +4869,7 @@ a\end{array}\right)</span></li>
 </ul>
 <hr />
 <a href="#polinomio-caratteristico"><h1 id="polinomio-caratteristico">Polinomio caratteristico</h1></a>
-<a href="#definizione-68"><h2 id="definizione-68">Definizione 68</h2></a>
+<a href="#definizione-70"><h2 id="definizione-70">Definizione 70</h2></a>
 <blockquote>
 <ul>
 <li><span class="math inline">\mathbb{K}</span> campo</li>
@@ -4843,7 +4911,7 @@ class="math inline">B</span></li>
 <li><span class="math inline">p_A(x) = p_B(x)</span></li>
 </ul></li>
 </ul>
-<a href="#definizione-69"><h2 id="definizione-69">Definizione 69</h2></a>
+<a href="#definizione-71"><h2 id="definizione-71">Definizione 71</h2></a>
 <ul>
 <li><strong>Autovalore</strong></li>
 </ul>
@@ -4905,7 +4973,7 @@ class="math inline">\iff \exists v \in \mathbb{K}^n - \{0\} \mid A \cdot
 v = \lambda \cdot v</span></li>
 </ul></li>
 </ul>
-<a href="#definizione-70"><h2 id="definizione-70">Definizione 70</h2></a>
+<a href="#definizione-72"><h2 id="definizione-72">Definizione 72</h2></a>
 <ul>
 <li><strong>Autovettore relativo ad un autovalore</strong></li>
 </ul>
@@ -4942,7 +5010,7 @@ class="math inline">\lambda_1, \ldots, \lambda_k</span></li>
 indipendenti</li>
 </ul></li>
 </ul>
-<a href="#definizione-71"><h2 id="definizione-71">Definizione 71</h2></a>
+<a href="#definizione-73"><h2 id="definizione-73">Definizione 73</h2></a>
 <ul>
 <li><strong>Autospazio relativo ad un autovalore</strong></li>
 </ul>
@@ -4979,7 +5047,7 @@ n}(\mathbb{K})</span></li>
 \mathbb{K}</span> sottospazio vettoriale</li>
 </ul></li>
 </ul>
-<a href="#definizione-72"><h2 id="definizione-72">Definizione 72</h2></a>
+<a href="#definizione-74"><h2 id="definizione-74">Definizione 74</h2></a>
 <ul>
 <li><strong>Molteplicità algebrica di un autovalore</strong></li>
 </ul>
@@ -5014,7 +5082,7 @@ class="math inline">B</span></li>
 \mu_B(\lambda)</span></li>
 </ul></li>
 </ul>
-<a href="#definizione-73"><h2 id="definizione-73">Definizione 73</h2></a>
+<a href="#definizione-75"><h2 id="definizione-75">Definizione 75</h2></a>
 <ul>
 <li><strong>Molteplicità geometrica di un autovalore</strong></li>
 </ul>
@@ -5172,7 +5240,7 @@ class="math inline">\mathbb{K}^n</span></li>
 </ul>
 <hr />
 <a href="#numeri-complessi"><h1 id="numeri-complessi">Numeri complessi</h1></a>
-<a href="#definizione-74"><h2 id="definizione-74">Definizione 74</h2></a>
+<a href="#definizione-76"><h2 id="definizione-76">Definizione 76</h2></a>
 <ul>
 <li><strong>Insieme dei complessi</strong></li>
 </ul>
@@ -5200,7 +5268,7 @@ b:=\operatorname{Im}(z)\end{array}\right.</span></li>
 <li><span class="math inline">z\cdot w=(a c-b d)+i(ad+ bc)</span></li>
 </ul></li>
 </ul>
-<a href="#definizione-75"><h2 id="definizione-75">Definizione 75</h2></a>
+<a href="#definizione-77"><h2 id="definizione-77">Definizione 77</h2></a>
 <ul>
 <li><strong>Coniugato</strong></li>
 </ul>
@@ -5240,7 +5308,7 @@ class="math inline">\overline{z}+\overline{w}=\overline{z+w}</span></li>
 \theta</span></li>
 </ul></li>
 </ul>
-<a href="#definizione-76"><h2 id="definizione-76">Definizione 76</h2></a>
+<a href="#definizione-78"><h2 id="definizione-78">Definizione 78</h2></a>
 <ul>
 <li><strong>Raggio</strong></li>
 </ul>
@@ -5256,7 +5324,7 @@ dall’origine nel piano di Gauss</li>
 </ul></li>
 </ul>
 </blockquote>
-<a href="#definizione-77"><h2 id="definizione-77">Definizione 77</h2></a>
+<a href="#definizione-79"><h2 id="definizione-79">Definizione 79</h2></a>
 <ul>
 <li><strong>Forma polare</strong></li>
 </ul>
@@ -5268,7 +5336,7 @@ dall’origine nel piano di Gauss</li>
 <strong>forma polare di <span class="math inline">z</span></strong></li>
 </ul>
 </blockquote>
-<a href="#definizione-78"><h2 id="definizione-78">Definizione 78</h2></a>
+<a href="#definizione-80"><h2 id="definizione-80">Definizione 80</h2></a>
 <ul>
 <li><strong>Soluzione principale</strong></li>
 </ul>
@@ -5333,7 +5401,7 @@ w)=\arg(z) + \arg(w)</span></li>
 </ul>
 <hr />
 <a href="#coefficienti-binomiali"><h1 id="coefficienti-binomiali">Coefficienti binomiali</h1></a>
-<a href="#definizione-79"><h2 id="definizione-79">Definizione 79</h2></a>
+<a href="#definizione-81"><h2 id="definizione-81">Definizione 81</h2></a>
 <ul>
 <li><strong>Coefficiente binomiale</strong></li>
 </ul>
@@ -5430,7 +5498,7 @@ in <span class="math inline">\mathbb{Z}_p</span></li>
 </ul>
 <hr />
 <a href="#induzione"><h1 id="induzione">Induzione</h1></a>
-<a href="#definizione-80"><h2 id="definizione-80">Definizione 80</h2></a>
+<a href="#definizione-82"><h2 id="definizione-82">Definizione 82</h2></a>
 <ul>
 <li><strong>Induzione</strong></li>
 </ul>

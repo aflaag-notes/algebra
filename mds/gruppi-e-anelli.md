@@ -365,28 +365,26 @@
 - **Hp**
   - $G$ gruppo
   - $g \in G$
-- **Th**
   - $\exists! d \in \mathbb{N} \mid I(g)=I(d)$
-  - $d = 0 \implies o(g) := |H(g)| = |\mathbb{Z}|$, dunque infinito
+- **Th**
+  - $d = 0 \implies o(g) = |\mathbb{Z}| = + \infty$
   - $d>0 \implies d = o(g)$, e questo implica che in $I(g)$ sono presenti tutti i multipli di $o(g)$
 - **Dim**
   - $d = 0$
-    - si consideri $f: \mathbb{Z} \rightarrow H(g) : n \rightarrow g^n$
+    - sia $f: \mathbb{Z} \rightarrow H(g) : n \rightarrow g^n$
     - $f$ iniettiva $\iff \forall m, n \in \mathbb{Z} \quad g^n =g^m \implies n = m$
     - $m, n \in \mathbb{Z} \mid g^m = g^n \implies g^{-m} \cdot g^m=g^{-m} \cdot g^n \iff e = g^{n - m} \implies n - m \in I(g) = I(d) \implies d \mid n - m$
     - $d = 0 \implies 0 \mid n - m \iff n -m = 0 \iff n = m$, di conseguenza $g^m = g^n \implies n = m$
     - la suriettività di $f$ è data al fatto che l'immagine di $f$ coincide con $H(g)$
-    - $f$ biiettiva $\implies |\mathbb{Z} | = |H(g)| = o(g)$, dunque infinito
+    - $f$ biiettiva $\implies o(g) := |H(g)| = |\mathbb{Z}| = + \infty$
   - $d \gt 0$
     - $|H(g)| \le d$, ovvero $g$ ha _al massimo $d$_ potenze
         - $I(g) = I(d) \land d \in I(d) \implies d \in I(g) \implies g^d = e$
         - $d \gt 0 \implies \forall n \in \mathbb{Z} \quad \exists q, r \in \mathbb{Z} \mid n = dq + r \quad 0 \le r \lt d$ per il teorema della divisione euclidea con il resto, dunque $g^n = g^{dq +r}=(g^d)^q \cdot g^r=e^q \cdot g^r =e \cdot g^r = g^r$
-        - $g^n = g^r \iff n = r$ poiché $f$ biiettiva per dimostrazione precedente, e inoltre $0 \le r \lt d \implies 0 \le n \lt d$
-        - poiché è stato scelto $n \in \mathbb{Z}$ senza restrizioni, allora il fatto che $0 \le n \lt d$ implica necessariamente che ogni esponente di $g$ deve essere un valore intero compreso tra $0$ e $d - 1$, dunque il numero di potenze di $g$ è al massimo $d$
+        - $0 \le r \lt d \implies$ ci sono al massimo $d$ valori per $g^r$, e poiché $g^r = g^n$, allora $g$ ha al massimo $d$ potenze
     - $|H(g)| \ge d$, ovvero $g$ ha _al minimo_ $d$ potenze
-        - $\forall x, y \in \mathbb{Z} \mid 0 \le x, y \lt d \quad g^x = g^y \iff g^x \cdot g^{-y} = e \iff g^{x - y} = e$, ma per osservazione precedente $\forall k \in \mathbb{Z} \quad e = (g^d)^k = g^{dk}$
-        - $0 \le x, y \lt d \implies -d \lt x - y \lt d$
-        - allora, segue che $g^{x-y} = g^{dk} \iff x - y = dk \iff d \mid x- y$, ma poiché $-d \lt x - y \lt d$, allora necessariamente $x - y =0 \iff x = y$, e dunque $g^x$ e $g^y$ sono la stessa potenza, e dunque le potenze di $g$ non sono meno di $d$
+        - $\forall x, y \in \mathbb{Z} \mid 0 \le x, y \lt d \quad g^x = g^y \iff g^x \cdot g^{-y} = e \iff g^{x - y} = e \iff x- y \in I(g) = I(d) \iff \exists k \in \mathbb{Z} \mid x - y = dk$
+        - $0 \le x, y \lt d \implies -d \lt x - y \lt d \implies x - y = 0 \iff x = y$, allora $f:[0,d] \rightarrow H(g)$ è biiettiva, e dunque $g$ ha almeno $d$ potenze
     - di conseguenza, si ottiene che $H(g) = \{g^0, g^1, \ldots, g^{d-1}\} \implies |H(g)|=d$
 
 ## Oss

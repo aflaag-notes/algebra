@@ -134,21 +134,19 @@
     - $\mathbb{K}$ campo
     - $I \subset \mathbb{K}[x]$ ideale
 - **Th**
-    - $\exists ! p(x) \in \mathbb{K}[x] \mid I = I(p(x))$, o equivalentemente, in $\mathbb{K}[x]$ ogni ideale è principale
+    - $\exists  p(x) \in I \mid I = I(p(x))$, o equivalentemente, in $\mathbb{K}[x]$ ogni ideale è principale
 - **Dim**
-    - _unicità_
-        - ⚠️ **che vuol dire sta roba**
-        - $I = \{0\} \implies I = I(0)$, ovvero l'ideale principale generato da $0$
-        - preso $p(x) \in I - \{0\} \mid \deg(p(x))$ sia il minore possibile, allora $\forall q(x) \in I \mid \deg(q(x)) \lt \deg(p(x)) \implies q(x) \in I(0) \implies q(x) = 0$, di conseguenza è unico in quanto l'elemento minore in $I - \{0\}$ è unico
-    - _esistenza_
-        - per il principio del minimo numero $\exists p(x) \in I - \{0\} \mid I = I(p(x))$, dove $p(x)$ è il polinomio di grado minore in $I - \{0\}$
-            - $I \subseteq I(p(x))$
-                - per il teorema della divisione con il resto tra polinomi $\forall a(x) \in I \quad \exists ! q(x), r(x) \mid a(x) = p(x) \cdot q(x) + r(x) \quad \deg(r(x)) \lt \deg(p(x)) \implies r(x) = a(x) - p(x) \cdot q(x)$
-                - $\left.\begin{array}{l} a(x) \in I \\ p(x) \in I - \{0\} \implies p(x) \cdot q(x) \in I \end{array}\right\} \implies r(x) \in I$
-                - ma poiché $\deg(r(x)) \lt \deg(p(x))$, e $p(x)$ è stato preso con il grado minore possibile, per osservazione precedente segue necessariamente che $r(x) = 0$, e dunque $a(x) = p(x) \cdot q(x) \implies a(x) \in I(p(x))$
-            - $I(p(x)) \subseteq I$
-                - $p(x) \in I - \{0\}$ e $I$ è un ideale per ipotesi, dunque in particolare $\mathbb{K}[x] \cdot I \subseteq I$, allora $\forall q(x) \in \mathbb{K}[x] \quad q(x) \cdot p(x) \in I$
-                - $\forall a(x) \in I(p(x)) \quad \exists q(x) \in \mathbb{K}[x] \mid q(x)\cdot p(x) = a(x)$, dunque $a(x) \in I$
+    - $I = \{0\} \implies I = I(0)$, ovvero l'ideale principale generato da $0$
+    - preso $p(x) \in I - \{0\} \mid \deg(p(x))$ sia il minore possibile, allora $\forall q(x) \in I \mid \deg(q(x)) \lt \deg(p(x)) \implies q(x) \in I(0) \implies q(x) = 0$, di conseguenza è unico in quanto l'elemento minore in $I - \{0\}$ è unico
+    - per osservazione precedente $\exists p(x) \in I - \{0\} \mid I = I(p(x))$, dove $p(x)$ è il polinomio di grado minore in $I - \{0\}$
+    - $I = I(p(x)) \iff I \subseteq I(p(x)) \land I(p(x)) \subseteq I$
+        - $I \subseteq I(p(x))$
+            - per il teorema della divisione con il resto tra polinomi $\forall a(x) \in I \quad \exists ! q(x), r(x) \mid a(x) = p(x) \cdot q(x) + r(x) \quad \deg(r(x)) \lt \deg(p(x)) \implies r(x) = a(x) - p(x) \cdot q(x)$
+            - $\left.\begin{array}{l} a(x) \in I \\ p(x) \in I - \{0\} \implies p(x) \cdot q(x) \in I \end{array}\right\} \implies r(x) \in I$
+            - ma poiché $\deg(r(x)) \lt \deg(p(x))$, e $p(x)$ è stato preso con il grado minore possibile, per osservazione precedente segue necessariamente che $r(x) = 0$, e dunque $a(x) = p(x) \cdot q(x) \implies a(x) \in I(p(x))$
+        - $I(p(x)) \subseteq I$
+            - $p(x) \in I - \{0\}$ e $I$ è un ideale per ipotesi, dunque in particolare $\mathbb{K}[x] \cdot I \subseteq I$, allora $\forall q(x) \in \mathbb{K}[x] \quad q(x) \cdot p(x) \in I$
+            - $\forall a(x) \in I(p(x)) \quad \exists q(x) \in \mathbb{K}[x] \mid q(x)\cdot p(x) = a(x)$, dunque $a(x) \in I$
 
 ## Oss
 
@@ -188,20 +186,12 @@
     - $a_1(c) = \ldots = a_n(c) = 0 \iff d(c) = 0$
 - **Dim**
     - _prima implicazione_
-        - ⚠️ **perche $h$ è una costante?**
-        - in ipotesi $\forall i \in [1, n] \quad \exists c \in \mathbb{K} \mid a_i(c) = 0$
-        - per dimostrazione precedente $\forall i \in [1, n] \quad a_i(c) = 0 \iff (x - c) \mid a_i(x)$
-            - ad esempio, per $i = 1$ si ha che $\exists k \in \mathbb{K} \mid (x - c) \cdot k = a_1(x)$
-        - per definizione $\forall i \in [1, n] \quad d(x) \mid a_i(x)$
-            - ad esempio, per $i = 1$ si ha che $\exists h \in \mathbb{K} \mid d(x) \cdot h = a_1(x)$
-        - allora sostituendo, si ha che $d(x) \cdot h = (x - c) \cdot k$
-        - $h \in \mathbb{K} \implies \exists h^{-1} \in \mathbb{K}$ poiché $\mathbb{K}$ è un campo
-        - allora $d(x) = (x- c) \cdot kh^{-1}$, dove $kh^{-1} \in \mathbb{K}$ poiché $\mathbb{K}$ è un campo, e dunque $\exists kh^{-1} \in \mathbb{K} : (x - c) \mid d(x)$, che per dimostrazione precedente implica che $d(c) = 0$
+        - $\forall i \in [1, n] \quad a_i(c) = 0 \iff (x - c) \mid a_i(x)$
+        - per definizione $\forall i \in [1, n] \quad d(x) \mid a_i(x)$, e poiché $d(x)$ è il massimo tra i divisori comuni, allora necessariamente $(x - c) \mid d(x) \iff d(c) = 0$
     - _seconda implicazione_
-        - ⚠️ **probabilmente si può usare in due versi perche $d(x)$ esiste sempre**
         - per definizione $\forall i \in [1, n] \quad d(x) \mid a_i(x)$
         - per dimostrazione precedente $d(c) = 0 \iff (x - c) \mid d(x)$
-        - per dimostrazione precedente, $\mid$ è un ordine parziale, e in particolare transitiva, e dunque $\forall i \in [1, n] \quad (x - c) \mid d(x) \land d(x) \mid a_i(x) \implies (x - c) \mid a_i(x)$, e riapplicando lo stesso teorema $\forall i \in [1, n]\quad (x - c) \mid a_i(x) \iff a_i(c) = 0$
+        - allora $\forall i \in [1, n] \quad (x - c) \mid d(x) \land d(x) \mid a_i(x) \implies (x - c) \mid a_i(x) \iff a_i(c) = 0$
 
 ## Oss
 
@@ -209,39 +199,17 @@
     - $\mathbb{K}$ campo
     - $p(x) \in \mathbb{K}[x]$
 - **Th**
-    - $p(x) \in \mathbb{K}[x]$ irriducibile $\iff p(x)$ primo
+    - $p(x)$ irriducibile $\iff p(x)$ primo
 - **Dim**
     - _prima implicazione_
-        - $p(x) \in \mathbb{K}[x]$ irriducibile$
-        - si supponga $\exists d(x) \in \mathbb{K}[x] : d(x) \mid p(x) \implies \exists e(x) \in \mathbb{K}[x] \mid p(x) = p(x) \cdot e(x)$
-        - ⚠️  **NON HO CAPITO NULLA QUI C'È UN BUCO**
-        - $p(x) \nmid a(x) \implies \textrm{MCD}(a(x), p(x))= 1$ ⚠️  **NON SO IL PERCHÉ**
-            - per l'identità di Bézout $\exists f(x), g(x) \in \mathbb{K}[x] \mid 1 = f(x)a(x) + g(x)p(x) \iff b(x) = a(x)b(x)f(x) + p(x)g(x)b(x)$
-        - ⚠️  **NON HO CAPITO NULLA QUI C'È UN BUCO**
+        - $p(x) \in \mathbb{K}[x]$ irriducibile, allora per definizione $\exists d(x), q(x) \in \mathbb{K}[x] \mid p(x) = d(x) q(x) \implies d(x) \in \mathbb{K}[x]^*=\mathbb{K}^* \lor q(x) \in \mathbb{K}[x]^* = \mathbb{K}^*$
+        - siano $a(x), b(x) \in \mathbb{K}[x] : p(x) \mid a(x)b(x) \iff \exists k(x) \in \mathbb{K}[x] \mid p(x)k(x) = a(x)b(x)$
+        - se $p(x) \nmid a(x) \implies \textrm{MCD}(a(x), p(x))= 1$, allora per l'identità di Bézout $\exists f(x), g(x) \in \mathbb{K}[x] \mid 1 = f(x)a(x) + g(x)p(x) \iff b(x) = a(x)b(x)f(x) + p(x)g(x)b(x) = p(x)k(x)f(x) +p(x)g(x)b(x) = p(x)[k(x)f(x) + g(x)b(x)] \implies p(x) \mid b(x)$
+        - allora $p(x) \mid a(x)b(x) \land p(x) \nmid a(x) \implies p(x) \mid b(x)$
+        - ripetendo analogamente il ragionamento, è possibile dimostrare che $p(x) \mid a(x)b(x) \land p(x) \nmid b(x) \implies p(x) \mid a(x)$
+        - allora, per definizione $p(x)$ primo
     - _seconda implicazione_
         - $\mathbb{K}[x]$ è un dominio di integrità, e dunque, per dimostrazione precedente, implica che ogni elemento primo è anche irriducibile
-
-## Oss
-
-- **Hp**
-    - $\mathbb{K}$ campo
-    - $p(x) \in \mathbb{K}[x] - \{0\}$
-- **Th**
-    - $\exists ! q_1(x), \ldots ,q_k(x) \in \mathbb{K}[x]$ irriducibili e monici$, c \in \mathbb{K} - \{0\} \mid p(x) = c \cdot q_1(x) \cdot \ldots \cdot q_k(x)$
-    - in particolare, i polinomi sono unici a meno di un riordinamento
-- **Dim**
-    - _esistenza_:
-        - $\deg(p(x)) = 1$
-            - ⚠️  **NON HO CAPITO NULLA**
-        - $\deg(p(x)) \gt 1$
-            - ⚠️  **NON HO CAPITO NULLA**
-    - _unicità_
-        - ⚠️  **NON HO CAPITO SU COS'È L'INDUZIONE**
-        - $\deg(p(x)) = 0$
-            - ⚠️  **NON HO CAPITO NULLA**
-        - $\deg(p(x)) \gt 0$
-            - si supponga $\exists q_1(x), \ldots q_k(x), q_1'(x), \ldots, q_j'(x) \in \mathbb{K}[x], c, c' \in \mathbb{K} \mid c \cdot q_1(x) \cdot \ldots \cdot q_i(x) = p(x) = c'\cdot q_1'(x) \cdot \ldots \cdot q_j'(x)$ dove $c \neq c', \forall k \in [1, i] \quad q_k(x) \neq q_k'(x)$
-            - ⚠️  **DOVE HA DIMOSTRATO CHE $i = k$????**
 
 ## Oss
 
@@ -260,6 +228,29 @@
         - per dimostrazione precedente $\forall a(x), b(x), c(x) \in \mathbb{K}[x] \quad a(x) = b(x) \cdot c(x) \implies \deg(a(x)) = \deg(b(x)) + \deg(c(x))$
         - $\deg(p(x)) = 1$, se $\exists a(x), b(x) \in \mathbb{K}[x] \mid p(x) = a(x) \cdot b(x)$, allora $\deg(p(x)) = \deg(a(x))+\deg(b(x)) \implies \deg(a(x)) = 1 \land \deg(b(x)) = 0$ oppure $\deg(a(x)) = 0 \land \deg(b(x)) = 1$
         - dunque, ad esempio se $\deg(a(x)) = 1 \land \deg(b(x)) = 0 \implies b(x) \in \mathbb{K}[x]^*$, e dunque $p(x)$ è dato dal prodotto di un polinomio irriducibile e una costante, e dunque $p(x)$ è irriducibile
+
+## Oss
+
+- **Hp**
+    - $\mathbb{K}$ campo
+    - $p(x) \in \mathbb{K}[x] - \{0\}$
+- **Th**
+    - $\exists ! q_1(x), \ldots ,q_k(x) \in \mathbb{K}[x]$ irriducibili e monici$, c \in \mathbb{K}^* \mid p(x) = c \cdot q_1(x) \cdot \ldots \cdot q_k(x)$
+        - in particolare, i polinomi sono unici a meno di un riordinamento
+- **Dim**
+    - _esistenza_:
+        - dimostrazione per induzione sul grado di $p(x)$
+        - $\deg(p(x)) = 1$
+            - allora $p(x)$ è della forma $p(x) = ax + b$, con $a, b, k \in \mathbb{K}^* \implies p(x) = a \cdot \left(x + \dfrac{b}{a}\right)$, dove $\deg \left( x + \dfrac{b}{a}\right ) = 1 \iff \left( x + \dfrac{b}{a}\right)$ irriducibile
+        - $\deg(p(x)) \gt 1$
+            - per dimostrazione precedente $\deg(p(x)) \neq 1 \iff p(x)$ non irriducibile $\iff \exists a(x), b(x) \in \mathbb{K}[x] - \mathbb{K}[x]^* \mid p(x) = a(x) b(x)$
+        - ⚠️  **poi?**
+    - _unicità_
+        - $\deg(p(x)) = 0$
+            - allora $p(x)$ è della forma $p(x) = c$, con $c \in \mathbb{K}$, allora $p(x) = c \cdot (1 \cdot x^0)$
+        - $\deg(p(x)) \gt 0$
+            - si supponga $\exists q_1(x), \ldots, q_k(x), q_1'(x), \ldots, q_j'(x) \in \mathbb{K}[x], c, c' \in \mathbb{K}^*\mid c \cdot q_1(x) \cdot \ldots \cdot q_i(x) = p(x) = c'\cdot q_1'(x) \cdot \ldots \cdot q_j'(x)$ dove $c \neq c', \forall k \in [1, i] \quad q_k(x) \neq q_k'(x)$
+            - ⚠️  **DOVE HA DIMOSTRATO CHE $i = k$????**
 
 ## Oss
 

@@ -349,9 +349,9 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Hp**
   - $G$ gruppo
   - $g \in G$
-- **Th**
   - $\exists! d \in \mathbb{N} \mid I(g)=I(d)$
-  - $d = 0 \implies o(g) := |H(g)| = |\mathbb{Z}|$, dunque infinito
+- **Th**
+  - $d = 0 \implies o(g) = |\mathbb{Z}| = + \infty$
   - $d>0 \implies d = o(g)$, e questo implica che in $I(g)$ sono presenti tutti i multipli di $o(g)$
 
 ## Teorema 17
@@ -504,21 +504,33 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
   - $I(a_1, \ldots, a_n)$ è un ideale, e prende il nome di _ideale di $A$ generato dagli $a_1, \ldots, a_n \in A$_
 
+## Definizione 12
+
+
+- **Dominio ad ideali principali**
+
+> - $A$ dominio di integrità
+> - $A$ è detto **ad ideali principali** $\iff \forall I \subset A$ ideale$\quad \exists d \in I \mid I = I(d)$
+
+
+
 ## Teorema 30
 
 
 - **Hp**
   - $I \subset \mathbb{Z}$ ideale
 - **Th**
-  -  $\exists ! d  \in \mathbb{N} \mid I = I(d)$, o equivalentemente, in $\mathbb{Z}$ ogni ideale è principale
+  -  $\exists  d  \in I \mid I = I(d)$, o equivalentemente, in $\mathbb{Z}$ ogni ideale è principale
 
-## Definizione 12
+## Definizione 13
 
 
 - **Massimo Comun Divisore**
 
 > - $a_{1}, \ldots , a_{n} \in \mathbb{Z}$
 > - $\exists !d \in \mathbb{N}  \mid I\left(a_{1}, \ldots , a_{n}\right)=I(d)$, ed è detto **massimo comun divisore degli $a_1, \ldots, a_n$**
+>   - poiché $\mathbb{Z}$ è dominio ad ideali principali, esiste $d \in I(a_1, \ldots, a_n) \mid I(a_1, \ldots, a_n) = I(d)$, poiché $I(a_1, \ldots, a_n)$ è ideale per dimostrazione precedente
+>   - allora considerando la definizione canonica di $d :=\textrm{MCD}(a_1, \ldots, a_n)$ in cui $d \ge0$, si ha che $d \in \mathbb{N}$ è unico
 
 
 
@@ -556,7 +568,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 # Operazioni sugli ideali
 
 
-## Definizione 13
+## Definizione 14
 
 
 - **$+$ tra ideali**
@@ -576,7 +588,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
   - $I + J$ è un ideale
 
-## Definizione 14
+## Definizione 15
 
 
 - **$\cap$ tra ideali**
@@ -596,13 +608,15 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
     - $I \cap J$ è un ideale
 
-## Definizione 15
+## Definizione 16
 
 
 - **Minimo Comune Multiplo**
 
 > - $a_{1}, \ldots, a_{n} \in \mathbb{Z}$
 > - $\displaystyle \exists ! m  \in \mathbb{N} \mid I(m) = I(a_1) \cap \ldots \cap I(a_n) = \bigcap_{i=1}^{n}{I(a_i)}$, ed è detto **minimo comune multiplo degli $a_1, \ldots, a_n$**
+>   - poiché $\mathbb{Z}$ è dominio ad ideali principali, $\exists m \in \displaystyle \bigcap_{i = 1}^n{I(a_i)} \mid \bigcap_{i = 1}^n{I(a_i)} = I(m)$, poiché $\displaystyle \bigcap_{i=1}^{n}{I(a_i)}$ è ideale per dimostrazione precedente
+>   - allora considerando la definizione canonica di $m :=\textrm{mcm}(a_1, \ldots, a_n)$ in cui $m \ge0$, si ha che $m \in \mathbb{N}$ è unico
 
 
 
@@ -616,7 +630,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
     - $m = \textrm{mcm}(a_1, \ldots, a_n)$
 
-## Definizione 16
+## Definizione 17
 
 
 - **$\cdot$ tra ideali**
@@ -659,7 +673,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Definizione 17
+## Definizione 18
 
 
 - **Relazioni**
@@ -770,7 +784,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 # Partizioni
 
 
-## Definizione 18
+## Definizione 19
 
 
 - **Partizione**
@@ -816,7 +830,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
   - $x \sim_S y \iff x^{-1}y \in H$ è una relazione di equivalenza
 
-## Definizione 19
+## Definizione 20
  
 
 - **Classi laterali su gruppi**
@@ -928,7 +942,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Definizione 20
+## Definizione 21
 
 
 - **Insieme quoziente**
@@ -940,7 +954,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Definizione 21
+## Definizione 22
 
 
 - **Insieme quoziente $\mathbb{Z}_n$**
@@ -989,7 +1003,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 # Funzione totiente di Eulero
 
 
-## Definizione 22
+## Definizione 23
 
 
 - **Funzione totiente di Eulero**
@@ -1041,7 +1055,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Definizione 23
+## Definizione 24
 
 
 - **Permutazioni**
@@ -1071,7 +1085,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
   - $(\mathcal{S}_X, \circ)$ è un gruppo, non abeliano se $|X| \ge 3$
 
-## Definizione 24
+## Definizione 25
 
 
 - **Gruppo simmetrico**
@@ -1083,7 +1097,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Definizione 25
+## Definizione 26
 
 
 - **Ciclo di una permutazione**
@@ -1138,7 +1152,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 # Trasposizioni
 
 
-## Definizione 26
+## Definizione 27
 
 
 - **Trasposizione**
@@ -1172,7 +1186,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 # Segno
 
 
-## Definizione 27
+## Definizione 28
 
 
 - **Segno di una permutazione**
@@ -1241,7 +1255,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
     - $\sigma \sim \sigma ^\prime \iff$$\left\{\begin{array}{c}k=h \\ d=d_{1}^{\prime} \\ \vdots \\ d_{k}=d_{h}^{\prime}=d_{k}^{\prime}\end{array}\right.$, dove $d_j$ è la lunghezza del ciclo $\gamma_j$ e $d_j^\prime$ è la lunghezza del ciclo $\gamma_j^\prime$
 
-## Definizione 28
+## Definizione 29
 
 
 - **Gruppo alterno**
@@ -1282,7 +1296,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Definizione 29
+## Definizione 30
  
 
 - **Morfismo di gruppi**
@@ -1328,7 +1342,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 # Isomorfismi
 
 
-## Definizione 30
+## Definizione 31
 
 
 - **Isomorfismo**
@@ -1407,7 +1421,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 # Kernel e immagine
 
 
-## Definizione 31
+## Definizione 32
 
 
 - **Kernel e immagine di gruppi**
@@ -1446,7 +1460,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
   - $f$ iniettiva $\iff \textrm{ker}(f) = \{1_G\}$
 
-## Definizione 32
+## Definizione 33
 
 
 - **Kernel e immagine di anelli**
@@ -1493,7 +1507,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Definizione 33
+## Definizione 34
 
 
 - **Gruppo diedrale**
@@ -1542,7 +1556,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
   - $\mathcal{D}_n \hookrightarrow \mathcal{S}_n$
   - $\exists \mathcal{X} \leqslant \mathcal{S}_n \mid \mathcal{D}_n \cong \mathcal{X}$, e in particolare $\mathcal{D}_3 \cong \mathcal{S}_3$
 
-## Definizione 34
+## Definizione 35
 
 
 - **Gruppo di Klein**
@@ -1584,7 +1598,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Definizione 35
+## Definizione 36
 
 
 - **Polinomio**
@@ -1610,7 +1624,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
     - $(\mathbb{K}[x], +, \cdot)$ è un anello commutativo
 
-## Definizione 36
+## Definizione 37
 
 
 - **Grado di un polinomio**
@@ -1653,7 +1667,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Definizione 37
+## Definizione 38
 
 
 - **Radici di un polinomio**
@@ -1692,7 +1706,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
     - $\mathbb{K}$ campo
     - $I \subset \mathbb{K}[x]$ ideale
 - **Th**
-    - $\exists ! p(x) \in \mathbb{K}[x] \mid I = I(p(x))$, o equivalentemente, in $\mathbb{K}[x]$ ogni ideale è principale
+    - $\exists  p(x) \in I \mid I = I(p(x))$, o equivalentemente, in $\mathbb{K}[x]$ ogni ideale è principale
 
 ## Teorema 108
 
@@ -1731,19 +1745,9 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
     - $\mathbb{K}$ campo
     - $p(x) \in \mathbb{K}[x]$
 - **Th**
-    - $p(x) \in \mathbb{K}[x]$ irriducibile $\iff p(x)$ primo
+    - $p(x)$ irriducibile $\iff p(x)$ primo
 
 ## Teorema 112
-
-
-- **Hp**
-    - $\mathbb{K}$ campo
-    - $p(x) \in \mathbb{K}[x] - \{0\}$
-- **Th**
-    - $\exists ! q_1(x), \ldots ,q_k(x) \in \mathbb{K}[x]$ irriducibili e monici$, c \in \mathbb{K} - \{0\} \mid p(x) = c \cdot q_1(x) \cdot \ldots \cdot q_k(x)$
-    - in particolare, i polinomi sono unici a meno di un riordinamento
-
-## Teorema 113
 
 
 - **Hp**
@@ -1751,6 +1755,16 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
     - $p(x) \in \mathbb{K}[x]$
 - **Th**
     - $p(x)$ irriducibile $\iff \deg(p(x)) = 1$
+
+## Teorema 113
+
+
+- **Hp**
+    - $\mathbb{K}$ campo
+    - $p(x) \in \mathbb{K}[x] - \{0\}$
+- **Th**
+    - $\exists ! q_1(x), \ldots ,q_k(x) \in \mathbb{K}[x]$ irriducibili e monici$, c \in \mathbb{K}^* \mid p(x) = c \cdot q_1(x) \cdot \ldots \cdot q_k(x)$
+        - in particolare, i polinomi sono unici a meno di un riordinamento
 
 ## Teorema 114
 
@@ -1783,7 +1797,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Definizione 38
+## Definizione 39
  
 
 - **Spazio vettoriale**
@@ -1816,7 +1830,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
     - $\mathbb{K}^n$ spazio vettoriale su $\mathbb{K}$
 
-## Definizione 39
+## Definizione 40
 
 
 - **Sottospazio vettoriale**
@@ -1830,7 +1844,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Definizione 40
+## Definizione 41
 
 
 - **Span di vettori**
@@ -1855,7 +1869,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
     - $\textrm{span}(v_1, \ldots, v_n)$ è un sottospazio vettoriale di $V$
 
-## Definizione 41
+## Definizione 42
 
 
 - **Generatori di uno spazio vettoriale**
@@ -1934,7 +1948,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
     - $n = m$, il che implica che la cardinalità delle basi di uno spazio vettoriale è unica
 
-## Definizione 42
+## Definizione 43
 
 
 - **Dimensione di uno spazio vettoriale**
@@ -1993,6 +2007,23 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
     - $w_1, \ldots, w_n$ linearmente indipendenti $\iff w_1, \ldots, w_n$ generatori di $W$
 
+## Definizione 44
+
+
+- **$+$ tra spazi vettoriali**
+
+> - $\mathbb{K}$ campo
+> - $U, V$ spazi vettoriali su $\mathbb{K}$
+> - $U + V := \{u + v \mid u \in U, v \in V\}$ è detta **somma tra $U$ e $V$**
+
+- **$\cap$ tra spazi vettoriali**
+
+> - $\mathbb{K}$ campo
+> - $U, V$ spazi vettoriali su $\mathbb{K}$
+> - $U \cap V := \{w \mid w \in U \land w \in V\}$ è detta **intersezione tra $U$ e $V$**
+
+
+
 ## Teorema 127
 
 
@@ -2039,7 +2070,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Definizione 43
+## Definizione 45
 
 
 - **Applicazioni lineari**
@@ -2077,7 +2108,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
     - $V \cong W \iff \dim(V) = \dim(W)$
 
-## Definizione 44
+## Definizione 46
 
 
 - **Kernel e immagine**
@@ -2114,7 +2145,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Definizione 45
+## Definizione 47
 
 
 - **Rango di un'applicazione lineare**
@@ -2158,7 +2189,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Definizione 46
+## Definizione 48
 
 
 - **Matrici**
@@ -2177,7 +2208,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Definizione 47
+## Definizione 49
 
 
 - **Somma tra matrici**
@@ -2201,7 +2232,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Definizione 48
+## Definizione 50
 
 
 - **Prodotto tra matrici**
@@ -2247,7 +2278,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 # Matrici particolari
 
 
-## Definizione 49
+## Definizione 51
 
 
 - **Vettore trasposto**
@@ -2288,7 +2319,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Definizione 50
+## Definizione 52
 
 
 - **Matrice identità**
@@ -2335,7 +2366,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Definizione 51
+## Definizione 53
 
 
 - **Matrice ortogonale**
@@ -2355,7 +2386,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Definizione 52
+## Definizione 54
 
 
 - **Gruppo Speciale Lineare**
@@ -2366,7 +2397,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Definizione 53
+## Definizione 55
 
 
 - **Matrici simili**
@@ -2378,7 +2409,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Definizione 54
+## Definizione 56
 
 
 - **Traccia**
@@ -2402,7 +2433,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Definizione 55
+## Definizione 57
  
 
 - **Matrice triangolare superiore**
@@ -2462,7 +2493,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Definizione 56
+## Definizione 58
 
 
 - **Sottomatrice di una matrice**
@@ -2502,7 +2533,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
     
 
 
-## Definizione 57
+## Definizione 59
 
 
 - **Matrice completa**
@@ -2515,7 +2546,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Definizione 58
+## Definizione 60
 
 
 - **Matrice di un'applicazione lineare**
@@ -2537,7 +2568,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Definizione 59
+## Definizione 61
 
 
 - **Sottospazio ortogonale**
@@ -2574,7 +2605,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Definizione 60
+## Definizione 62
 
 
 - **Moltiplicazione sinistra**
@@ -2609,7 +2640,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
     - $\ker(L_A) = \textrm{span}(A_1, \ldots, A_m)^\bot$
     - $\textrm{im}(L_A) = \textrm{span}(A^1, \ldots, A^n)$
 
-## Definizione 61
+## Definizione 63
 
 
 - **Rango di una matrice**
@@ -2636,7 +2667,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 # Operazioni su righe e colonne
 
 
-## Definizione 62
+## Definizione 64
 
 
 - **Scambio di righe di una matrice**
@@ -2743,7 +2774,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Definizione 63
+## Definizione 65
 
 
 - **Prodotto scalare**
@@ -2792,7 +2823,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Definizione 64
+## Definizione 66
 
 
 - **Norma di un vettore**
@@ -2848,7 +2879,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Definizione 65
+## Definizione 67
 
 
 - **Applicazione multilineare**
@@ -2886,7 +2917,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Definizione 66
+## Definizione 68
 
 
 - **Matrice singolare**
@@ -3023,7 +3054,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Definizione 67
+## Definizione 69
 
 
 - **Aggiunta di una matrice**
@@ -3063,7 +3094,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Definizione 68
+## Definizione 70
 
 
 > - $\mathbb{K}$ campo
@@ -3097,7 +3128,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Definizione 69
+## Definizione 71
 
 
 - **Autovalore**
@@ -3139,7 +3170,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
     - $\lambda$ autovalore $\iff \exists v \in \mathbb{K}^n - \{0\} \mid A \cdot v = \lambda \cdot v$
 
-## Definizione 70
+## Definizione 72
 
 
 - **Autovettore relativo ad un autovalore**
@@ -3166,7 +3197,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Definizione 71
+## Definizione 73
 
 
 - **Autospazio relativo ad un autovalore**
@@ -3193,7 +3224,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Definizione 72
+## Definizione 74
 
 
 - **Molteplicità algebrica di un autovalore**
@@ -3219,7 +3250,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Definizione 73
+## Definizione 75
 
 
 - **Molteplicità geometrica di un autovalore**
@@ -3337,7 +3368,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Definizione 74
+## Definizione 76
 
 
 - **Insieme dei complessi**
@@ -3360,7 +3391,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Definizione 75
+## Definizione 77
 
 
 - **Coniugato**
@@ -3394,7 +3425,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Definizione 76
+## Definizione 78
 
 
 - **Raggio**
@@ -3406,7 +3437,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Definizione 77
+## Definizione 79
 
 
 - **Forma polare**
@@ -3417,7 +3448,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Definizione 78
+## Definizione 80
 
 
 - **Soluzione principale**
@@ -3465,7 +3496,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Definizione 79
+## Definizione 81
 
 
 - **Coefficiente binomiale**
@@ -3536,7 +3567,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Definizione 80
+## Definizione 82
 
 
 - **Induzione**

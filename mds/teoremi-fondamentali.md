@@ -181,6 +181,7 @@
   - $a^{p} \equiv a \ (\bmod \ p)$
 - **Dim**
   - _prima dimostrazione_
+    - dimostrazione per induzione su $a$
     - $a=0 \implies [0]^{p} =[0]$
     - $a \gt 0 \implies$ $[a+1]^{p}=[a+1]$
       - per definizione di $+$, si ottiene che $[a +1] = [a] + [1] \iff [a+1]^p = ([a] + [1])^p$, e per dimostrazione precedente, $([a]+[1])^p = [a]^p +[1]^p$ in $\mathbb{Z}_p$

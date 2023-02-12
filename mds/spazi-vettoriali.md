@@ -241,6 +241,20 @@
         - per qualsiasi insieme di vettori minore di $n$ si ha che $\textrm{span}(w_1, \ldots, \hat{w_i}, \ldots, w_n) \subseteq \textrm{span}(w_1, \ldots, w_n)$
         - allora segue che $\textrm{span}(w_1, \ldots, \hat{w_i}, \ldots, w_n) = \textrm{span}(w_1, \ldots, w_n)$, ma questo non è possibile in queanto $w_1, \ldots, \hat{w_i}, \ldots, w_n$ sono $n - 1$ generatori, e i generatori non possono essere meno di $n \ \bot$
 
+## Def
+
+- **$+$ tra spazi vettoriali**
+
+> - $\mathbb{K}$ campo
+> - $U, V$ spazi vettoriali su $\mathbb{K}$
+> - $U + V := \{u + v \mid u \in U, v \in V\}$ è detta **somma tra $U$ e $V$**
+
+- **$\cap$ tra spazi vettoriali**
+
+> - $\mathbb{K}$ campo
+> - $U, V$ spazi vettoriali su $\mathbb{K}$
+> - $U \cap V := \{w \mid w \in U \land w \in V\}$ è detta **intersezione tra $U$ e $V$**
+
 ## Formula di Grassmann
 
 - **Hp**
@@ -257,20 +271,21 @@
     - $\mathcal{B}_1 := \{w_1, \ldots, w_k, u_{k + 1}, \ldots, u_m\}$ base di $U$
     - $\mathcal{B}_2 := \{w_1, \ldots, w_k, v_{k + 1}, \ldots, v_n\}$ base di $V$
     - $\mathcal{B}_1 \cup \mathcal{B}_2 := \{w_1, \ldots w_k, u_{k + 1}, \ldots, u_m, v_{k + 1}, \ldots, v_n\}$
-    - $\forall u \in U, v \in V \mid u := \displaystyle \sum_{i = 1}^k{\lambda_iw_i} + \sum_{j = k + 1}^m{\lambda_j u_j} \land \displaystyle v :=\sum_{i = 1}^k{\mu_iw_i} + \sum_{h = k + 1}^n {\mu_hv_h} \quad u + v =\sum_{i = 1}^k{(\lambda_i + \mu_i)w_i} + \sum_{j = k + 1}^m{\lambda_j u_j} + \sum_{h = k + 1}^n {\mu_hv_h} \implies u + v \in \textrm{span}(w_1, \ldots w_k, u_{k + 1}, \ldots, u_m, v_{k + 1}, \ldots, v_n) \implies \mathcal{B}_1 \cup \mathcal{B}_2$ generatori di $U + V$, poiché $u + v \in U + V$
+    - per definizione, si ha che $\textrm{span}(\mathcal{B}_1 \cup \mathcal{B}_2) \subseteq U + V$
+    - $\forall u \in U, v \in V \mid \left \{ \begin{array}{l}u := \displaystyle \sum_{i = 1}^k{\lambda_iw_i} + \sum_{j = k + 1}^m{\lambda_j u_j} \\ \displaystyle v :=\sum_{i = 1}^k{\mu_iw_i} + \sum_{h = k + 1}^n {\mu_hv_h} \end{array} \right.\implies  \displaystyle u + v =\sum_{i = 1}^k{(\lambda_i + \mu_i)w_i} + \sum_{j = k + 1}^m{\lambda_j u_j} + \sum_{h = k + 1}^n {\mu_hv_h} \implies u + v \in \textrm{span}(\mathcal{B}_1 \cup \mathcal{B}_2) \implies U + V \subseteq \textrm{span}(\mathcal{B} \cup \mathcal{B}_2)$
+    - allora $\mathcal{B}_1 \cup \mathcal{B}_2$ generatori di $U + V$
     - $a := \displaystyle \sum_{i = 1}^k{\lambda_iw_i}$
     - $b := \displaystyle \sum_{j = k +1}^m{\mu_j u_j } \implies b \in \textrm{span}(u_{k +1 }, \ldots, u_k) \subsetneqq U \implies b \in U$
     - $c := \displaystyle \sum_{h = k + 1} ^n{\eta_hv_h}$
     - siano i coefficienti tali che $a + b + c= 0_W \iff b = - a - c$
-    - $b \in U$ per osservazione precedente, mentre $a + c = v \in V \implies -(a + c) \in V \implies - a- c \in V$, e dunque $b \in U \cap V$
-    - allora, $b$ deve essere generato dalla base $w_1, \ldots, w_k$ di $U \cap V \implies \displaystyle \exists \alpha_1, \ldots, \alpha_k \in \mathbb{K} \mid \sum_{j = k +1}^m{\mu_j u_j }=:b = \displaystyle \sum_{i = 1}^k {\alpha_i w_i} \implies \sum_{j = k +1}^m{\mu_j u_j } - \displaystyle \sum_{i = 1}^k {\alpha_i w_i} = 0_W$
+    - $b \in U$ per osservazione precedente, mentre $a + c = v \in V \implies -(a + c) \in V \implies b = - a- c \in V \implies b \in U \cap V$, allora $b$ deve essere generato dalla base $w_1, \ldots, w_k$ di $U \cap V \implies \displaystyle \exists \alpha_1, \ldots, \alpha_k \in \mathbb{K} \mid \sum_{j = k +1}^m{\mu_j u_j }=:b = \displaystyle \sum_{i = 1}^k {\alpha_i w_i} \implies \sum_{j = k +1}^m{\mu_j u_j } - \displaystyle \sum_{i = 1}^k {\alpha_i w_i} = 0_W$
     - poiché per ipotesi $w_i, \ldots, w_k, u_{k +1}, \ldots, u_m$ è una base di $U$, in $U$ tali vettori sono linearmente indipendenti, dunque segue che ogni $\alpha_i$ e $\mu_j$ deve essere necessariamente $0_{\mathbb{K}}$
     - in particolare, si ottiene che $\forall j \in [k +1, m] \quad \mu_j =0 \implies b = 0_W \implies a + c = 0_W$
     - per ragionamento analogo, sapendo che $c = - a- b$ si otterrà che $c = 0_W$, e dunque $a + b + c = 0_W \iff a = 0_W$
     - per definizione $a$ è combinazione lineare della base di $U \cap V$, e poichè $a = 0_W$ si ha necessariamente che i coefficienti di $a$ sono tutti nulli
-    - dunque, l'equazione di partenza $a + b + c = 0_W$ è verificata solamente per coefficienti di $a$, $b$ e $c$ nulli, il che implica che i vettori che generano $a + b + c$ sono linearmente indipendenti
-    - $\mathcal{B}_1 \cup \mathcal{B}_2$ generatori di $U + V \implies a + b + c \in U + V$, e poiché $w_1, \ldots, w_k, u_{k + 1}, \ldots, u_m, v_{k + 1}, \ldots, v_n$ sono sia generatori che linearmente indipendenti, allora sono una base di $U + V$
-    - per definizione, la dimensione di uno spazio vettoriale è la cardinalità di una delle sue basi, e dunque la cardinalità di $\mathcal{B}_1 \cup \mathcal{B}_2$ è pari a $k + (m - k) + (n - k) = k + m - k + n - k = m + n - k$
+    - dunque, l'equazione di partenza $a + b + c = 0_W$ è verificata solamente per coefficienti di $a$, $b$ e $c$ nulli, il che implica che i vettori che generano $a + b + c$, ovvero $\mathcal{B}_1 \cup \mathcal{B}_2$, sono linearmente indipendenti
+    - allora, poiché generatori di $U + V$ e linearmente indipendenti, $\mathcal{B}_1 \cup \mathcal{B}_2$ sono una base di $U + V$
+    - per definizione, la dimensione di uno spazio vettoriale è la cardinalità di una delle sue basi, e dunque la cardinalità di $\mathcal{B}_1 \cup \mathcal{B}_2$ è pari a $k + (m - k) + (n - k) = k + m - k + n - k = m + n - k \implies \dim(U + V) = \dim(U) + \dim(V) - \dim(U \cap V)$
 
 ## Oss
 
