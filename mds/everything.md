@@ -1106,14 +1106,9 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 > - $n \in \mathbb{N}$
 > - $\sigma \in \mathcal{S}_n$
-> - $\exists 1 \leq i_1, \ldots, i_d \leq n \in \mathbb{N} \mid \left\{\begin{array}{c}
-\sigma\left(i_{1}\right)=i_{2} \\
-\sigma\left(i_{2}\right)=i_{3} \\
-\vdots \\
-\sigma\left(i_{d-1}\right)=i_{d} \\
-\sigma\left(i_{d}\right)=i_{1}
-\end{array}\right. \implies i_1, \ldots, i_n$ costituiscono un **ciclo di $\sigma$**
->   - in tal caso, $d$ è detta **lunghezza del ciclo** $i_1, \ldots, i_d$
+> - $i_1, \ldots, i_d \in \mathbb{N} \mid 1 \leq i_1, \ldots, i_d \leq n$
+> - $(i_1, \ldots, i_d)$ è detto **ciclo di $\sigma$** $\iff \left\{\begin{array}{c}\sigma\left(i_{1}\right)=i_{2} \\\sigma\left(i_{2}\right)=i_{3} \\\vdots \\\sigma\left(i_{d-1}\right)=i_{d} \\\sigma\left(i_{d}\right)=i_{1}\end{array}\right.$
+>   - $d$ è detta _lunghezza del ciclo_ $i_1, \ldots, i_d$
 >   - in generale, è possibile scomporre $\sigma = \gamma_1, \ldots, \gamma_k$, dove ogni $\gamma_i$ è un ciclo di $\sigma$
 
 
@@ -1124,7 +1119,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Hp**
   - $n \in \mathbb{N}$
   - $\sigma \in \mathcal{S}_n$
-  - $1 \le i \le n \in \mathbb{N}$
+  - $i \in \mathbb{N} \mid 1 \le i \le n$
   - $I(\sigma, i):=\left\{n \in \mathbb{Z} \mid \sigma^{n}(i)=i\right\}$
 - **Th**
   - $(I(\sigma, i), +) \subset (\mathbb{Z}, +)$ è un ideale
@@ -1133,9 +1128,12 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 - **Hp**
-    - ⚠️ **RISCRIVI TUTTO**
-    - $I(\sigma, i)$ è **ideale principale** in $\mathbb{Z}$ generato da $I(d)$, dove $d$ è la lunghezza del ciclo di $i$, quindi $I(\sigma, i) = I(d)$
-  - $I(\sigma, i) = I(d) \implies d \in I(\sigma, i)$
+    - $n \in \mathbb{N}$
+    - $\sigma \in \mathcal{S}_n \mid \sigma = \gamma_1 \ldots \gamma_k$ sia la sua decomposizione in cicli
+    - $i \in \gamma_j$
+    - $\exists d \in I(\sigma, i) \mid I(\sigma, i) = I(d)$
+- **Th**
+    - $d$ è la lunghezza di $\gamma_j$
 
 ## Teorema 68
 

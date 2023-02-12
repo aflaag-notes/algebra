@@ -342,7 +342,7 @@
   - $(H(g), \cdot) \leqslant (G, \cdot)$
 - **Dim**
   - $e=g^{0} \implies e \in H(g)$
-  - $\forall m, n \in \mathbb{Z} \quad m + n \in \mathbb{Z} \implies g^m \cdot g^n = g^{m + n} \in H(g)$ per definizione di $H(g)$, quindi $H(g) \cdot Hg(g) \subseteq H(g)$
+  - $\forall m, n \in \mathbb{Z} \quad m + n \in \mathbb{Z} \implies g^m \cdot g^n = g^{m + n} \in H(g)$
   - $\forall n \in \mathbb{Z} \quad -n \in \mathbb{Z} \implies (g^n)^{-1} = g^{-n} \in H(g)$
 
 ## Oss
@@ -421,11 +421,11 @@
     - $\forall g \in G \quad o(g^k) \mid o(g)$
 - **Dim**
     - $\forall (g^k)^n \in H(g^k) \quad (g^k)^n = g^{nk} \implies g^{nk} \in H(g) \implies H(g^k) \subseteq H(g)$
-    - ⚠️ **dimostra che $H(g^k) \leqslant G$**
-    - per dimostrazione precedente $H(g^k), H(g) \leqslant G$
-    - per il teorema di Lagrange $o(g) = | H(g)| \bigg\vert |G|$
-    - inoltre, per il teorema di Lagrange $o(g^k) = | H(g^k)| \bigg\vert |G|$
-    - allora, poiché $H(g^k) \subseteq H(g)$, necessariamente $o(g^k) = | H(g^k)| \bigg\vert |H(g)| = o(g)$
+    - $(H(g^k), \cdot) \leqslant (H(g), \cdot)$
+        - $(g^k)^0 = g^0 =e \implies e \in H(g)$
+        - $\forall (g^k)^x, (g^k)^y \in H(g^k) \quad (g^k)^x \cdot (g^k)^y = g^{kx} \cdot g^{ky} = g^{k(x + y)} = (g^k)^{x + y} \in H(g^k)$
+        - $\forall g^k \in H(g^k) \quad (g^k)^{-1} \in H(g^k)$
+    - allora, per il teorema di Lagrange si ha che $o(g^k) = | H(g^k)| \bigg\vert |H(g)| = o(g)$
 
 ## Oss
 
@@ -437,7 +437,7 @@
 - **Th**
     - $\dfrac{m}{d} \mid o(gh) \land o(gh) \mid m$
 - **Dim**
-    - ⚠️ **frate c'ho veramente 0 sbatta**
+    - ⚠️ **manca dimostrazione**
 
 ## Oss
 

@@ -1848,16 +1848,18 @@ n!</span></li>
 <ul>
 <li><span class="math inline">n \in \mathbb{N}</span></li>
 <li><span class="math inline">\sigma \in \mathcal{S}_n</span></li>
-<li><span class="math inline">\exists 1 \leq i_1, \ldots, i_d \leq n \in
-\mathbb{N} \mid \left\{\begin{array}{c} \sigma\left(i_{1}\right)=i_{2}
-\\ \sigma\left(i_{2}\right)=i_{3} \\ \vdots \\
-\sigma\left(i_{d-1}\right)=i_{d} \\ \sigma\left(i_{d}\right)=i_{1}
-\end{array}\right. \implies i_1, \ldots, i_n</span> costituiscono un
-<strong>ciclo di <span class="math inline">\sigma</span></strong>
+<li><span class="math inline">i_1, \ldots, i_d \in \mathbb{N} \mid 1
+\leq i_1, \ldots, i_d \leq n</span></li>
+<li><span class="math inline">(i_1, \ldots, i_d)</span> è detto
+<strong>ciclo di <span class="math inline">\sigma</span></strong> <span
+class="math inline">\iff
+\left\{\begin{array}{c}\sigma\left(i_{1}\right)=i_{2}
+\\\sigma\left(i_{2}\right)=i_{3} \\\vdots
+\\\sigma\left(i_{d-1}\right)=i_{d}
+\\\sigma\left(i_{d}\right)=i_{1}\end{array}\right.</span>
 <ul>
-<li>in tal caso, <span class="math inline">d</span> è detta
-<strong>lunghezza del ciclo</strong> <span class="math inline">i_1,
-\ldots, i_d</span></li>
+<li><span class="math inline">d</span> è detta <em>lunghezza del
+ciclo</em> <span class="math inline">i_1, \ldots, i_d</span></li>
 <li>in generale, è possibile scomporre <span class="math inline">\sigma
 = \gamma_1, \ldots, \gamma_k</span>, dove ogni <span
 class="math inline">\gamma_i</span> è un ciclo di <span
@@ -1871,7 +1873,8 @@ class="math inline">\sigma</span></li>
 <ul>
 <li><span class="math inline">n \in \mathbb{N}</span></li>
 <li><span class="math inline">\sigma \in \mathcal{S}_n</span></li>
-<li><span class="math inline">1 \le i \le n \in \mathbb{N}</span></li>
+<li><span class="math inline">i \in \mathbb{N} \mid 1 \le i \le
+n</span></li>
 <li><span class="math inline">I(\sigma, i):=\left\{n \in \mathbb{Z} \mid
 \sigma^{n}(i)=i\right\}</span></li>
 </ul></li>
@@ -1885,15 +1888,17 @@ class="math inline">\sigma</span></li>
 <ul>
 <li><strong>Hp</strong>
 <ul>
-<li>⚠️ <strong>RISCRIVI TUTTO</strong></li>
-<li><span class="math inline">I(\sigma, i)</span> è <strong>ideale
-principale</strong> in <span class="math inline">\mathbb{Z}</span>
-generato da <span class="math inline">I(d)</span>, dove <span
-class="math inline">d</span> è la lunghezza del ciclo di <span
-class="math inline">i</span>, quindi <span class="math inline">I(\sigma,
+<li><span class="math inline">n \in \mathbb{N}</span></li>
+<li><span class="math inline">\sigma \in \mathcal{S}_n \mid \sigma =
+\gamma_1 \ldots \gamma_k</span> sia la sua decomposizione in cicli</li>
+<li><span class="math inline">i \in \gamma_j</span></li>
+<li><span class="math inline">\exists d \in I(\sigma, i) \mid I(\sigma,
 i) = I(d)</span></li>
-<li><span class="math inline">I(\sigma, i) = I(d) \implies d \in
-I(\sigma, i)</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">d</span> è la lunghezza di <span
+class="math inline">\gamma_j</span></li>
 </ul></li>
 </ul>
 <a href="#teorema-68"><h2 id="teorema-68">Teorema 68</h2></a>

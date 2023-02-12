@@ -916,9 +916,7 @@ H(g)</span></li>
 <ul>
 <li><span class="math inline">e=g^{0} \implies e \in H(g)</span></li>
 <li><span class="math inline">\forall m, n \in \mathbb{Z} \quad m + n
-\in \mathbb{Z} \implies g^m \cdot g^n = g^{m + n} \in H(g)</span> per
-definizione di <span class="math inline">H(g)</span>, quindi <span
-class="math inline">H(g) \cdot Hg(g) \subseteq H(g)</span></li>
+\in \mathbb{Z} \implies g^m \cdot g^n = g^{m + n} \in H(g)</span></li>
 <li><span class="math inline">\forall n \in \mathbb{Z} \quad -n \in
 \mathbb{Z} \implies (g^n)^{-1} = g^{-n} \in H(g)</span></li>
 </ul></li>
@@ -1098,17 +1096,20 @@ o(g)</span></li>
 <li><span class="math inline">\forall (g^k)^n \in H(g^k) \quad (g^k)^n =
 g^{nk} \implies g^{nk} \in H(g) \implies H(g^k) \subseteq
 H(g)</span></li>
-<li>⚠️ <strong>dimostra che <span class="math inline">H(g^k) \leqslant
-G</span></strong></li>
-<li>per dimostrazione precedente <span class="math inline">H(g^k), H(g)
-\leqslant G</span></li>
-<li>per il teorema di Lagrange <span class="math inline">o(g) = | H(g)|
-\bigg\vert |G|</span></li>
-<li>inoltre, per il teorema di Lagrange <span class="math inline">o(g^k)
-= | H(g^k)| \bigg\vert |G|</span></li>
-<li>allora, poiché <span class="math inline">H(g^k) \subseteq
-H(g)</span>, necessariamente <span class="math inline">o(g^k) = |
-H(g^k)| \bigg\vert |H(g)| = o(g)</span></li>
+<li><span class="math inline">(H(g^k), \cdot) \leqslant (H(g),
+\cdot)</span>
+<ul>
+<li><span class="math inline">(g^k)^0 = g^0 =e \implies e \in
+H(g)</span></li>
+<li><span class="math inline">\forall (g^k)^x, (g^k)^y \in H(g^k) \quad
+(g^k)^x \cdot (g^k)^y = g^{kx} \cdot g^{ky} = g^{k(x + y)} = (g^k)^{x +
+y} \in H(g^k)</span></li>
+<li><span class="math inline">\forall g^k \in H(g^k) \quad (g^k)^{-1}
+\in H(g^k)</span></li>
+</ul></li>
+<li>allora, per il teorema di Lagrange si ha che <span
+class="math inline">o(g^k) = | H(g^k)| \bigg\vert |H(g)| =
+o(g)</span></li>
 </ul></li>
 </ul>
 <a href="#oss-18"><h2 id="oss-18">Oss</h2></a>
@@ -1127,7 +1128,7 @@ m</span></li>
 </ul></li>
 <li><strong>Dim</strong>
 <ul>
-<li>⚠️ <strong>frate c’ho veramente 0 sbatta</strong></li>
+<li>⚠️ <strong>manca dimostrazione</strong></li>
 </ul></li>
 </ul>
 <a href="#oss-19"><h2 id="oss-19">Oss</h2></a>

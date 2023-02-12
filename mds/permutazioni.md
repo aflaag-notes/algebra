@@ -49,14 +49,9 @@
 
 > - $n \in \mathbb{N}$
 > - $\sigma \in \mathcal{S}_n$
-> - $\exists 1 \leq i_1, \ldots, i_d \leq n \in \mathbb{N} \mid \left\{\begin{array}{c}
-\sigma\left(i_{1}\right)=i_{2} \\
-\sigma\left(i_{2}\right)=i_{3} \\
-\vdots \\
-\sigma\left(i_{d-1}\right)=i_{d} \\
-\sigma\left(i_{d}\right)=i_{1}
-\end{array}\right. \implies i_1, \ldots, i_n$ costituiscono un **ciclo di $\sigma$**
->   - in tal caso, $d$ è detta **lunghezza del ciclo** $i_1, \ldots, i_d$
+> - $i_1, \ldots, i_d \in \mathbb{N} \mid 1 \leq i_1, \ldots, i_d \leq n$
+> - $(i_1, \ldots, i_d)$ è detto **ciclo di $\sigma$** $\iff \left\{\begin{array}{c}\sigma\left(i_{1}\right)=i_{2} \\\sigma\left(i_{2}\right)=i_{3} \\\vdots \\\sigma\left(i_{d-1}\right)=i_{d} \\\sigma\left(i_{d}\right)=i_{1}\end{array}\right.$
+>   - $d$ è detta _lunghezza del ciclo_ $i_1, \ldots, i_d$
 >   - in generale, è possibile scomporre $\sigma = \gamma_1, \ldots, \gamma_k$, dove ogni $\gamma_i$ è un ciclo di $\sigma$
 
 ## Oss
@@ -64,7 +59,7 @@
 - **Hp**
   - $n \in \mathbb{N}$
   - $\sigma \in \mathcal{S}_n$
-  - $1 \le i \le n \in \mathbb{N}$
+  - $i \in \mathbb{N} \mid 1 \le i \le n$
   - $I(\sigma, i):=\left\{n \in \mathbb{Z} \mid \sigma^{n}(i)=i\right\}$
 - **Th**
   - $(I(\sigma, i), +) \subset (\mathbb{Z}, +)$ è un ideale
@@ -78,11 +73,15 @@
 ## Oss
 
 - **Hp**
-    - ⚠️ **RISCRIVI TUTTO**
-    - $I(\sigma, i)$ è **ideale principale** in $\mathbb{Z}$ generato da $I(d)$, dove $d$ è la lunghezza del ciclo di $i$, quindi $I(\sigma, i) = I(d)$
-  - $I(\sigma, i) = I(d) \implies d \in I(\sigma, i)$
+    - $n \in \mathbb{N}$
+    - $\sigma \in \mathcal{S}_n \mid \sigma = \gamma_1 \ldots \gamma_k$ sia la sua decomposizione in cicli
+    - $i \in \gamma_j$
+    - $\exists d \in I(\sigma, i) \mid I(\sigma, i) = I(d)$
+- **Th**
+    - $d$ è la lunghezza di $\gamma_j$
 - **Dim**
-  - ⚠️ **MANCA DIMOSTRAZIONE**
+    - per definizione $\forall n \in I(\sigma, i) \quad \sigma^n(i) = i$
+    - si noti che le uniche potenze per cui tale proprietà è rispettata sono quelle per cui viene permutato ogni elemento del ciclo col suo successivo, e in particolare si ritornerà sull'elemento di partenza esattamente ogni $d$ permutazioni, dove $d$ è la lunghezza di $\gamma_j$
 
 ## Cor
 
@@ -99,7 +98,7 @@
   - inoltre, per dimostrazione precedente $I(\sigma) = I(\sigma, 1) \cap \ldots \cap I(\sigma, n) = I(d_1) \cap \ldots \cap I(d_k)$
   - $m:= \textrm{mcm}(d_1, \ldots, d_k) \implies I(d_1) \cap \ldots \cap I(d_k) = I(m)$
   - allora $I(\sigma) = I(m)$
-  - ⚠️ **manca un pezzo dato dalla dimostrazione prima**
+  - ⚠️ **boh?**
 
 ****
 
@@ -223,12 +222,11 @@
 - **Th**
     - $\sigma \sim \sigma ^\prime \iff$$\left\{\begin{array}{c}k=h \\ d=d_{1}^{\prime} \\ \vdots \\ d_{k}=d_{h}^{\prime}=d_{k}^{\prime}\end{array}\right.$, dove $d_j$ è la lunghezza del ciclo $\gamma_j$ e $d_j^\prime$ è la lunghezza del ciclo $\gamma_j^\prime$
 - **Dim**
+  - ⚠️ **da rivedere**
   - _prima implicazione_
-    - ⚠️ **NIENTE HA SENSO DI QUELLO CHE C'È SCRITTO IN QUESTA IMPLICAZIONE**
     - per definizione $\sigma \sim \sigma^\prime \implies \exists\alpha \in \mathcal{S}_n \mid \sigma^\prime = \alpha \sigma \alpha^{-1}$
     - $\forall i_1, \ldots, i_d \mid (i_1 \ldots i_d)$ è un ciclo di $\sigma$, per la relazione di coniugio si ottiene che $\sigma^\prime(\alpha(i_j))=(\alpha \sigma \alpha^{-1})(\alpha(i_j)) \implies (\alpha\sigma)(i_j)=$$\left\{\begin{array}{ll}\alpha\left(i_{j}+1\right) & j<d \\ \alpha\left(i_{1}\right) & j=d\end{array}\right.$ perché $\sigma(i) = i_{j + 1} \quad \forall j \lt d$ perché $i_j \in (i_1 \ldots i_d)$ ciclo di $\sigma$
     - quindi la relazione di coniugio determina un ciclo in $\sigma^\prime$ della forma $(\alpha(i_1) \ldots \alpha(i_d))$
-    - ⚠️ **PERCHÉ È BIUNIVOCA?**
     - $(i_1 \ldots i_d)$ un certo ciclo in $\sigma \implies (\alpha(i_1) \ldots \alpha(i_d))$ è un ciclo in $\sigma^\prime$
       - corrispondenza biunivoca tra cicli di $\sigma$ e $\sigma^\prime \implies h = k$ (devono avere lo stesso numero di cicli), e inoltre implica $\left\{\begin{array}{c}k=h \\ d=d_{1}^{\prime} \\ \vdots \\ d_{k}=d_{h}^{\prime}=d_{k}^{\prime}\end{array}\right.$, ovvero i cicli hanno la stessa lunghezza
   - _seconda implicazione_
@@ -281,6 +279,7 @@
 - **Th**
     - $\textrm{sgn}(\sigma)=(-1)^{n - k}$
 - **Dim**
+  - ⚠️ **da rivedere**
   - $\sigma = (i_1 \ldots i_{d_1}) \ldots (j_1 \ldots j_{d_k})$
   - $\forall \sigma \in \mathcal{S}_n \quad \exists \sigma' \in \mathcal{S}_n \mid \sigma^\prime := (1 \ldots d_1)(d_1 + 1 \ldots d_1 + d_2) \ldots (n -d_k + 1 \ldots n)$
       - dunque $\sigma^\prime$ è composta da cicli lunghi esattamente come i cicli di $\sigma$, ma ha i numeri da $1$ a $n$ in sequenza nei cicli

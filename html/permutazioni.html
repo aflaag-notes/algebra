@@ -288,16 +288,18 @@ n!</span></li>
 <ul>
 <li><span class="math inline">n \in \mathbb{N}</span></li>
 <li><span class="math inline">\sigma \in \mathcal{S}_n</span></li>
-<li><span class="math inline">\exists 1 \leq i_1, \ldots, i_d \leq n \in
-\mathbb{N} \mid \left\{\begin{array}{c} \sigma\left(i_{1}\right)=i_{2}
-\\ \sigma\left(i_{2}\right)=i_{3} \\ \vdots \\
-\sigma\left(i_{d-1}\right)=i_{d} \\ \sigma\left(i_{d}\right)=i_{1}
-\end{array}\right. \implies i_1, \ldots, i_n</span> costituiscono un
-<strong>ciclo di <span class="math inline">\sigma</span></strong>
+<li><span class="math inline">i_1, \ldots, i_d \in \mathbb{N} \mid 1
+\leq i_1, \ldots, i_d \leq n</span></li>
+<li><span class="math inline">(i_1, \ldots, i_d)</span> è detto
+<strong>ciclo di <span class="math inline">\sigma</span></strong> <span
+class="math inline">\iff
+\left\{\begin{array}{c}\sigma\left(i_{1}\right)=i_{2}
+\\\sigma\left(i_{2}\right)=i_{3} \\\vdots
+\\\sigma\left(i_{d-1}\right)=i_{d}
+\\\sigma\left(i_{d}\right)=i_{1}\end{array}\right.</span>
 <ul>
-<li>in tal caso, <span class="math inline">d</span> è detta
-<strong>lunghezza del ciclo</strong> <span class="math inline">i_1,
-\ldots, i_d</span></li>
+<li><span class="math inline">d</span> è detta <em>lunghezza del
+ciclo</em> <span class="math inline">i_1, \ldots, i_d</span></li>
 <li>in generale, è possibile scomporre <span class="math inline">\sigma
 = \gamma_1, \ldots, \gamma_k</span>, dove ogni <span
 class="math inline">\gamma_i</span> è un ciclo di <span
@@ -311,7 +313,8 @@ class="math inline">\sigma</span></li>
 <ul>
 <li><span class="math inline">n \in \mathbb{N}</span></li>
 <li><span class="math inline">\sigma \in \mathcal{S}_n</span></li>
-<li><span class="math inline">1 \le i \le n \in \mathbb{N}</span></li>
+<li><span class="math inline">i \in \mathbb{N} \mid 1 \le i \le
+n</span></li>
 <li><span class="math inline">I(\sigma, i):=\left\{n \in \mathbb{Z} \mid
 \sigma^{n}(i)=i\right\}</span></li>
 </ul></li>
@@ -346,19 +349,28 @@ i)</span></li>
 <ul>
 <li><strong>Hp</strong>
 <ul>
-<li>⚠️ <strong>RISCRIVI TUTTO</strong></li>
-<li><span class="math inline">I(\sigma, i)</span> è <strong>ideale
-principale</strong> in <span class="math inline">\mathbb{Z}</span>
-generato da <span class="math inline">I(d)</span>, dove <span
-class="math inline">d</span> è la lunghezza del ciclo di <span
-class="math inline">i</span>, quindi <span class="math inline">I(\sigma,
+<li><span class="math inline">n \in \mathbb{N}</span></li>
+<li><span class="math inline">\sigma \in \mathcal{S}_n \mid \sigma =
+\gamma_1 \ldots \gamma_k</span> sia la sua decomposizione in cicli</li>
+<li><span class="math inline">i \in \gamma_j</span></li>
+<li><span class="math inline">\exists d \in I(\sigma, i) \mid I(\sigma,
 i) = I(d)</span></li>
-<li><span class="math inline">I(\sigma, i) = I(d) \implies d \in
-I(\sigma, i)</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">d</span> è la lunghezza di <span
+class="math inline">\gamma_j</span></li>
 </ul></li>
 <li><strong>Dim</strong>
 <ul>
-<li>⚠️ <strong>MANCA DIMOSTRAZIONE</strong></li>
+<li>per definizione <span class="math inline">\forall n \in I(\sigma, i)
+\quad \sigma^n(i) = i</span></li>
+<li>si noti che le uniche potenze per cui tale proprietà è rispettata
+sono quelle per cui viene permutato ogni elemento del ciclo col suo
+successivo, e in particolare si ritornerà sull’elemento di partenza
+esattamente ogni <span class="math inline">d</span> permutazioni, dove
+<span class="math inline">d</span> è la lunghezza di <span
+class="math inline">\gamma_j</span></li>
 </ul></li>
 </ul>
 <a href="#cor"><h2 id="cor">Cor</h2></a>
@@ -391,8 +403,7 @@ n) = I(d_1) \cap \ldots \cap I(d_k)</span></li>
 <li><span class="math inline">m:= \textrm{mcm}(d_1, \ldots, d_k)
 \implies I(d_1) \cap \ldots \cap I(d_k) = I(m)</span></li>
 <li>allora <span class="math inline">I(\sigma) = I(m)</span></li>
-<li>⚠️ <strong>manca un pezzo dato dalla dimostrazione
-prima</strong></li>
+<li>⚠️ <strong>boh?</strong></li>
 </ul></li>
 </ul>
 <hr />
@@ -711,10 +722,9 @@ class="math inline">\gamma_j^\prime</span></li>
 </ul></li>
 <li><strong>Dim</strong>
 <ul>
+<li>⚠️ <strong>da rivedere</strong></li>
 <li><em>prima implicazione</em>
 <ul>
-<li>⚠️ <strong>NIENTE HA SENSO DI QUELLO CHE C’È SCRITTO IN QUESTA
-IMPLICAZIONE</strong></li>
 <li>per definizione <span class="math inline">\sigma \sim \sigma^\prime
 \implies \exists\alpha \in \mathcal{S}_n \mid \sigma^\prime = \alpha
 \sigma \alpha^{-1}</span></li>
@@ -732,7 +742,6 @@ class="math inline">\sigma</span></li>
 <li>quindi la relazione di coniugio determina un ciclo in <span
 class="math inline">\sigma^\prime</span> della forma <span
 class="math inline">(\alpha(i_1) \ldots \alpha(i_d))</span></li>
-<li>⚠️ <strong>PERCHÉ È BIUNIVOCA?</strong></li>
 <li><span class="math inline">(i_1 \ldots i_d)</span> un certo ciclo in
 <span class="math inline">\sigma \implies (\alpha(i_1) \ldots
 \alpha(i_d))</span> è un ciclo in <span
@@ -901,6 +910,7 @@ k}</span></li>
 </ul></li>
 <li><strong>Dim</strong>
 <ul>
+<li>⚠️ <strong>da rivedere</strong></li>
 <li><span class="math inline">\sigma = (i_1 \ldots i_{d_1}) \ldots (j_1
 \ldots j_{d_k})</span></li>
 <li><span class="math inline">\forall \sigma \in \mathcal{S}_n \quad
