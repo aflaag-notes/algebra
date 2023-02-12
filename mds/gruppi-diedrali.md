@@ -53,15 +53,14 @@
   - $\mathcal{D}_n \hookrightarrow \mathcal{S}_n$
   - $\exists \mathcal{X} \leqslant \mathcal{S}_n \mid \mathcal{D}_n \cong \mathcal{X}$, e in particolare $\mathcal{D}_3 \cong \mathcal{S}_3$
 - **Dim**
-  - per ogni simmetria in $\mathcal{D}_n$, è possibile trovare l'unica permutazione equivalente in $\mathcal{S}_n$, e dunque è ben definita $f: \mathcal{D}_n \rightarrow \mathcal{S}_n$
+  - per ogni simmetria in $\mathcal{D}_n$, è possibile trovare l'unica permutazione equivalente in $\mathcal{S}_n$, e dunque è ben definita $f: \mathcal{D}_n \rightarrow \mathcal{S}_n : \alpha \rightarrow \sigma_\alpha$
     - _esempio_
-        - per $n = 3$, numerando ogni vertice del triangolo equilatero, partendo dal vertice in basso a destra, si ottiene $\left \{ \begin{array}{l} \varphi(\rho^0)=\left(\begin{array}{lll}1 & 2 & 3 \\ 1&2&3\end{array}\right)=\textrm{id} \\ \varphi(\rho^1)=\left(\begin{array}{lll}1 & 2 & 3 \\ 2 & 3 & 1\end{array}\right) \\ \varphi(\rho^2)=\left(\begin{array}{lll}1 & 2 & 3 \\ 3&1&2\end{array}\right) \\ \varphi(\sigma_0)=\left(\begin{array}{lll}1 & 2 & 3 \\ 1&3&2\end{array}\right) \\ \varphi(\sigma_1)=\left(\begin{array}{lll}1 & 2 & 3 \\ 2&1&3\end{array}\right) \\ \varphi(\sigma_2)=\left(\begin{array}{lll}1 & 2 & 3 \\ 3&2&1\end{array}\right) \end{array} \right.$
+        - per $n = 3$, numerando ogni vertice del triangolo equilatero, partendo dal vertice in basso a destra, si ottiene $\left \{ \begin{array}{l} f(\rho^0)=\left(\begin{array}{lll}1 & 2 & 3 \\ 1&2&3\end{array}\right)=\textrm{id} \\ f(\rho^1)=\left(\begin{array}{lll}1 & 2 & 3 \\ 2 & 3 & 1\end{array}\right) \\ f(\rho^2)=\left(\begin{array}{lll}1 & 2 & 3 \\ 3&1&2\end{array}\right) \\ f(\sigma_0)=\left(\begin{array}{lll}1 & 2 & 3 \\ 1&3&2\end{array}\right) \\ f(\sigma_1)=\left(\begin{array}{lll}1 & 2 & 3 \\ 2&1&3\end{array}\right) \\ f(\sigma_2)=\left(\begin{array}{lll}1 & 2 & 3 \\ 3&2&1\end{array}\right) \end{array} \right.$
   - poiché la permutazione equivalente è unica, $f$ iniettiva
   - allora $\mathcal{D}_n \hookrightarrow \mathcal{S}_n$, ovvero, l'inclusione è iniettiva ma non necessariamente suriettiva, infatti in generale si ha $|\mathcal{D}_n| \le |\mathcal{S}_n|$
   - ma per ragionamento analogo $\exists \mathcal{X} \leqslant \mathcal{S}_n \ \big\vert \ |\mathcal{X}| = |\mathcal{D}_n| \implies f$ suriettiva $\implies f$ biiettiva
-  - in particolare, $\mathcal{D}_3$ risulta essere il caso particolare in cui $\mathcal{X} = \mathcal{S}_n$
+  - in particolare, $\mathcal{D}_3$ risulta essere il caso in cui $\mathcal{X} = \mathcal{S}_n$
   - $\mathcal{D}_n \cong \mathcal{X}$
-    - sia $f: \mathcal{D}_n \rightarrow \mathcal{S}_n : \alpha \rightarrow \sigma_\alpha$
     - siano $\alpha, \beta \in \mathcal{D}_n, \sigma_\alpha, \sigma_\beta \in \mathcal{S}_n \mid \left \{ \begin{array}{l} f(\alpha)= \sigma_\alpha \\ f(\beta) = \sigma_\beta \\ \alpha, \sigma_\alpha: i \rightarrow j \\ \beta, \sigma_\beta : j \rightarrow k \end{array} \implies \beta \alpha, \sigma_\beta \sigma_\alpha : i \rightarrow k \right .$
     - allora $f(\beta \alpha) = \sigma_{\beta\alpha} = \sigma_\beta \sigma_\alpha= f(\beta ) f(\alpha) \iff f$ morfismo
         - in particolare, restringendo $f: \mathcal{D}_n \rightarrow \mathcal{X} \implies f$ suriettiva $\implies f$ isomorfismo
@@ -98,7 +97,7 @@
     - se $o(a)=4 \implies G$ cicliico $\implies G \cong \mathbb{Z}_4$
     - in particolare $\exists x \in G \mid o(x) = 4 = |G| \iff G$ ciclico, allora è necessario studiare il caso in cui $G$ non ciclico $\iff \nexists x \in G \mid o(x) = 4 \implies \forall x \in G - \{1\} \quad o(x) = 2$ per ragionamento precedente $\implies G = \{1, a, b, c\}$, dove $o(a)=o(b)=o(c)=2 \implies a^2=b^2=c^2=1 \implies$$\left\{\begin{array}{l}a=a^{-1} \\ b=b^{-1} \\ c=c^{-1}\end{array}\right.$
     - siano $a, b, x \in G \mid ab = x$ per un certo elemento $x = 1 \lor x = a \lor x = b \lor x = c$, allora si ha che $\left \{ \begin{array}{l} ab = 1 \implies b = a^{-1} = a \ \bot \\ ab = a \implies b = 1 \ \bot \\ ab = b \implies a = 1 \ \bot \end{array} \right. \implies ab = c$ necessariamente
-    - il ragionamento è analogo per tutti gli altri prodotti, il che dimostra che presi $3$ elementi in $G - \{1\}$, moltiplicandone due tra loro si ottiene il terzo $\implies G \cong K_4$
+    - il ragionamento è analogo per tutti gli altri prodotti, il che dimostra che presi $3$ elementi in $G - \{1\}$, moltiplicandone due tra loro si ottiene il terzo $\implies G \cong \mathcal{K}_4$
 
 ## Oss
 

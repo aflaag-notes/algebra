@@ -553,7 +553,8 @@ e transitività di <span class="math inline">\sim\implies x \sim y \
 <ul>
 <li><span class="math inline">[x] \cap [y] = \varnothing \implies
 \nexists z \in [x] \cap [y]</span>, in particolare <span
-class="math inline">x \notin [y] \land y \notin [x]</span></li>
+class="math inline">x \notin [y] \land y \notin [x] \implies x \nsim
+y</span></li>
 </ul></li>
 </ul></li>
 </ul></li>
@@ -757,18 +758,18 @@ x</span></li>
 <li><span class="math inline">G</span> gruppo</li>
 <li><span class="math inline">H \leqslant G</span></li>
 <li><span class="math inline">x \in G</span></li>
-<li><span class="math inline">[x] = \{y \in G \mid y \sim_S
+<li><span class="math inline">[x] := \{y \in G \mid y \sim_S
 x\}</span></li>
+<li><span class="math inline">xH:= \{ xh \mid h \in H\}</span></li>
 </ul></li>
 <li><strong>Th</strong>
 <ul>
-<li><span class="math inline">xH:= \{ xh \mid h \in H\} =
-[x]</span></li>
+<li><span class="math inline">xH = [x]</span></li>
 </ul></li>
 <li><strong>Dim</strong>
 <ul>
 <li><span class="math inline">y \in xH \iff \exists h \in H \mid y = xh
-\iff x^{-1}y = h \in H \iff x \sim_S y</span></li>
+\iff x^{-1}y = h \in H \iff x \sim_S y \iff y \in [x]</span></li>
 </ul></li>
 </ul>
 <a href="#oss-9"><h2 id="oss-9">Oss</h2></a>
@@ -778,10 +779,31 @@ x\}</span></li>
 <li><span class="math inline">G</span> gruppo</li>
 <li><span class="math inline">H \leqslant G</span></li>
 <li><span class="math inline">x \in G</span></li>
+<li><span class="math inline">[x] := \{y \in G \mid y \sim_D
+x\}</span></li>
+<li><span class="math inline">Hx := \{hx \mid h \in H\}</span></li>
 </ul></li>
 <li><strong>Th</strong>
 <ul>
-<li><span class="math inline">|xH| = |H|</span></li>
+<li><span class="math inline">Hx = [x]</span></li>
+</ul></li>
+<li><strong>Dim</strong>
+<ul>
+<li><span class="math inline">y \in Hx \iff \exists h \in H \mid y = hx
+\iff yx^{-1} = h \in H \iff x \sim_D y \iff y \in [x]</span></li>
+</ul></li>
+</ul>
+<a href="#oss-10"><h2 id="oss-10">Oss</h2></a>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">G</span> gruppo</li>
+<li><span class="math inline">H \leqslant G</span></li>
+<li><span class="math inline">x \in G</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">|H| = |xH|</span></li>
 </ul></li>
 <li><strong>Dim</strong>
 <ul>
@@ -795,7 +817,7 @@ H \rightarrow xH : h \rightarrow xh</span></li>
 class="math inline">\implies |H| = |xH|</span></li>
 </ul></li>
 </ul>
-<a href="#oss-10"><h2 id="oss-10">Oss</h2></a>
+<a href="#oss-11"><h2 id="oss-11">Oss</h2></a>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -845,7 +867,7 @@ x] = [x]</span>, e <span class="math inline">[0] \in G/H</span> perché
 </ul></li>
 </ul></li>
 </ul>
-<a href="#oss-11"><h2 id="oss-11">Oss</h2></a>
+<a href="#oss-12"><h2 id="oss-12">Oss</h2></a>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -904,10 +926,13 @@ class="math inline">[x^{-1}] \cdot[x]=[x^{-1} \cdot x]=[1] \implies
 [x]^{-1} = [x^{-1}]</span></li>
 <li><span class="math inline">\forall [x], [y] \in A/I \quad [x] \cdot
 [y] = [x \cdot y] = [y \cdot x] = [y] \cdot [x]</span></li>
+<li><span class="math inline">\forall [x], [y], [z] \in A/I \quad
+[x]([y] + [z]) = [x]([y + z]) = [x(y + z)] = [xy + xz] = [xy] + [xz] =
+[x][y] + [x][z]</span></li>
 </ul></li>
 </ul></li>
 </ul>
-<a href="#oss-12"><h2 id="oss-12">Oss</h2></a>
+<a href="#oss-13"><h2 id="oss-13">Oss</h2></a>
 <ul>
 <li><strong>Hp</strong>
 <ul>

@@ -22,10 +22,10 @@
     - $n \in \mathbb{Z}$
     - $I(n) := \{nk \mid k \in \mathbb{Z}\}$
 - **Th**
-    - inoltre, questo implica che $\mathbb{Z}_n = \{[0], \ldots, [n - 1]\}$
+    - $\mathbb{Z}_n = \{[0], [1], \ldots, [n - 1]\}$
 - **Dim**
     - $\forall x \in \mathbb{Z} \quad [x] := \{ y \in \mathbb{Z} \mid x \equiv y \ (\bmod \ n) \iff n \mid x - y \iff \exists q \in \mathbb{Z} \mid n q = x - y \iff x - y \in I(n)\} \implies \mathbb{Z}/I(n) = \mathbb{Z}/\equiv \ =: \mathbb{Z}_n$
-    - allora necessariamente $\mathbb{Z}_n = \{[0], \ldots, [n - 1]\}$
+    - allora necessariamente $\mathbb{Z}_n = \{[0], [1], \ldots, [n - 1]\}$
 
 ## Oss
 
@@ -89,7 +89,7 @@
 - **Funzione totiente di Eulero**
 
 > - $n \in \mathbb{N}$
-> - $\varphi(n) := |\mathbb{Z}_n^* |$
+> - $\varphi(n) := |\mathbb{Z}_n^* |$ è detta **funzione totiente di Eulero**
 
 ## Lem
 

@@ -166,7 +166,7 @@
         - _prima implicazione_
             - per assurdo, ipotizzando $[x] \cap [y] \neq \varnothing \implies \exists z \in [x] \cap [y] \implies z \in [x] \land z \in [y] \implies z \sim x \land z \sim y$, allora per simmetria e transitività di $\sim\implies x \sim y \ \bot$
         - _seconda implicazione_
-            - $[x] \cap [y] = \varnothing \implies \nexists z \in [x] \cap [y]$, in particolare $x \notin [y] \land y \notin [x]$
+            - $[x] \cap [y] = \varnothing \implies \nexists z \in [x] \cap [y]$, in particolare $x \notin [y] \land y \notin [x] \implies x \nsim y$
 
 ## Oss
 
@@ -268,11 +268,25 @@
   - $G$ gruppo
   - $H \leqslant G$
   - $x \in G$
-  - $[x] = \{y \in G \mid y \sim_S x\}$
+  - $[x] := \{y \in G \mid y \sim_S x\}$
+  - $xH:= \{ xh \mid h \in H\}$
 - **Th**
-  - $xH:= \{ xh \mid h \in H\} = [x]$
+  - $xH = [x]$
 - **Dim**
-  - $y \in xH \iff \exists h \in H \mid y = xh \iff x^{-1}y = h \in H \iff x \sim_S y$
+  - $y \in xH \iff \exists h \in H \mid y = xh \iff x^{-1}y = h \in H \iff x \sim_S y \iff y \in [x]$
+
+## Oss
+
+- **Hp**
+    - $G$ gruppo
+    - $H \leqslant G$
+    - $x \in G$
+    - $[x] := \{y \in G \mid y \sim_D x\}$
+    - $Hx := \{hx \mid h \in H\}$
+- **Th**
+    - $Hx = [x]$
+- **Dim**
+    - $y \in Hx \iff \exists h \in H \mid y = hx \iff yx^{-1} = h \in H \iff x \sim_D y \iff y \in [x]$
 
 ## Oss
 
@@ -281,7 +295,7 @@
   - $H \leqslant G$
   - $x \in G$
 - **Th**
-  - $|xH| = |H|$
+  - $|H| = |xH|$
 - **Dim**
     - è possibile definire una funzione $\varphi: H \rightarrow xH : h \rightarrow xh$
     - $\forall h, k \in H \mid h \neq k \quad xh \neq xk \implies \varphi$ iniettiva
@@ -328,6 +342,7 @@
         - $\forall [x] \in A/I \quad [x][1]=[1][x]=[x]$ e $[1] \cdot [x] = [1 \cdot x] = [x]$, e $[1] \in A/I$ perché $A$ anello
         - $\forall [x] \in A/I \quad [x]\cdot[x^{-1}]=[x \cdot x^{-1}]=[1]$ e $[x^{-1}] \cdot[x]=[x^{-1} \cdot x]=[1] \implies [x]^{-1} = [x^{-1}]$
         - $\forall [x], [y] \in A/I \quad [x] \cdot [y] = [x \cdot y] = [y \cdot x] = [y] \cdot [x]$
+        - $\forall [x], [y], [z] \in A/I \quad [x]([y] + [z]) = [x]([y + z]) = [x(y + z)] = [xy + xz] = [xy] + [xz] = [x][y] + [x][z]$
 
 ## Oss
 

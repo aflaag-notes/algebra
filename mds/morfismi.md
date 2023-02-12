@@ -192,7 +192,7 @@ $f([x \cdot y])=f([x]) \cdot f([y]) \iff f$ morfismo
   - $f$ iniettiva $\iff \textrm{ker}(f) = \{1_G\}$
 - **Dim**
   - _prima implicazione_
-    - $\ker(f) \leqslant G \implies 1_G \in \ker(f)$
+    - $\ker(f) \trianglelefteq G \implies 1_G \in \ker(f)$
     - $f$ iniettiva $\implies \nexists x, y \in G \mid x \neq y \implies f(x) = f(y)$, di conseguenza è unico $1_G \in G \mid f(1_G) = 1_H$, dunque $\textrm{ker}(f)$ conterrà esclusivamente $1_G$
   - _seconda implicazione_
     - $\forall g, g^\prime \in G \quad f(g) = f(g^\prime) \iff f(g)^{-1} \cdot f(g) = f(g)^{-1} \cdot f(g^\prime) \iff 1_H = f(g^{-1}) \cdot f(g^\prime) = f(g ^{-1} \cdot g^\prime)$
@@ -215,7 +215,7 @@ $f([x \cdot y])=f([x]) \cdot f([y]) \iff f$ morfismo
 - **Th**
   - $\textrm{ker}(f) \subset A$ ideale
 - **Dim**
-  - $(\textrm{ker}(f), +) \leqslant (A, +)$ per dimostrazione precedente
+  - $(\textrm{ker}(f), +) \trianglelefteq (A, +)$ per dimostrazione precedente
   - per dimostrazione precedente $f(0_A) = 0_B$
   - $\forall x \in \textrm{ker}(f), y \in A \quad f(x \cdot y )= f(x) \cdot f(y) = 0_B \cdot f(y) = 0_B \implies x \cdot y \in \textrm{ker}(f) \implies \textrm{ker}(f) \cdot A \subseteq \textrm{ker}(f)$
 
