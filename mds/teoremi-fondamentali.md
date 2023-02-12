@@ -24,7 +24,7 @@
         - $r \in [m]_n \implies \exists q \in \mathbb{Z} \mid r = m - nq \implies r - n = (m - nq) - n = m - nq - n = m - n (q + 1) \in [m]_n$ per definizione, e in particolare $r - n \in [m]_n$
         - $n \neq 0 \implies r - n \lt r \implies r$ non è il minimo in $[m]_n \ \bot$
     - _unicità_
-        - per assurdo $\exists q_1, q_2, r_1, r_2 \in \mathbb{Z} \mid \left \{ \begin{array}{l} m = nq_1 + r_1 && 0 \le r_1 \lt n \\ m = nq_2 + r_2 && 0 \le r_2 \lt n\end{array}\right.$
+        - per assurdo $\exists q_1, q_2, r_1, r_2 \in \mathbb{Z} \mid \left \{ \begin{array}{l} m = nq_1 + r_1 & 0 \le r_1 \lt n \\ m = nq_2 + r_2 & 0 \le r_2 \lt n\end{array}\right.$
         - allora $nq_1 + r_1 = m = nq_2 + r_2 \iff n(q_1 - q_2) = r_2 - r_1 \implies n \mid r_2 - r_1$
         - $0 \le r_1, r_2 \lt n \implies -n \lt r_2 - r_1 \lt n$, e in particolare $r_2 - r_1 \neq \pm n$, allora poiché $n \mid r_2 - r_1$ necessariamente $r_2 - r_1 = 0$
         - $n = 0 \implies nq_1 + r_1 = n q_2 + r_2 \iff r_1 = r_2$, e dagli stessi calcoli segue che $q_1 = q_2$
@@ -35,7 +35,14 @@
     - $\mathbb{K}$ campo
     - $a(x), b(x) \in \mathbb{K}[x] \mid b(x) \neq 0$
 - **Th**
-    - $\exists ! q(x), r(x) \in \mathbb{K}[x] \mid a(x) = b(x) \cdot q(x) + r(x) \quad \deg(r(x)) \lt \deg(b(x))$, che è detto _teorema della divisione con il resto tra polinomi_
+    - $\exists ! q(x), r(x) \in \mathbb{K}[x] \mid a(x) = b(x) q(x) + r(x) \quad \deg(r(x)) \lt \deg(b(x))$
+- **Dim**
+    - _esistenza_
+        - _omessa dal professore_
+    - _unicità_
+        - per assurdo $\exists q_1(x), q_2(x), r_1(x), r_2(x) \in \mathbb{K}[x] \mid \left \{ \begin{array}{l}  a(x) = b(x)q_1(x) + r_1(x) & \deg(r_1(x)) \lt \deg(b(x)) \\ a(x) = b(x)q_2(x) + r_2(x) & \deg(r_2(x)) \lt \deg(b(x))\end{array} \right.$
+        - allora $b(x)q_1(x) + r_1(x) = a(x) = b(x)q_2(x)+ r_2(x) \iff b(x)[q_1(x) - q_2(x)] = r_2(x) - r_1(x)$
+        - per ipotesi $\deg(r_2(x) - r_1(x)) \lt \deg(b(x))$, allora $\deg(b(x)[q_1(x) - q_2(x)]) \lt \deg(b(x))\iff q_1(x) - q_2(x) = 0 \iff q_1(x) = q_2(x) \implies r_1(x) = r_2(x)$
 
 ****
 

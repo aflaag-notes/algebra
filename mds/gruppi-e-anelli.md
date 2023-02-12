@@ -154,7 +154,7 @@
 - **Th**
   - $x \mid 0 \implies x \notin A^*$
 - **Dim**
-  - per assurdo, ipotizzando $\exists a \in A \mid a$ invertibile e divisore dello $0$, allora $\exists a^{-1} \in A, b \in A - \{0\} \mid a^{-1}a = 1 \land ab = 0$
+  - per assurdo, ipotizzando $\exists a \in A \mid a$ divisore dello $0$ e invertibile, allora $\exists a^{-1} \in A, b \in A - \{0\} \mid a^{-1}a = 1 \land ab = 0$
   - $b = 1 \cdot b = (a^{-1} a)\cdot b = a^{-1}\cdot(ab)=a^{-1}\cdot 0= 0 \ \bot$
 
 ## Oss
@@ -164,9 +164,7 @@
 - **Th**
   - $A$ dominio di integrità
 - **Dim**
-   - $A$ campo $\implies$ in $A$ ogni elemento non nullo è invertibile, dunque $A^*=A - \{0\}$, e in particolare $0$ è l'unico elemento non invertibile
-    - $0 \notin A^* \iff 0 \mid 0$ per dimostrazione precedente
-    - quindi $A$ è dominio di integrità poiché $0$ è l'unico divisore dello $0$
+   - $A$ campo $\implies$ in $A$ ogni elemento non nullo è invertibile, dunque $A^*=A - \{0\} \implies \forall a \in A - \{0\} \quad a \in A^* \implies a \nmid 0$, il che implica che $A$ è dominio di integrità per definizione
 
 ## Def
 

@@ -2,5 +2,8 @@
 
 ## Alg
 
-- **In**
 - ⚠️ **algoritmo di euclide todo**
+
+## Alg
+
+- ⚠️ **regola di ruffini**

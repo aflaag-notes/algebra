@@ -105,4 +105,5 @@
     - $G$ gruppo $\bigg\vert |G| = 6$
 - **Th**
     - $G \cong \mathbb{Z}_6 \lor G \cong \mathcal{S}_3$
-
+- **Dim**
+    - ⚠️ **manca la dimostrazione**

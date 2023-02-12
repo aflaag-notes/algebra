@@ -237,8 +237,8 @@ r</span> non è il minimo in <span class="math inline">[m]_n \
 <li><em>unicità</em>
 <ul>
 <li>per assurdo <span class="math inline">\exists q_1, q_2, r_1, r_2 \in
-\mathbb{Z} \mid \left \{ \begin{array}{l} m = nq_1 + r_1 &amp;&amp; 0
-\le r_1 \lt n \\ m = nq_2 + r_2 &amp;&amp; 0 \le r_2 \lt
+\mathbb{Z} \mid \left \{ \begin{array}{l} m = nq_1 + r_1 &amp; 0 \le r_1
+\lt n \\ m = nq_2 + r_2 &amp; 0 \le r_2 \lt
 n\end{array}\right.</span></li>
 <li>allora <span class="math inline">nq_1 + r_1 = m = nq_2 + r_2 \iff
 n(q_1 - q_2) = r_2 - r_1 \implies n \mid r_2 - r_1</span></li>
@@ -264,9 +264,29 @@ class="math inline">q_1 = q_2</span></li>
 <li><strong>Th</strong>
 <ul>
 <li><span class="math inline">\exists ! q(x), r(x) \in \mathbb{K}[x]
-\mid a(x) = b(x) \cdot q(x) + r(x) \quad \deg(r(x)) \lt
-\deg(b(x))</span>, che è detto <em>teorema della divisione con il resto
-tra polinomi</em></li>
+\mid a(x) = b(x) q(x) + r(x) \quad \deg(r(x)) \lt \deg(b(x))</span></li>
+</ul></li>
+<li><strong>Dim</strong>
+<ul>
+<li><em>esistenza</em>
+<ul>
+<li><em>omessa dal professore</em></li>
+</ul></li>
+<li><em>unicità</em>
+<ul>
+<li>per assurdo <span class="math inline">\exists q_1(x), q_2(x),
+r_1(x), r_2(x) \in \mathbb{K}[x] \mid \left \{ \begin{array}{l} a(x) =
+b(x)q_1(x) + r_1(x) &amp; \deg(r_1(x)) \lt \deg(b(x)) \\ a(x) =
+b(x)q_2(x) + r_2(x) &amp; \deg(r_2(x)) \lt \deg(b(x))\end{array}
+\right.</span></li>
+<li>allora <span class="math inline">b(x)q_1(x) + r_1(x) = a(x) =
+b(x)q_2(x)+ r_2(x) \iff b(x)[q_1(x) - q_2(x)] = r_2(x) -
+r_1(x)</span></li>
+<li>per ipotesi <span class="math inline">\deg(r_2(x) - r_1(x)) \lt
+\deg(b(x))</span>, allora <span class="math inline">\deg(b(x)[q_1(x) -
+q_2(x)]) \lt \deg(b(x))\iff q_1(x) - q_2(x) = 0 \iff q_1(x) = q_2(x)
+\implies r_1(x) = r_2(x)</span></li>
+</ul></li>
 </ul></li>
 </ul>
 <hr />

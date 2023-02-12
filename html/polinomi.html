@@ -187,48 +187,60 @@
 <a href="#polinomi"><h1 id="polinomi">Polinomi</h1></a>
 <a href="#def"><h2 id="def">Def</h2></a>
 <ul>
-<li><strong>Polinomi</strong></li>
+<li><strong>Polinomio</strong></li>
 </ul>
 <blockquote>
 <ul>
 <li><span class="math inline">\mathbb{K}</span> campo</li>
 <li><span class="math inline">a(x) := \displaystyle{\sum_{k =
-0}^na_kx^k} = a_0x^0 + \ldots + a_nx^n</span> è un
+0}^na_kx^k} = a_0x^0 + \ldots + a_nx^n</span> è detto
 <strong>polinomio</strong></li>
 <li><span class="math inline">\mathbb{K}[x] := \{a_0x^0 + \ldots + a_n
 x^n \mid a_0, \ldots, a_n \in \mathbb{K}\}</span> è l’<strong>insieme
 dei polinomi a coefficienti in <span
 class="math inline">\mathbb{K}</span></strong></li>
+</ul>
+</blockquote>
+<ul>
+<li><strong>Polinomio monico</strong></li>
+</ul>
+<blockquote>
+<ul>
+<li><span class="math inline">\mathbb{K}</span> campo</li>
 <li><span class="math inline">p(x) = a_0x^0 + \ldots + a_nx^n \in
-\mathbb{K}[x]</span> è detto <strong>polinomio monico</strong> <span
-class="math inline">\iff a_n = 1</span></li>
+\mathbb{K}[x]</span></li>
+<li><span class="math inline">p(x)</span> è detto <strong>polinomio
+monico</strong> <span class="math inline">\iff a_n = 1</span></li>
 </ul>
 </blockquote>
 <a href="#oss"><h2 id="oss">Oss</h2></a>
 <ul>
 <li><strong>Hp</strong>
 <ul>
-<li>(<span class="math inline">\mathbb{K}, +, \cdot)</span> anello</li>
+<li>(<span class="math inline">\mathbb{K}, +, \cdot)</span> anello
+commutativo</li>
+<li><span class="math inline">+, \cdot : \mathbb{K}[x] \times
+\mathbb{K}[x] \rightarrow \mathbb{K}[x]</span></li>
 </ul></li>
 <li><strong>Th</strong>
 <ul>
 <li><span class="math inline">(\mathbb{K}[x], +, \cdot)</span> è un
-anello</li>
+anello commutativo</li>
 </ul></li>
 <li><strong>Dim</strong>
 <ul>
 <li>le operazioni <span class="math inline">+</span> e <span
 class="math inline">\cdot</span> sono ben definite
 <ul>
-<li><span class="math inline">p(x), q(x) \in \mathbb{K}[x] \mid p(x) =
-\displaystyle{\sum_{i = 0}^n a_ix^i} \land q(x) = \displaystyle{\sum_{j
-= 0}^m b_jx^j}</span></li>
-<li><span class="math inline">p(x) + q(x) = \displaystyle{\sum_{k =
-0}^{+\infty}{(a_k + b_k)}}x^k</span>
+<li><span class="math inline">p(x), q(x) \in \mathbb{K}[x] \mid \left \{
+\begin{array}{l} p(x) = \displaystyle{\sum_{i = 0}^n a_ix^i} \\ q(x) =
+\displaystyle{\sum_{j = 0}^m b_jx^j} \end{array} \right.</span></li>
+<li>allora <span class="math inline">p(x) + q(x) = \displaystyle{\sum_{k
+= 0}^{+\infty}{(a_k + b_k)}}x^k</span>
 <ul>
-<li>ogni termine presente in solo uno dei due polinomi, varra <span
-class="math inline">0</span> nell’altro, di conseguenza la sommatoria
-che va a <span class="math inline">+ \infty</span> ha significato</li>
+<li>poiché ogni termine presente in solo uno dei due polinomi vale <span
+class="math inline">0</span> nell’altro, la sommatoria che va a <span
+class="math inline">+ \infty</span> ha significato</li>
 </ul></li>
 <li><span class="math inline">p(x) \cdot q(x) = \displaystyle \sum_{i =
 0}^n \left( \sum_{j = 0}^{m}{a_ib_j x^{i + j }}\right)</span></li>
@@ -262,7 +274,7 @@ a(x) \cdot (b(x) + c(x)) = a(x) \cdot b(x) + a(x) \cdot c(x)</span></li>
 </ul>
 <a href="#def-1"><h2 id="def-1">Def</h2></a>
 <ul>
-<li><strong>Grado del polinomio</strong></li>
+<li><strong>Grado di un polinomio</strong></li>
 </ul>
 <blockquote>
 <ul>
@@ -270,8 +282,20 @@ a(x) \cdot (b(x) + c(x)) = a(x) \cdot b(x) + a(x) \cdot c(x)</span></li>
 <li><span class="math inline">a(x) = a_0x^0 + \ldots + a_nx^n \in
 \mathbb{K}[x]</span></li>
 <li><span class="math inline">\deg(a(x)):=\left\{\begin{array}{ll} n
-&amp; a(x) \neq 0 \\ - \infty &amp; a(x) =
-0\end{array}\right.</span></li>
+&amp; a(x) \neq 0 \\ - \infty &amp; a(x) = 0\end{array}\right.</span> è
+detto <strong>grado di <span
+class="math inline">a(x)</span></strong></li>
+</ul>
+</blockquote>
+<ul>
+<li><strong>Polinomio costante</strong></li>
+</ul>
+<blockquote>
+<ul>
+<li><span class="math inline">\mathbb{K}</span> campo</li>
+<li><span class="math inline">p(x) \in \mathbb{K}[x]</span> è detto
+<strong>polinomio costante</strong> <span class="math inline">\iff
+\deg(p(x)) = 0</span></li>
 </ul>
 </blockquote>
 <a href="#oss-1"><h2 id="oss-1">Oss</h2></a>
@@ -288,10 +312,12 @@ a(x) \cdot (b(x) + c(x)) = a(x) \cdot b(x) + a(x) \cdot c(x)</span></li>
 </ul></li>
 <li><strong>Dim</strong>
 <ul>
-<li><span class="math inline">a(x) \neq 0 \implies a(x) = a_0x^0 +
-\ldots + a_nb^n \implies \deg(a(x)) = n</span></li>
-<li><span class="math inline">b(x) \neq 0 \implies b(x) = b_0x^0 +
-\ldots + b_mx^m \implies \deg(b(x)) = m</span></li>
+<li><span class="math inline">a(x) \neq 0 \implies \exists n \in
+\mathbb{N} - \{0\} \mid a(x) = a_0x^0 + \ldots + a_nb^n \implies
+\deg(a(x)) =: n</span></li>
+<li><span class="math inline">b(x) \neq 0 \implies \exists m \in
+\mathbb{N} - \{0\} \mid b(x) = b_0x^0 + \ldots + b_mx^m \implies
+\deg(b(x)) =: m</span></li>
 <li>dunque <span class="math inline">\deg(a(x)) + \deg(b(x)) = n +
 m</span></li>
 <li><span class="math inline">a(x) \cdot b(x) = a_0b_0\cdot x^0 + \ldots
@@ -302,14 +328,17 @@ class="math inline">\mathbb{K}</span> campo <span
 class="math inline">\implies \mathbb{K}</span> dominio di integrità, e
 dunque in <span class="math inline">\mathbb{K}</span> vale la legge di
 annullamento del prodotto, per cui <span class="math inline">a_n, b_m
-\neq 0 \implies a_n \cdot b_m \neq 0</span></li>
+\neq 0 \implies a_n \cdot b_m \neq 0 \implies \deg(a(x) \cdot b(x)) \ge
+n + m</span> necessariamente</li>
 </ul></li>
 <li>di conseguenza <span class="math inline">\deg(a(x) \cdot b(x)) = n +
-m = \deg(a(x)) + \deg(b(x))</span></li>
+m = \deg(a(x)) + \deg(b(x))</span>
+<ul>
 <li>l’equazione è verificata anche quando almeno uno dei due polinomi è
 nullo, in quanto <span class="math inline">\forall n \in \mathbb{N}
-\quad -\infty \pm n = -\infty \land -\infty -\infty =
--\infty</span></li>
+\quad \left \{ \begin{array}{l} -\infty \pm n = -\infty \\ -\infty
+-\infty = -\infty \end{array} \right.</span></li>
+</ul></li>
 </ul></li>
 </ul>
 <a href="#oss-2"><h2 id="oss-2">Oss</h2></a>
@@ -317,25 +346,28 @@ nullo, in quanto <span class="math inline">\forall n \in \mathbb{N}
 <li><strong>Hp</strong>
 <ul>
 <li><span class="math inline">\mathbb{K}</span> campo</li>
-<li><span class="math inline">a(x) \in \mathbb{K}[x] \mid \deg(a(x)) \ge
-1</span></li>
 </ul></li>
 <li><strong>Th</strong>
 <ul>
-<li><span class="math inline">\nexists a^{-1}(x) \in
-\mathbb{K}[x]</span></li>
+<li><span class="math inline">\mathbb{K}[x]^* = \mathbb{K}^* \subseteq
+\mathbb{K} \subset \mathbb{K}[x]</span></li>
 </ul></li>
 <li><strong>Dim</strong>
 <ul>
-<li><span class="math inline">\forall b(x) \neq 0 \quad \deg(a(x) \cdot
-b(x)) \ge \deg(a(x)) \ge 1</span></li>
-<li><span class="math inline">\deg(1 \cdot x^0) = \deg(1) =
-0</span></li>
-<li>ipotizzando che <span class="math inline">\exists a^{-1}(x) \in
-\mathbb{K}[x]</span>, allora <span class="math inline">a(x) \cdot
-a^{-1}(x) = 1</span>, dunque <span class="math inline">\deg(a(x) \cdot
-a^{-1}(x)) = 0</span>, ma <span class="math inline">\forall b(x) \quad
-\deg(a(x) \cdot b(x)) \ge 1 \ \bot</span></li>
+<li><span class="math inline">a(x) \in \mathbb{K}[x] \mid \deg(a(x)) \ge
+1</span>, dunque <span class="math inline">a(x)</span> non è un
+polinomio costante</li>
+<li><span class="math inline">\forall b(x) \in \mathbb{K}[x] - \{0\}
+\quad \deg(a(x) \cdot b(x)) \ge \deg(a(x)) \ge 1</span></li>
+<li>per assurdo, ipotizzando <span class="math inline">\exists a^{-1}(x)
+\in \mathbb{K}[x] - \{0\} \mid a(x) \cdot a^{-1}(x) = 1 \quad \deg(a(x)
+\cdot a^{-1}(x)) = \deg(1) = \deg(1 \cdot x^0) = 0 \ \bot</span></li>
+<li>allora <span class="math inline">\nexists a^{-1}(x) \in
+\mathbb{K}[x]</span>, dunque gli unici polinomi invertibili rispetto a
+<span class="math inline">\cdot</span> sono i polinomi costanti, e
+poiché <span class="math inline">0</span> non è invertibile, allora
+<span class="math inline">\mathbb{K}[x]^* = \mathbb{K}^* \subseteq
+\mathbb{K} \subset \mathbb{K}[x]</span></li>
 </ul></li>
 </ul>
 <a href="#oss-3"><h2 id="oss-3">Oss</h2></a>
@@ -346,51 +378,8 @@ a^{-1}(x)) = 0</span>, ma <span class="math inline">\forall b(x) \quad
 </ul></li>
 <li><strong>Th</strong>
 <ul>
-<li><span class="math inline">\mathbb{K}[x]^* = \mathbb{K}^* \subset
-\mathbb{K}[x]</span></li>
-</ul></li>
-<li><strong>Dim</strong>
-<ul>
-<li><span class="math inline">\mathbb{K}[x]^* = \mathbb{K}^*</span>
-<ul>
-<li><span class="math inline">\forall a(x) \in\mathbb{K}[x] \mid a(x) =
-a_0 \neq 0</span> polinomio costante non nullo, il polinomio inverso
-sarà costituito esclusivamente dal suo coefficiente <span
-class="math inline">a_0^{-1} \in \mathbb{K}</span></li>
-<li>per dimostrazione precedente <span
-class="math inline">\mathbb{K}</span> campo <span
-class="math inline">\implies \forall a_0 \in \mathbb{K} - \{0\} \quad
-\exists a_0^{-1} \in \mathbb{K} - \{0\}</span></li>
-<li>dunque <span class="math inline">\exists a^{-1}(x) \quad a(x) \cdot
-a^{-1}(x) = a_0 \cdot a_0^{-1} = 1</span></li>
-</ul></li>
-<li><span class="math inline">\mathbb{K}^* \subset \mathbb{K}[x]</span>
-<ul>
-<li><span class="math inline">\mathbb{K}^* \subset \mathbb{K} \subset
-\mathbb{K}[x]</span></li>
-<li>per dimostrazione precedente, gli unici elementi invertibili in
-<span class="math inline">\mathbb{K}[x]</span> sono i polinomi costanti,
-che costituiscono un sottoinsieme di <span
-class="math inline">\mathbb{K}[x]</span>, che coincide proprio con <span
-class="math inline">\mathbb{K}</span> poiché i polinomi costanti si
-identificano con un singolo coefficiente</li>
-</ul></li>
-</ul></li>
-</ul>
-<a href="#oss-4"><h2 id="oss-4">Oss</h2></a>
-<ul>
-<li><strong>Hp</strong>
-<ul>
-<li><span class="math inline">\mathbb{K}</span> campo</li>
-</ul></li>
-<li><strong>Th</strong>
-<ul>
-<li><span class="math inline">\mathbb{K}[x]</span> è un dominio di
+<li><span class="math inline">\mathbb{K}[x]</span> dominio di
 integrità</li>
-</ul></li>
-<li><strong>Dim</strong>
-<ul>
-<li>⚠️ <strong>MANCA LA DIMOSTRAZIONE</strong></li>
 </ul></li>
 </ul>
 <a href="#def-2"><h2 id="def-2">Def</h2></a>
@@ -401,12 +390,16 @@ integrità</li>
 <ul>
 <li><span class="math inline">\mathbb{K}</span> campo</li>
 <li><span class="math inline">p(x) \in \mathbb{K}[x]</span></li>
-<li><span class="math inline">\{c \in \mathbb{K}\ \mid p(c) = 0\}</span>
-è l’<strong>insieme delle radici di <span
+<li><span class="math inline">c \in \mathbb{K} \mid p(c) = 0</span> è
+detta <strong>radice di <span class="math inline">p(x)</span></strong>
+<ul>
+<li>in particolare <span class="math inline">\{c \in \mathbb{K} \mid
+p(c) = 0\}</span> è l’<strong>insieme delle radici di <span
 class="math inline">p(x)</span></strong></li>
+</ul></li>
 </ul>
 </blockquote>
-<a href="#oss-5"><h2 id="oss-5">Oss</h2></a>
+<a href="#oss-4"><h2 id="oss-4">Oss</h2></a>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -426,23 +419,21 @@ class="math inline">p(x)</span></strong></li>
 <span class="math inline">p(x)</span> per <span class="math inline">(x -
 c)</span> si ottiene che <span class="math inline">\exists!q(x), r(x)
 \in \mathbb{K}[x] \mid p(x) = q(x) \cdot (x - c) + r(x)</span></li>
-<li><span class="math inline">r_0 := r(x)</span></li>
-<li><span class="math inline">p(c) = q(c) (c - c) + r_0 = r_0</span>, ma
-<span class="math inline">p(c) = 0</span> in ipotesi, e dunque <span
-class="math inline">r_0 = 0</span></li>
-<li><span class="math inline">r_0 = 0 \implies p(x) = q(x)(x - c)
-\implies x- c \mid p(x)</span></li>
+<li><span class="math inline">0 = p(c) = q(c) (c - c) + r(c) = 0 + r(c)
+\iff r(c) = 0</span>, allora r(x) è il polinomio nullo <span
+class="math inline">\implies p(x) = q(x)(x - c) \implies x- c \mid
+p(x)</span></li>
 </ul></li>
 <li><em>seconda implicazione</em>
 <ul>
-<li><span class="math inline">x - c \mid p(x) \implies \exists p(x) \in
-\mathbb{K}[x] : p(x) = q(x)\cdot (x - c)</span>, allora <span
+<li><span class="math inline">x - c \mid p(x) \iff \exists p(x) \in
+\mathbb{K}[x] \mid p(x) = q(x)\cdot (x - c)</span>, allora <span
 class="math inline">p(c) = q(c) \cdot (c - c) = 0 \implies c</span>
 radice di <span class="math inline">p(x)</span></li>
 </ul></li>
 </ul></li>
 </ul>
-<a href="#oss-6"><h2 id="oss-6">Oss</h2></a>
+<a href="#oss-5"><h2 id="oss-5">Oss</h2></a>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -457,22 +448,23 @@ n</span></li>
 </ul></li>
 <li><strong>Dim</strong>
 <ul>
-<li>ipotizzando <span class="math inline">N :=|\{c \in \mathbb{K} \mid
-p(c) = 0\}| \gt n \implies \{c_1, \ldots, c_N\}</span> sia l’insieme
-delle radici</li>
-<li>per dimostrazione precedente <span class="math inline">x - c_1 \mid
-p(x) \iff \exists q_1(x) \in \mathbb{K}[x] \mid
+<li>per assurdo <span class="math inline">N :=|\{c \in \mathbb{K} \mid
+p(c) = 0\}| \gt n</span></li>
+<li>allora, sia <span class="math inline">\{c_1, \ldots, c_N\}</span>
+l’insieme delle radici di <span class="math inline">p(x)</span></li>
+<li>per dimostrazione precedente <span class="math inline">p(c_1) = 0
+\iff x - c_1 \mid p(x) \iff \exists q_1(x) \in \mathbb{K}[x] \mid
 q_1(x)(x-c_1)=p(x)</span></li>
-<li>per ipotesi <span class="math inline">p(c_2) = 0</span>, allora
-<span class="math inline">p(c_2) = q_1(c_2)(c_2 - c_1) = 0</span></li>
+<li>analogamente <span class="math inline">p(c_2) = 0 \iff p(c_2) =
+q_1(c_2)(c_2 - c_1) = 0</span></li>
 <li>per assurdo <span class="math inline">\exists i, j \in [1, N] ,i
 \neq j \mid c_i = c_j \implies |\{c \in \mathbb{K} \mid p(c) = 0 \}| \lt
 N \implies</span> le soluzioni sono necessariemente tutte distinte, e in
 particolare <span class="math inline">c_2 \neq c_1 \iff c_2 - c_1 \neq
 0</span></li>
-<li>per dimostrazione <span class="math inline">\mathbb{K}[x]</span> è
-un dominio di integrità, allora <span class="math inline">q_1(c_2 - c_1)
-= 0 \land c_2 - c_1 \neq 0 \implies q_1(c_2) = 0</span></li>
+<li><span class="math inline">\mathbb{K}[x]</span> dominio di integrità
+<span class="math inline">\implies q_1(c_2) = 0 \land c_2 - c_1 \neq 0
+\implies q_1(c_2) = 0</span></li>
 <li>per dimostrazione precedente <span class="math inline">q_1(c_2) = 0
 \iff x- c_2 \mid q_1(x) \implies \exists q_2(x) \in \mathbb{K}[x] \mid
 q_2(x) (x-c_2) = q_1(x)</span>, che sostituendo implica che <span
@@ -486,7 +478,7 @@ class="math inline">p(x) = q_2(x)(x-c_2)(x-c_1)</span></li>
 = n</span>, dove <span class="math inline">N \gt n \ \bot</span></li>
 </ul></li>
 </ul>
-<a href="#oss-7"><h2 id="oss-7">Oss</h2></a>
+<a href="#oss-6"><h2 id="oss-6">Oss</h2></a>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -495,12 +487,15 @@ class="math inline">p(x) = q_2(x)(x-c_2)(x-c_1)</span></li>
 </ul></li>
 <li><strong>Th</strong>
 <ul>
-<li><span class="math inline">I</span> è un ideale principale</li>
+<li><span class="math inline">\exists ! p(x) \in \mathbb{K}[x] \mid I =
+I(p(x))</span>, o equivalentemente, in <span
+class="math inline">\mathbb{K}[x]</span> ogni ideale è principale</li>
 </ul></li>
 <li><strong>Dim</strong>
 <ul>
 <li><em>unicità</em>
 <ul>
+<li>⚠️ <strong>che vuol dire sta roba</strong></li>
 <li><span class="math inline">I = \{0\} \implies I = I(0)</span>, ovvero
 l’ideale principale generato da <span class="math inline">0</span></li>
 <li>preso <span class="math inline">p(x) \in I - \{0\} \mid
@@ -512,11 +507,12 @@ in quanto l’elemento minore in <span class="math inline">I -
 </ul></li>
 <li><em>esistenza</em>
 <ul>
-<li><span class="math inline">\exists p(x) \in I - \{0\} \mid I =
-I(p(x))</span>, dove <span class="math inline">p(x)</span> è il
-polinomio di grado minore in <span class="math inline">I - \{0\}</span>
+<li>per il principio del minimo numero <span class="math inline">\exists
+p(x) \in I - \{0\} \mid I = I(p(x))</span>, dove <span
+class="math inline">p(x)</span> è il polinomio di grado minore in <span
+class="math inline">I - \{0\}</span>
 <ul>
-<li><span class="math inline">I \subset I(p(x))</span>
+<li><span class="math inline">I \subseteq I(p(x))</span>
 <ul>
 <li>per il teorema della divisione con il resto tra polinomi <span
 class="math inline">\forall a(x) \in I \quad \exists ! q(x), r(x) \mid
@@ -530,31 +526,28 @@ r(x) = a(x) - p(x) \cdot q(x)</span></li>
 con il grado minore possibile, per osservazione precedente segue
 necessariamente che <span class="math inline">r(x) = 0</span>, e dunque
 <span class="math inline">a(x) = p(x) \cdot q(x) \implies a(x) \in
-I(p(x)) \implies I \subset I(p(x))</span></li>
+I(p(x))</span></li>
 </ul></li>
-<li><span class="math inline">I(p(x)) \subset I</span>
+<li><span class="math inline">I(p(x)) \subseteq I</span>
 <ul>
 <li><span class="math inline">p(x) \in I - \{0\}</span> e <span
 class="math inline">I</span> è un ideale per ipotesi, dunque in
-particolare <span class="math inline">\mathbb{K}[x] \cdot I \subset
-I</span>, quindi <span class="math inline">\forall q(x) \in
+particolare <span class="math inline">\mathbb{K}[x] \cdot I \subseteq
+I</span>, allora <span class="math inline">\forall q(x) \in
 \mathbb{K}[x] \quad q(x) \cdot p(x) \in I</span></li>
 <li><span class="math inline">\forall a(x) \in I(p(x)) \quad \exists
 q(x) \in \mathbb{K}[x] \mid q(x)\cdot p(x) = a(x)</span>, dunque <span
-class="math inline">a(x) \in I</span> per osservazione precedente,
-allora <span class="math inline">I(p(x)) \subset I</span></li>
+class="math inline">a(x) \in I</span></li>
 </ul></li>
 </ul></li>
 </ul></li>
 </ul></li>
 </ul>
-<a href="#oss-8"><h2 id="oss-8">Oss</h2></a>
+<a href="#oss-7"><h2 id="oss-7">Oss</h2></a>
 <ul>
 <li><strong>Hp</strong>
 <ul>
 <li><span class="math inline">\mathbb{K}</span> campo</li>
-<li><span class="math inline">I(a_1(x)), \ldots, I(a_n(x)) \subset
-\mathbb{K}[x]</span> ideali</li>
 <li><span class="math inline">\exists d(x) \in \mathbb{K}[x]\mid
 I(a_1(x), \ldots, a_n(x)) = I(d(x))</span></li>
 </ul></li>
@@ -575,13 +568,13 @@ esempio, l’algoritmo di Euclide</li>
 <li>inoltre, <span class="math inline">d(x)</span> è ben definito a meno
 di una costante moltiplicativa non nulla
 <ul>
-<li>ad esempio <span class="math inline">d(x) = x + 1</span>, allora
-<span class="math inline">\forall a \in \mathbb{K} \quad a(x + 1)</span>
-è ancora divisore</li>
+<li>in particolare, avendo ad esempio <span class="math inline">d(x) = x
++ 1</span>, allora <span class="math inline">\forall a \in \mathbb{K}
+\quad a(x + 1)</span> è ancora divisore</li>
 </ul></li>
 </ul></li>
 </ul>
-<a href="#oss-9"><h2 id="oss-9">Oss</h2></a>
+<a href="#oss-8"><h2 id="oss-8">Oss</h2></a>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -606,13 +599,13 @@ dell’aritmetica è applicabile anche ai polinomi</li>
 <li>inoltre, <span class="math inline">m(x)</span> è ben definito a meno
 di una costante moltiplicativa non nulla
 <ul>
-<li>ad esempio <span class="math inline">m(x) = x + 1</span>, allora
-<span class="math inline">\forall a \in \mathbb{K} \quad a(x + 1)</span>
-è ancora multiplo</li>
+<li>in particolare, avendo ad esempio <span class="math inline">m(x) = x
++ 1</span>, allora <span class="math inline">\forall a \in \mathbb{K}
+\quad a(x + 1)</span> è ancora multiplo</li>
 </ul></li>
 </ul></li>
 </ul>
-<a href="#oss-10"><h2 id="oss-10">Oss</h2></a>
+<a href="#oss-9"><h2 id="oss-9">Oss</h2></a>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -632,7 +625,9 @@ a_n(x))</span></li>
 <ul>
 <li><em>prima implicazione</em>
 <ul>
-<li>in ipotesi <span class="math inline">\forall i \in [i, n] \quad
+<li>⚠️ <strong>perche <span class="math inline">h</span> è una
+costante?</strong></li>
+<li>in ipotesi <span class="math inline">\forall i \in [1, n] \quad
 \exists c \in \mathbb{K} \mid a_i(c) = 0</span></li>
 <li>per dimostrazione precedente <span class="math inline">\forall i \in
 [1, n] \quad a_i(c) = 0 \iff (x - c) \mid a_i(x)</span>
@@ -656,12 +651,14 @@ a_1(x)</span></li>
 <li>allora <span class="math inline">d(x) = (x- c) \cdot kh^{-1}</span>,
 dove <span class="math inline">kh^{-1} \in \mathbb{K}</span> poiché
 <span class="math inline">\mathbb{K}</span> è un campo, e dunque <span
-class="math inline">\exists kh^{-1} \in \mathbb{K} \mid (x - c) \mid
+class="math inline">\exists kh^{-1} \in \mathbb{K} : (x - c) \mid
 d(x)</span>, che per dimostrazione precedente implica che <span
 class="math inline">d(c) = 0</span></li>
 </ul></li>
 <li><em>seconda implicazione</em>
 <ul>
+<li>⚠️ <strong>probabilmente si può usare in due versi perche <span
+class="math inline">d(x)</span> esiste sempre</strong></li>
 <li>per definizione <span class="math inline">\forall i \in [1, n] \quad
 d(x) \mid a_i(x)</span></li>
 <li>per dimostrazione precedente <span class="math inline">d(c) = 0 \iff
@@ -671,11 +668,11 @@ d(x) \mid a_i(x)</span></li>
 class="math inline">\forall i \in [1, n] \quad (x - c) \mid d(x) \land
 d(x) \mid a_i(x) \implies (x - c) \mid a_i(x)</span>, e riapplicando lo
 stesso teorema <span class="math inline">\forall i \in [1, n]\quad (x -
-c) \mid a_i(x) \iff a(c) = 0</span></li>
+c) \mid a_i(x) \iff a_i(c) = 0</span></li>
 </ul></li>
 </ul></li>
 </ul>
-<a href="#oss-11"><h2 id="oss-11">Oss</h2></a>
+<a href="#oss-10"><h2 id="oss-10">Oss</h2></a>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -708,14 +705,13 @@ a(x)b(x)f(x) + p(x)g(x)b(x)</span></li>
 </ul></li>
 <li><em>seconda implicazione</em>
 <ul>
-<li>per dimostrazione precedente <span
-class="math inline">\mathbb{K}[x]</span> è un dominio di integrità, e
-dunque, per dimostrazione precedente, implica che ogni elemento primo è
-anche irriducibile</li>
+<li><span class="math inline">\mathbb{K}[x]</span> è un dominio di
+integrità, e dunque, per dimostrazione precedente, implica che ogni
+elemento primo è anche irriducibile</li>
 </ul></li>
 </ul></li>
 </ul>
-<a href="#oss-12"><h2 id="oss-12">Oss</h2></a>
+<a href="#oss-11"><h2 id="oss-11">Oss</h2></a>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -765,7 +761,7 @@ k</span>????</strong></li>
 </ul></li>
 </ul></li>
 </ul>
-<a href="#oss-13"><h2 id="oss-13">Oss</h2></a>
+<a href="#oss-12"><h2 id="oss-12">Oss</h2></a>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -785,14 +781,14 @@ class="math inline">\iff \deg(p(x)) = 1</span></li>
 \exists z \in \mathbb{C} \mid p(z) = 0</span> per il teorema
 fondamentale dell’algebra</li>
 <li>per dimostrazione precedente <span class="math inline">p(z) = 0 \iff
-x - z \mid p(x) \implies \exists q(x) \in \mathbb{K}[x] \mid p(x) = (x -
+(x - z) \mid p(x) \iff \exists q(x) \in \mathbb{K}[x] \mid p(x) = (x -
 z) \cdot q(x)</span></li>
 <li>poiché <span class="math inline">\deg(x - z) = 1</span>, allora
 necessariamente <span class="math inline">\deg(q(x)) = \deg(p(x)) -
 1</span></li>
 <li><span class="math inline">\deg(p(x)) \gt 1 \implies \deg(q(x)) =
 \deg(p(x)) - 1 \gt 0 \implies p(x)</span> non è irriducibile <span
-class="math inline">\bot</span></li>
+class="math inline">\bot</span> ⚠️ <strong>perche?</strong></li>
 </ul></li>
 <li><em>seconda implicazione</em>
 <ul>
@@ -813,7 +809,7 @@ class="math inline">p(x)</span> è irriducibile</li>
 </ul></li>
 </ul></li>
 </ul>
-<a href="#oss-14"><h2 id="oss-14">Oss</h2></a>
+<a href="#oss-13"><h2 id="oss-13">Oss</h2></a>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -822,21 +818,42 @@ class="math inline">p(x)</span> è irriducibile</li>
 <li><strong>Th</strong>
 <ul>
 <li><span class="math inline">p(x)</span> irriducibile <span
-class="math inline">\iff \deg(p(x)) = 1</span> oppure <span
-class="math inline">\deg(p(x)) = 2 \land \Delta \lt 0</span></li>
+class="math inline">\iff \deg(p(x)) = 1 \lor \left \{ \begin{array}{l}
+\deg(p(x)) = 2 \\ \Delta \lt 0 \end{array} \right.</span></li>
 </ul></li>
 <li><strong>Dim</strong>
 <ul>
+<li>⚠️ <strong>VA RIVISTA LETTERALMENTE TUTTA È UN MACELLO STA
+ROBA</strong></li>
+<li><em>prima implicazione</em>
+<ul>
+<li><span class="math inline">p(x)</span> irriducibile <span
+class="math inline">\implies \deg(p(x)) = 1</span>
+<ul>
 <li>per dimostrazione precedente <span
 class="math inline">\mathbb{R}</span> campo <span
-class="math inline">\implies \forall p(x) \in \mathbb{R}[x]</span>
-irriducibile <span class="math inline">\iff \deg(p(x)) = 1</span>,
-dunque segue la prima tesi</li>
+class="math inline">\implies \forall p(x) \in \mathbb{R}[x] \quad
+p(x)</span> irriducibile <span class="math inline">\iff \deg(p(x)) =
+1</span></li>
+</ul></li>
 <li><span class="math inline">p(x)</span> irriducibile <span
-class="math inline">\iff \deg(p(x)) = 2 \land \Delta \lt 0</span>
+class="math inline">\implies \deg(p(x)) = 2 \land \Delta \lt 0</span>
 <ul>
-<li><em>prima implicazione</em></li>
+<li>questa tesi implica che se <span class="math inline">p(x)</span> è
+irriducibile, e non ha grado <span class="math inline">1</span>, allora
+necessariamente ha grado <span class="math inline">2</span> e <span
+class="math inline">\Delta \lt 0</span></li>
+</ul></li>
+</ul></li>
 <li><em>seconda implicazione</em>
+<ul>
+<li><span class="math inline">\deg(p(x)) = 1 \implies p(x)</span>
+irriducibile
+<ul>
+<li>segue la dimostrazione precedente</li>
+</ul></li>
+<li><span class="math inline">\deg(p(x)) = 2 \land \Delta \lt 0 \implies
+p(x)</span> irriducibile
 <ul>
 <li>ipotizzando <span class="math inline">p(x)</span> non irriducibile
 <span class="math inline">\exists a(x), b(x) \in \mathbb{R}[x] \mid p(x)
@@ -855,7 +872,7 @@ radice di <span class="math inline">p(x)</span></li>
 </ul></li>
 </ul></li>
 </ul>
-<a href="#oss-15"><h2 id="oss-15">Oss</h2></a>
+<a href="#oss-14"><h2 id="oss-14">Oss</h2></a>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -896,7 +913,7 @@ analogo all’osservazione precedente deve necessariamente implicare che
 <span class="math inline">a \mid a_0</span></li>
 </ul></li>
 </ul>
-<a href="#oss-16"><h2 id="oss-16">Oss</h2></a>
+<a href="#oss-15"><h2 id="oss-15">Oss</h2></a>
 <ul>
 <li>⚠️ <strong>MANCA UN TEOREMA ENORME</strong></li>
 </ul>
