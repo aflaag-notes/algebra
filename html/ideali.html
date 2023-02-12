@@ -527,7 +527,7 @@ class="math inline">d \mid a_1</span></li>
 comuni</em>
 <ul>
 <li><span class="math inline">d</span> è il massimo tra i divisori
-comuni quando <span class="math inline">\forall k \in \mathbb{Z}: k \mid
+comuni se <span class="math inline">\forall k \in \mathbb{Z}: k \mid
 a_1, \ldots, a_n \quad k \mid d</span></li>
 <li><span class="math inline">\forall i \in [1, n] \quad k \mid a_i \iff
 \exists x_i \in \mathbb{Z} \mid kx_i = a_i</span></li>
@@ -562,42 +562,6 @@ a_n)</span></li>
 a_1x_1 + \ldots + a_n x_n = d</span></li>
 </ul></li>
 </ul>
-<a href="#oss-7"><h2 id="oss-7">Oss</h2></a>
-<ul>
-<li><strong>Hp</strong>
-<ul>
-<li><span class="math inline">a, b \in \mathbb{Z}</span></li>
-<li><span class="math inline">d := \textrm{MCD}(a, b)</span></li>
-<li><span class="math inline">m := \textrm{mcm}(a, b)</span></li>
-<li><span class="math inline">x_0, y_0 \in \mathbb{Z} \mid d = a x_0 + b
-y_0</span>, dunque <span class="math inline">x_0, y_0</span> soddisfano
-l’equazione di Bézout</li>
-</ul></li>
-<li><strong>Th</strong>
-<ul>
-<li><span class="math inline">ax + by = d \iff \left \{
-\begin{array}{l}x = x_0 + \dfrac{m}{a}k \\ \\ y = y_0 -
-\dfrac{m}{b}k\end{array}\right. \forall k \in \mathbb{Z}</span></li>
-</ul></li>
-<li><strong>Dim</strong>
-<ul>
-<li><span class="math inline">a \left (x_0 + \dfrac{m}{a}k \right) + b
-\left(y_0 - \dfrac{m}{b}k \right) = ax_0 + mk + by_0 -mk = ax_0 + by_0 =
-d \implies x_0</span> e <span class="math inline">y_0</span> rispettano
-il sistema</li>
-<li>per verificare che ogni soluzione è di questa forma, presi <span
-class="math inline">x_1, y_1 \in \mathbb{Z} \mid a x_1 + by_1 = d</span>
-si ha che <span class="math inline">\left \{ \begin{array}{l} ax_0 +
-by_0 = d \\ a x_1 + by_1 = d \end{array} \right. \implies ax_0 + by_0 =
-ax_1 + by_1 \iff a(x_1 - x_0) = b(y_0 - y_1) =: N \implies a, b \mid N
-\implies m \mid N \iff \exists k \in \mathbb{Z} \mid mk = N \iff \left
-\{ \begin{array}{l} a(x_1 - x_0) = mk \\ \\ b(y_0 - y_1) = mk
-\end{array} \right . \iff \left \{\begin{array}{l} x_1 - x_0 =
-\dfrac{m}{a}k \\ \\ y_0 - y_1 = \dfrac{m}{b}k \end{array} \right. \iff
-\left \{ \begin{array}{l} x_1 = x_0 + \dfrac{m}{a}k \\ \\ y_1 = y_0 -
-\dfrac{m}{b}k \end{array} \right.</span></li>
-</ul></li>
-</ul>
 <hr />
 <a href="#operazioni-sugli-ideali"><h1 id="operazioni-sugli-ideali">Operazioni sugli ideali</h1></a>
 <a href="#def-3"><h2 id="def-3">Def</h2></a>
@@ -614,7 +578,7 @@ J\}</span> è detta <strong>somma tra <span class="math inline">I</span>
 e <span class="math inline">J</span></strong></li>
 </ul>
 </blockquote>
-<a href="#oss-8"><h2 id="oss-8">Oss</h2></a>
+<a href="#oss-7"><h2 id="oss-7">Oss</h2></a>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -669,7 +633,7 @@ class="math inline">I</span> e <span
 class="math inline">J</span></strong></li>
 </ul>
 </blockquote>
-<a href="#oss-9"><h2 id="oss-9">Oss</h2></a>
+<a href="#oss-8"><h2 id="oss-8">Oss</h2></a>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -725,7 +689,7 @@ non è unico poiché <span class="math inline">I(m) = I(-m)</span></li>
 </ul></li>
 </ul>
 </blockquote>
-<a href="#oss-10"><h2 id="oss-10">Oss</h2></a>
+<a href="#oss-9"><h2 id="oss-9">Oss</h2></a>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -748,12 +712,12 @@ a_n)</span></li>
 \implies \forall i \in [1, n] \quad \exists x_i \in \mathbb{Z} : a_ix_i
 = m \iff a_i \mid k</span></li>
 </ul></li>
-<li><span class="math inline">m</span> è <em>minimo tra i multipli
+<li><span class="math inline">m</span> è il <em>minimo tra i multipli
 comuni</em>
 <ul>
 <li><span class="math inline">m</span> è il minimo tra i multipli comuni
-quando <span class="math inline">\forall k \in \mathbb{Z} : a_1, \ldots,
-a_n \mid k \quad m \mid k</span></li>
+se <span class="math inline">\forall k \in \mathbb{Z} : a_1, \ldots, a_n
+\mid k \quad m \mid k</span></li>
 <li><span class="math inline">\forall i \in [1, n] \quad a_i \mid k \iff
 \exists x_i \in \mathbb{Z} \mid a_ix_i = k \iff k \in I(a_i)</span>,
 allora <span class="math inline">k \in I(a_1) \cap \ldots \cap I(a_n) =
@@ -761,6 +725,42 @@ I(m)</span></li>
 <li>in particolare <span class="math inline">k \in I(m) \iff m \mid
 k</span></li>
 </ul></li>
+</ul></li>
+</ul>
+<a href="#oss-10"><h2 id="oss-10">Oss</h2></a>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">a, b \in \mathbb{Z}</span></li>
+<li><span class="math inline">d := \textrm{MCD}(a, b)</span></li>
+<li><span class="math inline">m := \textrm{mcm}(a, b)</span></li>
+<li><span class="math inline">x_0, y_0 \in \mathbb{Z} \mid d = a x_0 + b
+y_0</span>, dunque <span class="math inline">x_0, y_0</span> soddisfano
+l’equazione di Bézout</li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">ax + by = d \iff \left \{
+\begin{array}{l}x = x_0 + \dfrac{m}{a}k \\ \\ y = y_0 -
+\dfrac{m}{b}k\end{array}\right. \forall k \in \mathbb{Z}</span></li>
+</ul></li>
+<li><strong>Dim</strong>
+<ul>
+<li><span class="math inline">a \left (x_0 + \dfrac{m}{a}k \right) + b
+\left(y_0 - \dfrac{m}{b}k \right) = ax_0 + mk + by_0 -mk = ax_0 + by_0 =
+d \implies x_0</span> e <span class="math inline">y_0</span> rispettano
+il sistema</li>
+<li>per verificare che ogni soluzione è di questa forma, presi <span
+class="math inline">x_1, y_1 \in \mathbb{Z} \mid a x_1 + by_1 = d</span>
+si ha che <span class="math inline">\left \{ \begin{array}{l} ax_0 +
+by_0 = d \\ a x_1 + by_1 = d \end{array} \right. \implies ax_0 + by_0 =
+ax_1 + by_1 \iff a(x_1 - x_0) = b(y_0 - y_1) =: N \implies a, b \mid N
+\implies m \mid N \iff \exists k \in \mathbb{Z} \mid mk = N \iff \left
+\{ \begin{array}{l} a(x_1 - x_0) = mk \\ \\ b(y_0 - y_1) = mk
+\end{array} \right . \iff \left \{\begin{array}{l} x_1 - x_0 =
+\dfrac{m}{a}k \\ \\ y_0 - y_1 = \dfrac{m}{b}k \end{array} \right. \iff
+\left \{ \begin{array}{l} x_1 = x_0 + \dfrac{m}{a}k \\ \\ y_1 = y_0 -
+\dfrac{m}{b}k \end{array} \right.</span></li>
 </ul></li>
 </ul>
 <a href="#def-6"><h2 id="def-6">Def</h2></a>

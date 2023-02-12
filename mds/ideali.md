@@ -136,7 +136,7 @@
         - preso ad esempio $a_1$, è possibile riscriverlo come $a_1 = a_1 \cdot 1 + a_2 \cdot 0 + \ldots + a_n \cdot 0$, di conseguenza $a_1 \in I(a_1, \ldots, a_n)$, dunque $d \mid a_1$
         - vale il ragionamento analogo per ogni $a_1, \ldots , a_n$, dunque $d \mid a_1, \ldots, a_n$
     - $d$ è il _massimo tra i divisori comuni_
-        - $d$ è il massimo tra i divisori comuni quando $\forall k \in \mathbb{Z}: k \mid a_1, \ldots, a_n \quad  k \mid d$
+        - $d$ è il massimo tra i divisori comuni se $\forall k \in \mathbb{Z}: k \mid a_1, \ldots, a_n \quad  k \mid d$
         - $\forall i \in [1, n] \quad k \mid a_i \iff \exists x_i \in \mathbb{Z} \mid kx_i = a_i$
         - $d \in I(d) = I(a_1, \ldots, a_n) \iff d \in I(a_1, \ldots, a_n) \implies \exists b_1, \ldots b_n \in \mathbb{Z} \mid d = a_1 b_1 + \ldots + a_n b_n$, e per osservazione precedente si ottiene che $d = kx_1b_1 + \ldots + kx_nb_n = k(b_1x_1 + \ldots + b_nx_n) \implies k \mid d$
 
@@ -149,19 +149,6 @@
   - $\exists x_1, \ldots, x_n \in \mathbb{Z} \mid a_1 x_1 + \ldots + a_nx_n=d$, che prende il nome di _identità di Bézout_
 - **Dim**
   - per dimostrazione precedente, $I(a_{1}, \ldots a_{n})=I(d)$, quindi $d \in I(a_1, \ldots, a_n) \implies \exists x_1, \ldots, x_n \in \mathbb{Z} \mid a_1x_1 + \ldots + a_n x_n = d$
-
-## Oss
-
-- **Hp**
-    - $a, b \in \mathbb{Z}$
-    - $d := \textrm{MCD}(a, b)$
-    - $m := \textrm{mcm}(a, b)$
-    - $x_0, y_0 \in \mathbb{Z} \mid d = a x_0 + b y_0$, dunque $x_0, y_0$ soddisfano l'equazione di Bézout
-- **Th**
-    - $ax + by = d \iff \left \{ \begin{array}{l}x = x_0 + \dfrac{m}{a}k \\ \\ y = y_0 - \dfrac{m}{b}k\end{array}\right. \forall k \in \mathbb{Z}$
-- **Dim**
-    - $a \left (x_0 + \dfrac{m}{a}k \right) + b \left(y_0 - \dfrac{m}{b}k \right) = ax_0 + mk + by_0 -mk = ax_0 + by_0 = d \implies x_0$ e $y_0$ rispettano il sistema
-    - per verificare che ogni soluzione è di questa forma, presi $x_1, y_1 \in \mathbb{Z} \mid a x_1 + by_1 = d$ si ha che $\left \{ \begin{array}{l} ax_0 + by_0 = d \\ a x_1 + by_1 = d \end{array} \right. \implies ax_0 + by_0 = ax_1 + by_1 \iff a(x_1 - x_0) = b(y_0 - y_1) =: N \implies a, b \mid N \implies m \mid N \iff \exists k \in \mathbb{Z} \mid mk = N \iff \left \{ \begin{array}{l} a(x_1 - x_0) = mk \\ \\ b(y_0 - y_1) = mk \end{array} \right . \iff \left \{\begin{array}{l} x_1 - x_0 = \dfrac{m}{a}k \\ \\ y_0 - y_1 = \dfrac{m}{b}k \end{array} \right. \iff \left \{ \begin{array}{l} x_1 = x_0 + \dfrac{m}{a}k \\ \\ y_1 = y_0 - \dfrac{m}{b}k \end{array} \right.$
 
 ****
 
@@ -232,10 +219,23 @@
 - **Dim**
     - $m$ è _multiplo comune_
         - $I(m) = \displaystyle \bigcap_{i=1}^n{I(a_i)} \implies m \in I(a_1) \cap \ldots \cap I(a_n) \implies \forall i \in [1, n] \quad \exists x_i \in \mathbb{Z} : a_ix_i = m \iff a_i \mid k$
-    - $m$ è _minimo tra i multipli comuni_
-        - $m$ è il minimo tra i multipli comuni quando $\forall k \in \mathbb{Z} : a_1, \ldots, a_n \mid k \quad  m \mid k$
+    - $m$ è il _minimo tra i multipli comuni_
+        - $m$ è il minimo tra i multipli comuni se $\forall k \in \mathbb{Z} : a_1, \ldots, a_n \mid k \quad  m \mid k$
         - $\forall i \in [1, n] \quad a_i \mid k \iff \exists x_i \in \mathbb{Z} \mid a_ix_i = k \iff k \in I(a_i)$, allora $k \in I(a_1) \cap \ldots \cap I(a_n) = I(m)$
         - in particolare $k \in I(m) \iff m \mid k$
+
+## Oss
+
+- **Hp**
+    - $a, b \in \mathbb{Z}$
+    - $d := \textrm{MCD}(a, b)$
+    - $m := \textrm{mcm}(a, b)$
+    - $x_0, y_0 \in \mathbb{Z} \mid d = a x_0 + b y_0$, dunque $x_0, y_0$ soddisfano l'equazione di Bézout
+- **Th**
+    - $ax + by = d \iff \left \{ \begin{array}{l}x = x_0 + \dfrac{m}{a}k \\ \\ y = y_0 - \dfrac{m}{b}k\end{array}\right. \forall k \in \mathbb{Z}$
+- **Dim**
+    - $a \left (x_0 + \dfrac{m}{a}k \right) + b \left(y_0 - \dfrac{m}{b}k \right) = ax_0 + mk + by_0 -mk = ax_0 + by_0 = d \implies x_0$ e $y_0$ rispettano il sistema
+    - per verificare che ogni soluzione è di questa forma, presi $x_1, y_1 \in \mathbb{Z} \mid a x_1 + by_1 = d$ si ha che $\left \{ \begin{array}{l} ax_0 + by_0 = d \\ a x_1 + by_1 = d \end{array} \right. \implies ax_0 + by_0 = ax_1 + by_1 \iff a(x_1 - x_0) = b(y_0 - y_1) =: N \implies a, b \mid N \implies m \mid N \iff \exists k \in \mathbb{Z} \mid mk = N \iff \left \{ \begin{array}{l} a(x_1 - x_0) = mk \\ \\ b(y_0 - y_1) = mk \end{array} \right . \iff \left \{\begin{array}{l} x_1 - x_0 = \dfrac{m}{a}k \\ \\ y_0 - y_1 = \dfrac{m}{b}k \end{array} \right. \iff \left \{ \begin{array}{l} x_1 = x_0 + \dfrac{m}{a}k \\ \\ y_1 = y_0 - \dfrac{m}{b}k \end{array} \right.$
 
 ## Def
 

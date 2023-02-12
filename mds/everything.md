@@ -553,17 +553,6 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
   - $\exists x_1, \ldots, x_n \in \mathbb{Z} \mid a_1 x_1 + \ldots + a_nx_n=d$, che prende il nome di _identità di Bézout_
 
-## Teorema 33
-
-
-- **Hp**
-    - $a, b \in \mathbb{Z}$
-    - $d := \textrm{MCD}(a, b)$
-    - $m := \textrm{mcm}(a, b)$
-    - $x_0, y_0 \in \mathbb{Z} \mid d = a x_0 + b y_0$, dunque $x_0, y_0$ soddisfano l'equazione di Bézout
-- **Th**
-    - $ax + by = d \iff \left \{ \begin{array}{l}x = x_0 + \dfrac{m}{a}k \\ \\ y = y_0 - \dfrac{m}{b}k\end{array}\right. \forall k \in \mathbb{Z}$
-
 ****
 
 # Operazioni sugli ideali
@@ -580,7 +569,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 34
+## Teorema 33
 
 
 - **Hp**
@@ -600,7 +589,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 35
+## Teorema 34
 
 
 - **Hp**
@@ -622,7 +611,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 36
+## Teorema 35
 
 
 
@@ -631,6 +620,17 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
     - $\exists ! m \in \mathbb{N} \mid I(m) = \displaystyle \bigcap_{i=1}^n{I(a_i)}$
 - **Th**
     - $m = \textrm{mcm}(a_1, \ldots, a_n)$
+
+## Teorema 36
+
+
+- **Hp**
+    - $a, b \in \mathbb{Z}$
+    - $d := \textrm{MCD}(a, b)$
+    - $m := \textrm{mcm}(a, b)$
+    - $x_0, y_0 \in \mathbb{Z} \mid d = a x_0 + b y_0$, dunque $x_0, y_0$ soddisfano l'equazione di Bézout
+- **Th**
+    - $ax + by = d \iff \left \{ \begin{array}{l}x = x_0 + \dfrac{m}{a}k \\ \\ y = y_0 - \dfrac{m}{b}k\end{array}\right. \forall k \in \mathbb{Z}$
 
 ## Definizione 17
 
