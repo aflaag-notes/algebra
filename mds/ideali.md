@@ -119,8 +119,9 @@
 
 > - $a_{1}, \ldots , a_{n} \in \mathbb{Z}$
 > - $\exists !d \in \mathbb{N}  \mid I\left(a_{1}, \ldots , a_{n}\right)=I(d)$, ed è detto **massimo comun divisore degli $a_1, \ldots, a_n$**
->   - poiché $\mathbb{Z}$ è dominio ad ideali principali, esiste $d \in I(a_1, \ldots, a_n) \mid I(a_1, \ldots, a_n) = I(d)$, poiché $I(a_1, \ldots, a_n)$ è ideale per dimostrazione precedente
+>   - poiché $\mathbb{Z}$ è dominio ad ideali principali, $\exists d \in I(a_1, \ldots, a_n) \mid I(a_1, \ldots, a_n) = I(d)$, poiché $I(a_1, \ldots, a_n)$ è ideale per dimostrazione precedente
 >   - allora considerando la definizione canonica di $d :=\textrm{MCD}(a_1, \ldots, a_n)$ in cui $d \ge0$, si ha che $d \in \mathbb{N}$ è unico
+>   - in particolare, $d \in \mathbb{Z}$ non è unico poiché $I(d) = I(-d)$
 
 ## Oss
 
@@ -218,6 +219,7 @@
 > - $\displaystyle \exists ! m  \in \mathbb{N} \mid I(m) = I(a_1) \cap \ldots \cap I(a_n) = \bigcap_{i=1}^{n}{I(a_i)}$, ed è detto **minimo comune multiplo degli $a_1, \ldots, a_n$**
 >   - poiché $\mathbb{Z}$ è dominio ad ideali principali, $\exists m \in \displaystyle \bigcap_{i = 1}^n{I(a_i)} \mid \bigcap_{i = 1}^n{I(a_i)} = I(m)$, poiché $\displaystyle \bigcap_{i=1}^{n}{I(a_i)}$ è ideale per dimostrazione precedente
 >   - allora considerando la definizione canonica di $m :=\textrm{mcm}(a_1, \ldots, a_n)$ in cui $m \ge0$, si ha che $m \in \mathbb{N}$ è unico
+>   - in particolare, $m \in \mathbb{Z}$ non è unico poiché $I(m) = I(-m)$
 
 ## Oss
 

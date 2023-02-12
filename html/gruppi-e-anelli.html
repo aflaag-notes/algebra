@@ -272,7 +272,7 @@ x)</span>
 </ul></li>
 <li><strong>Dim</strong>
 <ul>
-<li>per assurdo, ipotizzzando <span class="math inline">\exists e_1, e_2
+<li>per assurdo, ipotizzando <span class="math inline">\exists e_1, e_2
 \in G \mid e_1 \neq e_2</span> elementi neutri, allora <span
 class="math inline">\left.\begin{array}{l}m\left(x,
 e_{1}\right)=m\left(e_{1}, x\right)=x \\ m\left(x,
@@ -961,7 +961,7 @@ I(g)</span></li>
 <ul>
 <li><span class="math inline">G</span> gruppo</li>
 <li><span class="math inline">g \in G</span></li>
-<li><span class="math inline">\exists! d \in \mathbb{N} \mid
+<li><span class="math inline">\exists! d \in I(g)_{\ge 0} \mid
 I(g)=I(d)</span></li>
 </ul></li>
 <li><strong>Th</strong>
@@ -1000,8 +1000,8 @@ class="math inline">\implies o(g) := |H(g)| = |\mathbb{Z}| = +
 class="math inline">g</span> ha <em>al massimo <span
 class="math inline">d</span></em> potenze
 <ul>
-<li><span class="math inline">I(g) = I(d) \land d \in I(d) \implies d
-\in I(g) \implies g^d = e</span></li>
+<li><span class="math inline">d \in I(g)_{\ge 0} \implies g^d =
+e</span></li>
 <li><span class="math inline">d \gt 0 \implies \forall n \in \mathbb{Z}
 \quad \exists q, r \in \mathbb{Z} \mid n = dq + r \quad 0 \le r \lt
 d</span> per il teorema della divisione euclidea con il resto, dunque
@@ -1023,7 +1023,7 @@ y \lt d \quad g^x = g^y \iff g^x \cdot g^{-y} = e \iff g^{x - y} = e
 dk</span></li>
 <li><span class="math inline">0 \le x, y \lt d \implies -d \lt x - y \lt
 d \implies x - y = 0 \iff x = y</span>, allora <span
-class="math inline">f:[0,d] \rightarrow H(g)</span> è biiettiva, e
+class="math inline">f:[0,d) \rightarrow H(g)</span> è iniettiva, e
 dunque <span class="math inline">g</span> ha almeno <span
 class="math inline">d</span> potenze</li>
 </ul></li>

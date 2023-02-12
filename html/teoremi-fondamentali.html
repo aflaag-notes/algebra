@@ -713,25 +713,23 @@ a) \equiv x^{p - 1} - 1 \ (\bmod \ p)</span></li>
 <ul>
 <li>per il piccolo teorema di Fermat <span class="math inline">a^p
 \equiv a \iff a^{p - 1} \equiv 1 \iff a^{p - 1} - 1 \equiv 0\ (\bmod \
-p)</span>, che è equivalente a dire che <span
-class="math inline">[a]</span> è radice del polinomio <span
-class="math inline">x^{p -1 } - [1] \in \mathbb{Z}_p[x]</span></li>
+p)</span>, ovvero <span class="math inline">[a]</span> è radice del
+polinomio <span class="math inline">x^{p -1 } - [1] \in
+\mathbb{Z}_p[x]</span></li>
 <li>per dimostrazione precedente <span class="math inline">\forall 0 \lt
-a \lt p \quad [a]^{p - 1} - 1 = [0] \implies x - [a] \mid x^{p -1} -
+a \lt p \quad [a]^{p - 1} - [1] = [0] \iff (x - [a]) \mid x^{p -1} -
 [1]</span>, ovvero <span class="math inline">\displaystyle \prod_{0 \lt
 a \lt p} (x - [a]) \mid x^{p - 1} - [1] \implies \exists c \in
-\mathbb{N} \mid x^{p - 1} - [1] = c \cdot \displaystyle \prod_{0 \lt a
+\mathbb{Z} \mid x^{p - 1} - [1] = c \cdot \displaystyle \prod_{0 \lt a
 \lt p} (x - [a])</span></li>
 <li>poiché <span class="math inline">x^{p- 1}-[1]</span> e <span
 class="math inline">\displaystyle \prod_{0 \lt a \lt p} (x - [a])</span>
 sono due polinomi il cui coefficiente direttore è <span
 class="math inline">1</span>, allora necessariamente <span
-class="math inline">c = 1</span>, per cui segue la tesi</li>
+class="math inline">c = 1</span>, dunque si ha che <span
+class="math inline">\displaystyle \prod_{0 \lt a \lt p} (x - a) \equiv
+x^{p - 1} - 1 \ (\bmod \ p)</span></li>
 </ul></li>
-</ul>
-<a href="#cor-3"><h2 id="cor-3">Cor</h2></a>
-<ul>
-<li>⚠️ <strong>NON HO CAPITO UN CAZZO</strong></li>
 </ul>
 <hr />
 <a href="#teorema-di-eulero"><h1 id="teorema-di-eulero">Teorema di Eulero</h1></a>
@@ -893,7 +891,7 @@ class="math inline">u</span> e <span class="math inline">v</span></li>
 2\cos(\theta) \cdot||u||\cdot ||v||</span></li>
 </ul></li>
 </ul>
-<a href="#cor-4"><h2 id="cor-4">Cor</h2></a>
+<a href="#cor-3"><h2 id="cor-3">Cor</h2></a>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -1067,7 +1065,7 @@ n}(\mathbb{K})</span></li>
 \det(B)</span></li>
 </ul></li>
 </ul>
-<a href="#cor-5"><h2 id="cor-5">Cor</h2></a>
+<a href="#cor-4"><h2 id="cor-4">Cor</h2></a>
 <ul>
 <li><strong>Hp</strong>
 <ul>

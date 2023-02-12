@@ -6,6 +6,7 @@
 
 > - $\mathbb{K}$ campo
 > - $a(x) := \displaystyle{\sum_{k = 0}^na_kx^k} = a_0x^0 + \ldots + a_nx^n$ è detto **polinomio**
+>   - $a_n$ è detto _coefficiente direttore_
 > - $\mathbb{K}[x] := \{a_0x^0 + \ldots + a_n x^n \mid a_0, \ldots, a_n \in \mathbb{K}\}$ è l'**insieme dei polinomi a coefficienti in $\mathbb{K}$**
 
 - **Polinomio monico**
@@ -122,7 +123,7 @@
     - allora, sia $\{c_1, \ldots, c_N\}$ l'insieme delle radici di $p(x)$
     - per dimostrazione precedente $p(c_1) = 0 \iff x - c_1 \mid p(x) \iff \exists q_1(x) \in \mathbb{K}[x] \mid q_1(x)(x-c_1)=p(x)$
     - analogamente $p(c_2) = 0 \iff p(c_2) = q_1(c_2)(c_2 - c_1) = 0$
-    - per assurdo $\exists i, j \in [1, N] ,i \neq j \mid c_i = c_j \implies |\{c \in \mathbb{K} \mid p(c) = 0 \}| \lt N \implies$ le soluzioni sono necessariemente tutte distinte, e in particolare $c_2 \neq c_1 \iff c_2 - c_1 \neq 0$
+    - per assurdo $\exists i, j \in [1, N] ,i \neq j \mid c_i = c_j \implies |\{c \in \mathbb{K} \mid p(c) = 0 \}| \lt N \implies$ le soluzioni sono necessariamente tutte distinte, e in particolare $c_2 \neq c_1 \iff c_2 - c_1 \neq 0$
     - $\mathbb{K}[x]$ dominio di integrità $\implies q_1(c_2) = 0 \land c_2 - c_1 \neq 0 \implies q_1(c_2) = 0$
     - per dimostrazione precedente $q_1(c_2) = 0 \iff x- c_2 \mid q_1(x) \implies \exists q_2(x) \in \mathbb{K}[x] \mid q_2(x) (x-c_2) = q_1(x)$, che sostituendo implica che $p(x) = q_2(x)(x-c_2)(x-c_1)$
     - applicando il ragionamento analogo ad ogni soluzione, si ha che $\exists q_n(x) \in \mathbb{K}[x] \mid q_n(x) (x-c_1) \cdot \ldots \cdot(x-c_N) = p(x) \implies (x-c_1) \cdot \ldots \cdot (x-c_N) \mid p(x)$
@@ -136,8 +137,8 @@
 - **Th**
     - $\exists  p(x) \in I \mid I = I(p(x))$, o equivalentemente, in $\mathbb{K}[x]$ ogni ideale è principale
 - **Dim**
-    - $I = \{0\} \implies I = I(0)$, ovvero l'ideale principale generato da $0$
-    - preso $p(x) \in I - \{0\} \mid \deg(p(x))$ sia il minore possibile, allora $\forall q(x) \in I \mid \deg(q(x)) \lt \deg(p(x)) \implies q(x) \in I(0) \implies q(x) = 0$, di conseguenza è unico in quanto l'elemento minore in $I - \{0\}$ è unico
+    - $p(x) = 0 \implies I = \{0\} \implies I = I(0)$, ovvero l'ideale principale generato da $0$
+    - $p(x) \in I - \{0\} \mid \deg(p(x))$ sia il minore possibile, allora $\forall q(x) \in I \mid \deg(q(x)) \lt \deg(p(x)) \implies q(x) \in I(0) \implies q(x) = 0$, di conseguenza è unico in quanto l'elemento minore in $I - \{0\}$ è unico
     - per osservazione precedente $\exists p(x) \in I - \{0\} \mid I = I(p(x))$, dove $p(x)$ è il polinomio di grado minore in $I - \{0\}$
     - $I = I(p(x)) \iff I \subseteq I(p(x)) \land I(p(x)) \subseteq I$
         - $I \subseteq I(p(x))$
@@ -159,7 +160,6 @@
     - la dimostrazione è analoga al caso di $\mathbb{Z}$
     - in particolare, $\textrm{MCD}(a_1(x), \ldots, a_n(x))$ è ben definito in quanto, per dimostrazione precedente, la divisione con il resto tra polinomi è ben definita, ed è dunque possibile calcolare il massimo comun divisore attraverso, ad esempio, l'algoritmo di Euclide
     - inoltre, $d(x)$ è ben definito a meno di una costante moltiplicativa non nulla
-        - in particolare, avendo ad esempio $d(x) = x + 1$, allora $\forall a \in \mathbb{K} \quad a(x + 1)$ è ancora divisore
 
 ## Oss
 
@@ -173,7 +173,6 @@
     - la dimostrazione è analoga al caso in $\mathbb{Z}$
     - in particolare, $\textrm{mcm}(a_1(x), \ldots, a_n(x))$ è ben definito in quanto il teorema fondamentale dell'aritmetica è applicabile anche ai polinomi
     - inoltre, $m(x)$ è ben definito a meno di una costante moltiplicativa non nulla
-        - in particolare, avendo ad esempio $m(x) = x + 1$, allora $\forall a \in \mathbb{K} \quad a(x + 1)$ è ancora multiplo
 
 ## Oss
 
@@ -249,8 +248,11 @@
         - $\deg(p(x)) = 0$
             - allora $p(x)$ è della forma $p(x) = c$, con $c \in \mathbb{K}$, allora $p(x) = c \cdot (1 \cdot x^0)$
         - $\deg(p(x)) \gt 0$
-            - si supponga $\exists q_1(x), \ldots, q_k(x), q_1'(x), \ldots, q_j'(x) \in \mathbb{K}[x], c, c' \in \mathbb{K}^*\mid c \cdot q_1(x) \cdot \ldots \cdot q_i(x) = p(x) = c'\cdot q_1'(x) \cdot \ldots \cdot q_j'(x)$ dove $c \neq c', \forall k \in [1, i] \quad q_k(x) \neq q_k'(x)$
-            - ⚠️  **DOVE HA DIMOSTRATO CHE $i = k$????**
+            - per assurdo $\exists q_1(x), \ldots, q_k(x), q_1'(x), \ldots, q_k'(x) \in \mathbb{K}[x]$ irriducibili e monici, $c, c' \in \mathbb{K}^* \mid c \cdot q_1(x) \cdot \ldots \cdot q_k(x) = p(x) = c' \cdot q_1'(x) \cdot \ldots \cdot q_k'(x)$
+            - allora, ad esempio $q_1(x) \mid p(x) = c' \cdot q_1'(x) \cdot \ldots \cdot q_k'(x) \implies q_1(x) \mid q_1'(x) \lor \ldots \lor q_1(x) \mid q_k'(x)$
+            - ipotizzando $q_1 \mid q_1'(x)$, poiché $\deg(q_1(x)) = \deg(q_1'(x))$, allora necessariamente $q_1 \mid q_1'(x) \iff \exists k \in \mathbb{K}^* \mid q_1(x) \cdot k = q_1'(x)$
+            - allora $c \cdot q_1(x) \cdot \ldots \cdot q_k(x) = p(x) = c' \cdot q_1'(x) \cdot \ldots \cdot q_k'(x) = c' \cdot k \cdot q_1(x) \cdot \ldots, \cdot q_k'(x)$
+            - ⚠️  **tutto sbagliato che palle**
 
 ## Oss
 
@@ -279,17 +281,13 @@
     - $a_0, \ldots, a_n \in \mathbb{Z} \mid a_0, a_n \neq 0$
     - $p(x) \in \mathbb{Z}[x] \mid p(x) = a_0 + \ldots + a_nx^n$
     - $a, b \in \mathbb{Z} \mid \textrm{MCD}(a, b) = 1$
-    - $p(\frac{a}{b}) = 0$
+    - $p\left(\frac{a}{b}\right) = 0$
 - **Th**
     - $a \mid a_0 \land b \mid a_n$
 - **Dim**
-    - $0 = p(\frac{a}{b}) = a_n(\frac{a}{b})^n + a_{n - 1}\left(\frac{a^{n - 1}}{b^{n - 1}}\right) + \ldots + a_0$
+    - $0 = p\left(\frac{a}{b}\right) = a_n\left(\frac{a}{b}\right)^n + a_{n - 1}\left(\frac{a^{n - 1}}{b^{n - 1}}\right) + \ldots + a_0$
     - moltiplicando entrambe i membri dell'equazione per $b^n$ si ottiene $0 = a_na^n + a_{n -1}a^{n - 1}b + \ldots + a_1a^1b^{n -1 } + a_0b^n$
-    - allora $a_na^n = - a_{n - 1} a^{n - 1}b - \ldots - a_1a^1 b^{n - 1}- a_0b^n$
-    - poiché ogni sottraendo del secondo membro di tale equazione è un multiplo di $b$, mettendo in evidenza $b$ si ottiene che $b \mid a_na^n$
-    - $\textrm{MCD}(a, b) = 1 \implies \textrm{MCD}(a^n, b) = 1$, ma allora $b \mid a_na^n \implies b \mid a_n$
+    - allora $a_na^n = - a_{n - 1} a^{n - 1}b - \ldots - a_1a^1 b^{n - 1}- a_0b^n \implies b \mid a_na^n$ poiché ogni termine del secondo membro dell'equazione contiene una potenza di $b$
+    - $\textrm{MCD}(a, b) = 1 \implies \textrm{MCD}(a^n, b) = 1$, ma allora $b \mid a_na^n \implies b \mid a_n$ ⚠️ **perché**
     - è possibile ripetere il ragionamento analogo per $a_0b^n$, e dall'equazione ottenuta si noterà che $a \mid a_0b^n$, che per ragionamento analogo all'osservazione precedente deve necessariamente implicare che $a \mid a_0$
 
-## Oss
-
-- ⚠️  **MANCA UN TEOREMA ENORME**

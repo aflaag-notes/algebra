@@ -194,7 +194,11 @@
 <li><span class="math inline">\mathbb{K}</span> campo</li>
 <li><span class="math inline">a(x) := \displaystyle{\sum_{k =
 0}^na_kx^k} = a_0x^0 + \ldots + a_nx^n</span> è detto
-<strong>polinomio</strong></li>
+<strong>polinomio</strong>
+<ul>
+<li><span class="math inline">a_n</span> è detto <em>coefficiente
+direttore</em></li>
+</ul></li>
 <li><span class="math inline">\mathbb{K}[x] := \{a_0x^0 + \ldots + a_n
 x^n \mid a_0, \ldots, a_n \in \mathbb{K}\}</span> è l’<strong>insieme
 dei polinomi a coefficienti in <span
@@ -459,7 +463,7 @@ q_1(x)(x-c_1)=p(x)</span></li>
 q_1(c_2)(c_2 - c_1) = 0</span></li>
 <li>per assurdo <span class="math inline">\exists i, j \in [1, N] ,i
 \neq j \mid c_i = c_j \implies |\{c \in \mathbb{K} \mid p(c) = 0 \}| \lt
-N \implies</span> le soluzioni sono necessariemente tutte distinte, e in
+N \implies</span> le soluzioni sono necessariamente tutte distinte, e in
 particolare <span class="math inline">c_2 \neq c_1 \iff c_2 - c_1 \neq
 0</span></li>
 <li><span class="math inline">\mathbb{K}[x]</span> dominio di integrità
@@ -493,14 +497,14 @@ class="math inline">\mathbb{K}[x]</span> ogni ideale è principale</li>
 </ul></li>
 <li><strong>Dim</strong>
 <ul>
-<li><span class="math inline">I = \{0\} \implies I = I(0)</span>, ovvero
-l’ideale principale generato da <span class="math inline">0</span></li>
-<li>preso <span class="math inline">p(x) \in I - \{0\} \mid
-\deg(p(x))</span> sia il minore possibile, allora <span
-class="math inline">\forall q(x) \in I \mid \deg(q(x)) \lt \deg(p(x))
-\implies q(x) \in I(0) \implies q(x) = 0</span>, di conseguenza è unico
-in quanto l’elemento minore in <span class="math inline">I -
-\{0\}</span> è unico</li>
+<li><span class="math inline">p(x) = 0 \implies I = \{0\} \implies I =
+I(0)</span>, ovvero l’ideale principale generato da <span
+class="math inline">0</span></li>
+<li><span class="math inline">p(x) \in I - \{0\} \mid \deg(p(x))</span>
+sia il minore possibile, allora <span class="math inline">\forall q(x)
+\in I \mid \deg(q(x)) \lt \deg(p(x)) \implies q(x) \in I(0) \implies
+q(x) = 0</span>, di conseguenza è unico in quanto l’elemento minore in
+<span class="math inline">I - \{0\}</span> è unico</li>
 <li>per osservazione precedente <span class="math inline">\exists p(x)
 \in I - \{0\} \mid I = I(p(x))</span>, dove <span
 class="math inline">p(x)</span> è il polinomio di grado minore in <span
@@ -561,12 +565,7 @@ precedente, la divisione con il resto tra polinomi è ben definita, ed è
 dunque possibile calcolare il massimo comun divisore attraverso, ad
 esempio, l’algoritmo di Euclide</li>
 <li>inoltre, <span class="math inline">d(x)</span> è ben definito a meno
-di una costante moltiplicativa non nulla
-<ul>
-<li>in particolare, avendo ad esempio <span class="math inline">d(x) = x
-+ 1</span>, allora <span class="math inline">\forall a \in \mathbb{K}
-\quad a(x + 1)</span> è ancora divisore</li>
-</ul></li>
+di una costante moltiplicativa non nulla</li>
 </ul></li>
 </ul>
 <a href="#oss-8"><h2 id="oss-8">Oss</h2></a>
@@ -592,12 +591,7 @@ class="math inline">\mathbb{Z}</span></li>
 \ldots, a_n(x))</span> è ben definito in quanto il teorema fondamentale
 dell’aritmetica è applicabile anche ai polinomi</li>
 <li>inoltre, <span class="math inline">m(x)</span> è ben definito a meno
-di una costante moltiplicativa non nulla
-<ul>
-<li>in particolare, avendo ad esempio <span class="math inline">m(x) = x
-+ 1</span>, allora <span class="math inline">\forall a \in \mathbb{K}
-\quad a(x + 1)</span> è ancora multiplo</li>
-</ul></li>
+di una costante moltiplicativa non nulla</li>
 </ul></li>
 </ul>
 <a href="#oss-9"><h2 id="oss-9">Oss</h2></a>
@@ -786,14 +780,24 @@ class="math inline">p(x) = c</span>, con <span class="math inline">c \in
 </ul></li>
 <li><span class="math inline">\deg(p(x)) \gt 0</span>
 <ul>
-<li>si supponga <span class="math inline">\exists q_1(x), \ldots,
-q_k(x), q_1&#39;(x), \ldots, q_j&#39;(x) \in \mathbb{K}[x], c, c&#39;
-\in \mathbb{K}^*\mid c \cdot q_1(x) \cdot \ldots \cdot q_i(x) = p(x) =
-c&#39;\cdot q_1&#39;(x) \cdot \ldots \cdot q_j&#39;(x)</span> dove <span
-class="math inline">c \neq c&#39;, \forall k \in [1, i] \quad q_k(x)
-\neq q_k&#39;(x)</span></li>
-<li>⚠️ <strong>DOVE HA DIMOSTRATO CHE <span class="math inline">i =
-k</span>????</strong></li>
+<li>per assurdo <span class="math inline">\exists q_1(x), \ldots,
+q_k(x), q_1&#39;(x), \ldots, q_k&#39;(x) \in \mathbb{K}[x]</span>
+irriducibili e monici, <span class="math inline">c, c&#39; \in
+\mathbb{K}^* \mid c \cdot q_1(x) \cdot \ldots \cdot q_k(x) = p(x) =
+c&#39; \cdot q_1&#39;(x) \cdot \ldots \cdot q_k&#39;(x)</span></li>
+<li>allora, ad esempio <span class="math inline">q_1(x) \mid p(x) =
+c&#39; \cdot q_1&#39;(x) \cdot \ldots \cdot q_k&#39;(x) \implies q_1(x)
+\mid q_1&#39;(x) \lor \ldots \lor q_1(x) \mid q_k&#39;(x)</span></li>
+<li>ipotizzando <span class="math inline">q_1 \mid q_1&#39;(x)</span>,
+poiché <span class="math inline">\deg(q_1(x)) =
+\deg(q_1&#39;(x))</span>, allora necessariamente <span
+class="math inline">q_1 \mid q_1&#39;(x) \iff \exists k \in \mathbb{K}^*
+\mid q_1(x) \cdot k = q_1&#39;(x)</span></li>
+<li>allora <span class="math inline">c \cdot q_1(x) \cdot \ldots \cdot
+q_k(x) = p(x) = c&#39; \cdot q_1&#39;(x) \cdot \ldots \cdot q_k&#39;(x)
+= c&#39; \cdot k \cdot q_1(x) \cdot \ldots, \cdot
+q_k&#39;(x)</span></li>
+<li>⚠️ <strong>tutto sbagliato che palle</strong></li>
 </ul></li>
 </ul></li>
 </ul></li>
@@ -871,7 +875,7 @@ a_n \neq 0</span></li>
 \ldots + a_nx^n</span></li>
 <li><span class="math inline">a, b \in \mathbb{Z} \mid \textrm{MCD}(a,
 b) = 1</span></li>
-<li><span class="math inline">p(\frac{a}{b}) = 0</span></li>
+<li><span class="math inline">p\left(\frac{a}{b}\right) = 0</span></li>
 </ul></li>
 <li><strong>Th</strong>
 <ul>
@@ -879,32 +883,26 @@ b) = 1</span></li>
 </ul></li>
 <li><strong>Dim</strong>
 <ul>
-<li><span class="math inline">0 = p(\frac{a}{b}) = a_n(\frac{a}{b})^n +
-a_{n - 1}\left(\frac{a^{n - 1}}{b^{n - 1}}\right) + \ldots +
-a_0</span></li>
+<li><span class="math inline">0 = p\left(\frac{a}{b}\right) =
+a_n\left(\frac{a}{b}\right)^n + a_{n - 1}\left(\frac{a^{n - 1}}{b^{n -
+1}}\right) + \ldots + a_0</span></li>
 <li>moltiplicando entrambe i membri dell’equazione per <span
 class="math inline">b^n</span> si ottiene <span class="math inline">0 =
 a_na^n + a_{n -1}a^{n - 1}b + \ldots + a_1a^1b^{n -1 } +
 a_0b^n</span></li>
 <li>allora <span class="math inline">a_na^n = - a_{n - 1} a^{n - 1}b -
-\ldots - a_1a^1 b^{n - 1}- a_0b^n</span></li>
-<li>poiché ogni sottraendo del secondo membro di tale equazione è un
-multiplo di <span class="math inline">b</span>, mettendo in evidenza
-<span class="math inline">b</span> si ottiene che <span
-class="math inline">b \mid a_na^n</span></li>
+\ldots - a_1a^1 b^{n - 1}- a_0b^n \implies b \mid a_na^n</span> poiché
+ogni termine del secondo membro dell’equazione contiene una potenza di
+<span class="math inline">b</span></li>
 <li><span class="math inline">\textrm{MCD}(a, b) = 1 \implies
 \textrm{MCD}(a^n, b) = 1</span>, ma allora <span class="math inline">b
-\mid a_na^n \implies b \mid a_n</span></li>
+\mid a_na^n \implies b \mid a_n</span> ⚠️ <strong>perché</strong></li>
 <li>è possibile ripetere il ragionamento analogo per <span
 class="math inline">a_0b^n</span>, e dall’equazione ottenuta si noterà
 che <span class="math inline">a \mid a_0b^n</span>, che per ragionamento
 analogo all’osservazione precedente deve necessariamente implicare che
 <span class="math inline">a \mid a_0</span></li>
 </ul></li>
-</ul>
-<a href="#oss-15"><h2 id="oss-15">Oss</h2></a>
-<ul>
-<li>⚠️ <strong>MANCA UN TEOREMA ENORME</strong></li>
 </ul>
 </body>
 </html>

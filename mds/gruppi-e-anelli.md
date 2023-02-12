@@ -43,7 +43,7 @@
 - **Th**
   - $e \in G$ elemento neutro è unico in $G$
 - **Dim**
-  - per assurdo, ipotizzzando $\exists e_1, e_2 \in G \mid e_1 \neq e_2$ elementi neutri, allora $\left.\begin{array}{l}m\left(x, e_{1}\right)=m\left(e_{1}, x\right)=x \\ m\left(x, e_{2}\right)=m\left(e_{2}, x\right)=x\end{array}\right\} \implies m\left(e_{1}, x\right)=m\left(e_{2}, x\right) \implies e_1=e_2$ necessariamente, quindi è unico
+  - per assurdo, ipotizzando $\exists e_1, e_2 \in G \mid e_1 \neq e_2$ elementi neutri, allora $\left.\begin{array}{l}m\left(x, e_{1}\right)=m\left(e_{1}, x\right)=x \\ m\left(x, e_{2}\right)=m\left(e_{2}, x\right)=x\end{array}\right\} \implies m\left(e_{1}, x\right)=m\left(e_{2}, x\right) \implies e_1=e_2$ necessariamente, quindi è unico
 
 ## Oss
 
@@ -365,7 +365,7 @@
 - **Hp**
   - $G$ gruppo
   - $g \in G$
-  - $\exists! d \in \mathbb{N} \mid I(g)=I(d)$
+  - $\exists! d \in I(g)_{\ge 0} \mid I(g)=I(d)$
 - **Th**
   - $d = 0 \implies o(g) = |\mathbb{Z}| = + \infty$
   - $d>0 \implies d = o(g)$, e questo implica che in $I(g)$ sono presenti tutti i multipli di $o(g)$
@@ -379,12 +379,12 @@
     - $f$ biiettiva $\implies o(g) := |H(g)| = |\mathbb{Z}| = + \infty$
   - $d \gt 0$
     - $|H(g)| \le d$, ovvero $g$ ha _al massimo $d$_ potenze
-        - $I(g) = I(d) \land d \in I(d) \implies d \in I(g) \implies g^d = e$
+        - $d \in I(g)_{\ge 0} \implies g^d = e$
         - $d \gt 0 \implies \forall n \in \mathbb{Z} \quad \exists q, r \in \mathbb{Z} \mid n = dq + r \quad 0 \le r \lt d$ per il teorema della divisione euclidea con il resto, dunque $g^n = g^{dq +r}=(g^d)^q \cdot g^r=e^q \cdot g^r =e \cdot g^r = g^r$
         - $0 \le r \lt d \implies$ ci sono al massimo $d$ valori per $g^r$, e poiché $g^r = g^n$, allora $g$ ha al massimo $d$ potenze
     - $|H(g)| \ge d$, ovvero $g$ ha _al minimo_ $d$ potenze
         - $\forall x, y \in \mathbb{Z} \mid 0 \le x, y \lt d \quad g^x = g^y \iff g^x \cdot g^{-y} = e \iff g^{x - y} = e \iff x- y \in I(g) = I(d) \iff \exists k \in \mathbb{Z} \mid x - y = dk$
-        - $0 \le x, y \lt d \implies -d \lt x - y \lt d \implies x - y = 0 \iff x = y$, allora $f:[0,d] \rightarrow H(g)$ è biiettiva, e dunque $g$ ha almeno $d$ potenze
+        - $0 \le x, y \lt d \implies -d \lt x - y \lt d \implies x - y = 0 \iff x = y$, allora $f:[0,d) \rightarrow H(g)$ è iniettiva, e dunque $g$ ha almeno $d$ potenze
     - di conseguenza, si ottiene che $H(g) = \{g^0, g^1, \ldots, g^{d-1}\} \implies |H(g)|=d$
 
 ## Oss

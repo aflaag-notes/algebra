@@ -210,13 +210,9 @@
 - **Th**
     - $\displaystyle \prod_{0 \lt a \lt p} (x - a) \equiv x^{p - 1} - 1 \ (\bmod \ p)$
 - **Dim**
-    - per il piccolo teorema di Fermat $a^p \equiv a \iff a^{p - 1} \equiv 1  \iff a^{p - 1} - 1 \equiv 0\ (\bmod \ p)$, che è equivalente a dire che $[a]$ è radice del polinomio $x^{p -1 } - [1] \in \mathbb{Z}_p[x]$
-    - per dimostrazione precedente $\forall 0 \lt a \lt p \quad [a]^{p - 1} - 1 = [0] \implies x - [a] \mid x^{p -1} - [1]$, ovvero $\displaystyle \prod_{0 \lt a \lt p} (x - [a]) \mid x^{p - 1} - [1] \implies \exists c \in \mathbb{N} \mid x^{p - 1} - [1] = c \cdot \displaystyle \prod_{0 \lt a \lt p} (x - [a])$
-    - poiché $x^{p- 1}-[1]$ e $\displaystyle \prod_{0 \lt a \lt p} (x - [a])$ sono due polinomi il cui coefficiente direttore è $1$, allora necessariamente $c = 1$, per cui segue la tesi
-
-## Cor
-
-- ⚠️ **NON HO CAPITO UN CAZZO**
+    - per il piccolo teorema di Fermat $a^p \equiv a \iff a^{p - 1} \equiv 1  \iff a^{p - 1} - 1 \equiv 0\ (\bmod \ p)$, ovvero $[a]$ è radice del polinomio $x^{p -1 } - [1] \in \mathbb{Z}_p[x]$
+    - per dimostrazione precedente $\forall 0 \lt a \lt p \quad [a]^{p - 1} - [1] = [0] \iff (x - [a]) \mid x^{p -1} - [1]$, ovvero $\displaystyle \prod_{0 \lt a \lt p} (x - [a]) \mid x^{p - 1} - [1] \implies \exists c \in \mathbb{Z} \mid x^{p - 1} - [1] = c \cdot \displaystyle \prod_{0 \lt a \lt p} (x - [a])$
+    - poiché $x^{p- 1}-[1]$ e $\displaystyle \prod_{0 \lt a \lt p} (x - [a])$ sono due polinomi il cui coefficiente direttore è $1$, allora necessariamente $c = 1$, dunque si ha che $\displaystyle \prod_{0 \lt a \lt p} (x - a) \equiv x^{p - 1} - 1 \ (\bmod \ p)$
 
 ****
 
