@@ -11,7 +11,7 @@
 > - $x \in \mathbb{K}$ è detto **scalare**
 > - $V$ è detto **spazio vettoriale su $\mathbb{K}$** $\iff$
 >   - $(V, +)$ gruppo abeliano
->   - $\exists 1 \in \mathbb{K} \mid \forall v \in V \quad 1v = v1 = v$
+>   - $\exists 1 \in \mathbb{K} \mid \forall v \in V \quad 1v = v$
 >      - in particolare, deve esistere l'_elemento neutro per il prodotto per scalare_
 >   - $\forall u, v \in V, k \in \mathbb{K} \quad k(u + v) = ku + kv$
 >     - in particolare, deve valere la _proprietà distributiva a destra del prodotto per scalare_
@@ -20,12 +20,6 @@
 >   - $\forall v \in V, k, h \in \mathbb{K} \quad (ab)v = a(bv)$
 >      - in particolare, deve valere la _proprietà associativa del prodotto per scalare_
 > - $x \in V$ è detto **vettore**
-
-- **Spazio di Hilbert**
-
-> - $\mathbb{K}$ campo
-> - $V$ spazio vettoriale su $\mathbb{K}$
-> - $V$ spazio di Hilbert $\iff$ in $V$ è ben definito il prodotto scalare
 
 ## Ex
 
@@ -96,42 +90,34 @@
 > - $n \in \mathbb{N}$
 > - $\mathbb{K}$ campo
 > - $V$ spazio vettoriale su $\mathbb{K}$
-> - $v_1, \ldots, v_n \in V$
+> - $v_1, \ldots, v_n \in V - \{0_V\}$
 > - $v_1, \ldots, v_n$ sono detti **linearmente indipendenti** $\iff$
 >    - $\lambda_1 v_1 + \ldots + \lambda_n v_n = 0_V \iff \lambda_1 = \ldots = \lambda_n = 0_{\mathbb{K}}$
 >    - equivalentemente, nessuno degli $v_1, \ldots, v_n$ è combinazione lineare degli altri
+>    - si noti che il secondo verso dell'implicazione è sempre verificato
 
 - **Base di uno spazio vettoriale**
 
 > - $n \in \mathbb{N}$
 > - $\mathbb{K}$ campo
 > - $V$ spazio vettoriale su $\mathbb{K}$
-> - $v_1, \ldots, v_n \in V$
+> - $v_1, \ldots, v_n \in V - \{0_V\}$
 > - $v_1, \ldots, v_n$ costituiscono una **base di $V$** $\iff v_1, \ldots, v_n$ linearmente indipendenti e generatori di $V$
 >   - in particolare, $n$ è detta _cardinalità della base $v_1, \ldots, v_n$_
-
-- **Dimensione di uno spazio vettoriale**
-
-> - $\mathbb{K}$ campo
-> - $V$ spazio vettoriale su $\mathbb{K}$
-> - $v_1, \ldots, v_n$ base di $V$
-> - $\dim(V) = n$ è detta **dimensione di $V$**
->   - in particolare, coincide con la cardinalità delle basi di $V$
 
 ## Ex
 
 - **Hp**
     - $n \in \mathbb{N}$
     - $\mathbb{K}$ campo
-    - $e_1 := (1, 0, \ldots, 0), \ldots, e_n :=(0, \ldots, 0, 1) \in \mathbb{K}^n$
+    - $\left \{ \begin{array}{c} e_1 := (1, 0, \ldots, 0) \\ \vdots \\e_n :=(0, \ldots, 0, 1) \end{array} \right. \in \mathbb{K}^n$
 - **Th**
     - $e_1, \ldots, e_n$ sono una base di $\mathbb{K}^n$, ed è detta _base canonica_
 - **Dim**
     - $e_1, \ldots, e_n$ sono generatori di $\mathbb{K}^n$
         - $\forall v \in \mathbb{K}^n \quad \exists t_1, \ldots, t_n \in \mathbb{K} \mid v = (t_1, \ldots, t_n) \implies v = (t_1, 0, \ldots, 0) + \ldots + (0, \ldots, 0, t_n) = t_1 \cdot e_1 + \ldots + t_n \cdot e_n \implies v \in \textrm{span}(e_1, \ldots, e_n)$
     - $e_1, \ldots, e_n$ sono linearmente indipententi
-        - $\forall \lambda_1, \ldots, \lambda_n \in \mathbb{K} \quad \lambda_1e_1=(\lambda_1, 0, \ldots, 0), \ldots, \lambda_n e_n = (0, \ldots, 0, \lambda_n) \implies \lambda_1 e_1 + \ldots + \lambda_n e_n = (\lambda_1, \ldots , \lambda_n)$, e questo vettore è pari al vettore nullo $0_{\mathbb{K}^n}$ solamente quando $\lambda _1 = \ldots = \lambda_n = 0_{\mathbb{K}}$
-        - $\forall v_1, \ldots, v_n \in \mathbb{K}^n \quad \lambda _1 = \ldots = \lambda_n = 0_{\mathbb{K}} \implies \lambda_1v_1 + \ldots + \lambda_nv_n = 0_{\mathbb{K}^n}$, e in particolare questa osservazione vale per $e_1, \ldots, e_n$
+        - $\forall \lambda_1, \ldots, \lambda_n \in \mathbb{K} \quad \left \{ \begin{array}{c} \lambda_1e_1=(\lambda_1, 0, \ldots, 0) \\ \vdots \\\lambda_n e_n = (0, \ldots, 0, \lambda_n) \end{array} \right. \implies \lambda_1 e_1 + \ldots + \lambda_n e_n = (\lambda_1, \ldots , \lambda_n)$, e questo vettore è pari al vettore nullo $0_{\mathbb{K}^n}$ solamente quando $\lambda _1 = \ldots = \lambda_n = 0_{\mathbb{K}}$
 
 ## Lem
 
@@ -139,27 +125,29 @@
     - $n \in \mathbb{N}$
     - $\mathbb{K}$ campo
     - $V$ spazio vettoriale su $\mathbb{K}$
-    - $v_1, \ldots, v_n \in V$
+    - $v_1, \ldots, v_n \in V - \{0_V\}$
 - **Th**
     - $v_1, \ldots, v_n$ linearmente indipendenti $\iff v_1, \ldots, v_{n - 1}$ linearmente indipendenti $\land v_n \notin \textrm{span}(v_1, \ldots, v_{n - 1})$
 - **Dim**
     - _prima implicazione_
-        - è stata omessa dal professore, se stai leggendo questa frase sappi che hai dei bei piedi
+        - _omessa dal professore_
     - _seconda implicazione_
-        - ⚠️ **TODO**
+        - per assurdo $\exists \lambda_n \in \mathbb{K} - \{0\}, \lambda_1, \ldots, \lambda_{n - 1} \in \mathbb{K} \mid \lambda_1 v_1 + \ldots + \lambda_n v_n = 0_V \iff -\lambda_n v_n = \lambda_1 v_1 + \ldots + \lambda_{n-1} v_{n-1} \iff v_n = (-\lambda_n^{-1})\lambda_1 v_1 + \ldots + (-\lambda_n^{-1})\lambda_{n - 1}v_{n - 1} \iff v_n \in \textrm{span}(v_1, \ldots, v_{n - 1}) \ \bot \implies \lambda_n = 0_V$
+        - $v_1, \ldots, v_{n - 1}$ linearmente indipendenti $\implies \exists \lambda_1, \ldots, \lambda_{n-1} \mid \lambda_1 v_1 + \ldots + \lambda_{n - 1} v_{n - 1} = 0_V \implies \lambda_1 = \ldots = \lambda_{n - 1} = 0_V = \lambda_n \implies v_1, \ldots, v_n$ linearmente indipendenti
+
 
 ## Oss
 
 - **Hp**
-    - $m, k \in \mathbb{N}$
+    - $n, k \in \mathbb{N}$
     - $\mathbb{K}$ campo
     - $V$ spazio vettoriale su $\mathbb{K}$
-    - $w_1, \ldots, w_m \in V$
-    - $v_1, \ldots, v_k \in \textrm{span}(w_1, \ldots, w_m) \mid v_1, \ldots, v_k$ linearmente indipendenti
+    - $w_1, \ldots, w_n \in V$
+    - $v_1, \ldots, v_k \in \textrm{span}(w_1, \ldots, w_n) \mid v_1, \ldots, v_k$ linearmente indipendenti
 - **Th**
-    - $k \le m$
+    - $k \le n$
 - **Dim**
-    - ⚠️ **TODO, CONTROLLA LE IPOTESI**
+    - ⚠️ **todo**
 
 ## Cor
 
@@ -180,41 +168,13 @@
 
 ## Def
 
-- **Base ortogonale di uno spazio di Hilbert**
+- **Dimensione di uno spazio vettoriale**
 
-> - $n \in \mathbb{N}$
 > - $\mathbb{K}$ campo
-> - $V$ spazio di Hilbert su $\mathbb{K}$
+> - $V$ spazio vettoriale su $\mathbb{K}$
 > - $v_1, \ldots, v_n$ base di $V$
-> - $v_1, \ldots, v_n$ **base ortogonale di $V$** $\iff \forall i, j \in [1, n], i \neq j \quad v_i \cdot v_j = 0$
-
-- **Base ortonormale di uno spazio di Hilbert**
-
-> - $n \in \mathbb{N}$
-> - $\mathbb{K}$ campo
-> - $V$ spazio di Hilbert su $\mathbb{K}$
-> - $v_1, \ldots, v_n$ base ortogonale di $V$
-> - $v_1, \ldots, v_n$ **base ortonormale** di $V \iff \forall i, j \in [1, n] \quad v_i \cdot v_j = \left\{\begin{array}{cc} 1 & i = j \\ 0 & i \neq j \end{array}\right.$
->   - in particolare, è possibile ottenere $v_1, \ldots, v_n$ a partire da $e_1, \ldots, e_n$ tramite rotazioni e riflessioni
-
-## Oss
-
-- **Hp**
-    - $n \in \mathbb{N}$
-    - $\mathbb{K}$ campo
-    - $v \in \mathbb{K}^n$
-    - $v_1, \ldots, v_k$ base ortonormale di $\mathbb{K}^n$
-- **Th**
-    - $v = (v \cdot v_1)v_1 + \ldots + (v \cdot v_n)v_n$
-
-## Oss
-
-- **Hp**
-    - $n \in \mathbb{N}$
-    - $\mathbb{K}$ campo
-    - $A \in O(n)$
-- **Th**
-    - $A_1, \ldots, A_n$ e $A^1, \ldots, A^n$ basi ortonormali di $\mathbb{K}^n$
+> - $\dim(V) = n$ è detta **dimensione di $V$**
+>   - in particolare, coincide con la cardinalità delle basi di $V$, che per dimostrazione precedente è unica
 
 ## Oss
 
@@ -226,7 +186,14 @@
 - **Th**
     - $v_1, \ldots, v_n$ base di $V \iff \forall v \in V \quad \exists ! \lambda_1, \ldots, \lambda_n \in \mathbb{K} \mid v = \lambda_1 v_1 + \ldots + \lambda_n v_n$
 - **Dim**
-    - ⚠️ **TODO**
+    - _prima implicazione_
+        - _esistenza_
+            - $v_1, \ldots, v_n$ base di $V$, allora per definizione $\forall v \in V \quad \exists \lambda_1, \ldots, \lambda_n \in \mathbb{K} \mid v = \lambda_1v_1 + \ldots + \lambda_n v_n$
+        - _unicità_
+            - per assurdo $\forall v \in V \quad \exists \lambda_1, \ldots, \lambda_n , \mu_1, \ldots, \mu_n \in \mathbb{K} \mid \lambda_1 v_1 + \ldots + \lambda_n v_n = v = \mu_1 v_1 + \ldots + \mu_n v_n \iff \lambda_1 v_1 + \ldots + \lambda_n v_n + (-\mu_1 ) v_1 + \ldots + (-\mu_n) v_n = 0_V \iff (\lambda_1 - \mu_1) v_1 + \ldots + (\lambda_n - v_n) v_n = 0_V$
+            - $v_1, \ldots, v_n$ base di $V \implies v_1, \ldots, v_n$ linearmente indipendenti, allora $(\lambda_1 - \mu_1) v_1 + \ldots + (\lambda_n - \mu_n) v_n = 0_V \implies \lambda_1 - \mu_1 = \ldots = \lambda_n - \mu_n = 0_{\mathbb{K}} \iff \left \{ \begin{array}{c} \lambda_1 = \mu_1 \\ \vdots \\ \lambda_n = \mu_n \end{array} \right.$
+    - _seconda implicazione_
+        - ⚠️ **?**
 
 ## Oss
 
