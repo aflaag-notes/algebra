@@ -335,7 +335,8 @@ A</span></li>
 <li><span class="math inline">\forall a, b, c \in A \quad a \cdot (b +
 c) = a \cdot b + a \cdot c</span>
 <ul>
-<li>in particolare, deve valere la <em>proprietà distributiva</em></li>
+<li>in particolare, deve valere la <em>proprietà distributiva a
+sinistra</em></li>
 </ul></li>
 </ul></li>
 </ul>
@@ -383,15 +384,17 @@ class="math inline">\cdot</span></li>
 <li><span class="math inline">+: A \times A \rightarrow A</span></li>
 <li><span class="math inline">\cdot: A \times A \rightarrow
 A</span></li>
-<li><span class="math inline">(A, +, \cdot)</span> <strong>semianello
-commutativo</strong> <span class="math inline">\iff</span>
+<li><span class="math inline">(A, +, \cdot)</span> è detto
+<strong>semianello commutativo</strong> <span
+class="math inline">\iff</span>
 <ul>
 <li><span class="math inline">(A, +)</span> monide commutativo</li>
 <li><span class="math inline">(A, \cdot)</span> monoide commutativo</li>
 <li><span class="math inline">\forall a, b, c \in A \quad a\cdot (b + c)
 = a \cdot b + a \cdot c</span>
 <ul>
-<li>in particolare, deve valere la <em>proprietà distributiva</em></li>
+<li>in particolare, deve valere la <em>proprietà distributiva a
+sinistra</em></li>
 </ul></li>
 </ul></li>
 </ul>
@@ -565,6 +568,7 @@ irriducibile</li>
 <blockquote>
 <ul>
 <li><span class="math inline">G</span> insieme</li>
+<li><span class="math inline">H \subseteq G</span></li>
 <li><span class="math inline">\cdot: G \times G \rightarrow
 G</span></li>
 <li><span class="math inline">(G, \cdot)</span> gruppo</li>
@@ -605,7 +609,8 @@ commutativo</li>
 </ul>
 <blockquote>
 <ul>
-<li><span class="math inline">A, B</span> insiemi</li>
+<li><span class="math inline">A</span> insieme</li>
+<li><span class="math inline">B \subseteq A</span></li>
 <li><span class="math inline">+: A \times A \rightarrow A</span></li>
 <li><span class="math inline">\cdot: A \times A \rightarrow
 A</span></li>
@@ -629,7 +634,6 @@ b_2 \mid b_1, b_2 \in B\}</span></li>
 </ul>
 <blockquote>
 <ul>
-<li><span class="math inline">G, H</span> insiemi</li>
 <li><span class="math inline">(G, \cdot)</span> gruppo</li>
 <li><span class="math inline">(H, \cdot) \leqslant (G,
 \cdot)</span></li>
@@ -2850,33 +2854,45 @@ b) = 1</span></li>
 </ul>
 <blockquote>
 <ul>
+<li><span class="math inline">V</span> insieme</li>
+<li><span class="math inline">+: V \times V \rightarrow V</span></li>
+<li><span class="math inline">\cdot : \mathbb{K} \times V \rightarrow
+V</span></li>
 <li><span class="math inline">\mathbb{K}</span> campo</li>
 <li><span class="math inline">x \in \mathbb{K}</span> è detto
 <strong>scalare</strong></li>
-<li><span class="math inline">V</span> è <strong>spazio vettoriale su
-<span class="math inline">\mathbb{K}</span></strong> <span
-class="math inline">\iff (V, +)</span> gruppo abeliano, è ben definita
-un’operazione di <span class="math inline">\cdot: K \times V \rightarrow
-V</span> che ammetta elemento neutro, inoltre <span
-class="math inline">\forall s, t \in \mathbb{K}, v \in V \quad s\cdot (t
-\cdot v) = (s \cdot t) \cdot v, (s + t) \cdot v = s\cdot v + t \cdot
-v</span> e infine <span class="math inline">\forall s \in \mathbb{K}, v,
-w \in V \quad s \cdot (v + w) = s \cdot v + s \cdot w</span></li>
+<li><span class="math inline">V</span> è detto <strong>spazio vettoriale
+su <span class="math inline">\mathbb{K}</span></strong> <span
+class="math inline">\iff</span>
+<ul>
+<li><span class="math inline">(V, +)</span> gruppo abeliano</li>
+<li><span class="math inline">\exists 1 \in \mathbb{K} \mid \forall v
+\in V \quad 1v = v</span>
+<ul>
+<li>in particolare, deve esistere l’<em>elemento neutro per il prodotto
+per scalare</em></li>
+</ul></li>
+<li><span class="math inline">\forall u, v \in V, k \in \mathbb{K} \quad
+k(u + v) = ku + kv</span>
+<ul>
+<li>in particolare, deve valere la <em>proprietà distributiva a destra
+del prodotto per scalare</em></li>
+</ul></li>
+<li><span class="math inline">\forall v \in V, k, h \in \mathbb{K} \quad
+(k + h)v = kv + hv</span>
+<ul>
+<li>in particolare, deve valere la <em>proprietà distributiva a sinistra
+del prodotto per scalare</em></li>
+</ul></li>
+<li><span class="math inline">\forall v \in V, k, h \in \mathbb{K} \quad
+(ab)v = a(bv)</span>
+<ul>
+<li>in particolare, deve valere la <em>proprietà associativa del
+prodotto per scalare</em></li>
+</ul></li>
+</ul></li>
 <li><span class="math inline">x \in V</span> è detto
 <strong>vettore</strong></li>
-</ul>
-</blockquote>
-<ul>
-<li><strong>Spazio di Hilbert</strong></li>
-</ul>
-<blockquote>
-<ul>
-<li><span class="math inline">\mathbb{K}</span> campo</li>
-<li><span class="math inline">V</span> spazio vettoriale su <span
-class="math inline">\mathbb{K}</span></li>
-<li><span class="math inline">V</span> spazio di Hilbert <span
-class="math inline">\iff</span> in <span class="math inline">V</span> è
-ben definito il prodotto scalare</li>
 </ul>
 </blockquote>
 <a href="#teorema-117"><h2 id="teorema-117">Teorema 117</h2></a>
@@ -2901,11 +2917,15 @@ ben definito il prodotto scalare</li>
 <li><span class="math inline">\mathbb{K}</span> campo</li>
 <li><span class="math inline">V</span> spazio vettoriale su <span
 class="math inline">\mathbb{K}</span></li>
-<li><span class="math inline">W</span> è <strong>sottospazio vettoriale
-di <span class="math inline">V</span></strong> <span
-class="math inline">\iff (W, +) \subset (V, +)</span> sottogruppo, e
-<span class="math inline">\forall w \in W, \lambda \in \mathbb{K} \quad
-\lambda \cdot w \in W</span></li>
+<li><span class="math inline">W \subseteq V</span></li>
+<li><span class="math inline">W</span> è detto <strong>sottospazio
+vettoriale di <span class="math inline">V</span></strong> <span
+class="math inline">\iff</span>
+<ul>
+<li><span class="math inline">(W, +) \leqslant (V, +)</span></li>
+<li><span class="math inline">\forall w \in W, \lambda \in \mathbb{K}
+\quad \lambda \cdot w \in W</span></li>
+</ul></li>
 </ul>
 </blockquote>
 <a href="#definizione-40"><h2 id="definizione-40">Definizione 40</h2></a>
@@ -2921,8 +2941,13 @@ class="math inline">\mathbb{K}</span></li>
 <li><span class="math inline">v_1, \ldots, v_n \in V</span></li>
 <li><span class="math inline">\textrm{span}(v_1, \ldots, v_n) :=
 \{\lambda_1 v_1 + \ldots + \lambda_n v_n \mid \lambda_1, \ldots ,
-\lambda_n \in \mathbb{K}\}</span>, ovvero l’insieme delle combinazioni
-lineari degli <span class="math inline">v_1, \ldots, v_n</span></li>
+\lambda_n \in \mathbb{K}\}</span> è detto <strong><span
+class="math inline">\textrm{span}</span> degli <span
+class="math inline">v_1, \ldots v_n</span></strong>
+<ul>
+<li>in particolare, costituisce l’insieme delle <em>combinazioni lineari
+degli <span class="math inline">v_1, \ldots, v_n</span></em></li>
+</ul></li>
 </ul>
 </blockquote>
 <a href="#teorema-118"><h2 id="teorema-118">Teorema 118</h2></a>
@@ -2943,7 +2968,7 @@ un sottospazio vettoriale di <span class="math inline">V</span></li>
 </ul>
 <a href="#definizione-41"><h2 id="definizione-41">Definizione 41</h2></a>
 <ul>
-<li><strong>Vettori generatori</strong></li>
+<li><strong>Generatori di uno spazio vettoriale</strong></li>
 </ul>
 <blockquote>
 <ul>
@@ -2952,13 +2977,13 @@ un sottospazio vettoriale di <span class="math inline">V</span></li>
 <li><span class="math inline">V</span> spazio vettoriale su <span
 class="math inline">\mathbb{K}</span></li>
 <li><span class="math inline">v_1, \ldots, v_n \in V</span></li>
-<li><span class="math inline">v_1, \ldots, v_n</span> sono
+<li><span class="math inline">v_1, \ldots, v_n</span> sono detti
 <strong>generatori di <span class="math inline">V</span></strong> <span
 class="math inline">\iff \textrm{span}(v_1, \ldots, v_n) = V</span>
 <ul>
-<li>equivalentemente, ogni altro vettore in <span
-class="math inline">V</span> è una combinazione lineare degli <span
-class="math inline">v_1, \ldots, v_n</span></li>
+<li>equivalentemente, ogni vettore in <span class="math inline">V</span>
+è una combinazione lineare degli <span class="math inline">v_1, \ldots,
+v_n</span></li>
 </ul></li>
 </ul>
 </blockquote>
@@ -2971,14 +2996,18 @@ class="math inline">v_1, \ldots, v_n</span></li>
 <li><span class="math inline">\mathbb{K}</span> campo</li>
 <li><span class="math inline">V</span> spazio vettoriale su <span
 class="math inline">\mathbb{K}</span></li>
-<li><span class="math inline">v_1, \ldots, v_n \in V</span></li>
-<li><span class="math inline">v_1, \ldots, v_n</span> sono
-<strong>linearmente indipendenti</strong> se e solo se <span
-class="math inline">\lambda_1 v_1 + \ldots + \lambda_n v_n = 0_V \iff
-\lambda_1 = \ldots = \lambda_n = 0_{\mathbb{K}}</span>
+<li><span class="math inline">v_1, \ldots, v_n \in V -
+\{0_V\}</span></li>
+<li><span class="math inline">v_1, \ldots, v_n</span> sono detti
+<strong>linearmente indipendenti</strong> <span
+class="math inline">\iff</span>
 <ul>
+<li><span class="math inline">\lambda_1 v_1 + \ldots + \lambda_n v_n =
+0_V \iff \lambda_1 = \ldots = \lambda_n = 0_{\mathbb{K}}</span></li>
 <li>equivalentemente, nessuno degli <span class="math inline">v_1,
 \ldots, v_n</span> è combinazione lineare degli altri</li>
+<li>si noti che il secondo verso dell’implicazione è sempre
+verificato</li>
 </ul></li>
 </ul>
 </blockquote>
@@ -2991,14 +3020,17 @@ class="math inline">\lambda_1 v_1 + \ldots + \lambda_n v_n = 0_V \iff
 <li><span class="math inline">\mathbb{K}</span> campo</li>
 <li><span class="math inline">V</span> spazio vettoriale su <span
 class="math inline">\mathbb{K}</span></li>
-<li><span class="math inline">v_1, \ldots, v_n \in V</span></li>
-<li><span class="math inline">v_1, \ldots, v_n</span> sono una
+<li><span class="math inline">v_1, \ldots, v_n \in V -
+\{0_V\}</span></li>
+<li><span class="math inline">v_1, \ldots, v_n</span> costituiscono una
 <strong>base di <span class="math inline">V</span></strong> <span
-class="math inline">\iff</span> <span class="math inline">v_1, \ldots,
-v_n</span> sono generatori di <span class="math inline">V</span> e
-linearmente indipendenti</li>
-<li><span class="math inline">n</span> è detta <strong>cardinalità della
-base di <span class="math inline">V</span></strong></li>
+class="math inline">\iff v_1, \ldots, v_n</span> linearmente
+indipendenti e generatori di <span class="math inline">V</span>
+<ul>
+<li>in particolare, <span class="math inline">n</span> è detta
+<em>cardinalità della base <span class="math inline">v_1, \ldots,
+v_n</span></em></li>
+</ul></li>
 </ul>
 </blockquote>
 <a href="#teorema-119"><h2 id="teorema-119">Teorema 119</h2></a>
@@ -3007,8 +3039,9 @@ base di <span class="math inline">V</span></strong></li>
 <ul>
 <li><span class="math inline">n \in \mathbb{N}</span></li>
 <li><span class="math inline">\mathbb{K}</span> campo</li>
-<li><span class="math inline">e_1 := (1, 0, \ldots, 0), \ldots, e_n
-:=(0, \ldots, 0, 1) \in \mathbb{K}^n</span></li>
+<li><span class="math inline">\left \{ \begin{array}{c} e_1 := (1, 0,
+\ldots, 0) \\ \vdots \\e_n :=(0, \ldots, 0, 1) \end{array} \right. \in
+\mathbb{K}^n</span></li>
 </ul></li>
 <li><strong>Th</strong>
 <ul>
@@ -3025,7 +3058,8 @@ canonica</em></li>
 <li><span class="math inline">\mathbb{K}</span> campo</li>
 <li><span class="math inline">V</span> spazio vettoriale su <span
 class="math inline">\mathbb{K}</span></li>
-<li><span class="math inline">v_1, \ldots, v_n \in V</span></li>
+<li><span class="math inline">v_1, \ldots, v_n \in V -
+\{0_V\}</span></li>
 </ul></li>
 <li><strong>Th</strong>
 <ul>
@@ -3039,17 +3073,17 @@ indipendenti <span class="math inline">\iff v_1, \ldots, v_{n -
 <ul>
 <li><strong>Hp</strong>
 <ul>
-<li><span class="math inline">m, k \in \mathbb{N}</span></li>
+<li><span class="math inline">n, k \in \mathbb{N}</span></li>
 <li><span class="math inline">\mathbb{K}</span> campo</li>
 <li><span class="math inline">V</span> spazio vettoriale su <span
 class="math inline">\mathbb{K}</span></li>
-<li><span class="math inline">w_1, \ldots, w_m \in V</span></li>
+<li><span class="math inline">w_1, \ldots, w_n \in V</span></li>
 <li><span class="math inline">v_1, \ldots, v_k \in \textrm{span}(w_1,
-\ldots, w_m) \mid v_1, \ldots, v_k</span> linearmente indipendenti</li>
+\ldots, w_n) \mid v_1, \ldots, v_k</span> linearmente indipendenti</li>
 </ul></li>
 <li><strong>Th</strong>
 <ul>
-<li><span class="math inline">k \le m</span></li>
+<li><span class="math inline">k \le n</span></li>
 </ul></li>
 </ul>
 <a href="#teorema-122"><h2 id="teorema-122">Teorema 122</h2></a>
@@ -3073,77 +3107,6 @@ cardinalità delle basi di uno spazio vettoriale è unica</li>
 </ul>
 <a href="#definizione-42"><h2 id="definizione-42">Definizione 42</h2></a>
 <ul>
-<li><strong>Base ortogonale di uno spazio di Hilbert</strong></li>
-</ul>
-<blockquote>
-<ul>
-<li><span class="math inline">n \in \mathbb{N}</span></li>
-<li><span class="math inline">\mathbb{K}</span> campo</li>
-<li><span class="math inline">V</span> spazio di Hilbert su <span
-class="math inline">\mathbb{K}</span></li>
-<li><span class="math inline">v_1, \ldots, v_n</span> base di <span
-class="math inline">V</span></li>
-<li><span class="math inline">v_1, \ldots, v_n</span> <strong>base
-ortogonale di <span class="math inline">V</span></strong> <span
-class="math inline">\iff \forall i, j \in [1, n], i \neq j \quad v_i
-\cdot v_j = 0</span></li>
-</ul>
-</blockquote>
-<ul>
-<li><strong>Base ortonormale di uno spazio di Hilbert</strong></li>
-</ul>
-<blockquote>
-<ul>
-<li><span class="math inline">n \in \mathbb{N}</span></li>
-<li><span class="math inline">\mathbb{K}</span> campo</li>
-<li><span class="math inline">V</span> spazio di Hilbert su <span
-class="math inline">\mathbb{K}</span></li>
-<li><span class="math inline">v_1, \ldots, v_n</span> base ortogonale di
-<span class="math inline">V</span></li>
-<li><span class="math inline">v_1, \ldots, v_n</span> <strong>base
-ortonormale</strong> di <span class="math inline">V \iff \forall i, j
-\in [1, n] \quad v_i \cdot v_j = \left\{\begin{array}{cc} 1 &amp; i = j
-\\ 0 &amp; i \neq j \end{array}\right.</span>
-<ul>
-<li>in particolare, è possibile ottenere <span class="math inline">v_1,
-\ldots, v_n</span> a partire da <span class="math inline">e_1, \ldots,
-e_n</span> tramite rotazioni e riflessioni</li>
-</ul></li>
-</ul>
-</blockquote>
-<a href="#teorema-123"><h2 id="teorema-123">Teorema 123</h2></a>
-<ul>
-<li><strong>Hp</strong>
-<ul>
-<li><span class="math inline">n \in \mathbb{N}</span></li>
-<li><span class="math inline">\mathbb{K}</span> campo</li>
-<li><span class="math inline">v \in \mathbb{K}^n</span></li>
-<li><span class="math inline">v_1, \ldots, v_k</span> base ortonormale
-di <span class="math inline">\mathbb{K}^n</span></li>
-</ul></li>
-<li><strong>Th</strong>
-<ul>
-<li><span class="math inline">v = (v \cdot v_1)v_1 + \ldots + (v \cdot
-v_n)v_n</span></li>
-</ul></li>
-</ul>
-<a href="#teorema-124"><h2 id="teorema-124">Teorema 124</h2></a>
-<ul>
-<li><strong>Hp</strong>
-<ul>
-<li><span class="math inline">n \in \mathbb{N}</span></li>
-<li><span class="math inline">\mathbb{K}</span> campo</li>
-<li><span class="math inline">A \in O(n)</span></li>
-</ul></li>
-<li><strong>Th</strong>
-<ul>
-<li><span class="math inline">A_1, \ldots, A_n</span> e <span
-class="math inline">A^1, \ldots, A^n</span> basi ortonormali di <span
-class="math inline">\mathbb{K}^n</span></li>
-</ul></li>
-</ul>
-<a href="#definizione-43"><h2 id="definizione-43">Definizione 43</h2></a>
-<ul>
 <li><strong>Dimensione di uno spazio vettoriale</strong></li>
 </ul>
 <blockquote>
@@ -3151,12 +3114,18 @@ class="math inline">\mathbb{K}^n</span></li>
 <li><span class="math inline">\mathbb{K}</span> campo</li>
 <li><span class="math inline">V</span> spazio vettoriale su <span
 class="math inline">\mathbb{K}</span></li>
-<li><span class="math inline">\dim(V)</span> è detta <strong>dimensione
-di <span class="math inline">V</span></strong>, ed è la cardinalità
-delle basi di <span class="math inline">V</span></li>
+<li><span class="math inline">v_1, \ldots, v_n</span> base di <span
+class="math inline">V</span></li>
+<li><span class="math inline">\dim(V) = n</span> è detta
+<strong>dimensione di <span class="math inline">V</span></strong>
+<ul>
+<li>in particolare, coincide con la cardinalità delle basi di <span
+class="math inline">V</span>, che per dimostrazione precedente è
+unica</li>
+</ul></li>
 </ul>
 </blockquote>
-<a href="#teorema-125"><h2 id="teorema-125">Teorema 125</h2></a>
+<a href="#teorema-123"><h2 id="teorema-123">Teorema 123</h2></a>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -3174,7 +3143,7 @@ class="math inline">V \iff \forall v \in V \quad \exists ! \lambda_1,
 \lambda_n v_n</span></li>
 </ul></li>
 </ul>
-<a href="#teorema-126"><h2 id="teorema-126">Teorema 126</h2></a>
+<a href="#teorema-124"><h2 id="teorema-124">Teorema 124</h2></a>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -3193,7 +3162,7 @@ w_1, \ldots, w_n</span> è una base di <span
 class="math inline">W</span></li>
 </ul></li>
 </ul>
-<a href="#teorema-127"><h2 id="teorema-127">Teorema 127</h2></a>
+<a href="#teorema-125"><h2 id="teorema-125">Teorema 125</h2></a>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -3212,7 +3181,7 @@ w_{i_1}, \ldots, w_{i_n}</span> è una base di <span
 class="math inline">W</span></li>
 </ul></li>
 </ul>
-<a href="#teorema-128"><h2 id="teorema-128">Teorema 128</h2></a>
+<a href="#teorema-126"><h2 id="teorema-126">Teorema 126</h2></a>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -3229,7 +3198,7 @@ indipendenti <span class="math inline">\iff w_1, \ldots, w_n</span>
 generatori di <span class="math inline">W</span></li>
 </ul></li>
 </ul>
-<a href="#teorema-129"><h2 id="teorema-129">Teorema 129</h2></a>
+<a href="#teorema-127"><h2 id="teorema-127">Teorema 127</h2></a>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -3245,7 +3214,7 @@ vettoriali</li>
 \cap V)</span></li>
 </ul></li>
 </ul>
-<a href="#teorema-130"><h2 id="teorema-130">Teorema 130</h2></a>
+<a href="#teorema-128"><h2 id="teorema-128">Teorema 128</h2></a>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -3260,7 +3229,7 @@ vettoriale</li>
 <li><span class="math inline">V/W</span> sottospazio vettoriale</li>
 </ul></li>
 </ul>
-<a href="#teorema-131"><h2 id="teorema-131">Teorema 131</h2></a>
+<a href="#teorema-129"><h2 id="teorema-129">Teorema 129</h2></a>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -3275,7 +3244,7 @@ vettoriale</li>
 <li><span class="math inline">\dim(V/W) = \dim(V) - \dim(W)</span></li>
 </ul></li>
 </ul>
-<a href="#teorema-132"><h2 id="teorema-132">Teorema 132</h2></a>
+<a href="#teorema-130"><h2 id="teorema-130">Teorema 130</h2></a>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -3292,7 +3261,7 @@ su <span class="math inline">\mathbb{K}</span></li>
 </ul>
 <hr />
 <a href="#applicazioni-lineari"><h1 id="applicazioni-lineari">Applicazioni lineari</h1></a>
-<a href="#definizione-44"><h2 id="definizione-44">Definizione 44</h2></a>
+<a href="#definizione-43"><h2 id="definizione-43">Definizione 43</h2></a>
 <ul>
 <li><strong>Applicazioni lineari</strong></li>
 </ul>
@@ -3313,7 +3282,7 @@ lineare</strong> o <strong>trasformazione lineare</strong></li>
 </ul></li>
 </ul>
 </blockquote>
-<a href="#teorema-133"><h2 id="teorema-133">Teorema 133</h2></a>
+<a href="#teorema-131"><h2 id="teorema-131">Teorema 131</h2></a>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -3327,11 +3296,11 @@ class="math inline">\mathbb{K}</span></li>
 <li><span class="math inline">V \cong \mathbb{K}^n</span></li>
 </ul></li>
 </ul>
-<a href="#teorema-134"><h2 id="teorema-134">Teorema 134</h2></a>
+<a href="#teorema-132"><h2 id="teorema-132">Teorema 132</h2></a>
 <ul>
 <li>⚠️ <strong>QUI C’È UN BUCO DI COSE CHE NON HO CAPITO</strong></li>
 </ul>
-<a href="#teorema-135"><h2 id="teorema-135">Teorema 135</h2></a>
+<a href="#teorema-133"><h2 id="teorema-133">Teorema 133</h2></a>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -3345,7 +3314,7 @@ class="math inline">\mathbb{K}</span></li>
 \dim(W)</span></li>
 </ul></li>
 </ul>
-<a href="#definizione-45"><h2 id="definizione-45">Definizione 45</h2></a>
+<a href="#definizione-44"><h2 id="definizione-44">Definizione 44</h2></a>
 <ul>
 <li><strong>Kernel e immagine</strong></li>
 </ul>
@@ -3362,7 +3331,7 @@ lineare</li>
 \in V : w = f(v)\}</span></li>
 </ul>
 </blockquote>
-<a href="#teorema-136"><h2 id="teorema-136">Teorema 136</h2></a>
+<a href="#teorema-134"><h2 id="teorema-134">Teorema 134</h2></a>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -3377,7 +3346,7 @@ lineare</li>
 <li><span class="math inline">\ker(f) \subset V</span> sottospazio</li>
 </ul></li>
 </ul>
-<a href="#teorema-137"><h2 id="teorema-137">Teorema 137</h2></a>
+<a href="#teorema-135"><h2 id="teorema-135">Teorema 135</h2></a>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -3393,7 +3362,7 @@ lineare</li>
 sottospazio</li>
 </ul></li>
 </ul>
-<a href="#definizione-46"><h2 id="definizione-46">Definizione 46</h2></a>
+<a href="#definizione-45"><h2 id="definizione-45">Definizione 45</h2></a>
 <ul>
 <li><strong>Rango di un’applicazione lineare</strong></li>
 </ul>
@@ -3412,12 +3381,12 @@ class="math inline">f</span></strong></li>
 </blockquote>
 <hr />
 <a href="#sottospazi-affini"><h1 id="sottospazi-affini">Sottospazi affini</h1></a>
-<a href="#teorema-138"><h2 id="teorema-138">Teorema 138</h2></a>
+<a href="#teorema-136"><h2 id="teorema-136">Teorema 136</h2></a>
 <ul>
 <li>⚠️ <strong>TODO</strong></li>
 </ul>
 <hr />
-<a href="#teorema-139"><h2 id="teorema-139">Teorema 139</h2></a>
+<a href="#teorema-137"><h2 id="teorema-137">Teorema 137</h2></a>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -3440,7 +3409,7 @@ class="math inline">n - \textrm{rk}(A)</span></li>
 </ul>
 <hr />
 <a href="#matrici"><h1 id="matrici">Matrici</h1></a>
-<a href="#definizione-47"><h2 id="definizione-47">Definizione 47</h2></a>
+<a href="#definizione-46"><h2 id="definizione-46">Definizione 46</h2></a>
 <ul>
 <li><strong>Matrici</strong></li>
 </ul>
@@ -3476,7 +3445,7 @@ vettori colonna e <span class="math inline">A_1, \ldots, A_m \in
 \\ A_m\end{array}\right)</span></li>
 </ul>
 </blockquote>
-<a href="#definizione-48"><h2 id="definizione-48">Definizione 48</h2></a>
+<a href="#definizione-47"><h2 id="definizione-47">Definizione 47</h2></a>
 <ul>
 <li><strong>Somma tra matrici</strong></li>
 </ul>
@@ -3498,7 +3467,7 @@ class="math inline">A</span> e <span
 class="math inline">B</span></strong></li>
 </ul>
 </blockquote>
-<a href="#teorema-140"><h2 id="teorema-140">Teorema 140</h2></a>
+<a href="#teorema-138"><h2 id="teorema-138">Teorema 138</h2></a>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -3511,7 +3480,7 @@ class="math inline">B</span></strong></li>
 n}(\mathbb{K})</span> è uno spazio vettoriale</li>
 </ul></li>
 </ul>
-<a href="#definizione-49"><h2 id="definizione-49">Definizione 49</h2></a>
+<a href="#definizione-48"><h2 id="definizione-48">Definizione 48</h2></a>
 <ul>
 <li><strong>Prodotto tra matrici</strong></li>
 </ul>
@@ -3538,7 +3507,7 @@ m}b_{m,n} \\ \vdots &amp; \ddots &amp; \vdots \\a_{l,1}b_{1, 1} + \ldots
 m}b_{m,n}\end{array}\right)</span></li>
 </ul>
 </blockquote>
-<a href="#teorema-141"><h2 id="teorema-141">Teorema 141</h2></a>
+<a href="#teorema-139"><h2 id="teorema-139">Teorema 139</h2></a>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -3564,7 +3533,7 @@ k}(\mathbb{K}) \quad (A+B)C = AC+BC</span></li>
 B)</span></li>
 </ul></li>
 </ul>
-<a href="#teorema-142"><h2 id="teorema-142">Teorema 142</h2></a>
+<a href="#teorema-140"><h2 id="teorema-140">Teorema 140</h2></a>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -3579,80 +3548,8 @@ B)</span></li>
 </ul></li>
 </ul>
 <hr />
-<a href="#interpretazione-geometrica-dei-vettori"><h1 id="interpretazione-geometrica-dei-vettori">Interpretazione geometrica dei vettori</h1></a>
-
-<a href="#definizione-50"><h2 id="definizione-50">Definizione 50</h2></a>
-<ul>
-<li><strong>Prodotto scalare</strong></li>
-</ul>
-<blockquote>
-<ul>
-<li><span class="math inline">\mathbb{K}</span> campo</li>
-<li><span class="math inline">n \in \mathbb{N} - \{0\}</span></li>
-<li><span class="math inline">u, v \in \mathbb{K}^n \mid u =
-\left(\begin{array}{c}x_1 \\ \vdots \\ x_n \end{array}\right), v =
-\left(\begin{array}{c}y_1 \\ \vdots \\ y_n
-\end{array}\right)</span></li>
-<li><span class="math inline">u \cdot v := \displaystyle \sum_{i =
-1}^n{x_i \cdot y_i}</span> è il <strong>prodotto scalare tra <span
-class="math inline">u</span> e <span
-class="math inline">v</span></strong></li>
-</ul>
-</blockquote>
-<a href="#teorema-143"><h2 id="teorema-143">Teorema 143</h2></a>
-<ul>
-<li><strong>Hp</strong>
-<ul>
-<li><span class="math inline">n \in \mathbb{N} - \{0\}</span></li>
-<li><span class="math inline">u, v \in \mathbb{K}^n</span></li>
-</ul></li>
-<li><strong>Th</strong>
-<ul>
-<li><span class="math inline">u \cdot v = v \cdot u</span></li>
-<li><span class="math inline">\forall w \in \mathbb{K}^n \quad u \cdot
-(v + w) = u \cdot v + u \cdot w</span></li>
-<li><span class="math inline">u \cdot (\lambda v) = \lambda(u \cdot
-v)</span></li>
-</ul></li>
-</ul>
-<a href="#definizione-51"><h2 id="definizione-51">Definizione 51</h2></a>
-<ul>
-<li><strong>Norma di un vettore</strong></li>
-</ul>
-<blockquote>
-<ul>
-<li><span class="math inline">\mathbb{K}</span> campo</li>
-<li><span class="math inline">n \in \mathbb{N} - \{0\}</span></li>
-<li><span class="math inline">u \in \mathbb{K}^n \mid u =
-\left(\begin{array}{c}x_1 \\ \vdots \\ x_n
-\end{array}\right)</span></li>
-<li><span class="math inline">||u|| := \sqrt{x_1^2 + \ldots +
-x_n^2}</span> è detta <strong>norma di <span
-class="math inline">u</span></strong>
-<ul>
-<li>graficamente, corrisponde alla lunghezza del vettore <span
-class="math inline">u</span> nel piano cartesiano</li>
-</ul></li>
-</ul>
-</blockquote>
-<a href="#teorema-144"><h2 id="teorema-144">Teorema 144</h2></a>
-<ul>
-<li><strong>Hp</strong>
-<ul>
-<li><span class="math inline">\mathbb{K}</span> campo</li>
-<li><span class="math inline">n \in \mathbb{N} - \{0\}</span></li>
-<li><span class="math inline">u \in \mathbb{K}^n \mid u =
-\left(\begin{array}{c}x_1 \\ \vdots \\ x_n
-\end{array}\right)</span></li>
-</ul></li>
-<li><strong>Th</strong>
-<ul>
-<li><span class="math inline">||u|| = \sqrt{u \cdot u}</span></li>
-</ul></li>
-</ul>
-<hr />
 <a href="#matrici-particolari"><h1 id="matrici-particolari">Matrici particolari</h1></a>
-<a href="#definizione-52"><h2 id="definizione-52">Definizione 52</h2></a>
+<a href="#definizione-49"><h2 id="definizione-49">Definizione 49</h2></a>
 <ul>
 <li><strong>Vettore trasposto</strong></li>
 </ul>
@@ -3705,7 +3602,7 @@ n}(\mathbb{K})</span></li>
 A</span></li>
 </ul>
 </blockquote>
-<a href="#teorema-145"><h2 id="teorema-145">Teorema 145</h2></a>
+<a href="#teorema-141"><h2 id="teorema-141">Teorema 141</h2></a>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -3721,7 +3618,7 @@ n}(\mathbb{K})</span></li>
 <li><span class="math inline">(A\cdot B)^T = B^T\cdot A^T</span></li>
 </ul></li>
 </ul>
-<a href="#definizione-53"><h2 id="definizione-53">Definizione 53</h2></a>
+<a href="#definizione-50"><h2 id="definizione-50">Definizione 50</h2></a>
 <ul>
 <li><strong>Matrice identità</strong></li>
 </ul>
@@ -3765,7 +3662,7 @@ class="math inline">\}</span> è detto <strong>gruppo speciale lineare
 invertibile</strong></li>
 </ul>
 </blockquote>
-<a href="#teorema-146"><h2 id="teorema-146">Teorema 146</h2></a>
+<a href="#teorema-142"><h2 id="teorema-142">Teorema 142</h2></a>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -3778,7 +3675,7 @@ invertibile</strong></li>
 è un gruppo</li>
 </ul></li>
 </ul>
-<a href="#teorema-147"><h2 id="teorema-147">Teorema 147</h2></a>
+<a href="#teorema-143"><h2 id="teorema-143">Teorema 143</h2></a>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -3792,7 +3689,7 @@ invertibile</strong></li>
 <li><span class="math inline">f</span> morfismo di gruppi</li>
 </ul></li>
 </ul>
-<a href="#definizione-54"><h2 id="definizione-54">Definizione 54</h2></a>
+<a href="#definizione-51"><h2 id="definizione-51">Definizione 51</h2></a>
 <ul>
 <li><strong>Matrice ortogonale</strong></li>
 </ul>
@@ -3824,7 +3721,7 @@ A^T \cdot A = I_n</span>
 è detto <strong>gruppo ortogonale</strong></li>
 </ul>
 </blockquote>
-<a href="#definizione-55"><h2 id="definizione-55">Definizione 55</h2></a>
+<a href="#definizione-52"><h2 id="definizione-52">Definizione 52</h2></a>
 <ul>
 <li><strong>Gruppo Speciale Lineare</strong></li>
 </ul>
@@ -3837,7 +3734,7 @@ A^T \cdot A = I_n</span>
 <strong>gruppo generale lineare invertibile</strong></li>
 </ul>
 </blockquote>
-<a href="#definizione-56"><h2 id="definizione-56">Definizione 56</h2></a>
+<a href="#definizione-53"><h2 id="definizione-53">Definizione 53</h2></a>
 <ul>
 <li><strong>Matrici simili</strong></li>
 </ul>
@@ -3852,7 +3749,7 @@ class="math inline">B</span></strong> <span class="math inline">\iff
 \exists C \in \textrm{GL}(n, \mathbb{K}) \mid A = C^{-1}BC</span></li>
 </ul>
 </blockquote>
-<a href="#definizione-57"><h2 id="definizione-57">Definizione 57</h2></a>
+<a href="#definizione-54"><h2 id="definizione-54">Definizione 54</h2></a>
 <ul>
 <li><strong>Traccia</strong></li>
 </ul>
@@ -3867,7 +3764,7 @@ a_{n,n}</span> è detta <strong>traccia di <span
 class="math inline">A</span></strong></li>
 </ul>
 </blockquote>
-<a href="#teorema-148"><h2 id="teorema-148">Teorema 148</h2></a>
+<a href="#teorema-144"><h2 id="teorema-144">Teorema 144</h2></a>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -3883,7 +3780,7 @@ class="math inline">B</span></li>
 \textrm{tr}(B)</span></li>
 </ul></li>
 </ul>
-<a href="#definizione-58"><h2 id="definizione-58">Definizione 58</h2></a>
+<a href="#definizione-55"><h2 id="definizione-55">Definizione 55</h2></a>
 <ul>
 <li><strong>Matrice triangolare superiore</strong></li>
 </ul>
@@ -3978,7 +3875,7 @@ B \in \textrm{Mat}_{n \times n}(\mathbb{K}) \mid B</span> diagonale
 class="math inline">A</span></li>
 </ul>
 </blockquote>
-<a href="#teorema-149"><h2 id="teorema-149">Teorema 149</h2></a>
+<a href="#teorema-145"><h2 id="teorema-145">Teorema 145</h2></a>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -3992,7 +3889,7 @@ n}(\mathbb{K}) \mid A</span> diagonalizzabile</li>
 <li><span class="math inline">A</span> triangolarizzabile</li>
 </ul></li>
 </ul>
-<a href="#definizione-59"><h2 id="definizione-59">Definizione 59</h2></a>
+<a href="#definizione-56"><h2 id="definizione-56">Definizione 56</h2></a>
 <ul>
 <li><strong>Sottomatrice di una matrice</strong></li>
 </ul>
@@ -4045,7 +3942,7 @@ class="math inline">M</span> si ottiene rimuovendo una riga e una
 colonna da <span class="math inline">M&#39;</span></li>
 </ul>
 </blockquote>
-<a href="#teorema-150"><h2 id="teorema-150">Teorema 150</h2></a>
+<a href="#teorema-146"><h2 id="teorema-146">Teorema 146</h2></a>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -4065,7 +3962,7 @@ class="math inline">(m-r)\cdot(n-r)</span> orlati in <span
 class="math inline">A</span></li>
 </ul></li>
 </ul>
-<a href="#definizione-60"><h2 id="definizione-60">Definizione 60</h2></a>
+<a href="#definizione-57"><h2 id="definizione-57">Definizione 57</h2></a>
 <ul>
 <li><strong>Matrice completa</strong></li>
 </ul>
@@ -4083,7 +3980,7 @@ n}(\mathbb{K})</span></li>
 b_m\end{array}\right)</span></li>
 </ul>
 </blockquote>
-<a href="#definizione-61"><h2 id="definizione-61">Definizione 61</h2></a>
+<a href="#definizione-58"><h2 id="definizione-58">Definizione 58</h2></a>
 <ul>
 <li><strong>Matrice di un’applicazione lineare</strong></li>
 </ul>
@@ -4115,7 +4012,7 @@ f</span> applicazione lineare<span class="math inline">\quad \exists ! A
 </blockquote>
 <hr />
 <a href="#rango"><h1 id="rango">Rango</h1></a>
-<a href="#definizione-62"><h2 id="definizione-62">Definizione 62</h2></a>
+<a href="#definizione-59"><h2 id="definizione-59">Definizione 59</h2></a>
 <ul>
 <li><strong>Sottospazio ortogonale</strong></li>
 </ul>
@@ -4136,7 +4033,7 @@ loro, per osservazione precedente</li>
 </ul></li>
 </ul>
 </blockquote>
-<a href="#teorema-151"><h2 id="teorema-151">Teorema 151</h2></a>
+<a href="#teorema-147"><h2 id="teorema-147">Teorema 147</h2></a>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -4151,7 +4048,7 @@ vettoriale</li>
 di <span class="math inline">\mathbb{K}^n</span></li>
 </ul></li>
 </ul>
-<a href="#teorema-152"><h2 id="teorema-152">Teorema 152</h2></a>
+<a href="#teorema-148"><h2 id="teorema-148">Teorema 148</h2></a>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -4166,7 +4063,7 @@ vettoriale</li>
 \dim(V)</span></li>
 </ul></li>
 </ul>
-<a href="#definizione-63"><h2 id="definizione-63">Definizione 63</h2></a>
+<a href="#definizione-60"><h2 id="definizione-60">Definizione 60</h2></a>
 <ul>
 <li><strong>Moltiplicazione sinistra</strong></li>
 </ul>
@@ -4181,7 +4078,7 @@ x \rightarrow A\cdot x</span> è detta <strong>moltiplicazione sinistra
 di <span class="math inline">A</span></strong></li>
 </ul>
 </blockquote>
-<a href="#teorema-153"><h2 id="teorema-153">Teorema 153</h2></a>
+<a href="#teorema-149"><h2 id="teorema-149">Teorema 149</h2></a>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -4196,7 +4093,7 @@ n}(\mathbb{K})</span></li>
 lineare</li>
 </ul></li>
 </ul>
-<a href="#teorema-154"><h2 id="teorema-154">Teorema 154</h2></a>
+<a href="#teorema-150"><h2 id="teorema-150">Teorema 150</h2></a>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -4213,7 +4110,7 @@ A_m)^\bot</span></li>
 \ldots, A^n)</span></li>
 </ul></li>
 </ul>
-<a href="#definizione-64"><h2 id="definizione-64">Definizione 64</h2></a>
+<a href="#definizione-61"><h2 id="definizione-61">Definizione 61</h2></a>
 <ul>
 <li><strong>Rango di una matrice</strong></li>
 </ul>
@@ -4227,7 +4124,7 @@ n}(\mathbb{K})</span></li>
 il <strong>rango di <span class="math inline">A</span></strong></li>
 </ul>
 </blockquote>
-<a href="#teorema-155"><h2 id="teorema-155">Teorema 155</h2></a>
+<a href="#teorema-151"><h2 id="teorema-151">Teorema 151</h2></a>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -4245,7 +4142,7 @@ n}(\mathbb{K})</span></li>
 <hr />
 <a href="#operazioni-su-righe-e-colonne"><h1 id="operazioni-su-righe-e-colonne">Operazioni su righe e colonne</h1></a>
 
-<a href="#definizione-65"><h2 id="definizione-65">Definizione 65</h2></a>
+<a href="#definizione-62"><h2 id="definizione-62">Definizione 62</h2></a>
 <ul>
 <li><strong>Scambio di righe di una matrice</strong></li>
 </ul>
@@ -4346,7 +4243,7 @@ class="math inline">\lambda \cdot A^j</span> lascia invariato <span
 class="math inline">\textrm{im}(L_A)</span></li>
 </ul>
 </blockquote>
-<a href="#teorema-156"><h2 id="teorema-156">Teorema 156</h2></a>
+<a href="#teorema-152"><h2 id="teorema-152">Teorema 152</h2></a>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -4365,7 +4262,7 @@ definite precedentemente</li>
 equivalenza</li>
 </ul></li>
 </ul>
-<a href="#teorema-157"><h2 id="teorema-157">Teorema 157</h2></a>
+<a href="#teorema-153"><h2 id="teorema-153">Teorema 153</h2></a>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -4384,7 +4281,7 @@ definite precedentemente</li>
 \land \textrm{rk}(A) = \textrm{rk}(B)</span></li>
 </ul></li>
 </ul>
-<a href="#teorema-158"><h2 id="teorema-158">Teorema 158</h2></a>
+<a href="#teorema-154"><h2 id="teorema-154">Teorema 154</h2></a>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -4403,7 +4300,7 @@ definite precedentemente</li>
 equivalenza</li>
 </ul></li>
 </ul>
-<a href="#teorema-159"><h2 id="teorema-159">Teorema 159</h2></a>
+<a href="#teorema-155"><h2 id="teorema-155">Teorema 155</h2></a>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -4423,8 +4320,171 @@ definite precedentemente</li>
 </ul></li>
 </ul>
 <hr />
+<a href="#interpretazione-geometrica-dei-vettori"><h1 id="interpretazione-geometrica-dei-vettori">Interpretazione geometrica dei vettori</h1></a>
+
+<a href="#definizione-63"><h2 id="definizione-63">Definizione 63</h2></a>
+<ul>
+<li><strong>Prodotto scalare</strong></li>
+</ul>
+<blockquote>
+<ul>
+<li><span class="math inline">n \in \mathbb{N}</span></li>
+<li><span class="math inline">\mathbb{K}</span> campo</li>
+<li><span class="math inline">u, v \in \mathbb{K}^n \mid u =
+\left(\begin{array}{c}x_1 \\ \vdots \\ x_n \end{array}\right), v =
+\left(\begin{array}{c}y_1 \\ \vdots \\ y_n
+\end{array}\right)</span></li>
+<li><span class="math inline">u \cdot v := \displaystyle \sum_{i =
+1}^n{x_i \cdot y_i}</span> è detto <strong>prodotto scalare tra <span
+class="math inline">u</span> e <span
+class="math inline">v</span></strong>
+<ul>
+<li>in particolare, il prodotto scalare è definito per ogni coppia di
+vettori, anche avendo ad esempio <span class="math inline">u \in
+\textrm{Mat}_{n \times 1}(\mathbb{K})</span> e <span
+class="math inline">v \in \textrm{Mat}_{1 \times n}(\mathbb{K})</span>,
+dove invece il prodotto matriciale <span class="math inline">uv</span>
+non è definito</li>
+</ul></li>
+</ul>
+</blockquote>
+<ul>
+<li><strong>Spazio di Hilbert</strong></li>
+</ul>
+<blockquote>
+<ul>
+<li><span class="math inline">\mathbb{K}</span> campo</li>
+<li><span class="math inline">V</span> spazio vettoriale su <span
+class="math inline">\mathbb{K}</span></li>
+<li><span class="math inline">V</span> spazio di Hilbert <span
+class="math inline">\iff</span> in <span class="math inline">V</span> è
+ben definito il prodotto scalare</li>
+</ul>
+</blockquote>
+<ul>
+<li><strong>Base ortogonale di uno spazio di Hilbert</strong></li>
+</ul>
+<blockquote>
+<ul>
+<li><span class="math inline">n \in \mathbb{N}</span></li>
+<li><span class="math inline">\mathbb{K}</span> campo</li>
+<li><span class="math inline">V</span> spazio di Hilbert su <span
+class="math inline">\mathbb{K}</span></li>
+<li><span class="math inline">v_1, \ldots, v_n</span> base di <span
+class="math inline">V</span></li>
+<li><span class="math inline">v_1, \ldots, v_n</span> <strong>base
+ortogonale di <span class="math inline">V</span></strong> <span
+class="math inline">\iff \forall i, j \in [1, n], i \neq j \quad v_i
+\cdot v_j = 0</span></li>
+</ul>
+</blockquote>
+<ul>
+<li><strong>Base ortonormale di uno spazio di Hilbert</strong></li>
+</ul>
+<blockquote>
+<ul>
+<li><span class="math inline">n \in \mathbb{N}</span></li>
+<li><span class="math inline">\mathbb{K}</span> campo</li>
+<li><span class="math inline">V</span> spazio di Hilbert su <span
+class="math inline">\mathbb{K}</span></li>
+<li><span class="math inline">v_1, \ldots, v_n</span> base ortogonale di
+<span class="math inline">V</span></li>
+<li><span class="math inline">v_1, \ldots, v_n</span> <strong>base
+ortonormale</strong> di <span class="math inline">V \iff \forall i, j
+\in [1, n] \quad v_i \cdot v_j = \left\{\begin{array}{cc} 1 &amp; i = j
+\\ 0 &amp; i \neq j \end{array}\right.</span>
+<ul>
+<li>in particolare, è possibile ottenere <span class="math inline">v_1,
+\ldots, v_n</span> a partire da <span class="math inline">e_1, \ldots,
+e_n</span> tramite rotazioni e riflessioni</li>
+</ul></li>
+</ul>
+</blockquote>
+<a href="#teorema-156"><h2 id="teorema-156">Teorema 156</h2></a>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">n \in \mathbb{N} - \{0\}</span></li>
+<li><span class="math inline">u, v \in \mathbb{K}^n</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">u \cdot v = v \cdot u</span></li>
+<li><span class="math inline">\forall w \in \mathbb{K}^n \quad u \cdot
+(v + w) = u \cdot v + u \cdot w</span></li>
+<li><span class="math inline">u \cdot (\lambda v) = \lambda(u \cdot
+v)</span></li>
+</ul></li>
+</ul>
+<a href="#definizione-64"><h2 id="definizione-64">Definizione 64</h2></a>
+<ul>
+<li><strong>Norma di un vettore</strong></li>
+</ul>
+<blockquote>
+<ul>
+<li><span class="math inline">\mathbb{K}</span> campo</li>
+<li><span class="math inline">n \in \mathbb{N} - \{0\}</span></li>
+<li><span class="math inline">u \in \mathbb{K}^n \mid u =
+\left(\begin{array}{c}x_1 \\ \vdots \\ x_n
+\end{array}\right)</span></li>
+<li><span class="math inline">||u|| := \sqrt{x_1^2 + \ldots +
+x_n^2}</span> è detta <strong>norma di <span
+class="math inline">u</span></strong>
+<ul>
+<li>graficamente, corrisponde alla lunghezza del vettore <span
+class="math inline">u</span> nel piano cartesiano</li>
+</ul></li>
+</ul>
+</blockquote>
+<a href="#teorema-157"><h2 id="teorema-157">Teorema 157</h2></a>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\mathbb{K}</span> campo</li>
+<li><span class="math inline">n \in \mathbb{N} - \{0\}</span></li>
+<li><span class="math inline">u \in \mathbb{K}^n \mid u =
+\left(\begin{array}{c}x_1 \\ \vdots \\ x_n
+\end{array}\right)</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">||u|| = \sqrt{u \cdot u}</span></li>
+</ul></li>
+</ul>
+<a href="#teorema-158"><h2 id="teorema-158">Teorema 158</h2></a>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">n \in \mathbb{N}</span></li>
+<li><span class="math inline">\mathbb{K}</span> campo</li>
+<li><span class="math inline">v \in \mathbb{K}^n</span></li>
+<li><span class="math inline">v_1, \ldots, v_k</span> base ortonormale
+di <span class="math inline">\mathbb{K}^n</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">v = (v \cdot v_1)v_1 + \ldots + (v \cdot
+v_n)v_n</span></li>
+</ul></li>
+</ul>
+<a href="#teorema-159"><h2 id="teorema-159">Teorema 159</h2></a>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">n \in \mathbb{N}</span></li>
+<li><span class="math inline">\mathbb{K}</span> campo</li>
+<li><span class="math inline">A \in O(n)</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">A_1, \ldots, A_n</span> e <span
+class="math inline">A^1, \ldots, A^n</span> basi ortonormali di <span
+class="math inline">\mathbb{K}^n</span></li>
+</ul></li>
+</ul>
+<hr />
 <a href="#determinante"><h1 id="determinante">Determinante</h1></a>
-<a href="#definizione-66"><h2 id="definizione-66">Definizione 66</h2></a>
+<a href="#definizione-65"><h2 id="definizione-65">Definizione 65</h2></a>
 <ul>
 <li><strong>Applicazione multilineare</strong></li>
 </ul>
@@ -4503,7 +4563,7 @@ class="math inline">\mid 1 \neq -1</span></li>
 <li><strong>⚠️ DETERMINANTE ALTERNANTE</strong></li>
 </ul></li>
 </ul>
-<a href="#definizione-67"><h2 id="definizione-67">Definizione 67</h2></a>
+<a href="#definizione-66"><h2 id="definizione-66">Definizione 66</h2></a>
 <ul>
 <li><strong>Matrice singolare</strong></li>
 </ul>
@@ -4691,7 +4751,7 @@ n}(\mathbb{K})</span></li>
 \det(A_h^j)}</span></li>
 </ul></li>
 </ul>
-<a href="#definizione-68"><h2 id="definizione-68">Definizione 68</h2></a>
+<a href="#definizione-67"><h2 id="definizione-67">Definizione 67</h2></a>
 <ul>
 <li><strong>Aggiunta di una matrice</strong></li>
 </ul>
@@ -4741,7 +4801,7 @@ a\end{array}\right)</span></li>
 </ul>
 <hr />
 <a href="#polinomio-caratteristico"><h1 id="polinomio-caratteristico">Polinomio caratteristico</h1></a>
-<a href="#definizione-69"><h2 id="definizione-69">Definizione 69</h2></a>
+<a href="#definizione-68"><h2 id="definizione-68">Definizione 68</h2></a>
 <blockquote>
 <ul>
 <li><span class="math inline">\mathbb{K}</span> campo</li>
@@ -4783,7 +4843,7 @@ class="math inline">B</span></li>
 <li><span class="math inline">p_A(x) = p_B(x)</span></li>
 </ul></li>
 </ul>
-<a href="#definizione-70"><h2 id="definizione-70">Definizione 70</h2></a>
+<a href="#definizione-69"><h2 id="definizione-69">Definizione 69</h2></a>
 <ul>
 <li><strong>Autovalore</strong></li>
 </ul>
@@ -4845,7 +4905,7 @@ class="math inline">\iff \exists v \in \mathbb{K}^n - \{0\} \mid A \cdot
 v = \lambda \cdot v</span></li>
 </ul></li>
 </ul>
-<a href="#definizione-71"><h2 id="definizione-71">Definizione 71</h2></a>
+<a href="#definizione-70"><h2 id="definizione-70">Definizione 70</h2></a>
 <ul>
 <li><strong>Autovettore relativo ad un autovalore</strong></li>
 </ul>
@@ -4882,7 +4942,7 @@ class="math inline">\lambda_1, \ldots, \lambda_k</span></li>
 indipendenti</li>
 </ul></li>
 </ul>
-<a href="#definizione-72"><h2 id="definizione-72">Definizione 72</h2></a>
+<a href="#definizione-71"><h2 id="definizione-71">Definizione 71</h2></a>
 <ul>
 <li><strong>Autospazio relativo ad un autovalore</strong></li>
 </ul>
@@ -4919,7 +4979,7 @@ n}(\mathbb{K})</span></li>
 \mathbb{K}</span> sottospazio vettoriale</li>
 </ul></li>
 </ul>
-<a href="#definizione-73"><h2 id="definizione-73">Definizione 73</h2></a>
+<a href="#definizione-72"><h2 id="definizione-72">Definizione 72</h2></a>
 <ul>
 <li><strong>Molteplicità algebrica di un autovalore</strong></li>
 </ul>
@@ -4954,7 +5014,7 @@ class="math inline">B</span></li>
 \mu_B(\lambda)</span></li>
 </ul></li>
 </ul>
-<a href="#definizione-74"><h2 id="definizione-74">Definizione 74</h2></a>
+<a href="#definizione-73"><h2 id="definizione-73">Definizione 73</h2></a>
 <ul>
 <li><strong>Molteplicità geometrica di un autovalore</strong></li>
 </ul>
@@ -5112,7 +5172,7 @@ class="math inline">\mathbb{K}^n</span></li>
 </ul>
 <hr />
 <a href="#numeri-complessi"><h1 id="numeri-complessi">Numeri complessi</h1></a>
-<a href="#definizione-75"><h2 id="definizione-75">Definizione 75</h2></a>
+<a href="#definizione-74"><h2 id="definizione-74">Definizione 74</h2></a>
 <ul>
 <li><strong>Insieme dei complessi</strong></li>
 </ul>
@@ -5140,7 +5200,7 @@ b:=\operatorname{Im}(z)\end{array}\right.</span></li>
 <li><span class="math inline">z\cdot w=(a c-b d)+i(ad+ bc)</span></li>
 </ul></li>
 </ul>
-<a href="#definizione-76"><h2 id="definizione-76">Definizione 76</h2></a>
+<a href="#definizione-75"><h2 id="definizione-75">Definizione 75</h2></a>
 <ul>
 <li><strong>Coniugato</strong></li>
 </ul>
@@ -5180,7 +5240,7 @@ class="math inline">\overline{z}+\overline{w}=\overline{z+w}</span></li>
 \theta</span></li>
 </ul></li>
 </ul>
-<a href="#definizione-77"><h2 id="definizione-77">Definizione 77</h2></a>
+<a href="#definizione-76"><h2 id="definizione-76">Definizione 76</h2></a>
 <ul>
 <li><strong>Raggio</strong></li>
 </ul>
@@ -5196,7 +5256,7 @@ dall’origine nel piano di Gauss</li>
 </ul></li>
 </ul>
 </blockquote>
-<a href="#definizione-78"><h2 id="definizione-78">Definizione 78</h2></a>
+<a href="#definizione-77"><h2 id="definizione-77">Definizione 77</h2></a>
 <ul>
 <li><strong>Forma polare</strong></li>
 </ul>
@@ -5208,7 +5268,7 @@ dall’origine nel piano di Gauss</li>
 <strong>forma polare di <span class="math inline">z</span></strong></li>
 </ul>
 </blockquote>
-<a href="#definizione-79"><h2 id="definizione-79">Definizione 79</h2></a>
+<a href="#definizione-78"><h2 id="definizione-78">Definizione 78</h2></a>
 <ul>
 <li><strong>Soluzione principale</strong></li>
 </ul>
@@ -5273,7 +5333,7 @@ w)=\arg(z) + \arg(w)</span></li>
 </ul>
 <hr />
 <a href="#coefficienti-binomiali"><h1 id="coefficienti-binomiali">Coefficienti binomiali</h1></a>
-<a href="#definizione-80"><h2 id="definizione-80">Definizione 80</h2></a>
+<a href="#definizione-79"><h2 id="definizione-79">Definizione 79</h2></a>
 <ul>
 <li><strong>Coefficiente binomiale</strong></li>
 </ul>
@@ -5370,7 +5430,7 @@ in <span class="math inline">\mathbb{Z}_p</span></li>
 </ul>
 <hr />
 <a href="#induzione"><h1 id="induzione">Induzione</h1></a>
-<a href="#definizione-81"><h2 id="definizione-81">Definizione 81</h2></a>
+<a href="#definizione-80"><h2 id="definizione-80">Definizione 80</h2></a>
 <ul>
 <li><strong>Induzione</strong></li>
 </ul>
