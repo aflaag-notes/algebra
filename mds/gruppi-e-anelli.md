@@ -83,7 +83,7 @@
 >   - $(A, +)$ gruppo abeliano
 >   - $(A, \cdot)$ monoide
 >   - $\forall a, b, c \in A \quad a \cdot (b + c) = a \cdot b + a \cdot c$
->     - in particolare, deve valere la _proprietà distributiva_
+>     - in particolare, deve valere la _proprietà distributiva a sinistra_
 
 - **Anello commutativo**
 
@@ -105,11 +105,11 @@
 > - $A$ insieme
 > - $+: A \times A \rightarrow A$
 > - $\cdot: A \times A \rightarrow A$
-> - $(A, +, \cdot)$ **semianello commutativo** $\iff$
+> - $(A, +, \cdot)$ è detto **semianello commutativo** $\iff$
 >   - $(A, +)$ monide commutativo
 >   - $(A, \cdot)$ monoide commutativo
 >   - $\forall a, b, c \in A \quad a\cdot (b + c) = a \cdot b + a \cdot c$
->     - in particolare, deve valere la _proprietà distributiva_
+>     - in particolare, deve valere la _proprietà distributiva a sinistra_
 
 ## Def
 
@@ -231,6 +231,7 @@
 - **Sottogruppo**
 
 > - $G$ insieme
+> - $H \subseteq G$
 > - $\cdot: G \times G \rightarrow G$
 > - $(G, \cdot)$ gruppo 
 > - $(H, \cdot) \leqslant (G, \cdot)$ è detto **sottogruppo** $\iff$
@@ -258,7 +259,8 @@
 
 - **Sottoanello**
 
-> - $A, B$ insiemi
+> - $A$ insieme
+> - $B \subseteq A$
 > - $+: A \times A \rightarrow A$
 > - $\cdot: A \times A \rightarrow A$
 > - $(B, + , \cdot) \leqslant (A, +, \cdot)$ è detto **sottoanello** $\iff$
@@ -271,7 +273,6 @@
 
 - **Sottogruppo normale**
 
-> - $G, H$ insiemi
 > - $(G, \cdot)$ gruppo
 > - $(H, \cdot) \leqslant (G, \cdot)$
 > - $x \in G$

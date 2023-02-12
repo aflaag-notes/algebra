@@ -4,9 +4,21 @@
 
 - **Spazio vettoriale**
 
+> - $V$ insieme
+> - $+: V \times V \rightarrow V$
+> - $\cdot : \mathbb{K} \times V \rightarrow V$
 > - $\mathbb{K}$ campo
 > - $x \in \mathbb{K}$ è detto **scalare**
-> - $V$ è **spazio vettoriale su $\mathbb{K}$** $\iff (V, +)$ gruppo abeliano, è ben definita un'operazione di $\cdot: K \times V \rightarrow V$ che ammetta elemento neutro, inoltre $\forall s, t \in \mathbb{K}, v \in V \quad s\cdot (t \cdot v) = (s \cdot t) \cdot v, (s + t) \cdot v = s\cdot v + t \cdot v$ e infine $\forall s \in \mathbb{K}, v, w \in V \quad s \cdot (v + w) = s \cdot v + s \cdot w$
+> - $V$ è detto **spazio vettoriale su $\mathbb{K}$** $\iff$
+>   - $(V, +)$ gruppo abeliano
+>   - $\exists 1 \in \mathbb{K} \mid \forall v \in V \quad 1v = v1 = v$
+>      - in particolare, deve esistere l'_elemento neutro per il prodotto per scalare_
+>   - $\forall u, v \in V, k \in \mathbb{K} \quad k(u + v) = ku + kv$
+>     - in particolare, deve valere la _proprietà distributiva a destra del prodotto per scalare_
+>   - $\forall v \in V, k, h \in \mathbb{K} \quad (k + h)v = kv + hv$
+>     - in particolare, deve valere la _proprietà distributiva a sinistra del prodotto per scalare_
+>   - $\forall v \in V, k, h \in \mathbb{K} \quad (ab)v = a(bv)$
+>      - in particolare, deve valere la _proprietà associativa del prodotto per scalare_
 > - $x \in V$ è detto **vettore**
 
 - **Spazio di Hilbert**
@@ -24,8 +36,8 @@
     - $\mathbb{K}^n$ spazio vettoriale su $\mathbb{K}$
 - **Dim**
     - è possibile definire operazioni $+$ e $\cdot$ tra scalari e vettori che verificano gli assiomi per spazi vettoriali
-    - $\forall v \in \mathbb{K}^n \quad \exists t_1, \ldots, t_n \in \mathbb{K}^n \mid v = (t_1, \ldots, t_n)$ per definizione
-    - $\forall w \in \mathbb{K}^n \quad \exists s_1, \ldots, s_n \in \mathbb{K}^n \mid v = (s_1, \ldots, s_n)$ per definizione
+    - $\forall v \in \mathbb{K}^n \quad \exists t_1, \ldots, t_n \in \mathbb{K} \mid v = (t_1, \ldots, t_n)$
+    - $\forall w \in \mathbb{K}^n \quad \exists s_1, \ldots, s_n \in \mathbb{K} \mid w = (s_1, \ldots, s_n)$
     - $\forall \lambda \in \mathbb{K} \quad \lambda \cdot v := (\lambda \cdot t_1, \ldots, \lambda \cdot t_n)$
     - $v + w := (s_1 + t_1, \ldots, s_n + t_n)$
     - con queste definizioni, segue che gli assiomi per gli spazi vettoriali sono necessariamente rispettati
@@ -36,7 +48,10 @@
 
 > - $\mathbb{K}$ campo
 > - $V$ spazio vettoriale su $\mathbb{K}$
-> - $W$ è **sottospazio vettoriale di $V$** $\iff (W, +) \subset (V, +)$ sottogruppo, e $\forall w \in W, \lambda \in \mathbb{K} \quad \lambda \cdot w \in W$
+> - $W \subseteq V$
+> - $W$ è detto **sottospazio vettoriale di $V$** $\iff$
+>   - $(W, +) \leqslant (V, +)$
+>   - $\forall w \in W, \lambda \in \mathbb{K} \quad \lambda \cdot w \in W$
 
 ## Def
 
@@ -46,8 +61,8 @@
 > - $\mathbb{K}$ campo
 > - $V$ spazio vettoriale su $\mathbb{K}$
 > - $v_1, \ldots, v_n \in V$
-> - $\textrm{span}(v_1, \ldots, v_n) := \{\lambda_1 v_1 + \ldots + \lambda_n v_n \mid \lambda_1, \ldots , \lambda_n \in \mathbb{K}\}$, ovvero l'insieme delle combinazioni lineari degli $v_1, \ldots, v_n$
-
+> - $\textrm{span}(v_1, \ldots, v_n) := \{\lambda_1 v_1 + \ldots + \lambda_n v_n \mid \lambda_1, \ldots , \lambda_n \in \mathbb{K}\}$ è detto **$\textrm{span}$ degli $v_1, \ldots v_n$**
+>   - in particolare, costituisce l'insieme delle _combinazioni lineari degli $v_1, \ldots, v_n$_
 
 ## Oss
 
@@ -59,22 +74,22 @@
 - **Th**
     - $\textrm{span}(v_1, \ldots, v_n)$ è un sottospazio vettoriale di $V$
 - **Dim**
-    - $(\textrm{span}(v_1, \ldots, v_n), +) \subset (V, +)$ sottogruppo
+    - $(\textrm{span}(v_1, \ldots, v_n), +) \leqslant (V, +)$
         - $0_V = 0v_1 + \ldots + 0v_n \implies 0 \in \textrm{span}(v_1, \ldots, v_n)$
-        - $\forall u, v \in \textrm{span}(v_1, \ldots, v_n) \quad \exists \lambda_1, \ldots , \lambda_n, \mu_1 \ldots \mu_n \in \mathbb{K} \mid u= \lambda_1v_1 + \ldots + \lambda_n v_n \land w = \mu_1 v_1+ \ldots + \mu_1v_1 \implies v + w = (\lambda_1 \mu_1) v_1 + \ldots + (\lambda_n \mu_n) v_n \implies v + w \in \textrm{span}(v_1, \ldots, v_n)$
+        - $\forall u, v \in \textrm{span}(v_1, \ldots, v_n) \quad \exists \lambda_1, \ldots , \lambda_n, \mu_1 \ldots \mu_n \in \mathbb{K} \mid \left \{ \begin{array}{l}u= \lambda_1v_1 + \ldots + \lambda_n v_n \\ w = \mu_1 v_1+ \ldots + \mu_nv_n \end{array} \right. \implies v + w = (\lambda_1 \mu_1) v_1 + \ldots + (\lambda_n \mu_n) v_n \implies v + w \in \textrm{span}(v_1, \ldots, v_n)$
         - $\forall u \in \textrm{span}(v_1, \ldots, v_n) \quad \exists \lambda_1 , \ldots \lambda_n \in \mathbb{K} \mid u = \lambda_1 v_1 + \ldots + \lambda_n v_n \iff - u = (-\lambda _1) v_1 + \ldots + (- \lambda_n) v_n \implies -u \in \textrm{span}(v_1, \ldots, v_n)$
     - $\forall w \in \textrm{span}(v_1, \ldots, v_n) \quad \exists \lambda_1 , \ldots , \lambda_n \in \mathbb{K} \mid w = \lambda_1 v_1 + \ldots + \lambda_n v_n \implies \forall c \in \mathbb{K} \quad c\cdot w = c \cdot (\lambda_1v_1 + \ldots + \lambda_n v_n) =(c\lambda_1) v_1 + \ldots + (c\lambda_n) v_n \implies c\cdot w \in \textrm{span}(v_1, \ldots, v_n)$
 
 ## Def
 
-- **Vettori generatori**
+- **Generatori di uno spazio vettoriale**
 
 > - $n \in \mathbb{N}$
 > - $\mathbb{K}$ campo
 > - $V$ spazio vettoriale su $\mathbb{K}$
 > - $v_1, \ldots, v_n \in V$
-> - $v_1, \ldots, v_n$ sono **generatori di $V$** $\iff \textrm{span}(v_1, \ldots, v_n) = V$
->     - equivalentemente, ogni altro vettore in $V$ è una combinazione lineare degli $v_1, \ldots, v_n$
+> - $v_1, \ldots, v_n$ sono detti **generatori di $V$** $\iff \textrm{span}(v_1, \ldots, v_n) = V$
+>     - equivalentemente, ogni vettore in $V$ è una combinazione lineare degli $v_1, \ldots, v_n$
 
 - **Indipendenza lineare**
 
@@ -82,7 +97,8 @@
 > - $\mathbb{K}$ campo
 > - $V$ spazio vettoriale su $\mathbb{K}$
 > - $v_1, \ldots, v_n \in V$
-> - $v_1, \ldots, v_n$ sono **linearmente indipendenti** se e solo se $\lambda_1 v_1 + \ldots + \lambda_n v_n = 0_V \iff \lambda_1 = \ldots = \lambda_n = 0_{\mathbb{K}}$
+> - $v_1, \ldots, v_n$ sono detti **linearmente indipendenti** $\iff$
+>    - $\lambda_1 v_1 + \ldots + \lambda_n v_n = 0_V \iff \lambda_1 = \ldots = \lambda_n = 0_{\mathbb{K}}$
 >    - equivalentemente, nessuno degli $v_1, \ldots, v_n$ è combinazione lineare degli altri
 
 - **Base di uno spazio vettoriale**
@@ -91,8 +107,16 @@
 > - $\mathbb{K}$ campo
 > - $V$ spazio vettoriale su $\mathbb{K}$
 > - $v_1, \ldots, v_n \in V$
-> - $v_1, \ldots, v_n$ sono una **base di $V$** $\iff$ $v_1, \ldots, v_n$ sono generatori di $V$ e linearmente indipendenti
-> - $n$ è detta **cardinalità della base di $V$**
+> - $v_1, \ldots, v_n$ costituiscono una **base di $V$** $\iff v_1, \ldots, v_n$ linearmente indipendenti e generatori di $V$
+>   - in particolare, $n$ è detta _cardinalità della base $v_1, \ldots, v_n$_
+
+- **Dimensione di uno spazio vettoriale**
+
+> - $\mathbb{K}$ campo
+> - $V$ spazio vettoriale su $\mathbb{K}$
+> - $v_1, \ldots, v_n$ base di $V$
+> - $\dim(V) = n$ è detta **dimensione di $V$**
+>   - in particolare, coincide con la cardinalità delle basi di $V$
 
 ## Ex
 
@@ -191,14 +215,6 @@
     - $A \in O(n)$
 - **Th**
     - $A_1, \ldots, A_n$ e $A^1, \ldots, A^n$ basi ortonormali di $\mathbb{K}^n$
-
-## Def
-
-- **Dimensione di uno spazio vettoriale**
-
-> - $\mathbb{K}$ campo
-> - $V$ spazio vettoriale su $\mathbb{K}$
-> - $\dim(V)$ è detta **dimensione di $V$**, ed è la cardinalità delle basi di $V$
 
 ## Oss
 
