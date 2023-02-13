@@ -63,6 +63,171 @@
 
 ****
 
+# Rango
+
+## Def
+
+- **Sottospazio ortogonale**
+
+> - $\mathbb{K}$ campo
+> - $n \in \mathbb{N}$
+> - $V \subset \mathbb{K}^n$ sottospazio vettoriale
+> - $V^{\perp} := \{w \in \mathbb{K}^n \mid \forall v \in V \quad w \cdot v = 0_{\mathbb{K}^n}\}$ è detto **sottospazio ortogonale di $\mathbb{K}^n$**
+>     - la definizione ha significato poiché il prodotto scalare tra due vettori è nullo esattamente quando i due vettori sono perpendicolari tra loro
+
+## Oss
+
+- **Hp**
+    - $\mathbb{K}$ campo
+    - $n \in \mathbb{N}$
+    - $V \subset \mathbb{K}^n$ sottospazio vettoriale
+- **Th**
+    - $V^{\bot} \subset \mathbb{K}^n$ sottospazio vettoriale
+
+## Oss
+
+- **Hp**
+    - $\mathbb{K}$ campo
+    - $n \in \mathbb{N}$
+    - $V \subset \mathbb{K}^n$ sottospazio vettoriale
+- **Th**
+    - $\dim(V^{\bot}) + \dim(V) = \dim(\mathbb{K}^n)$
+
+## Def
+
+- **Moltiplicazione sinistra**
+
+> - $\mathbb{K}$ campo
+> - $m,n \in \mathbb{N}$
+> - $A \in \textrm{Mat}_{m \times n}(\mathbb{K})$
+> - $L_A:\mathbb{K}^n \rightarrow \mathbb{K}^m: x \rightarrow Ax$ è detta **moltiplicazione sinistra di $A$**
+
+## Oss
+
+- **Hp**
+    - $\mathbb{K}$ campo
+    - $m,n \in \mathbb{N}$
+    - $A \in \textrm{Mat}_{m \times n}(\mathbb{K})$
+- **Th**
+    - $L_A$ trasformazione lineare
+- **Dim**
+    - $\forall x, y \in \mathbb{K}^n \quad L_A(x + y) = A(x + y) = Ax + Ay = L_A(x) + L_A(y)$
+    - $\forall k \in \mathbb{K}, x \in \mathbb{K}^n \quad L_A(kx) = A(kx) = k(Ax)=kL_A(x)$
+
+## Oss
+
+- **Hp**
+    - $\mathbb{K}$ campo
+    - $m,n \in \mathbb{N}$
+    - $A \in \textrm{Mat}_{m \times n}(\mathbb{K})$
+- **Th**
+    - $\ker(L_A) = \textrm{span}(A_1, \ldots, A_m)^\bot$
+    - $\textrm{im}(L_A) = \textrm{span}(A^1, \ldots, A^n)$
+- **Dim**
+    - $\ker(L_A) := \left\{x \in \mathbb{K}^n \mid L_A(x) = 0_{\mathbb{K}^m} \iff A x = 0_{\mathbb{K}^m} \iff \left(\begin{array}{c}A_1\cdot x \\ \vdots \\ A_m \cdot x\end{array}\right)= \left(\begin{array}{c} 0 \\ \vdots \\ 0\end{array}\right)\right\} =: \textrm{span}(A_1, \ldots, A_m)^\bot$
+    - $\forall A \in \textrm{Mat}_{m \times n}(\mathbb{K}) \quad L_A(x) = A x = \left(\begin{array}{ccc} a_{1,1} & \cdots & a_{1,n}\\ \vdots & \ddots & \vdots \\ a_{m,1} & \cdots & a_{m,n}\end{array}\right) \left(\begin{array}{c} x_1 \\ \vdots \\ x_n \end{array}\right) = \left(\begin{array}{c}a_{1, 1} x_1 + \ldots + a_{1,n}x_n \\ \vdots \\ a_{m,1}x_1 + \ldots + a_{m,n} x_n \end{array}\right) =  x_1 \left(\begin{array}{c}a_{1, 1} \\ \vdots \\ a_{m, 1}\end{array}\right) + \ldots + x_n \left(\begin{array}{c}a_{1, n}\\ \vdots \\ a_{m, n}\end{array}\right) = x_1A^1 + \ldots + x_nA^n =: y \iff y \in \textrm{span}(A^1, \ldots, A^n) \implies \textrm{im}(L_A) = \textrm{span}(A^1, \ldots, A^n)$
+
+## Oss
+
+- **Rango di una matrice**
+
+> - $\mathbb{K}$ campo
+> - $m,n \in \mathbb{N}$
+> - $A \in \textrm{Mat}_{m \times n}(\mathbb{K})$
+> - $\textrm{rk}(A):=\textrm{rk}(L_A)$ è detto **rango di $A$**
+>   - in particolare $\textrm{rk}(A) := \textrm{rk}(L_A) := \dim(\textrm{im}(L_A))$
+
+## Oss
+
+- **Hp**
+    - $\mathbb{K}$ campo
+    - $m,n \in \mathbb{N}$
+    - $A \in \textrm{Mat}_{m \times n}(\mathbb{K})$
+- **Th**
+    - $\textrm{rk}(A) =\dim(\textrm{span}(A^1, \ldots, A^n)) = \dim(\textrm{span}(A_1, \ldots, A_n))$
+- **Dim**
+    - per definizione $\textrm{rk}(A) = \textrm{rk}(L_A)$
+    - per dimostrazione precedente $\left \{ \begin{array}{l}\ker(L_A) = \textrm{span}(A_1, \ldots, A_n)^{\bot} \\ \textrm{im}(L_A) = \textrm{span}(A^1, \ldots, A^n) \end{array} \right. \implies \left \{ \begin{array}{l} \dim(\ker(L_A)) = \dim(\textrm{span}(A_1, \ldots, A_m)^\bot) \\ \textrm{rk}(A) := \textrm{rk}(L_A) := \dim(\textrm{im}(L_A)) = \dim(\textrm{span}(A^1, \ldots, A^n))\end{array} \right.$
+    - per il teorema del rango $\dim(\textrm{im}(L_A)) = \dim(\mathbb{K}^n) - \dim(\ker(L_A)) = \dim(\mathbb{K}^n) - \dim(\textrm{span}(A_1, \ldots, A_m)^\bot)$
+    - per dimostrazione precedente $\dim(\textrm{span}(A_1, \ldots, A_m)^\bot)= \dim(\mathbb{K}^n) - \dim(\textrm{span}(A_1, \ldots, A_m))$
+    - allora $\textrm{rk}(A) = \dim(\textrm{span}(A^1, \ldots, A^n)) = \dim(\mathbb{K}^n) - (\dim(\mathbb{K}^n) - \dim(\textrm{span}(A_1, \ldots, A_m))) = \dim(\textrm{span}(A_1, \ldots, A_m))$
+
+****
+
+# Operazioni su righe e colonne
+
+## Def
+
+- **Scambio di righe di una matrice**
+
+> - $\mathbb{K}$ campo
+> - $m, n \in \mathbb{N}$
+> - $A \in \textrm{Mat}_{m \times n}(\mathbb{K})$
+> - $\forall A_1, \ldots, A_m$ righe di $A$, scambiare $A_i$ e $A_j$ lascia invariato $\ker(L_A)$
+
+- **Moltiplicazione di una riga per una costante**
+
+> - $\mathbb{K}$ campo
+> - $m, n \in \mathbb{N}$
+> - $A \in \textrm{Mat}_{m \times n}(\mathbb{K})$
+> - $\lambda \in \mathbb{K}^*$
+> - $\forall A_1, \ldots, A_m$ righe di $A$, moltiplicare $A_i$ per $\lambda$ lascia invariato $\ker(L_A)$
+
+- **Somma di una riga con un multiplo di un'altra**
+
+> - $\mathbb{K}$ campo
+> - $m, n \in \mathbb{N}$
+> - $A \in \textrm{Mat}_{m \times n}(\mathbb{K})$
+> - $\lambda \in \mathbb{K}^*$
+> - $\forall A_1, \ldots, A_m$ righe di $A$, sommare ad $A_i$ un certo $\lambda \cdot A_j$ lascia invariato $\ker(L_A)$
+
+- **Scambio di colonne di una matrice**
+
+> - $\mathbb{K}$ campo
+> - $m, n \in \mathbb{N}$
+> - $A \in \textrm{Mat}_{m \times n}(\mathbb{K})$
+> - $\forall A^1, \ldots, A^m$ colonne di $A$, scambiare $A^i$ e $A^j$ lascia invariato $\textrm{im}(L_A)$
+
+- **Moltiplicazione di una colonna per una costante**
+
+> - $\mathbb{K}$ campo
+> - $m, n \in \mathbb{N}$
+> - $A \in \textrm{Mat}_{m \times n}(\mathbb{K})$
+> - $\lambda \in \mathbb{K}^*$
+> - $\forall A^1, \ldots, A^m$ colonne di $A$, moltiplicare $A^i$ per $\lambda$ lascia invariato $\textrm{im}(L_A)$
+
+- **Somma di una colonna con un multiplo di un'altra**
+
+> - $\mathbb{K}$ campo
+> - $m, n \in \mathbb{N}$
+> - $A \in \textrm{Mat}_{m \times n}(\mathbb{K})$
+> - $\lambda \in \mathbb{K}^*$
+> - $\forall A^1, \ldots, A^m$ righe di $A$, sommare ad $A^i$ un certo $\lambda \cdot A^j$ lascia invariato $\textrm{im}(L_A)$
+
+## Oss
+
+- **Hp**
+    - $\mathbb{K}$ campo
+    - $m, n \in \mathbb{N}$
+    - $A, B \in \textrm{Mat}_{m \times n}(\mathbb{K})$
+    - $A \equiv_R B \iff$ è possibile ricavare $B$ da $A$ eseguendo operazioni tra righe
+- **Th**
+    - $\equiv_R$ relazione di equivalenza
+    - $A \equiv_R B \implies \left \{ \begin{array}{l}\ker(L_A) = \ker(L_B) \\ \textrm{rk}(A) = \textrm{rk}(B) \end{array} \right.$
+
+## Oss
+
+- **Hp**
+    - $\mathbb{K}$ campo
+    - $m, n \in \mathbb{N}$
+    - $A, B \in \textrm{Mat}_{m \times n}(\mathbb{K})$
+    - $A \equiv_C B \iff$ è possibile ricavare $B$ da $A$ eseguendo operazioni tra colonne
+- **Th**
+    - $\equiv_C$ una relazione di equivalenza
+    - $A \equiv_C B \implies \left \{ \begin{array}{l}\textrm{im}(L_A) = \textrm{im}(L_B) \\ \textrm{rk}(A) = \textrm{rk}(B) \end{array}\right.$
+
+****
+
 # Matrici particolari
 
 ## Def
@@ -123,12 +288,14 @@
 > - $n \in \mathbb{N}$
 > - $A \in \textrm{Mat}_{n \times n}(\mathbb{K})$
 > - $A$ è detta **invertibile** $\iff \exists A^{-1} \in \textrm{Mat}_{n \times n}(\mathbb{K}) \mid A\cdot A^{-1} = A^{-1} \cdot A = I_n$
+>   - in particolare $A$ invertibile $\iff \det(A) \neq 0$
 
 - **Gruppo Generale Lineare**
 
 > - $\mathbb{K}$ campo
 > - $n \in \mathbb{N}$
-> - $\textrm{GL}(n, \mathbb{K}) := \{A \in \textrm{Mat}_{n \times n}(\mathbb{K}) \mid A$ invertibile$\}$ è detto **gruppo speciale lineare invertibile**
+> - $\textrm{GL}(n, \mathbb{K}) := \{A \in \textrm{Mat}_{n \times n}(\mathbb{K}) \mid A$ invertibile$\}$ è detto **gruppo generale lineare**
+>   - in particolare $\textrm{GL}(n, \mathbb{K}) := \{A \in \textrm{Mat}_{n \times n}(\mathbb{K}) \mid \det(A) \neq 0\}$
 
 ## Oss
 
@@ -137,56 +304,83 @@
     - $n \in \mathbb{N}$
 - **Th**
     - $(\textrm{GL}(n, \mathbb{K}), \cdot)$ gruppo
+- **Dim**
+    - $\det(I_n) \neq 0 \implies I_n \in \textrm{GL}(n, \mathbb{K})$
+    - $A \in \textrm{GL}(n, \mathbb{K}) \implies \det(A) \neq 0 \implies \det(A)^{-1} \neq 0$, e per il corollario del teorema di Binet $0 \neq \det(A)^{-1} = \det(A^{-1}) \implies A^{-1} \in \textrm{GL}(n, \mathbb{K})$
 
 ## Oss
 
 - **Hp**
     - $\mathbb{K}$ campo
-    - $n \in \mathbb{N} - \{0\}$
+    - $n \in \mathbb{N}$
     - $f: \textrm{GL}(n, \mathbb{K}) \rightarrow \mathbb{K}^*$
 - **Th**
     - $f$ morfismo di gruppi
 
 ## Def
 
+- **Gruppo Speciale Lineare**
+
+> - $\mathbb{K}$ campo
+> - $n \in \mathbb{N}$
+> - $\textrm{SL}(n, \mathbb{K}) := \{A \in \textrm{Mat}_{n \times n}(\mathbb{K}) \mid \det(A) = 1\}$ è detto **gruppo speciale lineare**
+
+## Oss
+
+- **Hp**
+    - $\mathbb{K}$ campo
+    - $n \in \mathbb{N}$
+- **Th**
+    - $(\textrm{SL}(n, \mathbb{K}), \cdot) \trianglelefteq (\textrm{GL}(n, \mathbb{K}), \cdot)$
+- **Dim**
+    - $\det(I_n) = 1 \implies I_n \in \textrm{SL}(n, \mathbb{K})$
+    - $A, B \in \textrm{SL}(n, \mathbb{K}) \implies \det(A) = \det(B)=1$, e per il teorema di Binet $1 = \det (A) \cdot \det(B) = \det(A \cdot B) \implies A \cdot B \in \textrm{SL}(n, \mathbb{K})$
+    - $A \in \textrm{SL}(n, \mathbb{K}) \implies \det(A) = 1 \iff \det(A)^{-1} = 1$, e per il corollario del teorema di Binet $1 = \det(A)^{-1} = \det(A^{-1}) \implies A^{-1} \in \textrm{SL}(n, \mathbb{K})$
+    - $G \in \textrm{GL}(n, \mathbb{K}), H \in \textrm{SL}(n, \mathbb{K}) \implies \left \{ \begin{array}{l}\det(G \cdot H \cdot G^{-1}) =\det(G) \cdot \det(H) \cdot \det(G^{-1}) = \det(G) \cdot \det(G)^{-1} = 1 \\ \det(H) = 1 \end{array} \right. \implies G \cdot H \cdot G^{-1} \in \textrm{SL}(n, \mathbb{K})$
+
+## Oss
+
+- **Hp**
+    - $\mathbb{K}$ campo
+    - $n \in \mathbb{N}$
+- **Th**
+    - $(\textrm{GL}(n, \mathbb{K}) / \textrm{SL}(n , \mathbb{K}), \cdot)$ è ben definito
+- **Dim**
+    - $\forall A, B \in \textrm{GL}(n, \mathbb{K}) \quad A \sim B \iff A^{-1}\cdot B \in \textrm{SL}(n, \mathbb{K}) \iff \det(A^{-1}\cdot B) = 1 \iff \det(A^{-1}) \cdot \det(B) = 1 \iff \det(A)^{-1} \cdot \det(B) = 1 \iff \det(B) = \det(A)$, allora le matrici in relazione tra loro saranno le matrici con stesso determinante
+
+## Def
+
 - **Matrice ortogonale**
 
 > - $\mathbb{K}$ campo
-> - $n \in \mathbb{N} - \{0\}$
+> - $n \in \mathbb{N}$
 > - $A \in \textrm{GL}(n, \mathbb{K})$
 > - $A$ è detta **ortogonale** $\iff A \cdot A^T = A^T \cdot A = I_n$
 >   - in particolare $A^{-1} = A^T$
+>   - inoltre, $A_1, \ldots A_n$ e $A^1, \ldots, A^n$ base ortonormale di $\mathbb{K}^n$
 
 - **Gruppo ortogonale**
 
 > - $\mathbb{K}$ campo
-> - $n \in \mathbb{N} - \{0\}$
+> - $n \in \mathbb{N}$
 > - $A \in \textrm{GL}(n, \mathbb{K})$
 > - $O(n) := \{ A \in \textrm{GL}(n, \mathbb{K}) \mid A$ ortogonale$\}$ è detto **gruppo ortogonale**
-
-## Def
-
-- **Gruppo Speciale Lineare**
-
-> - $\mathbb{K}$ campo
-> - $n \in \mathbb{N} - \{0\}$
-> - $\textrm{SL}(n, \mathbb{K}) := \{A \in \textrm{Mat}_{n \times n}(\mathbb{K}) \mid \det(A) = 1\}$ è detto **gruppo generale lineare invertibile**
 
 ## Def
 
 - **Matrici simili**
 
 > - $\mathbb{K}$ campo
-> - $n \in \mathbb{N} - \{0\}$
+> - $n \in \mathbb{N}$
 > - $A, B \in \textrm{Mat}_{n \times n}(\mathbb{K})$
-> - $A$ **simile a $B$** $\iff \exists C \in \textrm{GL}(n, \mathbb{K}) \mid A = C^{-1}BC$
+> - $A$ è detta **simile a $B$** $\iff \exists C \in \textrm{GL}(n, \mathbb{K}) \mid A = C^{-1}BC$
 
 ## Def
 
 - **Traccia**
 
 > - $\mathbb{K}$ campo
-> - $n \in \mathbb{N} - \{0\}$
+> - $n \in \mathbb{N}$
 > - $A \in \textrm{Mat}_{n \times n}(\mathbb{K})$
 > - $\textrm{tr}(A) := a_{1,1}+ \ldots + a_{n,n}$ è detta **traccia di $A$**
 
@@ -194,7 +388,7 @@
 
 - **Hp**
     - $\mathbb{K}$ campo
-    - $n \in \mathbb{N} - \{0\}$
+    - $n \in \mathbb{N}$
     - $A, B \in \textrm{Mat}_{n \times n}(\mathbb{K}) \mid A$ simile a $B$
 - **Th**
     - $\textrm{tr}(A) = \textrm{tr}(B)$
@@ -204,43 +398,43 @@
 - **Matrice triangolare superiore**
 
 > - $\mathbb{K}$ campo
-> - $n \in \mathbb{N} - \{0\}$
+> - $n \in \mathbb{N}$
 > - $A \in \textrm{Mat}_{n \times n}(\mathbb{K})$
 > - $A$ è detta **triangolare superiore** $\iff \forall i, j \in [1, n], i \gt j \quad a_{i,j} = 0$
 
 - **Matrice triangolare inferiore**
 
 > - $\mathbb{K}$ campo
-> - $n \in \mathbb{N} - \{0\}$
+> - $n \in \mathbb{N}$
 > - $A \in \textrm{Mat}_{n \times n}(\mathbb{K})$
 > - $A$ è detta **triangolare inferiore** $\iff \forall i, j \in [1, n], i \lt j \quad a_{i,j} = 0$
 
 - **Matrice triangolare**
 
 > - $\mathbb{K}$ campo
-> - $n \in \mathbb{N} - \{0\}$
+> - $n \in \mathbb{N}$
 > - $A \in \textrm{Mat}_{n \times n}(\mathbb{K})$
 > - $A$ è detta **triangolare $\iff$** $A$ triangolare superiore o triangolare inferiore
 
 - **Matrice triangolarizzabile**
 
 > - $\mathbb{K}$ campo
-> - $n \in \mathbb{N} - \{0\}$
+> - $n \in \mathbb{N}$
 > - $A \in \textrm{Mat}_{n \times n}(\mathbb{K})$
 > - $A$ è detta **triangolarizzabile** $\iff \exists B \in \textrm{Mat}_{n \times n}(\mathbb{K}) \mid B$ triangolare $\land \ B$ simile ad $A$
 
 - **Matrice diagonale**
 
 > - $\mathbb{K}$ campo
-> - $n \in \mathbb{N} - \{0\}$
+> - $n \in \mathbb{N}$
 > - $A \in \textrm{Mat}_{n \times n}(\mathbb{K})$
 > - $A$ è detta **diagonale** $\iff \forall i, j \in [1, n], i \neq j \quad a_{i, j} = 0$
->   - in particolare, $A$ è diagonale $\iff A$ triangolare superiore ed inferiore
+>   - in particolare, $A$ diagonale $\iff A$ triangolare superiore ed inferiore
 
 - **Matrice diagonalizzabile**
 
 > - $\mathbb{K}$ campo
-> - $n \in \mathbb{N} - \{0\}$
+> - $n \in \mathbb{N}$
 > - $A \in \textrm{Mat}_{n \times n}(\mathbb{K})$
 > - $A$ è detta **diagonalizzabile** $\iff \exists B \in \textrm{Mat}_{n \times n}(\mathbb{K}) \mid B$ diagonale $\land \ B$ simile ad $A$
 
@@ -248,7 +442,7 @@
 
 - **Hp**
     - $\mathbb{K}$ campo
-    - $n \in \mathbb{N} - \{0\}$
+    - $n \in \mathbb{N}$
     - $A \in \textrm{Mat}_{n \times n}(\mathbb{K}) \mid A$ diagonalizzabile
 - **Th**
     - $A$ triangolarizzabile
@@ -258,32 +452,32 @@
 - **Sottomatrice di una matrice**
 
 > - $\mathbb{K}$ campo
-> - $m, n \in \mathbb{N} - \{0\}$
+> - $m, n \in \mathbb{N}$
 > - $A \in \textrm{Mat}_{m \times n}(\mathbb{K})$
-> - $A_i^j$ è una **sottomatrice di $A$** $\iff A_i^j$ si ottiene rimuovendo $A_i$ e $A^j$ da $A$
+> - $A_i^j$ è detta **sottomatrice di $A$** $\iff A_i^j$ si ottiene rimuovendo $A_i$ e $A^j$ da $A$
 
 - **Minore di una matrice**
 
 > - $\mathbb{K}$ campo
-> - $m, n \in \mathbb{N} - \{0\}$
+> - $m, n \in \mathbb{N}$
 > - $A \in \textrm{Mat}_{m \times n}(\mathbb{K})$
-> - $M$ è un **minore di $A$** $\iff M$ è una sottomatrice quadrata di $A$
+> - $M$ è detto **minore di $A$** $\iff M$ è una sottomatrice quadrata di $A$
 
 - **Orlato di un minore**
 
 > - $\mathbb{K}$ campo
-> - $m, n, r \in \mathbb{N} - \{0\} \mid r \lt m \land r \lt n$
+> - $m, n, r \in \mathbb{N} \mid r \lt m \land r \lt n$
 > - $A \in \textrm{Mat}_{m \times n}(\mathbb{K})$
-> - $M \in \textrm{Mat}_{r \times r}(\mathbb{K})$ è un minore di $A$
-> - $M' \in \textrm{Mat}_{(r + 1) \times (r + 1)}(\mathbb{K})$ è un **orlato di $M$** $\iff M'$ è un minore di $A$ e $M$ si ottiene rimuovendo una riga e una colonna da $M'$
+> - $M \in \textrm{Mat}_{r \times r}(\mathbb{K})$ minore di $A$
+> - $M' \in \textrm{Mat}_{(r + 1) \times (r + 1)}(\mathbb{K})$ è detto **orlato di $M$** $\iff M'$ è minore di $A$ e $M$ si ottiene rimuovendo una riga e una colonna da $M'$
 
 ## Oss
 
 - **Hp**
     - $\mathbb{K}$ campo
-    - $m, n, r \in \mathbb{N} - \{0\} \mid r \lt m \land r \lt n$
+    - $m, n, r \in \mathbb{N} \mid r \lt m \land r \lt n$
     - $A \in \textrm{Mat}_{m \times n}(\mathbb{K})$
-    - $M \in \textrm{Mat}_{r \times r}(\mathbb{K})$ è un minore di $A$
+    - $M \in \textrm{Mat}_{r \times r}(\mathbb{K})$ minore di $A$
 - **Th**
     - $M$ ha $(m-r)\cdot(n-r)$ orlati in $A$
     
@@ -292,214 +486,23 @@
 - **Matrice completa**
 
 > - $\mathbb{K}$ campo
-> - $m, n \in \mathbb{N} - \{0\}$
+> - $m, n \in \mathbb{N}$
 > - $A \in \textrm{Mat}_{m \times n}(\mathbb{K})$
 > - $b \in \textrm{Mat}_{m \times 1}(\mathbb{K})$
-> - $A_b:=\left(\begin{array}{cccc}a_{1, 1} & \cdots & a_{1, n} & b_1 \\ \vdots & \ddots & \vdots & \vdots \\ a_{m, 1} & \cdots & a_{m,n} & b_m\end{array}\right)$
+> - $A_b:=\left(\begin{array}{cccc}a_{1, 1} & \cdots & a_{1, n} & b_1 \\ \vdots & \ddots & \vdots & \vdots \\ a_{m, 1} & \cdots & a_{m,n} & b_m\end{array}\right)$ è detta **matrice completa di $A$ e $b$**
 
 ## Def
 
 - **Matrice di un'applicazione lineare**
 
 > - $\mathbb{K}$ campo
-> - $m, n \in \mathbb{N} - \{0\}$
+> - $m, n \in \mathbb{N}$
 > - $V, W$ spazi vettoriali su $\mathbb{K}$
 > - $\mathcal{B}=\{v_1, \ldots, v_n\}$ base di $V$
 > - $\mathcal{C}=\{w_1, \ldots, w_m\}$ base di $W$
 > - $f: V \rightarrow W$ isomorfismo
-> - $\varphi_\mathcal{B}: \mathbb{K}^N \rightarrow V$ isomorfismo
-> - $\varphi_\mathcal{C}: \mathbb{K}^M \rightarrow W$ isomorfismo
+> - $\varphi_\mathcal{B}: \mathbb{K}^n \rightarrow V$ isomorfismo
+> - $\varphi_\mathcal{C}: \mathbb{K}^m \rightarrow W$ isomorfismo
 > - $A \in \textrm{Mat}_{m \times n}(\mathbb{K}) \mid f = \varphi_\mathcal{C}\cdot L_A \cdot \varphi_\mathcal{B}^{-1}$ è detta **matrice di $f$**
->   - è possibile dimostrare che $\forall f$ applicazione lineare$\quad \exists ! A \in \textrm{Mat}_{m \times n}(\mathbb{K})$
-
-****
-
-# Rango
-
-## Def
-
-- **Sottospazio ortogonale**
-
-> - $\mathbb{K}$ campo
-> - $n \in \mathbb{N}$
-> - $V \subset \mathbb{K}^n$ sottospazio vettoriale
-> - $V^{\perp} := \{w \in \mathbb{K}^n \mid \forall v \in V \quad w \cdot v = 0_{\mathbb{K}^n}\}$ è detto **sottospazio ortogonale di $\mathbb{K}^n$**
->     - la definizione ha significato poiché il prodotto scalare tra due vettori è nullo esattamente quando i due vettori sono perpendicolari tra loro
-
-## Oss
-
-- **Hp**
-    - $\mathbb{K}$ campo
-    - $n \in \mathbb{N}$
-    - $V \subset \mathbb{K}^n$ sottospazio vettoriale
-- **Th**
-    - $V^{\bot} \subset \mathbb{K}^n$ sottospazio vettoriale
-
-## Oss
-
-- **Hp**
-    - $\mathbb{K}$ campo
-    - $n \in \mathbb{N}$
-    - $V \subset \mathbb{K}^n$ sottospazio vettoriale
-- **Th**
-    - $\dim(V^{\bot}) + \dim(V) = \dim(\mathbb{K}^n)$
-
-## Def
-
-- **Moltiplicazione sinistra**
-
-> - $\mathbb{K}$ campo
-> - $m,n \in \mathbb{N}$
-> - $A \in \textrm{Mat}_{m \times n}(\mathbb{K})$
-> - $L_A:\mathbb{K}^n \rightarrow \mathbb{K}^m: x \rightarrow A\cdot x$ è detta **moltiplicazione sinistra di $A$**
-
-## Oss
-
-- **Hp**
-    - $\mathbb{K}$ campo
-    - $m,n \in \mathbb{N}$
-    - $A \in \textrm{Mat}_{m \times n}(\mathbb{K})$
-- **Th**
-    - $L_A$ trasformazione lineare
-- **Dim**
-    - $\forall x, y \in \mathbb{K}^n \quad L_A(x + y) = A(x + y) = Ax + Ay = L_A(x) + L_A(y)$
-    - $\forall k \in \mathbb{K}, x \in \mathbb{K}^n \quad L_A(kx) = A(kx) = k(Ax)=kL_A(x)$
-
-## Oss
-
-- **Hp**
-    - $\mathbb{K}$ campo
-    - $m,n \in \mathbb{N}$
-    - $A \in \textrm{Mat}_{m \times n}(\mathbb{K})$
-- **Th**
-    - ⚠️ **da qua**
-    - $\ker(L_A) = \textrm{span}(A_1, \ldots, A_m)^\bot$
-    - $\textrm{im}(L_A) = \textrm{span}(A^1, \ldots, A^n)$
-- **Dim**
-    - $\ker(L_A) = \textrm{span}(A_1, \ldots, A_m)^\bot$
-        - $\ker(L_A) := \left\{x \in \mathbb{K}^n \mid L_A(x) = 0_{\mathbb{K}^m} \iff A \cdot x = 0_{\mathbb{K}^m} \iff \left(\begin{array}{c}A_1\cdot x \\ \vdots \\ A_m \cdot x\end{array}\right)= \left(\begin{array}{c} 0 \\ \vdots \\ 0\end{array}\right)\right\} = \textrm{span}(A_1, \ldots, A_m)^\bot$
-    - $\textrm{im}(L_A) = \textrm{span}(A^1, \ldots, A^n)$
-        - $\textrm{im}(L_A) \subset \textrm{span}(A^1, \ldots, A^n)$
-            - $\forall A \in \textrm{Mat}_{m \times n}(\mathbb{K}) \quad L_A(x) = A \cdot x$ per definizione di $L_A$
-            - $A \cdot x = \left(\begin{array}{ccc} a_{1,1} & \cdots & a_{1,n}\\ \vdots & \ddots & \vdots \\ a_{m,1} & \cdots & a_{m,n}\end{array}\right) \cdot \left(\begin{array}{c} x_1 \\ \vdots \\ x_n \end{array}\right) = \left(\begin{array}{c}a_{1, 1} x_1 + \ldots + a_{1,n}x_n \\ \vdots \\ a_{m,1}x_1 + \ldots + a_{m,n} x_n \end{array}\right) = \left(\begin{array}{c}A_1 \cdot x \\ \vdots \\ A_m \cdot x\end{array}\right) = x_1 \left(\begin{array}{c}a_{1, 1} \\ \vdots \\ a_{m, 1}\end{array}\right) + \ldots + x_n \left(\begin{array}{c}a_{1, n}\\ \vdots \\ a_{m, n}\end{array}\right) = x_1A^1 + \ldots + x_nA^n$, e poiché $x_1, \ldots x_n \in \mathbb{K} \implies x_1A^1+ \ldots + x_nA^n \in \textrm{span}(A^1, \ldots, A^n) \implies \textrm{im}(L_A) \subset \textrm{span}(A^1, \ldots, A^n)$
-        - $\textrm{span}(A^1, \ldots, A^n) \subset \textrm{im}(L_A)$
-            - $\forall v \in \textrm{span}(A^1, \ldots, A^n) \quad \exists x_1, \ldots, x_n \in \mathbb{K} \mid v = x_1 A^1 + \ldots + x_n A^n = A \cdot x$ per ragionamento analogo, e poiché $A \cdot x \in \textrm{im}(L_A)$, allora $\textrm{span}(A^1, \ldots, A^n) \subset \textrm{im}(L_A)$
-
-## Oss
-
-- **Rango di una matrice**
-
-> - $\mathbb{K}$ campo
-> - $m,n \in \mathbb{N}$
-> - $A \in \textrm{Mat}_{m \times n}(\mathbb{K})$
-> - $\textrm{rk}(A):=\textrm{rk}(L_A)$ è detto **rango di $A$**
->   - in particolare $\textrm{rk}(A) = \textrm{rk}(L_A)=\dim(\textrm{im}(L_A))$
-
-## Oss
-
-- **Hp**
-    - $\mathbb{K}$ campo
-    - $m,n \in \mathbb{N} - \{0\}$
-    - $A \in \textrm{Mat}_{m \times n}(\mathbb{K})$
-- **Th**
-    - $\textrm{rk}(A) =\dim(\textrm{span}(A^1, \ldots, A^n)) = \dim(\textrm{span}(A_1, \ldots, A_n))$
-- **Dim**
-    - per definizione $\textrm{rk}(A) = \textrm{rk}(L_A)$
-    - per dimostrazione precedente $L_A$ è una trasforamzione lineare, allora per definizione $\textrm{rk}(L_A) = \dim(\textrm{im}(L_A))$
-    - per dimostrazione precedente si ha che $\textrm{im}(L_A) = \textrm{span}(A^1, \ldots, A^n)$, allora $\dim(\textrm{im}(L_A)) = \dim(\textrm{span}(A^1, \ldots, A^n))$, e per ragionamento analogo $\dim(\ker(L_A)) = \dim(\textrm{span}(A_1, \ldots, A_m)^\bot)$
-    - allora $\dim(\textrm{im}(L_A)) = \textrm{rk}(L_A) = \dim(\mathbb{K}^n) - \dim(\ker(L_A)) = \dim(\mathbb{K}^n) - \dim(\textrm{span}(A_1, \ldots, A_m)^\bot)$
-    - per dimostrazione precedente si ha che $\dim(\textrm{span}(A_1, \ldots, A_m)^\bot)= \dim(\mathbb{K}^n) - \dim(\textrm{span}(A_1, \ldots, A_m))$
-    - allora $\textrm{rk}(A) = \dim(\textrm{span}(A^1, \ldots, A^n)) = \dim(\mathbb{K}^n) - (\dim(\mathbb{K}^n) - \dim(\textrm{span}(A_1, \ldots, A_m))) = \dim(\textrm{span}(A_1, \ldots, A_m))$
-
-****
-
-# Operazioni su righe e colonne
-
-## Def
-
-- **Scambio di righe di una matrice**
-
-> - $\mathbb{K}$ campo
-> - $m, n \in \mathbb{N} - \{0\}$
-> - $A \in \textrm{Mat}_{m \times n}(\mathbb{K})$
-> - $\forall A_1, \ldots, A_m$ righe di $A$, scambiare $A_i$ e $A_j$ lascia invariato $\ker(L_A)$
-
-- **Moltiplicazione di una riga per una costante**
-
-> - $\mathbb{K}$ campo
-> - $m, n \in \mathbb{N} - \{0\}$
-> - $A \in \textrm{Mat}_{m \times n}(\mathbb{K})$
-> - $\lambda \in \mathbb{K}^*$
-> - $\forall A_1, \ldots, A_m$ righe di $A$, moltiplicare $A_i$ per $\lambda$ lascia invariato $\ker(L_A)$
-
-- **Somma di una riga con un multiplo di un'altra**
-
-> - $\mathbb{K}$ campo
-> - $m, n \in \mathbb{N} - \{0\}$
-> - $A \in \textrm{Mat}_{m \times n}(\mathbb{K})$
-> - $\lambda \in \mathbb{K}^*$
-> - $\forall A_1, \ldots, A_m$ righe di $A$, sommare ad $A_i$ un certo $\lambda \cdot A_j$ lascia invariato $\ker(L_A)$
-
-- **Scambio di colonne di una matrice**
-
-> - $\mathbb{K}$ campo
-> - $m, n \in \mathbb{N} - \{0\}$
-> - $A \in \textrm{Mat}_{m \times n}(\mathbb{K})$
-> - $\forall A^1, \ldots, A^m$ colonne di $A$, scambiare $A^i$ e $A^j$ lascia invariato $\textrm{im}(L_A)$
-
-- **Moltiplicazione di una colonna per una costante**
-
-> - $\mathbb{K}$ campo
-> - $m, n \in \mathbb{N} - \{0\}$
-> - $A \in \textrm{Mat}_{m \times n}(\mathbb{K})$
-> - $\lambda \in \mathbb{K}^*$
-> - $\forall A^1, \ldots, A^m$ colonne di $A$, moltiplicare $A^i$ per $\lambda$ lascia invariato $\textrm{im}(L_A)$
-
-- **Somma di una colonna con un multiplo di un'altra**
-
-> - $\mathbb{K}$ campo
-> - $m, n \in \mathbb{N} - \{0\}$
-> - $A \in \textrm{Mat}_{m \times n}(\mathbb{K})$
-> - $\lambda \in \mathbb{K}^*$
-> - $\forall A^1, \ldots, A^m$ righe di $A$, sommare ad $A^i$ un certo $\lambda \cdot A^j$ lascia invariato $\textrm{im}(L_A)$
-
-## Oss
-
-- **Hp**
-    - $\mathbb{K}$ campo
-    - $m, n \in \mathbb{N} - \{0\}$
-    - $A, B \in \textrm{Mat}_{m \times n}(\mathbb{K})$
-    - $A \equiv B \iff$ è possibile ricavare $B$ da $A$ eseguendo operazioni _tra righe_ definite precedentemente
-- **Th**
-    - $\equiv$ una relazione di equivalenza
-
-## Oss
-
-- **Hp**
-    - $\mathbb{K}$ campo
-    - $m, n \in \mathbb{N} - \{0\}$
-    - $A, B \in \textrm{Mat}_{m \times n}(\mathbb{K})$
-    - $A \equiv B \iff$ è possibile ricavare $B$ da $A$ eseguendo operazioni _tra righe_ definite precedentemente
-- **Th**
-    - $A \equiv B \implies \ker(L_A) = \ker(L_B) \land \textrm{rk}(A) = \textrm{rk}(B)$
-
-## Oss
-
-- **Hp**
-    - $\mathbb{K}$ campo
-    - $m, n \in \mathbb{N} - \{0\}$
-    - $A, B \in \textrm{Mat}_{m \times n}(\mathbb{K})$
-    - $A \equiv B \iff$ è possibile ricavare $B$ da $A$ eseguendo operazioni _tra colonne_ definite precedentemente
-- **Th**
-    - $\equiv$ una relazione di equivalenza
-
-## Oss
-
-- **Hp**
-    - $\mathbb{K}$ campo
-    - $m, n \in \mathbb{N} - \{0\}$
-    - $A, B \in \textrm{Mat}_{m \times n}(\mathbb{K})$
-    - $A \equiv B \iff$ è possibile ricavare $B$ da $A$ eseguendo operazioni _tra colonne_ definite precedentemente
-- **Th**
-    - $A \equiv B \implies \textrm{im}(L_A) = \textrm{im}(L_B) \land \textrm{rk}(A) = \textrm{rk}(B)$
+>   - è possibile dimostrare che $\forall f$ applicazione lineare$\quad \exists ! A \in \textrm{Mat}_{m \times n}(\mathbb{K})$ ⚠️ **eh si dimostralo però**
 

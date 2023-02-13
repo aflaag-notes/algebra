@@ -2338,11 +2338,192 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 ****
 
-# Matrici particolari
+# Rango
 
 
 
 ## Definizione 53
+
+
+- **Sottospazio ortogonale**
+
+> - $\mathbb{K}$ campo
+> - $n \in \mathbb{N}$
+> - $V \subset \mathbb{K}^n$ sottospazio vettoriale
+> - $V^{\perp} := \{w \in \mathbb{K}^n \mid \forall v \in V \quad w \cdot v = 0_{\mathbb{K}^n}\}$ è detto **sottospazio ortogonale di $\mathbb{K}^n$**
+>     - la definizione ha significato poiché il prodotto scalare tra due vettori è nullo esattamente quando i due vettori sono perpendicolari tra loro
+
+
+
+## Teorema 141
+
+
+- **Hp**
+    - $\mathbb{K}$ campo
+    - $n \in \mathbb{N}$
+    - $V \subset \mathbb{K}^n$ sottospazio vettoriale
+- **Th**
+    - $V^{\bot} \subset \mathbb{K}^n$ sottospazio vettoriale
+
+
+
+## Teorema 142
+
+
+- **Hp**
+    - $\mathbb{K}$ campo
+    - $n \in \mathbb{N}$
+    - $V \subset \mathbb{K}^n$ sottospazio vettoriale
+- **Th**
+    - $\dim(V^{\bot}) + \dim(V) = \dim(\mathbb{K}^n)$
+
+
+
+## Definizione 54
+
+
+- **Moltiplicazione sinistra**
+
+> - $\mathbb{K}$ campo
+> - $m,n \in \mathbb{N}$
+> - $A \in \textrm{Mat}_{m \times n}(\mathbb{K})$
+> - $L_A:\mathbb{K}^n \rightarrow \mathbb{K}^m: x \rightarrow Ax$ è detta **moltiplicazione sinistra di $A$**
+
+
+
+## Teorema 143
+
+
+- **Hp**
+    - $\mathbb{K}$ campo
+    - $m,n \in \mathbb{N}$
+    - $A \in \textrm{Mat}_{m \times n}(\mathbb{K})$
+- **Th**
+    - $L_A$ trasformazione lineare
+
+## Teorema 144
+
+
+- **Hp**
+    - $\mathbb{K}$ campo
+    - $m,n \in \mathbb{N}$
+    - $A \in \textrm{Mat}_{m \times n}(\mathbb{K})$
+- **Th**
+    - $\ker(L_A) = \textrm{span}(A_1, \ldots, A_m)^\bot$
+    - $\textrm{im}(L_A) = \textrm{span}(A^1, \ldots, A^n)$
+
+## Definizione 55
+
+
+- **Rango di una matrice**
+
+> - $\mathbb{K}$ campo
+> - $m,n \in \mathbb{N}$
+> - $A \in \textrm{Mat}_{m \times n}(\mathbb{K})$
+> - $\textrm{rk}(A):=\textrm{rk}(L_A)$ è detto **rango di $A$**
+>   - in particolare $\textrm{rk}(A) := \textrm{rk}(L_A) := \dim(\textrm{im}(L_A))$
+
+
+
+## Teorema 145
+
+
+- **Hp**
+    - $\mathbb{K}$ campo
+    - $m,n \in \mathbb{N}$
+    - $A \in \textrm{Mat}_{m \times n}(\mathbb{K})$
+- **Th**
+    - $\textrm{rk}(A) =\dim(\textrm{span}(A^1, \ldots, A^n)) = \dim(\textrm{span}(A_1, \ldots, A_n))$
+
+****
+
+# Operazioni su righe e colonne
+
+
+## Definizione 56
+
+
+- **Scambio di righe di una matrice**
+
+> - $\mathbb{K}$ campo
+> - $m, n \in \mathbb{N}$
+> - $A \in \textrm{Mat}_{m \times n}(\mathbb{K})$
+> - $\forall A_1, \ldots, A_m$ righe di $A$, scambiare $A_i$ e $A_j$ lascia invariato $\ker(L_A)$
+
+- **Moltiplicazione di una riga per una costante**
+
+> - $\mathbb{K}$ campo
+> - $m, n \in \mathbb{N}$
+> - $A \in \textrm{Mat}_{m \times n}(\mathbb{K})$
+> - $\lambda \in \mathbb{K}^*$
+> - $\forall A_1, \ldots, A_m$ righe di $A$, moltiplicare $A_i$ per $\lambda$ lascia invariato $\ker(L_A)$
+
+- **Somma di una riga con un multiplo di un'altra**
+
+> - $\mathbb{K}$ campo
+> - $m, n \in \mathbb{N}$
+> - $A \in \textrm{Mat}_{m \times n}(\mathbb{K})$
+> - $\lambda \in \mathbb{K}^*$
+> - $\forall A_1, \ldots, A_m$ righe di $A$, sommare ad $A_i$ un certo $\lambda \cdot A_j$ lascia invariato $\ker(L_A)$
+
+- **Scambio di colonne di una matrice**
+
+> - $\mathbb{K}$ campo
+> - $m, n \in \mathbb{N}$
+> - $A \in \textrm{Mat}_{m \times n}(\mathbb{K})$
+> - $\forall A^1, \ldots, A^m$ colonne di $A$, scambiare $A^i$ e $A^j$ lascia invariato $\textrm{im}(L_A)$
+
+- **Moltiplicazione di una colonna per una costante**
+
+> - $\mathbb{K}$ campo
+> - $m, n \in \mathbb{N}$
+> - $A \in \textrm{Mat}_{m \times n}(\mathbb{K})$
+> - $\lambda \in \mathbb{K}^*$
+> - $\forall A^1, \ldots, A^m$ colonne di $A$, moltiplicare $A^i$ per $\lambda$ lascia invariato $\textrm{im}(L_A)$
+
+- **Somma di una colonna con un multiplo di un'altra**
+
+> - $\mathbb{K}$ campo
+> - $m, n \in \mathbb{N}$
+> - $A \in \textrm{Mat}_{m \times n}(\mathbb{K})$
+> - $\lambda \in \mathbb{K}^*$
+> - $\forall A^1, \ldots, A^m$ righe di $A$, sommare ad $A^i$ un certo $\lambda \cdot A^j$ lascia invariato $\textrm{im}(L_A)$
+
+
+
+## Teorema 146
+
+
+- **Hp**
+    - $\mathbb{K}$ campo
+    - $m, n \in \mathbb{N}$
+    - $A, B \in \textrm{Mat}_{m \times n}(\mathbb{K})$
+    - $A \equiv_R B \iff$ è possibile ricavare $B$ da $A$ eseguendo operazioni tra righe
+- **Th**
+    - $\equiv_R$ relazione di equivalenza
+    - $A \equiv_R B \implies \left \{ \begin{array}{l}\ker(L_A) = \ker(L_B) \\ \textrm{rk}(A) = \textrm{rk}(B) \end{array} \right.$
+
+
+
+## Teorema 147
+
+
+- **Hp**
+    - $\mathbb{K}$ campo
+    - $m, n \in \mathbb{N}$
+    - $A, B \in \textrm{Mat}_{m \times n}(\mathbb{K})$
+    - $A \equiv_C B \iff$ è possibile ricavare $B$ da $A$ eseguendo operazioni tra colonne
+- **Th**
+    - $\equiv_C$ una relazione di equivalenza
+    - $A \equiv_C B \implies \left \{ \begin{array}{l}\textrm{im}(L_A) = \textrm{im}(L_B) \\ \textrm{rk}(A) = \textrm{rk}(B) \end{array}\right.$
+
+****
+
+# Matrici particolari
+
+
+
+## Definizione 57
 
 
 - **Vettore trasposto**
@@ -2369,7 +2550,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 141
+## Teorema 148
 
 
 - **Hp**
@@ -2381,7 +2562,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Definizione 54
+## Definizione 58
 
 
 - **Matrice identità**
@@ -2393,7 +2574,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 142
+## Teorema 149
 
 
 - **Hp**
@@ -2404,7 +2585,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Definizione 55
+## Definizione 59
 
 
 - **Matrice invertibile**
@@ -2413,286 +2594,14 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 > - $n \in \mathbb{N}$
 > - $A \in \textrm{Mat}_{n \times n}(\mathbb{K})$
 > - $A$ è detta **invertibile** $\iff \exists A^{-1} \in \textrm{Mat}_{n \times n}(\mathbb{K}) \mid A\cdot A^{-1} = A^{-1} \cdot A = I_n$
+>   - in particolare $A$ invertibile $\iff \det(A) \neq 0$
 
 - **Gruppo Generale Lineare**
 
 > - $\mathbb{K}$ campo
 > - $n \in \mathbb{N}$
-> - $\textrm{GL}(n, \mathbb{K}) := \{A \in \textrm{Mat}_{n \times n}(\mathbb{K}) \mid A$ invertibile$\}$ è detto **gruppo speciale lineare invertibile**
-
-
-
-## Teorema 143
-
-
-- **Hp**
-    - $\mathbb{K}$ campo
-    - $n \in \mathbb{N}$
-- **Th**
-    - $(\textrm{GL}(n, \mathbb{K}), \cdot)$ gruppo
-
-
-
-## Teorema 144
-
-
-- **Hp**
-    - $\mathbb{K}$ campo
-    - $n \in \mathbb{N} - \{0\}$
-    - $f: \textrm{GL}(n, \mathbb{K}) \rightarrow \mathbb{K}^*$
-- **Th**
-    - $f$ morfismo di gruppi
-
-
-
-## Definizione 56
-
-
-- **Matrice ortogonale**
-
-> - $\mathbb{K}$ campo
-> - $n \in \mathbb{N} - \{0\}$
-> - $A \in \textrm{GL}(n, \mathbb{K})$
-> - $A$ è detta **ortogonale** $\iff A \cdot A^T = A^T \cdot A = I_n$
->   - in particolare $A^{-1} = A^T$
-
-- **Gruppo ortogonale**
-
-> - $\mathbb{K}$ campo
-> - $n \in \mathbb{N} - \{0\}$
-> - $A \in \textrm{GL}(n, \mathbb{K})$
-> - $O(n) := \{ A \in \textrm{GL}(n, \mathbb{K}) \mid A$ ortogonale$\}$ è detto **gruppo ortogonale**
-
-
-
-## Definizione 57
-
-
-- **Gruppo Speciale Lineare**
-
-> - $\mathbb{K}$ campo
-> - $n \in \mathbb{N} - \{0\}$
-> - $\textrm{SL}(n, \mathbb{K}) := \{A \in \textrm{Mat}_{n \times n}(\mathbb{K}) \mid \det(A) = 1\}$ è detto **gruppo generale lineare invertibile**
-
-
-
-## Definizione 58
-
-
-- **Matrici simili**
-
-> - $\mathbb{K}$ campo
-> - $n \in \mathbb{N} - \{0\}$
-> - $A, B \in \textrm{Mat}_{n \times n}(\mathbb{K})$
-> - $A$ **simile a $B$** $\iff \exists C \in \textrm{GL}(n, \mathbb{K}) \mid A = C^{-1}BC$
-
-
-
-## Definizione 59
-
-
-- **Traccia**
-
-> - $\mathbb{K}$ campo
-> - $n \in \mathbb{N} - \{0\}$
-> - $A \in \textrm{Mat}_{n \times n}(\mathbb{K})$
-> - $\textrm{tr}(A) := a_{1,1}+ \ldots + a_{n,n}$ è detta **traccia di $A$**
-
-
-
-## Teorema 145
-
-
-- **Hp**
-    - $\mathbb{K}$ campo
-    - $n \in \mathbb{N} - \{0\}$
-    - $A, B \in \textrm{Mat}_{n \times n}(\mathbb{K}) \mid A$ simile a $B$
-- **Th**
-    - $\textrm{tr}(A) = \textrm{tr}(B)$
-
-
-
-## Definizione 60
- 
-
-- **Matrice triangolare superiore**
-
-> - $\mathbb{K}$ campo
-> - $n \in \mathbb{N} - \{0\}$
-> - $A \in \textrm{Mat}_{n \times n}(\mathbb{K})$
-> - $A$ è detta **triangolare superiore** $\iff \forall i, j \in [1, n], i \gt j \quad a_{i,j} = 0$
-
-- **Matrice triangolare inferiore**
-
-> - $\mathbb{K}$ campo
-> - $n \in \mathbb{N} - \{0\}$
-> - $A \in \textrm{Mat}_{n \times n}(\mathbb{K})$
-> - $A$ è detta **triangolare inferiore** $\iff \forall i, j \in [1, n], i \lt j \quad a_{i,j} = 0$
-
-- **Matrice triangolare**
-
-> - $\mathbb{K}$ campo
-> - $n \in \mathbb{N} - \{0\}$
-> - $A \in \textrm{Mat}_{n \times n}(\mathbb{K})$
-> - $A$ è detta **triangolare $\iff$** $A$ triangolare superiore o triangolare inferiore
-
-- **Matrice triangolarizzabile**
-
-> - $\mathbb{K}$ campo
-> - $n \in \mathbb{N} - \{0\}$
-> - $A \in \textrm{Mat}_{n \times n}(\mathbb{K})$
-> - $A$ è detta **triangolarizzabile** $\iff \exists B \in \textrm{Mat}_{n \times n}(\mathbb{K}) \mid B$ triangolare $\land \ B$ simile ad $A$
-
-- **Matrice diagonale**
-
-> - $\mathbb{K}$ campo
-> - $n \in \mathbb{N} - \{0\}$
-> - $A \in \textrm{Mat}_{n \times n}(\mathbb{K})$
-> - $A$ è detta **diagonale** $\iff \forall i, j \in [1, n], i \neq j \quad a_{i, j} = 0$
->   - in particolare, $A$ è diagonale $\iff A$ triangolare superiore ed inferiore
-
-- **Matrice diagonalizzabile**
-
-> - $\mathbb{K}$ campo
-> - $n \in \mathbb{N} - \{0\}$
-> - $A \in \textrm{Mat}_{n \times n}(\mathbb{K})$
-> - $A$ è detta **diagonalizzabile** $\iff \exists B \in \textrm{Mat}_{n \times n}(\mathbb{K}) \mid B$ diagonale $\land \ B$ simile ad $A$
-
-
-
-## Teorema 146
-
-
-- **Hp**
-    - $\mathbb{K}$ campo
-    - $n \in \mathbb{N} - \{0\}$
-    - $A \in \textrm{Mat}_{n \times n}(\mathbb{K}) \mid A$ diagonalizzabile
-- **Th**
-    - $A$ triangolarizzabile
-
-
-
-## Definizione 61
-
-
-- **Sottomatrice di una matrice**
-
-> - $\mathbb{K}$ campo
-> - $m, n \in \mathbb{N} - \{0\}$
-> - $A \in \textrm{Mat}_{m \times n}(\mathbb{K})$
-> - $A_i^j$ è una **sottomatrice di $A$** $\iff A_i^j$ si ottiene rimuovendo $A_i$ e $A^j$ da $A$
-
-- **Minore di una matrice**
-
-> - $\mathbb{K}$ campo
-> - $m, n \in \mathbb{N} - \{0\}$
-> - $A \in \textrm{Mat}_{m \times n}(\mathbb{K})$
-> - $M$ è un **minore di $A$** $\iff M$ è una sottomatrice quadrata di $A$
-
-- **Orlato di un minore**
-
-> - $\mathbb{K}$ campo
-> - $m, n, r \in \mathbb{N} - \{0\} \mid r \lt m \land r \lt n$
-> - $A \in \textrm{Mat}_{m \times n}(\mathbb{K})$
-> - $M \in \textrm{Mat}_{r \times r}(\mathbb{K})$ è un minore di $A$
-> - $M' \in \textrm{Mat}_{(r + 1) \times (r + 1)}(\mathbb{K})$ è un **orlato di $M$** $\iff M'$ è un minore di $A$ e $M$ si ottiene rimuovendo una riga e una colonna da $M'$
-
-
-
-## Teorema 147
-
-
-- **Hp**
-    - $\mathbb{K}$ campo
-    - $m, n, r \in \mathbb{N} - \{0\} \mid r \lt m \land r \lt n$
-    - $A \in \textrm{Mat}_{m \times n}(\mathbb{K})$
-    - $M \in \textrm{Mat}_{r \times r}(\mathbb{K})$ è un minore di $A$
-- **Th**
-    - $M$ ha $(m-r)\cdot(n-r)$ orlati in $A$
-    
-
-
-## Definizione 62
-
-
-- **Matrice completa**
-
-> - $\mathbb{K}$ campo
-> - $m, n \in \mathbb{N} - \{0\}$
-> - $A \in \textrm{Mat}_{m \times n}(\mathbb{K})$
-> - $b \in \textrm{Mat}_{m \times 1}(\mathbb{K})$
-> - $A_b:=\left(\begin{array}{cccc}a_{1, 1} & \cdots & a_{1, n} & b_1 \\ \vdots & \ddots & \vdots & \vdots \\ a_{m, 1} & \cdots & a_{m,n} & b_m\end{array}\right)$
-
-
-
-## Definizione 63
-
-
-- **Matrice di un'applicazione lineare**
-
-> - $\mathbb{K}$ campo
-> - $m, n \in \mathbb{N} - \{0\}$
-> - $V, W$ spazi vettoriali su $\mathbb{K}$
-> - $\mathcal{B}=\{v_1, \ldots, v_n\}$ base di $V$
-> - $\mathcal{C}=\{w_1, \ldots, w_m\}$ base di $W$
-> - $f: V \rightarrow W$ isomorfismo
-> - $\varphi_\mathcal{B}: \mathbb{K}^N \rightarrow V$ isomorfismo
-> - $\varphi_\mathcal{C}: \mathbb{K}^M \rightarrow W$ isomorfismo
-> - $A \in \textrm{Mat}_{m \times n}(\mathbb{K}) \mid f = \varphi_\mathcal{C}\cdot L_A \cdot \varphi_\mathcal{B}^{-1}$ è detta **matrice di $f$**
->   - è possibile dimostrare che $\forall f$ applicazione lineare$\quad \exists ! A \in \textrm{Mat}_{m \times n}(\mathbb{K})$
-
-****
-
-# Rango
-
-
-
-## Definizione 64
-
-
-- **Sottospazio ortogonale**
-
-> - $\mathbb{K}$ campo
-> - $n \in \mathbb{N}$
-> - $V \subset \mathbb{K}^n$ sottospazio vettoriale
-> - $V^{\perp} := \{w \in \mathbb{K}^n \mid \forall v \in V \quad w \cdot v = 0_{\mathbb{K}^n}\}$ è detto **sottospazio ortogonale di $\mathbb{K}^n$**
->     - la definizione ha significato poiché il prodotto scalare tra due vettori è nullo esattamente quando i due vettori sono perpendicolari tra loro
-
-
-
-## Teorema 148
-
-
-- **Hp**
-    - $\mathbb{K}$ campo
-    - $n \in \mathbb{N}$
-    - $V \subset \mathbb{K}^n$ sottospazio vettoriale
-- **Th**
-    - $V^{\bot} \subset \mathbb{K}^n$ sottospazio vettoriale
-
-
-
-## Teorema 149
-
-
-- **Hp**
-    - $\mathbb{K}$ campo
-    - $n \in \mathbb{N}$
-    - $V \subset \mathbb{K}^n$ sottospazio vettoriale
-- **Th**
-    - $\dim(V^{\bot}) + \dim(V) = \dim(\mathbb{K}^n)$
-
-
-
-## Definizione 65
-
-
-- **Moltiplicazione sinistra**
-
-> - $\mathbb{K}$ campo
-> - $m,n \in \mathbb{N}$
-> - $A \in \textrm{Mat}_{m \times n}(\mathbb{K})$
-> - $L_A:\mathbb{K}^n \rightarrow \mathbb{K}^m: x \rightarrow A\cdot x$ è detta **moltiplicazione sinistra di $A$**
+> - $\textrm{GL}(n, \mathbb{K}) := \{A \in \textrm{Mat}_{n \times n}(\mathbb{K}) \mid A$ invertibile$\}$ è detto **gruppo generale lineare**
+>   - in particolare $\textrm{GL}(n, \mathbb{K}) := \{A \in \textrm{Mat}_{n \times n}(\mathbb{K}) \mid \det(A) \neq 0\}$
 
 
 
@@ -2701,33 +2610,30 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 - **Hp**
     - $\mathbb{K}$ campo
-    - $m,n \in \mathbb{N}$
-    - $A \in \textrm{Mat}_{m \times n}(\mathbb{K})$
+    - $n \in \mathbb{N}$
 - **Th**
-    - $L_A$ trasformazione lineare
+    - $(\textrm{GL}(n, \mathbb{K}), \cdot)$ gruppo
 
 ## Teorema 151
 
 
 - **Hp**
     - $\mathbb{K}$ campo
-    - $m,n \in \mathbb{N}$
-    - $A \in \textrm{Mat}_{m \times n}(\mathbb{K})$
+    - $n \in \mathbb{N}$
+    - $f: \textrm{GL}(n, \mathbb{K}) \rightarrow \mathbb{K}^*$
 - **Th**
-    - ⚠️ **da qua**
-    - $\ker(L_A) = \textrm{span}(A_1, \ldots, A_m)^\bot$
-    - $\textrm{im}(L_A) = \textrm{span}(A^1, \ldots, A^n)$
-
-## Definizione 66
+    - $f$ morfismo di gruppi
 
 
-- **Rango di una matrice**
+
+## Definizione 60
+
+
+- **Gruppo Speciale Lineare**
 
 > - $\mathbb{K}$ campo
-> - $m,n \in \mathbb{N}$
-> - $A \in \textrm{Mat}_{m \times n}(\mathbb{K})$
-> - $\textrm{rk}(A):=\textrm{rk}(L_A)$ è detto **rango di $A$**
->   - in particolare $\textrm{rk}(A) = \textrm{rk}(L_A)=\dim(\textrm{im}(L_A))$
+> - $n \in \mathbb{N}$
+> - $\textrm{SL}(n, \mathbb{K}) := \{A \in \textrm{Mat}_{n \times n}(\mathbb{K}) \mid \det(A) = 1\}$ è detto **gruppo speciale lineare**
 
 
 
@@ -2736,77 +2642,61 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 - **Hp**
     - $\mathbb{K}$ campo
-    - $m,n \in \mathbb{N} - \{0\}$
-    - $A \in \textrm{Mat}_{m \times n}(\mathbb{K})$
+    - $n \in \mathbb{N}$
 - **Th**
-    - $\textrm{rk}(A) =\dim(\textrm{span}(A^1, \ldots, A^n)) = \dim(\textrm{span}(A_1, \ldots, A_n))$
-
-****
-
-# Operazioni su righe e colonne
-
-
-## Definizione 67
-
-
-- **Scambio di righe di una matrice**
-
-> - $\mathbb{K}$ campo
-> - $m, n \in \mathbb{N} - \{0\}$
-> - $A \in \textrm{Mat}_{m \times n}(\mathbb{K})$
-> - $\forall A_1, \ldots, A_m$ righe di $A$, scambiare $A_i$ e $A_j$ lascia invariato $\ker(L_A)$
-
-- **Moltiplicazione di una riga per una costante**
-
-> - $\mathbb{K}$ campo
-> - $m, n \in \mathbb{N} - \{0\}$
-> - $A \in \textrm{Mat}_{m \times n}(\mathbb{K})$
-> - $\lambda \in \mathbb{K}^*$
-> - $\forall A_1, \ldots, A_m$ righe di $A$, moltiplicare $A_i$ per $\lambda$ lascia invariato $\ker(L_A)$
-
-- **Somma di una riga con un multiplo di un'altra**
-
-> - $\mathbb{K}$ campo
-> - $m, n \in \mathbb{N} - \{0\}$
-> - $A \in \textrm{Mat}_{m \times n}(\mathbb{K})$
-> - $\lambda \in \mathbb{K}^*$
-> - $\forall A_1, \ldots, A_m$ righe di $A$, sommare ad $A_i$ un certo $\lambda \cdot A_j$ lascia invariato $\ker(L_A)$
-
-- **Scambio di colonne di una matrice**
-
-> - $\mathbb{K}$ campo
-> - $m, n \in \mathbb{N} - \{0\}$
-> - $A \in \textrm{Mat}_{m \times n}(\mathbb{K})$
-> - $\forall A^1, \ldots, A^m$ colonne di $A$, scambiare $A^i$ e $A^j$ lascia invariato $\textrm{im}(L_A)$
-
-- **Moltiplicazione di una colonna per una costante**
-
-> - $\mathbb{K}$ campo
-> - $m, n \in \mathbb{N} - \{0\}$
-> - $A \in \textrm{Mat}_{m \times n}(\mathbb{K})$
-> - $\lambda \in \mathbb{K}^*$
-> - $\forall A^1, \ldots, A^m$ colonne di $A$, moltiplicare $A^i$ per $\lambda$ lascia invariato $\textrm{im}(L_A)$
-
-- **Somma di una colonna con un multiplo di un'altra**
-
-> - $\mathbb{K}$ campo
-> - $m, n \in \mathbb{N} - \{0\}$
-> - $A \in \textrm{Mat}_{m \times n}(\mathbb{K})$
-> - $\lambda \in \mathbb{K}^*$
-> - $\forall A^1, \ldots, A^m$ righe di $A$, sommare ad $A^i$ un certo $\lambda \cdot A^j$ lascia invariato $\textrm{im}(L_A)$
-
-
+    - $(\textrm{SL}(n, \mathbb{K}), \cdot) \trianglelefteq (\textrm{GL}(n, \mathbb{K}), \cdot)$
 
 ## Teorema 153
 
 
 - **Hp**
     - $\mathbb{K}$ campo
-    - $m, n \in \mathbb{N} - \{0\}$
-    - $A, B \in \textrm{Mat}_{m \times n}(\mathbb{K})$
-    - $A \equiv B \iff$ è possibile ricavare $B$ da $A$ eseguendo operazioni _tra righe_ definite precedentemente
+    - $n \in \mathbb{N}$
 - **Th**
-    - $\equiv$ una relazione di equivalenza
+    - $(\textrm{GL}(n, \mathbb{K}) / \textrm{SL}(n , \mathbb{K}), \cdot)$ è ben definito
+
+## Definizione 61
+
+
+- **Matrice ortogonale**
+
+> - $\mathbb{K}$ campo
+> - $n \in \mathbb{N}$
+> - $A \in \textrm{GL}(n, \mathbb{K})$
+> - $A$ è detta **ortogonale** $\iff A \cdot A^T = A^T \cdot A = I_n$
+>   - in particolare $A^{-1} = A^T$
+>   - inoltre, $A_1, \ldots A_n$ e $A^1, \ldots, A^n$ base ortonormale di $\mathbb{K}^n$
+
+- **Gruppo ortogonale**
+
+> - $\mathbb{K}$ campo
+> - $n \in \mathbb{N}$
+> - $A \in \textrm{GL}(n, \mathbb{K})$
+> - $O(n) := \{ A \in \textrm{GL}(n, \mathbb{K}) \mid A$ ortogonale$\}$ è detto **gruppo ortogonale**
+
+
+
+## Definizione 62
+
+
+- **Matrici simili**
+
+> - $\mathbb{K}$ campo
+> - $n \in \mathbb{N}$
+> - $A, B \in \textrm{Mat}_{n \times n}(\mathbb{K})$
+> - $A$ è detta **simile a $B$** $\iff \exists C \in \textrm{GL}(n, \mathbb{K}) \mid A = C^{-1}BC$
+
+
+
+## Definizione 63
+
+
+- **Traccia**
+
+> - $\mathbb{K}$ campo
+> - $n \in \mathbb{N}$
+> - $A \in \textrm{Mat}_{n \times n}(\mathbb{K})$
+> - $\textrm{tr}(A) := a_{1,1}+ \ldots + a_{n,n}$ è detta **traccia di $A$**
 
 
 
@@ -2815,11 +2705,58 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 - **Hp**
     - $\mathbb{K}$ campo
-    - $m, n \in \mathbb{N} - \{0\}$
-    - $A, B \in \textrm{Mat}_{m \times n}(\mathbb{K})$
-    - $A \equiv B \iff$ è possibile ricavare $B$ da $A$ eseguendo operazioni _tra righe_ definite precedentemente
+    - $n \in \mathbb{N}$
+    - $A, B \in \textrm{Mat}_{n \times n}(\mathbb{K}) \mid A$ simile a $B$
 - **Th**
-    - $A \equiv B \implies \ker(L_A) = \ker(L_B) \land \textrm{rk}(A) = \textrm{rk}(B)$
+    - $\textrm{tr}(A) = \textrm{tr}(B)$
+
+
+
+## Definizione 64
+ 
+
+- **Matrice triangolare superiore**
+
+> - $\mathbb{K}$ campo
+> - $n \in \mathbb{N}$
+> - $A \in \textrm{Mat}_{n \times n}(\mathbb{K})$
+> - $A$ è detta **triangolare superiore** $\iff \forall i, j \in [1, n], i \gt j \quad a_{i,j} = 0$
+
+- **Matrice triangolare inferiore**
+
+> - $\mathbb{K}$ campo
+> - $n \in \mathbb{N}$
+> - $A \in \textrm{Mat}_{n \times n}(\mathbb{K})$
+> - $A$ è detta **triangolare inferiore** $\iff \forall i, j \in [1, n], i \lt j \quad a_{i,j} = 0$
+
+- **Matrice triangolare**
+
+> - $\mathbb{K}$ campo
+> - $n \in \mathbb{N}$
+> - $A \in \textrm{Mat}_{n \times n}(\mathbb{K})$
+> - $A$ è detta **triangolare $\iff$** $A$ triangolare superiore o triangolare inferiore
+
+- **Matrice triangolarizzabile**
+
+> - $\mathbb{K}$ campo
+> - $n \in \mathbb{N}$
+> - $A \in \textrm{Mat}_{n \times n}(\mathbb{K})$
+> - $A$ è detta **triangolarizzabile** $\iff \exists B \in \textrm{Mat}_{n \times n}(\mathbb{K}) \mid B$ triangolare $\land \ B$ simile ad $A$
+
+- **Matrice diagonale**
+
+> - $\mathbb{K}$ campo
+> - $n \in \mathbb{N}$
+> - $A \in \textrm{Mat}_{n \times n}(\mathbb{K})$
+> - $A$ è detta **diagonale** $\iff \forall i, j \in [1, n], i \neq j \quad a_{i, j} = 0$
+>   - in particolare, $A$ diagonale $\iff A$ triangolare superiore ed inferiore
+
+- **Matrice diagonalizzabile**
+
+> - $\mathbb{K}$ campo
+> - $n \in \mathbb{N}$
+> - $A \in \textrm{Mat}_{n \times n}(\mathbb{K})$
+> - $A$ è detta **diagonalizzabile** $\iff \exists B \in \textrm{Mat}_{n \times n}(\mathbb{K}) \mid B$ diagonale $\land \ B$ simile ad $A$
 
 
 
@@ -2828,11 +2765,37 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 - **Hp**
     - $\mathbb{K}$ campo
-    - $m, n \in \mathbb{N} - \{0\}$
-    - $A, B \in \textrm{Mat}_{m \times n}(\mathbb{K})$
-    - $A \equiv B \iff$ è possibile ricavare $B$ da $A$ eseguendo operazioni _tra colonne_ definite precedentemente
+    - $n \in \mathbb{N}$
+    - $A \in \textrm{Mat}_{n \times n}(\mathbb{K}) \mid A$ diagonalizzabile
 - **Th**
-    - $\equiv$ una relazione di equivalenza
+    - $A$ triangolarizzabile
+
+
+
+## Definizione 65
+
+
+- **Sottomatrice di una matrice**
+
+> - $\mathbb{K}$ campo
+> - $m, n \in \mathbb{N}$
+> - $A \in \textrm{Mat}_{m \times n}(\mathbb{K})$
+> - $A_i^j$ è detta **sottomatrice di $A$** $\iff A_i^j$ si ottiene rimuovendo $A_i$ e $A^j$ da $A$
+
+- **Minore di una matrice**
+
+> - $\mathbb{K}$ campo
+> - $m, n \in \mathbb{N}$
+> - $A \in \textrm{Mat}_{m \times n}(\mathbb{K})$
+> - $M$ è detto **minore di $A$** $\iff M$ è una sottomatrice quadrata di $A$
+
+- **Orlato di un minore**
+
+> - $\mathbb{K}$ campo
+> - $m, n, r \in \mathbb{N} \mid r \lt m \land r \lt n$
+> - $A \in \textrm{Mat}_{m \times n}(\mathbb{K})$
+> - $M \in \textrm{Mat}_{r \times r}(\mathbb{K})$ minore di $A$
+> - $M' \in \textrm{Mat}_{(r + 1) \times (r + 1)}(\mathbb{K})$ è detto **orlato di $M$** $\iff M'$ è minore di $A$ e $M$ si ottiene rimuovendo una riga e una colonna da $M'$
 
 
 
@@ -2841,11 +2804,42 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 - **Hp**
     - $\mathbb{K}$ campo
-    - $m, n \in \mathbb{N} - \{0\}$
-    - $A, B \in \textrm{Mat}_{m \times n}(\mathbb{K})$
-    - $A \equiv B \iff$ è possibile ricavare $B$ da $A$ eseguendo operazioni _tra colonne_ definite precedentemente
+    - $m, n, r \in \mathbb{N} \mid r \lt m \land r \lt n$
+    - $A \in \textrm{Mat}_{m \times n}(\mathbb{K})$
+    - $M \in \textrm{Mat}_{r \times r}(\mathbb{K})$ minore di $A$
 - **Th**
-    - $A \equiv B \implies \textrm{im}(L_A) = \textrm{im}(L_B) \land \textrm{rk}(A) = \textrm{rk}(B)$
+    - $M$ ha $(m-r)\cdot(n-r)$ orlati in $A$
+    
+
+
+## Definizione 66
+
+
+- **Matrice completa**
+
+> - $\mathbb{K}$ campo
+> - $m, n \in \mathbb{N}$
+> - $A \in \textrm{Mat}_{m \times n}(\mathbb{K})$
+> - $b \in \textrm{Mat}_{m \times 1}(\mathbb{K})$
+> - $A_b:=\left(\begin{array}{cccc}a_{1, 1} & \cdots & a_{1, n} & b_1 \\ \vdots & \ddots & \vdots & \vdots \\ a_{m, 1} & \cdots & a_{m,n} & b_m\end{array}\right)$ è detta **matrice completa di $A$ e $b$**
+
+
+
+## Definizione 67
+
+
+- **Matrice di un'applicazione lineare**
+
+> - $\mathbb{K}$ campo
+> - $m, n \in \mathbb{N}$
+> - $V, W$ spazi vettoriali su $\mathbb{K}$
+> - $\mathcal{B}=\{v_1, \ldots, v_n\}$ base di $V$
+> - $\mathcal{C}=\{w_1, \ldots, w_m\}$ base di $W$
+> - $f: V \rightarrow W$ isomorfismo
+> - $\varphi_\mathcal{B}: \mathbb{K}^n \rightarrow V$ isomorfismo
+> - $\varphi_\mathcal{C}: \mathbb{K}^m \rightarrow W$ isomorfismo
+> - $A \in \textrm{Mat}_{m \times n}(\mathbb{K}) \mid f = \varphi_\mathcal{C}\cdot L_A \cdot \varphi_\mathcal{B}^{-1}$ è detta **matrice di $f$**
+>   - è possibile dimostrare che $\forall f$ applicazione lineare$\quad \exists ! A \in \textrm{Mat}_{m \times n}(\mathbb{K})$ ⚠️ **eh si dimostralo però**
 
 
 
@@ -3825,11 +3819,12 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 - **Hp**
     - $\mathbb{K}$ campo
-    - $m, n \in \mathbb{N} - \{0\}$
+    - $m, n \in \mathbb{N}$
     - $A \in \textrm{Mat}_{m \times n}(\mathbb{K})$
     - $b \in \textrm{Mat}_{m \times 1}(\mathbb{K})$
 - **Th**
-    - $\exists x \in \textrm{Mat}_{n \times 1}(\mathbb{K}) \mid A\cdot x = b \iff \textrm{rk}(A) = \textrm{rk}(A_b)$
+    - ⚠️ **da rivedere**
+    - $\exists x \in \textrm{Mat}_{n \times 1}(\mathbb{K}) \mid A x = b \iff \textrm{rk}(A) = \textrm{rk}(A_b)$
 
 ****
 
@@ -3838,11 +3833,11 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 - **Hp**
     - $\mathbb{K}$ campo
-    - $n \in \mathbb{N} - \{0\}$
+    - $n \in \mathbb{N}$
     - $A \in \textrm{Mat}_{n \times n}(\mathbb{K}) \mid \det(A) \neq 0$
     - $b \in \textrm{Mat}_{n \times 1}(\mathbb{K})$
 - **Th**
-    - $\left\{\begin{array}{c}x_1 = \det(A)^{-1} \cdot \det\left(\begin{array}{cccc}b_1 & a_{1,2} &\cdots & a_{1,n} \\ \vdots & \vdots & \ddots & \vdots \\ b_n & a_{n, 2} & \cdots & a_{n,n}\end{array}\right) \\ \vdots \\ x_n = \det(A)^{-1} \cdot \det\left(\begin{array}{cccc}a_{1,1} & \cdots & a_{1,n-1} & b_1\\ \vdots & \ddots & \vdots & \vdots \\ a_{n, 1} & \cdots & a_{n,n-1} & b_n\end{array}\right) \end{array}\right.$ sono le componenti del vettore $x \in \textrm{Mat}_{n \times 1}(\mathbb{K}) \mid A \cdot x = b$
+    - $\left\{\begin{array}{c}x_1 = \det(A)^{-1} \cdot \det\left(\begin{array}{cccc}b_1 & a_{1,2} &\cdots & a_{1,n} \\ \vdots & \vdots & \ddots & \vdots \\ b_n & a_{n, 2} & \cdots & a_{n,n}\end{array}\right) \\ \vdots \\ x_n = \det(A)^{-1} \cdot \det\left(\begin{array}{cccc}a_{1,1} & \cdots & a_{1,n-1} & b_1\\ \vdots & \ddots & \vdots & \vdots \\ a_{n, 1} & \cdots & a_{n,n-1} & b_n\end{array}\right) \end{array}\right.$ sono le componenti del vettore $x \in \textrm{Mat}_{n \times 1}(\mathbb{K}) \mid A x = b$
 
 
 
@@ -3853,11 +3848,14 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 - **Hp**
     - $\mathbb{K}$ campo
-    - $n, r, r' \in \mathbb{N} - \{0\} \mid r \lt r' \lt n$
+    - $n, r, r' \in \mathbb{N} \mid r \lt r' \lt n$
     - $A \in \textrm{Mat}_{n \times n}(\mathbb{K})$
-    - $M_1 \in \textrm{Mat}_{r \times r}(\mathbb{K}) \mid M_1$ minore di $A \land \det(A) \neq 0$
+    - $M_1 \in \textrm{Mat}_{r \times r}(\mathbb{K}) \mid M_1$ minore di $A \land \det(M_1) \neq 0$
+    1. $\textrm{rk}(A)=r$
+    2. $\forall M_1'$ orlato di $M_1 \quad \det(M_1') = 0$
+    3. $\forall M_2 \in \textrm{Mat}_{r' \times r'}(\mathbb{K}) \mid M_2$ minore di $A \quad \det(M_2) = 0$
 - **Th**
-    - $\textrm{rk}(A)=r \iff \forall M_1'$ orlato di $M_1 \quad \det(M_1') = 0 \iff \forall M_2 \in \textrm{Mat}_{r' \times r'}(\mathbb{K}) \mid M_2$ minore di $A \quad \det(M_2) = 0$
+    - le proposizioni sono equivalenti
 
 
 
@@ -3868,7 +3866,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 - **Hp**
     - $\mathbb{K}$ campo
-    - $n \in \mathbb{N} - \{0\}$
+    - $n \in \mathbb{N}$
     - $A, B \in \textrm{Mat}_{n \times n}(\mathbb{K})$
 - **Th**
     - $\det(A \cdot B) = \det(A) \cdot \det(B)$
@@ -3879,7 +3877,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 - **Hp**
     - $\mathbb{K}$ campo
-    - $n \in \mathbb{N} - \{0\}$
+    - $n \in \mathbb{N}$
     - $A \in \textrm{Mat}_{n \times n}(\mathbb{K})$
 - **Th**
     - $\det(A)^{-1}=\det(A^{-1})$
@@ -3890,7 +3888,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 # Teorema spettrale
 
 - **Hp**
-    - $n \in \mathbb{N} - \{0\}$
+    - $n \in \mathbb{N}$
     - $A \in \textrm{Mat}_{n \times n}(\mathbb{R}) \mid A$ simmetrica
     1. $\forall \lambda \in \textrm{sp}(A) \quad \lambda \in \mathbb{R}$
     2. $A$ diagonalizzabile
@@ -3898,4 +3896,5 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
     4. $\exists B \in O(n) \mid B^{-1}AB$ diagonale
 - **Th**
     - le proposizioni sono equivalenti
+
 

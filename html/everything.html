@@ -3762,8 +3762,286 @@ k}(\mathbb{K}) \quad (A+B)C = AC+BC</span></li>
 </ul></li>
 </ul>
 <hr />
-<a href="#matrici-particolari"><h1 id="matrici-particolari">Matrici particolari</h1></a>
+<a href="#rango"><h1 id="rango">Rango</h1></a>
 <a href="#definizione-53"><h2 id="definizione-53">Definizione 53</h2></a>
+<ul>
+<li><strong>Sottospazio ortogonale</strong></li>
+</ul>
+<blockquote>
+<ul>
+<li><span class="math inline">\mathbb{K}</span> campo</li>
+<li><span class="math inline">n \in \mathbb{N}</span></li>
+<li><span class="math inline">V \subset \mathbb{K}^n</span> sottospazio
+vettoriale</li>
+<li><span class="math inline">V^{\perp} := \{w \in \mathbb{K}^n \mid
+\forall v \in V \quad w \cdot v = 0_{\mathbb{K}^n}\}</span> è detto
+<strong>sottospazio ortogonale di <span
+class="math inline">\mathbb{K}^n</span></strong>
+<ul>
+<li>la definizione ha significato poiché il prodotto scalare tra due
+vettori è nullo esattamente quando i due vettori sono perpendicolari tra
+loro</li>
+</ul></li>
+</ul>
+</blockquote>
+<a href="#teorema-141"><h2 id="teorema-141">Teorema 141</h2></a>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\mathbb{K}</span> campo</li>
+<li><span class="math inline">n \in \mathbb{N}</span></li>
+<li><span class="math inline">V \subset \mathbb{K}^n</span> sottospazio
+vettoriale</li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">V^{\bot} \subset \mathbb{K}^n</span>
+sottospazio vettoriale</li>
+</ul></li>
+</ul>
+<a href="#teorema-142"><h2 id="teorema-142">Teorema 142</h2></a>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\mathbb{K}</span> campo</li>
+<li><span class="math inline">n \in \mathbb{N}</span></li>
+<li><span class="math inline">V \subset \mathbb{K}^n</span> sottospazio
+vettoriale</li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\dim(V^{\bot}) + \dim(V) =
+\dim(\mathbb{K}^n)</span></li>
+</ul></li>
+</ul>
+<a href="#definizione-54"><h2 id="definizione-54">Definizione 54</h2></a>
+<ul>
+<li><strong>Moltiplicazione sinistra</strong></li>
+</ul>
+<blockquote>
+<ul>
+<li><span class="math inline">\mathbb{K}</span> campo</li>
+<li><span class="math inline">m,n \in \mathbb{N}</span></li>
+<li><span class="math inline">A \in \textrm{Mat}_{m \times
+n}(\mathbb{K})</span></li>
+<li><span class="math inline">L_A:\mathbb{K}^n \rightarrow \mathbb{K}^m:
+x \rightarrow Ax</span> è detta <strong>moltiplicazione sinistra di
+<span class="math inline">A</span></strong></li>
+</ul>
+</blockquote>
+<a href="#teorema-143"><h2 id="teorema-143">Teorema 143</h2></a>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\mathbb{K}</span> campo</li>
+<li><span class="math inline">m,n \in \mathbb{N}</span></li>
+<li><span class="math inline">A \in \textrm{Mat}_{m \times
+n}(\mathbb{K})</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">L_A</span> trasformazione lineare</li>
+</ul></li>
+</ul>
+<a href="#teorema-144"><h2 id="teorema-144">Teorema 144</h2></a>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\mathbb{K}</span> campo</li>
+<li><span class="math inline">m,n \in \mathbb{N}</span></li>
+<li><span class="math inline">A \in \textrm{Mat}_{m \times
+n}(\mathbb{K})</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\ker(L_A) = \textrm{span}(A_1, \ldots,
+A_m)^\bot</span></li>
+<li><span class="math inline">\textrm{im}(L_A) = \textrm{span}(A^1,
+\ldots, A^n)</span></li>
+</ul></li>
+</ul>
+<a href="#definizione-55"><h2 id="definizione-55">Definizione 55</h2></a>
+<ul>
+<li><strong>Rango di una matrice</strong></li>
+</ul>
+<blockquote>
+<ul>
+<li><span class="math inline">\mathbb{K}</span> campo</li>
+<li><span class="math inline">m,n \in \mathbb{N}</span></li>
+<li><span class="math inline">A \in \textrm{Mat}_{m \times
+n}(\mathbb{K})</span></li>
+<li><span class="math inline">\textrm{rk}(A):=\textrm{rk}(L_A)</span> è
+detto <strong>rango di <span class="math inline">A</span></strong>
+<ul>
+<li>in particolare <span class="math inline">\textrm{rk}(A) :=
+\textrm{rk}(L_A) := \dim(\textrm{im}(L_A))</span></li>
+</ul></li>
+</ul>
+</blockquote>
+<a href="#teorema-145"><h2 id="teorema-145">Teorema 145</h2></a>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\mathbb{K}</span> campo</li>
+<li><span class="math inline">m,n \in \mathbb{N}</span></li>
+<li><span class="math inline">A \in \textrm{Mat}_{m \times
+n}(\mathbb{K})</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\textrm{rk}(A) =\dim(\textrm{span}(A^1,
+\ldots, A^n)) = \dim(\textrm{span}(A_1, \ldots, A_n))</span></li>
+</ul></li>
+</ul>
+<hr />
+<a href="#operazioni-su-righe-e-colonne"><h1 id="operazioni-su-righe-e-colonne">Operazioni su righe e colonne</h1></a>
+
+<a href="#definizione-56"><h2 id="definizione-56">Definizione 56</h2></a>
+<ul>
+<li><strong>Scambio di righe di una matrice</strong></li>
+</ul>
+<blockquote>
+<ul>
+<li><span class="math inline">\mathbb{K}</span> campo</li>
+<li><span class="math inline">m, n \in \mathbb{N}</span></li>
+<li><span class="math inline">A \in \textrm{Mat}_{m \times
+n}(\mathbb{K})</span></li>
+<li><span class="math inline">\forall A_1, \ldots, A_m</span> righe di
+<span class="math inline">A</span>, scambiare <span
+class="math inline">A_i</span> e <span class="math inline">A_j</span>
+lascia invariato <span class="math inline">\ker(L_A)</span></li>
+</ul>
+</blockquote>
+<ul>
+<li><strong>Moltiplicazione di una riga per una costante</strong></li>
+</ul>
+<blockquote>
+<ul>
+<li><span class="math inline">\mathbb{K}</span> campo</li>
+<li><span class="math inline">m, n \in \mathbb{N}</span></li>
+<li><span class="math inline">A \in \textrm{Mat}_{m \times
+n}(\mathbb{K})</span></li>
+<li><span class="math inline">\lambda \in \mathbb{K}^*</span></li>
+<li><span class="math inline">\forall A_1, \ldots, A_m</span> righe di
+<span class="math inline">A</span>, moltiplicare <span
+class="math inline">A_i</span> per <span
+class="math inline">\lambda</span> lascia invariato <span
+class="math inline">\ker(L_A)</span></li>
+</ul>
+</blockquote>
+<ul>
+<li><strong>Somma di una riga con un multiplo di un’altra</strong></li>
+</ul>
+<blockquote>
+<ul>
+<li><span class="math inline">\mathbb{K}</span> campo</li>
+<li><span class="math inline">m, n \in \mathbb{N}</span></li>
+<li><span class="math inline">A \in \textrm{Mat}_{m \times
+n}(\mathbb{K})</span></li>
+<li><span class="math inline">\lambda \in \mathbb{K}^*</span></li>
+<li><span class="math inline">\forall A_1, \ldots, A_m</span> righe di
+<span class="math inline">A</span>, sommare ad <span
+class="math inline">A_i</span> un certo <span
+class="math inline">\lambda \cdot A_j</span> lascia invariato <span
+class="math inline">\ker(L_A)</span></li>
+</ul>
+</blockquote>
+<ul>
+<li><strong>Scambio di colonne di una matrice</strong></li>
+</ul>
+<blockquote>
+<ul>
+<li><span class="math inline">\mathbb{K}</span> campo</li>
+<li><span class="math inline">m, n \in \mathbb{N}</span></li>
+<li><span class="math inline">A \in \textrm{Mat}_{m \times
+n}(\mathbb{K})</span></li>
+<li><span class="math inline">\forall A^1, \ldots, A^m</span> colonne di
+<span class="math inline">A</span>, scambiare <span
+class="math inline">A^i</span> e <span class="math inline">A^j</span>
+lascia invariato <span class="math inline">\textrm{im}(L_A)</span></li>
+</ul>
+</blockquote>
+<ul>
+<li><strong>Moltiplicazione di una colonna per una
+costante</strong></li>
+</ul>
+<blockquote>
+<ul>
+<li><span class="math inline">\mathbb{K}</span> campo</li>
+<li><span class="math inline">m, n \in \mathbb{N}</span></li>
+<li><span class="math inline">A \in \textrm{Mat}_{m \times
+n}(\mathbb{K})</span></li>
+<li><span class="math inline">\lambda \in \mathbb{K}^*</span></li>
+<li><span class="math inline">\forall A^1, \ldots, A^m</span> colonne di
+<span class="math inline">A</span>, moltiplicare <span
+class="math inline">A^i</span> per <span
+class="math inline">\lambda</span> lascia invariato <span
+class="math inline">\textrm{im}(L_A)</span></li>
+</ul>
+</blockquote>
+<ul>
+<li><strong>Somma di una colonna con un multiplo di
+un’altra</strong></li>
+</ul>
+<blockquote>
+<ul>
+<li><span class="math inline">\mathbb{K}</span> campo</li>
+<li><span class="math inline">m, n \in \mathbb{N}</span></li>
+<li><span class="math inline">A \in \textrm{Mat}_{m \times
+n}(\mathbb{K})</span></li>
+<li><span class="math inline">\lambda \in \mathbb{K}^*</span></li>
+<li><span class="math inline">\forall A^1, \ldots, A^m</span> righe di
+<span class="math inline">A</span>, sommare ad <span
+class="math inline">A^i</span> un certo <span
+class="math inline">\lambda \cdot A^j</span> lascia invariato <span
+class="math inline">\textrm{im}(L_A)</span></li>
+</ul>
+</blockquote>
+<a href="#teorema-146"><h2 id="teorema-146">Teorema 146</h2></a>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\mathbb{K}</span> campo</li>
+<li><span class="math inline">m, n \in \mathbb{N}</span></li>
+<li><span class="math inline">A, B \in \textrm{Mat}_{m \times
+n}(\mathbb{K})</span></li>
+<li><span class="math inline">A \equiv_R B \iff</span> è possibile
+ricavare <span class="math inline">B</span> da <span
+class="math inline">A</span> eseguendo operazioni tra righe</li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\equiv_R</span> relazione di
+equivalenza</li>
+<li><span class="math inline">A \equiv_R B \implies \left \{
+\begin{array}{l}\ker(L_A) = \ker(L_B) \\ \textrm{rk}(A) = \textrm{rk}(B)
+\end{array} \right.</span></li>
+</ul></li>
+</ul>
+<a href="#teorema-147"><h2 id="teorema-147">Teorema 147</h2></a>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\mathbb{K}</span> campo</li>
+<li><span class="math inline">m, n \in \mathbb{N}</span></li>
+<li><span class="math inline">A, B \in \textrm{Mat}_{m \times
+n}(\mathbb{K})</span></li>
+<li><span class="math inline">A \equiv_C B \iff</span> è possibile
+ricavare <span class="math inline">B</span> da <span
+class="math inline">A</span> eseguendo operazioni tra colonne</li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\equiv_C</span> una relazione di
+equivalenza</li>
+<li><span class="math inline">A \equiv_C B \implies \left \{
+\begin{array}{l}\textrm{im}(L_A) = \textrm{im}(L_B) \\ \textrm{rk}(A) =
+\textrm{rk}(B) \end{array}\right.</span></li>
+</ul></li>
+</ul>
+<hr />
+<a href="#matrici-particolari"><h1 id="matrici-particolari">Matrici particolari</h1></a>
+<a href="#definizione-57"><h2 id="definizione-57">Definizione 57</h2></a>
 <ul>
 <li><strong>Vettore trasposto</strong></li>
 </ul>
@@ -3813,7 +4091,7 @@ n}(\mathbb{K})</span></li>
 A</span></li>
 </ul>
 </blockquote>
-<a href="#teorema-141"><h2 id="teorema-141">Teorema 141</h2></a>
+<a href="#teorema-148"><h2 id="teorema-148">Teorema 148</h2></a>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -3827,7 +4105,7 @@ n}(\mathbb{K})</span></li>
 <li><span class="math inline">(A\cdot B)^T = B^T\cdot A^T</span></li>
 </ul></li>
 </ul>
-<a href="#definizione-54"><h2 id="definizione-54">Definizione 54</h2></a>
+<a href="#definizione-58"><h2 id="definizione-58">Definizione 58</h2></a>
 <ul>
 <li><strong>Matrice identità</strong></li>
 </ul>
@@ -3849,7 +4127,7 @@ A</span></li>
 </ul></li>
 </ul>
 </blockquote>
-<a href="#teorema-142"><h2 id="teorema-142">Teorema 142</h2></a>
+<a href="#teorema-149"><h2 id="teorema-149">Teorema 149</h2></a>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -3862,7 +4140,7 @@ A</span></li>
 \cdot)</span> è un anello</li>
 </ul></li>
 </ul>
-<a href="#definizione-55"><h2 id="definizione-55">Definizione 55</h2></a>
+<a href="#definizione-59"><h2 id="definizione-59">Definizione 59</h2></a>
 <ul>
 <li><strong>Matrice invertibile</strong></li>
 </ul>
@@ -3875,7 +4153,11 @@ n}(\mathbb{K})</span></li>
 <li><span class="math inline">A</span> è detta
 <strong>invertibile</strong> <span class="math inline">\iff \exists
 A^{-1} \in \textrm{Mat}_{n \times n}(\mathbb{K}) \mid A\cdot A^{-1} =
-A^{-1} \cdot A = I_n</span></li>
+A^{-1} \cdot A = I_n</span>
+<ul>
+<li>in particolare <span class="math inline">A</span> invertibile <span
+class="math inline">\iff \det(A) \neq 0</span></li>
+</ul></li>
 </ul>
 </blockquote>
 <ul>
@@ -3887,11 +4169,16 @@ A^{-1} \cdot A = I_n</span></li>
 <li><span class="math inline">n \in \mathbb{N}</span></li>
 <li><span class="math inline">\textrm{GL}(n, \mathbb{K}) := \{A \in
 \textrm{Mat}_{n \times n}(\mathbb{K}) \mid A</span> invertibile<span
-class="math inline">\}</span> è detto <strong>gruppo speciale lineare
-invertibile</strong></li>
+class="math inline">\}</span> è detto <strong>gruppo generale
+lineare</strong>
+<ul>
+<li>in particolare <span class="math inline">\textrm{GL}(n, \mathbb{K})
+:= \{A \in \textrm{Mat}_{n \times n}(\mathbb{K}) \mid \det(A) \neq
+0\}</span></li>
+</ul></li>
 </ul>
 </blockquote>
-<a href="#teorema-143"><h2 id="teorema-143">Teorema 143</h2></a>
+<a href="#teorema-150"><h2 id="teorema-150">Teorema 150</h2></a>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -3904,12 +4191,12 @@ invertibile</strong></li>
 gruppo</li>
 </ul></li>
 </ul>
-<a href="#teorema-144"><h2 id="teorema-144">Teorema 144</h2></a>
+<a href="#teorema-151"><h2 id="teorema-151">Teorema 151</h2></a>
 <ul>
 <li><strong>Hp</strong>
 <ul>
 <li><span class="math inline">\mathbb{K}</span> campo</li>
-<li><span class="math inline">n \in \mathbb{N} - \{0\}</span></li>
+<li><span class="math inline">n \in \mathbb{N}</span></li>
 <li><span class="math inline">f: \textrm{GL}(n, \mathbb{K}) \rightarrow
 \mathbb{K}^*</span></li>
 </ul></li>
@@ -3918,14 +4205,53 @@ gruppo</li>
 <li><span class="math inline">f</span> morfismo di gruppi</li>
 </ul></li>
 </ul>
-<a href="#definizione-56"><h2 id="definizione-56">Definizione 56</h2></a>
+<a href="#definizione-60"><h2 id="definizione-60">Definizione 60</h2></a>
+<ul>
+<li><strong>Gruppo Speciale Lineare</strong></li>
+</ul>
+<blockquote>
+<ul>
+<li><span class="math inline">\mathbb{K}</span> campo</li>
+<li><span class="math inline">n \in \mathbb{N}</span></li>
+<li><span class="math inline">\textrm{SL}(n, \mathbb{K}) := \{A \in
+\textrm{Mat}_{n \times n}(\mathbb{K}) \mid \det(A) = 1\}</span> è detto
+<strong>gruppo speciale lineare</strong></li>
+</ul>
+</blockquote>
+<a href="#teorema-152"><h2 id="teorema-152">Teorema 152</h2></a>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\mathbb{K}</span> campo</li>
+<li><span class="math inline">n \in \mathbb{N}</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">(\textrm{SL}(n, \mathbb{K}), \cdot)
+\trianglelefteq (\textrm{GL}(n, \mathbb{K}), \cdot)</span></li>
+</ul></li>
+</ul>
+<a href="#teorema-153"><h2 id="teorema-153">Teorema 153</h2></a>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\mathbb{K}</span> campo</li>
+<li><span class="math inline">n \in \mathbb{N}</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">(\textrm{GL}(n, \mathbb{K}) /
+\textrm{SL}(n , \mathbb{K}), \cdot)</span> è ben definito</li>
+</ul></li>
+</ul>
+<a href="#definizione-61"><h2 id="definizione-61">Definizione 61</h2></a>
 <ul>
 <li><strong>Matrice ortogonale</strong></li>
 </ul>
 <blockquote>
 <ul>
 <li><span class="math inline">\mathbb{K}</span> campo</li>
-<li><span class="math inline">n \in \mathbb{N} - \{0\}</span></li>
+<li><span class="math inline">n \in \mathbb{N}</span></li>
 <li><span class="math inline">A \in \textrm{GL}(n,
 \mathbb{K})</span></li>
 <li><span class="math inline">A</span> è detta
@@ -3933,6 +4259,9 @@ gruppo</li>
 A^T \cdot A = I_n</span>
 <ul>
 <li>in particolare <span class="math inline">A^{-1} = A^T</span></li>
+<li>inoltre, <span class="math inline">A_1, \ldots A_n</span> e <span
+class="math inline">A^1, \ldots, A^n</span> base ortonormale di <span
+class="math inline">\mathbb{K}^n</span></li>
 </ul></li>
 </ul>
 </blockquote>
@@ -3942,7 +4271,7 @@ A^T \cdot A = I_n</span>
 <blockquote>
 <ul>
 <li><span class="math inline">\mathbb{K}</span> campo</li>
-<li><span class="math inline">n \in \mathbb{N} - \{0\}</span></li>
+<li><span class="math inline">n \in \mathbb{N}</span></li>
 <li><span class="math inline">A \in \textrm{GL}(n,
 \mathbb{K})</span></li>
 <li><span class="math inline">O(n) := \{ A \in \textrm{GL}(n,
@@ -3950,42 +4279,29 @@ A^T \cdot A = I_n</span>
 è detto <strong>gruppo ortogonale</strong></li>
 </ul>
 </blockquote>
-<a href="#definizione-57"><h2 id="definizione-57">Definizione 57</h2></a>
-<ul>
-<li><strong>Gruppo Speciale Lineare</strong></li>
-</ul>
-<blockquote>
-<ul>
-<li><span class="math inline">\mathbb{K}</span> campo</li>
-<li><span class="math inline">n \in \mathbb{N} - \{0\}</span></li>
-<li><span class="math inline">\textrm{SL}(n, \mathbb{K}) := \{A \in
-\textrm{Mat}_{n \times n}(\mathbb{K}) \mid \det(A) = 1\}</span> è detto
-<strong>gruppo generale lineare invertibile</strong></li>
-</ul>
-</blockquote>
-<a href="#definizione-58"><h2 id="definizione-58">Definizione 58</h2></a>
+<a href="#definizione-62"><h2 id="definizione-62">Definizione 62</h2></a>
 <ul>
 <li><strong>Matrici simili</strong></li>
 </ul>
 <blockquote>
 <ul>
 <li><span class="math inline">\mathbb{K}</span> campo</li>
-<li><span class="math inline">n \in \mathbb{N} - \{0\}</span></li>
+<li><span class="math inline">n \in \mathbb{N}</span></li>
 <li><span class="math inline">A, B \in \textrm{Mat}_{n \times
 n}(\mathbb{K})</span></li>
-<li><span class="math inline">A</span> <strong>simile a <span
+<li><span class="math inline">A</span> è detta <strong>simile a <span
 class="math inline">B</span></strong> <span class="math inline">\iff
 \exists C \in \textrm{GL}(n, \mathbb{K}) \mid A = C^{-1}BC</span></li>
 </ul>
 </blockquote>
-<a href="#definizione-59"><h2 id="definizione-59">Definizione 59</h2></a>
+<a href="#definizione-63"><h2 id="definizione-63">Definizione 63</h2></a>
 <ul>
 <li><strong>Traccia</strong></li>
 </ul>
 <blockquote>
 <ul>
 <li><span class="math inline">\mathbb{K}</span> campo</li>
-<li><span class="math inline">n \in \mathbb{N} - \{0\}</span></li>
+<li><span class="math inline">n \in \mathbb{N}</span></li>
 <li><span class="math inline">A \in \textrm{Mat}_{n \times
 n}(\mathbb{K})</span></li>
 <li><span class="math inline">\textrm{tr}(A) := a_{1,1}+ \ldots +
@@ -3993,12 +4309,12 @@ a_{n,n}</span> è detta <strong>traccia di <span
 class="math inline">A</span></strong></li>
 </ul>
 </blockquote>
-<a href="#teorema-145"><h2 id="teorema-145">Teorema 145</h2></a>
+<a href="#teorema-154"><h2 id="teorema-154">Teorema 154</h2></a>
 <ul>
 <li><strong>Hp</strong>
 <ul>
 <li><span class="math inline">\mathbb{K}</span> campo</li>
-<li><span class="math inline">n \in \mathbb{N} - \{0\}</span></li>
+<li><span class="math inline">n \in \mathbb{N}</span></li>
 <li><span class="math inline">A, B \in \textrm{Mat}_{n \times
 n}(\mathbb{K}) \mid A</span> simile a <span
 class="math inline">B</span></li>
@@ -4009,14 +4325,14 @@ class="math inline">B</span></li>
 \textrm{tr}(B)</span></li>
 </ul></li>
 </ul>
-<a href="#definizione-60"><h2 id="definizione-60">Definizione 60</h2></a>
+<a href="#definizione-64"><h2 id="definizione-64">Definizione 64</h2></a>
 <ul>
 <li><strong>Matrice triangolare superiore</strong></li>
 </ul>
 <blockquote>
 <ul>
 <li><span class="math inline">\mathbb{K}</span> campo</li>
-<li><span class="math inline">n \in \mathbb{N} - \{0\}</span></li>
+<li><span class="math inline">n \in \mathbb{N}</span></li>
 <li><span class="math inline">A \in \textrm{Mat}_{n \times
 n}(\mathbb{K})</span></li>
 <li><span class="math inline">A</span> è detta <strong>triangolare
@@ -4030,7 +4346,7 @@ n], i \gt j \quad a_{i,j} = 0</span></li>
 <blockquote>
 <ul>
 <li><span class="math inline">\mathbb{K}</span> campo</li>
-<li><span class="math inline">n \in \mathbb{N} - \{0\}</span></li>
+<li><span class="math inline">n \in \mathbb{N}</span></li>
 <li><span class="math inline">A \in \textrm{Mat}_{n \times
 n}(\mathbb{K})</span></li>
 <li><span class="math inline">A</span> è detta <strong>triangolare
@@ -4044,7 +4360,7 @@ n], i \lt j \quad a_{i,j} = 0</span></li>
 <blockquote>
 <ul>
 <li><span class="math inline">\mathbb{K}</span> campo</li>
-<li><span class="math inline">n \in \mathbb{N} - \{0\}</span></li>
+<li><span class="math inline">n \in \mathbb{N}</span></li>
 <li><span class="math inline">A \in \textrm{Mat}_{n \times
 n}(\mathbb{K})</span></li>
 <li><span class="math inline">A</span> è detta <strong>triangolare <span
@@ -4059,7 +4375,7 @@ inferiore</li>
 <blockquote>
 <ul>
 <li><span class="math inline">\mathbb{K}</span> campo</li>
-<li><span class="math inline">n \in \mathbb{N} - \{0\}</span></li>
+<li><span class="math inline">n \in \mathbb{N}</span></li>
 <li><span class="math inline">A \in \textrm{Mat}_{n \times
 n}(\mathbb{K})</span></li>
 <li><span class="math inline">A</span> è detta
@@ -4075,14 +4391,14 @@ class="math inline">A</span></li>
 <blockquote>
 <ul>
 <li><span class="math inline">\mathbb{K}</span> campo</li>
-<li><span class="math inline">n \in \mathbb{N} - \{0\}</span></li>
+<li><span class="math inline">n \in \mathbb{N}</span></li>
 <li><span class="math inline">A \in \textrm{Mat}_{n \times
 n}(\mathbb{K})</span></li>
 <li><span class="math inline">A</span> è detta
 <strong>diagonale</strong> <span class="math inline">\iff \forall i, j
 \in [1, n], i \neq j \quad a_{i, j} = 0</span>
 <ul>
-<li>in particolare, <span class="math inline">A</span> è diagonale <span
+<li>in particolare, <span class="math inline">A</span> diagonale <span
 class="math inline">\iff A</span> triangolare superiore ed
 inferiore</li>
 </ul></li>
@@ -4094,7 +4410,7 @@ inferiore</li>
 <blockquote>
 <ul>
 <li><span class="math inline">\mathbb{K}</span> campo</li>
-<li><span class="math inline">n \in \mathbb{N} - \{0\}</span></li>
+<li><span class="math inline">n \in \mathbb{N}</span></li>
 <li><span class="math inline">A \in \textrm{Mat}_{n \times
 n}(\mathbb{K})</span></li>
 <li><span class="math inline">A</span> è detta
@@ -4104,12 +4420,12 @@ B \in \textrm{Mat}_{n \times n}(\mathbb{K}) \mid B</span> diagonale
 class="math inline">A</span></li>
 </ul>
 </blockquote>
-<a href="#teorema-146"><h2 id="teorema-146">Teorema 146</h2></a>
+<a href="#teorema-155"><h2 id="teorema-155">Teorema 155</h2></a>
 <ul>
 <li><strong>Hp</strong>
 <ul>
 <li><span class="math inline">\mathbb{K}</span> campo</li>
-<li><span class="math inline">n \in \mathbb{N} - \{0\}</span></li>
+<li><span class="math inline">n \in \mathbb{N}</span></li>
 <li><span class="math inline">A \in \textrm{Mat}_{n \times
 n}(\mathbb{K}) \mid A</span> diagonalizzabile</li>
 </ul></li>
@@ -4118,18 +4434,18 @@ n}(\mathbb{K}) \mid A</span> diagonalizzabile</li>
 <li><span class="math inline">A</span> triangolarizzabile</li>
 </ul></li>
 </ul>
-<a href="#definizione-61"><h2 id="definizione-61">Definizione 61</h2></a>
+<a href="#definizione-65"><h2 id="definizione-65">Definizione 65</h2></a>
 <ul>
 <li><strong>Sottomatrice di una matrice</strong></li>
 </ul>
 <blockquote>
 <ul>
 <li><span class="math inline">\mathbb{K}</span> campo</li>
-<li><span class="math inline">m, n \in \mathbb{N} - \{0\}</span></li>
+<li><span class="math inline">m, n \in \mathbb{N}</span></li>
 <li><span class="math inline">A \in \textrm{Mat}_{m \times
 n}(\mathbb{K})</span></li>
-<li><span class="math inline">A_i^j</span> è una <strong>sottomatrice di
-<span class="math inline">A</span></strong> <span
+<li><span class="math inline">A_i^j</span> è detta <strong>sottomatrice
+di <span class="math inline">A</span></strong> <span
 class="math inline">\iff A_i^j</span> si ottiene rimuovendo <span
 class="math inline">A_i</span> e <span class="math inline">A^j</span> da
 <span class="math inline">A</span></li>
@@ -4141,10 +4457,10 @@ class="math inline">A_i</span> e <span class="math inline">A^j</span> da
 <blockquote>
 <ul>
 <li><span class="math inline">\mathbb{K}</span> campo</li>
-<li><span class="math inline">m, n \in \mathbb{N} - \{0\}</span></li>
+<li><span class="math inline">m, n \in \mathbb{N}</span></li>
 <li><span class="math inline">A \in \textrm{Mat}_{m \times
 n}(\mathbb{K})</span></li>
-<li><span class="math inline">M</span> è un <strong>minore di <span
+<li><span class="math inline">M</span> è detto <strong>minore di <span
 class="math inline">A</span></strong> <span class="math inline">\iff
 M</span> è una sottomatrice quadrata di <span
 class="math inline">A</span></li>
@@ -4156,33 +4472,31 @@ class="math inline">A</span></li>
 <blockquote>
 <ul>
 <li><span class="math inline">\mathbb{K}</span> campo</li>
-<li><span class="math inline">m, n, r \in \mathbb{N} - \{0\} \mid r \lt
-m \land r \lt n</span></li>
+<li><span class="math inline">m, n, r \in \mathbb{N} \mid r \lt m \land
+r \lt n</span></li>
 <li><span class="math inline">A \in \textrm{Mat}_{m \times
 n}(\mathbb{K})</span></li>
 <li><span class="math inline">M \in \textrm{Mat}_{r \times
-r}(\mathbb{K})</span> è un minore di <span
-class="math inline">A</span></li>
+r}(\mathbb{K})</span> minore di <span class="math inline">A</span></li>
 <li><span class="math inline">M&#39; \in \textrm{Mat}_{(r + 1) \times (r
-+ 1)}(\mathbb{K})</span> è un <strong>orlato di <span
++ 1)}(\mathbb{K})</span> è detto <strong>orlato di <span
 class="math inline">M</span></strong> <span class="math inline">\iff
-M&#39;</span> è un minore di <span class="math inline">A</span> e <span
+M&#39;</span> è minore di <span class="math inline">A</span> e <span
 class="math inline">M</span> si ottiene rimuovendo una riga e una
 colonna da <span class="math inline">M&#39;</span></li>
 </ul>
 </blockquote>
-<a href="#teorema-147"><h2 id="teorema-147">Teorema 147</h2></a>
+<a href="#teorema-156"><h2 id="teorema-156">Teorema 156</h2></a>
 <ul>
 <li><strong>Hp</strong>
 <ul>
 <li><span class="math inline">\mathbb{K}</span> campo</li>
-<li><span class="math inline">m, n, r \in \mathbb{N} - \{0\} \mid r \lt
-m \land r \lt n</span></li>
+<li><span class="math inline">m, n, r \in \mathbb{N} \mid r \lt m \land
+r \lt n</span></li>
 <li><span class="math inline">A \in \textrm{Mat}_{m \times
 n}(\mathbb{K})</span></li>
 <li><span class="math inline">M \in \textrm{Mat}_{r \times
-r}(\mathbb{K})</span> è un minore di <span
-class="math inline">A</span></li>
+r}(\mathbb{K})</span> minore di <span class="math inline">A</span></li>
 </ul></li>
 <li><strong>Th</strong>
 <ul>
@@ -4191,14 +4505,14 @@ class="math inline">(m-r)\cdot(n-r)</span> orlati in <span
 class="math inline">A</span></li>
 </ul></li>
 </ul>
-<a href="#definizione-62"><h2 id="definizione-62">Definizione 62</h2></a>
+<a href="#definizione-66"><h2 id="definizione-66">Definizione 66</h2></a>
 <ul>
 <li><strong>Matrice completa</strong></li>
 </ul>
 <blockquote>
 <ul>
 <li><span class="math inline">\mathbb{K}</span> campo</li>
-<li><span class="math inline">m, n \in \mathbb{N} - \{0\}</span></li>
+<li><span class="math inline">m, n \in \mathbb{N}</span></li>
 <li><span class="math inline">A \in \textrm{Mat}_{m \times
 n}(\mathbb{K})</span></li>
 <li><span class="math inline">b \in \textrm{Mat}_{m \times
@@ -4206,17 +4520,19 @@ n}(\mathbb{K})</span></li>
 <li><span class="math inline">A_b:=\left(\begin{array}{cccc}a_{1, 1}
 &amp; \cdots &amp; a_{1, n} &amp; b_1 \\ \vdots &amp; \ddots &amp;
 \vdots &amp; \vdots \\ a_{m, 1} &amp; \cdots &amp; a_{m,n} &amp;
-b_m\end{array}\right)</span></li>
+b_m\end{array}\right)</span> è detta <strong>matrice completa di <span
+class="math inline">A</span> e <span
+class="math inline">b</span></strong></li>
 </ul>
 </blockquote>
-<a href="#definizione-63"><h2 id="definizione-63">Definizione 63</h2></a>
+<a href="#definizione-67"><h2 id="definizione-67">Definizione 67</h2></a>
 <ul>
 <li><strong>Matrice di un’applicazione lineare</strong></li>
 </ul>
 <blockquote>
 <ul>
 <li><span class="math inline">\mathbb{K}</span> campo</li>
-<li><span class="math inline">m, n \in \mathbb{N} - \{0\}</span></li>
+<li><span class="math inline">m, n \in \mathbb{N}</span></li>
 <li><span class="math inline">V, W</span> spazi vettoriali su <span
 class="math inline">\mathbb{K}</span></li>
 <li><span class="math inline">\mathcal{B}=\{v_1, \ldots, v_n\}</span>
@@ -4224,9 +4540,9 @@ base di <span class="math inline">V</span></li>
 <li><span class="math inline">\mathcal{C}=\{w_1, \ldots, w_m\}</span>
 base di <span class="math inline">W</span></li>
 <li><span class="math inline">f: V \rightarrow W</span> isomorfismo</li>
-<li><span class="math inline">\varphi_\mathcal{B}: \mathbb{K}^N
+<li><span class="math inline">\varphi_\mathcal{B}: \mathbb{K}^n
 \rightarrow V</span> isomorfismo</li>
-<li><span class="math inline">\varphi_\mathcal{C}: \mathbb{K}^M
+<li><span class="math inline">\varphi_\mathcal{C}: \mathbb{K}^m
 \rightarrow W</span> isomorfismo</li>
 <li><span class="math inline">A \in \textrm{Mat}_{m \times
 n}(\mathbb{K}) \mid f = \varphi_\mathcal{C}\cdot L_A \cdot
@@ -4235,323 +4551,11 @@ class="math inline">f</span></strong>
 <ul>
 <li>è possibile dimostrare che <span class="math inline">\forall
 f</span> applicazione lineare<span class="math inline">\quad \exists ! A
-\in \textrm{Mat}_{m \times n}(\mathbb{K})</span></li>
+\in \textrm{Mat}_{m \times n}(\mathbb{K})</span> ⚠️ <strong>eh si
+dimostralo però</strong></li>
 </ul></li>
 </ul>
 </blockquote>
-<hr />
-<a href="#rango"><h1 id="rango">Rango</h1></a>
-<a href="#definizione-64"><h2 id="definizione-64">Definizione 64</h2></a>
-<ul>
-<li><strong>Sottospazio ortogonale</strong></li>
-</ul>
-<blockquote>
-<ul>
-<li><span class="math inline">\mathbb{K}</span> campo</li>
-<li><span class="math inline">n \in \mathbb{N}</span></li>
-<li><span class="math inline">V \subset \mathbb{K}^n</span> sottospazio
-vettoriale</li>
-<li><span class="math inline">V^{\perp} := \{w \in \mathbb{K}^n \mid
-\forall v \in V \quad w \cdot v = 0_{\mathbb{K}^n}\}</span> è detto
-<strong>sottospazio ortogonale di <span
-class="math inline">\mathbb{K}^n</span></strong>
-<ul>
-<li>la definizione ha significato poiché il prodotto scalare tra due
-vettori è nullo esattamente quando i due vettori sono perpendicolari tra
-loro</li>
-</ul></li>
-</ul>
-</blockquote>
-<a href="#teorema-148"><h2 id="teorema-148">Teorema 148</h2></a>
-<ul>
-<li><strong>Hp</strong>
-<ul>
-<li><span class="math inline">\mathbb{K}</span> campo</li>
-<li><span class="math inline">n \in \mathbb{N}</span></li>
-<li><span class="math inline">V \subset \mathbb{K}^n</span> sottospazio
-vettoriale</li>
-</ul></li>
-<li><strong>Th</strong>
-<ul>
-<li><span class="math inline">V^{\bot} \subset \mathbb{K}^n</span>
-sottospazio vettoriale</li>
-</ul></li>
-</ul>
-<a href="#teorema-149"><h2 id="teorema-149">Teorema 149</h2></a>
-<ul>
-<li><strong>Hp</strong>
-<ul>
-<li><span class="math inline">\mathbb{K}</span> campo</li>
-<li><span class="math inline">n \in \mathbb{N}</span></li>
-<li><span class="math inline">V \subset \mathbb{K}^n</span> sottospazio
-vettoriale</li>
-</ul></li>
-<li><strong>Th</strong>
-<ul>
-<li><span class="math inline">\dim(V^{\bot}) + \dim(V) =
-\dim(\mathbb{K}^n)</span></li>
-</ul></li>
-</ul>
-<a href="#definizione-65"><h2 id="definizione-65">Definizione 65</h2></a>
-<ul>
-<li><strong>Moltiplicazione sinistra</strong></li>
-</ul>
-<blockquote>
-<ul>
-<li><span class="math inline">\mathbb{K}</span> campo</li>
-<li><span class="math inline">m,n \in \mathbb{N}</span></li>
-<li><span class="math inline">A \in \textrm{Mat}_{m \times
-n}(\mathbb{K})</span></li>
-<li><span class="math inline">L_A:\mathbb{K}^n \rightarrow \mathbb{K}^m:
-x \rightarrow A\cdot x</span> è detta <strong>moltiplicazione sinistra
-di <span class="math inline">A</span></strong></li>
-</ul>
-</blockquote>
-<a href="#teorema-150"><h2 id="teorema-150">Teorema 150</h2></a>
-<ul>
-<li><strong>Hp</strong>
-<ul>
-<li><span class="math inline">\mathbb{K}</span> campo</li>
-<li><span class="math inline">m,n \in \mathbb{N}</span></li>
-<li><span class="math inline">A \in \textrm{Mat}_{m \times
-n}(\mathbb{K})</span></li>
-</ul></li>
-<li><strong>Th</strong>
-<ul>
-<li><span class="math inline">L_A</span> trasformazione lineare</li>
-</ul></li>
-</ul>
-<a href="#teorema-151"><h2 id="teorema-151">Teorema 151</h2></a>
-<ul>
-<li><strong>Hp</strong>
-<ul>
-<li><span class="math inline">\mathbb{K}</span> campo</li>
-<li><span class="math inline">m,n \in \mathbb{N}</span></li>
-<li><span class="math inline">A \in \textrm{Mat}_{m \times
-n}(\mathbb{K})</span></li>
-</ul></li>
-<li><strong>Th</strong>
-<ul>
-<li>⚠️ <strong>da qua</strong></li>
-<li><span class="math inline">\ker(L_A) = \textrm{span}(A_1, \ldots,
-A_m)^\bot</span></li>
-<li><span class="math inline">\textrm{im}(L_A) = \textrm{span}(A^1,
-\ldots, A^n)</span></li>
-</ul></li>
-</ul>
-<a href="#definizione-66"><h2 id="definizione-66">Definizione 66</h2></a>
-<ul>
-<li><strong>Rango di una matrice</strong></li>
-</ul>
-<blockquote>
-<ul>
-<li><span class="math inline">\mathbb{K}</span> campo</li>
-<li><span class="math inline">m,n \in \mathbb{N}</span></li>
-<li><span class="math inline">A \in \textrm{Mat}_{m \times
-n}(\mathbb{K})</span></li>
-<li><span class="math inline">\textrm{rk}(A):=\textrm{rk}(L_A)</span> è
-detto <strong>rango di <span class="math inline">A</span></strong>
-<ul>
-<li>in particolare <span class="math inline">\textrm{rk}(A) =
-\textrm{rk}(L_A)=\dim(\textrm{im}(L_A))</span></li>
-</ul></li>
-</ul>
-</blockquote>
-<a href="#teorema-152"><h2 id="teorema-152">Teorema 152</h2></a>
-<ul>
-<li><strong>Hp</strong>
-<ul>
-<li><span class="math inline">\mathbb{K}</span> campo</li>
-<li><span class="math inline">m,n \in \mathbb{N} - \{0\}</span></li>
-<li><span class="math inline">A \in \textrm{Mat}_{m \times
-n}(\mathbb{K})</span></li>
-</ul></li>
-<li><strong>Th</strong>
-<ul>
-<li><span class="math inline">\textrm{rk}(A) =\dim(\textrm{span}(A^1,
-\ldots, A^n)) = \dim(\textrm{span}(A_1, \ldots, A_n))</span></li>
-</ul></li>
-</ul>
-<hr />
-<a href="#operazioni-su-righe-e-colonne"><h1 id="operazioni-su-righe-e-colonne">Operazioni su righe e colonne</h1></a>
-
-<a href="#definizione-67"><h2 id="definizione-67">Definizione 67</h2></a>
-<ul>
-<li><strong>Scambio di righe di una matrice</strong></li>
-</ul>
-<blockquote>
-<ul>
-<li><span class="math inline">\mathbb{K}</span> campo</li>
-<li><span class="math inline">m, n \in \mathbb{N} - \{0\}</span></li>
-<li><span class="math inline">A \in \textrm{Mat}_{m \times
-n}(\mathbb{K})</span></li>
-<li><span class="math inline">\forall A_1, \ldots, A_m</span> righe di
-<span class="math inline">A</span>, scambiare <span
-class="math inline">A_i</span> e <span class="math inline">A_j</span>
-lascia invariato <span class="math inline">\ker(L_A)</span></li>
-</ul>
-</blockquote>
-<ul>
-<li><strong>Moltiplicazione di una riga per una costante</strong></li>
-</ul>
-<blockquote>
-<ul>
-<li><span class="math inline">\mathbb{K}</span> campo</li>
-<li><span class="math inline">m, n \in \mathbb{N} - \{0\}</span></li>
-<li><span class="math inline">A \in \textrm{Mat}_{m \times
-n}(\mathbb{K})</span></li>
-<li><span class="math inline">\lambda \in \mathbb{K}^*</span></li>
-<li><span class="math inline">\forall A_1, \ldots, A_m</span> righe di
-<span class="math inline">A</span>, moltiplicare <span
-class="math inline">A_i</span> per <span
-class="math inline">\lambda</span> lascia invariato <span
-class="math inline">\ker(L_A)</span></li>
-</ul>
-</blockquote>
-<ul>
-<li><strong>Somma di una riga con un multiplo di un’altra</strong></li>
-</ul>
-<blockquote>
-<ul>
-<li><span class="math inline">\mathbb{K}</span> campo</li>
-<li><span class="math inline">m, n \in \mathbb{N} - \{0\}</span></li>
-<li><span class="math inline">A \in \textrm{Mat}_{m \times
-n}(\mathbb{K})</span></li>
-<li><span class="math inline">\lambda \in \mathbb{K}^*</span></li>
-<li><span class="math inline">\forall A_1, \ldots, A_m</span> righe di
-<span class="math inline">A</span>, sommare ad <span
-class="math inline">A_i</span> un certo <span
-class="math inline">\lambda \cdot A_j</span> lascia invariato <span
-class="math inline">\ker(L_A)</span></li>
-</ul>
-</blockquote>
-<ul>
-<li><strong>Scambio di colonne di una matrice</strong></li>
-</ul>
-<blockquote>
-<ul>
-<li><span class="math inline">\mathbb{K}</span> campo</li>
-<li><span class="math inline">m, n \in \mathbb{N} - \{0\}</span></li>
-<li><span class="math inline">A \in \textrm{Mat}_{m \times
-n}(\mathbb{K})</span></li>
-<li><span class="math inline">\forall A^1, \ldots, A^m</span> colonne di
-<span class="math inline">A</span>, scambiare <span
-class="math inline">A^i</span> e <span class="math inline">A^j</span>
-lascia invariato <span class="math inline">\textrm{im}(L_A)</span></li>
-</ul>
-</blockquote>
-<ul>
-<li><strong>Moltiplicazione di una colonna per una
-costante</strong></li>
-</ul>
-<blockquote>
-<ul>
-<li><span class="math inline">\mathbb{K}</span> campo</li>
-<li><span class="math inline">m, n \in \mathbb{N} - \{0\}</span></li>
-<li><span class="math inline">A \in \textrm{Mat}_{m \times
-n}(\mathbb{K})</span></li>
-<li><span class="math inline">\lambda \in \mathbb{K}^*</span></li>
-<li><span class="math inline">\forall A^1, \ldots, A^m</span> colonne di
-<span class="math inline">A</span>, moltiplicare <span
-class="math inline">A^i</span> per <span
-class="math inline">\lambda</span> lascia invariato <span
-class="math inline">\textrm{im}(L_A)</span></li>
-</ul>
-</blockquote>
-<ul>
-<li><strong>Somma di una colonna con un multiplo di
-un’altra</strong></li>
-</ul>
-<blockquote>
-<ul>
-<li><span class="math inline">\mathbb{K}</span> campo</li>
-<li><span class="math inline">m, n \in \mathbb{N} - \{0\}</span></li>
-<li><span class="math inline">A \in \textrm{Mat}_{m \times
-n}(\mathbb{K})</span></li>
-<li><span class="math inline">\lambda \in \mathbb{K}^*</span></li>
-<li><span class="math inline">\forall A^1, \ldots, A^m</span> righe di
-<span class="math inline">A</span>, sommare ad <span
-class="math inline">A^i</span> un certo <span
-class="math inline">\lambda \cdot A^j</span> lascia invariato <span
-class="math inline">\textrm{im}(L_A)</span></li>
-</ul>
-</blockquote>
-<a href="#teorema-153"><h2 id="teorema-153">Teorema 153</h2></a>
-<ul>
-<li><strong>Hp</strong>
-<ul>
-<li><span class="math inline">\mathbb{K}</span> campo</li>
-<li><span class="math inline">m, n \in \mathbb{N} - \{0\}</span></li>
-<li><span class="math inline">A, B \in \textrm{Mat}_{m \times
-n}(\mathbb{K})</span></li>
-<li><span class="math inline">A \equiv B \iff</span> è possibile
-ricavare <span class="math inline">B</span> da <span
-class="math inline">A</span> eseguendo operazioni <em>tra righe</em>
-definite precedentemente</li>
-</ul></li>
-<li><strong>Th</strong>
-<ul>
-<li><span class="math inline">\equiv</span> una relazione di
-equivalenza</li>
-</ul></li>
-</ul>
-<a href="#teorema-154"><h2 id="teorema-154">Teorema 154</h2></a>
-<ul>
-<li><strong>Hp</strong>
-<ul>
-<li><span class="math inline">\mathbb{K}</span> campo</li>
-<li><span class="math inline">m, n \in \mathbb{N} - \{0\}</span></li>
-<li><span class="math inline">A, B \in \textrm{Mat}_{m \times
-n}(\mathbb{K})</span></li>
-<li><span class="math inline">A \equiv B \iff</span> è possibile
-ricavare <span class="math inline">B</span> da <span
-class="math inline">A</span> eseguendo operazioni <em>tra righe</em>
-definite precedentemente</li>
-</ul></li>
-<li><strong>Th</strong>
-<ul>
-<li><span class="math inline">A \equiv B \implies \ker(L_A) = \ker(L_B)
-\land \textrm{rk}(A) = \textrm{rk}(B)</span></li>
-</ul></li>
-</ul>
-<a href="#teorema-155"><h2 id="teorema-155">Teorema 155</h2></a>
-<ul>
-<li><strong>Hp</strong>
-<ul>
-<li><span class="math inline">\mathbb{K}</span> campo</li>
-<li><span class="math inline">m, n \in \mathbb{N} - \{0\}</span></li>
-<li><span class="math inline">A, B \in \textrm{Mat}_{m \times
-n}(\mathbb{K})</span></li>
-<li><span class="math inline">A \equiv B \iff</span> è possibile
-ricavare <span class="math inline">B</span> da <span
-class="math inline">A</span> eseguendo operazioni <em>tra colonne</em>
-definite precedentemente</li>
-</ul></li>
-<li><strong>Th</strong>
-<ul>
-<li><span class="math inline">\equiv</span> una relazione di
-equivalenza</li>
-</ul></li>
-</ul>
-<a href="#teorema-156"><h2 id="teorema-156">Teorema 156</h2></a>
-<ul>
-<li><strong>Hp</strong>
-<ul>
-<li><span class="math inline">\mathbb{K}</span> campo</li>
-<li><span class="math inline">m, n \in \mathbb{N} - \{0\}</span></li>
-<li><span class="math inline">A, B \in \textrm{Mat}_{m \times
-n}(\mathbb{K})</span></li>
-<li><span class="math inline">A \equiv B \iff</span> è possibile
-ricavare <span class="math inline">B</span> da <span
-class="math inline">A</span> eseguendo operazioni <em>tra colonne</em>
-definite precedentemente</li>
-</ul></li>
-<li><strong>Th</strong>
-<ul>
-<li><span class="math inline">A \equiv B \implies \textrm{im}(L_A) =
-\textrm{im}(L_B) \land \textrm{rk}(A) = \textrm{rk}(B)</span></li>
-</ul></li>
-</ul>
 <hr />
 <a href="#determinante"><h1 id="determinante">Determinante</h1></a>
 <a href="#definizione-68"><h2 id="definizione-68">Definizione 68</h2></a>
@@ -5892,7 +5896,7 @@ lineare</li>
 <li><strong>Hp</strong>
 <ul>
 <li><span class="math inline">\mathbb{K}</span> campo</li>
-<li><span class="math inline">m, n \in \mathbb{N} - \{0\}</span></li>
+<li><span class="math inline">m, n \in \mathbb{N}</span></li>
 <li><span class="math inline">A \in \textrm{Mat}_{m \times
 n}(\mathbb{K})</span></li>
 <li><span class="math inline">b \in \textrm{Mat}_{m \times
@@ -5900,8 +5904,9 @@ n}(\mathbb{K})</span></li>
 </ul></li>
 <li><strong>Th</strong>
 <ul>
+<li>⚠️ <strong>da rivedere</strong></li>
 <li><span class="math inline">\exists x \in \textrm{Mat}_{n \times
-1}(\mathbb{K}) \mid A\cdot x = b \iff \textrm{rk}(A) =
+1}(\mathbb{K}) \mid A x = b \iff \textrm{rk}(A) =
 \textrm{rk}(A_b)</span></li>
 </ul></li>
 </ul>
@@ -5911,7 +5916,7 @@ n}(\mathbb{K})</span></li>
 <li><strong>Hp</strong>
 <ul>
 <li><span class="math inline">\mathbb{K}</span> campo</li>
-<li><span class="math inline">n \in \mathbb{N} - \{0\}</span></li>
+<li><span class="math inline">n \in \mathbb{N}</span></li>
 <li><span class="math inline">A \in \textrm{Mat}_{n \times
 n}(\mathbb{K}) \mid \det(A) \neq 0</span></li>
 <li><span class="math inline">b \in \textrm{Mat}_{n \times
@@ -5928,7 +5933,7 @@ a_{n, 2} &amp; \cdots &amp; a_{n,n}\end{array}\right) \\ \vdots \\ x_n =
 \vdots \\ a_{n, 1} &amp; \cdots &amp; a_{n,n-1} &amp;
 b_n\end{array}\right) \end{array}\right.</span> sono le componenti del
 vettore <span class="math inline">x \in \textrm{Mat}_{n \times
-1}(\mathbb{K}) \mid A \cdot x = b</span></li>
+1}(\mathbb{K}) \mid A x = b</span></li>
 </ul></li>
 </ul>
 <hr />
@@ -5937,21 +5942,25 @@ vettore <span class="math inline">x \in \textrm{Mat}_{n \times
 <li><strong>Hp</strong>
 <ul>
 <li><span class="math inline">\mathbb{K}</span> campo</li>
-<li><span class="math inline">n, r, r&#39; \in \mathbb{N} - \{0\} \mid r
-\lt r&#39; \lt n</span></li>
+<li><span class="math inline">n, r, r&#39; \in \mathbb{N} \mid r \lt
+r&#39; \lt n</span></li>
 <li><span class="math inline">A \in \textrm{Mat}_{n \times
 n}(\mathbb{K})</span></li>
 <li><span class="math inline">M_1 \in \textrm{Mat}_{r \times
 r}(\mathbb{K}) \mid M_1</span> minore di <span class="math inline">A
-\land \det(A) \neq 0</span></li>
-</ul></li>
+\land \det(M_1) \neq 0</span></li>
+</ul>
+<ol type="1">
+<li><span class="math inline">\textrm{rk}(A)=r</span></li>
+<li><span class="math inline">\forall M_1&#39;</span> orlato di <span
+class="math inline">M_1 \quad \det(M_1&#39;) = 0</span></li>
+<li><span class="math inline">\forall M_2 \in \textrm{Mat}_{r&#39;
+\times r&#39;}(\mathbb{K}) \mid M_2</span> minore di <span
+class="math inline">A \quad \det(M_2) = 0</span></li>
+</ol></li>
 <li><strong>Th</strong>
 <ul>
-<li><span class="math inline">\textrm{rk}(A)=r \iff \forall
-M_1&#39;</span> orlato di <span class="math inline">M_1 \quad
-\det(M_1&#39;) = 0 \iff \forall M_2 \in \textrm{Mat}_{r&#39; \times
-r&#39;}(\mathbb{K}) \mid M_2</span> minore di <span
-class="math inline">A \quad \det(M_2) = 0</span></li>
+<li>le proposizioni sono equivalenti</li>
 </ul></li>
 </ul>
 <hr />
@@ -5960,7 +5969,7 @@ class="math inline">A \quad \det(M_2) = 0</span></li>
 <li><strong>Hp</strong>
 <ul>
 <li><span class="math inline">\mathbb{K}</span> campo</li>
-<li><span class="math inline">n \in \mathbb{N} - \{0\}</span></li>
+<li><span class="math inline">n \in \mathbb{N}</span></li>
 <li><span class="math inline">A, B \in \textrm{Mat}_{n \times
 n}(\mathbb{K})</span></li>
 </ul></li>
@@ -5975,7 +5984,7 @@ n}(\mathbb{K})</span></li>
 <li><strong>Hp</strong>
 <ul>
 <li><span class="math inline">\mathbb{K}</span> campo</li>
-<li><span class="math inline">n \in \mathbb{N} - \{0\}</span></li>
+<li><span class="math inline">n \in \mathbb{N}</span></li>
 <li><span class="math inline">A \in \textrm{Mat}_{n \times
 n}(\mathbb{K})</span></li>
 </ul></li>
@@ -5989,7 +5998,7 @@ n}(\mathbb{K})</span></li>
 <ul>
 <li><strong>Hp</strong>
 <ul>
-<li><span class="math inline">n \in \mathbb{N} - \{0\}</span></li>
+<li><span class="math inline">n \in \mathbb{N}</span></li>
 <li><span class="math inline">A \in \textrm{Mat}_{n \times
 n}(\mathbb{R}) \mid A</span> simmetrica</li>
 </ul>

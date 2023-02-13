@@ -952,8 +952,9 @@ precedente si ottiene che <span class="math inline">\dim(V/\ker(f)) =
 ha che <span class="math inline">V/\ker(f) \cong \textrm{im}(f) \iff
 \dim(V/\ker(f)) = \dim(\textrm{im}(f))</span> per dimostrazione
 precedente</li>
-<li>allora, segue che <span class="math inline">\textrm{rk}(f) :=
-\dim(\textrm{im}(f)) = \dim(V) - \dim(\ker(f))</span></li>
+<li>allora, segue che <span class="math inline">\dim(\textrm{im}(f)) =
+\dim(V) - \dim(\ker(f)) \iff \dim(\textrm{im}(f)) + \dim(\ker(f)) =
+\dim(V)</span></li>
 </ul></li>
 </ul>
 <hr />
@@ -962,7 +963,7 @@ precedente</li>
 <li><strong>Hp</strong>
 <ul>
 <li><span class="math inline">\mathbb{K}</span> campo</li>
-<li><span class="math inline">m, n \in \mathbb{N} - \{0\}</span></li>
+<li><span class="math inline">m, n \in \mathbb{N}</span></li>
 <li><span class="math inline">A \in \textrm{Mat}_{m \times
 n}(\mathbb{K})</span></li>
 <li><span class="math inline">b \in \textrm{Mat}_{m \times
@@ -970,16 +971,17 @@ n}(\mathbb{K})</span></li>
 </ul></li>
 <li><strong>Th</strong>
 <ul>
+<li>⚠️ <strong>da rivedere</strong></li>
 <li><span class="math inline">\exists x \in \textrm{Mat}_{n \times
-1}(\mathbb{K}) \mid A\cdot x = b \iff \textrm{rk}(A) =
+1}(\mathbb{K}) \mid A x = b \iff \textrm{rk}(A) =
 \textrm{rk}(A_b)</span></li>
 </ul></li>
 <li><strong>Dim</strong>
 <ul>
 <li><span class="math inline">\exists x \in \textrm{Mat}_{n \times
-1}(\mathbb{K}) \mid A\cdot x = b \iff \exists x_1, \ldots, x_n \in
-\mathbb{K} \mid x_1A^1 + \ldots + x_nA^n=b \iff b \in \textrm{span}(A^1,
-\ldots, A^n) \subset \textrm{span}(A^1, \ldots, A^n, b)</span></li>
+1}(\mathbb{K}) \mid A x = b \iff \exists x_1, \ldots, x_n \in \mathbb{K}
+\mid x_1A^1 + \ldots + x_nA^n=b \iff b \in \textrm{span}(A^1, \ldots,
+A^n) \subseteq \textrm{span}(A^1, \ldots, A^n, b)</span></li>
 <li><span class="math inline">b \in \textrm{span}(A^1, \ldots, A^n)
 \implies \exists \mu_1, \ldots, \mu_n \mid v = \mu_1A^1 + \ldots + \mu_n
 A^n</span></li>
@@ -989,7 +991,7 @@ A^n, b) \quad \exists \lambda_1, \ldots, \lambda_n, c \in \mathbb{K}
 \ldots + \lambda_nA^n + c(\mu_1A^1 + \ldots + \mu_nA^n) = (\lambda_1 +
 c\mu_1)A^1 + \ldots + (\lambda_n + c\mu_n)A^n \implies v \in
 \textrm{span}(A^1, \ldots, A^n) \implies \textrm{span}(A^1, \ldots, A^n,
-b) \subset \textrm{span}(A^1, \ldots, A^n)</span></li>
+b) \subseteq \textrm{span}(A^1, \ldots, A^n)</span></li>
 <li>allora <span class="math inline">\textrm{span}(A^1, \ldots, A^n) =
 \textrm{span}(A^1, \ldots, A^n, b) \iff \dim(\textrm{span}(A^1, \ldots,
 A^n)) = \dim(\textrm{span}(A^1, \ldots, A^n, b))</span></li>
@@ -1009,7 +1011,7 @@ A^n)) = \dim(\textrm{span}(A^1, \ldots, A^n, b)) \iff \textrm{rk}(A) =
 <li><strong>Hp</strong>
 <ul>
 <li><span class="math inline">\mathbb{K}</span> campo</li>
-<li><span class="math inline">n \in \mathbb{N} - \{0\}</span></li>
+<li><span class="math inline">n \in \mathbb{N}</span></li>
 <li><span class="math inline">A \in \textrm{Mat}_{n \times
 n}(\mathbb{K}) \mid \det(A) \neq 0</span></li>
 <li><span class="math inline">b \in \textrm{Mat}_{n \times
@@ -1026,7 +1028,7 @@ a_{n, 2} &amp; \cdots &amp; a_{n,n}\end{array}\right) \\ \vdots \\ x_n =
 \vdots \\ a_{n, 1} &amp; \cdots &amp; a_{n,n-1} &amp;
 b_n\end{array}\right) \end{array}\right.</span> sono le componenti del
 vettore <span class="math inline">x \in \textrm{Mat}_{n \times
-1}(\mathbb{K}) \mid A \cdot x = b</span></li>
+1}(\mathbb{K}) \mid A x = b</span></li>
 </ul></li>
 </ul>
 <hr />
@@ -1035,21 +1037,25 @@ vettore <span class="math inline">x \in \textrm{Mat}_{n \times
 <li><strong>Hp</strong>
 <ul>
 <li><span class="math inline">\mathbb{K}</span> campo</li>
-<li><span class="math inline">n, r, r&#39; \in \mathbb{N} - \{0\} \mid r
-\lt r&#39; \lt n</span></li>
+<li><span class="math inline">n, r, r&#39; \in \mathbb{N} \mid r \lt
+r&#39; \lt n</span></li>
 <li><span class="math inline">A \in \textrm{Mat}_{n \times
 n}(\mathbb{K})</span></li>
 <li><span class="math inline">M_1 \in \textrm{Mat}_{r \times
 r}(\mathbb{K}) \mid M_1</span> minore di <span class="math inline">A
-\land \det(A) \neq 0</span></li>
-</ul></li>
+\land \det(M_1) \neq 0</span></li>
+</ul>
+<ol type="1">
+<li><span class="math inline">\textrm{rk}(A)=r</span></li>
+<li><span class="math inline">\forall M_1&#39;</span> orlato di <span
+class="math inline">M_1 \quad \det(M_1&#39;) = 0</span></li>
+<li><span class="math inline">\forall M_2 \in \textrm{Mat}_{r&#39;
+\times r&#39;}(\mathbb{K}) \mid M_2</span> minore di <span
+class="math inline">A \quad \det(M_2) = 0</span></li>
+</ol></li>
 <li><strong>Th</strong>
 <ul>
-<li><span class="math inline">\textrm{rk}(A)=r \iff \forall
-M_1&#39;</span> orlato di <span class="math inline">M_1 \quad
-\det(M_1&#39;) = 0 \iff \forall M_2 \in \textrm{Mat}_{r&#39; \times
-r&#39;}(\mathbb{K}) \mid M_2</span> minore di <span
-class="math inline">A \quad \det(M_2) = 0</span></li>
+<li>le proposizioni sono equivalenti</li>
 </ul></li>
 </ul>
 <hr />
@@ -1058,7 +1064,7 @@ class="math inline">A \quad \det(M_2) = 0</span></li>
 <li><strong>Hp</strong>
 <ul>
 <li><span class="math inline">\mathbb{K}</span> campo</li>
-<li><span class="math inline">n \in \mathbb{N} - \{0\}</span></li>
+<li><span class="math inline">n \in \mathbb{N}</span></li>
 <li><span class="math inline">A, B \in \textrm{Mat}_{n \times
 n}(\mathbb{K})</span></li>
 </ul></li>
@@ -1073,7 +1079,7 @@ n}(\mathbb{K})</span></li>
 <li><strong>Hp</strong>
 <ul>
 <li><span class="math inline">\mathbb{K}</span> campo</li>
-<li><span class="math inline">n \in \mathbb{N} - \{0\}</span></li>
+<li><span class="math inline">n \in \mathbb{N}</span></li>
 <li><span class="math inline">A \in \textrm{Mat}_{n \times
 n}(\mathbb{K})</span></li>
 </ul></li>
@@ -1085,9 +1091,8 @@ n}(\mathbb{K})</span></li>
 <ul>
 <li><span class="math inline">\det(A\cdot
 A^{-1})=\det(I_n)=1</span></li>
-<li><span class="math inline">\det(A \cdot A^{-1}) = \det(A) \cdot
-\det(A^{-1})</span> per il teorema di Binet</li>
-<li>allora <span class="math inline">\det(A) \cdot \det(A^{-1}) = 1 \iff
+<li>allora per il teorema di Binet <span class="math inline">1 = \det(A
+\cdot A^{-1}) = \det(A) \cdot \det(A^{-1}) \iff
 \det(A)^{-1}=\det(A^{-1})</span></li>
 </ul></li>
 </ul>
@@ -1096,7 +1101,7 @@ A^{-1})=\det(I_n)=1</span></li>
 <ul>
 <li><strong>Hp</strong>
 <ul>
-<li><span class="math inline">n \in \mathbb{N} - \{0\}</span></li>
+<li><span class="math inline">n \in \mathbb{N}</span></li>
 <li><span class="math inline">A \in \textrm{Mat}_{n \times
 n}(\mathbb{R}) \mid A</span> simmetrica</li>
 </ul>

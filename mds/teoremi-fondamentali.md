@@ -315,7 +315,7 @@
     - $\textrm{rk} := \dim(\textrm{im}(f))$, allora la tesi è equivalente a dimostrare che $\textrm{rk}(f) = \dim(V) - \dim(\ker(f))$
     - per dimostrazione precedente $\ker(f) \subset V$ sottospazio vettoriale, allora, per dimostrazione precedente si ottiene che $\dim(V/\ker(f)) = \dim(V) - \dim(\ker(f))$
     - per il teorema fondamentale di isomorfismo tra spazi vettoriali, si ha che $V/\ker(f) \cong \textrm{im}(f) \iff \dim(V/\ker(f)) = \dim(\textrm{im}(f))$ per dimostrazione precedente
-    - allora, segue che $\textrm{rk}(f) := \dim(\textrm{im}(f)) = \dim(V) - \dim(\ker(f))$
+    - allora, segue che $\dim(\textrm{im}(f)) = \dim(V) - \dim(\ker(f)) \iff \dim(\textrm{im}(f)) + \dim(\ker(f)) = \dim(V)$
 
 ****
 
@@ -323,15 +323,16 @@
 
 - **Hp**
     - $\mathbb{K}$ campo
-    - $m, n \in \mathbb{N} - \{0\}$
+    - $m, n \in \mathbb{N}$
     - $A \in \textrm{Mat}_{m \times n}(\mathbb{K})$
     - $b \in \textrm{Mat}_{m \times 1}(\mathbb{K})$
 - **Th**
-    - $\exists x \in \textrm{Mat}_{n \times 1}(\mathbb{K}) \mid A\cdot x = b \iff \textrm{rk}(A) = \textrm{rk}(A_b)$
+    - ⚠️ **da rivedere**
+    - $\exists x \in \textrm{Mat}_{n \times 1}(\mathbb{K}) \mid A x = b \iff \textrm{rk}(A) = \textrm{rk}(A_b)$
 - **Dim**
-    - $\exists x \in \textrm{Mat}_{n \times 1}(\mathbb{K}) \mid A\cdot x = b \iff \exists x_1, \ldots, x_n \in \mathbb{K} \mid x_1A^1 + \ldots + x_nA^n=b \iff b \in \textrm{span}(A^1, \ldots, A^n) \subset \textrm{span}(A^1, \ldots, A^n, b)$
+    - $\exists x \in \textrm{Mat}_{n \times 1}(\mathbb{K}) \mid A x = b \iff \exists x_1, \ldots, x_n \in \mathbb{K} \mid x_1A^1 + \ldots + x_nA^n=b \iff b \in \textrm{span}(A^1, \ldots, A^n) \subseteq \textrm{span}(A^1, \ldots, A^n, b)$
     - $b \in \textrm{span}(A^1, \ldots, A^n) \implies \exists \mu_1, \ldots, \mu_n \mid v = \mu_1A^1 + \ldots + \mu_n A^n$
-    - $\forall v \in \textrm{span}(A^1, \ldots, A^n, b) \quad \exists \lambda_1, \ldots, \lambda_n, c \in \mathbb{K} \mid v = \lambda_1A^1 + \ldots + \lambda_nA^n + cb = \lambda_1A^1 + \ldots + \lambda_nA^n + c(\mu_1A^1 + \ldots + \mu_nA^n) = (\lambda_1 + c\mu_1)A^1 + \ldots + (\lambda_n + c\mu_n)A^n \implies v \in \textrm{span}(A^1, \ldots, A^n) \implies \textrm{span}(A^1, \ldots, A^n, b) \subset \textrm{span}(A^1, \ldots, A^n)$
+    - $\forall v \in \textrm{span}(A^1, \ldots, A^n, b) \quad \exists \lambda_1, \ldots, \lambda_n, c \in \mathbb{K} \mid v = \lambda_1A^1 + \ldots + \lambda_nA^n + cb = \lambda_1A^1 + \ldots + \lambda_nA^n + c(\mu_1A^1 + \ldots + \mu_nA^n) = (\lambda_1 + c\mu_1)A^1 + \ldots + (\lambda_n + c\mu_n)A^n \implies v \in \textrm{span}(A^1, \ldots, A^n) \implies \textrm{span}(A^1, \ldots, A^n, b) \subseteq \textrm{span}(A^1, \ldots, A^n)$
     - allora $\textrm{span}(A^1, \ldots, A^n) = \textrm{span}(A^1, \ldots, A^n, b) \iff \dim(\textrm{span}(A^1, \ldots, A^n)) = \dim(\textrm{span}(A^1, \ldots, A^n, b))$
     - per dimostrazione precedente $\dim(\textrm{span}(A^1, \ldots, A^n)) = \textrm{rk}(A)$, e analogamente $\dim(\textrm{span}(A^1, \ldots, A^n, b)) = \textrm{rk}(A_b)$
     - allora $\dim(\textrm{span}(A^1, \ldots, A^n)) = \dim(\textrm{span}(A^1, \ldots, A^n, b)) \iff \textrm{rk}(A) = \textrm{rk}(A_b)$
@@ -342,11 +343,11 @@
 
 - **Hp**
     - $\mathbb{K}$ campo
-    - $n \in \mathbb{N} - \{0\}$
+    - $n \in \mathbb{N}$
     - $A \in \textrm{Mat}_{n \times n}(\mathbb{K}) \mid \det(A) \neq 0$
     - $b \in \textrm{Mat}_{n \times 1}(\mathbb{K})$
 - **Th**
-    - $\left\{\begin{array}{c}x_1 = \det(A)^{-1} \cdot \det\left(\begin{array}{cccc}b_1 & a_{1,2} &\cdots & a_{1,n} \\ \vdots & \vdots & \ddots & \vdots \\ b_n & a_{n, 2} & \cdots & a_{n,n}\end{array}\right) \\ \vdots \\ x_n = \det(A)^{-1} \cdot \det\left(\begin{array}{cccc}a_{1,1} & \cdots & a_{1,n-1} & b_1\\ \vdots & \ddots & \vdots & \vdots \\ a_{n, 1} & \cdots & a_{n,n-1} & b_n\end{array}\right) \end{array}\right.$ sono le componenti del vettore $x \in \textrm{Mat}_{n \times 1}(\mathbb{K}) \mid A \cdot x = b$
+    - $\left\{\begin{array}{c}x_1 = \det(A)^{-1} \cdot \det\left(\begin{array}{cccc}b_1 & a_{1,2} &\cdots & a_{1,n} \\ \vdots & \vdots & \ddots & \vdots \\ b_n & a_{n, 2} & \cdots & a_{n,n}\end{array}\right) \\ \vdots \\ x_n = \det(A)^{-1} \cdot \det\left(\begin{array}{cccc}a_{1,1} & \cdots & a_{1,n-1} & b_1\\ \vdots & \ddots & \vdots & \vdots \\ a_{n, 1} & \cdots & a_{n,n-1} & b_n\end{array}\right) \end{array}\right.$ sono le componenti del vettore $x \in \textrm{Mat}_{n \times 1}(\mathbb{K}) \mid A x = b$
 
 ****
 
@@ -354,11 +355,14 @@
 
 - **Hp**
     - $\mathbb{K}$ campo
-    - $n, r, r' \in \mathbb{N} - \{0\} \mid r \lt r' \lt n$
+    - $n, r, r' \in \mathbb{N} \mid r \lt r' \lt n$
     - $A \in \textrm{Mat}_{n \times n}(\mathbb{K})$
-    - $M_1 \in \textrm{Mat}_{r \times r}(\mathbb{K}) \mid M_1$ minore di $A \land \det(A) \neq 0$
+    - $M_1 \in \textrm{Mat}_{r \times r}(\mathbb{K}) \mid M_1$ minore di $A \land \det(M_1) \neq 0$
+    1. $\textrm{rk}(A)=r$
+    2. $\forall M_1'$ orlato di $M_1 \quad \det(M_1') = 0$
+    3. $\forall M_2 \in \textrm{Mat}_{r' \times r'}(\mathbb{K}) \mid M_2$ minore di $A \quad \det(M_2) = 0$
 - **Th**
-    - $\textrm{rk}(A)=r \iff \forall M_1'$ orlato di $M_1 \quad \det(M_1') = 0 \iff \forall M_2 \in \textrm{Mat}_{r' \times r'}(\mathbb{K}) \mid M_2$ minore di $A \quad \det(M_2) = 0$
+    - le proposizioni sono equivalenti
 
 ****
 
@@ -366,7 +370,7 @@
 
 - **Hp**
     - $\mathbb{K}$ campo
-    - $n \in \mathbb{N} - \{0\}$
+    - $n \in \mathbb{N}$
     - $A, B \in \textrm{Mat}_{n \times n}(\mathbb{K})$
 - **Th**
     - $\det(A \cdot B) = \det(A) \cdot \det(B)$
@@ -375,21 +379,20 @@
 
 - **Hp**
     - $\mathbb{K}$ campo
-    - $n \in \mathbb{N} - \{0\}$
+    - $n \in \mathbb{N}$
     - $A \in \textrm{Mat}_{n \times n}(\mathbb{K})$
 - **Th**
     - $\det(A)^{-1}=\det(A^{-1})$
 - **Dim**
     - $\det(A\cdot A^{-1})=\det(I_n)=1$
-    - $\det(A \cdot A^{-1}) = \det(A) \cdot \det(A^{-1})$ per il teorema di Binet
-    - allora $\det(A) \cdot \det(A^{-1}) = 1 \iff \det(A)^{-1}=\det(A^{-1})$
+    - allora per il teorema di Binet $1 = \det(A \cdot A^{-1}) = \det(A) \cdot \det(A^{-1}) \iff \det(A)^{-1}=\det(A^{-1})$
 
 ****
 
 # Teorema spettrale
 
 - **Hp**
-    - $n \in \mathbb{N} - \{0\}$
+    - $n \in \mathbb{N}$
     - $A \in \textrm{Mat}_{n \times n}(\mathbb{R}) \mid A$ simmetrica
     1. $\forall \lambda \in \textrm{sp}(A) \quad \lambda \in \mathbb{R}$
     2. $A$ diagonalizzabile
@@ -397,3 +400,4 @@
     4. $\exists B \in O(n) \mid B^{-1}AB$ diagonale
 - **Th**
     - le proposizioni sono equivalenti
+
