@@ -988,7 +988,7 @@ class="math inline">\textrm{span}(\mathcal{B}_1 \cup \mathcal{B}_2)
 \right.\implies \displaystyle u + v =\sum_{i = 1}^k{(\lambda_i +
 \mu_i)w_i} + \sum_{j = k + 1}^m{\lambda_j u_j} + \sum_{h = k + 1}^n
 {\mu_hv_h} \implies u + v \in \textrm{span}(\mathcal{B}_1 \cup
-\mathcal{B}_2) \implies U + V \subseteq \textrm{span}(\mathcal{B} \cup
+\mathcal{B}_2) \implies U + V \subseteq \textrm{span}(\mathcal{B}_1 \cup
 \mathcal{B}_2)</span></li>
 <li>allora <span class="math inline">\mathcal{B}_1 \cup
 \mathcal{B}_2</span> generatori di <span class="math inline">U +
@@ -1460,6 +1460,154 @@ class="math inline">n - \textrm{rk}(A)</span></li>
 <li><strong>Dim</strong>
 <ul>
 <li>⚠️ <strong>TODO</strong></li>
+</ul></li>
+</ul>
+<hr />
+<a href="#interpretazione-geometrica-dei-vettori"><h1 id="interpretazione-geometrica-dei-vettori">Interpretazione geometrica dei vettori</h1></a>
+
+<a href="#def-10"><h2 id="def-10">Def</h2></a>
+<ul>
+<li><strong>Prodotto scalare</strong></li>
+</ul>
+<blockquote>
+<ul>
+<li><span class="math inline">n \in \mathbb{N}</span></li>
+<li><span class="math inline">\mathbb{K}</span> campo</li>
+<li><span class="math inline">u, v \in \mathbb{K}^n \mid u =
+\left(\begin{array}{c}x_1 \\ \vdots \\ x_n \end{array}\right), v =
+\left(\begin{array}{c}y_1 \\ \vdots \\ y_n
+\end{array}\right)</span></li>
+<li><span class="math inline">u \cdot v := \displaystyle \sum_{i =
+1}^n{x_i \cdot y_i}</span> è detto <strong>prodotto scalare tra <span
+class="math inline">u</span> e <span
+class="math inline">v</span></strong>
+<ul>
+<li>in particolare, il prodotto scalare è definito per ogni coppia di
+vettori, anche avendo ad esempio <span class="math inline">u \in
+\textrm{Mat}_{n \times 1}(\mathbb{K})</span> e <span
+class="math inline">v \in \textrm{Mat}_{1 \times n}(\mathbb{K})</span>,
+dove invece il prodotto matriciale <span class="math inline">uv</span>
+non è definito</li>
+</ul></li>
+</ul>
+</blockquote>
+<ul>
+<li><strong>Spazio di Hilbert</strong></li>
+</ul>
+<blockquote>
+<ul>
+<li><span class="math inline">\mathbb{K}</span> campo</li>
+<li><span class="math inline">V</span> spazio vettoriale su <span
+class="math inline">\mathbb{K}</span></li>
+<li><span class="math inline">V</span> spazio di Hilbert <span
+class="math inline">\iff</span> in <span class="math inline">V</span> è
+ben definito il prodotto scalare</li>
+</ul>
+</blockquote>
+<ul>
+<li><strong>Base ortogonale di uno spazio di Hilbert</strong></li>
+</ul>
+<blockquote>
+<ul>
+<li><span class="math inline">n \in \mathbb{N}</span></li>
+<li><span class="math inline">\mathbb{K}</span> campo</li>
+<li><span class="math inline">V</span> spazio di Hilbert su <span
+class="math inline">\mathbb{K}</span></li>
+<li><span class="math inline">v_1, \ldots, v_n</span> base di <span
+class="math inline">V</span></li>
+<li><span class="math inline">v_1, \ldots, v_n</span> <strong>base
+ortogonale di <span class="math inline">V</span></strong> <span
+class="math inline">\iff \forall i, j \in [1, n], i \neq j \quad v_i
+\cdot v_j = 0</span></li>
+</ul>
+</blockquote>
+<ul>
+<li><strong>Base ortonormale di uno spazio di Hilbert</strong></li>
+</ul>
+<blockquote>
+<ul>
+<li><span class="math inline">n \in \mathbb{N}</span></li>
+<li><span class="math inline">\mathbb{K}</span> campo</li>
+<li><span class="math inline">V</span> spazio di Hilbert su <span
+class="math inline">\mathbb{K}</span></li>
+<li><span class="math inline">v_1, \ldots, v_n</span> base ortogonale di
+<span class="math inline">V</span></li>
+<li><span class="math inline">v_1, \ldots, v_n</span> <strong>base
+ortonormale</strong> di <span class="math inline">V \iff \forall i, j
+\in [1, n] \quad v_i \cdot v_j = \left\{\begin{array}{cc} 1 &amp; i = j
+\\ 0 &amp; i \neq j \end{array}\right.</span>
+<ul>
+<li>in particolare, è possibile ottenere <span class="math inline">v_1,
+\ldots, v_n</span> a partire da <span class="math inline">e_1, \ldots,
+e_n</span> tramite rotazioni e riflessioni</li>
+</ul></li>
+</ul>
+</blockquote>
+<a href="#oss-14"><h2 id="oss-14">Oss</h2></a>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">n \in \mathbb{N} - \{0\}</span></li>
+<li><span class="math inline">u, v \in \mathbb{K}^n</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">u \cdot v = v \cdot u</span></li>
+<li><span class="math inline">\forall w \in \mathbb{K}^n \quad u \cdot
+(v + w) = u \cdot v + u \cdot w</span></li>
+<li><span class="math inline">u \cdot (\lambda v) = \lambda(u \cdot
+v)</span></li>
+</ul></li>
+</ul>
+<a href="#def-11"><h2 id="def-11">Def</h2></a>
+<ul>
+<li><strong>Norma di un vettore</strong></li>
+</ul>
+<blockquote>
+<ul>
+<li><span class="math inline">\mathbb{K}</span> campo</li>
+<li><span class="math inline">n \in \mathbb{N} - \{0\}</span></li>
+<li><span class="math inline">u \in \mathbb{K}^n \mid u =
+\left(\begin{array}{c}x_1 \\ \vdots \\ x_n
+\end{array}\right)</span></li>
+<li><span class="math inline">||u|| := \sqrt{x_1^2 + \ldots +
+x_n^2}</span> è detta <strong>norma di <span
+class="math inline">u</span></strong>
+<ul>
+<li>graficamente, corrisponde alla lunghezza del vettore <span
+class="math inline">u</span> nel piano cartesiano</li>
+</ul></li>
+</ul>
+</blockquote>
+<a href="#oss-15"><h2 id="oss-15">Oss</h2></a>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\mathbb{K}</span> campo</li>
+<li><span class="math inline">n \in \mathbb{N} - \{0\}</span></li>
+<li><span class="math inline">u \in \mathbb{K}^n \mid u =
+\left(\begin{array}{c}x_1 \\ \vdots \\ x_n
+\end{array}\right)</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">||u|| = \sqrt{u \cdot u}</span></li>
+</ul></li>
+</ul>
+<a href="#oss-16"><h2 id="oss-16">Oss</h2></a>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">n \in \mathbb{N}</span></li>
+<li><span class="math inline">\mathbb{K}</span> campo</li>
+<li><span class="math inline">v \in \mathbb{K}^n</span></li>
+<li><span class="math inline">v_1, \ldots, v_k</span> base ortonormale
+di <span class="math inline">\mathbb{K}^n</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">v = (v \cdot v_1)v_1 + \ldots + (v \cdot
+v_n)v_n</span></li>
 </ul></li>
 </ul>
 </body>

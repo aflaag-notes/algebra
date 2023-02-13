@@ -2170,13 +2170,105 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
     - $X$ sottospazio affine di $\mathbb{K}^n$, con dimensione pari a $n - \textrm{rk}(A)$
 
+****
+
+# Interpretazione geometrica dei vettori
+
+
+## Definizione 48
+
+
+- **Prodotto scalare**
+
+> - $n \in \mathbb{N}$
+> - $\mathbb{K}$ campo
+> - $u, v \in \mathbb{K}^n \mid u = \left(\begin{array}{c}x_1 \\ \vdots \\ x_n \end{array}\right), v = \left(\begin{array}{c}y_1 \\ \vdots \\ y_n \end{array}\right)$
+> - $u \cdot v := \displaystyle \sum_{i = 1}^n{x_i \cdot y_i}$ è detto **prodotto scalare tra $u$ e $v$**
+>   - in particolare, il prodotto scalare è definito per ogni coppia di vettori, anche avendo ad esempio $u \in \textrm{Mat}_{n \times 1}(\mathbb{K})$ e $v \in \textrm{Mat}_{1 \times n}(\mathbb{K})$, dove invece il prodotto matriciale $uv$ non è definito
+
+- **Spazio di Hilbert**
+
+> - $\mathbb{K}$ campo
+> - $V$ spazio vettoriale su $\mathbb{K}$
+> - $V$ spazio di Hilbert $\iff$ in $V$ è ben definito il prodotto scalare
+
+- **Base ortogonale di uno spazio di Hilbert**
+
+> - $n \in \mathbb{N}$
+> - $\mathbb{K}$ campo
+> - $V$ spazio di Hilbert su $\mathbb{K}$
+> - $v_1, \ldots, v_n$ base di $V$
+> - $v_1, \ldots, v_n$ **base ortogonale di $V$** $\iff \forall i, j \in [1, n], i \neq j \quad v_i \cdot v_j = 0$
+
+- **Base ortonormale di uno spazio di Hilbert**
+
+> - $n \in \mathbb{N}$
+> - $\mathbb{K}$ campo
+> - $V$ spazio di Hilbert su $\mathbb{K}$
+> - $v_1, \ldots, v_n$ base ortogonale di $V$
+> - $v_1, \ldots, v_n$ **base ortonormale** di $V \iff \forall i, j \in [1, n] \quad v_i \cdot v_j = \left\{\begin{array}{cc} 1 & i = j \\ 0 & i \neq j \end{array}\right.$
+>   - in particolare, è possibile ottenere $v_1, \ldots, v_n$ a partire da $e_1, \ldots, e_n$ tramite rotazioni e riflessioni
+
+
+
+## Teorema 136
+
+
+- **Hp**
+    - $n \in \mathbb{N} - \{0\}$
+    - $u, v \in \mathbb{K}^n$
+- **Th**
+    - $u \cdot v = v \cdot u$
+    - $\forall w \in \mathbb{K}^n \quad u \cdot (v + w) = u \cdot v + u \cdot w$
+    - $u \cdot (\lambda v) = \lambda(u \cdot v)$
+
+
+
+## Definizione 49
+
+
+- **Norma di un vettore**
+
+> - $\mathbb{K}$ campo
+> - $n \in \mathbb{N} - \{0\}$
+> - $u \in \mathbb{K}^n \mid u = \left(\begin{array}{c}x_1 \\ \vdots \\ x_n \end{array}\right)$
+> - $||u|| := \sqrt{x_1^2 + \ldots + x_n^2}$ è detta **norma di $u$**
+>   - graficamente, corrisponde alla lunghezza del vettore $u$ nel piano cartesiano
+
+
+
+## Teorema 137
+
+
+- **Hp**
+    - $\mathbb{K}$ campo
+    - $n \in \mathbb{N} - \{0\}$
+    - $u \in \mathbb{K}^n \mid u = \left(\begin{array}{c}x_1 \\ \vdots \\ x_n \end{array}\right)$
+- **Th**
+    - $||u|| = \sqrt{u \cdot u}$
+
+
+
+## Teorema 138
+
+
+- **Hp**
+    - $n \in \mathbb{N}$
+    - $\mathbb{K}$ campo
+    - $v \in \mathbb{K}^n$
+    - $v_1, \ldots, v_k$ base ortonormale di $\mathbb{K}^n$
+- **Th**
+    - $v = (v \cdot v_1)v_1 + \ldots + (v \cdot v_n)v_n$
+
+
+
 
 ****
 # Matrici
 
 
 
-## Definizione 48
+## Definizione 50
 
 
 - **Matrici**
@@ -2195,7 +2287,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Definizione 49
+## Definizione 51
 
 
 - **Somma tra matrici**
@@ -2208,7 +2300,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 136
+## Teorema 139
 
 
 - **Hp**
@@ -2219,7 +2311,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Definizione 50
+## Definizione 52
 
 
 - **Prodotto tra matrici**
@@ -2232,7 +2324,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 137
+## Teorema 140
 
 
 - **Hp**
@@ -2250,7 +2342,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 138
+## Teorema 141
 
 
 - **Hp**
@@ -2265,7 +2357,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 # Matrici particolari
 
 
-## Definizione 51
+## Definizione 53
 
 
 - **Vettore trasposto**
@@ -2293,7 +2385,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 139
+## Teorema 142
 
 
 - **Hp**
@@ -2306,7 +2398,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Definizione 52
+## Definizione 54
 
 
 - **Matrice identità**
@@ -2330,7 +2422,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 140
+## Teorema 143
 
 
 - **Hp**
@@ -2341,7 +2433,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 141
+## Teorema 144
 
 
 - **Hp**
@@ -2353,7 +2445,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Definizione 53
+## Definizione 55
 
 
 - **Matrice ortogonale**
@@ -2373,7 +2465,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Definizione 54
+## Definizione 56
 
 
 - **Gruppo Speciale Lineare**
@@ -2384,7 +2476,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Definizione 55
+## Definizione 57
 
 
 - **Matrici simili**
@@ -2396,7 +2488,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Definizione 56
+## Definizione 58
 
 
 - **Traccia**
@@ -2408,7 +2500,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 142
+## Teorema 145
 
 
 - **Hp**
@@ -2420,7 +2512,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Definizione 57
+## Definizione 59
  
 
 - **Matrice triangolare superiore**
@@ -2468,7 +2560,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 143
+## Teorema 146
 
 
 - **Hp**
@@ -2480,7 +2572,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Definizione 58
+## Definizione 60
 
 
 - **Sottomatrice di una matrice**
@@ -2507,7 +2599,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 144
+## Teorema 147
 
 
 - **Hp**
@@ -2520,7 +2612,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
     
 
 
-## Definizione 59
+## Definizione 61
 
 
 - **Matrice completa**
@@ -2533,7 +2625,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Definizione 60
+## Definizione 62
 
 
 - **Matrice di un'applicazione lineare**
@@ -2555,7 +2647,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Definizione 61
+## Definizione 63
 
 
 - **Sottospazio ortogonale**
@@ -2568,7 +2660,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 145
+## Teorema 148
 
 
 - **Hp**
@@ -2580,7 +2672,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 146
+## Teorema 149
 
 
 - **Hp**
@@ -2592,7 +2684,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Definizione 62
+## Definizione 64
 
 
 - **Moltiplicazione sinistra**
@@ -2604,7 +2696,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 147
+## Teorema 150
 
 
 - **Hp**
@@ -2616,7 +2708,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 148
+## Teorema 151
 
 
 - **Hp**
@@ -2627,7 +2719,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
     - $\ker(L_A) = \textrm{span}(A_1, \ldots, A_m)^\bot$
     - $\textrm{im}(L_A) = \textrm{span}(A^1, \ldots, A^n)$
 
-## Definizione 63
+## Definizione 65
 
 
 - **Rango di una matrice**
@@ -2639,7 +2731,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 149
+## Teorema 152
 
 
 - **Hp**
@@ -2654,7 +2746,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 # Operazioni su righe e colonne
 
 
-## Definizione 64
+## Definizione 66
 
 
 - **Scambio di righe di una matrice**
@@ -2705,7 +2797,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 150
+## Teorema 153
 
 
 - **Hp**
@@ -2718,7 +2810,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 151
+## Teorema 154
 
 
 - **Hp**
@@ -2731,7 +2823,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 152
+## Teorema 155
 
 
 - **Hp**
@@ -2744,7 +2836,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 153
+## Teorema 156
 
 
 - **Hp**
@@ -2754,109 +2846,6 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
     - $A \equiv B \iff$ è possibile ricavare $B$ da $A$ eseguendo operazioni _tra colonne_ definite precedentemente
 - **Th**
     - $A \equiv B \implies \textrm{im}(L_A) = \textrm{im}(L_B) \land \textrm{rk}(A) = \textrm{rk}(B)$
-
-****
-
-# Interpretazione geometrica dei vettori
-
-
-
-## Definizione 65
-
-
-- **Prodotto scalare**
-
-> - $n \in \mathbb{N}$
-> - $\mathbb{K}$ campo
-> - $u, v \in \mathbb{K}^n \mid u = \left(\begin{array}{c}x_1 \\ \vdots \\ x_n \end{array}\right), v = \left(\begin{array}{c}y_1 \\ \vdots \\ y_n \end{array}\right)$
-> - $u \cdot v := \displaystyle \sum_{i = 1}^n{x_i \cdot y_i}$ è detto **prodotto scalare tra $u$ e $v$**
->   - in particolare, il prodotto scalare è definito per ogni coppia di vettori, anche avendo ad esempio $u \in \textrm{Mat}_{n \times 1}(\mathbb{K})$ e $v \in \textrm{Mat}_{1 \times n}(\mathbb{K})$, dove invece il prodotto matriciale $uv$ non è definito
-
-- **Spazio di Hilbert**
-
-> - $\mathbb{K}$ campo
-> - $V$ spazio vettoriale su $\mathbb{K}$
-> - $V$ spazio di Hilbert $\iff$ in $V$ è ben definito il prodotto scalare
-
-- **Base ortogonale di uno spazio di Hilbert**
-
-> - $n \in \mathbb{N}$
-> - $\mathbb{K}$ campo
-> - $V$ spazio di Hilbert su $\mathbb{K}$
-> - $v_1, \ldots, v_n$ base di $V$
-> - $v_1, \ldots, v_n$ **base ortogonale di $V$** $\iff \forall i, j \in [1, n], i \neq j \quad v_i \cdot v_j = 0$
-
-- **Base ortonormale di uno spazio di Hilbert**
-
-> - $n \in \mathbb{N}$
-> - $\mathbb{K}$ campo
-> - $V$ spazio di Hilbert su $\mathbb{K}$
-> - $v_1, \ldots, v_n$ base ortogonale di $V$
-> - $v_1, \ldots, v_n$ **base ortonormale** di $V \iff \forall i, j \in [1, n] \quad v_i \cdot v_j = \left\{\begin{array}{cc} 1 & i = j \\ 0 & i \neq j \end{array}\right.$
->   - in particolare, è possibile ottenere $v_1, \ldots, v_n$ a partire da $e_1, \ldots, e_n$ tramite rotazioni e riflessioni
-
-
-
-## Teorema 154
-
-
-- **Hp**
-    - $n \in \mathbb{N} - \{0\}$
-    - $u, v \in \mathbb{K}^n$
-- **Th**
-    - $u \cdot v = v \cdot u$
-    - $\forall w \in \mathbb{K}^n \quad u \cdot (v + w) = u \cdot v + u \cdot w$
-    - $u \cdot (\lambda v) = \lambda(u \cdot v)$
-
-
-
-## Definizione 66
-
-
-- **Norma di un vettore**
-
-> - $\mathbb{K}$ campo
-> - $n \in \mathbb{N} - \{0\}$
-> - $u \in \mathbb{K}^n \mid u = \left(\begin{array}{c}x_1 \\ \vdots \\ x_n \end{array}\right)$
-> - $||u|| := \sqrt{x_1^2 + \ldots + x_n^2}$ è detta **norma di $u$**
->   - graficamente, corrisponde alla lunghezza del vettore $u$ nel piano cartesiano
-
-
-
-## Teorema 155
-
-
-- **Hp**
-    - $\mathbb{K}$ campo
-    - $n \in \mathbb{N} - \{0\}$
-    - $u \in \mathbb{K}^n \mid u = \left(\begin{array}{c}x_1 \\ \vdots \\ x_n \end{array}\right)$
-- **Th**
-    - $||u|| = \sqrt{u \cdot u}$
-
-
-
-## Teorema 156
-
-
-- **Hp**
-    - $n \in \mathbb{N}$
-    - $\mathbb{K}$ campo
-    - $v \in \mathbb{K}^n$
-    - $v_1, \ldots, v_k$ base ortonormale di $\mathbb{K}^n$
-- **Th**
-    - $v = (v \cdot v_1)v_1 + \ldots + (v \cdot v_n)v_n$
-
-
-
-## Teorema 157
-
-
-- **Hp**
-    - $n \in \mathbb{N}$
-    - $\mathbb{K}$ campo
-    - $A \in O(n)$
-- **Th**
-    - $A_1, \ldots, A_n$ e $A^1, \ldots, A^n$ basi ortonormali di $\mathbb{K}^n$
 
 
 
@@ -2891,7 +2880,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 158
+## Teorema 157
 
 
 - **Hp**
@@ -2916,7 +2905,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 159
+## Teorema 158
 
 
 - **Hp**
@@ -2933,7 +2922,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
     - le proposizioni sono equivalenti
 
-## Teorema 160
+## Teorema 159
 
 
 - **Hp**
@@ -2945,7 +2934,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 161
+## Teorema 160
 
 
 - **Hp**
@@ -2957,7 +2946,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 162
+## Teorema 161
 
 
 - **Hp**
@@ -2967,7 +2956,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
     - $\det(A) = \det(B)$
 
-## Teorema 163
+## Teorema 162
 
 
 - **Hp**
@@ -2979,7 +2968,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 164
+## Teorema 163
 
 
 - **Hp**
@@ -2991,7 +2980,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 165
+## Teorema 164
 
 
 - **Hp**
@@ -3003,7 +2992,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 166
+## Teorema 165
 
 
 - **Hp**
@@ -3015,7 +3004,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 167
+## Teorema 166
 
 
 - **Hp**
@@ -3029,7 +3018,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 168
+## Teorema 167
 
 
 - **Hp**
@@ -3053,7 +3042,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 169
+## Teorema 168
 
 
 - **Hp**
@@ -3065,7 +3054,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 170
+## Teorema 169
 
 
 - **Hp**
@@ -3091,7 +3080,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 171
+## Teorema 170
 
 
 - **Hp**
@@ -3103,7 +3092,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 172
+## Teorema 171
 
 
 - **Hp**
@@ -3134,7 +3123,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 173
+## Teorema 172
 
 
 - **Hp**
@@ -3146,7 +3135,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 174
+## Teorema 173
 
 
 - **Hp**
@@ -3170,7 +3159,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 175
+## Teorema 174
 
 
 - **Hp**
@@ -3198,7 +3187,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 176
+## Teorema 175
 
 
 - **Hp**
@@ -3224,7 +3213,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 177
+## Teorema 176
 
 
 - **Hp**
@@ -3250,7 +3239,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 178
+## Teorema 177
 
 
 - **Hp**
@@ -3263,7 +3252,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 179
+## Teorema 178
 
 
 - **Hp**
@@ -3274,7 +3263,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
     - $\nu(\lambda) = n - \textrm{rk}(A - \lambda \cdot I_n)$
 
-## Teorema 180
+## Teorema 179
 
 
 - **Hp**
@@ -3287,7 +3276,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 181
+## Teorema 180
 
 
 - **Hp**
@@ -3302,7 +3291,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 182
+## Teorema 181
 
 
 - **Hp**
@@ -3311,7 +3300,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
     - $A$ è triangolarizzabile
 
-## Teorema 183
+## Teorema 182
 
 
 - **Hp**
@@ -3322,7 +3311,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 184
+## Teorema 183
 
 
 - **Hp**
@@ -3337,7 +3326,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 185
+## Teorema 184
 
 
 - **Hp**
@@ -3365,7 +3354,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 186
+## Teorema 185
 
 
 - **Hp**
@@ -3389,7 +3378,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 187
+## Teorema 186
 
 
 - **Hp**
@@ -3402,7 +3391,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 188
+## Teorema 187
 
 
 - **Hp**
@@ -3447,7 +3436,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 189
+## Teorema 188
 
 
 - **Hp**
@@ -3455,7 +3444,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
   - $(\mathbb{C}, +, \cdot )$ è un campo
 
-## Teorema 190
+## Teorema 189
 
 
 - **Hp**
@@ -3468,7 +3457,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 191
+## Teorema 190
 
 
 - **Hp**
@@ -3494,7 +3483,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 192
+## Teorema 191
 
 
 - **Hp**
@@ -3502,7 +3491,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
   - $\displaystyle \binom{n}{k} = \binom{n}{n-k}$
 
-## Teorema 193
+## Teorema 192
 
 
 - **Hp**
@@ -3510,7 +3499,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
   - $\displaystyle \binom{n}{k + 1} = \binom{n - 1}{k + 1} \binom{n - 1}{ k}$
 
-## Teorema 194
+## Teorema 193
 
 
 - **Hp**
@@ -3519,7 +3508,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
   - $p \ \bigg\vert \displaystyle \binom{p}{k}$
 
-## Teorema 195
+## Teorema 194
 
 
 - **Hp**
@@ -3530,7 +3519,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
   - $\displaystyle \binom{p}{k} \cdot [a] = [0]$ in $\mathbb{Z}_p$
 
-## Teorema 196
+## Teorema 195
 
 
 - **Hp**
@@ -3539,7 +3528,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
   - $([a]+[b])^{p}=[a]^{p}+[b]^{p}$ in $\mathbb{Z}_p$
 
-## Teorema 197
+## Teorema 196
 
 
 - **Hp**
@@ -3565,7 +3554,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 198
+## Teorema 197
 
 
 - **Hp**
@@ -3581,14 +3570,14 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 199
+## Teorema 198
 
 
 - ⚠️ **algoritmo di euclide todo**
 
 
 
-## Teorema 200
+## Teorema 199
 
 
 - ⚠️ **regola di ruffini**
@@ -3617,7 +3606,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
     - $\exists !  \ q, r \in \mathbb{Z} \mid m=n q+r \quad 0 \leq r<n$
 
-## Teorema 201
+## Teorema 200
 
 
 - **Hp**
@@ -3653,7 +3642,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 # Teorema cinese dei resti
 
 
-## Teorema 202
+## Teorema 201
 
 
 - **Hp**
@@ -3662,7 +3651,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
   - $m = a_1 \cdot \ldots \cdot a_n$
 
-## Teorema 203
+## Teorema 202
 
 
 - **Hp**
@@ -3673,7 +3662,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
   - $\exists \phi \mid \phi: \mathbb{Z}_m \rightarrow \mathbb{Z}_{a_1} \times \ldots \times \mathbb{Z}_{a_n}: x \ (\bmod \ m) \rightarrow (x \ (\bmod \ a_1), \ldots, x \ (\bmod \ a_n))$
   - $\phi$ è una funzione ben definita, ed è iniettiva
 
-## Teorema 204
+## Teorema 203
 
 
 - **Hp**
@@ -3684,7 +3673,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
   - $\exists ! x \ (\bmod \ m) \mid$ $\left\{\begin{array}{c}x \equiv b_{1}\ \left(\bmod  \ a_{1}\right) \\ \vdots \\ x \equiv b_{n}\ \left(\bmod  \ a_{n}\right)\end{array}\right.$
 
-## Teorema 205
+## Teorema 204
 
 
 - **Hp**
@@ -3721,7 +3710,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
   - $a^{p} \equiv a \ (\bmod \ p)$
 
-## Teorema 206
+## Teorema 205
 
 
 - **Hp**
@@ -3730,7 +3719,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
   - $[a]^{-1}=\left[a\right]^{p-2}$
 
-## Teorema 207
+## Teorema 206
 
 
 - **Hp**
@@ -3759,7 +3748,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
     - $A / \textrm{ker}(f) \cong \textrm{im}(f)$, ovvero $\exists \varphi \mid \varphi : A / \textrm{ker}(f) \rightarrow \textrm{im}(f): [a] \rightarrow f(a)$ isomorfismo di anelli
 
-## Teorema 208
+## Teorema 207
 
 
 - **Hp**
@@ -3769,7 +3758,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
   - $G / \textrm{ker}(f) \cong \textrm{im}(f)$, o alternativamente $\exists \varphi \mid \varphi : G / \textrm{ker}(f) \rightarrow \textrm{im}(f): [g] \rightarrow f(g)$ isomorfismo di gruppi
 
 
-## Teorema 209
+## Teorema 208
 
 
 - **Hp**
@@ -3807,7 +3796,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
     - $||v - u||^2 = ||u||^2 + ||v||^2 - 2\cos(\theta) \cdot||u||\cdot ||v||$
 
 
-## Teorema 210
+## Teorema 209
 
 
 - **Hp**
@@ -3885,7 +3874,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
     - $\det(A \cdot B) = \det(A) \cdot \det(B)$
 
 
-## Teorema 211
+## Teorema 210
 
 
 - **Hp**
