@@ -3505,15 +3505,7 @@ class="math inline">n - \textrm{rk}(A)</span></li>
 <li><span class="math inline">u \cdot v := \displaystyle \sum_{i =
 1}^n{x_i \cdot y_i}</span> è detto <strong>prodotto scalare tra <span
 class="math inline">u</span> e <span
-class="math inline">v</span></strong>
-<ul>
-<li>in particolare, il prodotto scalare è definito per ogni coppia di
-vettori, anche avendo ad esempio <span class="math inline">u \in
-\textrm{Mat}_{n \times 1}(\mathbb{K})</span> e <span
-class="math inline">v \in \textrm{Mat}_{1 \times n}(\mathbb{K})</span>,
-dove invece il prodotto matriciale <span class="math inline">uv</span>
-non è definito</li>
-</ul></li>
+class="math inline">v</span></strong></li>
 </ul>
 </blockquote>
 <ul>
@@ -3524,9 +3516,9 @@ non è definito</li>
 <li><span class="math inline">\mathbb{K}</span> campo</li>
 <li><span class="math inline">V</span> spazio vettoriale su <span
 class="math inline">\mathbb{K}</span></li>
-<li><span class="math inline">V</span> spazio di Hilbert <span
-class="math inline">\iff</span> in <span class="math inline">V</span> è
-ben definito il prodotto scalare</li>
+<li><span class="math inline">V</span> è detto <strong>spazio di
+Hilbert</strong> <span class="math inline">\iff</span> in <span
+class="math inline">V</span> è ben definito il prodotto scalare</li>
 </ul>
 </blockquote>
 <ul>
@@ -3540,10 +3532,10 @@ ben definito il prodotto scalare</li>
 class="math inline">\mathbb{K}</span></li>
 <li><span class="math inline">v_1, \ldots, v_n</span> base di <span
 class="math inline">V</span></li>
-<li><span class="math inline">v_1, \ldots, v_n</span> <strong>base
-ortogonale di <span class="math inline">V</span></strong> <span
-class="math inline">\iff \forall i, j \in [1, n], i \neq j \quad v_i
-\cdot v_j = 0</span></li>
+<li><span class="math inline">v_1, \ldots, v_n</span> è detta
+<strong>base ortogonale di <span class="math inline">V</span></strong>
+<span class="math inline">\iff \forall i, j \in [1, n], i \neq j \quad
+v_i \cdot v_j = 0</span></li>
 </ul>
 </blockquote>
 <ul>
@@ -3557,11 +3549,13 @@ class="math inline">\iff \forall i, j \in [1, n], i \neq j \quad v_i
 class="math inline">\mathbb{K}</span></li>
 <li><span class="math inline">v_1, \ldots, v_n</span> base ortogonale di
 <span class="math inline">V</span></li>
-<li><span class="math inline">v_1, \ldots, v_n</span> <strong>base
-ortonormale</strong> di <span class="math inline">V \iff \forall i, j
-\in [1, n] \quad v_i \cdot v_j = \left\{\begin{array}{cc} 1 &amp; i = j
-\\ 0 &amp; i \neq j \end{array}\right.</span>
+<li><span class="math inline">v_1, \ldots, v_n</span> è detta
+<strong>base ortonormale</strong> di <span class="math inline">V \iff
+\forall i, j \in [1, n] \quad v_i \cdot v_j = \left\{\begin{array}{cc} 1
+&amp; i = j \\ 0 &amp; i \neq j \end{array}\right.</span>
 <ul>
+<li>di fatto, una base ortonormale è una base ortogonale
+normalizzata</li>
 <li>in particolare, è possibile ottenere <span class="math inline">v_1,
 \ldots, v_n</span> a partire da <span class="math inline">e_1, \ldots,
 e_n</span> tramite rotazioni e riflessioni</li>
@@ -3572,7 +3566,7 @@ e_n</span> tramite rotazioni e riflessioni</li>
 <ul>
 <li><strong>Hp</strong>
 <ul>
-<li><span class="math inline">n \in \mathbb{N} - \{0\}</span></li>
+<li><span class="math inline">n \in \mathbb{N}</span></li>
 <li><span class="math inline">u, v \in \mathbb{K}^n</span></li>
 </ul></li>
 <li><strong>Th</strong>
@@ -3591,7 +3585,7 @@ v)</span></li>
 <blockquote>
 <ul>
 <li><span class="math inline">\mathbb{K}</span> campo</li>
-<li><span class="math inline">n \in \mathbb{N} - \{0\}</span></li>
+<li><span class="math inline">n \in \mathbb{N}</span></li>
 <li><span class="math inline">u \in \mathbb{K}^n \mid u =
 \left(\begin{array}{c}x_1 \\ \vdots \\ x_n
 \end{array}\right)</span></li>
@@ -3609,7 +3603,7 @@ class="math inline">u</span> nel piano cartesiano</li>
 <li><strong>Hp</strong>
 <ul>
 <li><span class="math inline">\mathbb{K}</span> campo</li>
-<li><span class="math inline">n \in \mathbb{N} - \{0\}</span></li>
+<li><span class="math inline">n \in \mathbb{N}</span></li>
 <li><span class="math inline">u \in \mathbb{K}^n \mid u =
 \left(\begin{array}{c}x_1 \\ \vdots \\ x_n
 \end{array}\right)</span></li>
@@ -3623,10 +3617,10 @@ class="math inline">u</span> nel piano cartesiano</li>
 <ul>
 <li><strong>Hp</strong>
 <ul>
-<li><span class="math inline">n \in \mathbb{N}</span></li>
 <li><span class="math inline">\mathbb{K}</span> campo</li>
+<li><span class="math inline">n \in \mathbb{N}</span></li>
 <li><span class="math inline">v \in \mathbb{K}^n</span></li>
-<li><span class="math inline">v_1, \ldots, v_k</span> base ortonormale
+<li><span class="math inline">v_1, \ldots, v_n</span> base ortonormale
 di <span class="math inline">\mathbb{K}^n</span></li>
 </ul></li>
 <li><strong>Th</strong>
@@ -5832,7 +5826,7 @@ trasformazione lineare</li>
 <ul>
 <li><strong>Hp</strong>
 <ul>
-<li><span class="math inline">n \in \mathbb{N} - \{0\}</span></li>
+<li><span class="math inline">n \in \mathbb{N}</span></li>
 <li><span class="math inline">u, v \in \mathbb{K}^n \mid u =
 \left(\begin{array}{c}x_1 \\ \vdots \\ x_n \end{array}\right), v =
 \left(\begin{array}{c}y_1 \\ \vdots \\ y_n
@@ -5842,7 +5836,7 @@ class="math inline">u</span> e <span class="math inline">v</span></li>
 </ul></li>
 <li><strong>Th</strong>
 <ul>
-<li><span class="math inline">||v - u||^2 = ||u||^2 + ||v||^2 -
+<li><span class="math inline">||u - v||^2 = ||u||^2 + ||v||^2 -
 2\cos(\theta) \cdot||u||\cdot ||v||</span></li>
 </ul></li>
 </ul>
@@ -5850,7 +5844,7 @@ class="math inline">u</span> e <span class="math inline">v</span></li>
 <ul>
 <li><strong>Hp</strong>
 <ul>
-<li><span class="math inline">n \in \mathbb{N} - \{0\}</span></li>
+<li><span class="math inline">n \in \mathbb{N}</span></li>
 <li><span class="math inline">u, v \in \mathbb{K}^n \mid u =
 \left(\begin{array}{c}x_1 \\ \vdots \\ x_n \end{array}\right), v =
 \left(\begin{array}{c}y_1 \\ \vdots \\ y_n

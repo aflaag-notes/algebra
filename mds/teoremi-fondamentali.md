@@ -283,22 +283,22 @@
 # Teorema di Carnot
 
 - **Hp**
-    - $n \in \mathbb{N} - \{0\}$ 
+    - $n \in \mathbb{N}$
     - $u, v \in \mathbb{K}^n \mid u = \left(\begin{array}{c}x_1 \\ \vdots \\ x_n \end{array}\right), v = \left(\begin{array}{c}y_1 \\ \vdots \\ y_n \end{array}\right)$
     - $\theta$ l'angolo compreso tra $u$ e $v$
 - **Th**
-    - $||v - u||^2 = ||u||^2 + ||v||^2 - 2\cos(\theta) \cdot||u||\cdot ||v||$
+    - $||u - v||^2 = ||u||^2 + ||v||^2 - 2\cos(\theta) \cdot||u||\cdot ||v||$
 
 ## Cor
 
 - **Hp**
-    - $n \in \mathbb{N} - \{0\}$ 
+    - $n \in \mathbb{N}$
     - $u, v \in \mathbb{K}^n \mid u = \left(\begin{array}{c}x_1 \\ \vdots \\ x_n \end{array}\right), v = \left(\begin{array}{c}y_1 \\ \vdots \\ y_n \end{array}\right)$
     - $\theta$ l'angolo compreso tra $u$ e $v$
 - **Th**
     - $\cos(\theta)= \dfrac{u \cdot v}{||u|| \cdot ||v||}$
 - **Dim**
-    - per il teorema di Carnot $||v - u||^2 = ||u||^2 + ||v||^2 - 2\cos(\theta) \cdot ||u||\cdot ||v|| \iff - 2\cos(\theta) \cdot||u||\cdot ||v|| = ||v - u||^2 - ||u||^2 - ||v||^2 = \displaystyle \sum_{i = 1}^n{(y_i -x_i)^2}- \sum_{i= 1}^n{y_i^2} - \sum_{i = 1}^n{x_i^2} = \sum_{i = 1}^n{\left((y_i - x_i)^2 - x_i^2 - y_i^2 \right)} = \sum_{i = 1}^n{\left(y_i^2 - 2y_ix_i + x_i^2 -y_i^2 -x_i^2 \right)} = - 2 \sum_{i = 1}^n{x_iy_i} = -2(u \cdot v)$
+    - per il teorema di Carnot $||u - v||^2 = ||u||^2 + ||v||^2 - 2\cos(\theta) \cdot ||u||\cdot ||v|| \iff - 2\cos(\theta) \cdot||u||\cdot ||v|| = ||u - v||^2 - ||u||^2 - ||v||^2 = \displaystyle \sum_{i = 1}^n{(y_i -x_i)^2}- \sum_{i= 1}^n{y_i^2} - \sum_{i = 1}^n{x_i^2} = \sum_{i = 1}^n{\left((y_i - x_i)^2 - x_i^2 - y_i^2 \right)} = \sum_{i = 1}^n{\left(y_i^2 - 2y_ix_i + x_i^2 -y_i^2 -x_i^2 \right)} = - 2 \sum_{i = 1}^n{x_iy_i} = -2(u \cdot v)$
     - $-2\cos(\theta) \cdot ||u|| \cdot ||v|| = -2(u \cdot v) \iff \cos(\theta)= \dfrac{u \cdot v}{||u|| \cdot ||v||}$
 
 ****

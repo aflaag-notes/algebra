@@ -509,13 +509,12 @@
 > - $\mathbb{K}$ campo
 > - $u, v \in \mathbb{K}^n \mid u = \left(\begin{array}{c}x_1 \\ \vdots \\ x_n \end{array}\right), v = \left(\begin{array}{c}y_1 \\ \vdots \\ y_n \end{array}\right)$
 > - $u \cdot v := \displaystyle \sum_{i = 1}^n{x_i \cdot y_i}$ è detto **prodotto scalare tra $u$ e $v$**
->   - in particolare, il prodotto scalare è definito per ogni coppia di vettori, anche avendo ad esempio $u \in \textrm{Mat}_{n \times 1}(\mathbb{K})$ e $v \in \textrm{Mat}_{1 \times n}(\mathbb{K})$, dove invece il prodotto matriciale $uv$ non è definito
 
 - **Spazio di Hilbert**
 
 > - $\mathbb{K}$ campo
 > - $V$ spazio vettoriale su $\mathbb{K}$
-> - $V$ spazio di Hilbert $\iff$ in $V$ è ben definito il prodotto scalare
+> - $V$ è detto **spazio di Hilbert** $\iff$ in $V$ è ben definito il prodotto scalare
 
 - **Base ortogonale di uno spazio di Hilbert**
 
@@ -523,7 +522,7 @@
 > - $\mathbb{K}$ campo
 > - $V$ spazio di Hilbert su $\mathbb{K}$
 > - $v_1, \ldots, v_n$ base di $V$
-> - $v_1, \ldots, v_n$ **base ortogonale di $V$** $\iff \forall i, j \in [1, n], i \neq j \quad v_i \cdot v_j = 0$
+> - $v_1, \ldots, v_n$ è detta **base ortogonale di $V$** $\iff \forall i, j \in [1, n], i \neq j \quad v_i \cdot v_j = 0$
 
 - **Base ortonormale di uno spazio di Hilbert**
 
@@ -531,13 +530,14 @@
 > - $\mathbb{K}$ campo
 > - $V$ spazio di Hilbert su $\mathbb{K}$
 > - $v_1, \ldots, v_n$ base ortogonale di $V$
-> - $v_1, \ldots, v_n$ **base ortonormale** di $V \iff \forall i, j \in [1, n] \quad v_i \cdot v_j = \left\{\begin{array}{cc} 1 & i = j \\ 0 & i \neq j \end{array}\right.$
+> - $v_1, \ldots, v_n$ è detta **base ortonormale** di $V \iff \forall i, j \in [1, n] \quad v_i \cdot v_j = \left\{\begin{array}{cc} 1 & i = j \\ 0 & i \neq j \end{array}\right.$
+>   - di fatto, una base ortonormale è una base ortogonale normalizzata
 >   - in particolare, è possibile ottenere $v_1, \ldots, v_n$ a partire da $e_1, \ldots, e_n$ tramite rotazioni e riflessioni
 
 ## Oss
 
 - **Hp**
-    - $n \in \mathbb{N} - \{0\}$
+    - $n \in \mathbb{N}$
     - $u, v \in \mathbb{K}^n$
 - **Th**
     - $u \cdot v = v \cdot u$
@@ -549,7 +549,7 @@
 - **Norma di un vettore**
 
 > - $\mathbb{K}$ campo
-> - $n \in \mathbb{N} - \{0\}$
+> - $n \in \mathbb{N}$
 > - $u \in \mathbb{K}^n \mid u = \left(\begin{array}{c}x_1 \\ \vdots \\ x_n \end{array}\right)$
 > - $||u|| := \sqrt{x_1^2 + \ldots + x_n^2}$ è detta **norma di $u$**
 >   - graficamente, corrisponde alla lunghezza del vettore $u$ nel piano cartesiano
@@ -558,18 +558,20 @@
 
 - **Hp**
     - $\mathbb{K}$ campo
-    - $n \in \mathbb{N} - \{0\}$
+    - $n \in \mathbb{N}$
     - $u \in \mathbb{K}^n \mid u = \left(\begin{array}{c}x_1 \\ \vdots \\ x_n \end{array}\right)$
 - **Th**
     - $||u|| = \sqrt{u \cdot u}$
+- **Dim**
+    - $||u|| = \sqrt{x_1^2 + \ldots + x_n^2} = \displaystyle \sqrt{\sum_{i= 1}^n{x_i^2}}=\sqrt{u\cdot u}$
 
 ## Oss
 
 - **Hp**
-    - $n \in \mathbb{N}$
     - $\mathbb{K}$ campo
+    - $n \in \mathbb{N}$
     - $v \in \mathbb{K}^n$
-    - $v_1, \ldots, v_k$ base ortonormale di $\mathbb{K}^n$
+    - $v_1, \ldots, v_n$ base ortonormale di $\mathbb{K}^n$
 - **Th**
     - $v = (v \cdot v_1)v_1 + \ldots + (v \cdot v_n)v_n$
 
