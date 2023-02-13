@@ -295,8 +295,7 @@ class="math inline">\mathbb{K}</span></li>
 <li><span class="math inline">v_1, \ldots, v_n \in V</span></li>
 <li><span class="math inline">\textrm{span}(v_1, \ldots, v_n) :=
 \{\lambda_1 v_1 + \ldots + \lambda_n v_n \mid \lambda_1, \ldots ,
-\lambda_n \in \mathbb{K}\}</span> è detto <strong><span
-class="math inline">\textrm{span}</span> degli <span
+\lambda_n \in \mathbb{K}\}</span> è detto <strong>span degli <span
 class="math inline">v_1, \ldots v_n</span></strong>
 <ul>
 <li>in particolare, costituisce l’insieme delle <em>combinazioni lineari
@@ -316,8 +315,8 @@ class="math inline">\mathbb{K}</span></li>
 </ul></li>
 <li><strong>Th</strong>
 <ul>
-<li><span class="math inline">\textrm{span}(v_1, \ldots, v_n)</span> è
-un sottospazio vettoriale di <span class="math inline">V</span></li>
+<li><span class="math inline">\textrm{span}(v_1, \ldots, v_n) \subset
+V</span> sottospazio vettoriale</li>
 </ul></li>
 <li><strong>Dim</strong>
 <ul>
@@ -514,7 +513,156 @@ class="math inline">\mathbb{K}</span></li>
 </ul></li>
 <li><strong>Dim</strong>
 <ul>
-<li>⚠️ <strong>todo</strong></li>
+<li>⚠️ <strong>confrontare che sia corretta</strong></li>
+<li>dimostrazione per induzione su <span
+class="math inline">k</span></li>
+<li><em>caso base</em>
+<ul>
+<li>bisogna dimostrare che per <span class="math inline">i = 1</span>
+vettori linearmente indipendenti si ha che <span
+class="math inline">\textrm{span}(v_1, w_2, \ldots, w_n) =
+\textrm{span}(w_1, \ldots, w_n)</span>
+<ul>
+<li>la tesi equivale a dimostrare che <span
+class="math inline">v_1</span> e <span class="math inline">w_1</span>
+sono intercambiabili nello span</li>
+<li><span class="math inline">v_1 \in \textrm{span}(w_1, \ldots, w_n) -
+\{0_V\} \iff \exists \lambda_1, \ldots, \lambda_n \in \mathbb{K} \mid
+v_1 = \lambda_1 w_1 + \ldots + \lambda_n w_n</span>, e in particolare
+<span class="math inline">v_1 \neq 0_V \iff \exists i \in [1, n] \mid
+\lambda_i \neq 0</span></li>
+<li>a meno di riordinamento, si può assumere <span
+class="math inline">\lambda_1 \neq 0</span></li>
+<li>allora <span class="math inline">v_1 = \lambda_1 w_1 + \ldots +
+\lambda_n w_n \iff \lambda_1w_1 = v_1 + (-\lambda_2w_2) + \ldots +
+(-\lambda_nw_n) \iff w_1 = (\lambda_1^{-1})v_1 +
+(-\lambda_1^{-1}\lambda_2)w_2 + \ldots + (-\lambda_1^{-1}\lambda_n)w_n
+\implies w_1 \in \textrm{span}(v_1, w_2, \ldots, w_n)</span></li>
+</ul></li>
+<li><span class="math inline">\textrm{span}(v_1, w_2, \ldots, w_n)
+\subseteq \textrm{span}(w_1, \ldots, w_n)</span>
+<ul>
+<li><span class="math inline">u \in \textrm{span}(v_1, w_2, \ldots, w_n)
+\iff \exists \mu_1, \ldots \mu_n \in \mathbb{K} \mid u = \mu_1 v_1 +
+\mu_2 w_2 + \ldots + \mu_n w_n = \mu_1(\lambda_1 w_1 + \ldots +
+\lambda_nw_n) + \mu_2w_2 + \ldots + \mu_nw_n = (\mu_\
+\lambda_1)w_1+(\mu_1 \lambda_2 \mu_2)w_2 + \ldots +
+(\mu_1\lambda_n\mu_n)w_n \implies u \in \textrm{span}(w_1, \ldots,
+w_n)</span></li>
+</ul></li>
+<li><span class="math inline">\textrm{span}(w_1, \ldots, w_n) \subseteq
+\textrm{span}(v_1, w_2, \ldots, w_n)</span>
+<ul>
+<li>siano <span class="math inline">\mu_1, \ldots, \mu_n \in \mathbb{K}
+\mid w_1 = \mu_1 v_1 + \mu_2 w_2 + \ldots + \mu_n w_n</span></li>
+<li><span class="math inline">u \in \textrm{span}(w_1, \ldots, w_n) \iff
+\exists \lambda_1, \ldots, \lambda_n \in \mathbb{K} \mid u = \lambda_1
+w_1 + \ldots + \lambda_n w_n = \lambda_1 (\mu_1 v_1 + \mu_2 w_2 + \ldots
++ \mu_n w_n) + \lambda_2 w_2 + \ldots + \lambda_nw_n = (\lambda_1
+\mu_1)v_1 + (\lambda_1 \mu_2 \lambda_2)w_2 + \ldots + (\lambda_1 \mu_n
+\lambda_n)w_n \implies u \in \textrm{span}(v_1, w_2, \ldots,
+w_n)</span></li>
+</ul></li>
+</ul></li>
+<li><em>ipotesi induttiva forte</em>
+<ul>
+<li>si assume che per <span class="math inline">1 \le i \le n</span>
+vettori linearmente indipendenti si ha che <span
+class="math inline">\textrm{span}(v_1, \ldots, v_i, w_{i + 1}, \ldots,
+w_n) = \textrm{span}(w_1, \ldots, w_n)</span>
+<ul>
+<li>l’ipotesi equivale a supporre che <span class="math inline">v_1,
+\ldots, v_i</span> e <span class="math inline">w_1, \ldots, w_i</span>
+siano intercambiabili nello span</li>
+</ul></li>
+</ul></li>
+<li><em>passo induttivo</em>
+<ul>
+<li>bisogna dimostrare che per <span class="math inline">i + 1 \le
+n</span> vettori linearmente indipendenti si ha che <span
+class="math inline">\textrm{span}(v_1, \ldots, v_i, v_{i + 1}, w_{i +
+2}, \ldots, w_n) = \textrm{span}(w_1, \ldots, w_n)</span>
+<ul>
+<li>la tesi equivale a dimostrare che, assumendo l’ipotesi induttiva
+forte, <span class="math inline">v_{i + 1}</span> e <span
+class="math inline">w_{i + 1}</span> sono intercambiabili</li>
+<li><span class="math inline">v_{i + 1} \in \textrm{span}(w_1, \ldots,
+w_n) = \textrm{span}(v_1, \ldots, v_i, w_{i + 1}, \ldots, w_n) \iff
+\exists \mu_1, \ldots, \mu_i, \lambda_{i + 1}, \ldots, \lambda_n \in
+\mathbb{K} \mid v_{i + 1} = \mu_1 v_1 + \ldots + \mu_i v_i + \lambda_{i
++ 1}w_{i + 1} + \ldots + \lambda_nw_n</span></li>
+<li>per assurdo, ipotizzando <span class="math inline">\lambda_{i + 1} =
+\ldots = \lambda_n = 0_{\mathbb{K}} \implies v_{i + 1} = \mu_1 v_1 +
+\ldots + \mu_n v_i \implies v_1, \ldots, v_{i + 1}</span> non sarebbero
+linearmente indipendenti <span class="math inline">\bot</span></li>
+<li>allora <span class="math inline">\exists j \in [i + 1, n] \mid
+\lambda_j \neq 0</span>, e in particolare <span class="math inline">v_{i
++ 1} \neq 0_V</span></li>
+<li>a meno di riordinamento, si può assumere <span
+class="math inline">\lambda_{i + 1} \neq 0</span></li>
+<li>allora <span class="math inline">v_{i + 1} = \mu_1 v_1 + \ldots +
+\mu_i v_i + \lambda_{i + 1} w_{i + 1}+ \ldots + \lambda_nw_n
+\iff\lambda_{i + 1}w_{i + 1} = v_{i + 1} + (-\mu_1v_1) + \ldots +
+(-\mu_iv_i) + (-\lambda_{i + 2}w_{i + 2}) + \ldots + (-\lambda_nw_n)
+\iff w_{i + 1} = (\lambda_{i + 1}^{-1})v_{i + 1} + (-\lambda_{i +
+1}^{-1}\mu_1)v_1 + \ldots + (-\lambda_{i +1}^{-1}\mu_i)v_i +
+(-\lambda_{i + 1}^{-1}\lambda_{i + 2})w_{i + 2} + \ldots + (-\lambda_{i
++ 1}^{-1}\lambda_n)w_n \implies w_{i + 1} \in \textrm{span}(v_1, \ldots,
+v_i, v_{i + 1}, w_{i + 2}, \ldots w_n)</span></li>
+</ul></li>
+<li><span class="math inline">\textrm{span}(v_1, \ldots, v_i, v_{i + 1},
+w_{i + 2}, \ldots, w_n) \subseteq \textrm{span}(w_1, \ldots, w_n)</span>
+<ul>
+<li><span class="math inline">u \in \textrm{span}(v_1, \ldots, v_i, v_{i
++ 1}, w_{i + 2} \ldots , w_n) \iff \exists \eta_1, \ldots, \eta_i,
+\eta_{i + 1}, \varepsilon_{i + 2}, \dots, \varepsilon_n \in \mathbb{K}
+\mid u = \eta_1v_1 + \ldots + \eta_iv_i + \eta_{i + 1}v_{i +1} +
+\varepsilon_{i + 2}w_{i + 2} + \ldots + \varepsilon_nw_n =\eta_1v_1 +
+\ldots+\eta_iv_i+\eta_{i +1}(\mu_1v_1 + \ldots + \mu_iv_i + \lambda_{i +
+1}w_{i + 1} + \ldots + \lambda_nw_n)+ \varepsilon_{i + 2}w_{i + 2} +
+\ldots + \varepsilon_nw_n = (\eta_1\eta_{i+1}\mu_1)v_1+ \ldots +
+(\eta_i\eta_{i + 1}\mu_i)v_i+(\eta_{i + 1}\lambda_{i + 1})w_{i + 1}
++(\varepsilon_{i + 2}\eta_{i + 1}\lambda_{i + 1})w_{i + 2} + \ldots +
+(\varepsilon_n\eta_{i + 1}\lambda_n)w_n \implies u \in
+\textrm{span}(v_1, \ldots, v_i, w_{i + 1}, \ldots, n) =
+\textrm{span}(w_1, \ldots, w_n)</span></li>
+</ul></li>
+<li><span class="math inline">\textrm{span}(w_1, \ldots, w_n) \subseteq
+\textrm{span}(v_1, \ldots, v_i, v_{i + 1}, w_{i + 2}, \ldots,
+w_n)</span>
+<ul>
+<li>siano <span class="math inline">\eta_1, \ldots, \eta_i, \eta_{i +
+1}, \varepsilon_{i + 2} \ldots, \varepsilon_n \in \mathbb{K} \mid w_{i +
+1} = \eta_1 v_1 + \ldots + \eta_iv_i + \eta_{i + 1} v_{i + 1} +
+\varepsilon_{i + 2}w_{i + 2} + \ldots +\varepsilon_nw_n</span></li>
+<li><span class="math inline">u \in \textrm{span}(w_1, \ldots, w_n) =
+\textrm{span}(v_1, \ldots, v_i, w_{i + 1}, \ldots, w_n)</span> per
+ipotesi induttiva <span class="math inline">\implies \exists \mu_1,
+\ldots, \mu_i, \lambda_{i + 1}, \ldots, \lambda_n \in \mathbb{K} \mid u
+= \mu_1v_1 + \dots + \mu_iv_i+ \lambda_{i + 1}w_{i + 1} + \ldots +
+\lambda_nw_n = \mu_1 v_1 + \ldots + \mu_i v_i + \lambda_{i + 1}(\eta_1
+v_1 + \ldots + \eta_iv_i + \eta_{i + 1} v_{i + 1} + \varepsilon_{i +
+2}w_{i + 2} + \ldots +\varepsilon_nw_n) + \lambda_{i + 2}w_{i + 2} +
+\ldots + \lambda_nw_n =(\mu_1\lambda_{i + 1}\eta_1)v_1 + \ldots +
+(\mu_i\lambda_{i + 1}\eta_i)v_i + (\lambda_{i + 1}\eta_{i + 1})v_{i + 1}
++ (\lambda_{i + 2}\lambda_{i+1}\varepsilon_{i + 2})w_{i + 2} + \ldots +
+(\lambda_n\lambda_{i + 1}\varepsilon_n)w_n \implies u \in
+\textrm{span}(v_1, \ldots, v_i, v_{i + 1}, w_{i + 2}, \ldots
+w_n)</span></li>
+</ul></li>
+</ul></li>
+<li>allora l’ipotesi induttiva è verificata, e per il caso <span
+class="math inline">i = n</span> si ha che <span
+class="math inline">\textrm{span}(v_1, \ldots, v_n) = \textrm{span}(w_1,
+\ldots, w_n)</span></li>
+<li>per assurdo <span class="math inline">\exists v_{n + 1} \in
+\textrm{span}(w_1, \ldots, w_n) \mid v_{n + 1}</span> linearmente
+indipendente con <span class="math inline">v_1, \ldots, v_n</span>,
+allora <span class="math inline">v_{n + 1} \in \textrm{span}(w_1,
+\ldots, w_n) = \textrm{span}(v_1, \ldots, v_n) \implies v_{n + 1}</span>
+è combinazione lineare degli altri <span
+class="math inline">\bot</span></li>
+<li>allora necessariamente <span class="math inline">k \le n</span></li>
 </ul></li>
 </ul>
 <a href="#cor"><h2 id="cor">Cor</h2></a>

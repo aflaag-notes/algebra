@@ -55,7 +55,7 @@
 > - $\mathbb{K}$ campo
 > - $V$ spazio vettoriale su $\mathbb{K}$
 > - $v_1, \ldots, v_n \in V$
-> - $\textrm{span}(v_1, \ldots, v_n) := \{\lambda_1 v_1 + \ldots + \lambda_n v_n \mid \lambda_1, \ldots , \lambda_n \in \mathbb{K}\}$ è detto **$\textrm{span}$ degli $v_1, \ldots v_n$**
+> - $\textrm{span}(v_1, \ldots, v_n) := \{\lambda_1 v_1 + \ldots + \lambda_n v_n \mid \lambda_1, \ldots , \lambda_n \in \mathbb{K}\}$ è detto **span degli $v_1, \ldots v_n$**
 >   - in particolare, costituisce l'insieme delle _combinazioni lineari degli $v_1, \ldots, v_n$_
 
 ## Oss
@@ -146,25 +146,38 @@
 - **Th**
     - $k \le n$
 - **Dim**
+    - ⚠️ **confrontare che sia corretta**
     - dimostrazione per induzione su $k$
     - _caso base_
-        - bisogna dimostrare che per $k = 1$ si ha che $\textrm{span}(v_1, w_2, \ldots, w_n) = \textrm{span}(w_1, \ldots, w_n)$
+        - bisogna dimostrare che per $i = 1$ vettori linearmente indipendenti si ha che $\textrm{span}(v_1, w_2, \ldots, w_n) = \textrm{span}(w_1, \ldots, w_n)$
+            - la tesi equivale a dimostrare che $v_1$ e $w_1$ sono intercambiabili nello span
             - $v_1 \in \textrm{span}(w_1, \ldots, w_n) - \{0_V\} \iff \exists \lambda_1, \ldots, \lambda_n \in \mathbb{K} \mid v_1 = \lambda_1 w_1 + \ldots + \lambda_n w_n$, e in particolare $v_1 \neq 0_V \iff \exists i \in [1, n] \mid \lambda_i \neq 0$
             - a meno di riordinamento, si può assumere $\lambda_1 \neq 0$
-            - allora $v_1 = \lambda_1 w_1 + \ldots + \lambda_n w_n \iff \lambda_1w_1 = v_1 + (-\lambda_2w_2) + \ldots + (-\lambda_nw_n) \iff w_1 = (\lambda_1^{-1})v_1 + (-\lambda_1^{-1}\lambda_2)w_2 + \ldots + (-\lambda_1^{-1}\lambda_n)w_n \iff w_1 \in \textrm{span}(v_1, w_2, \ldots, w_n)$
+            - allora $v_1 = \lambda_1 w_1 + \ldots + \lambda_n w_n \iff \lambda_1w_1 = v_1 + (-\lambda_2w_2) + \ldots + (-\lambda_nw_n) \iff w_1 = (\lambda_1^{-1})v_1 + (-\lambda_1^{-1}\lambda_2)w_2 + \ldots + (-\lambda_1^{-1}\lambda_n)w_n \implies w_1 \in \textrm{span}(v_1, w_2, \ldots, w_n)$
         - $\textrm{span}(v_1, w_2, \ldots, w_n) \subseteq \textrm{span}(w_1, \ldots, w_n)$
-            - $u \in \textrm{span}(v_1, w_2, \ldots, w_n) \iff \exists \mu_1, \ldots \mu_n \in \mathbb{K} \mid u = \mu_1 v_1 + \mu_2 w_2 + \ldots + \mu_n w_n = \mu_1(\lambda_1 w_1 + \ldots + \lambda_nw_n) + \mu_2w_2 + \ldots + \mu_nw_n = (\mu_\ \lambda_1)w_1+(\mu_1 \lambda_2 \mu_2)w_2 + \ldots + (\mu_1\lambda_n\mu_n)w_n \iff u \in \textrm{span}(w_1, \ldots, w_n)$
+            - $u \in \textrm{span}(v_1, w_2, \ldots, w_n) \iff \exists \mu_1, \ldots \mu_n \in \mathbb{K} \mid u = \mu_1 v_1 + \mu_2 w_2 + \ldots + \mu_n w_n = \mu_1(\lambda_1 w_1 + \ldots + \lambda_nw_n) + \mu_2w_2 + \ldots + \mu_nw_n = (\mu_\ \lambda_1)w_1+(\mu_1 \lambda_2 \mu_2)w_2 + \ldots + (\mu_1\lambda_n\mu_n)w_n \implies u \in \textrm{span}(w_1, \ldots, w_n)$
         - $\textrm{span}(w_1, \ldots, w_n) \subseteq \textrm{span}(v_1, w_2, \ldots, w_n)$
             - siano $\mu_1, \ldots, \mu_n \in \mathbb{K} \mid w_1 = \mu_1 v_1 + \mu_2 w_2 + \ldots + \mu_n w_n$
-            - $u \in \textrm{span}(w_1, \ldots, w_n) \iff \exists \lambda_1, \ldots, \lambda_n \in \mathbb{K} \mid u = \lambda_1 w_1 + \ldots + \lambda_n w_n = \lambda_1 (\mu_1 v_1 + \mu_2 w_2 + \ldots + \mu_n w_n) + \lambda_2 w_2 + \ldots + \lambda_nw_n = (\lambda_1 \mu_1)v_1 + (\lambda_1 \mu_2 \lambda_2)w_2 + \ldots + (\lambda_1 \mu_n \lambda_n)w_n \iff u \in \textrm{span}(v_1, w_2, \ldots, w_n)$
-    - _ipotesi induttiva_
-        - si assume che per $k = i$ si ha che $\textrm{span}(v_1, \ldots, v_i, w_{i + 1}, \ldots, w_n) = \textrm{span}(w_1, \ldots, w_n)$
-        - ⚠️ **secondo me c'è qualcosa che manca nell'induzione**
+            - $u \in \textrm{span}(w_1, \ldots, w_n) \iff \exists \lambda_1, \ldots, \lambda_n \in \mathbb{K} \mid u = \lambda_1 w_1 + \ldots + \lambda_n w_n = \lambda_1 (\mu_1 v_1 + \mu_2 w_2 + \ldots + \mu_n w_n) + \lambda_2 w_2 + \ldots + \lambda_nw_n = (\lambda_1 \mu_1)v_1 + (\lambda_1 \mu_2 \lambda_2)w_2 + \ldots + (\lambda_1 \mu_n \lambda_n)w_n \implies u \in \textrm{span}(v_1, w_2, \ldots, w_n)$
+    - _ipotesi induttiva forte_
+        - si assume che per $1 \le i \le n$ vettori linearmente indipendenti si ha che $\textrm{span}(v_1, \ldots, v_i, w_{i + 1}, \ldots, w_n) = \textrm{span}(w_1, \ldots, w_n)$
+            - l'ipotesi equivale a supporre che $v_1, \ldots, v_i$ e $w_1, \ldots, w_i$ siano intercambiabili nello span
     - _passo induttivo_
-        - bisogna dimostrare che per $k = i + 1$ si ha che $\textrm{span}(v_1, \ldots, v_i, v_{i + 1}, w_{i + 2}, \ldots, w_n) = \textrm{span}(w_1, \ldots, w_n)$
-            - $v_{i + 1} \in \textrm{span}(w_1, \ldots, w_n) \iff \exists \mu_1, \ldots, \mu_i, \lambda_{i + 1}, \ldots, \lambda_n \in \mathbb{K} \mid v_{i + 1} = \mu_1 v_1 + \ldots + \mu_i v_i$
-        - $\textrm{span}(v_1, \ldots, v_i, w_{i + 1}, \ldots, w_n) \subseteq \textrm{span}(w_1, \ldots, w_n)$
-        - $\textrm{span}(w_1, \ldots, w_n) \subseteq \textrm{span}(v_1, \ldots, v_i, w_{i + 1}, \ldots, w_n)$
+        - bisogna dimostrare che per $i + 1 \le n$ vettori linearmente indipendenti si ha che $\textrm{span}(v_1, \ldots, v_i, v_{i + 1}, w_{i + 2}, \ldots, w_n) = \textrm{span}(w_1, \ldots, w_n)$
+            - la tesi equivale a dimostrare che, assumendo l'ipotesi induttiva forte, $v_{i + 1}$ e $w_{i + 1}$ sono intercambiabili
+            - $v_{i + 1} \in \textrm{span}(w_1, \ldots, w_n) = \textrm{span}(v_1, \ldots, v_i, w_{i + 1}, \ldots, w_n) \iff \exists \mu_1, \ldots, \mu_i, \lambda_{i + 1}, \ldots, \lambda_n \in \mathbb{K} \mid v_{i + 1} = \mu_1 v_1 + \ldots + \mu_i v_i + \lambda_{i + 1}w_{i + 1} + \ldots + \lambda_nw_n$
+            - per assurdo, ipotizzando $\lambda_{i + 1} = \ldots = \lambda_n = 0_{\mathbb{K}} \implies v_{i + 1} = \mu_1 v_1 + \ldots + \mu_n v_i \implies v_1, \ldots, v_{i + 1}$ non sarebbero linearmente indipendenti $\bot$
+            - allora $\exists j \in [i + 1, n] \mid \lambda_j \neq 0$, e in particolare $v_{i + 1} \neq 0_V$
+            - a meno di riordinamento, si può assumere $\lambda_{i + 1} \neq 0$
+            - allora $v_{i + 1} = \mu_1 v_1 + \ldots + \mu_i v_i + \lambda_{i + 1} w_{i + 1}+ \ldots + \lambda_nw_n \iff\lambda_{i + 1}w_{i + 1} = v_{i + 1} + (-\mu_1v_1) + \ldots + (-\mu_iv_i) + (-\lambda_{i + 2}w_{i + 2}) + \ldots + (-\lambda_nw_n) \iff w_{i + 1} = (\lambda_{i + 1}^{-1})v_{i + 1} + (-\lambda_{i + 1}^{-1}\mu_1)v_1 + \ldots + (-\lambda_{i +1}^{-1}\mu_i)v_i + (-\lambda_{i + 1}^{-1}\lambda_{i + 2})w_{i + 2} + \ldots + (-\lambda_{i + 1}^{-1}\lambda_n)w_n \implies w_{i + 1} \in \textrm{span}(v_1, \ldots, v_i, v_{i + 1}, w_{i + 2}, \ldots w_n)$
+        - $\textrm{span}(v_1, \ldots, v_i, v_{i + 1}, w_{i + 2}, \ldots, w_n) \subseteq \textrm{span}(w_1, \ldots, w_n)$
+            - $u \in \textrm{span}(v_1, \ldots, v_i, v_{i + 1}, w_{i + 2} \ldots , w_n) \iff \exists \eta_1, \ldots, \eta_i, \eta_{i + 1}, \varepsilon_{i + 2}, \dots, \varepsilon_n \in \mathbb{K} \mid u = \eta_1v_1 + \ldots + \eta_iv_i + \eta_{i + 1}v_{i +1} + \varepsilon_{i + 2}w_{i + 2} + \ldots + \varepsilon_nw_n =\eta_1v_1 + \ldots+\eta_iv_i+\eta_{i +1}(\mu_1v_1 + \ldots + \mu_iv_i + \lambda_{i + 1}w_{i + 1} + \ldots + \lambda_nw_n)+ \varepsilon_{i + 2}w_{i + 2} + \ldots + \varepsilon_nw_n = (\eta_1\eta_{i+1}\mu_1)v_1+ \ldots + (\eta_i\eta_{i + 1}\mu_i)v_i+(\eta_{i + 1}\lambda_{i + 1})w_{i + 1} +(\varepsilon_{i + 2}\eta_{i + 1}\lambda_{i + 1})w_{i + 2} + \ldots + (\varepsilon_n\eta_{i + 1}\lambda_n)w_n \implies u \in \textrm{span}(v_1, \ldots, v_i, w_{i + 1}, \ldots, n) = \textrm{span}(w_1, \ldots, w_n)$
+        - $\textrm{span}(w_1, \ldots, w_n) \subseteq \textrm{span}(v_1, \ldots, v_i, v_{i + 1}, w_{i + 2}, \ldots, w_n)$
+            - siano $\eta_1, \ldots, \eta_i, \eta_{i + 1}, \varepsilon_{i + 2} \ldots, \varepsilon_n \in \mathbb{K} \mid w_{i + 1} = \eta_1 v_1 + \ldots + \eta_iv_i + \eta_{i + 1} v_{i + 1} + \varepsilon_{i + 2}w_{i + 2} + \ldots +\varepsilon_nw_n$
+            - $u \in \textrm{span}(w_1, \ldots, w_n) = \textrm{span}(v_1, \ldots, v_i, w_{i + 1}, \ldots, w_n)$ per ipotesi induttiva $\implies \exists \mu_1, \ldots, \mu_i, \lambda_{i + 1}, \ldots, \lambda_n \in \mathbb{K} \mid u = \mu_1v_1 + \dots + \mu_iv_i+ \lambda_{i + 1}w_{i + 1} + \ldots + \lambda_nw_n = \mu_1 v_1 + \ldots + \mu_i v_i + \lambda_{i + 1}(\eta_1 v_1 + \ldots + \eta_iv_i + \eta_{i + 1} v_{i + 1} + \varepsilon_{i + 2}w_{i + 2} + \ldots +\varepsilon_nw_n) + \lambda_{i + 2}w_{i + 2} + \ldots + \lambda_nw_n =(\mu_1\lambda_{i + 1}\eta_1)v_1 + \ldots + (\mu_i\lambda_{i + 1}\eta_i)v_i + (\lambda_{i + 1}\eta_{i + 1})v_{i + 1} + (\lambda_{i + 2}\lambda_{i+1}\varepsilon_{i + 2})w_{i + 2} + \ldots + (\lambda_n\lambda_{i + 1}\varepsilon_n)w_n \implies u \in \textrm{span}(v_1, \ldots, v_i, v_{i + 1}, w_{i + 2}, \ldots w_n)$
+    - allora l'ipotesi induttiva è verificata, e per il caso $i = n$ si ha che $\textrm{span}(v_1, \ldots, v_n) = \textrm{span}(w_1, \ldots, w_n)$
+    - per assurdo $\exists v_{n + 1} \in \textrm{span}(w_1, \ldots, w_n) \mid v_{n + 1}$ linearmente indipendente con $v_1, \ldots, v_n$, allora $v_{n + 1} \in \textrm{span}(w_1, \ldots, w_n) = \textrm{span}(v_1, \ldots, v_n) \implies v_{n + 1}$ è combinazione lineare degli altri $\bot$
+    - allora necessariamente $k \le n$
  
 ## Cor
 

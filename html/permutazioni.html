@@ -371,6 +371,11 @@ successivo, e in particolare si ritornerà sull’elemento di partenza
 esattamente ogni <span class="math inline">d</span> permutazioni, dove
 <span class="math inline">d</span> è la lunghezza di <span
 class="math inline">\gamma_j</span></li>
+<li>allora, <span class="math inline">I(\sigma, i)</span> corrisponde ai
+multipli della lunghezza di <span class="math inline">\gamma_j</span>,
+ovvero <span class="math inline">I(d) \implies I(\sigma, i) =
+I(d)</span>, con <span class="math inline">d</span> lunghezza di <span
+class="math inline">\gamma_j</span></li>
 </ul></li>
 </ul>
 <a href="#cor"><h2 id="cor">Cor</h2></a>
@@ -703,8 +708,9 @@ class="math inline">-1</span></li>
 <ul>
 <li><span class="math inline">n \in \mathbb{N}</span></li>
 <li><span class="math inline">\sigma, \sigma^\prime \in \mathcal{S}_n
-\mid \sigma := \gamma_1 \ldots \gamma_k, \sigma^\prime :=
-\gamma_1^\prime \ldots \gamma_h^\prime</span></li>
+\mid \left \{ \begin{array}{l} \sigma := \gamma_1 \ldots \gamma_k \\
+\sigma^\prime := \gamma_1^\prime \ldots \gamma_h^\prime \end{array}
+\right.</span> siano le loro decomposizioni in cicli</li>
 <li><span class="math inline">\sigma \sim \sigma ^\prime \iff
 \exists\alpha \in \mathcal{S}_n \mid \sigma^\prime = \alpha \sigma
 \alpha^{-1}</span>, che costituisce dunque la relazione di coniugio</li>
@@ -714,7 +720,7 @@ class="math inline">-1</span></li>
 <li><span class="math inline">\sigma \sim \sigma ^\prime
 \iff</span><span class="math inline">\left\{\begin{array}{c}k=h \\
 d=d_{1}^{\prime} \\ \vdots \\
-d_{k}=d_{h}^{\prime}=d_{k}^{\prime}\end{array}\right.</span>, dove <span
+d_{k}=d_{h}^{\prime}\end{array}\right.</span>, dove <span
 class="math inline">d_j</span> è la lunghezza del ciclo <span
 class="math inline">\gamma_j</span> e <span
 class="math inline">d_j^\prime</span> è la lunghezza del ciclo <span
@@ -722,39 +728,32 @@ class="math inline">\gamma_j^\prime</span></li>
 </ul></li>
 <li><strong>Dim</strong>
 <ul>
-<li>⚠️ <strong>da rivedere</strong></li>
 <li><em>prima implicazione</em>
 <ul>
-<li>per definizione <span class="math inline">\sigma \sim \sigma^\prime
-\implies \exists\alpha \in \mathcal{S}_n \mid \sigma^\prime = \alpha
-\sigma \alpha^{-1}</span></li>
+<li><span class="math inline">\sigma \sim \sigma^\prime \iff
+\exists\alpha \in \mathcal{S}_n \mid \sigma^\prime = \alpha \sigma
+\alpha^{-1}</span></li>
 <li><span class="math inline">\forall i_1, \ldots, i_d \mid (i_1 \ldots
 i_d)</span> è un ciclo di <span class="math inline">\sigma</span>, per
 la relazione di coniugio si ottiene che <span
 class="math inline">\sigma^\prime(\alpha(i_j))=(\alpha \sigma
 \alpha^{-1})(\alpha(i_j)) \implies (\alpha\sigma)(i_j)=</span><span
 class="math inline">\left\{\begin{array}{ll}\alpha\left(i_{j}+1\right)
-&amp; j&lt;d \\ \alpha\left(i_{1}\right) &amp;
-j=d\end{array}\right.</span> perché <span class="math inline">\sigma(i)
-= i_{j + 1} \quad \forall j \lt d</span> perché <span
-class="math inline">i_j \in (i_1 \ldots i_d)</span> ciclo di <span
-class="math inline">\sigma</span></li>
-<li>quindi la relazione di coniugio determina un ciclo in <span
+&amp; j&lt;d \\ \alpha\left(i_{1}\right) &amp; j=d\end{array}\right.
+\implies</span> la relazione di coniugio determina un ciclo in <span
 class="math inline">\sigma^\prime</span> della forma <span
 class="math inline">(\alpha(i_1) \ldots \alpha(i_d))</span></li>
-<li><span class="math inline">(i_1 \ldots i_d)</span> un certo ciclo in
-<span class="math inline">\sigma \implies (\alpha(i_1) \ldots
-\alpha(i_d))</span> è un ciclo in <span
-class="math inline">\sigma^\prime</span>
-<ul>
-<li>corrispondenza biunivoca tra cicli di <span
+<li>allora, vi è una corrispondenza biunivoca tra cicli di <span
 class="math inline">\sigma</span> e <span
-class="math inline">\sigma^\prime \implies h = k</span> (devono avere lo
-stesso numero di cicli), e inoltre implica <span
-class="math inline">\left\{\begin{array}{c}k=h \\ d=d_{1}^{\prime} \\
-\vdots \\ d_{k}=d_{h}^{\prime}=d_{k}^{\prime}\end{array}\right.</span>,
-ovvero i cicli hanno la stessa lunghezza</li>
-</ul></li>
+class="math inline">\sigma^\prime</span>, e dunque necessariamente <span
+class="math inline">\sigma</span> e <span
+class="math inline">\sigma&#39;</span> devono avere lo stesso numero di
+cicli, ovvero <span class="math inline">h = k</span>, e i cicli devono
+avere stessa lunghezza, e dunque <span
+class="math inline">\left\{\begin{array}{c} d=d_{1}^{\prime} \\ \vdots
+\\ d_{k}=d_{h}^{\prime}\end{array}\right.</span></li>
+<li>⚠️ <strong>questa conclusione è abbastanza affrettata in
+realtà</strong></li>
 </ul></li>
 <li><em>seconda implicazione</em>
 <ul>
@@ -774,7 +773,7 @@ class="math inline">\left\{\begin{array}{c}\alpha\left(i_{p}\right)=a_{p}
 <li><em>esempio</em>
 <ul>
 <li><span class="math inline">\begin{aligned} \sigma\ =\
-&amp;(13)(254)(876) \\ &amp; \ \downarrow \downarrow \ \  \downarrow
+&amp;(13)(254)(876) \\ &amp; \ \downarrow \downarrow \ \ \  \downarrow
 \downarrow \downarrow \  \ \ \downarrow \downarrow \downarrow \\
 \sigma^{\prime}=\ &amp;(25)(184)(376) \end{aligned}</span> <span
 class="math inline">\implies</span><span
@@ -786,25 +785,22 @@ class="math inline">\alpha=\left(\begin{array}{llllllll}1 &amp; 2 &amp;
 <li>scelto <span class="math inline">\alpha \in \mathcal{S}_n</span> in
 questo modo, allora ad esempio <span class="math inline">\forall i_p \in
 (i_1 \ldots i_{d_1})</span> primo ciclo di <span
-class="math inline">\sigma \implies i_p = \alpha^{-1}(a_p)</span> per
+class="math inline">\sigma \quad i_p = \alpha^{-1}(a_p)</span> per
 definizione di <span class="math inline">\alpha \implies \alpha \sigma
 \alpha^{-1} (a_p) = \alpha \sigma (i_p) =</span><span
 class="math inline">\left\{\begin{array}{ll}\alpha\left(i_{p+1}\right)
 &amp; p&lt;d_1 \\ \alpha\left(i_{1}\right) &amp;
-p=d_{1}\end{array}\right. \iff \left\{\begin{array}{ll}a_{p+1} &amp;
+p=d_{1}\end{array}\right. = \left\{\begin{array}{ll}a_{p+1} &amp;
 p&lt;d_{1} \\ a_{1} &amp; p=d_{1}\end{array}\right. =
 \sigma^\prime(a_p)</span> per definizione di <span
-class="math inline">\sigma^\prime</span>
-<ul>
+class="math inline">\sigma^\prime</span></li>
 <li>poiché in questa osservazione non è stato fatto uso dell’ipotesi per
 cui <span class="math inline">i_p</span> fosse stato scelto all’interno
 del primo ciclo, il ragionamento vale analogamente per ogni altro
 elemento in ogni altro ciclo</li>
-</ul></li>
 <li>allora, <span class="math inline">\alpha</span> è proprio scelto
 tale che <span class="math inline">\sigma^\prime = \alpha \sigma \alpha
-^{-1}</span>, che per definizione implica che <span
-class="math inline">\sigma \sim \sigma&#39;</span></li>
+^{-1} \iff \sigma \sim \sigma&#39;</span></li>
 </ul></li>
 </ul></li>
 </ul>
@@ -901,7 +897,7 @@ class="math inline">|\mathcal{S}_n| = |\mathcal{A}_n| \cdot
 <ul>
 <li><span class="math inline">n \in \mathbb{N}</span></li>
 <li><span class="math inline">\sigma \in \mathcal{S}_n \mid \sigma :=
-\gamma_1 \ldots \gamma_k</span></li>
+\gamma_1 \ldots \gamma_k</span> sia la sua decomposizione in cicli</li>
 </ul></li>
 <li><strong>Th</strong>
 <ul>
@@ -910,60 +906,56 @@ k}</span></li>
 </ul></li>
 <li><strong>Dim</strong>
 <ul>
-<li>⚠️ <strong>da rivedere</strong></li>
-<li><span class="math inline">\sigma = (i_1 \ldots i_{d_1}) \ldots (j_1
-\ldots j_{d_k})</span></li>
+<li><span class="math inline">\sigma = (i_1 \ldots i_{d_1})(i_{d_1+ 1}
+\ldots i_{d_2}) \ldots (j_1 \ldots j_{d_k})</span></li>
 <li><span class="math inline">\forall \sigma \in \mathcal{S}_n \quad
 \exists \sigma&#39; \in \mathcal{S}_n \mid \sigma^\prime := (1 \ldots
-d_1)(d_1 + 1 \ldots d_1 + d_2) \ldots (n -d_k + 1 \ldots n)</span>
-<ul>
+d_1)(d_1 + 1 \ldots d_1 + d_2) \ldots (n -d_k + 1 \ldots n)</span></li>
 <li>dunque <span class="math inline">\sigma^\prime</span> è composta da
-cicli lunghi esattamente come i cicli di <span
+cicli lunghi esattamente quanto i cicli di <span
 class="math inline">\sigma</span>, ma ha i numeri da <span
 class="math inline">1</span> a <span class="math inline">n</span> in
 sequenza nei cicli</li>
-<li><span
-class="math inline">\sigma^{\prime}=\left(\begin{array}{cccccccc}1 &amp;
-2 &amp; \cdots &amp; d_{1} &amp; d_{1}+1 &amp; \cdots &amp; d_{1}+d_{2}
-&amp; \cdots \\ 2 &amp; 3 &amp; \cdots &amp; 1 &amp; d_{1}+2 &amp;
-\cdots &amp; d_{1}+1 &amp; \cdots \end{array}\right)</span></li>
-</ul></li>
-<li>per portare <span class="math inline">1</span> nella prima colonna,
-devo applicare <span class="math inline">d_1 - 1</span> trasposizioni
-adiacenti
+<li>allora <span
+class="math inline">\sigma^{\prime}=\left(\begin{array}{cccccccccccc}1
+&amp; 2 &amp; \cdots &amp; d_{1} &amp; d_{1}+1 &amp; \cdots &amp;
+d_{1}+d_{2} &amp; \cdots &amp; \cdots &amp; n - d_k + 1 &amp; \cdots
+&amp; n \\ 2 &amp; 3 &amp; \cdots &amp; 1 &amp; d_{1}+2 &amp; \cdots
+&amp; d_{1}+1 &amp; \cdots &amp; \cdots &amp; n - d_k + 2 &amp; \cdots
+&amp; n - d_k + 1\end{array}\right)</span>
 <ul>
+<li>si noti che, ad esempio, per portare <span
+class="math inline">1</span> nella prima colonna, è necessario applicare
+<span class="math inline">d_1 - 1</span> trasposizioni adiacenti, o
+analogamente per portare <span class="math inline">d_1 + 1</span> nella
+colonna corretta, è necessario applicare <span class="math inline">d_1 +
+d_2 - (d_1 + 1) = d_1 + d_2 - d_1 - 1 = d_2 - 1</span> trasposizioni
+adiacenti, e vale il ragionamento analogo per ogni altro ciclo</li>
 <li><em>esempio</em>
 <ul>
-<li>in <span class="math inline">(2 \ 3 \ 4\ 5\ 6\ 1)</span> devo
-applicare <span class="math inline">5</span> trasposizioni adiacenti per
-ottenere <span class="math inline">(1\ 2\ 3\ 4\ 5 \ 6)</span></li>
+<li>nel ciclo <span class="math inline">(2 \ 3 \ 4\ 5\ 6\ 1)</span> è
+necessario applicare <span class="math inline">6 - 1 = 5</span>
+trasposizioni adiacenti per ottenere <span class="math inline">(1\ 2\ 3\
+4\ 5 \ 6)</span>, e il ciclo è lungo <span
+class="math inline">6</span></li>
 </ul></li>
 </ul></li>
-<li>per portare <span class="math inline">d_1 + 1</span> nella colonna
-corretta, bisogna applicare <span class="math inline">d_2 - 1</span>
-trasposizioni adiacenti, e vale il ragionamento analogo per ogni altro
-ciclo</li>
 <li>allora, per ottenere <span class="math inline">\textrm{id}</span> a
 partire da <span class="math inline">\sigma^\prime</span>, bisogna
 applicare <span class="math inline">(d_1 -1) + (d_2 - 1) + \ldots + (d_k
 - 1)</span> trasposizioni adiacenti, ovvero <span
-class="math inline">d_1 + \ldots + d_k - 1 \cdot k = n - k</span>
-<ul>
-<li><span class="math inline">d_1 + \ldots + d_k</span> è il numero di
-colonne di <span class="math inline">\sigma^\prime \in
+class="math inline">d_1 + \ldots + d_k - 1 \cdot k</span></li>
+<li>si noti che <span class="math inline">d_1 + \ldots + d_k</span> è il
+numero di colonne di <span class="math inline">\sigma^\prime \in
 \mathcal{S}_n</span>, dunque è pari a <span
 class="math inline">n</span></li>
-<li><span class="math inline">k</span> è il numero di cicli, quindi
-nell’equazione <span class="math inline">-1</span> appare esattamente
-<span class="math inline">k</span> volte</li>
-</ul></li>
+<li>allora si hanno <span class="math inline">d_1 + \ldots + d_1 - 1
+\cdot k = n - k</span> trasposizioni adiacenti</li>
 <li>di conseguenza, <span class="math inline">\textrm{id} =
 \sigma^\prime \tau_1 \ldots \tau_{n -k} \iff \sigma^\prime = \tau_{n -
-k} \ldots \tau_1 \iff \textrm{sgn}(\sigma^\prime) =
-\textrm{sgn}(\tau_{n-k} \ldots \tau_1)</span>, e dunque rimuovendo ogni
-trasposizione adiacente si ottiene che <span
-class="math inline">\textrm{sgn}(\sigma^\prime) = (-1)^{n -k}</span> per
-osservazione in dimostrazione precedente</li>
+k} \ldots \tau_1 \implies \textrm{sgn}(\sigma^\prime) =
+\textrm{sgn}(\tau_{n-k} \ldots \tau_1)= (-1)^{n -k}</span> per
+dimostrazione precedente</li>
 <li>poiché <span class="math inline">\sigma</span> e <span
 class="math inline">\sigma^\prime</span> hanno lo stesso numero di
 cicli, e i cicli hanno la stessa lunghezza, allora per dimostrazione

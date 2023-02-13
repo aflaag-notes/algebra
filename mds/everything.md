@@ -1250,10 +1250,10 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 - **Hp**
     - $n \in \mathbb{N}$
-    - $\sigma, \sigma^\prime \in \mathcal{S}_n \mid \sigma := \gamma_1 \ldots \gamma_k, \sigma^\prime := \gamma_1^\prime \ldots \gamma_h^\prime$
+    - $\sigma, \sigma^\prime \in \mathcal{S}_n \mid \left \{ \begin{array}{l} \sigma := \gamma_1 \ldots \gamma_k \\ \sigma^\prime := \gamma_1^\prime \ldots \gamma_h^\prime \end{array} \right.$ siano le loro decomposizioni in cicli
     - $\sigma \sim \sigma ^\prime \iff \exists\alpha \in \mathcal{S}_n \mid \sigma^\prime = \alpha \sigma \alpha^{-1}$, che costituisce dunque la relazione di coniugio
 - **Th**
-    - $\sigma \sim \sigma ^\prime \iff$$\left\{\begin{array}{c}k=h \\ d=d_{1}^{\prime} \\ \vdots \\ d_{k}=d_{h}^{\prime}=d_{k}^{\prime}\end{array}\right.$, dove $d_j$ è la lunghezza del ciclo $\gamma_j$ e $d_j^\prime$ è la lunghezza del ciclo $\gamma_j^\prime$
+    - $\sigma \sim \sigma ^\prime \iff$$\left\{\begin{array}{c}k=h \\ d=d_{1}^{\prime} \\ \vdots \\ d_{k}=d_{h}^{\prime}\end{array}\right.$, dove $d_j$ è la lunghezza del ciclo $\gamma_j$ e $d_j^\prime$ è la lunghezza del ciclo $\gamma_j^\prime$
 
 ## Definizione 29
 
@@ -1286,7 +1286,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 - **Hp**
     - $n \in \mathbb{N}$
-    - $\sigma \in \mathcal{S}_n \mid \sigma := \gamma_1 \ldots \gamma_k$
+    - $\sigma \in \mathcal{S}_n \mid \sigma := \gamma_1 \ldots \gamma_k$ sia la sua decomposizione in cicli
 - **Th**
     - $\textrm{sgn}(\sigma)=(-1)^{n - k}$
 
@@ -1848,7 +1848,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 > - $\mathbb{K}$ campo
 > - $V$ spazio vettoriale su $\mathbb{K}$
 > - $v_1, \ldots, v_n \in V$
-> - $\textrm{span}(v_1, \ldots, v_n) := \{\lambda_1 v_1 + \ldots + \lambda_n v_n \mid \lambda_1, \ldots , \lambda_n \in \mathbb{K}\}$ è detto **$\textrm{span}$ degli $v_1, \ldots v_n$**
+> - $\textrm{span}(v_1, \ldots, v_n) := \{\lambda_1 v_1 + \ldots + \lambda_n v_n \mid \lambda_1, \ldots , \lambda_n \in \mathbb{K}\}$ è detto **span degli $v_1, \ldots v_n$**
 >   - in particolare, costituisce l'insieme delle _combinazioni lineari degli $v_1, \ldots, v_n$_
 
 
@@ -1862,7 +1862,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
     - $V$ spazio vettoriale su $\mathbb{K}$
     - $v_1, \ldots, v_n \in V$
 - **Th**
-    - $\textrm{span}(v_1, \ldots, v_n)$ è un sottospazio vettoriale di $V$
+    - $\textrm{span}(v_1, \ldots, v_n) \subset V$ sottospazio vettoriale
 
 ## Definizione 42
 
