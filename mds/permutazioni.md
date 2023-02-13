@@ -82,6 +82,7 @@
 - **Dim**
     - per definizione $\forall n \in I(\sigma, i) \quad \sigma^n(i) = i$
     - si noti che le uniche potenze per cui tale proprietà è rispettata sono quelle per cui viene permutato ogni elemento del ciclo col suo successivo, e in particolare si ritornerà sull'elemento di partenza esattamente ogni $d$ permutazioni, dove $d$ è la lunghezza di $\gamma_j$
+    - allora, $I(\sigma, i)$ corrisponde ai multipli della lunghezza di $\gamma_j$, ovvero $I(d) \implies I(\sigma, i) = I(d)$, con $d$ lunghezza di $\gamma_j$
 
 ## Cor
 
@@ -217,27 +218,25 @@
 
 - **Hp**
     - $n \in \mathbb{N}$
-    - $\sigma, \sigma^\prime \in \mathcal{S}_n \mid \sigma := \gamma_1 \ldots \gamma_k, \sigma^\prime := \gamma_1^\prime \ldots \gamma_h^\prime$
+    - $\sigma, \sigma^\prime \in \mathcal{S}_n \mid \left \{ \begin{array}{l} \sigma := \gamma_1 \ldots \gamma_k \\ \sigma^\prime := \gamma_1^\prime \ldots \gamma_h^\prime \end{array} \right.$ siano le loro decomposizioni in cicli
     - $\sigma \sim \sigma ^\prime \iff \exists\alpha \in \mathcal{S}_n \mid \sigma^\prime = \alpha \sigma \alpha^{-1}$, che costituisce dunque la relazione di coniugio
 - **Th**
-    - $\sigma \sim \sigma ^\prime \iff$$\left\{\begin{array}{c}k=h \\ d=d_{1}^{\prime} \\ \vdots \\ d_{k}=d_{h}^{\prime}=d_{k}^{\prime}\end{array}\right.$, dove $d_j$ è la lunghezza del ciclo $\gamma_j$ e $d_j^\prime$ è la lunghezza del ciclo $\gamma_j^\prime$
+    - $\sigma \sim \sigma ^\prime \iff$$\left\{\begin{array}{c}k=h \\ d=d_{1}^{\prime} \\ \vdots \\ d_{k}=d_{h}^{\prime}\end{array}\right.$, dove $d_j$ è la lunghezza del ciclo $\gamma_j$ e $d_j^\prime$ è la lunghezza del ciclo $\gamma_j^\prime$
 - **Dim**
-  - ⚠️ **da rivedere**
   - _prima implicazione_
-    - per definizione $\sigma \sim \sigma^\prime \implies \exists\alpha \in \mathcal{S}_n \mid \sigma^\prime = \alpha \sigma \alpha^{-1}$
-    - $\forall i_1, \ldots, i_d \mid (i_1 \ldots i_d)$ è un ciclo di $\sigma$, per la relazione di coniugio si ottiene che $\sigma^\prime(\alpha(i_j))=(\alpha \sigma \alpha^{-1})(\alpha(i_j)) \implies (\alpha\sigma)(i_j)=$$\left\{\begin{array}{ll}\alpha\left(i_{j}+1\right) & j<d \\ \alpha\left(i_{1}\right) & j=d\end{array}\right.$ perché $\sigma(i) = i_{j + 1} \quad \forall j \lt d$ perché $i_j \in (i_1 \ldots i_d)$ ciclo di $\sigma$
-    - quindi la relazione di coniugio determina un ciclo in $\sigma^\prime$ della forma $(\alpha(i_1) \ldots \alpha(i_d))$
-    - $(i_1 \ldots i_d)$ un certo ciclo in $\sigma \implies (\alpha(i_1) \ldots \alpha(i_d))$ è un ciclo in $\sigma^\prime$
-      - corrispondenza biunivoca tra cicli di $\sigma$ e $\sigma^\prime \implies h = k$ (devono avere lo stesso numero di cicli), e inoltre implica $\left\{\begin{array}{c}k=h \\ d=d_{1}^{\prime} \\ \vdots \\ d_{k}=d_{h}^{\prime}=d_{k}^{\prime}\end{array}\right.$, ovvero i cicli hanno la stessa lunghezza
+    - $\sigma \sim \sigma^\prime \iff \exists\alpha \in \mathcal{S}_n \mid \sigma^\prime = \alpha \sigma \alpha^{-1}$
+    - $\forall i_1, \ldots, i_d \mid (i_1 \ldots i_d)$ è un ciclo di $\sigma$, per la relazione di coniugio si ottiene che $\sigma^\prime(\alpha(i_j))=(\alpha \sigma \alpha^{-1})(\alpha(i_j)) \implies (\alpha\sigma)(i_j)=$$\left\{\begin{array}{ll}\alpha\left(i_{j}+1\right) & j<d \\ \alpha\left(i_{1}\right) & j=d\end{array}\right. \implies$ la relazione di coniugio determina un ciclo in $\sigma^\prime$ della forma $(\alpha(i_1) \ldots \alpha(i_d))$
+    - allora, vi è una corrispondenza biunivoca tra cicli di $\sigma$ e $\sigma^\prime$, e dunque necessariamente $\sigma$ e $\sigma'$ devono avere lo stesso numero di cicli, ovvero $h = k$, e i cicli devono avere stessa lunghezza, e dunque $\left\{\begin{array}{c} d=d_{1}^{\prime} \\ \vdots \\ d_{k}=d_{h}^{\prime}\end{array}\right.$
+    - ⚠️ **questa conclusione è abbastanza affrettata in realtà**
   - _seconda implicazione_
     - $\sigma = (i_1 \ldots i_{d_1}) \ldots (j_1 \ldots j_{d_k})$ è la decomposizione in cicli di $\sigma$
     - $\sigma^\prime =(a_1 \ldots a_{d_1}) \ldots (b_1 \ldots b_{d_k})$ è la decomposizione in cicli di $\sigma'$
     - poiché in ipotesi $\sigma$ e $\sigma'$ hanno stesso numero di cicli, e cicli di stessa lunghezza, allora $\exists \alpha \in \mathcal{S}_n \mid$$\left\{\begin{array}{c}\alpha\left(i_{p}\right)=a_{p} \\ \vdots \\ \alpha\left(j_{q}\right)=b_{q}\end{array}\right.$
       - _esempio_
-        - $\begin{aligned} \sigma\ =\ &(13)(254)(876) \\ & \ \downarrow  \downarrow \ \  \downarrow   \downarrow \downarrow \  \ \ \downarrow \downarrow  \downarrow \\ \sigma^{\prime}=\ &(25)(184)(376) \end{aligned}$ $\implies$$\alpha=\left(\begin{array}{llllllll}1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 \\ 2 & 1 & 5 & 4 & 8 & 6 & 7 & 3\end{array}\right)$
-    - scelto $\alpha \in \mathcal{S}_n$ in questo modo, allora ad esempio $\forall i_p \in (i_1 \ldots i_{d_1})$ primo ciclo di $\sigma \implies i_p = \alpha^{-1}(a_p)$ per definizione di $\alpha \implies \alpha \sigma \alpha^{-1} (a_p) = \alpha \sigma (i_p) =$$\left\{\begin{array}{ll}\alpha\left(i_{p+1}\right) & p<d_1 \\ \alpha\left(i_{1}\right) & p=d_{1}\end{array}\right. \iff \left\{\begin{array}{ll}a_{p+1} & p<d_{1} \\ a_{1} & p=d_{1}\end{array}\right. = \sigma^\prime(a_p)$ per definizione di $\sigma^\prime$
-        - poiché in questa osservazione non è stato fatto uso dell'ipotesi per cui $i_p$ fosse stato scelto all'interno del primo ciclo, il ragionamento vale analogamente per ogni altro elemento in ogni altro ciclo
-    - allora, $\alpha$ è proprio scelto tale che $\sigma^\prime = \alpha \sigma \alpha ^{-1}$, che per definizione implica che $\sigma \sim \sigma'$
+        - $\begin{aligned} \sigma\ =\ &(13)(254)(876) \\ & \ \downarrow  \downarrow \ \ \  \downarrow   \downarrow \downarrow \  \ \ \downarrow \downarrow  \downarrow \\ \sigma^{\prime}=\ &(25)(184)(376) \end{aligned}$ $\implies$$\alpha=\left(\begin{array}{llllllll}1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 \\ 2 & 1 & 5 & 4 & 8 & 6 & 7 & 3\end{array}\right)$
+    - scelto $\alpha \in \mathcal{S}_n$ in questo modo, allora ad esempio $\forall i_p \in (i_1 \ldots i_{d_1})$ primo ciclo di $\sigma \quad i_p = \alpha^{-1}(a_p)$ per definizione di $\alpha \implies \alpha \sigma \alpha^{-1} (a_p) = \alpha \sigma (i_p) =$$\left\{\begin{array}{ll}\alpha\left(i_{p+1}\right) & p<d_1 \\ \alpha\left(i_{1}\right) & p=d_{1}\end{array}\right. = \left\{\begin{array}{ll}a_{p+1} & p<d_{1} \\ a_{1} & p=d_{1}\end{array}\right. = \sigma^\prime(a_p)$ per definizione di $\sigma^\prime$
+    - poiché in questa osservazione non è stato fatto uso dell'ipotesi per cui $i_p$ fosse stato scelto all'interno del primo ciclo, il ragionamento vale analogamente per ogni altro elemento in ogni altro ciclo
+    - allora, $\alpha$ è proprio scelto tale che $\sigma^\prime = \alpha \sigma \alpha ^{-1} \iff \sigma \sim \sigma'$
 
 ## Def
 
@@ -275,21 +274,20 @@
 
 - **Hp**
     - $n \in \mathbb{N}$
-    - $\sigma \in \mathcal{S}_n \mid \sigma := \gamma_1 \ldots \gamma_k$
+    - $\sigma \in \mathcal{S}_n \mid \sigma := \gamma_1 \ldots \gamma_k$ sia la sua decomposizione in cicli
 - **Th**
     - $\textrm{sgn}(\sigma)=(-1)^{n - k}$
 - **Dim**
-  - ⚠️ **da rivedere**
-  - $\sigma = (i_1 \ldots i_{d_1}) \ldots (j_1 \ldots j_{d_k})$
+  - $\sigma = (i_1 \ldots i_{d_1})(i_{d_1+ 1} \ldots i_{d_2}) \ldots (j_1 \ldots j_{d_k})$
   - $\forall \sigma \in \mathcal{S}_n \quad \exists \sigma' \in \mathcal{S}_n \mid \sigma^\prime := (1 \ldots d_1)(d_1 + 1 \ldots d_1 + d_2) \ldots (n -d_k + 1 \ldots n)$
-      - dunque $\sigma^\prime$ è composta da cicli lunghi esattamente come i cicli di $\sigma$, ma ha i numeri da $1$ a $n$ in sequenza nei cicli
-      - $\sigma^{\prime}=\left(\begin{array}{cccccccc}1 & 2 & \cdots & d_{1} & d_{1}+1 & \cdots & d_{1}+d_{2} & \cdots \\ 2 & 3 & \cdots & 1 & d_{1}+2 & \cdots & d_{1}+1 & \cdots \end{array}\right)$
-  - per portare $1$ nella prima colonna, devo applicare $d_1 - 1$ trasposizioni adiacenti
+  - dunque $\sigma^\prime$ è composta da cicli lunghi esattamente quanto i cicli di $\sigma$, ma ha i numeri da $1$ a $n$ in sequenza nei cicli
+  - allora $\sigma^{\prime}=\left(\begin{array}{cccccccccccc}1 & 2 & \cdots & d_{1} & d_{1}+1 & \cdots & d_{1}+d_{2} & \cdots & \cdots & n - d_k + 1 & \cdots & n \\ 2 & 3 & \cdots & 1 & d_{1}+2 & \cdots & d_{1}+1 & \cdots & \cdots  & n - d_k + 2 & \cdots & n - d_k + 1\end{array}\right)$
+    - si noti che, ad esempio, per portare $1$ nella prima colonna, è necessario applicare $d_1 - 1$ trasposizioni adiacenti, o analogamente per portare $d_1 + 1$ nella colonna corretta, è necessario applicare $d_1 + d_2 - (d_1 + 1) = d_1 + d_2 - d_1 - 1 = d_2 - 1$ trasposizioni adiacenti, e vale il ragionamento analogo per ogni altro ciclo
     - _esempio_
-      - in $(2 \ 3 \ 4\ 5\ 6\ 1)$ devo applicare $5$ trasposizioni adiacenti per ottenere $(1\ 2\ 3\ 4\ 5 \ 6)$
-  - per portare $d_1 + 1$ nella colonna corretta, bisogna applicare $d_2 - 1$ trasposizioni adiacenti, e vale il ragionamento analogo per ogni altro ciclo
-  - allora, per ottenere $\textrm{id}$ a partire da $\sigma^\prime$, bisogna applicare $(d_1 -1) + (d_2 - 1) + \ldots + (d_k - 1)$ trasposizioni adiacenti, ovvero $d_1 + \ldots + d_k - 1 \cdot k = n - k$
-    - $d_1 + \ldots + d_k$ è il numero di colonne di $\sigma^\prime \in \mathcal{S}_n$, dunque è pari a $n$
-    - $k$ è il numero di cicli, quindi nell'equazione $-1$ appare esattamente $k$ volte
-  - di conseguenza, $\textrm{id} = \sigma^\prime \tau_1 \ldots \tau_{n -k} \iff \sigma^\prime = \tau_{n - k} \ldots \tau_1 \iff \textrm{sgn}(\sigma^\prime) = \textrm{sgn}(\tau_{n-k} \ldots \tau_1)$, e dunque rimuovendo ogni trasposizione adiacente si ottiene che $\textrm{sgn}(\sigma^\prime) = (-1)^{n -k}$ per osservazione in dimostrazione precedente
+      - nel ciclo $(2 \ 3 \ 4\ 5\ 6\ 1)$ è necessario applicare $6 - 1 = 5$ trasposizioni adiacenti per ottenere $(1\ 2\ 3\ 4\ 5 \ 6)$, e il ciclo è lungo $6$
+  - allora, per ottenere $\textrm{id}$ a partire da $\sigma^\prime$, bisogna applicare $(d_1 -1) + (d_2 - 1) + \ldots + (d_k - 1)$ trasposizioni adiacenti, ovvero $d_1 + \ldots + d_k - 1 \cdot k$
+  - si noti che $d_1 + \ldots + d_k$ è il numero di colonne di $\sigma^\prime \in \mathcal{S}_n$, dunque è pari a $n$
+  - allora si hanno $d_1 + \ldots + d_1 - 1 \cdot k = n - k$ trasposizioni adiacenti
+  - di conseguenza, $\textrm{id} = \sigma^\prime \tau_1 \ldots \tau_{n -k} \iff \sigma^\prime = \tau_{n - k} \ldots \tau_1 \implies \textrm{sgn}(\sigma^\prime) = \textrm{sgn}(\tau_{n-k} \ldots \tau_1)= (-1)^{n -k}$ per dimostrazione precedente
   - poiché $\sigma$ e $\sigma^\prime$ hanno lo stesso numero di cicli, e i cicli hanno la stessa lunghezza, allora per dimostrazione precedente $\sigma \sim \sigma^\prime \implies \textrm{sgn}(\sigma^\prime)=\textrm{sgn}(\sigma)$ per dimostrazione precedente, e dunque $\textrm{sgn}(\sigma') = \textrm{sgn}(\sigma)=(-1)^{n - k}$
+
