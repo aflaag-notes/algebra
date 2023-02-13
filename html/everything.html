@@ -3633,14 +3633,14 @@ v_n)v_n</span></li>
 <a href="#matrici"><h1 id="matrici">Matrici</h1></a>
 <a href="#definizione-50"><h2 id="definizione-50">Definizione 50</h2></a>
 <ul>
-<li><strong>Matrici</strong></li>
+<li><strong>Matrice</strong></li>
 </ul>
 <blockquote>
 <ul>
 <li><span class="math inline">\mathbb{K}</span> campo</li>
-<li><span class="math inline">m, n \in \mathbb{N} - \{0\}</span></li>
+<li><span class="math inline">m, n \in \mathbb{N}</span></li>
 <li><span class="math inline">\textrm{Mat}_{m \times
-n}(\mathbb{K})</span> è l’<strong>insieme delle matrici aventi <span
+n}(\mathbb{K})</span> è detto <strong>insieme delle matrici aventi <span
 class="math inline">m</span> righe e <span class="math inline">n</span>
 colonne a coefficienti in <span
 class="math inline">\mathbb{K}</span></strong></li>
@@ -3652,12 +3652,12 @@ class="math inline">\mathbb{K}</span></strong></li>
 <blockquote>
 <ul>
 <li><span class="math inline">\mathbb{K}</span> campo</li>
-<li><span class="math inline">m, n \in \mathbb{N} - \{0\}</span></li>
-<li><span class="math inline">\forall A \in \textrm{Mat}_{1 \times
-n}(\mathbb{K}) \quad A = \left(x_1, \ldots, x_n\right)</span> è detto
+<li><span class="math inline">m, n \in \mathbb{N}</span></li>
+<li><span class="math inline">\forall v \in \textrm{Mat}_{1 \times
+n}(\mathbb{K}) \quad v = \left(x_1, \ldots, x_n\right)</span> è detto
 <strong>vettore riga</strong></li>
-<li><span class="math inline">\forall A \in \textrm{Mat}_{m \times
-1}(\mathbb{K}) \quad A = \left(\begin{array}{ccc} x_1 \\ \vdots \\ x_m
+<li><span class="math inline">\forall v \in \textrm{Mat}_{m \times
+1}(\mathbb{K}) \quad v = \left(\begin{array}{ccc} x_1 \\ \vdots \\ x_m
 \end{array}\right)</span> è detto <strong>vettore colonna</strong></li>
 <li><span class="math inline">\forall A \in \textrm{Mat}_{m \times
 n}(\mathbb{K}) \quad \exists A^1, \ldots, A^n \in \mathbb{K}^m</span>
@@ -3669,24 +3669,31 @@ vettori colonna e <span class="math inline">A_1, \ldots, A_m \in
 </blockquote>
 <a href="#definizione-51"><h2 id="definizione-51">Definizione 51</h2></a>
 <ul>
-<li><strong>Somma tra matrici</strong></li>
+<li><strong><span class="math inline">+</span> tra matrici</strong></li>
 </ul>
 <blockquote>
 <ul>
 <li><span class="math inline">\mathbb{K}</span> campo</li>
-<li><span class="math inline">m, n \in \mathbb{N} - \{0\}</span></li>
+<li><span class="math inline">m, n \in \mathbb{N}</span></li>
 <li><span class="math inline">\forall i \in [1, m], j \in [1, n] \quad
 a_{i, j}, b_{i, j} \in \mathbb{K}</span></li>
 <li><span class="math inline">A, B \in \textrm{Mat}_{m \times
-n}(\mathbb{K}) \mid A = \left(\begin{array}{ccc} \ddots &amp; &amp; \\
-&amp; a_{i, j} &amp; \\ &amp; &amp; \ddots \end{array}\right) \land B =
-\left(\begin{array}{ccc}\ddots &amp; &amp; \\ &amp; b_{i, j} &amp; \\
-&amp; &amp; \ddots\end{array}\right)</span></li>
-<li><span class="math inline">A + B = \left(\begin{array}{ccc}\ddots
-&amp; &amp; \\ &amp; a_{i, j} + b_{i, j} &amp; \\ &amp; &amp;
-\ddots\end{array}\right)</span> è la <strong>somma tra <span
+n}(\mathbb{K}) \mid A = \left(\begin{array}{ccc} a_{1, 1} &amp; \cdots
+&amp; a_{1, n} \\ \vdots &amp; \ddots &amp; \vdots \\ a_{m, 1} &amp;
+\cdots &amp; a_{m, n} \end{array}\right) \land B =
+\left(\begin{array}{ccc} b_{1, 1} &amp; \cdots &amp; b_{1, n} \\ \vdots
+&amp; \ddots &amp; \vdots \\ b_{m, 1} &amp; \cdots &amp; b_{m, n}
+\end{array}\right)</span></li>
+<li><span class="math inline">A + B = \left(\begin{array}{ccc} a_{1,1} +
+b_{1, 1} &amp; \cdots &amp; a_{1, n}+b_{1, n} \\ \vdots &amp; \ddots
+&amp; \vdots \\ a_{m,1}+b_{m, 1} &amp; \cdots &amp; a_{m,n}+b_{m, n}
+\end{array}\right)</span> è detta <strong>somma tra <span
 class="math inline">A</span> e <span
-class="math inline">B</span></strong></li>
+class="math inline">B</span></strong>
+<ul>
+<li>in particolare, è definita solamente per matrice con stessa
+dimensione</li>
+</ul></li>
 </ul>
 </blockquote>
 <a href="#teorema-139"><h2 id="teorema-139">Teorema 139</h2></a>
@@ -3694,12 +3701,14 @@ class="math inline">B</span></strong></li>
 <li><strong>Hp</strong>
 <ul>
 <li><span class="math inline">\mathbb{K}</span> campo</li>
-<li><span class="math inline">m, n \in \mathbb{N} - \{0\}</span></li>
+<li><span class="math inline">m, n \in \mathbb{N}</span></li>
 </ul></li>
 <li><strong>Th</strong>
 <ul>
 <li><span class="math inline">\textrm{Mat}_{m \times
-n}(\mathbb{K})</span> è uno spazio vettoriale</li>
+n}(\mathbb{K})</span> spazio vettoriale</li>
+<li><span class="math inline">\dim(\textrm{Mat}_{m \times
+n}{\mathbb{K}}) = m \cdot n</span></li>
 </ul></li>
 </ul>
 <a href="#definizione-52"><h2 id="definizione-52">Definizione 52</h2></a>
@@ -3709,7 +3718,7 @@ n}(\mathbb{K})</span> è uno spazio vettoriale</li>
 <blockquote>
 <ul>
 <li><span class="math inline">\mathbb{K}</span> campo</li>
-<li><span class="math inline">l, m, n \in \mathbb{N} - \{0\}</span></li>
+<li><span class="math inline">l, m, n \in \mathbb{N}</span></li>
 <li><span class="math inline">A \in \textrm{Mat}_{l \times
 m}(\mathbb{K}) \mid A = \left(\begin{array}{ccc} a_{1, 1} &amp; \cdots
 &amp; a_{1, m} \\ \vdots &amp; \ddots &amp; \vdots \\ a_{l, 1} &amp;
@@ -3719,7 +3728,7 @@ n}(\mathbb{K}) \mid B = \left(\begin{array}{ccc} b_{1, 1} &amp; \cdots
 &amp; b_{1, n} \\ \vdots &amp; \ddots &amp; \vdots \\ b_{m, 1} &amp;
 \cdots &amp; b_{m, n} \end{array}\right)</span></li>
 <li><span class="math inline">C \in \textrm{Mat}_{l \times
-n}(\mathbb{K}) \mid C = AB</span> è il <strong>prodotto tra <span
+n}(\mathbb{K}) \mid C = AB</span> è detto <strong>prodotto tra <span
 class="math inline">A</span> e <span
 class="math inline">B</span></strong>, ed è definito come <span
 class="math inline">\left(\begin{array}{ccc}a_{1, 1}b_{1, 1} + \ldots +
@@ -3734,9 +3743,7 @@ m}b_{m,n}\end{array}\right)</span></li>
 <li><strong>Hp</strong>
 <ul>
 <li><span class="math inline">\mathbb{K}</span> campo</li>
-<li><span class="math inline">\lambda \in \mathbb{K}</span></li>
-<li><span class="math inline">l, m, n, k \in \mathbb{N} -
-\{0\}</span></li>
+<li><span class="math inline">l, m, n, k \in \mathbb{N}</span></li>
 <li><span class="math inline">A \in \textrm{Mat}_{l \times
 m}(\mathbb{K})</span></li>
 <li><span class="math inline">B \in \textrm{Mat}_{m \times
@@ -3744,29 +3751,14 @@ n}(\mathbb{K})</span></li>
 </ul></li>
 <li><strong>Th</strong>
 <ul>
-<li><strong>⚠️ TODO</strong></li>
 <li><span class="math inline">\forall C \in \textrm{Mat}_{n \times
 k}(\mathbb{K}) \quad (AB)C = A(BC)</span></li>
 <li><span class="math inline">\forall C \in \textrm{Mat}_{m \times
 n}(\mathbb{K}) \quad A(B+C) = AB+AC</span></li>
 <li><span class="math inline">\forall C \in \textrm{Mat}_{n \times
 k}(\mathbb{K}) \quad (A+B)C = AC+BC</span></li>
-<li><span class="math inline">\lambda(AB) = (\lambda A)B = A (\lambda
-B)</span></li>
-</ul></li>
-</ul>
-<a href="#teorema-141"><h2 id="teorema-141">Teorema 141</h2></a>
-<ul>
-<li><strong>Hp</strong>
-<ul>
-<li><span class="math inline">\mathbb{K}</span> campo</li>
-<li><span class="math inline">\lambda \in \mathbb{K}</span></li>
-<li><span class="math inline">n \in \mathbb{N} - \{0\}</span></li>
-</ul></li>
-<li><strong>Th</strong>
-<ul>
-<li><span class="math inline">(\textrm{Mat}_{n \times n}(\mathbb{K}), +,
-\cdot)</span> è un anello</li>
+<li><span class="math inline">\forall \lambda \in \mathbb{K} \quad
+\lambda(AB) = (\lambda A)B = A (\lambda B)</span></li>
 </ul></li>
 </ul>
 <hr />
@@ -3784,7 +3776,7 @@ B)</span></li>
 \left(\begin{array}{c}x_1 \\ \vdots \\ x_n
 \end{array}\right)</span></li>
 <li><span class="math inline">v^T = \left(x_1, \ldots, x_n\right)</span>
-è il <strong>vettore trasposto di <span
+è detto <strong>vettore trasposto di <span
 class="math inline">v</span></strong>
 <ul>
 <li>vicendevolmente, se <span class="math inline">v</span> è un vettore
@@ -3797,17 +3789,14 @@ riga, il suo trasposto sarà il corrispondente vettore colonna</li>
 </ul>
 <blockquote>
 <ul>
-<li><span class="math inline">m, n \in \mathbb{N} - \{0\}</span></li>
 <li><span class="math inline">\mathbb{K}</span> campo</li>
+<li><span class="math inline">m, n \in \mathbb{N}</span></li>
 <li><span class="math inline">A \in \textrm{Mat}_{m \times
 n}(\mathbb{K}) \mid A = \left(A^1, \ldots, A^n\right)</span></li>
 <li><span class="math inline">A^T = \left(\begin{array}{c} {A^1}^T \\
-\vdots \\ {A^n}^T \end{array}\right)</span> è la <strong>matrice
-trasposta di <span class="math inline">A</span></strong>
-<ul>
-<li>vale il ragionamento analogo considerando le righe di <span
-class="math inline">A</span> al posto delle colonne</li>
-</ul></li>
+\vdots \\ {A^n}^T \end{array}\right)\in \textrm{Mat}_{n \times
+m}(\mathbb{K})</span> è detta <strong>matrice trasposta di <span
+class="math inline">A</span></strong></li>
 </ul>
 </blockquote>
 <ul>
@@ -3815,8 +3804,8 @@ class="math inline">A</span> al posto delle colonne</li>
 </ul>
 <blockquote>
 <ul>
-<li><span class="math inline">n \in \mathbb{N} - \{0\}</span></li>
 <li><span class="math inline">\mathbb{K}</span> campo</li>
+<li><span class="math inline">n \in \mathbb{N}</span></li>
 <li><span class="math inline">A \in \textrm{Mat}_{n \times
 n}(\mathbb{K})</span></li>
 <li><span class="math inline">A</span> è detta
@@ -3824,15 +3813,13 @@ n}(\mathbb{K})</span></li>
 A</span></li>
 </ul>
 </blockquote>
-<a href="#teorema-142"><h2 id="teorema-142">Teorema 142</h2></a>
+<a href="#teorema-141"><h2 id="teorema-141">Teorema 141</h2></a>
 <ul>
 <li><strong>Hp</strong>
 <ul>
-<li><span class="math inline">m, n \in \mathbb{N} - \{0\}</span></li>
 <li><span class="math inline">\mathbb{K}</span> campo</li>
-<li><span class="math inline">A \in \textrm{Mat}_{m \times
-n}(\mathbb{K})</span></li>
-<li><span class="math inline">B \in \textrm{Mat}_{m \times
+<li><span class="math inline">m, n \in \mathbb{N}</span></li>
+<li><span class="math inline">A, B \in \textrm{Mat}_{m \times
 n}(\mathbb{K})</span></li>
 </ul></li>
 <li><strong>Th</strong>
@@ -3847,28 +3834,48 @@ n}(\mathbb{K})</span></li>
 <blockquote>
 <ul>
 <li><span class="math inline">\mathbb{K}</span> campo</li>
-<li><span class="math inline">n \in \mathbb{N} - \{0\}</span></li>
+<li><span class="math inline">n \in \mathbb{N}</span></li>
 <li><span class="math inline">I_n = \left(\begin{array}{c}e_1 \\ \vdots
 \\ e_n \end{array}\right) = \left(e_1^T, \ldots, e_n^T\right) =
 \left(\begin{array}{ccccc}1 &amp; 0 &amp; \cdots &amp; \cdots &amp; 0 \\
 \vdots &amp; \ddots &amp; &amp; &amp; \vdots\\ 0 &amp; \cdots &amp; 1
 &amp; \cdots &amp; 0 \\ \vdots &amp; &amp; &amp; \ddots &amp; \vdots\\ 0
 &amp;\cdots &amp; \cdots &amp; 0 &amp; 1\end{array}\right)</span> è
-detta <strong>matrice identità</strong></li>
+detta <strong>matrice identità</strong>
+<ul>
+<li>in particolare <span class="math inline">\forall A \in
+\textrm{Mat}_{n \times n}(\mathbb{K}) \quad A\cdot I_n = I_n \cdot A =
+A</span></li>
+</ul></li>
 </ul>
 </blockquote>
+<a href="#teorema-142"><h2 id="teorema-142">Teorema 142</h2></a>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\mathbb{K}</span> campo</li>
+<li><span class="math inline">n \in \mathbb{N}</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">(\textrm{Mat}_{n \times n}(\mathbb{K}), +,
+\cdot)</span> è un anello</li>
+</ul></li>
+</ul>
+<a href="#definizione-55"><h2 id="definizione-55">Definizione 55</h2></a>
 <ul>
 <li><strong>Matrice invertibile</strong></li>
 </ul>
 <blockquote>
 <ul>
 <li><span class="math inline">\mathbb{K}</span> campo</li>
-<li><span class="math inline">n \in \mathbb{N} - \{0\}</span></li>
+<li><span class="math inline">n \in \mathbb{N}</span></li>
 <li><span class="math inline">A \in \textrm{Mat}_{n \times
 n}(\mathbb{K})</span></li>
-<li><span class="math inline">A</span> <strong>invertibile</strong>
-<span class="math inline">\iff \exists A^{-1} \in \textrm{Mat}_{n \times
-n}(\mathbb{K}) \mid A\cdot A^{-1} = A^{-1} \cdot A = I_n</span></li>
+<li><span class="math inline">A</span> è detta
+<strong>invertibile</strong> <span class="math inline">\iff \exists
+A^{-1} \in \textrm{Mat}_{n \times n}(\mathbb{K}) \mid A\cdot A^{-1} =
+A^{-1} \cdot A = I_n</span></li>
 </ul>
 </blockquote>
 <ul>
@@ -3877,7 +3884,7 @@ n}(\mathbb{K}) \mid A\cdot A^{-1} = A^{-1} \cdot A = I_n</span></li>
 <blockquote>
 <ul>
 <li><span class="math inline">\mathbb{K}</span> campo</li>
-<li><span class="math inline">n \in \mathbb{N} - \{0\}</span></li>
+<li><span class="math inline">n \in \mathbb{N}</span></li>
 <li><span class="math inline">\textrm{GL}(n, \mathbb{K}) := \{A \in
 \textrm{Mat}_{n \times n}(\mathbb{K}) \mid A</span> invertibile<span
 class="math inline">\}</span> è detto <strong>gruppo speciale lineare
@@ -3889,12 +3896,12 @@ invertibile</strong></li>
 <li><strong>Hp</strong>
 <ul>
 <li><span class="math inline">\mathbb{K}</span> campo</li>
-<li><span class="math inline">n \in \mathbb{N} - \{0\}</span></li>
+<li><span class="math inline">n \in \mathbb{N}</span></li>
 </ul></li>
 <li><strong>Th</strong>
 <ul>
 <li><span class="math inline">(\textrm{GL}(n, \mathbb{K}), \cdot)</span>
-è un gruppo</li>
+gruppo</li>
 </ul></li>
 </ul>
 <a href="#teorema-144"><h2 id="teorema-144">Teorema 144</h2></a>
@@ -3911,7 +3918,7 @@ invertibile</strong></li>
 <li><span class="math inline">f</span> morfismo di gruppi</li>
 </ul></li>
 </ul>
-<a href="#definizione-55"><h2 id="definizione-55">Definizione 55</h2></a>
+<a href="#definizione-56"><h2 id="definizione-56">Definizione 56</h2></a>
 <ul>
 <li><strong>Matrice ortogonale</strong></li>
 </ul>
@@ -3943,7 +3950,7 @@ A^T \cdot A = I_n</span>
 è detto <strong>gruppo ortogonale</strong></li>
 </ul>
 </blockquote>
-<a href="#definizione-56"><h2 id="definizione-56">Definizione 56</h2></a>
+<a href="#definizione-57"><h2 id="definizione-57">Definizione 57</h2></a>
 <ul>
 <li><strong>Gruppo Speciale Lineare</strong></li>
 </ul>
@@ -3956,7 +3963,7 @@ A^T \cdot A = I_n</span>
 <strong>gruppo generale lineare invertibile</strong></li>
 </ul>
 </blockquote>
-<a href="#definizione-57"><h2 id="definizione-57">Definizione 57</h2></a>
+<a href="#definizione-58"><h2 id="definizione-58">Definizione 58</h2></a>
 <ul>
 <li><strong>Matrici simili</strong></li>
 </ul>
@@ -3971,7 +3978,7 @@ class="math inline">B</span></strong> <span class="math inline">\iff
 \exists C \in \textrm{GL}(n, \mathbb{K}) \mid A = C^{-1}BC</span></li>
 </ul>
 </blockquote>
-<a href="#definizione-58"><h2 id="definizione-58">Definizione 58</h2></a>
+<a href="#definizione-59"><h2 id="definizione-59">Definizione 59</h2></a>
 <ul>
 <li><strong>Traccia</strong></li>
 </ul>
@@ -4002,7 +4009,7 @@ class="math inline">B</span></li>
 \textrm{tr}(B)</span></li>
 </ul></li>
 </ul>
-<a href="#definizione-59"><h2 id="definizione-59">Definizione 59</h2></a>
+<a href="#definizione-60"><h2 id="definizione-60">Definizione 60</h2></a>
 <ul>
 <li><strong>Matrice triangolare superiore</strong></li>
 </ul>
@@ -4111,7 +4118,7 @@ n}(\mathbb{K}) \mid A</span> diagonalizzabile</li>
 <li><span class="math inline">A</span> triangolarizzabile</li>
 </ul></li>
 </ul>
-<a href="#definizione-60"><h2 id="definizione-60">Definizione 60</h2></a>
+<a href="#definizione-61"><h2 id="definizione-61">Definizione 61</h2></a>
 <ul>
 <li><strong>Sottomatrice di una matrice</strong></li>
 </ul>
@@ -4184,7 +4191,7 @@ class="math inline">(m-r)\cdot(n-r)</span> orlati in <span
 class="math inline">A</span></li>
 </ul></li>
 </ul>
-<a href="#definizione-61"><h2 id="definizione-61">Definizione 61</h2></a>
+<a href="#definizione-62"><h2 id="definizione-62">Definizione 62</h2></a>
 <ul>
 <li><strong>Matrice completa</strong></li>
 </ul>
@@ -4202,7 +4209,7 @@ n}(\mathbb{K})</span></li>
 b_m\end{array}\right)</span></li>
 </ul>
 </blockquote>
-<a href="#definizione-62"><h2 id="definizione-62">Definizione 62</h2></a>
+<a href="#definizione-63"><h2 id="definizione-63">Definizione 63</h2></a>
 <ul>
 <li><strong>Matrice di un’applicazione lineare</strong></li>
 </ul>
@@ -4234,14 +4241,14 @@ f</span> applicazione lineare<span class="math inline">\quad \exists ! A
 </blockquote>
 <hr />
 <a href="#rango"><h1 id="rango">Rango</h1></a>
-<a href="#definizione-63"><h2 id="definizione-63">Definizione 63</h2></a>
+<a href="#definizione-64"><h2 id="definizione-64">Definizione 64</h2></a>
 <ul>
 <li><strong>Sottospazio ortogonale</strong></li>
 </ul>
 <blockquote>
 <ul>
 <li><span class="math inline">\mathbb{K}</span> campo</li>
-<li><span class="math inline">n \in \mathbb{N} - \{0\}</span></li>
+<li><span class="math inline">n \in \mathbb{N}</span></li>
 <li><span class="math inline">V \subset \mathbb{K}^n</span> sottospazio
 vettoriale</li>
 <li><span class="math inline">V^{\perp} := \{w \in \mathbb{K}^n \mid
@@ -4251,7 +4258,7 @@ class="math inline">\mathbb{K}^n</span></strong>
 <ul>
 <li>la definizione ha significato poiché il prodotto scalare tra due
 vettori è nullo esattamente quando i due vettori sono perpendicolari tra
-loro, per osservazione precedente</li>
+loro</li>
 </ul></li>
 </ul>
 </blockquote>
@@ -4260,14 +4267,14 @@ loro, per osservazione precedente</li>
 <li><strong>Hp</strong>
 <ul>
 <li><span class="math inline">\mathbb{K}</span> campo</li>
-<li><span class="math inline">n \in \mathbb{N} - \{0\}</span></li>
+<li><span class="math inline">n \in \mathbb{N}</span></li>
 <li><span class="math inline">V \subset \mathbb{K}^n</span> sottospazio
 vettoriale</li>
 </ul></li>
 <li><strong>Th</strong>
 <ul>
-<li><span class="math inline">V^{\bot}</span> è sottospazio vettoriale
-di <span class="math inline">\mathbb{K}^n</span></li>
+<li><span class="math inline">V^{\bot} \subset \mathbb{K}^n</span>
+sottospazio vettoriale</li>
 </ul></li>
 </ul>
 <a href="#teorema-149"><h2 id="teorema-149">Teorema 149</h2></a>
@@ -4275,24 +4282,24 @@ di <span class="math inline">\mathbb{K}^n</span></li>
 <li><strong>Hp</strong>
 <ul>
 <li><span class="math inline">\mathbb{K}</span> campo</li>
-<li><span class="math inline">n \in \mathbb{N} - \{0\}</span></li>
+<li><span class="math inline">n \in \mathbb{N}</span></li>
 <li><span class="math inline">V \subset \mathbb{K}^n</span> sottospazio
 vettoriale</li>
 </ul></li>
 <li><strong>Th</strong>
 <ul>
-<li><span class="math inline">\dim(V^{\bot}) = \dim(\mathbb{K}^n) -
-\dim(V)</span></li>
+<li><span class="math inline">\dim(V^{\bot}) + \dim(V) =
+\dim(\mathbb{K}^n)</span></li>
 </ul></li>
 </ul>
-<a href="#definizione-64"><h2 id="definizione-64">Definizione 64</h2></a>
+<a href="#definizione-65"><h2 id="definizione-65">Definizione 65</h2></a>
 <ul>
 <li><strong>Moltiplicazione sinistra</strong></li>
 </ul>
 <blockquote>
 <ul>
 <li><span class="math inline">\mathbb{K}</span> campo</li>
-<li><span class="math inline">m,n \in \mathbb{N} - \{0\}</span></li>
+<li><span class="math inline">m,n \in \mathbb{N}</span></li>
 <li><span class="math inline">A \in \textrm{Mat}_{m \times
 n}(\mathbb{K})</span></li>
 <li><span class="math inline">L_A:\mathbb{K}^n \rightarrow \mathbb{K}^m:
@@ -4305,14 +4312,13 @@ di <span class="math inline">A</span></strong></li>
 <li><strong>Hp</strong>
 <ul>
 <li><span class="math inline">\mathbb{K}</span> campo</li>
-<li><span class="math inline">m,n \in \mathbb{N} - \{0\}</span></li>
+<li><span class="math inline">m,n \in \mathbb{N}</span></li>
 <li><span class="math inline">A \in \textrm{Mat}_{m \times
 n}(\mathbb{K})</span></li>
 </ul></li>
 <li><strong>Th</strong>
 <ul>
-<li><span class="math inline">L_A</span> è una trasformazione
-lineare</li>
+<li><span class="math inline">L_A</span> trasformazione lineare</li>
 </ul></li>
 </ul>
 <a href="#teorema-151"><h2 id="teorema-151">Teorema 151</h2></a>
@@ -4320,30 +4326,35 @@ lineare</li>
 <li><strong>Hp</strong>
 <ul>
 <li><span class="math inline">\mathbb{K}</span> campo</li>
-<li><span class="math inline">m,n \in \mathbb{N} - \{0\}</span></li>
+<li><span class="math inline">m,n \in \mathbb{N}</span></li>
 <li><span class="math inline">A \in \textrm{Mat}_{m \times
 n}(\mathbb{K})</span></li>
 </ul></li>
 <li><strong>Th</strong>
 <ul>
+<li>⚠️ <strong>da qua</strong></li>
 <li><span class="math inline">\ker(L_A) = \textrm{span}(A_1, \ldots,
 A_m)^\bot</span></li>
 <li><span class="math inline">\textrm{im}(L_A) = \textrm{span}(A^1,
 \ldots, A^n)</span></li>
 </ul></li>
 </ul>
-<a href="#definizione-65"><h2 id="definizione-65">Definizione 65</h2></a>
+<a href="#definizione-66"><h2 id="definizione-66">Definizione 66</h2></a>
 <ul>
 <li><strong>Rango di una matrice</strong></li>
 </ul>
 <blockquote>
 <ul>
 <li><span class="math inline">\mathbb{K}</span> campo</li>
-<li><span class="math inline">m,n \in \mathbb{N} - \{0\}</span></li>
+<li><span class="math inline">m,n \in \mathbb{N}</span></li>
 <li><span class="math inline">A \in \textrm{Mat}_{m \times
 n}(\mathbb{K})</span></li>
 <li><span class="math inline">\textrm{rk}(A):=\textrm{rk}(L_A)</span> è
-il <strong>rango di <span class="math inline">A</span></strong></li>
+detto <strong>rango di <span class="math inline">A</span></strong>
+<ul>
+<li>in particolare <span class="math inline">\textrm{rk}(A) =
+\textrm{rk}(L_A)=\dim(\textrm{im}(L_A))</span></li>
+</ul></li>
 </ul>
 </blockquote>
 <a href="#teorema-152"><h2 id="teorema-152">Teorema 152</h2></a>
@@ -4364,7 +4375,7 @@ n}(\mathbb{K})</span></li>
 <hr />
 <a href="#operazioni-su-righe-e-colonne"><h1 id="operazioni-su-righe-e-colonne">Operazioni su righe e colonne</h1></a>
 
-<a href="#definizione-66"><h2 id="definizione-66">Definizione 66</h2></a>
+<a href="#definizione-67"><h2 id="definizione-67">Definizione 67</h2></a>
 <ul>
 <li><strong>Scambio di righe di una matrice</strong></li>
 </ul>
@@ -4543,7 +4554,7 @@ definite precedentemente</li>
 </ul>
 <hr />
 <a href="#determinante"><h1 id="determinante">Determinante</h1></a>
-<a href="#definizione-67"><h2 id="definizione-67">Definizione 67</h2></a>
+<a href="#definizione-68"><h2 id="definizione-68">Definizione 68</h2></a>
 <ul>
 <li><strong>Applicazione multilineare</strong></li>
 </ul>
@@ -4622,7 +4633,7 @@ class="math inline">\mid 1 \neq -1</span></li>
 <li><strong>⚠️ DETERMINANTE ALTERNANTE</strong></li>
 </ul></li>
 </ul>
-<a href="#definizione-68"><h2 id="definizione-68">Definizione 68</h2></a>
+<a href="#definizione-69"><h2 id="definizione-69">Definizione 69</h2></a>
 <ul>
 <li><strong>Matrice singolare</strong></li>
 </ul>
@@ -4810,7 +4821,7 @@ n}(\mathbb{K})</span></li>
 \det(A_h^j)}</span></li>
 </ul></li>
 </ul>
-<a href="#definizione-69"><h2 id="definizione-69">Definizione 69</h2></a>
+<a href="#definizione-70"><h2 id="definizione-70">Definizione 70</h2></a>
 <ul>
 <li><strong>Aggiunta di una matrice</strong></li>
 </ul>
@@ -4860,7 +4871,7 @@ a\end{array}\right)</span></li>
 </ul>
 <hr />
 <a href="#polinomio-caratteristico"><h1 id="polinomio-caratteristico">Polinomio caratteristico</h1></a>
-<a href="#definizione-70"><h2 id="definizione-70">Definizione 70</h2></a>
+<a href="#definizione-71"><h2 id="definizione-71">Definizione 71</h2></a>
 <blockquote>
 <ul>
 <li><span class="math inline">\mathbb{K}</span> campo</li>
@@ -4902,7 +4913,7 @@ class="math inline">B</span></li>
 <li><span class="math inline">p_A(x) = p_B(x)</span></li>
 </ul></li>
 </ul>
-<a href="#definizione-71"><h2 id="definizione-71">Definizione 71</h2></a>
+<a href="#definizione-72"><h2 id="definizione-72">Definizione 72</h2></a>
 <ul>
 <li><strong>Autovalore</strong></li>
 </ul>
@@ -4964,7 +4975,7 @@ class="math inline">\iff \exists v \in \mathbb{K}^n - \{0\} \mid A \cdot
 v = \lambda \cdot v</span></li>
 </ul></li>
 </ul>
-<a href="#definizione-72"><h2 id="definizione-72">Definizione 72</h2></a>
+<a href="#definizione-73"><h2 id="definizione-73">Definizione 73</h2></a>
 <ul>
 <li><strong>Autovettore relativo ad un autovalore</strong></li>
 </ul>
@@ -5001,7 +5012,7 @@ class="math inline">\lambda_1, \ldots, \lambda_k</span></li>
 indipendenti</li>
 </ul></li>
 </ul>
-<a href="#definizione-73"><h2 id="definizione-73">Definizione 73</h2></a>
+<a href="#definizione-74"><h2 id="definizione-74">Definizione 74</h2></a>
 <ul>
 <li><strong>Autospazio relativo ad un autovalore</strong></li>
 </ul>
@@ -5038,7 +5049,7 @@ n}(\mathbb{K})</span></li>
 \mathbb{K}</span> sottospazio vettoriale</li>
 </ul></li>
 </ul>
-<a href="#definizione-74"><h2 id="definizione-74">Definizione 74</h2></a>
+<a href="#definizione-75"><h2 id="definizione-75">Definizione 75</h2></a>
 <ul>
 <li><strong>Molteplicità algebrica di un autovalore</strong></li>
 </ul>
@@ -5073,7 +5084,7 @@ class="math inline">B</span></li>
 \mu_B(\lambda)</span></li>
 </ul></li>
 </ul>
-<a href="#definizione-75"><h2 id="definizione-75">Definizione 75</h2></a>
+<a href="#definizione-76"><h2 id="definizione-76">Definizione 76</h2></a>
 <ul>
 <li><strong>Molteplicità geometrica di un autovalore</strong></li>
 </ul>
@@ -5231,7 +5242,7 @@ class="math inline">\mathbb{K}^n</span></li>
 </ul>
 <hr />
 <a href="#numeri-complessi"><h1 id="numeri-complessi">Numeri complessi</h1></a>
-<a href="#definizione-76"><h2 id="definizione-76">Definizione 76</h2></a>
+<a href="#definizione-77"><h2 id="definizione-77">Definizione 77</h2></a>
 <ul>
 <li><strong>Insieme dei complessi</strong></li>
 </ul>
@@ -5259,7 +5270,7 @@ b:=\operatorname{Im}(z)\end{array}\right.</span></li>
 <li><span class="math inline">z\cdot w=(a c-b d)+i(ad+ bc)</span></li>
 </ul></li>
 </ul>
-<a href="#definizione-77"><h2 id="definizione-77">Definizione 77</h2></a>
+<a href="#definizione-78"><h2 id="definizione-78">Definizione 78</h2></a>
 <ul>
 <li><strong>Coniugato</strong></li>
 </ul>
@@ -5299,7 +5310,7 @@ class="math inline">\overline{z}+\overline{w}=\overline{z+w}</span></li>
 \theta</span></li>
 </ul></li>
 </ul>
-<a href="#definizione-78"><h2 id="definizione-78">Definizione 78</h2></a>
+<a href="#definizione-79"><h2 id="definizione-79">Definizione 79</h2></a>
 <ul>
 <li><strong>Raggio</strong></li>
 </ul>
@@ -5315,7 +5326,7 @@ dall’origine nel piano di Gauss</li>
 </ul></li>
 </ul>
 </blockquote>
-<a href="#definizione-79"><h2 id="definizione-79">Definizione 79</h2></a>
+<a href="#definizione-80"><h2 id="definizione-80">Definizione 80</h2></a>
 <ul>
 <li><strong>Forma polare</strong></li>
 </ul>
@@ -5327,7 +5338,7 @@ dall’origine nel piano di Gauss</li>
 <strong>forma polare di <span class="math inline">z</span></strong></li>
 </ul>
 </blockquote>
-<a href="#definizione-80"><h2 id="definizione-80">Definizione 80</h2></a>
+<a href="#definizione-81"><h2 id="definizione-81">Definizione 81</h2></a>
 <ul>
 <li><strong>Soluzione principale</strong></li>
 </ul>
@@ -5392,7 +5403,7 @@ w)=\arg(z) + \arg(w)</span></li>
 </ul>
 <hr />
 <a href="#coefficienti-binomiali"><h1 id="coefficienti-binomiali">Coefficienti binomiali</h1></a>
-<a href="#definizione-81"><h2 id="definizione-81">Definizione 81</h2></a>
+<a href="#definizione-82"><h2 id="definizione-82">Definizione 82</h2></a>
 <ul>
 <li><strong>Coefficiente binomiale</strong></li>
 </ul>
@@ -5489,7 +5500,7 @@ in <span class="math inline">\mathbb{Z}_p</span></li>
 </ul>
 <hr />
 <a href="#induzione"><h1 id="induzione">Induzione</h1></a>
-<a href="#definizione-82"><h2 id="definizione-82">Definizione 82</h2></a>
+<a href="#definizione-83"><h2 id="definizione-83">Definizione 83</h2></a>
 <ul>
 <li><strong>Induzione</strong></li>
 </ul>

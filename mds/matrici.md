@@ -2,73 +2,64 @@
 
 ## Def
 
-- **Matrici**
+- **Matrice**
 
 > - $\mathbb{K}$ campo
-> - $m, n \in \mathbb{N} - \{0\}$
-> - $\textrm{Mat}_{m \times n}(\mathbb{K})$ è l'**insieme delle matrici aventi $m$ righe e $n$ colonne a coefficienti in $\mathbb{K}$**
+> - $m, n \in \mathbb{N}$
+> - $\textrm{Mat}_{m \times n}(\mathbb{K})$ è detto **insieme delle matrici aventi $m$ righe e $n$ colonne a coefficienti in $\mathbb{K}$**
 
 - **Vettori riga e vettori colonna**
 
 > - $\mathbb{K}$ campo
-> - $m, n \in \mathbb{N} - \{0\}$
-> - $\forall A \in \textrm{Mat}_{1 \times n}(\mathbb{K}) \quad A = \left(x_1, \ldots, x_n\right)$ è detto **vettore riga**
-> - $\forall A \in \textrm{Mat}_{m \times 1}(\mathbb{K}) \quad A = \left(\begin{array}{ccc} x_1 \\ \vdots \\ x_m \end{array}\right)$ è detto **vettore colonna**
+> - $m, n \in \mathbb{N}$
+> - $\forall v \in \textrm{Mat}_{1 \times n}(\mathbb{K}) \quad v = \left(x_1, \ldots, x_n\right)$ è detto **vettore riga**
+> - $\forall v \in \textrm{Mat}_{m \times 1}(\mathbb{K}) \quad v = \left(\begin{array}{ccc} x_1 \\ \vdots \\ x_m \end{array}\right)$ è detto **vettore colonna**
 > - $\forall A \in \textrm{Mat}_{m \times n}(\mathbb{K}) \quad \exists A^1, \ldots, A^n \in \mathbb{K}^m$ vettori colonna e $A_1, \ldots, A_m \in \mathbb{K}^n$ vettori riga $\mid A = \left(A^1, \ldots, A^n \right) = \left(\begin{array}{ccc} A_1 \\ \vdots \\ A_m\end{array}\right)$
 
 ## Def
 
-- **Somma tra matrici**
+- **$+$ tra matrici**
 
 > - $\mathbb{K}$ campo
-> - $m, n \in \mathbb{N} - \{0\}$
+> - $m, n \in \mathbb{N}$
 > - $\forall i \in [1, m], j \in [1, n] \quad a_{i, j}, b_{i, j} \in \mathbb{K}$
-> - $A, B \in \textrm{Mat}_{m \times n}(\mathbb{K}) \mid A = \left(\begin{array}{ccc} \ddots & & \\ & a_{i, j} & \\ & & \ddots \end{array}\right) \land B = \left(\begin{array}{ccc}\ddots & & \\ & b_{i, j} & \\ & & \ddots\end{array}\right)$
-> - $A + B = \left(\begin{array}{ccc}\ddots & & \\ & a_{i, j} + b_{i, j} & \\ & & \ddots\end{array}\right)$ è la **somma tra $A$ e $B$**
+> - $A, B \in \textrm{Mat}_{m \times n}(\mathbb{K}) \mid A = \left(\begin{array}{ccc} a_{1, 1} & \cdots & a_{1, n} \\ \vdots & \ddots & \vdots \\ a_{m, 1} & \cdots & a_{m, n} \end{array}\right) \land B = \left(\begin{array}{ccc} b_{1, 1} & \cdots & b_{1, n} \\ \vdots & \ddots & \vdots \\ b_{m, 1} & \cdots & b_{m, n} \end{array}\right)$
+> - $A + B = \left(\begin{array}{ccc} a_{1,1} + b_{1, 1} & \cdots & a_{1, n}+b_{1, n} \\ \vdots & \ddots & \vdots \\ a_{m,1}+b_{m, 1} & \cdots & a_{m,n}+b_{m, n} \end{array}\right)$ è detta **somma tra $A$ e $B$**
+>   - in particolare, è definita solamente per matrice con stessa dimensione
 
 ## Oss
 
 - **Hp**
     - $\mathbb{K}$ campo
-    - $m, n \in \mathbb{N} - \{0\}$
+    - $m, n \in \mathbb{N}$
 - **Th**
-    - $\textrm{Mat}_{m \times n}(\mathbb{K})$ è uno spazio vettoriale
+    - $\textrm{Mat}_{m \times n}(\mathbb{K})$ spazio vettoriale
+    - $\dim(\textrm{Mat}_{m \times n}{\mathbb{K}}) = m \cdot n$
+- **Dim**
+    - ⚠️ **da fare**
 
 ## Def
 
 - **Prodotto tra matrici**
 
 > - $\mathbb{K}$ campo
-> - $l, m, n \in \mathbb{N} - \{0\}$
+> - $l, m, n \in \mathbb{N}$
 > - $A \in \textrm{Mat}_{l \times m}(\mathbb{K}) \mid A = \left(\begin{array}{ccc} a_{1, 1} & \cdots & a_{1, m} \\ \vdots & \ddots & \vdots \\ a_{l, 1} & \cdots & a_{l, m} \end{array}\right)$
 > - $B \in \textrm{Mat}_{m \times n}(\mathbb{K}) \mid B = \left(\begin{array}{ccc} b_{1, 1} & \cdots & b_{1, n} \\ \vdots & \ddots & \vdots \\ b_{m, 1} & \cdots & b_{m, n} \end{array}\right)$
-> - $C \in \textrm{Mat}_{l \times n}(\mathbb{K}) \mid C = AB$ è il **prodotto tra $A$ e $B$**, ed è definito come $\left(\begin{array}{ccc}a_{1, 1}b_{1, 1} + \ldots + a_{1, m}b_{m, 1} & \cdots & a_{1, 1}b_{1, n} + \ldots + a_{1, m}b_{m,n} \\ \vdots & \ddots & \vdots \\a_{l,1}b_{1, 1} + \ldots + a_{l,m}b_{m, 1} & \cdots & a_{l,1}b_{1,n} + \ldots + a_{l, m}b_{m,n}\end{array}\right)$
+> - $C \in \textrm{Mat}_{l \times n}(\mathbb{K}) \mid C = AB$ è detto **prodotto tra $A$ e $B$**, ed è definito come $\left(\begin{array}{ccc}a_{1, 1}b_{1, 1} + \ldots + a_{1, m}b_{m, 1} & \cdots & a_{1, 1}b_{1, n} + \ldots + a_{1, m}b_{m,n} \\ \vdots & \ddots & \vdots \\a_{l,1}b_{1, 1} + \ldots + a_{l,m}b_{m, 1} & \cdots & a_{l,1}b_{1,n} + \ldots + a_{l, m}b_{m,n}\end{array}\right)$
 
 ## Oss
 
 - **Hp**
     - $\mathbb{K}$ campo
-    - $\lambda \in \mathbb{K}$
-    - $l, m, n, k \in \mathbb{N} - \{0\}$
+    - $l, m, n, k \in \mathbb{N}$
     - $A \in \textrm{Mat}_{l \times m}(\mathbb{K})$
     - $B \in \textrm{Mat}_{m \times n}(\mathbb{K})$
 - **Th**
-    - **⚠️  TODO**
     - $\forall C \in \textrm{Mat}_{n \times k}(\mathbb{K}) \quad (AB)C = A(BC)$
     - $\forall C \in \textrm{Mat}_{m \times n}(\mathbb{K}) \quad A(B+C) = AB+AC$
     - $\forall C \in \textrm{Mat}_{n \times k}(\mathbb{K}) \quad (A+B)C = AC+BC$
-    - $\lambda(AB) = (\lambda A)B = A (\lambda B)$
-
-## Oss
-
-- **Hp**
-    - $\mathbb{K}$ campo
-    - $\lambda \in \mathbb{K}$
-    - $n \in \mathbb{N} - \{0\}$
-- **Th**
-    - $(\textrm{Mat}_{n \times n}(\mathbb{K}), +, \cdot)$ è un anello
-- **Dim**
-    - **⚠️  TODO, non è anche di più?**
+    - $\forall \lambda \in \mathbb{K} \quad \lambda(AB) = (\lambda A)B = A (\lambda B)$
 
 ****
 
@@ -81,31 +72,29 @@
 > - $\mathbb{K}$ campo
 > - $n \in \mathbb{N}$
 > - $v \in \textrm{Mat}_{n \times 1}(\mathbb{K}) \mid \exists x_1, \ldots, x_n \in \mathbb{K} : v = \left(\begin{array}{c}x_1 \\ \vdots \\ x_n \end{array}\right)$
-> - $v^T = \left(x_1, \ldots, x_n\right)$ è il **vettore trasposto di $v$**
+> - $v^T = \left(x_1, \ldots, x_n\right)$ è detto **vettore trasposto di $v$**
 >   - vicendevolmente, se $v$ è un vettore riga, il suo trasposto sarà il corrispondente vettore colonna
 
 - **Matrice trasposta**
 
-> - $m, n \in \mathbb{N} - \{0\}$
 > - $\mathbb{K}$ campo
+> - $m, n \in \mathbb{N}$
 > - $A \in \textrm{Mat}_{m \times n}(\mathbb{K}) \mid A = \left(A^1, \ldots, A^n\right)$
-> - $A^T = \left(\begin{array}{c} {A^1}^T \\ \vdots \\ {A^n}^T \end{array}\right)$ è la **matrice trasposta di $A$**
->   - vale il ragionamento analogo considerando le righe di $A$ al posto delle colonne
+> - $A^T = \left(\begin{array}{c} {A^1}^T \\ \vdots \\ {A^n}^T \end{array}\right)\in \textrm{Mat}_{n \times m}(\mathbb{K})$ è detta **matrice trasposta di $A$**
 
 - **Matrice simmetrica**
 
-> - $n \in \mathbb{N} - \{0\}$
 > - $\mathbb{K}$ campo
+> - $n \in \mathbb{N}$
 > - $A \in \textrm{Mat}_{n \times n}(\mathbb{K})$
 > - $A$ è detta **simmetrica** $\iff A^T = A$
 
 ## Oss
 
 - **Hp**
-    - $m, n \in \mathbb{N} - \{0\}$
     - $\mathbb{K}$ campo
-    - $A \in \textrm{Mat}_{m \times n}(\mathbb{K})$
-    - $B \in \textrm{Mat}_{m \times n}(\mathbb{K})$
+    - $m, n \in \mathbb{N}$
+    - $A, B \in \textrm{Mat}_{m \times n}(\mathbb{K})$
 - **Th**
     - $(A\cdot B)^T = B^T\cdot A^T$
 
@@ -114,29 +103,40 @@
 - **Matrice identità**
 
 > - $\mathbb{K}$ campo
-> - $n \in \mathbb{N} - \{0\}$
+> - $n \in \mathbb{N}$
 > - $I_n = \left(\begin{array}{c}e_1 \\ \vdots \\ e_n \end{array}\right) = \left(e_1^T, \ldots, e_n^T\right) = \left(\begin{array}{ccccc}1 & 0 & \cdots & \cdots & 0 \\ \vdots & \ddots & & & \vdots\\ 0 & \cdots & 1 & \cdots & 0 \\ \vdots & & & \ddots & \vdots\\ 0 &\cdots & \cdots & 0 & 1\end{array}\right)$ è detta **matrice identità**
+>   - in particolare $\forall A \in \textrm{Mat}_{n \times n}(\mathbb{K}) \quad A\cdot I_n = I_n \cdot A = A$
+
+## Oss
+
+- **Hp**
+    - $\mathbb{K}$ campo
+    - $n \in \mathbb{N}$
+- **Th**
+    - $(\textrm{Mat}_{n \times n}(\mathbb{K}), +, \cdot)$ è un anello
+
+## Def
 
 - **Matrice invertibile**
 
 > - $\mathbb{K}$ campo
-> - $n \in \mathbb{N} - \{0\}$
+> - $n \in \mathbb{N}$
 > - $A \in \textrm{Mat}_{n \times n}(\mathbb{K})$
-> - $A$ **invertibile** $\iff \exists A^{-1} \in \textrm{Mat}_{n \times n}(\mathbb{K}) \mid A\cdot A^{-1} = A^{-1} \cdot A = I_n$
+> - $A$ è detta **invertibile** $\iff \exists A^{-1} \in \textrm{Mat}_{n \times n}(\mathbb{K}) \mid A\cdot A^{-1} = A^{-1} \cdot A = I_n$
 
 - **Gruppo Generale Lineare**
 
 > - $\mathbb{K}$ campo
-> - $n \in \mathbb{N} - \{0\}$
+> - $n \in \mathbb{N}$
 > - $\textrm{GL}(n, \mathbb{K}) := \{A \in \textrm{Mat}_{n \times n}(\mathbb{K}) \mid A$ invertibile$\}$ è detto **gruppo speciale lineare invertibile**
 
 ## Oss
 
 - **Hp**
     - $\mathbb{K}$ campo
-    - $n \in \mathbb{N} - \{0\}$
+    - $n \in \mathbb{N}$
 - **Th**
-    - $(\textrm{GL}(n, \mathbb{K}), \cdot)$ è un gruppo
+    - $(\textrm{GL}(n, \mathbb{K}), \cdot)$ gruppo
 
 ## Oss
 
@@ -321,35 +321,35 @@
 - **Sottospazio ortogonale**
 
 > - $\mathbb{K}$ campo
-> - $n \in \mathbb{N} - \{0\}$
+> - $n \in \mathbb{N}$
 > - $V \subset \mathbb{K}^n$ sottospazio vettoriale
 > - $V^{\perp} := \{w \in \mathbb{K}^n \mid \forall v \in V \quad w \cdot v = 0_{\mathbb{K}^n}\}$ è detto **sottospazio ortogonale di $\mathbb{K}^n$**
->     - la definizione ha significato poiché il prodotto scalare tra due vettori è nullo esattamente quando i due vettori sono perpendicolari tra loro, per osservazione precedente
+>     - la definizione ha significato poiché il prodotto scalare tra due vettori è nullo esattamente quando i due vettori sono perpendicolari tra loro
 
 ## Oss
 
 - **Hp**
     - $\mathbb{K}$ campo
-    - $n \in \mathbb{N} - \{0\}$
+    - $n \in \mathbb{N}$
     - $V \subset \mathbb{K}^n$ sottospazio vettoriale
 - **Th**
-    - $V^{\bot}$ è sottospazio vettoriale di $\mathbb{K}^n$
+    - $V^{\bot} \subset \mathbb{K}^n$ sottospazio vettoriale
 
 ## Oss
 
 - **Hp**
     - $\mathbb{K}$ campo
-    - $n \in \mathbb{N} - \{0\}$
+    - $n \in \mathbb{N}$
     - $V \subset \mathbb{K}^n$ sottospazio vettoriale
 - **Th**
-    - $\dim(V^{\bot}) = \dim(\mathbb{K}^n) - \dim(V)$
+    - $\dim(V^{\bot}) + \dim(V) = \dim(\mathbb{K}^n)$
 
 ## Def
 
 - **Moltiplicazione sinistra**
 
 > - $\mathbb{K}$ campo
-> - $m,n \in \mathbb{N} - \{0\}$
+> - $m,n \in \mathbb{N}$
 > - $A \in \textrm{Mat}_{m \times n}(\mathbb{K})$
 > - $L_A:\mathbb{K}^n \rightarrow \mathbb{K}^m: x \rightarrow A\cdot x$ è detta **moltiplicazione sinistra di $A$**
 
@@ -357,24 +357,27 @@
 
 - **Hp**
     - $\mathbb{K}$ campo
-    - $m,n \in \mathbb{N} - \{0\}$
+    - $m,n \in \mathbb{N}$
     - $A \in \textrm{Mat}_{m \times n}(\mathbb{K})$
 - **Th**
-    - $L_A$ è una trasformazione lineare
+    - $L_A$ trasformazione lineare
+- **Dim**
+    - $\forall x, y \in \mathbb{K}^n \quad L_A(x + y) = A(x + y) = Ax + Ay = L_A(x) + L_A(y)$
+    - $\forall k \in \mathbb{K}, x \in \mathbb{K}^n \quad L_A(kx) = A(kx) = k(Ax)=kL_A(x)$
 
 ## Oss
 
 - **Hp**
     - $\mathbb{K}$ campo
-    - $m,n \in \mathbb{N} - \{0\}$
+    - $m,n \in \mathbb{N}$
     - $A \in \textrm{Mat}_{m \times n}(\mathbb{K})$
 - **Th**
+    - ⚠️ **da qua**
     - $\ker(L_A) = \textrm{span}(A_1, \ldots, A_m)^\bot$
     - $\textrm{im}(L_A) = \textrm{span}(A^1, \ldots, A^n)$
 - **Dim**
     - $\ker(L_A) = \textrm{span}(A_1, \ldots, A_m)^\bot$
         - $\ker(L_A) := \left\{x \in \mathbb{K}^n \mid L_A(x) = 0_{\mathbb{K}^m} \iff A \cdot x = 0_{\mathbb{K}^m} \iff \left(\begin{array}{c}A_1\cdot x \\ \vdots \\ A_m \cdot x\end{array}\right)= \left(\begin{array}{c} 0 \\ \vdots \\ 0\end{array}\right)\right\} = \textrm{span}(A_1, \ldots, A_m)^\bot$
-
     - $\textrm{im}(L_A) = \textrm{span}(A^1, \ldots, A^n)$
         - $\textrm{im}(L_A) \subset \textrm{span}(A^1, \ldots, A^n)$
             - $\forall A \in \textrm{Mat}_{m \times n}(\mathbb{K}) \quad L_A(x) = A \cdot x$ per definizione di $L_A$
@@ -387,9 +390,10 @@
 - **Rango di una matrice**
 
 > - $\mathbb{K}$ campo
-> - $m,n \in \mathbb{N} - \{0\}$
+> - $m,n \in \mathbb{N}$
 > - $A \in \textrm{Mat}_{m \times n}(\mathbb{K})$
-> - $\textrm{rk}(A):=\textrm{rk}(L_A)$ è il **rango di $A$**
+> - $\textrm{rk}(A):=\textrm{rk}(L_A)$ è detto **rango di $A$**
+>   - in particolare $\textrm{rk}(A) = \textrm{rk}(L_A)=\dim(\textrm{im}(L_A))$
 
 ## Oss
 
