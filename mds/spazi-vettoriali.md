@@ -38,17 +38,6 @@
 
 ## Def
 
-- **Sottospazio vettoriale**
-
-> - $\mathbb{K}$ campo
-> - $V$ spazio vettoriale su $\mathbb{K}$
-> - $W \subseteq V$
-> - $W$ è detto **sottospazio vettoriale di $V$** $\iff$
->   - $(W, +) \leqslant (V, +)$
->   - $\forall w \in W, \lambda \in \mathbb{K} \quad \lambda \cdot w \in W$
-
-## Def
-
 - **Span di vettori**
 
 > - $n \in \mathbb{N}$
@@ -138,16 +127,15 @@
 ## Oss
 
 - **Hp**
-    - $n, k \in \mathbb{N}$
+    - $n, i \in \mathbb{N}$
     - $\mathbb{K}$ campo
     - $V$ spazio vettoriale su $\mathbb{K}$
     - $w_1, \ldots, w_n \in V$
-    - $v_1, \ldots, v_k \in \textrm{span}(w_1, \ldots, w_n) \mid v_1, \ldots, v_k$ linearmente indipendenti
+    - $v_1, \ldots, v_i \in \textrm{span}(w_1, \ldots, w_n) \mid v_1, \ldots, v_i$ linearmente indipendenti
 - **Th**
-    - $k \le n$
+    - $i \le n$
 - **Dim**
-    - ⚠️ **confrontare che sia corretta**
-    - dimostrazione per induzione su $k$
+    - dimostrazione per induzione su $i$
     - _caso base_
         - bisogna dimostrare che per $i = 1$ vettori linearmente indipendenti si ha che $\textrm{span}(v_1, w_2, \ldots, w_n) = \textrm{span}(w_1, \ldots, w_n)$
             - la tesi equivale a dimostrare che $v_1$ e $w_1$ sono intercambiabili nello span
@@ -177,7 +165,7 @@
             - $u \in \textrm{span}(w_1, \ldots, w_n) = \textrm{span}(v_1, \ldots, v_i, w_{i + 1}, \ldots, w_n)$ per ipotesi induttiva $\implies \exists \mu_1, \ldots, \mu_i, \lambda_{i + 1}, \ldots, \lambda_n \in \mathbb{K} \mid u = \mu_1v_1 + \dots + \mu_iv_i+ \lambda_{i + 1}w_{i + 1} + \ldots + \lambda_nw_n = \mu_1 v_1 + \ldots + \mu_i v_i + \lambda_{i + 1}(\eta_1 v_1 + \ldots + \eta_iv_i + \eta_{i + 1} v_{i + 1} + \varepsilon_{i + 2}w_{i + 2} + \ldots +\varepsilon_nw_n) + \lambda_{i + 2}w_{i + 2} + \ldots + \lambda_nw_n =(\mu_1\lambda_{i + 1}\eta_1)v_1 + \ldots + (\mu_i\lambda_{i + 1}\eta_i)v_i + (\lambda_{i + 1}\eta_{i + 1})v_{i + 1} + (\lambda_{i + 2}\lambda_{i+1}\varepsilon_{i + 2})w_{i + 2} + \ldots + (\lambda_n\lambda_{i + 1}\varepsilon_n)w_n \implies u \in \textrm{span}(v_1, \ldots, v_i, v_{i + 1}, w_{i + 2}, \ldots w_n)$
     - allora l'ipotesi induttiva è verificata, e per il caso $i = n$ si ha che $\textrm{span}(v_1, \ldots, v_n) = \textrm{span}(w_1, \ldots, w_n)$
     - per assurdo $\exists v_{n + 1} \in \textrm{span}(w_1, \ldots, w_n) \mid v_{n + 1}$ linearmente indipendente con $v_1, \ldots, v_n$, allora $v_{n + 1} \in \textrm{span}(w_1, \ldots, w_n) = \textrm{span}(v_1, \ldots, v_n) \implies v_{n + 1}$ è combinazione lineare degli altri $\bot$
-    - allora necessariamente $k \le n$
+    - allora necessariamente $i \le n$
  
 ## Cor
 
@@ -194,7 +182,7 @@
     - $v_1, \ldots, v_n$ e $w_1, \ldots, w_m$ basi di $V \implies v_1, \ldots, v_n$ e $w_1, \ldots w_m$ linearmente indipendenti
         - $v_1, \ldots , v_n \in V = \textrm{span}(w_1, \ldots, w_m) \implies n \le m$ per dimostrazione precedente
         - $w_1, \ldots, w_m \in V = \textrm{span}(v_1, \ldots, v_n) \implies m \le n$ per dimostrazione precedente
-    - dunque $n \le m \land m \le n \implies n = m$
+    - dunque necessariamente $n = m$
 
 ## Def
 
@@ -205,6 +193,7 @@
 > - $v_1, \ldots, v_n$ base di $V$
 > - $\dim(V) = n$ è detta **dimensione di $V$**
 >   - in particolare, coincide con la cardinalità delle basi di $V$, che per dimostrazione precedente è unica
+> - $V$ si dice avere **dimensione infinita** $\iff$ non esiste un insieme finito di generatori in $V$
 
 ## Oss
 
@@ -234,10 +223,11 @@
     - $k \in \mathbb{N} \mid k \lt n$
     - $w_1, \ldots, w_k \in W$ linearmente indipendenti
 - **Th**
-    - $\exists w_{k + 1}, \ldots, w_n \in W \mid w_1, \ldots, w_n$ è una base di $W$
+    - $\exists w_{k + 1}, \ldots, w_n \in W \mid w_1, \ldots, w_n$ base di $W$
 - **Dim**
     - $k \lt n \implies \textrm{span}(w_1, \ldots, w_k) \subsetneqq W \implies \exists w_{k + 1} \in W \mid w_{k + 1} \notin \textrm{span}(w_1, \ldots, w_k)$, allora per dimostrazione precedente $w_1, \ldots, w_{k +1}$ sono linearmente indipendenti
     - per ragionamento analogo, è possibile estendere $w_1, \ldots, w_{k + 1}$ fino ad avere $w_1, \ldots, w_n$ vettori linearmente indipendenti
+    - allora $\textrm{span}(w_1, \ldots, w_n) = W \implies w_1, \ldots, w_n$ base di $W$
 
 ## Oss
 
@@ -248,11 +238,12 @@
     - $m \in \mathbb{N} \mid m \ge n$
     - $w_1, \ldots, w_m \in W \mid w_1, \ldots, w_m$ generatori di $W$
 - **Th**
-    - $\exists 1 \le i_1, \ldots, i_n \le m \mid w_{i_1}, \ldots, w_{i_n}$ è una base di $W$
+    - $\exists 1 \le i_1, \ldots, i_n \le m \mid w_{i_1}, \ldots, w_{i_n}$ base di $W$
 - **Dim**
     - è possibile assumere che $w_{i_1}$ non sia nullo, poiché $w_1, \ldots, w_m$ sono sicuramente non tutti nulli in quanto generatori di $W$
-    - $w_{i_1} \neq 0 \implies w_{i_1}$ linearmente indipendente, ma non può costituire un generatore poiché sono meno di $n$ vettori $\implies \textrm{span}(w_{i_1}) \subsetneqq W \implies \exists w_{i_2} \in W \mid w_{i_2} \notin \textrm{span}(w_{i_1})$, allora per dimostrazione precedente $w_{i_1}, w_{i_2}$ sono linearmente indipendenti
-    - è possiible ripetere il ragionamento fino ad ottenere esattamente $n$ vettori, ottenendo $w_{i_1}, \ldots, w_{i_n}$ vettori linearmente indipendenti
+    - $w_{i_1} \neq 0 \implies w_{i_1}$ linearmente indipendente, ma non può costituire un generatore poiché sono meno di $n$ vettori $\implies \textrm{span}(w_{i_1}) \subsetneqq W \implies \exists w_{i_2} \in W \mid w_{i_2} \notin \textrm{span}(w_{i_1})$, allora per dimostrazione precedente $w_{i_1}, w_{i_2}$ linearmente indipendenti
+    - è possible ripetere il ragionamento fino ad ottenere esattamente $n$ vettori, ottenendo $w_{i_1}, \ldots, w_{i_n}$ vettori linearmente indipendenti
+        - si noti che non è possibile ripetere il ragionamento $n + 1$ volte, poiché $w_{i_{n + 1}} \in W = \textrm{span}(w_{i_1}, \ldots, w_{i_n})$, allora non linearmente indipendenti, e dunque non base di $W$
 
 ## Oss
 
@@ -265,14 +256,23 @@
     - $w_1, \ldots, w_n$ linearmente indipendenti $\iff w_1, \ldots, w_n$ generatori di $W$
 - **Dim**
     - _prima implicazione_
-        - per assurdo, siano $w_1, \ldots, w_n$ linearmente indipendenti ma non generatori di $W \implies \textrm{span}(w_1, \ldots, w_n) \subsetneqq W \implies \exists w_{n + 1} \in W \mid w_{n + 1} \notin \textrm{span}(w_1, \ldots, w_n)$, ma per dimostrazione precedente $w_1, \ldots, w_{n + 1}$ linearmente indipendenti $\bot$
+        - per assurdo, siano $w_1, \ldots, w_n$ linearmente indipendenti ma non generatori di $W \implies \textrm{span}(w_1, \ldots, w_n) \subsetneqq W \implies \exists w_{n + 1} \in W \mid w_{n + 1} \notin \textrm{span}(w_1, \ldots, w_n)$, ma allora $w_1, \ldots, w_{n + 1}$ linearmente indipendenti, mentre i vettori linearmente indipendenti possono essere al massimo $n$ $\bot$
     - _seconda implicazione_
-        - per assurdo, siano $w_1, \ldots, w_n$ generatori di $W$ ma non linearmente indipendenti $\implies \exists \lambda_1, \ldots, \lambda_n \mid \lambda_1w_1 + \ldots + \lambda_nw_n = 0_W$ dove $\exists i \in [1, n] \mid \lambda_i \neq 0 \implies w_i = -\lambda_i^{-1} \lambda_1w_1 - \ldots - \lambda_i^{-1} \lambda_nw_n$, dunque $w_i$ è combinazione lineare degli altri vettori, in simboli $w_i \in \textrm{span}(w_1, \ldots, \hat{w_i}, \ldots, w_n) \implies \textrm{span}(w_1, \ldots, w_n) \subseteq \textrm{span}(w_1, \ldots, \hat{w_i}, \ldots, w_n)$
-        - per qualsiasi insieme di vettori minore di $n$ si ha che $\textrm{span}(w_1, \ldots, \hat{w_i}, \ldots, w_n) \subseteq \textrm{span}(w_1, \ldots, w_n)$
+        - per assurdo, siano $w_1, \ldots, w_n$ generatori di $W$ ma non linearmente indipendenti $\implies \exists \lambda_1, \ldots, \lambda_n \in \mathbb{K} \mid \lambda_1w_1 + \ldots + \lambda_nw_n = 0_W$ dove $\exists i \in [1, n] \mid \lambda_i \neq 0 \implies w_i = -\lambda_i^{-1} \lambda_1w_1 - \ldots - \lambda_i^{-1} \lambda_nw_n$, dunque $w_i$ è combinazione lineare degli altri vettori, in simboli $w_i \in \textrm{span}(w_1, \ldots, \hat{w_i}, \ldots, w_n)$
+        - inoltre $w_i \in \textrm{span}(w_1, \ldots, w_n)$, poiché $w_1, \ldots, w_n$ generatori di $W$, allora $\textrm{span}(w_1, \ldots, w_n) \subseteq \textrm{span}(w_1, \ldots, \hat{w_i}, \ldots, w_n)$
+        - in generale, per qualsiasi insieme di vettori minore di $n$ si ha che $\textrm{span}(w_1, \ldots, \hat{w_i}, \ldots, w_n) \subseteq \textrm{span}(w_1, \ldots, w_n)$
         - allora segue che $\textrm{span}(w_1, \ldots, \hat{w_i}, \ldots, w_n) = \textrm{span}(w_1, \ldots, w_n)$, ma questo non è possibile in queanto $w_1, \ldots, \hat{w_i}, \ldots, w_n$ sono $n - 1$ generatori, e i generatori non possono essere meno di $n \ \bot$
 
 ## Def
 
+- **Sottospazio vettoriale**
+
+> - $\mathbb{K}$ campo
+> - $V$ spazio vettoriale su $\mathbb{K}$
+> - $W \subseteq V$
+> - $W \subset V$ è detto **sottospazio vettoriale di $V$** $\iff$
+>   - $(W, +) \leqslant (V, +)$
+>   - $\forall w \in W, \lambda \in \mathbb{K} \quad \lambda \cdot w \in W$
 - **$+$ tra spazi vettoriali**
 
 > - $\mathbb{K}$ campo

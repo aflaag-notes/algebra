@@ -1253,7 +1253,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
     - $\sigma, \sigma^\prime \in \mathcal{S}_n \mid \left \{ \begin{array}{l} \sigma := \gamma_1 \ldots \gamma_k \\ \sigma^\prime := \gamma_1^\prime \ldots \gamma_h^\prime \end{array} \right.$ siano le loro decomposizioni in cicli
     - $\sigma \sim \sigma ^\prime \iff \exists\alpha \in \mathcal{S}_n \mid \sigma^\prime = \alpha \sigma \alpha^{-1}$, che costituisce dunque la relazione di coniugio
 - **Th**
-    - $\sigma \sim \sigma ^\prime \iff$$\left\{\begin{array}{c}k=h \\ d=d_{1}^{\prime} \\ \vdots \\ d_{k}=d_{h}^{\prime}\end{array}\right.$, dove $d_j$ è la lunghezza del ciclo $\gamma_j$ e $d_j^\prime$ è la lunghezza del ciclo $\gamma_j^\prime$
+    - $\sigma \sim \sigma ^\prime \iff$$\left\{\begin{array}{c}k=h \\ d_1=d_{1}^{\prime} \\ \vdots \\ d_{k}=d_{h}^{\prime}\end{array}\right.$, dove $d_j$ è la lunghezza del ciclo $\gamma_j$ e $d_j^\prime$ è la lunghezza del ciclo $\gamma_j^\prime$
 
 ## Definizione 29
 
@@ -1828,20 +1828,6 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 ## Definizione 40
 
 
-- **Sottospazio vettoriale**
-
-> - $\mathbb{K}$ campo
-> - $V$ spazio vettoriale su $\mathbb{K}$
-> - $W \subseteq V$
-> - $W$ è detto **sottospazio vettoriale di $V$** $\iff$
->   - $(W, +) \leqslant (V, +)$
->   - $\forall w \in W, \lambda \in \mathbb{K} \quad \lambda \cdot w \in W$
-
-
-
-## Definizione 41
-
-
 - **Span di vettori**
 
 > - $n \in \mathbb{N}$
@@ -1864,7 +1850,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
     - $\textrm{span}(v_1, \ldots, v_n) \subset V$ sottospazio vettoriale
 
-## Definizione 42
+## Definizione 41
 
 
 - **Generatori di uno spazio vettoriale**
@@ -1923,13 +1909,13 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 - **Hp**
-    - $n, k \in \mathbb{N}$
+    - $n, i \in \mathbb{N}$
     - $\mathbb{K}$ campo
     - $V$ spazio vettoriale su $\mathbb{K}$
     - $w_1, \ldots, w_n \in V$
-    - $v_1, \ldots, v_k \in \textrm{span}(w_1, \ldots, w_n) \mid v_1, \ldots, v_k$ linearmente indipendenti
+    - $v_1, \ldots, v_i \in \textrm{span}(w_1, \ldots, w_n) \mid v_1, \ldots, v_i$ linearmente indipendenti
 - **Th**
-    - $k \le n$
+    - $i \le n$
 
 ## Teorema 121
 
@@ -1943,7 +1929,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
     - $n = m$, il che implica che la cardinalità delle basi di uno spazio vettoriale è unica
 
-## Definizione 43
+## Definizione 42
 
 
 - **Dimensione di uno spazio vettoriale**
@@ -1953,6 +1939,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 > - $v_1, \ldots, v_n$ base di $V$
 > - $\dim(V) = n$ è detta **dimensione di $V$**
 >   - in particolare, coincide con la cardinalità delle basi di $V$, che per dimostrazione precedente è unica
+> - $V$ si dice avere **dimensione infinita** $\iff$ non esiste un insieme finito di generatori in $V$
 
 
 
@@ -1977,7 +1964,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
     - $k \in \mathbb{N} \mid k \lt n$
     - $w_1, \ldots, w_k \in W$ linearmente indipendenti
 - **Th**
-    - $\exists w_{k + 1}, \ldots, w_n \in W \mid w_1, \ldots, w_n$ è una base di $W$
+    - $\exists w_{k + 1}, \ldots, w_n \in W \mid w_1, \ldots, w_n$ base di $W$
 
 ## Teorema 124
 
@@ -1989,7 +1976,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
     - $m \in \mathbb{N} \mid m \ge n$
     - $w_1, \ldots, w_m \in W \mid w_1, \ldots, w_m$ generatori di $W$
 - **Th**
-    - $\exists 1 \le i_1, \ldots, i_n \le m \mid w_{i_1}, \ldots, w_{i_n}$ è una base di $W$
+    - $\exists 1 \le i_1, \ldots, i_n \le m \mid w_{i_1}, \ldots, w_{i_n}$ base di $W$
 
 ## Teorema 125
 
@@ -2002,9 +1989,17 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
     - $w_1, \ldots, w_n$ linearmente indipendenti $\iff w_1, \ldots, w_n$ generatori di $W$
 
-## Definizione 44
+## Definizione 43
 
 
+- **Sottospazio vettoriale**
+
+> - $\mathbb{K}$ campo
+> - $V$ spazio vettoriale su $\mathbb{K}$
+> - $W \subseteq V$
+> - $W \subset V$ è detto **sottospazio vettoriale di $V$** $\iff$
+>   - $(W, +) \leqslant (V, +)$
+>   - $\forall w \in W, \lambda \in \mathbb{K} \quad \lambda \cdot w \in W$
 - **$+$ tra spazi vettoriali**
 
 > - $\mathbb{K}$ campo
@@ -2065,7 +2060,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Definizione 45
+## Definizione 44
 
 
 - **Applicazioni lineari**
@@ -2103,7 +2098,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
     - $V \cong W \iff \dim(V) = \dim(W)$
 
-## Definizione 46
+## Definizione 45
 
 
 - **Kernel e immagine**
@@ -2140,7 +2135,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Definizione 47
+## Definizione 46
 
 
 - **Rango di un'applicazione lineare**
@@ -2184,7 +2179,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Definizione 48
+## Definizione 47
 
 
 - **Matrici**
@@ -2203,7 +2198,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Definizione 49
+## Definizione 48
 
 
 - **Somma tra matrici**
@@ -2227,7 +2222,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Definizione 50
+## Definizione 49
 
 
 - **Prodotto tra matrici**
@@ -2273,7 +2268,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 # Matrici particolari
 
 
-## Definizione 51
+## Definizione 50
 
 
 - **Vettore trasposto**
@@ -2314,7 +2309,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Definizione 52
+## Definizione 51
 
 
 - **Matrice identità**
@@ -2361,7 +2356,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Definizione 53
+## Definizione 52
 
 
 - **Matrice ortogonale**
@@ -2381,7 +2376,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Definizione 54
+## Definizione 53
 
 
 - **Gruppo Speciale Lineare**
@@ -2392,7 +2387,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Definizione 55
+## Definizione 54
 
 
 - **Matrici simili**
@@ -2404,7 +2399,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Definizione 56
+## Definizione 55
 
 
 - **Traccia**
@@ -2428,7 +2423,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Definizione 57
+## Definizione 56
  
 
 - **Matrice triangolare superiore**
@@ -2488,7 +2483,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Definizione 58
+## Definizione 57
 
 
 - **Sottomatrice di una matrice**
@@ -2528,7 +2523,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
     
 
 
-## Definizione 59
+## Definizione 58
 
 
 - **Matrice completa**
@@ -2541,7 +2536,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Definizione 60
+## Definizione 59
 
 
 - **Matrice di un'applicazione lineare**
@@ -2563,7 +2558,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Definizione 61
+## Definizione 60
 
 
 - **Sottospazio ortogonale**
@@ -2600,7 +2595,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Definizione 62
+## Definizione 61
 
 
 - **Moltiplicazione sinistra**
@@ -2635,7 +2630,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
     - $\ker(L_A) = \textrm{span}(A_1, \ldots, A_m)^\bot$
     - $\textrm{im}(L_A) = \textrm{span}(A^1, \ldots, A^n)$
 
-## Definizione 63
+## Definizione 62
 
 
 - **Rango di una matrice**
@@ -2662,7 +2657,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 # Operazioni su righe e colonne
 
 
-## Definizione 64
+## Definizione 63
 
 
 - **Scambio di righe di una matrice**
@@ -2769,7 +2764,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Definizione 65
+## Definizione 64
 
 
 - **Prodotto scalare**
@@ -2818,7 +2813,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Definizione 66
+## Definizione 65
 
 
 - **Norma di un vettore**
@@ -2874,7 +2869,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Definizione 67
+## Definizione 66
 
 
 - **Applicazione multilineare**
@@ -2912,7 +2907,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Definizione 68
+## Definizione 67
 
 
 - **Matrice singolare**
@@ -3049,7 +3044,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Definizione 69
+## Definizione 68
 
 
 - **Aggiunta di una matrice**
@@ -3089,7 +3084,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Definizione 70
+## Definizione 69
 
 
 > - $\mathbb{K}$ campo
@@ -3123,7 +3118,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Definizione 71
+## Definizione 70
 
 
 - **Autovalore**
@@ -3165,7 +3160,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
     - $\lambda$ autovalore $\iff \exists v \in \mathbb{K}^n - \{0\} \mid A \cdot v = \lambda \cdot v$
 
-## Definizione 72
+## Definizione 71
 
 
 - **Autovettore relativo ad un autovalore**
@@ -3192,7 +3187,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Definizione 73
+## Definizione 72
 
 
 - **Autospazio relativo ad un autovalore**
@@ -3219,7 +3214,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Definizione 74
+## Definizione 73
 
 
 - **Molteplicità algebrica di un autovalore**
@@ -3245,7 +3240,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Definizione 75
+## Definizione 74
 
 
 - **Molteplicità geometrica di un autovalore**
@@ -3363,7 +3358,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Definizione 76
+## Definizione 75
 
 
 - **Insieme dei complessi**
@@ -3386,7 +3381,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Definizione 77
+## Definizione 76
 
 
 - **Coniugato**
@@ -3420,7 +3415,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Definizione 78
+## Definizione 77
 
 
 - **Raggio**
@@ -3432,7 +3427,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Definizione 79
+## Definizione 78
 
 
 - **Forma polare**
@@ -3443,7 +3438,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Definizione 80
+## Definizione 79
 
 
 - **Soluzione principale**
@@ -3491,7 +3486,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Definizione 81
+## Definizione 80
 
 
 - **Coefficiente binomiale**
@@ -3562,7 +3557,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Definizione 82
+## Definizione 81
 
 
 - **Induzione**
