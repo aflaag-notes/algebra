@@ -1828,6 +1828,20 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 ## Definizione 40
 
 
+- **Sottospazio vettoriale**
+
+> - $\mathbb{K}$ campo
+> - $V$ spazio vettoriale su $\mathbb{K}$
+> - $W \subseteq V$
+> - $W \subset V$ è detto **sottospazio vettoriale di $V$** $\iff$
+>   - $(W, +) \leqslant (V, +)$
+>   - $\forall w \in W, \lambda \in \mathbb{K} \quad \lambda \cdot w \in W$
+
+
+
+## Definizione 41
+
+
 - **Span di vettori**
 
 > - $n \in \mathbb{N}$
@@ -1850,7 +1864,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
     - $\textrm{span}(v_1, \ldots, v_n) \subset V$ sottospazio vettoriale
 
-## Definizione 41
+## Definizione 42
 
 
 - **Generatori di uno spazio vettoriale**
@@ -1929,7 +1943,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
     - $n = m$, il che implica che la cardinalità delle basi di uno spazio vettoriale è unica
 
-## Definizione 42
+## Definizione 43
 
 
 - **Dimensione di uno spazio vettoriale**
@@ -1989,31 +2003,6 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
     - $w_1, \ldots, w_n$ linearmente indipendenti $\iff w_1, \ldots, w_n$ generatori di $W$
 
-## Definizione 43
-
-
-- **Sottospazio vettoriale**
-
-> - $\mathbb{K}$ campo
-> - $V$ spazio vettoriale su $\mathbb{K}$
-> - $W \subseteq V$
-> - $W \subset V$ è detto **sottospazio vettoriale di $V$** $\iff$
->   - $(W, +) \leqslant (V, +)$
->   - $\forall w \in W, \lambda \in \mathbb{K} \quad \lambda \cdot w \in W$
-- **$+$ tra spazi vettoriali**
-
-> - $\mathbb{K}$ campo
-> - $U, V$ spazi vettoriali su $\mathbb{K}$
-> - $U + V := \{u + v \mid u \in U, v \in V\}$ è detta **somma tra $U$ e $V$**
-
-- **$\cap$ tra spazi vettoriali**
-
-> - $\mathbb{K}$ campo
-> - $U, V$ spazi vettoriali su $\mathbb{K}$
-> - $U \cap V := \{w \mid w \in U \land w \in V\}$ è detta **intersezione tra $U$ e $V$**
-
-
-
 ## Teorema 126
 
 
@@ -2066,9 +2055,11 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Applicazioni lineari**
 
 > - $\mathbb{K}$ campo
-> - $V$ e $W$ spazi vettoriali su $\mathbb{K}$
-> - $f: V \rightarrow W$ **morfismo di spazi vettoriali** $\iff \forall x, y \in V \quad f(x + y) = f(x) + f(y)$ e $\forall v \in V, \lambda \in \mathbb{K} \quad f(\lambda v) = \lambda f(v)$
->     - un morfismo su spazi vettoriali è detto anche **applicazione lineare** o **trasformazione lineare**
+> - $V, W$ spazi vettoriali su $\mathbb{K}$
+> - $f: V \rightarrow W$ è detta **applicazione lineare** $\iff$
+>   - $\forall v, w \in V \quad f(v + w) = f(v) + f(w)$
+>      - in particolare, deve essere _morfismo rispetto a $+$_
+>   - $\forall v \in V, \lambda \in \mathbb{K} \quad f(\lambda v) = \lambda f(v)$
 
 
 
@@ -2085,13 +2076,6 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 ## Teorema 131
 
 
-- ⚠️ **QUI C'È UN BUCO DI COSE CHE NON HO CAPITO**
-
-
-
-## Teorema 132
-
-
 - **Hp**
     - $\mathbb{K}$ campo
     - $V, W$ spazi vettoriali su $\mathbb{K}$
@@ -2101,17 +2085,17 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 ## Definizione 45
 
 
-- **Kernel e immagine**
+- **Kernel e immagine di spazi vettoriali**
 
 > - $\mathbb{K}$ campo
 > - $V, W$ spazi vettoriali su $\mathbb{K}$
 > - $f : V \rightarrow W$ trasformazione lineare
-> - $\ker(f) = \{v \in V \mid f(v) = 0_W\}$
-> - $\textrm{im}(f) = \{w \in W \mid \exists v \in V : w = f(v)\}$
+> - $\ker(f) = \{v \in V \mid f(v) = 0_W\}$ è detto **kernel/nucleo di $f$**
+> - $\textrm{im}(f) = \{w \in W \mid \exists v \in V : w = f(v)\}$ è detto **immagine di $f$**
 
 
 
-## Teorema 133
+## Teorema 132
 
 
 - **Hp**
@@ -2121,9 +2105,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
     - $\ker(f) \subset V$ sottospazio
 
-
-
-## Teorema 134
+## Teorema 133
 
 
 - **Hp**
@@ -2133,15 +2115,13 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
     - $\textrm{im}(f) \subset W$ sottospazio
 
-
-
 ## Definizione 46
 
 
 - **Rango di un'applicazione lineare**
 
 > - $\mathbb{K}$ campo
-> - $V$ e $W$ spazi vettoriali su $\mathbb{K}$
+> - $V, W$ spazi vettoriali su $\mathbb{K}$
 > - $f: V \rightarrow W$ applicazione lineare
 > - $\textrm{rk}(f) := \dim(\textrm{im}(f))$ è detto **rango di $f$**
 
@@ -2151,7 +2131,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 135
+## Teorema 134
 
 
 - ⚠️ **TODO**
@@ -2160,7 +2140,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 136
+## Teorema 135
 
 
 - **Hp**
@@ -2211,7 +2191,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 137
+## Teorema 136
 
 
 - **Hp**
@@ -2235,7 +2215,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 138
+## Teorema 137
 
 
 - **Hp**
@@ -2253,7 +2233,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 139
+## Teorema 138
 
 
 - **Hp**
@@ -2296,7 +2276,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 140
+## Teorema 139
 
 
 - **Hp**
@@ -2333,7 +2313,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 141
+## Teorema 140
 
 
 - **Hp**
@@ -2344,7 +2324,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 142
+## Teorema 141
 
 
 - **Hp**
@@ -2411,7 +2391,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 143
+## Teorema 142
 
 
 - **Hp**
@@ -2471,7 +2451,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 144
+## Teorema 143
 
 
 - **Hp**
@@ -2510,7 +2490,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 145
+## Teorema 144
 
 
 - **Hp**
@@ -2571,7 +2551,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 146
+## Teorema 145
 
 
 - **Hp**
@@ -2583,7 +2563,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 147
+## Teorema 146
 
 
 - **Hp**
@@ -2607,7 +2587,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 148
+## Teorema 147
 
 
 - **Hp**
@@ -2619,7 +2599,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 149
+## Teorema 148
 
 
 - **Hp**
@@ -2642,7 +2622,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 150
+## Teorema 149
 
 
 - **Hp**
@@ -2708,7 +2688,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 151
+## Teorema 150
 
 
 - **Hp**
@@ -2721,7 +2701,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 152
+## Teorema 151
 
 
 - **Hp**
@@ -2734,7 +2714,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 153
+## Teorema 152
 
 
 - **Hp**
@@ -2747,7 +2727,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 154
+## Teorema 153
 
 
 - **Hp**
@@ -2800,7 +2780,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 155
+## Teorema 154
 
 
 - **Hp**
@@ -2826,7 +2806,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 156
+## Teorema 155
 
 
 - **Hp**
@@ -2838,7 +2818,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 157
+## Teorema 156
 
 
 - **Hp**
@@ -2851,7 +2831,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 158
+## Teorema 157
 
 
 - **Hp**
@@ -2894,7 +2874,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 159
+## Teorema 158
 
 
 - **Hp**
@@ -2919,7 +2899,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 160
+## Teorema 159
 
 
 - **Hp**
@@ -2936,7 +2916,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
     - le proposizioni sono equivalenti
 
-## Teorema 161
+## Teorema 160
 
 
 - **Hp**
@@ -2948,7 +2928,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 162
+## Teorema 161
 
 
 - **Hp**
@@ -2960,7 +2940,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 163
+## Teorema 162
 
 
 - **Hp**
@@ -2970,7 +2950,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
     - $\det(A) = \det(B)$
 
-## Teorema 164
+## Teorema 163
 
 
 - **Hp**
@@ -2982,7 +2962,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 165
+## Teorema 164
 
 
 - **Hp**
@@ -2994,7 +2974,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 166
+## Teorema 165
 
 
 - **Hp**
@@ -3006,7 +2986,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 167
+## Teorema 166
 
 
 - **Hp**
@@ -3018,7 +2998,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 168
+## Teorema 167
 
 
 - **Hp**
@@ -3032,7 +3012,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 169
+## Teorema 168
 
 
 - **Hp**
@@ -3056,7 +3036,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 170
+## Teorema 169
 
 
 - **Hp**
@@ -3068,7 +3048,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 171
+## Teorema 170
 
 
 - **Hp**
@@ -3094,7 +3074,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 172
+## Teorema 171
 
 
 - **Hp**
@@ -3106,7 +3086,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 173
+## Teorema 172
 
 
 - **Hp**
@@ -3137,7 +3117,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 174
+## Teorema 173
 
 
 - **Hp**
@@ -3149,7 +3129,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 175
+## Teorema 174
 
 
 - **Hp**
@@ -3173,7 +3153,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 176
+## Teorema 175
 
 
 - **Hp**
@@ -3201,7 +3181,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 177
+## Teorema 176
 
 
 - **Hp**
@@ -3227,7 +3207,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 178
+## Teorema 177
 
 
 - **Hp**
@@ -3253,7 +3233,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 179
+## Teorema 178
 
 
 - **Hp**
@@ -3266,7 +3246,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 180
+## Teorema 179
 
 
 - **Hp**
@@ -3277,7 +3257,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
     - $\nu(\lambda) = n - \textrm{rk}(A - \lambda \cdot I_n)$
 
-## Teorema 181
+## Teorema 180
 
 
 - **Hp**
@@ -3290,7 +3270,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 182
+## Teorema 181
 
 
 - **Hp**
@@ -3305,7 +3285,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 183
+## Teorema 182
 
 
 - **Hp**
@@ -3314,7 +3294,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
     - $A$ è triangolarizzabile
 
-## Teorema 184
+## Teorema 183
 
 
 - **Hp**
@@ -3325,7 +3305,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 185
+## Teorema 184
 
 
 - **Hp**
@@ -3340,7 +3320,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 186
+## Teorema 185
 
 
 - **Hp**
@@ -3368,7 +3348,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 187
+## Teorema 186
 
 
 - **Hp**
@@ -3392,7 +3372,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 188
+## Teorema 187
 
 
 - **Hp**
@@ -3405,7 +3385,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 189
+## Teorema 188
 
 
 - **Hp**
@@ -3450,7 +3430,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 190
+## Teorema 189
 
 
 - **Hp**
@@ -3458,7 +3438,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
   - $(\mathbb{C}, +, \cdot )$ è un campo
 
-## Teorema 191
+## Teorema 190
 
 
 - **Hp**
@@ -3471,7 +3451,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 192
+## Teorema 191
 
 
 - **Hp**
@@ -3497,7 +3477,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 193
+## Teorema 192
 
 
 - **Hp**
@@ -3505,7 +3485,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
   - $\displaystyle \binom{n}{k} = \binom{n}{n-k}$
 
-## Teorema 194
+## Teorema 193
 
 
 - **Hp**
@@ -3513,7 +3493,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
   - $\displaystyle \binom{n}{k + 1} = \binom{n - 1}{k + 1} \binom{n - 1}{ k}$
 
-## Teorema 195
+## Teorema 194
 
 
 - **Hp**
@@ -3522,7 +3502,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
   - $p \ \bigg\vert \displaystyle \binom{p}{k}$
 
-## Teorema 196
+## Teorema 195
 
 
 - **Hp**
@@ -3533,7 +3513,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
   - $\displaystyle \binom{p}{k} \cdot [a] = [0]$ in $\mathbb{Z}_p$
 
-## Teorema 197
+## Teorema 196
 
 
 - **Hp**
@@ -3542,7 +3522,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
   - $([a]+[b])^{p}=[a]^{p}+[b]^{p}$ in $\mathbb{Z}_p$
 
-## Teorema 198
+## Teorema 197
 
 
 - **Hp**
@@ -3568,7 +3548,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 199
+## Teorema 198
 
 
 - **Hp**
@@ -3584,14 +3564,14 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 200
+## Teorema 199
 
 
 - ⚠️ **algoritmo di euclide todo**
 
 
 
-## Teorema 201
+## Teorema 200
 
 
 - ⚠️ **regola di ruffini**
@@ -3599,7 +3579,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 ****
-# Teorema fondamentale dell'algebra$
+# Teorema fondamentale dell'algebra
 
 - **Hp**
   - $\mathbb{K}$ campo
@@ -3620,7 +3600,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
     - $\exists !  \ q, r \in \mathbb{Z} \mid m=n q+r \quad 0 \leq r<n$
 
-## Teorema 202
+## Teorema 201
 
 
 - **Hp**
@@ -3656,7 +3636,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 # Teorema cinese dei resti
 
 
-## Teorema 203
+## Teorema 202
 
 
 - **Hp**
@@ -3665,7 +3645,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
   - $m = a_1 \cdot \ldots \cdot a_n$
 
-## Teorema 204
+## Teorema 203
 
 
 - **Hp**
@@ -3676,7 +3656,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
   - $\exists \phi \mid \phi: \mathbb{Z}_m \rightarrow \mathbb{Z}_{a_1} \times \ldots \times \mathbb{Z}_{a_n}: x \ (\bmod \ m) \rightarrow (x \ (\bmod \ a_1), \ldots, x \ (\bmod \ a_n))$
   - $\phi$ è una funzione ben definita, ed è iniettiva
 
-## Teorema 205
+## Teorema 204
 
 
 - **Hp**
@@ -3687,7 +3667,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
   - $\exists ! x \ (\bmod \ m) \mid$ $\left\{\begin{array}{c}x \equiv b_{1}\ \left(\bmod  \ a_{1}\right) \\ \vdots \\ x \equiv b_{n}\ \left(\bmod  \ a_{n}\right)\end{array}\right.$
 
-## Teorema 206
+## Teorema 205
 
 
 - **Hp**
@@ -3724,7 +3704,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
   - $a^{p} \equiv a \ (\bmod \ p)$
 
-## Teorema 207
+## Teorema 206
 
 
 - **Hp**
@@ -3733,7 +3713,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
   - $[a]^{-1}=\left[a\right]^{p-2}$
 
-## Teorema 208
+## Teorema 207
 
 
 - **Hp**
@@ -3762,7 +3742,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
     - $A / \textrm{ker}(f) \cong \textrm{im}(f)$, ovvero $\exists \varphi \mid \varphi : A / \textrm{ker}(f) \rightarrow \textrm{im}(f): [a] \rightarrow f(a)$ isomorfismo di anelli
 
-## Teorema 209
+## Teorema 208
 
 
 - **Hp**
@@ -3772,7 +3752,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
   - $G / \textrm{ker}(f) \cong \textrm{im}(f)$, o alternativamente $\exists \varphi \mid \varphi : G / \textrm{ker}(f) \rightarrow \textrm{im}(f): [g] \rightarrow f(g)$ isomorfismo di gruppi
 
 
-## Teorema 210
+## Teorema 209
 
 
 - **Hp**
@@ -3810,7 +3790,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
     - $||v - u||^2 = ||u||^2 + ||v||^2 - 2\cos(\theta) \cdot||u||\cdot ||v||$
 
 
-## Teorema 211
+## Teorema 210
 
 
 - **Hp**
@@ -3827,10 +3807,10 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 - **Hp**
     - $\mathbb{K}$ campo
-    - $V, W$ spazi vettoriali su $\mathbb{K}$
+    - $V$ spazi vettoriali su $\mathbb{K}$
     - $f:V \rightarrow W$ trasformazione lineare
 - **Th**
-    - $\textrm{rk}(f) = \dim(V) - \dim(\ker(f))$
+    - $\dim(\textrm{im}(f)) + \dim(\ker(f)) = \dim(V)$
 
 ****
 
@@ -3888,7 +3868,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
     - $\det(A \cdot B) = \det(A) \cdot \det(B)$
 
 
-## Teorema 212
+## Teorema 211
 
 
 - **Hp**

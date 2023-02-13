@@ -38,6 +38,17 @@
 
 ## Def
 
+- **Sottospazio vettoriale**
+
+> - $\mathbb{K}$ campo
+> - $V$ spazio vettoriale su $\mathbb{K}$
+> - $W \subseteq V$
+> - $W \subset V$ è detto **sottospazio vettoriale di $V$** $\iff$
+>   - $(W, +) \leqslant (V, +)$
+>   - $\forall w \in W, \lambda \in \mathbb{K} \quad \lambda \cdot w \in W$
+
+## Def
+
 - **Span di vettori**
 
 > - $n \in \mathbb{N}$
@@ -263,16 +274,6 @@
         - in generale, per qualsiasi insieme di vettori minore di $n$ si ha che $\textrm{span}(w_1, \ldots, \hat{w_i}, \ldots, w_n) \subseteq \textrm{span}(w_1, \ldots, w_n)$
         - allora segue che $\textrm{span}(w_1, \ldots, \hat{w_i}, \ldots, w_n) = \textrm{span}(w_1, \ldots, w_n)$, ma questo non è possibile in queanto $w_1, \ldots, \hat{w_i}, \ldots, w_n$ sono $n - 1$ generatori, e i generatori non possono essere meno di $n \ \bot$
 
-## Def
-
-- **Sottospazio vettoriale**
-
-> - $\mathbb{K}$ campo
-> - $V$ spazio vettoriale su $\mathbb{K}$
-> - $W \subseteq V$
-> - $W \subset V$ è detto **sottospazio vettoriale di $V$** $\iff$
->   - $(W, +) \leqslant (V, +)$
->   - $\forall w \in W, \lambda \in \mathbb{K} \quad \lambda \cdot w \in W$
 - **$+$ tra spazi vettoriali**
 
 > - $\mathbb{K}$ campo
@@ -326,7 +327,8 @@
 - **Th**
     - $V/W$ sottospazio vettoriale
 - **Dim**
-    - ⚠️ **TODO**
+    - $+$ è ben definito per dimostrazione analoga a dimostrazioe precedente
+    - è necessario dimostrare che $\cdot: \mathbb{K} \times V/W \rightarrow V/W$ è ben definito, allora $\forall [v], [w] \quad [v] = [w] \iff w - v \in W \implies \forall k \in \mathbb{K} \quad k(w - v) = kw - kv \in W \iff [kw] = [kv]$
 
 ## Oss
 
@@ -340,19 +342,14 @@
     - $n := \dim(V)$
     - $k := \dim(W)$
     - sia $w_1, \ldots, w_k$ base di $W$
-    - $\dim(V) \gt k$
-        - per dimostrazione precedente $w_1, \ldots, w_k$ non è base di $V$, e in particolare non generano $V \implies \textrm{span}(w_1, \ldots, w_k) \subsetneqq V \implies \exists v_{k + 1} \in V \mid v_{k + 1} \notin \textrm{span}(w_1, \ldots, w_k)$
-        - per dimostrazione precedente $w_1, \ldots w_k$ linearmente indipendenti e $v_{k + 1} \notin \textrm{span}(w_1, \ldots, w_k) \implies w_1, \ldots, w_k, v_{k + 1}$ linearmente indipendenti
-    - $\dim(V) \gt k + 1$
-        - per ragionamento analogo si otterrà che $w_1, \ldots, w_k, v_{k +1}, v_{k +2}$ linearmente indipendenti
+    - ipotizzando $n \gt k$, allora per dimostrazione precedente $w_1, \ldots, w_k$ non è base di $V$, e in particolare non generano $V \implies \textrm{span}(w_1, \ldots, w_k) \subsetneqq V \implies \exists v_{k + 1} \in V \mid v_{k + 1} \notin \textrm{span}(w_1, \ldots, w_k)$, allora per dimostrazione precedente $w_1, \ldots w_k$ linearmente indipendenti $\land v_{k + 1} \notin \textrm{span}(w_1, \ldots, w_k) \implies w_1, \ldots, w_k, v_{k + 1}$ linearmente indipendenti
+    - per ragionamento analogo, avendo $n \gt k + 1$ si otterrà che $\exists v_{k + 2} \in V - \textrm{span}(w_1, \ldots, w_k, v_{k + 1}) \mid w_1, \ldots, w_k, v_{k +1}, v_{k +2}$ linearmente indipendenti
     - dunque, è possibile estendere la base di $W$ scelta, fino ad ottenere una base di $V$ della forma $w_1, \ldots, w_k, v_{k +1}, \ldots, v_n$, dove i vettori aggiunti sono proprio $n - k$, che per definizione equivale a $\dim(V) - \dim(W)$
-    - $\forall v \in \textrm{span}(w_1, \ldots, w_k, v_{k +1}, \ldots, v_n) \quad \exists \lambda_1, \ldots, \lambda_n \mid v = \lambda_1 w_1 + \ldots + \lambda_k w_k + \lambda_{k + 1} v_{k +1} + \ldots + \lambda_nv_{n} \implies [v] = \lambda_1 [w_1] + \ldots + \lambda_n[w_k] + \lambda_{k +1} [v_{k +1 }] + \lambda_n[v_n]$ in $V / W$
-    - per dimostrazione precedente $W = [0_V] \in V/W \implies [v] = \lambda_{k +1}[v_{k +1}] + \ldots + \lambda_n[v_n] \implies [v_{k +1}], \ldots, [v_n]$ generatori di $V/W$
-    - $[v_{k +1}], \ldots, [v_n]$ generatori di $V/W \implies \forall [v] \in V/W \quad \exists \lambda_{k +1}, \ldots, \lambda_n \mid [v] = \lambda_{k +1} [v_1] + \ldots + \lambda_n[v_n]$, allora in particolare $\exists \lambda_{k +1}, \ldots, \lambda_n \mid [0_V] = \lambda_{k +1}[v_{k+ 1}] + \ldots+ \lambda_n[v_n] = [\lambda_{k +1} v_{k+1} + \ldots + \lambda_nv_n]$
-    - per osservazione precedente $W = [0_V] \in V/W, e in particolare $[0_V] \subseteq W \implies \forall v \in [0_V] \quad v \in W$, allora si ha che $[0_V] = [\lambda_{k +1} v_{k+1} + \ldots + \lambda_nv_n] \implies \lambda_{k +1}v_{k +1} + \ldots + \lambda_nv_n \in W$
-    - $u:=\lambda_{k +1}v_{k +1} +\ldots + \lambda_nv_n \in W$
-    - $u \in W \implies \exists \lambda_1, \ldots, \lambda_k \mid u = \lambda_1 w_1 + \ldots + \lambda_k w_k \implies \lambda_1w_1+ \ldots + \lambda_kw_k = \lambda_{k +1} v_{k +1} + \ldots + \lambda_nv_n \iff \lambda_1w_1+ \ldots + \lambda_kw_k - \lambda_{k +1} v_{k +1} - \ldots - \lambda_nv_n = 0_V$
-    - per osservazione precedente $w_1, \ldots, w_k, v_{k +1}, \ldots v_k$ è una base di $V$, allora $\lambda_1= \ldots= \lambda_k= -\lambda_{k +1}= \ldots= -\lambda_{n} = 0_V$, e in particolare $-\lambda{k+1} = \ldots = -\lambda_n = 0_V \implies v_{k +1}, \ldots, v_n$ sono linearmente indipendenti, e dunque $[v_{k +1}], \ldots, [v_n] linearmente indipendenti$
+    - $\forall v \in \textrm{span}(w_1, \ldots, w_k, v_{k +1}, \ldots, v_n) \quad \exists \lambda_1, \ldots, \lambda_n \in \mathbb{K} \mid v = \lambda_1 w_1 + \ldots + \lambda_k w_k + \lambda_{k + 1} v_{k +1} + \ldots + \lambda_nv_{n} \implies [v] = \lambda_1 [w_1] + \ldots + \lambda_n[w_k] + \lambda_{k +1} [v_{k +1 }] + \lambda_n[v_n]$ in $V / W$
+    - per dimostrazione precedente $W = [0_V] \in V/W \implies [w_1] = \ldots = [w_k] = 0_V \implies [v] = \lambda_{k +1}[v_{k +1}] + \ldots + \lambda_n[v_n] \implies [v_{k +1}], \ldots, [v_n]$ generatori di $V/W$
+    - $[v_{k +1}], \ldots, [v_n]$ generatori di $V/W$, in particolare implica che $\exists \lambda_{k +1}, \ldots, \lambda_n \in \mathbb{K} \mid W = [0_V] = \lambda_{k +1}[v_{k+ 1}] + \ldots+ \lambda_n[v_n] = [\lambda_{k +1} v_{k+1} + \ldots + \lambda_nv_n]$, e in particolare $u:=\lambda_{k + 1}v_{k + 1} + \ldots + \lambda_nv_n \in W$
+    - $u \in W \implies \exists \lambda_1, \ldots, \lambda_k \in \mathbb{K} \mid u = \lambda_1 w_1 + \ldots + \lambda_k w_k \implies \lambda_1w_1+ \ldots + \lambda_kw_k = \lambda_{k +1} v_{k +1} + \ldots + \lambda_nv_n \iff \lambda_1w_1+ \ldots + \lambda_kw_k - \lambda_{k +1} v_{k +1} - \ldots - \lambda_nv_n = 0_V$
+    - per osservazione precedente $w_1, \ldots, w_k, v_{k +1}, \ldots v_k$ è una base di $V$, allora $\lambda_1= \ldots= \lambda_k= -\lambda_{k +1}= \ldots= -\lambda_{n} = 0_V$, e in particolare $-\lambda_{k+1} = \ldots = -\lambda_n = 0_V \implies v_{k +1}, \ldots, v_n$ linearmente indipendenti, e dunque $[v_{k +1}], \ldots, [v_n]$ linearmente indipendenti
     - allora $[v_{k +1}], \ldots, [v_n]$ sono una base di $V/W$ di cardinalità $n - k$, il che dimostra che $\dim(V/W) = \dim(V)-\dim(W)$
 
 ## Oss
@@ -373,9 +370,11 @@
 - **Applicazioni lineari**
 
 > - $\mathbb{K}$ campo
-> - $V$ e $W$ spazi vettoriali su $\mathbb{K}$
-> - $f: V \rightarrow W$ **morfismo di spazi vettoriali** $\iff \forall x, y \in V \quad f(x + y) = f(x) + f(y)$ e $\forall v \in V, \lambda \in \mathbb{K} \quad f(\lambda v) = \lambda f(v)$
->     - un morfismo su spazi vettoriali è detto anche **applicazione lineare** o **trasformazione lineare**
+> - $V, W$ spazi vettoriali su $\mathbb{K}$
+> - $f: V \rightarrow W$ è detta **applicazione lineare** $\iff$
+>   - $\forall v, w \in V \quad f(v + w) = f(v) + f(w)$
+>      - in particolare, deve essere _morfismo rispetto a $+$_
+>   - $\forall v \in V, \lambda \in \mathbb{K} \quad f(\lambda v) = \lambda f(v)$
 
 ## Oss
 
@@ -386,16 +385,16 @@
 - **Th**
     - $V \cong \mathbb{K}^n$
 - **Dim**
-    - sia $v_1, \ldots, v_n \in V$ una base di $V$
-    - per dimostrare la tesi è necessario dimostrare che $f: \mathbb{K}^n \rightarrow V: (t_1, \ldots, t_n) \rightarrow t_1v_1 + \ldots + t_nv_n$ è un isomorfismo
-    - $f$ morfismo
-        - $\forall \lambda \in\mathbb{K}, x, y \in \mathbb{K}^n \mid x = (x_1, \ldots, x_n) \land y=(y_1, \ldots, y_n)$ si ha che $f(x + y) = (x_1 + y_1)v_1 + \ldots + (x_n + y_n) v_n = (x_1v_1+ \ldots + x_nv_n) + (y_1v_1 + \ldots + y_nv_n) = f(x) + f(y)$, dunque è verificata la prima condizione, e inoltre $f(\lambda x) = \lambda x_1v_1 + \ldots + \lambda x_n v_n = \lambda(x_1v_1 + \ldots + x_n v_n) = \lambda f(x)$, dunque è verificata anche la seconda
+    - sia $v_1, \ldots, v_n \in V$ base di $V$
+    - $V \cong \mathbb{K}^n \iff \exists f \mid f$ isomorfismo di spazi vettoriali
+    - sia $f: \mathbb{K}^n \rightarrow V: (t_1, \ldots, t_n) \rightarrow t_1v_1 + \ldots + t_nv_n$
     - $f$ biiettiva
-        - ⚠️ **TODO**
-
-## Oss
-
-- ⚠️ **QUI C'È UN BUCO DI COSE CHE NON HO CAPITO**
+        - $v_1, \ldots, v_n$ basi di $V$, in particolare linearmente indipendenti $\implies f$ iniettiva
+        - $v_1, \ldots, v_n$ basi di $V$, in particolare generatori di $V \implies f$ suriettiva
+        - allora $f$ biiettiva
+    - $f$ morfismo
+        - $x, y \in \mathbb{K}^n \mid \left \{ \begin{array}{l} x = (x_1, \ldots, x_n) \\ y=(y_1, \ldots, y_n) \end{array} \right.$ si ha che $f(x + y) = (x_1 + y_1)v_1 + \ldots + (x_n + y_n) v_n = x_1v_1+ \ldots + x_nv_n + y_1v_1 + \ldots + y_nv_n = f(x) + f(y)$
+        - $\forall x \in V, \lambda \in \mathbb{K} \quad f(\lambda x) = \lambda x_1v_1 + \ldots + \lambda x_n v_n = \lambda(x_1v_1 + \ldots + x_n v_n) = \lambda f(x)$
 
 ## Oss
 
@@ -406,6 +405,7 @@
     - $V \cong W \iff \dim(V) = \dim(W)$
 - **Dim**
     - _prima implicazione_
+        - ⚠️ **mo non me va**
         - $V \cong W \implies \exists f : V \rightarrow W \mid f$ isomorfismo
         - sia $v_1, \ldots, v_n$ una base di $V$
         - $f$ isomorfismo, in particolare $f$ biiettiva, e in particolare $f$ suriettiva ed iniettiva
@@ -420,17 +420,17 @@
     - _seconda implicazione_
         - $n:=\dim(V) = \dim(W)$
         - allora, per dimostrazione precedente si ha che $V \cong \mathbb{K}^n \land W \cong \mathbb{K}^n$
-        - poiché $\cong$ è una relazione di equivalenza, allora si ha che $V \cong W$
+        - poiché $\cong$ è una relazione di equivalenza per dimostrazione precedente, allora si ha che $V \cong W$
 
 ## Def
 
-- **Kernel e immagine**
+- **Kernel e immagine di spazi vettoriali**
 
 > - $\mathbb{K}$ campo
 > - $V, W$ spazi vettoriali su $\mathbb{K}$
 > - $f : V \rightarrow W$ trasformazione lineare
-> - $\ker(f) = \{v \in V \mid f(v) = 0_W\}$
-> - $\textrm{im}(f) = \{w \in W \mid \exists v \in V : w = f(v)\}$
+> - $\ker(f) = \{v \in V \mid f(v) = 0_W\}$ è detto **kernel/nucleo di $f$**
+> - $\textrm{im}(f) = \{w \in W \mid \exists v \in V : w = f(v)\}$ è detto **immagine di $f$**
 
 ## Oss
 
@@ -440,6 +440,12 @@
     - $f : V \rightarrow W$ trasformazione lineare
 - **Th**
     - $\ker(f) \subset V$ sottospazio
+- **Dim**
+    - $(\ker(f), +) \leqslant (V, +)$
+        - $f$ morfismo rispetto a $+ \implies f(0_V) = 0_W \implies 0_V \in \ker(f)$
+        - $v, w \in \ker(f) \iff f(v) = 0_W = f(w) \implies 0_W = f(v) + f(w) = f(v + w) \implies v + w \in \ker(f)$
+        - $v \in \ker(f) \implies f(v) = 0_W$, e poiché $f$ morfismo rispetto a $+$ si ha che $f(-v) = -f(v) = 0_W \implies -v \in \ker(f)$
+    - $\forall v \in \ker(f), \lambda \in \mathbb{K} \quad f(v) = 0_W$, e poiché $f$ trasformazione lineare $f(\lambda v) = \lambda f(v) = \lambda 0_W = 0_W \implies \lambda v \in \ker(f)$
 
 ## Oss
 
@@ -449,13 +455,19 @@
     - $f : V \rightarrow W$ trasformazione lineare
 - **Th**
     - $\textrm{im}(f) \subset W$ sottospazio
+- **Dim**
+    - $(\textrm{im}(f), +) \leqslant (V, +)$
+        - $f$ morfismo rispetto a $+ \implies f(0_V) = 0_W \implies 0_W \in \textrm{im}(f)$
+        - $v, w \in \textrm{im}(f) \implies \exists v', w'\in V \mid \left \{ \begin{array}{l} f(v') = v \\ f(w') = w \end{array} \right. \implies f(v' + w')= f(v') + f(w') = v + w \implies v + w \in \textrm{im}(f)$
+        - $v \in \textrm{im}(f) \quad \exist v' \in V \mid f(v') = v \iff -f(v') = -v$, e poiché $f$ morfismo rispetto a $+$ si ha che $f(-v') = -f(v')=-v \implies -v \in \textrm{im}(f)$
+    - $\forall v \in \textrm{im}(f), \lambda \in \mathbb{K} \quad \exists v' \in V \mid f(v') = v \iff \lambda f(v') = \lambda v$, e poiché $f$ trasformazione lineare $f(\lambda v') = \lambda f(v') = \lambda v \implies \lambda v \in \textrm{im}(f)$
 
 ## Def
 
 - **Rango di un'applicazione lineare**
 
 > - $\mathbb{K}$ campo
-> - $V$ e $W$ spazi vettoriali su $\mathbb{K}$
+> - $V, W$ spazi vettoriali su $\mathbb{K}$
 > - $f: V \rightarrow W$ applicazione lineare
 > - $\textrm{rk}(f) := \dim(\textrm{im}(f))$ è detto **rango di $f$**
 
@@ -482,3 +494,4 @@
     - $X$ sottospazio affine di $\mathbb{K}^n$, con dimensione pari a $n - \textrm{rk}(A)$
 - **Dim**
     - ⚠️ **TODO**
+

@@ -264,6 +264,27 @@ vettoriali sono necessariamente rispettati</li>
 </ul>
 <a href="#def-1"><h2 id="def-1">Def</h2></a>
 <ul>
+<li><strong>Sottospazio vettoriale</strong></li>
+</ul>
+<blockquote>
+<ul>
+<li><span class="math inline">\mathbb{K}</span> campo</li>
+<li><span class="math inline">V</span> spazio vettoriale su <span
+class="math inline">\mathbb{K}</span></li>
+<li><span class="math inline">W \subseteq V</span></li>
+<li><span class="math inline">W \subset V</span> è detto
+<strong>sottospazio vettoriale di <span
+class="math inline">V</span></strong> <span
+class="math inline">\iff</span>
+<ul>
+<li><span class="math inline">(W, +) \leqslant (V, +)</span></li>
+<li><span class="math inline">\forall w \in W, \lambda \in \mathbb{K}
+\quad \lambda \cdot w \in W</span></li>
+</ul></li>
+</ul>
+</blockquote>
+<a href="#def-2"><h2 id="def-2">Def</h2></a>
+<ul>
 <li><strong>Span di vettori</strong></li>
 </ul>
 <blockquote>
@@ -326,7 +347,7 @@ v_n) =(c\lambda_1) v_1 + \ldots + (c\lambda_n) v_n \implies c\cdot w \in
 \textrm{span}(v_1, \ldots, v_n)</span></li>
 </ul></li>
 </ul>
-<a href="#def-2"><h2 id="def-2">Def</h2></a>
+<a href="#def-3"><h2 id="def-3">Def</h2></a>
 <ul>
 <li><strong>Generatori di uno spazio vettoriale</strong></li>
 </ul>
@@ -684,7 +705,7 @@ dimostrazione precedente</li>
 <li>dunque necessariamente <span class="math inline">n = m</span></li>
 </ul></li>
 </ul>
-<a href="#def-3"><h2 id="def-3">Def</h2></a>
+<a href="#def-4"><h2 id="def-4">Def</h2></a>
 <ul>
 <li><strong>Dimensione di uno spazio vettoriale</strong></li>
 </ul>
@@ -896,30 +917,9 @@ class="math inline">w_1, \ldots, \hat{w_i}, \ldots, w_n</span> sono
 possono essere meno di <span class="math inline">n \ \bot</span></li>
 </ul></li>
 </ul></li>
-</ul>
-<a href="#def-4"><h2 id="def-4">Def</h2></a>
-<ul>
-<li><strong>Sottospazio vettoriale</strong></li>
-</ul>
-<blockquote>
-<ul>
-<li><span class="math inline">\mathbb{K}</span> campo</li>
-<li><span class="math inline">V</span> spazio vettoriale su <span
-class="math inline">\mathbb{K}</span></li>
-<li><span class="math inline">W \subseteq V</span></li>
-<li><span class="math inline">W \subset V</span> è detto
-<strong>sottospazio vettoriale di <span
-class="math inline">V</span></strong> <span
-class="math inline">\iff</span>
-<ul>
-<li><span class="math inline">(W, +) \leqslant (V, +)</span></li>
-<li><span class="math inline">\forall w \in W, \lambda \in \mathbb{K}
-\quad \lambda \cdot w \in W</span></li>
-</ul></li>
 <li><strong><span class="math inline">+</span> tra spazi
 vettoriali</strong></li>
 </ul>
-</blockquote>
 <blockquote>
 <ul>
 <li><span class="math inline">\mathbb{K}</span> campo</li>
@@ -1063,7 +1063,13 @@ vettoriale</li>
 </ul></li>
 <li><strong>Dim</strong>
 <ul>
-<li>⚠️ <strong>TODO</strong></li>
+<li><span class="math inline">+</span> è ben definito per dimostrazione
+analoga a dimostrazioe precedente</li>
+<li>è necessario dimostrare che <span class="math inline">\cdot:
+\mathbb{K} \times V/W \rightarrow V/W</span> è ben definito, allora
+<span class="math inline">\forall [v], [w] \quad [v] = [w] \iff w - v
+\in W \implies \forall k \in \mathbb{K} \quad k(w - v) = kw - kv \in W
+\iff [kw] = [kv]</span></li>
 </ul></li>
 </ul>
 <a href="#oss-7"><h2 id="oss-7">Oss</h2></a>
@@ -1086,24 +1092,21 @@ vettoriale</li>
 <li><span class="math inline">k := \dim(W)</span></li>
 <li>sia <span class="math inline">w_1, \ldots, w_k</span> base di <span
 class="math inline">W</span></li>
-<li><span class="math inline">\dim(V) \gt k</span>
-<ul>
-<li>per dimostrazione precedente <span class="math inline">w_1, \ldots,
+<li>ipotizzando <span class="math inline">n \gt k</span>, allora per
+dimostrazione precedente <span class="math inline">w_1, \ldots,
 w_k</span> non è base di <span class="math inline">V</span>, e in
 particolare non generano <span class="math inline">V \implies
 \textrm{span}(w_1, \ldots, w_k) \subsetneqq V \implies \exists v_{k + 1}
-\in V \mid v_{k + 1} \notin \textrm{span}(w_1, \ldots, w_k)</span></li>
-<li>per dimostrazione precedente <span class="math inline">w_1, \ldots
-w_k</span> linearmente indipendenti e <span class="math inline">v_{k +
-1} \notin \textrm{span}(w_1, \ldots, w_k) \implies w_1, \ldots, w_k,
-v_{k + 1}</span> linearmente indipendenti</li>
-</ul></li>
-<li><span class="math inline">\dim(V) \gt k + 1</span>
-<ul>
-<li>per ragionamento analogo si otterrà che <span
-class="math inline">w_1, \ldots, w_k, v_{k +1}, v_{k +2}</span>
-linearmente indipendenti</li>
-</ul></li>
+\in V \mid v_{k + 1} \notin \textrm{span}(w_1, \ldots, w_k)</span>,
+allora per dimostrazione precedente <span class="math inline">w_1,
+\ldots w_k</span> linearmente indipendenti <span
+class="math inline">\land v_{k + 1} \notin \textrm{span}(w_1, \ldots,
+w_k) \implies w_1, \ldots, w_k, v_{k + 1}</span> linearmente
+indipendenti</li>
+<li>per ragionamento analogo, avendo <span class="math inline">n \gt k +
+1</span> si otterrà che <span class="math inline">\exists v_{k + 2} \in
+V - \textrm{span}(w_1, \ldots, w_k, v_{k + 1}) \mid w_1, \ldots, w_k,
+v_{k +1}, v_{k +2}</span> linearmente indipendenti</li>
 <li>dunque, è possibile estendere la base di <span
 class="math inline">W</span> scelta, fino ad ottenere una base di <span
 class="math inline">V</span> della forma <span class="math inline">w_1,
@@ -1112,42 +1115,37 @@ proprio <span class="math inline">n - k</span>, che per definizione
 equivale a <span class="math inline">\dim(V) - \dim(W)</span></li>
 <li><span class="math inline">\forall v \in \textrm{span}(w_1, \ldots,
 w_k, v_{k +1}, \ldots, v_n) \quad \exists \lambda_1, \ldots, \lambda_n
-\mid v = \lambda_1 w_1 + \ldots + \lambda_k w_k + \lambda_{k + 1} v_{k
-+1} + \ldots + \lambda_nv_{n} \implies [v] = \lambda_1 [w_1] + \ldots +
-\lambda_n[w_k] + \lambda_{k +1} [v_{k +1 }] + \lambda_n[v_n]</span> in
-<span class="math inline">V / W</span></li>
+\in \mathbb{K} \mid v = \lambda_1 w_1 + \ldots + \lambda_k w_k +
+\lambda_{k + 1} v_{k +1} + \ldots + \lambda_nv_{n} \implies [v] =
+\lambda_1 [w_1] + \ldots + \lambda_n[w_k] + \lambda_{k +1} [v_{k +1 }] +
+\lambda_n[v_n]</span> in <span class="math inline">V / W</span></li>
 <li>per dimostrazione precedente <span class="math inline">W = [0_V] \in
-V/W \implies [v] = \lambda_{k +1}[v_{k +1}] + \ldots + \lambda_n[v_n]
-\implies [v_{k +1}], \ldots, [v_n]</span> generatori di <span
-class="math inline">V/W</span></li>
+V/W \implies [w_1] = \ldots = [w_k] = 0_V \implies [v] = \lambda_{k
++1}[v_{k +1}] + \ldots + \lambda_n[v_n] \implies [v_{k +1}], \ldots,
+[v_n]</span> generatori di <span class="math inline">V/W</span></li>
 <li><span class="math inline">[v_{k +1}], \ldots, [v_n]</span>
-generatori di <span class="math inline">V/W \implies \forall [v] \in V/W
-\quad \exists \lambda_{k +1}, \ldots, \lambda_n \mid [v] = \lambda_{k
-+1} [v_1] + \ldots + \lambda_n[v_n]</span>, allora in particolare <span
-class="math inline">\exists \lambda_{k +1}, \ldots, \lambda_n \mid [0_V]
-= \lambda_{k +1}[v_{k+ 1}] + \ldots+ \lambda_n[v_n] = [\lambda_{k +1}
-v_{k+1} + \ldots + \lambda_nv_n]</span></li>
-<li>per osservazione precedente $W = [0_V] V/W, e in particolare <span
-class="math inline">[0_V] \subseteq W \implies \forall v \in [0_V] \quad
-v \in W</span>, allora si ha che <span class="math inline">[0_V] =
-[\lambda_{k +1} v_{k+1} + \ldots + \lambda_nv_n] \implies \lambda_{k
-+1}v_{k +1} + \ldots + \lambda_nv_n \in W</span></li>
-<li><span class="math inline">u:=\lambda_{k +1}v_{k +1} +\ldots +
-\lambda_nv_n \in W</span></li>
+generatori di <span class="math inline">V/W</span>, in particolare
+implica che <span class="math inline">\exists \lambda_{k +1}, \ldots,
+\lambda_n \in \mathbb{K} \mid W = [0_V] = \lambda_{k +1}[v_{k+ 1}] +
+\ldots+ \lambda_n[v_n] = [\lambda_{k +1} v_{k+1} + \ldots +
+\lambda_nv_n]</span>, e in particolare <span
+class="math inline">u:=\lambda_{k + 1}v_{k + 1} + \ldots + \lambda_nv_n
+\in W</span></li>
 <li><span class="math inline">u \in W \implies \exists \lambda_1,
-\ldots, \lambda_k \mid u = \lambda_1 w_1 + \ldots + \lambda_k w_k
-\implies \lambda_1w_1+ \ldots + \lambda_kw_k = \lambda_{k +1} v_{k +1} +
-\ldots + \lambda_nv_n \iff \lambda_1w_1+ \ldots + \lambda_kw_k -
-\lambda_{k +1} v_{k +1} - \ldots - \lambda_nv_n = 0_V</span></li>
+\ldots, \lambda_k \in \mathbb{K} \mid u = \lambda_1 w_1 + \ldots +
+\lambda_k w_k \implies \lambda_1w_1+ \ldots + \lambda_kw_k = \lambda_{k
++1} v_{k +1} + \ldots + \lambda_nv_n \iff \lambda_1w_1+ \ldots +
+\lambda_kw_k - \lambda_{k +1} v_{k +1} - \ldots - \lambda_nv_n =
+0_V</span></li>
 <li>per osservazione precedente <span class="math inline">w_1, \ldots,
 w_k, v_{k +1}, \ldots v_k</span> è una base di <span
 class="math inline">V</span>, allora <span
 class="math inline">\lambda_1= \ldots= \lambda_k= -\lambda_{k +1}=
 \ldots= -\lambda_{n} = 0_V</span>, e in particolare <span
-class="math inline">-\lambda{k+1} = \ldots = -\lambda_n = 0_V \implies
-v_{k +1}, \ldots, v_n</span> sono linearmente indipendenti, e dunque
-<span class="math inline">[v_{k +1}], \ldots, [v_n] linearmente
-indipendenti</span></li>
+class="math inline">-\lambda_{k+1} = \ldots = -\lambda_n = 0_V \implies
+v_{k +1}, \ldots, v_n</span> linearmente indipendenti, e dunque <span
+class="math inline">[v_{k +1}], \ldots, [v_n]</span> linearmente
+indipendenti</li>
 <li>allora <span class="math inline">[v_{k +1}], \ldots, [v_n]</span>
 sono una base di <span class="math inline">V/W</span> di cardinalità
 <span class="math inline">n - k</span>, il che dimostra che <span
@@ -1178,17 +1176,20 @@ su <span class="math inline">\mathbb{K}</span></li>
 <blockquote>
 <ul>
 <li><span class="math inline">\mathbb{K}</span> campo</li>
-<li><span class="math inline">V</span> e <span
-class="math inline">W</span> spazi vettoriali su <span
+<li><span class="math inline">V, W</span> spazi vettoriali su <span
 class="math inline">\mathbb{K}</span></li>
-<li><span class="math inline">f: V \rightarrow W</span> <strong>morfismo
-di spazi vettoriali</strong> <span class="math inline">\iff \forall x, y
-\in V \quad f(x + y) = f(x) + f(y)</span> e <span
-class="math inline">\forall v \in V, \lambda \in \mathbb{K} \quad
-f(\lambda v) = \lambda f(v)</span>
+<li><span class="math inline">f: V \rightarrow W</span> è detta
+<strong>applicazione lineare</strong> <span
+class="math inline">\iff</span>
 <ul>
-<li>un morfismo su spazi vettoriali è detto anche <strong>applicazione
-lineare</strong> o <strong>trasformazione lineare</strong></li>
+<li><span class="math inline">\forall v, w \in V \quad f(v + w) = f(v) +
+f(w)</span>
+<ul>
+<li>in particolare, deve essere <em>morfismo rispetto a <span
+class="math inline">+</span></em></li>
+</ul></li>
+<li><span class="math inline">\forall v \in V, \lambda \in \mathbb{K}
+\quad f(\lambda v) = \lambda f(v)</span></li>
 </ul></li>
 </ul>
 </blockquote>
@@ -1207,33 +1208,36 @@ class="math inline">\mathbb{K}</span></li>
 </ul></li>
 <li><strong>Dim</strong>
 <ul>
-<li>sia <span class="math inline">v_1, \ldots, v_n \in V</span> una base
-di <span class="math inline">V</span></li>
-<li>per dimostrare la tesi è necessario dimostrare che <span
-class="math inline">f: \mathbb{K}^n \rightarrow V: (t_1, \ldots, t_n)
-\rightarrow t_1v_1 + \ldots + t_nv_n</span> è un isomorfismo</li>
-<li><span class="math inline">f</span> morfismo
-<ul>
-<li><span class="math inline">\forall \lambda \in\mathbb{K}, x, y \in
-\mathbb{K}^n \mid x = (x_1, \ldots, x_n) \land y=(y_1, \ldots,
-y_n)</span> si ha che <span class="math inline">f(x + y) = (x_1 +
-y_1)v_1 + \ldots + (x_n + y_n) v_n = (x_1v_1+ \ldots + x_nv_n) + (y_1v_1
-+ \ldots + y_nv_n) = f(x) + f(y)</span>, dunque è verificata la prima
-condizione, e inoltre <span class="math inline">f(\lambda x) = \lambda
-x_1v_1 + \ldots + \lambda x_n v_n = \lambda(x_1v_1 + \ldots + x_n v_n) =
-\lambda f(x)</span>, dunque è verificata anche la seconda</li>
-</ul></li>
+<li>sia <span class="math inline">v_1, \ldots, v_n \in V</span> base di
+<span class="math inline">V</span></li>
+<li><span class="math inline">V \cong \mathbb{K}^n \iff \exists f \mid
+f</span> isomorfismo di spazi vettoriali</li>
+<li>sia <span class="math inline">f: \mathbb{K}^n \rightarrow V: (t_1,
+\ldots, t_n) \rightarrow t_1v_1 + \ldots + t_nv_n</span></li>
 <li><span class="math inline">f</span> biiettiva
 <ul>
-<li>⚠️ <strong>TODO</strong></li>
+<li><span class="math inline">v_1, \ldots, v_n</span> basi di <span
+class="math inline">V</span>, in particolare linearmente indipendenti
+<span class="math inline">\implies f</span> iniettiva</li>
+<li><span class="math inline">v_1, \ldots, v_n</span> basi di <span
+class="math inline">V</span>, in particolare generatori di <span
+class="math inline">V \implies f</span> suriettiva</li>
+<li>allora <span class="math inline">f</span> biiettiva</li>
+</ul></li>
+<li><span class="math inline">f</span> morfismo
+<ul>
+<li><span class="math inline">x, y \in \mathbb{K}^n \mid \left \{
+\begin{array}{l} x = (x_1, \ldots, x_n) \\ y=(y_1, \ldots, y_n)
+\end{array} \right.</span> si ha che <span class="math inline">f(x + y)
+= (x_1 + y_1)v_1 + \ldots + (x_n + y_n) v_n = x_1v_1+ \ldots + x_nv_n +
+y_1v_1 + \ldots + y_nv_n = f(x) + f(y)</span></li>
+<li><span class="math inline">\forall x \in V, \lambda \in \mathbb{K}
+\quad f(\lambda x) = \lambda x_1v_1 + \ldots + \lambda x_n v_n =
+\lambda(x_1v_1 + \ldots + x_n v_n) = \lambda f(x)</span></li>
 </ul></li>
 </ul></li>
 </ul>
 <a href="#oss-10"><h2 id="oss-10">Oss</h2></a>
-<ul>
-<li>⚠️ <strong>QUI C’È UN BUCO DI COSE CHE NON HO CAPITO</strong></li>
-</ul>
-<a href="#oss-11"><h2 id="oss-11">Oss</h2></a>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -1250,6 +1254,7 @@ class="math inline">\mathbb{K}</span></li>
 <ul>
 <li><em>prima implicazione</em>
 <ul>
+<li>⚠️ <strong>mo non me va</strong></li>
 <li><span class="math inline">V \cong W \implies \exists f : V
 \rightarrow W \mid f</span> isomorfismo</li>
 <li>sia <span class="math inline">v_1, \ldots, v_n</span> una base di
@@ -1304,14 +1309,14 @@ class="math inline">\dim(V) = \dim(W)</span></li>
 class="math inline">V \cong \mathbb{K}^n \land W \cong
 \mathbb{K}^n</span></li>
 <li>poiché <span class="math inline">\cong</span> è una relazione di
-equivalenza, allora si ha che <span class="math inline">V \cong
-W</span></li>
+equivalenza per dimostrazione precedente, allora si ha che <span
+class="math inline">V \cong W</span></li>
 </ul></li>
 </ul></li>
 </ul>
 <a href="#def-6"><h2 id="def-6">Def</h2></a>
 <ul>
-<li><strong>Kernel e immagine</strong></li>
+<li><strong>Kernel e immagine di spazi vettoriali</strong></li>
 </ul>
 <blockquote>
 <ul>
@@ -1321,12 +1326,14 @@ class="math inline">\mathbb{K}</span></li>
 <li><span class="math inline">f : V \rightarrow W</span> trasformazione
 lineare</li>
 <li><span class="math inline">\ker(f) = \{v \in V \mid f(v) =
-0_W\}</span></li>
+0_W\}</span> è detto <strong>kernel/nucleo di <span
+class="math inline">f</span></strong></li>
 <li><span class="math inline">\textrm{im}(f) = \{w \in W \mid \exists v
-\in V : w = f(v)\}</span></li>
+\in V : w = f(v)\}</span> è detto <strong>immagine di <span
+class="math inline">f</span></strong></li>
 </ul>
 </blockquote>
-<a href="#oss-12"><h2 id="oss-12">Oss</h2></a>
+<a href="#oss-11"><h2 id="oss-11">Oss</h2></a>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -1340,8 +1347,29 @@ lineare</li>
 <ul>
 <li><span class="math inline">\ker(f) \subset V</span> sottospazio</li>
 </ul></li>
+<li><strong>Dim</strong>
+<ul>
+<li><span class="math inline">(\ker(f), +) \leqslant (V, +)</span>
+<ul>
+<li><span class="math inline">f</span> morfismo rispetto a <span
+class="math inline">+ \implies f(0_V) = 0_W \implies 0_V \in
+\ker(f)</span></li>
+<li><span class="math inline">v, w \in \ker(f) \iff f(v) = 0_W = f(w)
+\implies 0_W = f(v) + f(w) = f(v + w) \implies v + w \in
+\ker(f)</span></li>
+<li><span class="math inline">v \in \ker(f) \implies f(v) = 0_W</span>,
+e poiché <span class="math inline">f</span> morfismo rispetto a <span
+class="math inline">+</span> si ha che <span class="math inline">f(-v) =
+-f(v) = 0_W \implies -v \in \ker(f)</span></li>
+</ul></li>
+<li><span class="math inline">\forall v \in \ker(f), \lambda \in
+\mathbb{K} \quad f(v) = 0_W</span>, e poiché <span
+class="math inline">f</span> trasformazione lineare <span
+class="math inline">f(\lambda v) = \lambda f(v) = \lambda 0_W = 0_W
+\implies \lambda v \in \ker(f)</span></li>
+</ul></li>
 </ul>
-<a href="#oss-13"><h2 id="oss-13">Oss</h2></a>
+<a href="#oss-12"><h2 id="oss-12">Oss</h2></a>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -1356,6 +1384,32 @@ lineare</li>
 <li><span class="math inline">\textrm{im}(f) \subset W</span>
 sottospazio</li>
 </ul></li>
+<li><strong>Dim</strong>
+<ul>
+<li><span class="math inline">(\textrm{im}(f), +) \leqslant (V,
++)</span>
+<ul>
+<li><span class="math inline">f</span> morfismo rispetto a <span
+class="math inline">+ \implies f(0_V) = 0_W \implies 0_W \in
+\textrm{im}(f)</span></li>
+<li><span class="math inline">v, w \in \textrm{im}(f) \implies \exists
+v&#39;, w&#39;\in V \mid \left \{ \begin{array}{l} f(v&#39;) = v \\
+f(w&#39;) = w \end{array} \right. \implies f(v&#39; + w&#39;)= f(v&#39;)
++ f(w&#39;) = v + w \implies v + w \in \textrm{im}(f)</span></li>
+<li><span class="math inline">v \in \textrm{im}(f) \quad \exist v&#39;
+\in V \mid f(v&#39;) = v \iff -f(v&#39;) = -v</span>, e poiché <span
+class="math inline">f</span> morfismo rispetto a <span
+class="math inline">+</span> si ha che <span
+class="math inline">f(-v&#39;) = -f(v&#39;)=-v \implies -v \in
+\textrm{im}(f)</span></li>
+</ul></li>
+<li><span class="math inline">\forall v \in \textrm{im}(f), \lambda \in
+\mathbb{K} \quad \exists v&#39; \in V \mid f(v&#39;) = v \iff \lambda
+f(v&#39;) = \lambda v</span>, e poiché <span
+class="math inline">f</span> trasformazione lineare <span
+class="math inline">f(\lambda v&#39;) = \lambda f(v&#39;) = \lambda v
+\implies \lambda v \in \textrm{im}(f)</span></li>
+</ul></li>
 </ul>
 <a href="#def-7"><h2 id="def-7">Def</h2></a>
 <ul>
@@ -1364,8 +1418,7 @@ sottospazio</li>
 <blockquote>
 <ul>
 <li><span class="math inline">\mathbb{K}</span> campo</li>
-<li><span class="math inline">V</span> e <span
-class="math inline">W</span> spazi vettoriali su <span
+<li><span class="math inline">V, W</span> spazi vettoriali su <span
 class="math inline">\mathbb{K}</span></li>
 <li><span class="math inline">f: V \rightarrow W</span> applicazione
 lineare</li>
@@ -1381,7 +1434,7 @@ class="math inline">f</span></strong></li>
 <li>⚠️ <strong>TODO</strong></li>
 </ul>
 <hr />
-<a href="#oss-14"><h2 id="oss-14">Oss</h2></a>
+<a href="#oss-13"><h2 id="oss-13">Oss</h2></a>
 <ul>
 <li><strong>Hp</strong>
 <ul>

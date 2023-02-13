@@ -184,7 +184,7 @@
 <header id="title-block-header">
 <h1 class="title"> </h1>
 </header>
-<a href="#teorema-fondamentale-dellalgebra"><h1 id="teorema-fondamentale-dellalgebra">Teorema fondamentale dell’algebra$</h1></a>
+<a href="#teorema-fondamentale-dellalgebra"><h1 id="teorema-fondamentale-dellalgebra">Teorema fondamentale dell’algebra</h1></a>
 
 <ul>
 <li><strong>Hp</strong>
@@ -928,27 +928,30 @@ y_i^2 \right)} = \sum_{i = 1}^n{\left(y_i^2 - 2y_ix_i + x_i^2 -y_i^2
 <li><strong>Hp</strong>
 <ul>
 <li><span class="math inline">\mathbb{K}</span> campo</li>
-<li><span class="math inline">V, W</span> spazi vettoriali su <span
+<li><span class="math inline">V</span> spazi vettoriali su <span
 class="math inline">\mathbb{K}</span></li>
 <li><span class="math inline">f:V \rightarrow W</span> trasformazione
 lineare</li>
 </ul></li>
 <li><strong>Th</strong>
 <ul>
-<li><span class="math inline">\textrm{rk}(f) = \dim(V) -
-\dim(\ker(f))</span></li>
+<li><span class="math inline">\dim(\textrm{im}(f)) + \dim(\ker(f)) =
+\dim(V)</span></li>
 </ul></li>
 <li><strong>Dim</strong>
 <ul>
-<li>per dimostrazione precedente di ha che <span
-class="math inline">\ker(f) \subset V</span> sottospazio vettoriale</li>
-<li>allora, per dimostrazione precedente si ottiene che <span
-class="math inline">\dim(V/\ker(f)) = \dim(V) -
+<li><span class="math inline">\textrm{rk} :=
+\dim(\textrm{im}(f))</span>, allora la tesi è equivalente a dimostrare
+che <span class="math inline">\textrm{rk}(f) = \dim(V) -
 \dim(\ker(f))</span></li>
-<li>per il teorema di isomorfismo tra spazi vettoriali, si ha che <span
-class="math inline">V/\ker(f) \cong \textrm{im}(f)</span>, e per
-dimostrazione precedente questo implica che <span
-class="math inline">\dim(V/\ker(f)) = \dim(\textrm{im}(f))</span></li>
+<li>per dimostrazione precedente <span class="math inline">\ker(f)
+\subset V</span> sottospazio vettoriale, allora, per dimostrazione
+precedente si ottiene che <span class="math inline">\dim(V/\ker(f)) =
+\dim(V) - \dim(\ker(f))</span></li>
+<li>per il teorema fondamentale di isomorfismo tra spazi vettoriali, si
+ha che <span class="math inline">V/\ker(f) \cong \textrm{im}(f) \iff
+\dim(V/\ker(f)) = \dim(\textrm{im}(f))</span> per dimostrazione
+precedente</li>
 <li>allora, segue che <span class="math inline">\textrm{rk}(f) :=
 \dim(\textrm{im}(f)) = \dim(V) - \dim(\ker(f))</span></li>
 </ul></li>

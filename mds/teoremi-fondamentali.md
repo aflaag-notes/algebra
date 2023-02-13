@@ -1,4 +1,4 @@
-# Teorema fondamentale dell'algebra$
+# Teorema fondamentale dell'algebra
 
 - **Hp**
   - $\mathbb{K}$ campo
@@ -307,14 +307,14 @@
 
 - **Hp**
     - $\mathbb{K}$ campo
-    - $V, W$ spazi vettoriali su $\mathbb{K}$
+    - $V$ spazi vettoriali su $\mathbb{K}$
     - $f:V \rightarrow W$ trasformazione lineare
 - **Th**
-    - $\textrm{rk}(f) = \dim(V) - \dim(\ker(f))$
+    - $\dim(\textrm{im}(f)) + \dim(\ker(f)) = \dim(V)$
 - **Dim**
-    - per dimostrazione precedente di ha che $\ker(f) \subset V$ sottospazio vettoriale
-    - allora, per dimostrazione precedente si ottiene che $\dim(V/\ker(f)) = \dim(V) - \dim(\ker(f))$
-    - per il teorema di isomorfismo tra spazi vettoriali, si ha che $V/\ker(f) \cong \textrm{im}(f)$, e per dimostrazione precedente questo implica che $\dim(V/\ker(f)) = \dim(\textrm{im}(f))$
+    - $\textrm{rk} := \dim(\textrm{im}(f))$, allora la tesi è equivalente a dimostrare che $\textrm{rk}(f) = \dim(V) - \dim(\ker(f))$
+    - per dimostrazione precedente $\ker(f) \subset V$ sottospazio vettoriale, allora, per dimostrazione precedente si ottiene che $\dim(V/\ker(f)) = \dim(V) - \dim(\ker(f))$
+    - per il teorema fondamentale di isomorfismo tra spazi vettoriali, si ha che $V/\ker(f) \cong \textrm{im}(f) \iff \dim(V/\ker(f)) = \dim(\textrm{im}(f))$ per dimostrazione precedente
     - allora, segue che $\textrm{rk}(f) := \dim(\textrm{im}(f)) = \dim(V) - \dim(\ker(f))$
 
 ****
