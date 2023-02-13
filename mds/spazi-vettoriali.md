@@ -66,7 +66,7 @@
     - $V$ spazio vettoriale su $\mathbb{K}$
     - $v_1, \ldots, v_n \in V$
 - **Th**
-    - $\textrm{span}(v_1, \ldots, v_n)$ è un sottospazio vettoriale di $V$
+    - $\textrm{span}(v_1, \ldots, v_n) \subset V$ sottospazio vettoriale
 - **Dim**
     - $(\textrm{span}(v_1, \ldots, v_n), +) \leqslant (V, +)$
         - $0_V = 0v_1 + \ldots + 0v_n \implies 0 \in \textrm{span}(v_1, \ldots, v_n)$
@@ -135,7 +135,6 @@
         - per assurdo $\exists \lambda_n \in \mathbb{K} - \{0\}, \lambda_1, \ldots, \lambda_{n - 1} \in \mathbb{K} \mid \lambda_1 v_1 + \ldots + \lambda_n v_n = 0_V \iff -\lambda_n v_n = \lambda_1 v_1 + \ldots + \lambda_{n-1} v_{n-1} \iff v_n = (-\lambda_n^{-1})\lambda_1 v_1 + \ldots + (-\lambda_n^{-1})\lambda_{n - 1}v_{n - 1} \iff v_n \in \textrm{span}(v_1, \ldots, v_{n - 1}) \ \bot \implies \lambda_n = 0_V$
         - $v_1, \ldots, v_{n - 1}$ linearmente indipendenti $\implies \exists \lambda_1, \ldots, \lambda_{n-1} \mid \lambda_1 v_1 + \ldots + \lambda_{n - 1} v_{n - 1} = 0_V \implies \lambda_1 = \ldots = \lambda_{n - 1} = 0_V = \lambda_n \implies v_1, \ldots, v_n$ linearmente indipendenti
 
-
 ## Oss
 
 - **Hp**
@@ -147,8 +146,26 @@
 - **Th**
     - $k \le n$
 - **Dim**
-    - ⚠️ **todo**
-
+    - dimostrazione per induzione su $k$
+    - _caso base_
+        - bisogna dimostrare che per $k = 1$ si ha che $\textrm{span}(v_1, w_2, \ldots, w_n) = \textrm{span}(w_1, \ldots, w_n)$
+            - $v_1 \in \textrm{span}(w_1, \ldots, w_n) - \{0_V\} \iff \exists \lambda_1, \ldots, \lambda_n \in \mathbb{K} \mid v_1 = \lambda_1 w_1 + \ldots + \lambda_n w_n$, e in particolare $v_1 \neq 0_V \iff \exists i \in [1, n] \mid \lambda_i \neq 0$
+            - a meno di riordinamento, si può assumere $\lambda_1 \neq 0$
+            - allora $v_1 = \lambda_1 w_1 + \ldots + \lambda_n w_n \iff \lambda_1w_1 = v_1 + (-\lambda_2w_2) + \ldots + (-\lambda_nw_n) \iff w_1 = (\lambda_1^{-1})v_1 + (-\lambda_1^{-1}\lambda_2)w_2 + \ldots + (-\lambda_1^{-1}\lambda_n)w_n \iff w_1 \in \textrm{span}(v_1, w_2, \ldots, w_n)$
+        - $\textrm{span}(v_1, w_2, \ldots, w_n) \subseteq \textrm{span}(w_1, \ldots, w_n)$
+            - $u \in \textrm{span}(v_1, w_2, \ldots, w_n) \iff \exists \mu_1, \ldots \mu_n \in \mathbb{K} \mid u = \mu_1 v_1 + \mu_2 w_2 + \ldots + \mu_n w_n = \mu_1(\lambda_1 w_1 + \ldots + \lambda_nw_n) + \mu_2w_2 + \ldots + \mu_nw_n = (\mu_\ \lambda_1)w_1+(\mu_1 \lambda_2 \mu_2)w_2 + \ldots + (\mu_1\lambda_n\mu_n)w_n \iff u \in \textrm{span}(w_1, \ldots, w_n)$
+        - $\textrm{span}(w_1, \ldots, w_n) \subseteq \textrm{span}(v_1, w_2, \ldots, w_n)$
+            - siano $\mu_1, \ldots, \mu_n \in \mathbb{K} \mid w_1 = \mu_1 v_1 + \mu_2 w_2 + \ldots + \mu_n w_n$
+            - $u \in \textrm{span}(w_1, \ldots, w_n) \iff \exists \lambda_1, \ldots, \lambda_n \in \mathbb{K} \mid u = \lambda_1 w_1 + \ldots + \lambda_n w_n = \lambda_1 (\mu_1 v_1 + \mu_2 w_2 + \ldots + \mu_n w_n) + \lambda_2 w_2 + \ldots + \lambda_nw_n = (\lambda_1 \mu_1)v_1 + (\lambda_1 \mu_2 \lambda_2)w_2 + \ldots + (\lambda_1 \mu_n \lambda_n)w_n \iff u \in \textrm{span}(v_1, w_2, \ldots, w_n)$
+    - _ipotesi induttiva_
+        - si assume che per $k = i$ si ha che $\textrm{span}(v_1, \ldots, v_i, w_{i + 1}, \ldots, w_n) = \textrm{span}(w_1, \ldots, w_n)$
+        - ⚠️ **secondo me c'è qualcosa che manca nell'induzione**
+    - _passo induttivo_
+        - bisogna dimostrare che per $k = i + 1$ si ha che $\textrm{span}(v_1, \ldots, v_i, v_{i + 1}, w_{i + 2}, \ldots, w_n) = \textrm{span}(w_1, \ldots, w_n)$
+            - $v_{i + 1} \in \textrm{span}(w_1, \ldots, w_n) \iff \exists \mu_1, \ldots, \mu_i, \lambda_{i + 1}, \ldots, \lambda_n \in \mathbb{K} \mid v_{i + 1} = \mu_1 v_1 + \ldots + \mu_i v_i$
+        - $\textrm{span}(v_1, \ldots, v_i, w_{i + 1}, \ldots, w_n) \subseteq \textrm{span}(w_1, \ldots, w_n)$
+        - $\textrm{span}(w_1, \ldots, w_n) \subseteq \textrm{span}(v_1, \ldots, v_i, w_{i + 1}, \ldots, w_n)$
+ 
 ## Cor
 
 - **Hp**
