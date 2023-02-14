@@ -1047,7 +1047,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Hp**
     - $k \in \mathbb{N} \mid k \ge 1$
     - $p_1, \ldots, p_k \in \mathbb{P}$
-    - $i_1, \ldots, i_k \ge 1$
+    - $i_1, \ldots, i_k \in \mathbb{Z}_{\ge 1}$
     - $n \in \mathbb{N} \mid n = p_1^{i_1} \cdot \ldots \cdot p_k^{i_k}$ 
 - **Th**
     - $\displaystyle\varphi(n)=n \cdot \prod_{p \mid n}\left(1-\frac{1}{p}\right)$
@@ -2673,8 +2673,8 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 > - $\mathbb{K}$ campo
 > - $n \in \mathbb{N}$
 > - $A \in \textrm{GL}(n, \mathbb{K})$
-> - $O(n) := \{ A \in \textrm{GL}(n, \mathbb{K}) \mid A$ ortogonale$\}$ è detto **gruppo ortogonale**
->   - in particolare $O(n) := \{A \in \textrm{GL}(n, \mathbb{K}) \mid A^{-1} = A^T\}$
+> - $\textrm{O}(n) := \{ A \in \textrm{GL}(n, \mathbb{K}) \mid A$ ortogonale$\}$ è detto **gruppo ortogonale**
+>   - in particolare $\textrm{O}(n) := \{A \in \textrm{GL}(n, \mathbb{K}) \mid A^{-1} = A^T\}$
 
 
 
@@ -2685,7 +2685,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
     - $\mathbb{K}$ campo
     - $n \in \mathbb{N}$
 - **Th**
-    - $(O(n), \cdot) \leqslant (\textrm{GL}(n, \mathbb{K}), \cdot)$
+    - $(\textrm{O}(n), \cdot) \leqslant (\textrm{GL}(n, \mathbb{K}), \cdot)$
 
 ## Definizione 62
 
@@ -3900,7 +3900,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
     1. $\forall \lambda \in \textrm{sp}(A) \quad \lambda \in \mathbb{R}$
     2. $A$ diagonalizzabile
     3. $\exists B^1, \ldots, B^n$ autovettori di $A \mid B^1, \ldots, B^n$ base ortonormale di $\mathbb{R}^n$
-    4. $\exists B \in O(n) \mid B^{-1}AB$ diagonale
+    4. $\exists B \in \textrm{O}(n) \mid B^{-1}AB$ diagonale
 - **Th**
     - le proposizioni sono equivalenti
 

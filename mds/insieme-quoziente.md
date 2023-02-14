@@ -133,7 +133,7 @@
 - **Hp**
     - $k \in \mathbb{N} \mid k \ge 1$
     - $p_1, \ldots, p_k \in \mathbb{P}$
-    - $i_1, \ldots, i_k \ge 1$
+    - $i_1, \ldots, i_k \in \mathbb{Z}_{\ge 1}$
     - $n \in \mathbb{N} \mid n = p_1^{i_1} \cdot \ldots \cdot p_k^{i_k}$ 
 - **Th**
     - $\displaystyle\varphi(n)=n \cdot \prod_{p \mid n}\left(1-\frac{1}{p}\right)$

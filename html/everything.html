@@ -1767,7 +1767,8 @@ n) = 1</span></li>
 <li><span class="math inline">k \in \mathbb{N} \mid k \ge 1</span></li>
 <li><span class="math inline">p_1, \ldots, p_k \in
 \mathbb{P}</span></li>
-<li><span class="math inline">i_1, \ldots, i_k \ge 1</span></li>
+<li><span class="math inline">i_1, \ldots, i_k \in \mathbb{Z}_{\ge
+1}</span></li>
 <li><span class="math inline">n \in \mathbb{N} \mid n = p_1^{i_1} \cdot
 \ldots \cdot p_k^{i_k}</span></li>
 </ul></li>
@@ -4274,11 +4275,11 @@ class="math inline">\mathbb{K}^n</span></li>
 <li><span class="math inline">n \in \mathbb{N}</span></li>
 <li><span class="math inline">A \in \textrm{GL}(n,
 \mathbb{K})</span></li>
-<li><span class="math inline">O(n) := \{ A \in \textrm{GL}(n,
+<li><span class="math inline">\textrm{O}(n) := \{ A \in \textrm{GL}(n,
 \mathbb{K}) \mid A</span> ortogonale<span class="math inline">\}</span>
 è detto <strong>gruppo ortogonale</strong>
 <ul>
-<li>in particolare <span class="math inline">O(n) := \{A \in
+<li>in particolare <span class="math inline">\textrm{O}(n) := \{A \in
 \textrm{GL}(n, \mathbb{K}) \mid A^{-1} = A^T\}</span></li>
 </ul></li>
 </ul>
@@ -4292,8 +4293,8 @@ class="math inline">\mathbb{K}^n</span></li>
 </ul></li>
 <li><strong>Th</strong>
 <ul>
-<li><span class="math inline">(O(n), \cdot) \leqslant (\textrm{GL}(n,
-\mathbb{K}), \cdot)</span></li>
+<li><span class="math inline">(\textrm{O}(n), \cdot) \leqslant
+(\textrm{GL}(n, \mathbb{K}), \cdot)</span></li>
 </ul></li>
 </ul>
 <a href="#definizione-62"><h2 id="definizione-62">Definizione 62</h2></a>
@@ -6036,8 +6037,8 @@ n}(\mathbb{R}) \mid A</span> simmetrica</li>
 <li><span class="math inline">\exists B^1, \ldots, B^n</span>
 autovettori di <span class="math inline">A \mid B^1, \ldots, B^n</span>
 base ortonormale di <span class="math inline">\mathbb{R}^n</span></li>
-<li><span class="math inline">\exists B \in O(n) \mid B^{-1}AB</span>
-diagonale</li>
+<li><span class="math inline">\exists B \in \textrm{O}(n) \mid
+B^{-1}AB</span> diagonale</li>
 </ol></li>
 <li><strong>Th</strong>
 <ul>
