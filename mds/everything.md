@@ -2759,6 +2759,23 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 > - $A \in \textrm{Mat}_{n \times n}(\mathbb{K})$
 > - $A$ è detta **triangolare $\iff$** $A$ triangolare superiore o triangolare inferiore
 
+
+
+## Teorema 156
+
+
+- **Hp**
+    - $\mathbb{K}$ campo
+    - $n \in \mathbb{N}$
+    - $A \in \textrm{Mat}_{n \times n}(\mathbb{K}) \mid A$ triangolare
+- **Th**
+    - $\det(A) = a_{1,1} \cdot \ldots \cdot a_{n, n}$
+
+
+
+## Definizione 66
+
+
 - **Matrice triangolarizzabile**
 
 > - $\mathbb{K}$ campo
@@ -2783,7 +2800,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 156
+## Teorema 157
 
 
 - **Hp**
@@ -2795,7 +2812,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Definizione 66
+## Definizione 67
 
 
 - **Sottomatrice di una matrice**
@@ -2822,7 +2839,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 157
+## Teorema 158
 
 
 - **Hp**
@@ -2835,7 +2852,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
     
 
 
-## Definizione 67
+## Definizione 68
 
 
 - **Matrice completa**
@@ -2848,7 +2865,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 158
+## Teorema 159
 
 
 - **Hp**
@@ -2869,7 +2886,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Definizione 68
+## Definizione 69
 
 
 - **Applicazione multilineare**
@@ -2897,7 +2914,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 159
+## Teorema 160
 
 
 - **Hp**
@@ -2907,70 +2924,19 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
     - $\forall A_i, A_j \in A \quad \det(A_1, \ldots, A_i, \ldots, A_j , \ldots, A_n) = -\det(A_1, \ldots, A_j, \ldots, A_i, \ldots, A_n)$
 
-## Teorema 160
-
-
-- **Hp**
-    - $\mathbb{K}$ campo
-    - $n \in \mathbb{N} - \{0\}$
-    - $A \in \textrm{Mat}_{n \times n}(\mathbb{K})$
-    1. $A$ invertibile
-    2. $\textrm{rk}(A)=n$
-    3. $A_1, \ldots, A_n$ base di $\mathbb{K}^n$
-    4. $A^1, \ldots, A^n$ base di $\mathbb{K}^n$
-    5. $\det(A) \neq 0$
-    6. $A \equiv I_n$ tramite la relazione di equivalenza delle operazioni sulle righe
-    7. $A \equiv I_n$ tramite la relazione di equivalenza delle operazioni sulle colonne
-- **Th**
-    - le proposizioni sono equivalenti
-
 ## Teorema 161
 
 
 - **Hp**
     - $\mathbb{K}$ campo
-    - $n \in \mathbb{N} - \{0\}$
-    - $A \in \textrm{Mat}_{n \times n}(\mathbb{K}) \mid \exists i \in [1, n] : A_i = 0_{\mathbb{K}^n} \lor \exists j \in [1, n] : A^j = 0_{\mathbb{K}^n}$, ovvero in $A$ è presente o una riga, o una colonna nulla
-- **Th**
-    - $\det(A) = 0$
-
-
-
-## Teorema 162
-
-
-- **Hp**
-    - $\mathbb{K}$ campo
-    - $n \in \mathbb{N} - \{0\}$
-    - $A \in \textrm{Mat}_{n \times n}(\mathbb{K})$
-- **Th**
-    - $\det(A) = \det(A^T)$
-
-
-
-## Teorema 163
-
-
-- **Hp**
-    - $\mathbb{K}$ campo
-    - $n \in \mathbb{N} - \{0\}$
-    - $A, B \in \textrm{Mat}_{n \times n}(\mathbb{K}) \mid A$ simile a $B$
-- **Th**
-    - $\det(A) = \det(B)$
-
-## Teorema 164
-
-
-- **Hp**
-    - $\mathbb{K}$ campo
-    - $n \in \mathbb{N} - \{0\}$
+    - $n \in \mathbb{N}$
     - $A \in \textrm{Mat}_{n \times n}(\mathbb{K})$
 - **Th**
     - $\displaystyle{\det(A) = \sum_{\sigma \in \mathcal{S}_n} \textrm{sgn}(\sigma) \cdot \prod_{i=1}^n{a_{i, \sigma_i}}}$
 
 
 
-## Teorema 165
+## Teorema 162
 
 
 - **Hp**
@@ -2982,7 +2948,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 166
+## Teorema 163
 
 
 - **Hp**
@@ -2994,45 +2960,53 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 167
+## Teorema 164
 
 
 - **Hp**
     - $\mathbb{K}$ campo
-    - $n \in \mathbb{N} - \{0\}$
-    - $A \in \textrm{Mat}_{n \times n}(\mathbb{K}) \mid A$ triangolare
+    - $n \in \mathbb{N}$
+    - $A \in \textrm{Mat}_{n \times n}(\mathbb{K})$
 - **Th**
-    - $\det(A) = a_{1,1} \cdot \ldots \cdot a_{n, n}$
+    - $\det(A) = \det(A^T)$
 
 
 
-## Teorema 168
+## Teorema 165
 
 
 - **Hp**
     - $\mathbb{K}$ campo
-    - $n \in \mathbb{N} - \{0\}$
+    - $n \in \mathbb{N}$
+    - $A, B \in \textrm{Mat}_{n \times n}(\mathbb{K}) \mid A$ simile a $B$
+- **Th**
+    - $\det(A) = \det(B)$
+
+## Teorema 166
+
+
+- **Hp**
+    - $\mathbb{K}$ campo
+    - $n \in \mathbb{N}$
     - $\lambda \in \mathbb{K}$
     - $A \in \textrm{Mat}_{n \times n}(\mathbb{K})$
     - $A' = \left(\begin{array}{c}A_1 \\ \vdots \\ \lambda A_i \\ \vdots \\ A_n \end{array}\right)$
 - **Th**
     - $\det(A')=\lambda \cdot \det(A)$
 
-
-
-## Teorema 169
+## Teorema 167
 
 
 - **Hp**
     - $\mathbb{K}$ campo
-    - $n \in \mathbb{N} - \{0\}$
+    - $n \in \mathbb{N}$
     - $A \in \textrm{Mat}_{n \times n}(\mathbb{K})$
 - **Th**
     - $\forall 1 \le i, j \le n \quad \det(A) = \displaystyle \sum_{k = 1}^{n}{(-1)^{i + k}\cdot a_{i, k} \cdot \det(A_i^k)} = \sum_{h = 1}^n{(-1)^{h + j}\cdot a_{h, j} \cdot \det(A_h^j)}$
 
 
 
-## Definizione 69
+## Definizione 70
 
 
 - **Aggiunta di una matrice**
@@ -3044,7 +3018,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 170
+## Teorema 168
 
 
 - **Hp**
@@ -3056,7 +3030,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 171
+## Teorema 169
 
 
 - **Hp**
@@ -3066,13 +3040,31 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
     - $A^{-1}=\dfrac{1}{ad - bc} \left(\begin{array}{cc}d & -b \\ -c & a\end{array}\right)$
 
+
+
+## Teorema 170
+
+
+- **Hp**
+    - $\mathbb{K}$ campo
+    - $n \in \mathbb{N}$
+    - $A \in \textrm{Mat}_{n \times n}(\mathbb{K})$
+    1. $A$ invertibile
+    2. $\textrm{rk}(A)=n$
+    3. $A_1, \ldots, A_n$ base di $\mathbb{K}^n$
+    4. $A^1, \ldots, A^n$ base di $\mathbb{K}^n$
+    5. $\det(A) \neq 0$
+    6. $A \equiv_R I_n$
+    7. $A \equiv_C I_n$
+- **Th**
+    - le proposizioni sono equivalenti
+
 ****
 
 # Polinomio caratteristico
 
 
-
-## Definizione 70
+## Definizione 71
 
 
 > - $\mathbb{K}$ campo
@@ -3082,7 +3074,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 172
+## Teorema 171
 
 
 - **Hp**
@@ -3094,7 +3086,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 173
+## Teorema 172
 
 
 - **Hp**
@@ -3106,7 +3098,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Definizione 71
+## Definizione 72
 
 
 - **Autovalore**
@@ -3125,7 +3117,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 174
+## Teorema 173
 
 
 - **Hp**
@@ -3137,7 +3129,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 175
+## Teorema 174
 
 
 - **Hp**
@@ -3148,7 +3140,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
     - $\lambda$ autovalore $\iff \exists v \in \mathbb{K}^n - \{0\} \mid A \cdot v = \lambda \cdot v$
 
-## Definizione 72
+## Definizione 73
 
 
 - **Autovettore relativo ad un autovalore**
@@ -3161,7 +3153,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 176
+## Teorema 175
 
 
 - **Hp**
@@ -3175,7 +3167,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Definizione 73
+## Definizione 74
 
 
 - **Autospazio relativo ad un autovalore**
@@ -3189,7 +3181,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 177
+## Teorema 176
 
 
 - **Hp**
@@ -3202,7 +3194,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Definizione 74
+## Definizione 75
 
 
 - **Molteplicità algebrica di un autovalore**
@@ -3215,7 +3207,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 178
+## Teorema 177
 
 
 - **Hp**
@@ -3228,7 +3220,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Definizione 75
+## Definizione 76
 
 
 - **Molteplicità geometrica di un autovalore**
@@ -3241,7 +3233,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 179
+## Teorema 178
 
 
 - **Hp**
@@ -3254,7 +3246,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 180
+## Teorema 179
 
 
 - **Hp**
@@ -3265,7 +3257,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
     - $\nu(\lambda) = n - \textrm{rk}(A - \lambda \cdot I_n)$
 
-## Teorema 181
+## Teorema 180
 
 
 - **Hp**
@@ -3278,7 +3270,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 182
+## Teorema 181
 
 
 - **Hp**
@@ -3293,7 +3285,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 183
+## Teorema 182
 
 
 - **Hp**
@@ -3302,7 +3294,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
     - $A$ è triangolarizzabile
 
-## Teorema 184
+## Teorema 183
 
 
 - **Hp**
@@ -3313,7 +3305,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 185
+## Teorema 184
 
 
 - **Hp**
@@ -3328,7 +3320,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 186
+## Teorema 185
 
 
 - **Hp**
@@ -3346,7 +3338,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Definizione 76
+## Definizione 77
 
 
 - **Insieme dei numeri complessi**
@@ -3356,7 +3348,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 187
+## Teorema 186
 
 
 - **Hp**
@@ -3369,7 +3361,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Definizione 77
+## Definizione 78
 
 
 - **Coniugato**
@@ -3380,7 +3372,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 188
+## Teorema 187
 
 
 - **Hp**
@@ -3393,7 +3385,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 189
+## Teorema 188
 
 
 - **Hp**
@@ -3403,7 +3395,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Definizione 78
+## Definizione 79
 
 
 - **Raggio**
@@ -3415,7 +3407,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Definizione 79
+## Definizione 80
 
 
 - **Forma polare**
@@ -3426,7 +3418,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Definizione 80
+## Definizione 81
 
 
 - **Soluzione principale**
@@ -3438,7 +3430,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 190
+## Teorema 189
 
 
 - **Hp**
@@ -3446,7 +3438,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
   - $(\mathbb{C}, +, \cdot )$ è un campo
 
-## Teorema 191
+## Teorema 190
 
 
 - **Hp**
@@ -3459,7 +3451,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 192
+## Teorema 191
 
 
 - **Hp**
@@ -3475,7 +3467,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Definizione 81
+## Definizione 82
 
 
 - **Coefficiente binomiale**
@@ -3486,7 +3478,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 193
+## Teorema 192
 
 
 - **Hp**
@@ -3494,7 +3486,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
   - $\displaystyle \binom{n}{k} = \binom{n}{n-k}$
 
-## Teorema 194
+## Teorema 193
 
 
 - **Hp**
@@ -3502,7 +3494,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
   - $\displaystyle \binom{n}{k + 1} = \binom{n - 1}{k + 1} \binom{n - 1}{ k}$
 
-## Teorema 195
+## Teorema 194
 
 
 - **Hp**
@@ -3511,7 +3503,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
   - $p \ \bigg\vert \displaystyle \binom{p}{k}$
 
-## Teorema 196
+## Teorema 195
 
 
 - **Hp**
@@ -3522,7 +3514,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
   - $\displaystyle \binom{p}{k} \cdot [a] = [0]$ in $\mathbb{Z}_p$
 
-## Teorema 197
+## Teorema 196
 
 
 - **Hp**
@@ -3531,7 +3523,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
   - $([a]+[b])^{p}=[a]^{p}+[b]^{p}$ in $\mathbb{Z}_p$
 
-## Teorema 198
+## Teorema 197
 
 
 - **Hp**
@@ -3546,7 +3538,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Definizione 82
+## Definizione 83
 
 
 - **Induzione**
@@ -3556,7 +3548,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 199
+## Teorema 198
 
 
 - **Hp**
@@ -3572,14 +3564,14 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 200
+## Teorema 199
 
 
 - ⚠️ **algoritmo di euclide todo**
 
 
 
-## Teorema 201
+## Teorema 200
 
 
 - ⚠️ **regola di ruffini**
@@ -3608,7 +3600,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
     - $\exists ! \ q, r \in \mathbb{Z} \mid m=n q+r \quad 0 \leq r<n$
 
-## Teorema 202
+## Teorema 201
 
 
 - **Hp**
@@ -3644,7 +3636,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 # Teorema cinese dei resti
 
 
-## Teorema 203
+## Teorema 202
 
 
 - **Hp**
@@ -3653,7 +3645,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
   - $m = a_1 \cdot \ldots \cdot a_n$
 
-## Teorema 204
+## Teorema 203
 
 
 - **Hp**
@@ -3664,7 +3656,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
   - $\exists \phi \mid \phi: \mathbb{Z}_m \rightarrow \mathbb{Z}_{a_1} \times \ldots \times \mathbb{Z}_{a_n}: x \ (\bmod \ m) \rightarrow (x \ (\bmod \ a_1), \ldots, x \ (\bmod \ a_n))$
   - $\phi$ è una funzione ben definita, ed è iniettiva
 
-## Teorema 205
+## Teorema 204
 
 
 - **Hp**
@@ -3675,7 +3667,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
   - $\exists ! x \ (\bmod \ m) \mid$ $\left\{\begin{array}{c}x \equiv b_{1}\ \left(\bmod  \ a_{1}\right) \\ \vdots \\ x \equiv b_{n}\ \left(\bmod  \ a_{n}\right)\end{array}\right.$
 
-## Teorema 206
+## Teorema 205
 
 
 - **Hp**
@@ -3712,7 +3704,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
   - $a^{p} \equiv a \ (\bmod \ p)$
 
-## Teorema 207
+## Teorema 206
 
 
 - **Hp**
@@ -3721,7 +3713,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
   - $[a]^{-1}=\left[a\right]^{p-2}$
 
-## Teorema 208
+## Teorema 207
 
 
 - **Hp**
@@ -3750,7 +3742,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
     - $A / \textrm{ker}(f) \cong \textrm{im}(f)$, ovvero $\exists \varphi \mid \varphi : A / \textrm{ker}(f) \rightarrow \textrm{im}(f): [a] \rightarrow f(a)$ isomorfismo di anelli
 
-## Teorema 209
+## Teorema 208
 
 
 - **Hp**
@@ -3760,7 +3752,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
   - $G / \textrm{ker}(f) \cong \textrm{im}(f)$, o alternativamente $\exists \varphi \mid \varphi : G / \textrm{ker}(f) \rightarrow \textrm{im}(f): [g] \rightarrow f(g)$ isomorfismo di gruppi
 
 
-## Teorema 210
+## Teorema 209
 
 
 - **Hp**
@@ -3798,7 +3790,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
     - $||u - v||^2 = ||u||^2 + ||v||^2 - 2\cos(\theta) \cdot||u||\cdot ||v||$
 
 
-## Teorema 211
+## Teorema 210
 
 
 - **Hp**
@@ -3880,7 +3872,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
     - $\det(A \cdot B) = \det(A) \cdot \det(B)$
 
 
-## Teorema 212
+## Teorema 211
 
 
 - **Hp**

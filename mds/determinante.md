@@ -34,78 +34,14 @@
 - **Th**
     - $\forall A_i, A_j \in A \quad \det(A_1, \ldots, A_i, \ldots, A_j , \ldots, A_n) = -\det(A_1, \ldots, A_j, \ldots, A_i, \ldots, A_n)$
 - **Dim**
-    - per il punto $2$ della definizione di $\det$ si ha che $\det(A_1, \ldots, A_i + A_j, \ldots, A_j + A_i, \ldots, A_n) = 0$
+    - per il punto 2 della definizione di $\det$ si ha che $\det(A_1, \ldots, A_i + A_j, \ldots, A_j + A_i, \ldots, A_n) = 0$
     - allora, per multilinearità di $\det$ si ha che $\det$ si ha che $0 =\det(A_1, \ldots, A_i + A_j, \ldots, A_j + A_i, \ldots, A_n) = \det(A_1, \ldots, A_i, \ldots, A_j + A_i, \ldots, A_n) + \det(A_1, \ldots, A_j, \ldots, A_j + A_i, \ldots, A_n) =\det(A_1, \ldots, A_i, \ldots, A_j, \ldots, A_n)+\det(A_1, \ldots, A_i, \ldots, A_i, \ldots, A_n) + \det(A_1, \ldots, A_j, \ldots,A_j, \ldots, A_n) + \det(A_1, \ldots, A_j, \ldots, A_i, \ldots, A_n) = \det(A_1, \ldots, A_i, \ldots, A_j, \ldots, A_n) + 0 + 0 + \det(A_1, \ldots, A_j , \ldots, A_i, \ldots, A_n) \iff \det(A_1, \ldots, A_i, \ldots, A_j, \ldots, A_n) = -\det(A_1,\ldots, A_j, \ldots, A_i, \ldots, A_n)$
-
-## Oss
-
-- **Hp**
-    - $\mathbb{K}$ campo
-    - $n \in \mathbb{N} - \{0\}$
-    - $A \in \textrm{Mat}_{n \times n}(\mathbb{K})$
-    1. $A$ invertibile
-    2. $\textrm{rk}(A)=n$
-    3. $A_1, \ldots, A_n$ base di $\mathbb{K}^n$
-    4. $A^1, \ldots, A^n$ base di $\mathbb{K}^n$
-    5. $\det(A) \neq 0$
-    6. $A \equiv I_n$ tramite la relazione di equivalenza delle operazioni sulle righe
-    7. $A \equiv I_n$ tramite la relazione di equivalenza delle operazioni sulle colonne
-- **Th**
-    - le proposizioni sono equivalenti
-- **Dim**
-    - 1 $\iff$ 2
-        - sia $B = (B^1, \ldots, B^n) \in \textrm{Mat}_{n \times n}(\mathbb{K}) \mid A \cdot B = B \cdot A = I_n$
-        - allora $I_n = A \cdot B = (A \cdot B^1, \ldots, A \cdot B^n) = (L_A(B^1), \ldots, L_A(B^n)) \iff L_A(B^1) = e_1, \ldots, L_A(B^n) = e_n \iff e_1, \ldots, e_n \in \textrm{im}(L_A)$
-        - $e_1, \ldots, e_n$ base di $\mathbb{K}^n$, inoltre $\textrm{im}(L_A) \subseteq \mathbb{K}^n$ necessariamente, allora $\textrm{im}(L_A) = \textrm{span}(e_1, \ldots, e_n) = \mathbb{K}^n$
-        - allora $\textrm{rk}(A) := \textrm{rk}(L_A) = \dim(\textrm{span}(A^1, \ldots, A^n)) = \dim(\textrm{im}(L_A)) = \dim(\mathbb{K}^n) = n$
-    - 2 $\iff$ 3 $\land$ 4
-        - sia $\textrm{rk}(A) = n$
-        - per dimostrazione precedente $n = \textrm{rk}(A) = \dim(\textrm{span}(A^1, \ldots, A^n)) = \dim(\textrm{span}(A_1, \ldots, A_n))$
-        - in particolare $\dim(\textrm{span}(A_1, \ldots, A_n)) = n \iff \textrm{span}(A_1, \ldots, A_n) = \mathbb{K}^n$
-        - per dimostrazione precedente $A_1, \ldots, A_n$ generatori di $\mathbb{K}^n \iff A_1, \ldots, A_n$ linearmente indipententi
-        - allora, $A_1, \ldots, A_n$ base di $\mathbb{K}^n$
-        - è possibile ripetere il ragionamento analogo per $A^1, \ldots, A^n$
-    - 3 $\land$ 4 $\iff$ 5
-        - per definizione di $\det$, $\det(A) \neq 0 \iff A_1, \ldots, A_n$ e $A^1, \ldots, A^n$ basi di $\mathbb{K}^n$
-    - **⚠️  TODO**
-
-## Oss
-
-- **Hp**
-    - $\mathbb{K}$ campo
-    - $n \in \mathbb{N} - \{0\}$
-    - $A \in \textrm{Mat}_{n \times n}(\mathbb{K}) \mid \exists i \in [1, n] : A_i = 0_{\mathbb{K}^n} \lor \exists j \in [1, n] : A^j = 0_{\mathbb{K}^n}$, ovvero in $A$ è presente o una riga, o una colonna nulla
-- **Th**
-    - $\det(A) = 0$
-
-## Oss
-
-- **Hp**
-    - $\mathbb{K}$ campo
-    - $n \in \mathbb{N} - \{0\}$
-    - $A \in \textrm{Mat}_{n \times n}(\mathbb{K})$
-- **Th**
-    - $\det(A) = \det(A^T)$
-
-## Oss
-
-- **Hp**
-    - $\mathbb{K}$ campo
-    - $n \in \mathbb{N} - \{0\}$
-    - $A, B \in \textrm{Mat}_{n \times n}(\mathbb{K}) \mid A$ simile a $B$
-- **Th**
-    - $\det(A) = \det(B)$
-- **Dim**
-    - $A$ simile a $B \implies \exists C \in \textrm{GL}(n, \mathbb{K}) \mid A = C^{-1}BC$ per definizione
-    - allora $\det(B)= \det(C^{-1})\cdot \det(A)\cdot \det(C)$
-    - per dimostrazione precedente $\det(C^{-1}) \cdot \det(C)^{-1}$
-    - allora $\det(B)= \det(C)^{-1}\cdot \det(A)\cdot \det(C) = \det(A)$
 
 ## Formula di Leibniz
 
 - **Hp**
     - $\mathbb{K}$ campo
-    - $n \in \mathbb{N} - \{0\}$
+    - $n \in \mathbb{N}$
     - $A \in \textrm{Mat}_{n \times n}(\mathbb{K})$
 - **Th**
     - $\displaystyle{\det(A) = \sum_{\sigma \in \mathcal{S}_n} \textrm{sgn}(\sigma) \cdot \prod_{i=1}^n{a_{i, \sigma_i}}}$
@@ -132,27 +68,41 @@
 
 - **Hp**
     - $\mathbb{K}$ campo
-    - $n \in \mathbb{N} - \{0\}$
-    - $A \in \textrm{Mat}_{n \times n}(\mathbb{K}) \mid A$ triangolare
+    - $n \in \mathbb{N}$
+    - $A \in \textrm{Mat}_{n \times n}(\mathbb{K})$
 - **Th**
-    - $\det(A) = a_{1,1} \cdot \ldots \cdot a_{n, n}$
+    - $\det(A) = \det(A^T)$
 
 ## Oss
 
 - **Hp**
     - $\mathbb{K}$ campo
-    - $n \in \mathbb{N} - \{0\}$
+    - $n \in \mathbb{N}$
+    - $A, B \in \textrm{Mat}_{n \times n}(\mathbb{K}) \mid A$ simile a $B$
+- **Th**
+    - $\det(A) = \det(B)$
+- **Dim**
+    - $A$ simile a $B \implies \exists C \in \textrm{GL}(n, \mathbb{K}) \mid A = C^{-1}BC$
+    - allora $\det(A)= \det(C^{-1}BC) = \det(C)^{-1}\cdot \det(B)\cdot \det(C) = \det(B)$
+
+## Oss
+
+- **Hp**
+    - $\mathbb{K}$ campo
+    - $n \in \mathbb{N}$
     - $\lambda \in \mathbb{K}$
     - $A \in \textrm{Mat}_{n \times n}(\mathbb{K})$
     - $A' = \left(\begin{array}{c}A_1 \\ \vdots \\ \lambda A_i \\ \vdots \\ A_n \end{array}\right)$
 - **Th**
     - $\det(A')=\lambda \cdot \det(A)$
+- **Dim**
+    - ⚠️ **todo**
 
 ## Formula di Laplace
 
 - **Hp**
     - $\mathbb{K}$ campo
-    - $n \in \mathbb{N} - \{0\}$
+    - $n \in \mathbb{N}$
     - $A \in \textrm{Mat}_{n \times n}(\mathbb{K})$
 - **Th**
     - $\forall 1 \le i, j \le n \quad \det(A) = \displaystyle \sum_{k = 1}^{n}{(-1)^{i + k}\cdot a_{i, k} \cdot \det(A_i^k)} = \sum_{h = 1}^n{(-1)^{h + j}\cdot a_{h, j} \cdot \det(A_h^j)}$
@@ -183,6 +133,39 @@
     - $A = \left(\begin{array}{cc}a & b \\ c & d\end{array}\right)$
 - **Th**
     - $A^{-1}=\dfrac{1}{ad - bc} \left(\begin{array}{cc}d & -b \\ -c & a\end{array}\right)$
+
+## Oss
+
+- **Hp**
+    - $\mathbb{K}$ campo
+    - $n \in \mathbb{N}$
+    - $A \in \textrm{Mat}_{n \times n}(\mathbb{K})$
+    1. $A$ invertibile
+    2. $\textrm{rk}(A)=n$
+    3. $A_1, \ldots, A_n$ base di $\mathbb{K}^n$
+    4. $A^1, \ldots, A^n$ base di $\mathbb{K}^n$
+    5. $\det(A) \neq 0$
+    6. $A \equiv_R I_n$
+    7. $A \equiv_C I_n$
+- **Th**
+    - le proposizioni sono equivalenti
+- **Dim**
+    - 1 $\iff$ 2
+        - **⚠️ me puzza**
+        - sia $B = (B^1, \ldots, B^n) \in \textrm{Mat}_{n \times n}(\mathbb{K}) \mid A \cdot B = B \cdot A = I_n$
+        - allora $I_n = A \cdot B = (A \cdot B^1, \ldots, A \cdot B^n) = (L_A(B^1), \ldots, L_A(B^n)) \iff \left \{ \begin{array}{c} L_A(B^1) = e_1 \\  \vdots \\  L_A(B^n) = e_n \end{array} \right.\iff e_1, \ldots, e_n \in \textrm{im}(L_A) \implies \textrm{span}(e_1, \ldots, e_n) \subseteq \textrm{im}(L_A)$
+        - $e_1, \ldots, e_n$ base canonica di $\mathbb{K}^n \implies \dim(\textrm{span}(e_1, \ldots, e_n)) = n$, allora segue necessariamente che $\textrm{span}(e_1, \ldots, e_n) \subseteq \textrm{im}(L_A) \iff \textrm{span}(e_1, \ldots, e_n) = \textrm{im}(L_A)$ 
+        - allora $\textrm{rk}(A) := \textrm{rk}(L_A) = \dim(\textrm{span}(A^1, \ldots, A^n)) = \dim(\textrm{im}(L_A)) = \dim(\mathbb{K}^n) = n$
+    - 2 $\iff$ 3 $\land$ 4
+        - sia $\textrm{rk}(A) = n$
+        - per dimostrazione precedente $n = \textrm{rk}(A) = \dim(\textrm{span}(A^1, \ldots, A^n)) = \dim(\textrm{span}(A_1, \ldots, A_n))$
+        - in particolare $\dim(\textrm{span}(A_1, \ldots, A_n)) = n \iff \textrm{span}(A_1, \ldots, A_n) = \mathbb{K}^n$
+        - per dimostrazione precedente $A_1, \ldots, A_n$ generatori di $\mathbb{K}^n \iff A_1, \ldots, A_n$ linearmente indipententi
+        - allora, $A_1, \ldots, A_n$ base di $\mathbb{K}^n$
+        - è possibile ripetere il ragionamento analogo per $A^1, \ldots, A^n$
+    - 3 $\land$ 4 $\iff$ 5
+        - per definizione di $\det$, $\det(A) \neq 0 \iff A_1, \ldots, A_n$ e $A^1, \ldots, A^n$ basi di $\mathbb{K}^n$
+    - **⚠️ TODO**
 
 ****
 

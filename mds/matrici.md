@@ -439,6 +439,17 @@
 > - $A \in \textrm{Mat}_{n \times n}(\mathbb{K})$
 > - $A$ è detta **triangolare $\iff$** $A$ triangolare superiore o triangolare inferiore
 
+## Oss
+
+- **Hp**
+    - $\mathbb{K}$ campo
+    - $n \in \mathbb{N}$
+    - $A \in \textrm{Mat}_{n \times n}(\mathbb{K}) \mid A$ triangolare
+- **Th**
+    - $\det(A) = a_{1,1} \cdot \ldots \cdot a_{n, n}$
+
+## Def
+
 - **Matrice triangolarizzabile**
 
 > - $\mathbb{K}$ campo
