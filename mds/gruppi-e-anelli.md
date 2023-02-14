@@ -480,8 +480,12 @@
     - $\ker(f) := \{n \in \mathbb{Z} \mid f(n) = g^n = 1_{H(g)}\} =: I(g)$
     - allora $\mathbb{Z} / I(g) = \mathbb{Z} / \ker(f) \cong \textrm{im}(f)$ per il teorema di isomorfismo
     - $\textrm{im}(f) := \{g^n \in H(g) \mid \exists n \in \mathbb{Z} : f(n) = g^n\} =: H(g)$
-    - per dimostrazione precedente $\exists ! d \in \mathbb{N} \mid I(d) = I(g)$, dove $\left \{ \begin{array}{l} d = 0 \implies o(g) = + \infty \\ d \gt 0 \implies o(g) = d \end{array} \right.$
-    - allora $H(g) = \textrm{im}(f) \cong \mathbb{Z}/ \ker(f) = \mathbb{Z}/I(d) = \left \{ \begin{array}{ll} \mathbb{Z} & o(g) = + \infty \\ \mathbb{Z}_d & o(g) = d\end{array} \right.$
+    - per dimostrazione precedente $\exists ! d \in I(g)_{\ge 0} \mid I(g) = I(d)$, dove $\left \{ \begin{array}{l} d = 0 \implies o(g) = + \infty \\ d \gt 0 \implies o(g) = d \end{array} \right.$
+    - allora $H(g) = \textrm{im}(f) \cong \mathbb{Z}/ \ker(f) = \mathbb{Z}/I(d) = \mathbb{Z}_d$
+    - in particolare $d = 0 \implies \mathbb{Z}/I(0) =: \mathbb{Z}_0 \cong H(g)$
+    - considerando $\mathbb{Z}_0$, si ha che $\forall x, y \in \mathbb{Z} \quad x \sim_S y \iff y - x \in I(0) \iff \exists k \in \mathbb{Z} \mid y - x = 0 \cdot k = 0 \iff x = y$, dunque $\mathbb{Z}_0$ conterrà esclusivamente classi laterali di singoli elementi, allora $\pi: \mathbb{Z} \rightarrow \mathbb{Z}_0: x \rightarrow [x]$ è biiettiva, e per come è definito $+$ in $\mathbb{Z}_0$ è anche morfismo
+    - allora poiché $\pi$ isomorfismo, si ha che $\mathbb{Z}_0 \cong \mathbb{Z}$, allora per transitività di $\cong$ si ha che $d = 0 \implies H(g) \cong \mathbb{Z}_0 \land \mathbb{Z}_0 \cong \mathbb{Z} \implies H(g) \cong \mathbb{Z}$
+    - allora $H(g) \cong \left \{ \begin{array}{ll} \mathbb{Z} & o(g) = + \infty \\ \mathbb{Z}_d & o(g) = d\end{array} \right.$
 
 ## Oss
 

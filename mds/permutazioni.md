@@ -255,8 +255,9 @@
     - $\textrm{sgn}(\textrm{id}) = (-1)^0 = 1$, in quanto $\textrm{id}$ non ha inversioni, dunque $\textrm{id} \in \mathcal{A}_n$
     - $\sigma, \sigma' \in \mathcal{A}_n \implies \textrm{sgn}(\sigma)=\textrm{sgn}(\sigma')=1 \implies \textrm{sgn}(\sigma)\cdot\textrm{sgn}(\sigma') = 1 = \textrm{sgn}(\sigma \sigma')$ per dimostrazione precedente $\implies \sigma \sigma' \in \mathcal{A}_n$
     - $\sigma \in \mathcal{A}_n \implies \textrm{sgn}(\sigma) = 1 = \textrm{sgn}(\sigma^{-1})$ per dimostrazione predecente $\implies \sigma^{-1} \in \mathcal{A}_n$
-    - $\mathcal{A}_n \trianglelefteq \mathcal{S}_n \iff \forall \sigma \in \mathcal{A}_n, \alpha \in \mathcal{S}_n \quad \sigma \alpha \sigma^{-1} \in \mathcal{A}_n$ per dimostrazione precedente
-    - inoltre, per dimostrazione precedente $\textrm{sgn}(\sigma) = 1 = \textrm{sgn}(\sigma \alpha \sigma^{-1}) \implies \sigma \alpha \sigma^{-1} \in \mathcal{A}_n$
+    <!-- - $\mathcal{A}_n \trianglelefteq \mathcal{S}_n \iff \forall \sigma \in \mathcal{A}_n, \alpha \in \mathcal{S}_n \quad \sigma \alpha \sigma^{-1} \in \mathcal{A}_n$ per dimostrazione precedente -->
+    <!-- - inoltre, per dimostrazione precedente $\textrm{sgn}(\sigma) = 1 = \textrm{sgn}(\sigma \alpha \sigma^{-1}) \implies \sigma \alpha \sigma^{-1} \in \mathcal{A}_n$ -->
+    - $\sigma \in \mathcal{S}_n, \alpha \in \mathcal{A}_n \implies \left \{ \begin{array}{l} \textrm{sgn}(\sigma \alpha \sigma^{-1}) = \textrm{sgn}(\sigma) \cdot \textrm{sgn}(\alpha) \cdot \textrm{sgn}(\sigma^{-1}) = \textrm{sgn}(\sigma) \cdot \textrm{sgn}(\sigma)^{-1} = 1 \\ \textrm{sgn}(\alpha) = 1 \end{array} \right. \implies \sigma \alpha \sigma^{-1} \in \mathcal{A}_n \implies \mathcal{A}_n \trianglelefteq \mathcal{S}_n$
 
 ## Oss
 

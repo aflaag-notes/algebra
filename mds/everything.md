@@ -3349,10 +3349,10 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 ## Definizione 76
 
 
-- **Insieme dei complessi**
+- **Insieme dei numeri complessi**
 
-> - $\mathbb{C}:=\left\{a+i b \mid a, b \in \mathbb{R}, \  i : i^{2}=-1\right\}$ è l'**insieme dei complessi**
-> - $\forall z \in \mathbb{C} \quad \left\{\begin{array}{l}a:=\operatorname{Re}(z) \\ b:=\operatorname{Im}(z)\end{array}\right.$
+> - $\mathbb{C}:=\left\{a+i b \mid a, b \in \mathbb{R}, \  i : i^{2}=-1\right\}$ è detto **insieme dei numeri complessi**
+> - $\forall z \in \mathbb{C} \quad \left\{\begin{array}{l}a:=\operatorname{Re}(z) \\ b:=\operatorname{Im}(z)\end{array}\right.$, dove $a$ è detta **parte reale** e $b$ è detta **parte immaginaria**
 
 
 
@@ -3376,7 +3376,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 > - $a, b \in \mathbb{R}$
 > - $z \in \mathbb{C} \mid z=a+i b$
-> - $\bar{z}:=a-i b$ è il **coniugato** di $z$
+> - $\bar{z}:=a-i b$ è detto **coniugato di $z$**
 
 
 
@@ -3410,7 +3410,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 > - $a, b \in \mathbb{R}$
 > - $z \in \mathbb{C} \mid z = a+ib$
-> - $|z|:=\sqrt{a^{2}+b^{2}}$ è il **raggio** di $z$
+> - $|z|:=\sqrt{a^{2}+b^{2}}$ è detto **raggio di $z$**
 >   - corrisponde alla distanza di $z$ dall'origine nel piano di Gauss
 
 
@@ -3421,7 +3421,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Forma polare**
 
 > - $a, b \in \mathbb{C}$
-> - $z \in \mathbb{C}-\{0\}$
+> - $z \in \mathbb{C}$
 > - $z=|z|\cdot e^{i \theta}$ è detta **forma polare di $z$**
 
 
@@ -3433,7 +3433,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 > - $a, b \in \mathbb{R}$
 > - $z \in \mathbb{C} \mid z = a + i b$
-> - $\arg(z) \subset \mathbb{R}$ è l'**insieme delle soluzioni** del sistema $\left\{\begin{array}{l}\cos \theta=\frac{a}{|z|} \\ \sin \theta=\frac{b}{|z|}\end{array}\right.$
+> - $\arg(z) \subset \mathbb{R}$ è detto **insieme delle soluzioni** del sistema $\left\{\begin{array}{l}\cos (\theta)=\frac{a}{|z|} \\ \sin (\theta)=\frac{b}{|z|}\end{array}\right.$
 > - per definizione di $\textrm{arg}(z) \quad \exists ! \theta \mid 0 \leq \theta \le 2 \pi$ tale che $\theta$ sia soluzione del sistema, e questo prende il nome di $\textrm{Arg}(z)$, detta **soluzione principale**
 
 
@@ -3466,6 +3466,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
     - $z \in \mathbb{C}$
 - **Th**
     - $z^{n}=|z|^{n} e^{i  \theta n} \quad \arg \left( z^{n} \right)=n \arg (z)$
+
 
 
 

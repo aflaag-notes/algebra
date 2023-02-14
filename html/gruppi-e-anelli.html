@@ -1203,13 +1203,31 @@ g^n = 1_{H(g)}\} =: I(g)</span></li>
 <li><span class="math inline">\textrm{im}(f) := \{g^n \in H(g) \mid
 \exists n \in \mathbb{Z} : f(n) = g^n\} =: H(g)</span></li>
 <li>per dimostrazione precedente <span class="math inline">\exists ! d
-\in \mathbb{N} \mid I(d) = I(g)</span>, dove <span
+\in I(g)_{\ge 0} \mid I(g) = I(d)</span>, dove <span
 class="math inline">\left \{ \begin{array}{l} d = 0 \implies o(g) = +
 \infty \\ d \gt 0 \implies o(g) = d \end{array} \right.</span></li>
 <li>allora <span class="math inline">H(g) = \textrm{im}(f) \cong
-\mathbb{Z}/ \ker(f) = \mathbb{Z}/I(d) = \left \{ \begin{array}{ll}
-\mathbb{Z} &amp; o(g) = + \infty \\ \mathbb{Z}_d &amp; o(g) =
-d\end{array} \right.</span></li>
+\mathbb{Z}/ \ker(f) = \mathbb{Z}/I(d) = \mathbb{Z}_d</span></li>
+<li>in particolare <span class="math inline">d = 0 \implies
+\mathbb{Z}/I(0) =: \mathbb{Z}_0 \cong H(g)</span></li>
+<li>considerando <span class="math inline">\mathbb{Z}_0</span>, si ha
+che <span class="math inline">\forall x, y \in \mathbb{Z} \quad x \sim_S
+y \iff y - x \in I(0) \iff \exists k \in \mathbb{Z} \mid y - x = 0 \cdot
+k = 0 \iff x = y</span>, dunque <span
+class="math inline">\mathbb{Z}_0</span> conterrà esclusivamente classi
+laterali di singoli elementi, allora <span class="math inline">\pi:
+\mathbb{Z} \rightarrow \mathbb{Z}_0: x \rightarrow [x]</span> è
+biiettiva, e per come è definito <span class="math inline">+</span> in
+<span class="math inline">\mathbb{Z}_0</span> è anche morfismo</li>
+<li>allora poiché <span class="math inline">\pi</span> isomorfismo, si
+ha che <span class="math inline">\mathbb{Z}_0 \cong \mathbb{Z}</span>,
+allora per transitività di <span class="math inline">\cong</span> si ha
+che <span class="math inline">d = 0 \implies H(g) \cong \mathbb{Z}_0
+\land \mathbb{Z}_0 \cong \mathbb{Z} \implies H(g) \cong
+\mathbb{Z}</span></li>
+<li>allora <span class="math inline">H(g) \cong \left \{
+\begin{array}{ll} \mathbb{Z} &amp; o(g) = + \infty \\ \mathbb{Z}_d &amp;
+o(g) = d\end{array} \right.</span></li>
 </ul></li>
 </ul>
 <a href="#oss-22"><h2 id="oss-22">Oss</h2></a>
