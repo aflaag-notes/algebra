@@ -126,13 +126,10 @@
 - **Th**
   - $(A^*, \cdot)$ è un gruppo
 - **Dim**
-    - _associatività_
-        - $(xy)z = x(yz)$
-    - _neutro_
-        - $1^{-1} = 1 \implies 1$ invertibile $\implies 1 \in A^*$ per definizione di $A^*$
-    - _inversi_
-        - $\forall x \in A^{*} \quad \exists x^{-1}$ per definizione di $A^*$, ma poiché $x^{-1}$ è inverso di $x$, allora $x^{-1} \in A^*$ per definizione
-            - $x \in A^* \iff x, x^{-1} \in A^*$
+    - $(xy)z = x(yz)$
+    - $1^{-1} = 1 \implies 1$ invertibile $\implies 1 \in A^*$ per definizione di $A^*$
+    - $\forall x \in A^{*} \quad \exists x^{-1}$ per definizione di $A^*$, ma poiché $x^{-1}$ è inverso di $x$, allora $x^{-1} \in A^*$ per definizione
+        - $x \in A^* \iff x, x^{-1} \in A^*$
 
 ## Def
 
@@ -198,8 +195,9 @@
 
 - **Hp**
     - $A$ dominio di integrità
+    - $a \in A \mid a$ primo
 - **Th**
-    - $\forall a \in A \quad a$ primo $\implies a$ irriducibile
+    - $a$ irriducibile
 - **Dim**
     - si supponga $\exists b, c \in A \mid a = bc$
     - $\forall a \in A \quad a \mid a$ per riflessività

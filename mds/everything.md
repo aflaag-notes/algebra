@@ -211,8 +211,9 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 - **Hp**
     - $A$ dominio di integrità
+    - $a \in A \mid a$ primo
 - **Th**
-    - $\forall a \in A \quad a$ primo $\implies a$ irriducibile
+    - $a$ irriducibile
 
 ## Teorema 10
 
