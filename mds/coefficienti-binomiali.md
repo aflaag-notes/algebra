@@ -6,7 +6,7 @@
 
 > - $0! := 1$
 > - $n, k \in \mathbb{N}$
-> - $\displaystyle \binom{n}{k}:=\left\{\begin{array}{ll}\frac{n !}{n !(n-k) !} & k \leqslant n \\ 0 & k>n\end{array}\right.$
+> - $\displaystyle \binom{n}{k}:=\left\{\begin{array}{ll}\dfrac{n !}{n !(n-k) !} & k \leqslant n \\ \\ 0 & k>n\end{array}\right.$ è detto **coefficiente binomiale di $n$ su $k$**
 
 ## Oss
 
@@ -53,7 +53,7 @@
   - $\displaystyle \binom{p}{k} \cdot[a]=\left[\displaystyle{\binom{p}{k}} \cdot a\right]$
   - per il dimostrazione precedente, $\displaystyle{p \ \bigg\vert \binom{p}{k}}$, quindi $\displaystyle \binom{p}{k} \cdot a$ è anch'esso multiplo di $p$, e di conseguenza $\left[\displaystyle \binom{p}{k} \cdot a\right] = [0]$ in $\mathbb{Z}_p$
 
-## Cor
+## Oss
 
 - **Hp**
   - $p \in \mathbb{P}$

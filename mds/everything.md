@@ -3473,7 +3473,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 > - $0! := 1$
 > - $n, k \in \mathbb{N}$
-> - $\displaystyle \binom{n}{k}:=\left\{\begin{array}{ll}\frac{n !}{n !(n-k) !} & k \leqslant n \\ 0 & k>n\end{array}\right.$
+> - $\displaystyle \binom{n}{k}:=\left\{\begin{array}{ll}\dfrac{n !}{n !(n-k) !} & k \leqslant n \\ \\ 0 & k>n\end{array}\right.$ è detto **coefficiente binomiale di $n$ su $k$**
 
 
 
@@ -3542,9 +3542,8 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 - **Induzione**
 
-> - successione di proposizioni infinita $P_{1}, P_{2}, P_{3}, \ldots$
->  - $\left\{\begin{array}{l}P_{1} \textrm{ vera}\\ P_{1}, P_{2}, P_{3}, \ldots, P_{n} \implies P_{n+1} \quad \forall n \ge 1 \end{array}\right.$
->  - allora $P_n$ vera $\forall n$
+> - $P_{1}, P_{2}, P_{3}, \ldots$ successione infinita di proposizioni $\mid P_{1}$ vera e $\forall n \ge 1 \quad P_{1}, \ldots, P_{n} \implies P_{n+1}$
+> - allora $\forall n \quad P_n$ vera
 
 
 
@@ -3552,9 +3551,9 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 - **Hp**
-  - $\left\{\begin{array}{l}F_0 = 0 \\ F_1 = 1 \\ F_n = F_{n - 1} + F_{n - 2} \quad \forall n \ge 2\end{array}\right.$ è detta _sequenza di Fibonacci_
+  - $\left\{\begin{array}{l}F_0 = 0 \\ F_1 = 1 \\ F_n = F_{n - 1} + F_{n - 2} \quad n \ge 2\end{array}\right.$ è detta _sequenza di Fibonacci_
 
-  - $x^2 -x -1 = 0$ ha come soluzioni $\left\{\begin{array}{l}\phi := \dfrac{1+\sqrt{5}}{2} \\ \psi := \dfrac{1 - \sqrt{5}}{2}\end{array}\right.$
+  - $x^2 -x -1 = 0$ ha come soluzioni $\left\{\begin{array}{l}\varphi := \dfrac{1+\sqrt{5}}{2} \\ \psi := \dfrac{1 - \sqrt{5}}{2}\end{array}\right.$
 - **Th**
   - $\forall n \in \mathbb{N} \quad F_{n}=\dfrac{\varphi^{n}-\psi^{n}}{\varphi-\psi}=\dfrac{\varphi^{n}-\psi^{n}}{\sqrt{5}}$
 
