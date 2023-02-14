@@ -78,18 +78,6 @@
 - **Hp**
     - $\mathbb{K}$ campo
     - $n \in \mathbb{N}$
-    - $A, B \in \textrm{Mat}_{n \times n}(\mathbb{K}) \mid A$ simile a $B$
-- **Th**
-    - $\det(A) = \det(B)$
-- **Dim**
-    - $A$ simile a $B \implies \exists C \in \textrm{GL}(n, \mathbb{K}) \mid A = C^{-1}BC$
-    - allora $\det(A)= \det(C^{-1}BC) = \det(C)^{-1}\cdot \det(B)\cdot \det(C) = \det(B)$
-
-## Oss
-
-- **Hp**
-    - $\mathbb{K}$ campo
-    - $n \in \mathbb{N}$
     - $\lambda \in \mathbb{K}$
     - $A \in \textrm{Mat}_{n \times n}(\mathbb{K})$
     - $A' = \left(\begin{array}{c}A_1 \\ \vdots \\ \lambda A_i \\ \vdots \\ A_n \end{array}\right)$
@@ -109,18 +97,18 @@
 
 ## Def
 
-- **Aggiunta di una matrice**
+- **Matrice dei cofattori**
 
 > - $\mathbb{K}$ campo
-> - $n \in \mathbb{N} - \{0\}$
+> - $n \in \mathbb{N}$
 > - $A \in \textrm{Mat}_{n \times n}(\mathbb{K})$
-> - $A^*$ è detta **aggiunta di $A$** $\iff \forall i, j \in [1, n] \quad a^*_{i, j} = (-1)^{i + j}\cdot \det(A_i^j)$
+> - $A^*$ è detta **matrice dei cofattori di $A$** $\iff \forall i, j \in [1, n] \quad a^*_{i, j} = (-1)^{i + j}\cdot \det(A_i^j)$
 
 ## Oss
 
 - **Hp**
     - $\mathbb{K}$ campo
-    - $n \in \mathbb{N} - \{0\}$
+    - $n \in \mathbb{N}$
     - $A \in \textrm{Mat}_{n \times n}(\mathbb{K}) \mid \det(A) \neq 0$
 - **Th**
     - $A^{-1}=\dfrac{(A^*)^T}{\det(A)}$
@@ -151,7 +139,7 @@
     - le proposizioni sono equivalenti
 - **Dim**
     - 1 $\iff$ 2
-        - **⚠️ me puzza**
+        - **⚠️ dimostra roba sullo span**
         - sia $B = (B^1, \ldots, B^n) \in \textrm{Mat}_{n \times n}(\mathbb{K}) \mid A \cdot B = B \cdot A = I_n$
         - allora $I_n = A \cdot B = (A \cdot B^1, \ldots, A \cdot B^n) = (L_A(B^1), \ldots, L_A(B^n)) \iff \left \{ \begin{array}{c} L_A(B^1) = e_1 \\  \vdots \\  L_A(B^n) = e_n \end{array} \right.\iff e_1, \ldots, e_n \in \textrm{im}(L_A) \implies \textrm{span}(e_1, \ldots, e_n) \subseteq \textrm{im}(L_A)$
         - $e_1, \ldots, e_n$ base canonica di $\mathbb{K}^n \implies \dim(\textrm{span}(e_1, \ldots, e_n)) = n$, allora segue necessariamente che $\textrm{span}(e_1, \ldots, e_n) \subseteq \textrm{im}(L_A) \iff \textrm{span}(e_1, \ldots, e_n) = \textrm{im}(L_A)$ 
@@ -165,7 +153,8 @@
         - è possibile ripetere il ragionamento analogo per $A^1, \ldots, A^n$
     - 3 $\land$ 4 $\iff$ 5
         - per definizione di $\det$, $\det(A) \neq 0 \iff A_1, \ldots, A_n$ e $A^1, \ldots, A^n$ basi di $\mathbb{K}^n$
-    - **⚠️ TODO**
+    - 2 $\iff$ 6 $\land$ 7
+        - per definizione delle operazioni su righe e colonne, si ha che $\textrm{rk}(A) = n \iff A \equiv_R I_n$ oppure $A \equiv_C I_n$, poiché rimarranno solamente gli $1$ sulla diagonale e tutti gli altri elementi possono diventare $0$
 
 ****
 
@@ -174,7 +163,7 @@
 ## Def
 
 > - $\mathbb{K}$ campo
-> - $n \in \mathbb{N} - \{0\}$
+> - $n \in \mathbb{N}$
 > - $A \in \textrm{Mat}_{n \times n}(\mathbb{K})$
 > - $p_A(x) := \det(x\cdot I_n - A)$ è detto **polinomio caratteristico di $A$**
 
@@ -182,7 +171,7 @@
 
 - **Hp**
     - $\mathbb{K}$ campo
-    - $n \in \mathbb{N} - \{0\}$
+    - $n \in \mathbb{N}$
     - $A \in \textrm{Mat}_{n \times n}(\mathbb{K})$
 - **Th**
     - $p_A(x) = x^n - \textrm{tr}(A)\cdot x^{n -1} + \ldots + (-1)^n \cdot \det(A)$
@@ -201,14 +190,15 @@
 - **Autovalore**
 
 > - $\mathbb{K}$ campo
-> - $n \in \mathbb{N} - \{0\}$
+> - $n \in \mathbb{N}$
 > - $A \in \textrm{Mat}_{n \times n}(\mathbb{K})$
-> - $\lambda \in \mathbb{K} \mid p_A(\lambda) = 0$ è detto **autovalore di $A$**
+> - $\lambda \in \mathbb{K}$
+> - $\lambda$ è detto **autovalore di $A$** $\iff p_A(\lambda) = 0$
 
 - **Spettro**
 
 > - $\mathbb{K}$ campo
-> - $n \in \mathbb{N} - \{0\}$
+> - $n \in \mathbb{N}$
 > - $A \in \textrm{Mat}_{n \times n}(\mathbb{K})$
 > - $\textrm{sp}(A) := \{\lambda \in \mathbb{K} \mid p_A(\lambda) = 0\}$ è detto **spettro di $A$**
 
@@ -216,41 +206,43 @@
 
 - **Hp**
     - $\mathbb{K}$ campo
-    - $n \in \mathbb{N} - \{0\}$
+    - $n \in \mathbb{N}$
     - $A, B \in \textrm{Mat}_{n \times n}(\mathbb{K}) \mid A$ simile a $B$
 - **Th**
     - $\textrm{sp}(A) = \textrm{sp}(B)$
+- **Dim**
+    - $A$ simile a $B \implies p_A(x) = p_B(x)$, allora $\forall \lambda \in \textrm{sp}(A) \quad p_A(\lambda) = p_B(\lambda) = 0 \iff \lambda \in \textrm{sp}(B)$
 
 ## Oss
 
 - **Hp**
     - $\mathbb{K}$ campo
-    - $n \in \mathbb{N} - \{0\}$
+    - $n \in \mathbb{N}$
     - $A \in \textrm{Mat}_{n \times n}(\mathbb{K})$
     - $\lambda \in \mathbb{K}$
 - **Th**
-    - $\lambda$ autovalore $\iff \exists v \in \mathbb{K}^n - \{0\} \mid A \cdot v = \lambda \cdot v$
+    - $\lambda$ autovalore $\iff \exists v \in \mathbb{K}^n - \{0_{\mathbb{K}^n}\} \mid A \cdot v = \lambda \cdot v$
 - **Dim**
-    - $\exists v \in \mathbb{K}^n - \{0\} \mid A \cdot v = \lambda \cdot v = \lambda \cdot I_n \cdot v \iff \exists v \in \mathbb{K}^n - \{0\} \mid (A - \lambda \cdot I_n)\cdot v = 0 \iff v \in \ker(L_{A - \lambda \cdot I_n})$
-    - di conseguenza $\ker(L_{A - \lambda \cdot I_n}) \neq \{0\} \implies \dim(\ker(L_{A - \lambda \cdot I_n})) \gt 0$
-    - per il teorema del rango $\textrm{rk}(L_{A - \lambda \cdot I_n}) = \dim(\mathbb{K}^n) - \dim(\ker(L_{A - \lambda \cdot I_n})) = n - \dim(\ker(L_{A - \lambda \cdot I_n})) \lt n$, in particolare $\textrm{rk}(L_{A-\lambda \cdot I_n}) \neq n$
-    - $\textrm{rk}(L_{A- \lambda \cdot I_n}) \neq n \iff \det(A - \lambda \cdot I_n) = 0$ per dimostrazione precedente, e $\det(A - \lambda \cdot I_n) = p_A(\lambda) = 0 \iff \lambda$ autovalore
+    - $\exists v \in \mathbb{K}^n - \{0_{\mathbb{K}^n}\} \mid A \cdot v = \lambda \cdot v = \lambda \cdot I_n \cdot v \iff \exists v \in \mathbb{K}^n - \{0_{\mathbb{K}^n}\} \mid (A - \lambda \cdot I_n)\cdot v = 0 \iff v \in \ker(L_{A - \lambda \cdot I_n}) \iff \ker(L_{A - \lambda \cdot I_n}) \neq \varnothing \implies \dim(\ker(L_{A - \lambda \cdot I_n})) \gt 0$
+    - per il teorema del rango $\textrm{rk}(L_{A - \lambda \cdot I_n}) = \dim(\mathbb{K}^n) - \dim(\ker(L_{A - \lambda \cdot I_n})) = n - \dim(\ker(L_{A - \lambda \cdot I_n})) \lt n$, e in particolare $\textrm{rk}(L_{A-\lambda \cdot I_n}) \neq n$
+    - $\textrm{rk}(L_{A- \lambda \cdot I_n}) \neq n \iff \det(A - \lambda \cdot I_n) = 0$ per dimostrazione precedente, e $\det(A - \lambda \cdot I_n) := p_A(\lambda) = 0 \iff \lambda$ autovalore
 
 ## Def
 
 - **Autovettore relativo ad un autovalore**
 
 > - $\mathbb{K}$ campo
-> - $n \in \mathbb{N} - \{0\}$
+> - $n \in \mathbb{N}$
 > - $A \in \textrm{Mat}_{n \times n}(\mathbb{K})$
 > - $\lambda \in \textrm{sp}(A)$
-> - $v \in \mathbb{K}^n - \{0\}$ è detto **autovettore di $A$ relativo a $\lambda$** $\iff (A- \lambda \cdot I_n) \cdot v = 0$
+> - $v \in \mathbb{K}^n - \{0_{\mathbb{K}^n}\}$
+> - $v$ è detto **autovettore di $A$ relativo a $\lambda$** $\iff (A- \lambda \cdot I_n) \cdot v = 0$
 
 ## Oss
 
 - **Hp**
     - $\mathbb{K}$ campo
-    - $n \in \mathbb{N} - \{0\}$
+    - $n \in \mathbb{N}$
     - $A \in \textrm{Mat}_{n \times n}(\mathbb{K})$
     - $\lambda_1, \ldots, \lambda_k \in \textrm{sp}(A)$
     - $v_1, \ldots, v_k$ autovettori di $A$ relativi rispettivamente a $\lambda_1, \ldots, \lambda_k$
@@ -262,17 +254,17 @@
 - **Autospazio relativo ad un autovalore**
 
 > - $\mathbb{K}$ campo
-> - $n \in \mathbb{N} - \{0\}$
+> - $n \in \mathbb{N}$
 > - $A \in \textrm{Mat}_{n \times n}(\mathbb{K})$
 > - $\lambda \in \textrm{sp}(A)$
 > - $\textrm{E}_\lambda(A) := \{v \in \mathbb{K}^n \mid (A - \lambda \cdot I_n) \cdot v = 0\}$ è detto **autospazio di $A$ relativo a $\lambda$**
->   - in particolare $0_{\mathbb{K}^n} \in \textrm{E}_\lambda(A)$
+>   - in particolare $0_{\mathbb{K}^n} \in \textrm{E}_\lambda(A)$, altrimenti non sarebbe sottospazio vettoriale
 
 ## Oss
 
 - **Hp**
     - $\mathbb{K}$ campo
-    - $n \in \mathbb{N} - \{0\}$
+    - $n \in \mathbb{N}$
     - $A \in \textrm{Mat}_{n \times n}(\mathbb{K})$
     - $\lambda \in \textrm{sp}(A)$
 - **Th**
@@ -283,27 +275,15 @@
 - **Molteplicità algebrica di un autovalore**
 
 > - $\mathbb{K}$ campo
-> - $n \in \mathbb{N} - \{0\}$
+> - $n \in \mathbb{N}$
 > - $A \in \textrm{Mat}_{n \times n}(\mathbb{K})$
 > - $\lambda \in \textrm{sp}(A)$
 > - $\mu(\lambda) := \max(\{\varepsilon \in \mathbb{N} : (x - \lambda)^\varepsilon \mid p_A(x)\})$ è detta **molteplicità algebrica di $\lambda$**
 
-## Oss
-
-- **Hp**
-    - $\mathbb{K}$ campo
-    - $n \in \mathbb{N} - \{0\}$
-    - $A, B \in \textrm{Mat}_{n \times n}(\mathbb{K}) \mid A$ simile a $B$
-    - $\lambda \in \textrm{sp}(A) = \textrm{sp}(B)$
-- **Th**
-    - $\mu_A(\lambda) = \mu_B(\lambda)$
-
-## Def
-
 - **Molteplicità geometrica di un autovalore**
 
 > - $\mathbb{K}$ campo
-> - $n \in \mathbb{N} - \{0\}$
+> - $n \in \mathbb{N}$
 > - $A \in \textrm{Mat}_{n \times n}(\mathbb{K})$
 > - $\lambda \in \textrm{sp}(A)$
 > - $\nu(\lambda):=\dim(\textrm{E}_\lambda(A))$ è detta **molteplicità geometrica di $\lambda$**
@@ -316,27 +296,27 @@
     - $A, B \in \textrm{Mat}_{n \times n}(\mathbb{K}) \mid A$ simile a $B$
     - $\lambda \in \textrm{sp}(A) = \textrm{sp}(B)$
 - **Th**
+    - $\mu_A(\lambda) = \mu_B(\lambda)$
     - $\nu_A(\lambda) = \nu_B(\lambda)$
 
 ## Oss
 
 - **Hp**
     - $\mathbb{K}$ campo
-    - $n \in \mathbb{N} - \{0\}$
+    - $n \in \mathbb{N}$
     - $A \in \textrm{Mat}_{n \times n}(\mathbb{K})$
     - $\lambda \in \textrm{sp}(A)$
 - **Th**
     - $\nu(\lambda) = n - \textrm{rk}(A - \lambda \cdot I_n)$
 - **Dim**
-    - $\nu(\lambda) = \dim(\textrm{E}_\lambda(A))$ per definizione
     - $\textrm{E}_\lambda(A) := \{v \in \mathbb{K}^n \mid (A - \lambda \cdot I_n) \cdot v = 0\}$ per definizione, allora $\textrm{E}_\lambda(A) = \ker(L_{A- \lambda \cdot I_n})$
-    - allora, per il teorema del rango $\textrm{rk}(L_{A - \lambda \cdot I_n}) = n - \dim(\ker(L_{A - \lambda \cdot I_n})) \iff  \dim(\ker(L_{A - \lambda \cdot I_n})) = n - \textrm{rk}(L_{A - \lambda \cdot I_n}) = \dim(\textrm{E}_\lambda(A)) = \nu(\lambda)$
+    - allora, per il teorema del rango $\textrm{rk}(L_{A - \lambda \cdot I_n}) = n - \dim(\ker(L_{A - \lambda \cdot I_n})) \iff  \dim(\ker(L_{A - \lambda \cdot I_n})) = n - \textrm{rk}(L_{A - \lambda \cdot I_n}) = \dim(\textrm{E}_\lambda(A)) =: \nu(\lambda)$
 
 ## Oss
 
 - **Hp**
     - $\mathbb{K}$ campo
-    - $n \in \mathbb{N} - \{0\}$
+    - $n \in \mathbb{N}$
     - $A \in \textrm{Mat}_{n \times n}(\mathbb{K})$
     - $\lambda \in \textrm{sp}(A)$
 - **Th**
@@ -346,7 +326,7 @@
 
 - **Hp**
     - $\mathbb{K}$ campo
-    - $n \in \mathbb{N} - \{0\}$
+    - $n \in \mathbb{N}$
     - $A \in \textrm{Mat}_{n \times n}(\mathbb{K})$
     1. $A$ triangolarizzabile
     2. $\displaystyle \sum_{\lambda \in \textrm{sp}(A)}{\mu(\lambda)} = n$
@@ -357,17 +337,17 @@
 ## Oss
 
 - **Hp**
-    - $n \in \mathbb{N} - \{0\}$
+    - $n \in \mathbb{N}$
     - $A \in \textrm{Mat}_{n \times n}(\mathbb{C})$
 - **Th**
     - $A$ è triangolarizzabile
 - **Dim**
-    - per dimostrazione precedente $A$ triangolarizzabile $\iff \displaystyle p_A(x) = \prod_{\lambda \in \textrm{sp}(A)}{(x - \lambda)}^{\mu(\lambda)}$, e per il teorema fondamentale dell'algebra, in $\mathbb{C}$ è sempre possibile fattorizzare un polinomio in polinomi di grado $1$
+    - per dimostrazione precedente $A$ triangolarizzabile $\iff \displaystyle p_A(x) = \prod_{\lambda \in \textrm{sp}(A)}{(x - \lambda)}^{\mu(\lambda)}$, e per il teorema fondamentale dell'algebra, in $\mathbb{C}$ è sempre possibile fattorizzare un polinomio in polinomi di grado $1 \implies$ ogni matrice in $\textrm{Mat}_{n \times n}(\mathbb{C})$ è triangolarizzabile
 
 ## Oss
 
 - **Hp**
-    - $n \in \mathbb{N} - \{0\}$
+    - $n \in \mathbb{N}$
     - $A \in \textrm{Mat}_{n \times n}(\mathbb{R})$
 - **Th**
     - $A$ triangolarizzabile $\iff \forall \lambda \in \textrm{sp}(A) \quad \lambda \in \mathbb{R}$
@@ -376,7 +356,7 @@
 
 - **Hp**
     - $\mathbb{K}$ campo
-    - $n \in \mathbb{N} - \{0\}$
+    - $n \in \mathbb{N}$
     - $A \in \textrm{Mat}_{n \times n}(\mathbb{K})$
     1. $A$ diagonalizzabile
     2. $\displaystyle \sum_{\lambda \in \textrm{sp}(A)}{\nu(\lambda)} = n$
@@ -388,8 +368,9 @@
 
 - **Hp**
     - $\mathbb{K}$ campo
-    - $n \in \mathbb{N} - \{0\}$
+    - $n \in \mathbb{N}$
     - $A \in \textrm{Mat}_{n \times n}(\mathbb{K})$
     - $B^1, \ldots, B^n$ autovettori di $A \mid B = (B^1, \ldots, B^n) \in \textrm{GL}(n, \mathbb{K}) \land B^1, \ldots, B^n$ base di $\mathbb{K}^n$
 - **Th**
-    - $A$ diagonalizzabile
+    - $A$ diagonalizzabile, dove $B$ è la matrice diagonalizzante
+

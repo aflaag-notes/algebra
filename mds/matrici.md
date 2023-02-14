@@ -398,6 +398,18 @@
 > - $A, B \in \textrm{Mat}_{n \times n}(\mathbb{K})$
 > - $A$ è detta **simile a $B$** $\iff \exists C \in \textrm{GL}(n, \mathbb{K}) \mid A = C^{-1}BC$
 
+## Oss
+
+- **Hp**
+    - $\mathbb{K}$ campo
+    - $n \in \mathbb{N}$
+    - $A, B \in \textrm{Mat}_{n \times n}(\mathbb{K}) \mid A$ simile a $B$
+- **Th**
+    - $\det(A) = \det(B)$
+- **Dim**
+    - $A$ simile a $B \implies \exists C \in \textrm{GL}(n, \mathbb{K}) \mid A = C^{-1}BC$
+    - allora $\det(A)= \det(C^{-1}BC) = \det(C)^{-1}\cdot \det(B)\cdot \det(C) = \det(B)$
+
 ## Def
 
 - **Traccia**
@@ -471,6 +483,7 @@
 > - $n \in \mathbb{N}$
 > - $A \in \textrm{Mat}_{n \times n}(\mathbb{K})$
 > - $A$ è detta **diagonalizzabile** $\iff \exists B \in \textrm{Mat}_{n \times n}(\mathbb{K}) \mid B$ diagonale $\land \ B$ simile ad $A$
+>   - in particolare $B$ è detta _matrice diagonalizzante_
 
 ## Oss
 

@@ -363,29 +363,6 @@ n}(\mathbb{K})</span></li>
 <ul>
 <li><span class="math inline">\mathbb{K}</span> campo</li>
 <li><span class="math inline">n \in \mathbb{N}</span></li>
-<li><span class="math inline">A, B \in \textrm{Mat}_{n \times
-n}(\mathbb{K}) \mid A</span> simile a <span
-class="math inline">B</span></li>
-</ul></li>
-<li><strong>Th</strong>
-<ul>
-<li><span class="math inline">\det(A) = \det(B)</span></li>
-</ul></li>
-<li><strong>Dim</strong>
-<ul>
-<li><span class="math inline">A</span> simile a <span
-class="math inline">B \implies \exists C \in \textrm{GL}(n, \mathbb{K})
-\mid A = C^{-1}BC</span></li>
-<li>allora <span class="math inline">\det(A)= \det(C^{-1}BC) =
-\det(C)^{-1}\cdot \det(B)\cdot \det(C) = \det(B)</span></li>
-</ul></li>
-</ul>
-<a href="#oss-5"><h2 id="oss-5">Oss</h2></a>
-<ul>
-<li><strong>Hp</strong>
-<ul>
-<li><span class="math inline">\mathbb{K}</span> campo</li>
-<li><span class="math inline">n \in \mathbb{N}</span></li>
 <li><span class="math inline">\lambda \in \mathbb{K}</span></li>
 <li><span class="math inline">A \in \textrm{Mat}_{n \times
 n}(\mathbb{K})</span></li>
@@ -421,26 +398,26 @@ n}(\mathbb{K})</span></li>
 </ul>
 <a href="#def-1"><h2 id="def-1">Def</h2></a>
 <ul>
-<li><strong>Aggiunta di una matrice</strong></li>
+<li><strong>Matrice dei cofattori</strong></li>
 </ul>
 <blockquote>
 <ul>
 <li><span class="math inline">\mathbb{K}</span> campo</li>
-<li><span class="math inline">n \in \mathbb{N} - \{0\}</span></li>
+<li><span class="math inline">n \in \mathbb{N}</span></li>
 <li><span class="math inline">A \in \textrm{Mat}_{n \times
 n}(\mathbb{K})</span></li>
-<li><span class="math inline">A^*</span> è detta <strong>aggiunta di
-<span class="math inline">A</span></strong> <span
+<li><span class="math inline">A^*</span> è detta <strong>matrice dei
+cofattori di <span class="math inline">A</span></strong> <span
 class="math inline">\iff \forall i, j \in [1, n] \quad a^*_{i, j} =
 (-1)^{i + j}\cdot \det(A_i^j)</span></li>
 </ul>
 </blockquote>
-<a href="#oss-6"><h2 id="oss-6">Oss</h2></a>
+<a href="#oss-5"><h2 id="oss-5">Oss</h2></a>
 <ul>
 <li><strong>Hp</strong>
 <ul>
 <li><span class="math inline">\mathbb{K}</span> campo</li>
-<li><span class="math inline">n \in \mathbb{N} - \{0\}</span></li>
+<li><span class="math inline">n \in \mathbb{N}</span></li>
 <li><span class="math inline">A \in \textrm{Mat}_{n \times
 n}(\mathbb{K}) \mid \det(A) \neq 0</span></li>
 </ul></li>
@@ -450,7 +427,7 @@ n}(\mathbb{K}) \mid \det(A) \neq 0</span></li>
 class="math inline">A^{-1}=\dfrac{(A^*)^T}{\det(A)}</span></li>
 </ul></li>
 </ul>
-<a href="#oss-7"><h2 id="oss-7">Oss</h2></a>
+<a href="#oss-6"><h2 id="oss-6">Oss</h2></a>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -467,7 +444,7 @@ class="math inline">A^{-1}=\dfrac{(A^*)^T}{\det(A)}</span></li>
 a\end{array}\right)</span></li>
 </ul></li>
 </ul>
-<a href="#oss-8"><h2 id="oss-8">Oss</h2></a>
+<a href="#oss-7"><h2 id="oss-7">Oss</h2></a>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -495,7 +472,7 @@ class="math inline">\mathbb{K}^n</span></li>
 <ul>
 <li>1 <span class="math inline">\iff</span> 2
 <ul>
-<li><strong>⚠️ me puzza</strong></li>
+<li><strong>⚠️ dimostra roba sullo span</strong></li>
 <li>sia <span class="math inline">B = (B^1, \ldots, B^n) \in
 \textrm{Mat}_{n \times n}(\mathbb{K}) \mid A \cdot B = B \cdot A =
 I_n</span></li>
@@ -540,7 +517,16 @@ class="math inline">\det(A) \neq 0 \iff A_1, \ldots, A_n</span> e <span
 class="math inline">A^1, \ldots, A^n</span> basi di <span
 class="math inline">\mathbb{K}^n</span></li>
 </ul></li>
-<li><strong>⚠️ TODO</strong></li>
+<li>2 <span class="math inline">\iff</span> 6 <span
+class="math inline">\land</span> 7
+<ul>
+<li>per definizione delle operazioni su righe e colonne, si ha che <span
+class="math inline">\textrm{rk}(A) = n \iff A \equiv_R I_n</span> oppure
+<span class="math inline">A \equiv_C I_n</span>, poiché rimarranno
+solamente gli <span class="math inline">1</span> sulla diagonale e tutti
+gli altri elementi possono diventare <span
+class="math inline">0</span></li>
+</ul></li>
 </ul></li>
 </ul>
 <hr />
@@ -549,7 +535,7 @@ class="math inline">\mathbb{K}^n</span></li>
 <blockquote>
 <ul>
 <li><span class="math inline">\mathbb{K}</span> campo</li>
-<li><span class="math inline">n \in \mathbb{N} - \{0\}</span></li>
+<li><span class="math inline">n \in \mathbb{N}</span></li>
 <li><span class="math inline">A \in \textrm{Mat}_{n \times
 n}(\mathbb{K})</span></li>
 <li><span class="math inline">p_A(x) := \det(x\cdot I_n - A)</span> è
@@ -557,12 +543,12 @@ detto <strong>polinomio caratteristico di <span
 class="math inline">A</span></strong></li>
 </ul>
 </blockquote>
-<a href="#oss-9"><h2 id="oss-9">Oss</h2></a>
+<a href="#oss-8"><h2 id="oss-8">Oss</h2></a>
 <ul>
 <li><strong>Hp</strong>
 <ul>
 <li><span class="math inline">\mathbb{K}</span> campo</li>
-<li><span class="math inline">n \in \mathbb{N} - \{0\}</span></li>
+<li><span class="math inline">n \in \mathbb{N}</span></li>
 <li><span class="math inline">A \in \textrm{Mat}_{n \times
 n}(\mathbb{K})</span></li>
 </ul></li>
@@ -572,7 +558,7 @@ n}(\mathbb{K})</span></li>
 -1} + \ldots + (-1)^n \cdot \det(A)</span></li>
 </ul></li>
 </ul>
-<a href="#oss-10"><h2 id="oss-10">Oss</h2></a>
+<a href="#oss-9"><h2 id="oss-9">Oss</h2></a>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -594,12 +580,13 @@ class="math inline">B</span></li>
 <blockquote>
 <ul>
 <li><span class="math inline">\mathbb{K}</span> campo</li>
-<li><span class="math inline">n \in \mathbb{N} - \{0\}</span></li>
+<li><span class="math inline">n \in \mathbb{N}</span></li>
 <li><span class="math inline">A \in \textrm{Mat}_{n \times
 n}(\mathbb{K})</span></li>
-<li><span class="math inline">\lambda \in \mathbb{K} \mid p_A(\lambda) =
-0</span> è detto <strong>autovalore di <span
-class="math inline">A</span></strong></li>
+<li><span class="math inline">\lambda \in \mathbb{K}</span></li>
+<li><span class="math inline">\lambda</span> è detto <strong>autovalore
+di <span class="math inline">A</span></strong> <span
+class="math inline">\iff p_A(\lambda) = 0</span></li>
 </ul>
 </blockquote>
 <ul>
@@ -608,7 +595,7 @@ class="math inline">A</span></strong></li>
 <blockquote>
 <ul>
 <li><span class="math inline">\mathbb{K}</span> campo</li>
-<li><span class="math inline">n \in \mathbb{N} - \{0\}</span></li>
+<li><span class="math inline">n \in \mathbb{N}</span></li>
 <li><span class="math inline">A \in \textrm{Mat}_{n \times
 n}(\mathbb{K})</span></li>
 <li><span class="math inline">\textrm{sp}(A) := \{\lambda \in \mathbb{K}
@@ -616,12 +603,12 @@ n}(\mathbb{K})</span></li>
 class="math inline">A</span></strong></li>
 </ul>
 </blockquote>
-<a href="#oss-11"><h2 id="oss-11">Oss</h2></a>
+<a href="#oss-10"><h2 id="oss-10">Oss</h2></a>
 <ul>
 <li><strong>Hp</strong>
 <ul>
 <li><span class="math inline">\mathbb{K}</span> campo</li>
-<li><span class="math inline">n \in \mathbb{N} - \{0\}</span></li>
+<li><span class="math inline">n \in \mathbb{N}</span></li>
 <li><span class="math inline">A, B \in \textrm{Mat}_{n \times
 n}(\mathbb{K}) \mid A</span> simile a <span
 class="math inline">B</span></li>
@@ -631,13 +618,21 @@ class="math inline">B</span></li>
 <li><span class="math inline">\textrm{sp}(A) =
 \textrm{sp}(B)</span></li>
 </ul></li>
+<li><strong>Dim</strong>
+<ul>
+<li><span class="math inline">A</span> simile a <span
+class="math inline">B \implies p_A(x) = p_B(x)</span>, allora <span
+class="math inline">\forall \lambda \in \textrm{sp}(A) \quad
+p_A(\lambda) = p_B(\lambda) = 0 \iff \lambda \in
+\textrm{sp}(B)</span></li>
+</ul></li>
 </ul>
-<a href="#oss-12"><h2 id="oss-12">Oss</h2></a>
+<a href="#oss-11"><h2 id="oss-11">Oss</h2></a>
 <ul>
 <li><strong>Hp</strong>
 <ul>
 <li><span class="math inline">\mathbb{K}</span> campo</li>
-<li><span class="math inline">n \in \mathbb{N} - \{0\}</span></li>
+<li><span class="math inline">n \in \mathbb{N}</span></li>
 <li><span class="math inline">A \in \textrm{Mat}_{n \times
 n}(\mathbb{K})</span></li>
 <li><span class="math inline">\lambda \in \mathbb{K}</span></li>
@@ -645,26 +640,25 @@ n}(\mathbb{K})</span></li>
 <li><strong>Th</strong>
 <ul>
 <li><span class="math inline">\lambda</span> autovalore <span
-class="math inline">\iff \exists v \in \mathbb{K}^n - \{0\} \mid A \cdot
-v = \lambda \cdot v</span></li>
+class="math inline">\iff \exists v \in \mathbb{K}^n -
+\{0_{\mathbb{K}^n}\} \mid A \cdot v = \lambda \cdot v</span></li>
 </ul></li>
 <li><strong>Dim</strong>
 <ul>
-<li><span class="math inline">\exists v \in \mathbb{K}^n - \{0\} \mid A
-\cdot v = \lambda \cdot v = \lambda \cdot I_n \cdot v \iff \exists v \in
-\mathbb{K}^n - \{0\} \mid (A - \lambda \cdot I_n)\cdot v = 0 \iff v \in
-\ker(L_{A - \lambda \cdot I_n})</span></li>
-<li>di conseguenza <span class="math inline">\ker(L_{A - \lambda \cdot
-I_n}) \neq \{0\} \implies \dim(\ker(L_{A - \lambda \cdot I_n})) \gt
-0</span></li>
+<li><span class="math inline">\exists v \in \mathbb{K}^n -
+\{0_{\mathbb{K}^n}\} \mid A \cdot v = \lambda \cdot v = \lambda \cdot
+I_n \cdot v \iff \exists v \in \mathbb{K}^n - \{0_{\mathbb{K}^n}\} \mid
+(A - \lambda \cdot I_n)\cdot v = 0 \iff v \in \ker(L_{A - \lambda \cdot
+I_n}) \iff \ker(L_{A - \lambda \cdot I_n}) \neq \varnothing \implies
+\dim(\ker(L_{A - \lambda \cdot I_n})) \gt 0</span></li>
 <li>per il teorema del rango <span class="math inline">\textrm{rk}(L_{A
 - \lambda \cdot I_n}) = \dim(\mathbb{K}^n) - \dim(\ker(L_{A - \lambda
-\cdot I_n})) = n - \dim(\ker(L_{A - \lambda \cdot I_n})) \lt n</span>,
+\cdot I_n})) = n - \dim(\ker(L_{A - \lambda \cdot I_n})) \lt n</span>, e
 in particolare <span class="math inline">\textrm{rk}(L_{A-\lambda \cdot
 I_n}) \neq n</span></li>
 <li><span class="math inline">\textrm{rk}(L_{A- \lambda \cdot I_n}) \neq
 n \iff \det(A - \lambda \cdot I_n) = 0</span> per dimostrazione
-precedente, e <span class="math inline">\det(A - \lambda \cdot I_n) =
+precedente, e <span class="math inline">\det(A - \lambda \cdot I_n) :=
 p_A(\lambda) = 0 \iff \lambda</span> autovalore</li>
 </ul></li>
 </ul>
@@ -675,22 +669,24 @@ p_A(\lambda) = 0 \iff \lambda</span> autovalore</li>
 <blockquote>
 <ul>
 <li><span class="math inline">\mathbb{K}</span> campo</li>
-<li><span class="math inline">n \in \mathbb{N} - \{0\}</span></li>
+<li><span class="math inline">n \in \mathbb{N}</span></li>
 <li><span class="math inline">A \in \textrm{Mat}_{n \times
 n}(\mathbb{K})</span></li>
 <li><span class="math inline">\lambda \in \textrm{sp}(A)</span></li>
-<li><span class="math inline">v \in \mathbb{K}^n - \{0\}</span> è detto
-<strong>autovettore di <span class="math inline">A</span> relativo a
-<span class="math inline">\lambda</span></strong> <span
+<li><span class="math inline">v \in \mathbb{K}^n -
+\{0_{\mathbb{K}^n}\}</span></li>
+<li><span class="math inline">v</span> è detto <strong>autovettore di
+<span class="math inline">A</span> relativo a <span
+class="math inline">\lambda</span></strong> <span
 class="math inline">\iff (A- \lambda \cdot I_n) \cdot v = 0</span></li>
 </ul>
 </blockquote>
-<a href="#oss-13"><h2 id="oss-13">Oss</h2></a>
+<a href="#oss-12"><h2 id="oss-12">Oss</h2></a>
 <ul>
 <li><strong>Hp</strong>
 <ul>
 <li><span class="math inline">\mathbb{K}</span> campo</li>
-<li><span class="math inline">n \in \mathbb{N} - \{0\}</span></li>
+<li><span class="math inline">n \in \mathbb{N}</span></li>
 <li><span class="math inline">A \in \textrm{Mat}_{n \times
 n}(\mathbb{K})</span></li>
 <li><span class="math inline">\lambda_1, \ldots, \lambda_k \in
@@ -712,7 +708,7 @@ indipendenti</li>
 <blockquote>
 <ul>
 <li><span class="math inline">\mathbb{K}</span> campo</li>
-<li><span class="math inline">n \in \mathbb{N} - \{0\}</span></li>
+<li><span class="math inline">n \in \mathbb{N}</span></li>
 <li><span class="math inline">A \in \textrm{Mat}_{n \times
 n}(\mathbb{K})</span></li>
 <li><span class="math inline">\lambda \in \textrm{sp}(A)</span></li>
@@ -722,16 +718,17 @@ n}(\mathbb{K})</span></li>
 <span class="math inline">\lambda</span></strong>
 <ul>
 <li>in particolare <span class="math inline">0_{\mathbb{K}^n} \in
-\textrm{E}_\lambda(A)</span></li>
+\textrm{E}_\lambda(A)</span>, altrimenti non sarebbe sottospazio
+vettoriale</li>
 </ul></li>
 </ul>
 </blockquote>
-<a href="#oss-14"><h2 id="oss-14">Oss</h2></a>
+<a href="#oss-13"><h2 id="oss-13">Oss</h2></a>
 <ul>
 <li><strong>Hp</strong>
 <ul>
 <li><span class="math inline">\mathbb{K}</span> campo</li>
-<li><span class="math inline">n \in \mathbb{N} - \{0\}</span></li>
+<li><span class="math inline">n \in \mathbb{N}</span></li>
 <li><span class="math inline">A \in \textrm{Mat}_{n \times
 n}(\mathbb{K})</span></li>
 <li><span class="math inline">\lambda \in \textrm{sp}(A)</span></li>
@@ -749,7 +746,7 @@ n}(\mathbb{K})</span></li>
 <blockquote>
 <ul>
 <li><span class="math inline">\mathbb{K}</span> campo</li>
-<li><span class="math inline">n \in \mathbb{N} - \{0\}</span></li>
+<li><span class="math inline">n \in \mathbb{N}</span></li>
 <li><span class="math inline">A \in \textrm{Mat}_{n \times
 n}(\mathbb{K})</span></li>
 <li><span class="math inline">\lambda \in \textrm{sp}(A)</span></li>
@@ -759,7 +756,23 @@ n}(\mathbb{K})</span></li>
 class="math inline">\lambda</span></strong></li>
 </ul>
 </blockquote>
-<a href="#oss-15"><h2 id="oss-15">Oss</h2></a>
+<ul>
+<li><strong>Molteplicità geometrica di un autovalore</strong></li>
+</ul>
+<blockquote>
+<ul>
+<li><span class="math inline">\mathbb{K}</span> campo</li>
+<li><span class="math inline">n \in \mathbb{N}</span></li>
+<li><span class="math inline">A \in \textrm{Mat}_{n \times
+n}(\mathbb{K})</span></li>
+<li><span class="math inline">\lambda \in \textrm{sp}(A)</span></li>
+<li><span
+class="math inline">\nu(\lambda):=\dim(\textrm{E}_\lambda(A))</span> è
+detta <strong>molteplicità geometrica di <span
+class="math inline">\lambda</span></strong></li>
+</ul>
+</blockquote>
+<a href="#oss-14"><h2 id="oss-14">Oss</h2></a>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -775,49 +788,16 @@ class="math inline">B</span></li>
 <ul>
 <li><span class="math inline">\mu_A(\lambda) =
 \mu_B(\lambda)</span></li>
-</ul></li>
-</ul>
-<a href="#def-7"><h2 id="def-7">Def</h2></a>
-<ul>
-<li><strong>Molteplicità geometrica di un autovalore</strong></li>
-</ul>
-<blockquote>
-<ul>
-<li><span class="math inline">\mathbb{K}</span> campo</li>
-<li><span class="math inline">n \in \mathbb{N} - \{0\}</span></li>
-<li><span class="math inline">A \in \textrm{Mat}_{n \times
-n}(\mathbb{K})</span></li>
-<li><span class="math inline">\lambda \in \textrm{sp}(A)</span></li>
-<li><span
-class="math inline">\nu(\lambda):=\dim(\textrm{E}_\lambda(A))</span> è
-detta <strong>molteplicità geometrica di <span
-class="math inline">\lambda</span></strong></li>
-</ul>
-</blockquote>
-<a href="#oss-16"><h2 id="oss-16">Oss</h2></a>
-<ul>
-<li><strong>Hp</strong>
-<ul>
-<li><span class="math inline">\mathbb{K}</span> campo</li>
-<li><span class="math inline">n \in \mathbb{N} - \{0\}</span></li>
-<li><span class="math inline">A, B \in \textrm{Mat}_{n \times
-n}(\mathbb{K}) \mid A</span> simile a <span
-class="math inline">B</span></li>
-<li><span class="math inline">\lambda \in \textrm{sp}(A) =
-\textrm{sp}(B)</span></li>
-</ul></li>
-<li><strong>Th</strong>
-<ul>
 <li><span class="math inline">\nu_A(\lambda) =
 \nu_B(\lambda)</span></li>
 </ul></li>
 </ul>
-<a href="#oss-17"><h2 id="oss-17">Oss</h2></a>
+<a href="#oss-15"><h2 id="oss-15">Oss</h2></a>
 <ul>
 <li><strong>Hp</strong>
 <ul>
 <li><span class="math inline">\mathbb{K}</span> campo</li>
-<li><span class="math inline">n \in \mathbb{N} - \{0\}</span></li>
+<li><span class="math inline">n \in \mathbb{N}</span></li>
 <li><span class="math inline">A \in \textrm{Mat}_{n \times
 n}(\mathbb{K})</span></li>
 <li><span class="math inline">\lambda \in \textrm{sp}(A)</span></li>
@@ -829,8 +809,6 @@ n}(\mathbb{K})</span></li>
 </ul></li>
 <li><strong>Dim</strong>
 <ul>
-<li><span class="math inline">\nu(\lambda) =
-\dim(\textrm{E}_\lambda(A))</span> per definizione</li>
 <li><span class="math inline">\textrm{E}_\lambda(A) := \{v \in
 \mathbb{K}^n \mid (A - \lambda \cdot I_n) \cdot v = 0\}</span> per
 definizione, allora <span class="math inline">\textrm{E}_\lambda(A) =
@@ -839,15 +817,15 @@ definizione, allora <span class="math inline">\textrm{E}_\lambda(A) =
 class="math inline">\textrm{rk}(L_{A - \lambda \cdot I_n}) = n -
 \dim(\ker(L_{A - \lambda \cdot I_n})) \iff \dim(\ker(L_{A - \lambda
 \cdot I_n})) = n - \textrm{rk}(L_{A - \lambda \cdot I_n}) =
-\dim(\textrm{E}_\lambda(A)) = \nu(\lambda)</span></li>
+\dim(\textrm{E}_\lambda(A)) =: \nu(\lambda)</span></li>
 </ul></li>
 </ul>
-<a href="#oss-18"><h2 id="oss-18">Oss</h2></a>
+<a href="#oss-16"><h2 id="oss-16">Oss</h2></a>
 <ul>
 <li><strong>Hp</strong>
 <ul>
 <li><span class="math inline">\mathbb{K}</span> campo</li>
-<li><span class="math inline">n \in \mathbb{N} - \{0\}</span></li>
+<li><span class="math inline">n \in \mathbb{N}</span></li>
 <li><span class="math inline">A \in \textrm{Mat}_{n \times
 n}(\mathbb{K})</span></li>
 <li><span class="math inline">\lambda \in \textrm{sp}(A)</span></li>
@@ -857,12 +835,12 @@ n}(\mathbb{K})</span></li>
 <li><span class="math inline">\nu(\lambda) \le \mu(\lambda)</span></li>
 </ul></li>
 </ul>
-<a href="#oss-19"><h2 id="oss-19">Oss</h2></a>
+<a href="#oss-17"><h2 id="oss-17">Oss</h2></a>
 <ul>
 <li><strong>Hp</strong>
 <ul>
 <li><span class="math inline">\mathbb{K}</span> campo</li>
-<li><span class="math inline">n \in \mathbb{N} - \{0\}</span></li>
+<li><span class="math inline">n \in \mathbb{N}</span></li>
 <li><span class="math inline">A \in \textrm{Mat}_{n \times
 n}(\mathbb{K})</span></li>
 </ul>
@@ -879,11 +857,11 @@ class="math inline">p_A(x)</span> è completamente fattorizzabile</li>
 <li>le proposizioni sono equivalenti</li>
 </ul></li>
 </ul>
-<a href="#oss-20"><h2 id="oss-20">Oss</h2></a>
+<a href="#oss-18"><h2 id="oss-18">Oss</h2></a>
 <ul>
 <li><strong>Hp</strong>
 <ul>
-<li><span class="math inline">n \in \mathbb{N} - \{0\}</span></li>
+<li><span class="math inline">n \in \mathbb{N}</span></li>
 <li><span class="math inline">A \in \textrm{Mat}_{n \times
 n}(\mathbb{C})</span></li>
 </ul></li>
@@ -898,14 +876,17 @@ triangolarizzabile <span class="math inline">\iff \displaystyle p_A(x) =
 \prod_{\lambda \in \textrm{sp}(A)}{(x - \lambda)}^{\mu(\lambda)}</span>,
 e per il teorema fondamentale dell’algebra, in <span
 class="math inline">\mathbb{C}</span> è sempre possibile fattorizzare un
-polinomio in polinomi di grado <span class="math inline">1</span></li>
+polinomio in polinomi di grado <span class="math inline">1
+\implies</span> ogni matrice in <span
+class="math inline">\textrm{Mat}_{n \times n}(\mathbb{C})</span> è
+triangolarizzabile</li>
 </ul></li>
 </ul>
-<a href="#oss-21"><h2 id="oss-21">Oss</h2></a>
+<a href="#oss-19"><h2 id="oss-19">Oss</h2></a>
 <ul>
 <li><strong>Hp</strong>
 <ul>
-<li><span class="math inline">n \in \mathbb{N} - \{0\}</span></li>
+<li><span class="math inline">n \in \mathbb{N}</span></li>
 <li><span class="math inline">A \in \textrm{Mat}_{n \times
 n}(\mathbb{R})</span></li>
 </ul></li>
@@ -916,12 +897,12 @@ class="math inline">\iff \forall \lambda \in \textrm{sp}(A) \quad
 \lambda \in \mathbb{R}</span></li>
 </ul></li>
 </ul>
-<a href="#oss-22"><h2 id="oss-22">Oss</h2></a>
+<a href="#oss-20"><h2 id="oss-20">Oss</h2></a>
 <ul>
 <li><strong>Hp</strong>
 <ul>
 <li><span class="math inline">\mathbb{K}</span> campo</li>
-<li><span class="math inline">n \in \mathbb{N} - \{0\}</span></li>
+<li><span class="math inline">n \in \mathbb{N}</span></li>
 <li><span class="math inline">A \in \textrm{Mat}_{n \times
 n}(\mathbb{K})</span></li>
 </ul>
@@ -938,12 +919,12 @@ base di <span class="math inline">\mathbb{K}^n</span></li>
 <li>le proposizioni sono equivalenti</li>
 </ul></li>
 </ul>
-<a href="#oss-23"><h2 id="oss-23">Oss</h2></a>
+<a href="#oss-21"><h2 id="oss-21">Oss</h2></a>
 <ul>
 <li><strong>Hp</strong>
 <ul>
 <li><span class="math inline">\mathbb{K}</span> campo</li>
-<li><span class="math inline">n \in \mathbb{N} - \{0\}</span></li>
+<li><span class="math inline">n \in \mathbb{N}</span></li>
 <li><span class="math inline">A \in \textrm{Mat}_{n \times
 n}(\mathbb{K})</span></li>
 <li><span class="math inline">B^1, \ldots, B^n</span> autovettori di
@@ -953,7 +934,8 @@ class="math inline">\mathbb{K}^n</span></li>
 </ul></li>
 <li><strong>Th</strong>
 <ul>
-<li><span class="math inline">A</span> diagonalizzabile</li>
+<li><span class="math inline">A</span> diagonalizzabile, dove <span
+class="math inline">B</span> è la matrice diagonalizzante</li>
 </ul></li>
 </ul>
 </body>

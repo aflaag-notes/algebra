@@ -394,7 +394,7 @@
 - **Hp**
     - $n \in \mathbb{N}$
     - $A \in \textrm{Mat}_{n \times n}(\mathbb{R}) \mid A$ simmetrica
-    1. $\forall \lambda \in \textrm{sp}(A) \quad \lambda \in \mathbb{R}$
+    1. $\textrm{sp}(A) \subset \mathbb{R}$
     2. $A$ diagonalizzabile
     3. $\exists B^1, \ldots, B^n$ autovettori di $A \mid B^1, \ldots, B^n$ base ortonormale di $\mathbb{R}^n$
     4. $\exists B \in \textrm{O}(n) \mid B^{-1}AB$ diagonale
