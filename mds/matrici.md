@@ -365,6 +365,28 @@
 > - $n \in \mathbb{N}$
 > - $A \in \textrm{GL}(n, \mathbb{K})$
 > - $O(n) := \{ A \in \textrm{GL}(n, \mathbb{K}) \mid A$ ortogonale$\}$ è detto **gruppo ortogonale**
+>   - in particolare $O(n) := \{A \in \textrm{GL}(n, \mathbb{K}) \mid A^{-1} = A^T\}$
+
+## Oss
+
+- **Hp**
+    - $\mathbb{K}$ campo
+    - $n \in \mathbb{N}$
+- **Th**
+    - $(O(n), \cdot) \leqslant (\textrm{GL}(n, \mathbb{K}), \cdot)$
+- **Dim**
+    - $I_n = I_n^{-1} = I_n^T \implies I_n \in O(n)$
+    - $A, B \in O(n) \implies \left \{ \begin{array}{l} A^{-1} = A^T \\ B^{-1} = B^T \end{array} \right. \implies (AB)^{-1} = B^{-1}A^{-1} = B^TA^T = (AB)^T \implies AB \in O(n)$
+    - $A \in O(n) \implies A^{-1} = A^T \implies (A^{-1}A) = I_n = (A^{-1}A)^T \iff I_n = A^T(A^{-1})^T = A^{-1}(A^{-1})^T \iff (A^{-1})^T = A = (A^{-1})^{-1} \implies A^{-1} \in O(n)$
+
+## Def
+
+- **Matrice singolare**
+
+> - $\mathbb{K}$ campo
+> - $n \in \mathbb{N}$
+> - $A \in \textrm{Mat}_{n \times n}(\mathbb{K})$
+> - $A$ è detta **singolare** $\iff \det(A) = 0$
 
 ## Def
 
@@ -491,18 +513,25 @@
 > - $b \in \textrm{Mat}_{m \times 1}(\mathbb{K})$
 > - $A_b:=\left(\begin{array}{cccc}a_{1, 1} & \cdots & a_{1, n} & b_1 \\ \vdots & \ddots & \vdots & \vdots \\ a_{m, 1} & \cdots & a_{m,n} & b_m\end{array}\right)$ è detta **matrice completa di $A$ e $b$**
 
-## Def
+## Oss
 
-- **Matrice di un'applicazione lineare**
-
-> - $\mathbb{K}$ campo
-> - $m, n \in \mathbb{N}$
-> - $V, W$ spazi vettoriali su $\mathbb{K}$
-> - $\mathcal{B}=\{v_1, \ldots, v_n\}$ base di $V$
-> - $\mathcal{C}=\{w_1, \ldots, w_m\}$ base di $W$
-> - $f: V \rightarrow W$ isomorfismo
-> - $\varphi_\mathcal{B}: \mathbb{K}^n \rightarrow V$ isomorfismo
-> - $\varphi_\mathcal{C}: \mathbb{K}^m \rightarrow W$ isomorfismo
-> - $A \in \textrm{Mat}_{m \times n}(\mathbb{K}) \mid f = \varphi_\mathcal{C}\cdot L_A \cdot \varphi_\mathcal{B}^{-1}$ è detta **matrice di $f$**
->   - è possibile dimostrare che $\forall f$ applicazione lineare$\quad \exists ! A \in \textrm{Mat}_{m \times n}(\mathbb{K})$ ⚠️ **eh si dimostralo però**
+- **Hp**
+    - $\mathbb{K}$ campo
+    - $m, n \in \mathbb{N}$
+    - $V, W$ spazi vettoriali su $\mathbb{K} \mid \left \{ \begin{array}{l} \dim(V) = n \\ \dim(W) = m \end{array} \right.$
+    - $\mathcal{B}=\{v_1, \ldots, v_n\}$ base di $V$
+    - $\mathcal{C}=\{w_1, \ldots, w_m\}$ base di $W$
+    - $f: V \rightarrow W$ trasformazione lineare
+    - $\varphi_\mathcal{B}: \mathbb{K}^n \rightarrow V: (b_1, \ldots, b_n) \rightarrow b_1v_1 + \ldots + b_nv_n$ isomorfismo
+    - $\varphi_\mathcal{C}: \mathbb{K}^m \rightarrow W: (c_1, \ldots, c_m) \rightarrow c_1w_1 + \ldots + c_mw_m$ isomorfismo
+- **Th**
+    - $\exists !A \in \textrm{Mat}_{m \times n}(\mathbb{K}) \mid f = \varphi_\mathcal{C}\cdot L_A \cdot \varphi_\mathcal{B}^{-1}$, e prende il nome di _matrice di $f$_
+- **Dim**
+    - si noti che $V \cong \mathbb{K}^n$ per dimostrazione precedente, dunque esiste $\varphi_{\mathcal{B}}$, e analogamente $W \cong \mathbb{K}^m$ implica che esiste $\varphi_{\mathcal{C}}$
+    - sia $e_1, \ldots, e_n$ base canonica di $\mathbb{K}^n$
+    - sia $A \in \textrm{Mat}_{m \times n}(\mathbb{K})$
+    - $\forall i \in [1, n] \quad \varphi_{\mathcal{B}}(e_i) = 0 \cdot v_1 + \ldots + 1 \cdot v_i + \ldots 0 \cdot v_n = v_i \iff \varphi_{\mathcal{B}}^{-1}(v_i) = e_i$
+    - $L_A(e_i) = \left(\begin{array}{cccc} a_{1,1} & \ldots & a_{1,n} \\ \vdots & \ddots & \vdots \\ a_{m, 1} & \ldots & a_{m, n}\end{array}\right)\left(\begin{array}{c} 0 \\ \vdots \\ 1 \\ \vdots \\ 0 \end{array}\right) = \left(\begin{array}{c} a_{1, i} \\ \vdots \\ a_{m, i}\end{array}\right) = A^i \in \mathbb{K}^m$
+    - $\varphi_{\mathcal{C}}(A^i)=a_{1, i}w_1+ \ldots + a_{m, i} w_m = w_i$
+    - ⚠️ **da completare**
 

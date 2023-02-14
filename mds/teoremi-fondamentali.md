@@ -14,7 +14,7 @@
     - $m \in \mathbb{Z}$
     - $n \in \mathbb{Z} - \{0\}$
 - **Th**
-    - $\exists !  \ q, r \in \mathbb{Z} \mid m=n q+r \quad 0 \leq r<n$
+    - $\exists ! \ q, r \in \mathbb{Z} \mid m=n q+r \quad 0 \leq r<n$
 - **Dim**
     - _esistenza_
         - $[m]_n := \{r \in \mathbb{Z} \mid x \equiv m \ (\bmod \ n) \iff \exists q \in \mathbb{Z} \mid nq = m - x \iff x = m - nq\}$

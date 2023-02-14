@@ -5,41 +5,37 @@
 - **Applicazione multilineare**
 
 > - $\mathbb{K}$ campo
-> - $k \in \mathbb{N}$
-> - $V_1, \ldots, V_k, W$ spazi vettoriali
-> - $f: V_1 \times \ldots \times V_k \rightarrow W:(v_1, \ldots, v_k) \rightarrow w$
-> - $f$ **multilineare** $\iff \forall i \in [1, k], \ \forall v_1 \in V_1, \ldots, v_i', v_i'' \in V_i, \ldots, v_k \in V_k, \ \forall \lambda, \mu \in \mathbb{K} \quad f(v_1, \ldots, \lambda v_i'+\mu v_i'', \ldots, v_k) = \lambda f(v_1, \ldots, v_i', \ldots, v_k) + \mu f(v_1, \ldots, v_i'', \ldots, v_k)$
+> - $n \in \mathbb{N}$
+> - $V_1, \ldots, V_n, W$ spazi vettoriali su $\mathbb{K}$
+> - $f: V_1 \times \ldots \times V_n \rightarrow W:(v_1, \ldots, v_n) \rightarrow w$
+> - $f$ è detta **multilineare** $\iff \forall i \in [1, n],  v_1 , \ldots, v_n \in V_1 \times \ldots \times V_n, v_i, v_i' \in V_i, \lambda, \mu \in \mathbb{K} \quad f(v_1, \ldots, \lambda v_i+\mu v_i', \ldots, v_n) = \lambda f(v_1, \ldots, v_i, \ldots, v_n) + \mu f(v_1, \ldots, v_i', \ldots, v_k)$
+>   - in particolare, tenendo fisse tutte le variabili tranne la $i$-esima, $f$ è una trasformazione lineare
 
 - **Determinante**
 
 > - $\mathbb{K}$ campo
-> - $n \in \mathbb{N} - \{0\}$
+> - $n \in \mathbb{N}$
 > - $\det : \textrm{Mat}_{n \times n}(\mathbb{K}) \rightarrow \mathbb{K}$
 > - 1. $\forall A \in \textrm{Mat}_{n \times n}(\mathbb{K}) \quad \det$ multilineare su $A_1, \ldots A_n$ e $A^1, \ldots, A^n$
 > - 2. $\forall A \in \textrm{Mat}_{n \times n}(\mathbb{K}) \quad A_1, \ldots A_n$ e $A^1, \ldots, A^n$ basi di $\mathbb{K}^n \iff \det(A) \neq 0$
+>   - in particolare $\exists i, j \in [1, n], i \neq j \mid A^i = A^j \lor A_i = A_j \implies \det(A) = 0$
 > - 3. $\det(I_n) = 1$
-> - 4. per $\mathbb{K} \mid 1 \neq -1 \quad$ scambiando due righe o due colonne $\det(A)$ cambia segno
-> - $\det$ è il **determinante** $\iff \det$ verifica 1, 2 e 3, oppure 1, 3 e 4
+> - 4. per $\mathbb{K} \mid 1_{\mathbb{K}} \neq -1_{\mathbb{K}} \quad$ scambiando due righe o due colonne $\det(A)$ cambia segno
+>   - ad esempio in $\mathbb{Z}_2 = \{[0], [1]\}$ si ha che $[1] = [-1]$
+> - $\det$ è detto **determinante** $\iff \det$ verifica 1, 2 e 3, oppure 1, 3 e 4
 >   - poiché è possibile dimostrare che la funzione che verifica tali condizioni esiste ed è unica, allora il $\det$ è totalmente determinato da tali caratteristiche
 
 ## Oss
 
 - **Hp**
-    - $\mathbb{K}$ campo $\mid 1 \neq -1$
-    - $n \in \mathbb{N} - \{0\}$
-    - $f : \textrm{Mat}_{n \times n}(\mathbb{K}) \rightarrow \mathbb{K}$
-    4. **⚠️  SCRIVI**
+    - $\mathbb{K}$ campo $\mid 1_{\mathbb{K}} \neq -1_{\mathbb{K}}$
+    - $n \in \mathbb{N}$
+    - $A \in \textrm{Mat}_{n \times n}(\mathbb{K})$
 - **Th**
-    - **⚠️  DETERMINANTE ALTERNANTE**
-
-## Def
-
-- **Matrice singolare**
-
-> - $\mathbb{K}$ campo
-> - $n \in \mathbb{N} - \{0\}$
-> - $A \in \textrm{Mat}_{n \times n}(\mathbb{K})$
-> - $A$ è detta **singolare** $\iff \det(A) = 0$
+    - $\forall A_i, A_j \in A \quad \det(A_1, \ldots, A_i, \ldots, A_j , \ldots, A_n) = -\det(A_1, \ldots, A_j, \ldots, A_i, \ldots, A_n)$
+- **Dim**
+    - per il punto $2$ della definizione di $\det$ si ha che $\det(A_1, \ldots, A_i + A_j, \ldots, A_j + A_i, \ldots, A_n) = 0$
+    - allora, per multilinearità di $\det$ si ha che $\det$ si ha che $0 =\det(A_1, \ldots, A_i + A_j, \ldots, A_j + A_i, \ldots, A_n) = \det(A_1, \ldots, A_i, \ldots, A_j + A_i, \ldots, A_n) + \det(A_1, \ldots, A_j, \ldots, A_j + A_i, \ldots, A_n) =\det(A_1, \ldots, A_i, \ldots, A_j, \ldots, A_n)+\det(A_1, \ldots, A_i, \ldots, A_i, \ldots, A_n) + \det(A_1, \ldots, A_j, \ldots,A_j, \ldots, A_n) + \det(A_1, \ldots, A_j, \ldots, A_i, \ldots, A_n) = \det(A_1, \ldots, A_i, \ldots, A_j, \ldots, A_n) + 0 + 0 + \det(A_1, \ldots, A_j , \ldots, A_i, \ldots, A_n) \iff \det(A_1, \ldots, A_i, \ldots, A_j, \ldots, A_n) = -\det(A_1,\ldots, A_j, \ldots, A_i, \ldots, A_n)$
 
 ## Oss
 

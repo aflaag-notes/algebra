@@ -249,7 +249,7 @@
   - $a \sim_S b \iff a \equiv b \ (\bmod \ n)$
 - **Dim**
   - $a \equiv b \ (\bmod \ n) \iff n \mid b - a \iff \exists p \in \mathbb{Z} \mid n p = b - a$, ma allora $b - a$ è un multiplo di $n$, quindi $b - a \in I(n)$ per definizione
-  - $I(n)$ è un sottogruppo per dimostrazione precedente, dunque $b - a = (-a) + b \in I(n) \iff a \sim_S b$
+  - $(I(n), +) \leqslant (\mathbb{Z}, +) \implies b - a = (-a) + b \in I(n) \iff a \sim_S b$
 
 ## Oss
 
@@ -260,7 +260,6 @@
     - $H = [1] \in G/H$
 - **Dim**
     - $\forall x \in G \quad 1 \sim x \iff 1^{-1}x \in H \iff x \in H \implies \forall x \in H \quad 1 \sim x$
-
 
 ## Oss
 

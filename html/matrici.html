@@ -921,10 +921,55 @@ class="math inline">\mathbb{K}^n</span></li>
 \mathbb{K})</span></li>
 <li><span class="math inline">O(n) := \{ A \in \textrm{GL}(n,
 \mathbb{K}) \mid A</span> ortogonale<span class="math inline">\}</span>
-è detto <strong>gruppo ortogonale</strong></li>
+è detto <strong>gruppo ortogonale</strong>
+<ul>
+<li>in particolare <span class="math inline">O(n) := \{A \in
+\textrm{GL}(n, \mathbb{K}) \mid A^{-1} = A^T\}</span></li>
+</ul></li>
 </ul>
 </blockquote>
+<a href="#oss-16"><h2 id="oss-16">Oss</h2></a>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">\mathbb{K}</span> campo</li>
+<li><span class="math inline">n \in \mathbb{N}</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">(O(n), \cdot) \leqslant (\textrm{GL}(n,
+\mathbb{K}), \cdot)</span></li>
+</ul></li>
+<li><strong>Dim</strong>
+<ul>
+<li><span class="math inline">I_n = I_n^{-1} = I_n^T \implies I_n \in
+O(n)</span></li>
+<li><span class="math inline">A, B \in O(n) \implies \left \{
+\begin{array}{l} A^{-1} = A^T \\ B^{-1} = B^T \end{array} \right.
+\implies (AB)^{-1} = B^{-1}A^{-1} = B^TA^T = (AB)^T \implies AB \in
+O(n)</span></li>
+<li><span class="math inline">A \in O(n) \implies A^{-1} = A^T \implies
+(A^{-1}A) = I_n = (A^{-1}A)^T \iff I_n = A^T(A^{-1})^T =
+A^{-1}(A^{-1})^T \iff (A^{-1})^T = A = (A^{-1})^{-1} \implies A^{-1} \in
+O(n)</span></li>
+</ul></li>
+</ul>
 <a href="#def-11"><h2 id="def-11">Def</h2></a>
+<ul>
+<li><strong>Matrice singolare</strong></li>
+</ul>
+<blockquote>
+<ul>
+<li><span class="math inline">\mathbb{K}</span> campo</li>
+<li><span class="math inline">n \in \mathbb{N}</span></li>
+<li><span class="math inline">A \in \textrm{Mat}_{n \times
+n}(\mathbb{K})</span></li>
+<li><span class="math inline">A</span> è detta
+<strong>singolare</strong> <span class="math inline">\iff \det(A) =
+0</span></li>
+</ul>
+</blockquote>
+<a href="#def-12"><h2 id="def-12">Def</h2></a>
 <ul>
 <li><strong>Matrici simili</strong></li>
 </ul>
@@ -939,7 +984,7 @@ class="math inline">B</span></strong> <span class="math inline">\iff
 \exists C \in \textrm{GL}(n, \mathbb{K}) \mid A = C^{-1}BC</span></li>
 </ul>
 </blockquote>
-<a href="#def-12"><h2 id="def-12">Def</h2></a>
+<a href="#def-13"><h2 id="def-13">Def</h2></a>
 <ul>
 <li><strong>Traccia</strong></li>
 </ul>
@@ -954,7 +999,7 @@ a_{n,n}</span> è detta <strong>traccia di <span
 class="math inline">A</span></strong></li>
 </ul>
 </blockquote>
-<a href="#oss-16"><h2 id="oss-16">Oss</h2></a>
+<a href="#oss-17"><h2 id="oss-17">Oss</h2></a>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -970,7 +1015,7 @@ class="math inline">B</span></li>
 \textrm{tr}(B)</span></li>
 </ul></li>
 </ul>
-<a href="#def-13"><h2 id="def-13">Def</h2></a>
+<a href="#def-14"><h2 id="def-14">Def</h2></a>
 <ul>
 <li><strong>Matrice triangolare superiore</strong></li>
 </ul>
@@ -1065,7 +1110,7 @@ B \in \textrm{Mat}_{n \times n}(\mathbb{K}) \mid B</span> diagonale
 class="math inline">A</span></li>
 </ul>
 </blockquote>
-<a href="#oss-17"><h2 id="oss-17">Oss</h2></a>
+<a href="#oss-18"><h2 id="oss-18">Oss</h2></a>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -1079,7 +1124,7 @@ n}(\mathbb{K}) \mid A</span> diagonalizzabile</li>
 <li><span class="math inline">A</span> triangolarizzabile</li>
 </ul></li>
 </ul>
-<a href="#def-14"><h2 id="def-14">Def</h2></a>
+<a href="#def-15"><h2 id="def-15">Def</h2></a>
 <ul>
 <li><strong>Sottomatrice di una matrice</strong></li>
 </ul>
@@ -1131,7 +1176,7 @@ class="math inline">M</span> si ottiene rimuovendo una riga e una
 colonna da <span class="math inline">M&#39;</span></li>
 </ul>
 </blockquote>
-<a href="#oss-18"><h2 id="oss-18">Oss</h2></a>
+<a href="#oss-19"><h2 id="oss-19">Oss</h2></a>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -1150,7 +1195,7 @@ class="math inline">(m-r)\cdot(n-r)</span> orlati in <span
 class="math inline">A</span></li>
 </ul></li>
 </ul>
-<a href="#def-15"><h2 id="def-15">Def</h2></a>
+<a href="#def-16"><h2 id="def-16">Def</h2></a>
 <ul>
 <li><strong>Matrice completa</strong></li>
 </ul>
@@ -1170,36 +1215,59 @@ class="math inline">A</span> e <span
 class="math inline">b</span></strong></li>
 </ul>
 </blockquote>
-<a href="#def-16"><h2 id="def-16">Def</h2></a>
+<a href="#oss-20"><h2 id="oss-20">Oss</h2></a>
 <ul>
-<li><strong>Matrice di un’applicazione lineare</strong></li>
-</ul>
-<blockquote>
+<li><strong>Hp</strong>
 <ul>
 <li><span class="math inline">\mathbb{K}</span> campo</li>
 <li><span class="math inline">m, n \in \mathbb{N}</span></li>
 <li><span class="math inline">V, W</span> spazi vettoriali su <span
-class="math inline">\mathbb{K}</span></li>
+class="math inline">\mathbb{K} \mid \left \{ \begin{array}{l} \dim(V) =
+n \\ \dim(W) = m \end{array} \right.</span></li>
 <li><span class="math inline">\mathcal{B}=\{v_1, \ldots, v_n\}</span>
 base di <span class="math inline">V</span></li>
 <li><span class="math inline">\mathcal{C}=\{w_1, \ldots, w_m\}</span>
 base di <span class="math inline">W</span></li>
-<li><span class="math inline">f: V \rightarrow W</span> isomorfismo</li>
+<li><span class="math inline">f: V \rightarrow W</span> trasformazione
+lineare</li>
 <li><span class="math inline">\varphi_\mathcal{B}: \mathbb{K}^n
-\rightarrow V</span> isomorfismo</li>
+\rightarrow V: (b_1, \ldots, b_n) \rightarrow b_1v_1 + \ldots +
+b_nv_n</span> isomorfismo</li>
 <li><span class="math inline">\varphi_\mathcal{C}: \mathbb{K}^m
-\rightarrow W</span> isomorfismo</li>
-<li><span class="math inline">A \in \textrm{Mat}_{m \times
-n}(\mathbb{K}) \mid f = \varphi_\mathcal{C}\cdot L_A \cdot
-\varphi_\mathcal{B}^{-1}</span> è detta <strong>matrice di <span
-class="math inline">f</span></strong>
+\rightarrow W: (c_1, \ldots, c_m) \rightarrow c_1w_1 + \ldots +
+c_mw_m</span> isomorfismo</li>
+</ul></li>
+<li><strong>Th</strong>
 <ul>
-<li>è possibile dimostrare che <span class="math inline">\forall
-f</span> applicazione lineare<span class="math inline">\quad \exists ! A
-\in \textrm{Mat}_{m \times n}(\mathbb{K})</span> ⚠️ <strong>eh si
-dimostralo però</strong></li>
+<li><span class="math inline">\exists !A \in \textrm{Mat}_{m \times
+n}(\mathbb{K}) \mid f = \varphi_\mathcal{C}\cdot L_A \cdot
+\varphi_\mathcal{B}^{-1}</span>, e prende il nome di <em>matrice di
+<span class="math inline">f</span></em></li>
+</ul></li>
+<li><strong>Dim</strong>
+<ul>
+<li>si noti che <span class="math inline">V \cong \mathbb{K}^n</span>
+per dimostrazione precedente, dunque esiste <span
+class="math inline">\varphi_{\mathcal{B}}</span>, e analogamente <span
+class="math inline">W \cong \mathbb{K}^m</span> implica che esiste <span
+class="math inline">\varphi_{\mathcal{C}}</span></li>
+<li>sia <span class="math inline">e_1, \ldots, e_n</span> base canonica
+di <span class="math inline">\mathbb{K}^n</span></li>
+<li>sia <span class="math inline">A \in \textrm{Mat}_{m \times
+n}(\mathbb{K})</span></li>
+<li><span class="math inline">\forall i \in [1, n] \quad
+\varphi_{\mathcal{B}}(e_i) = 0 \cdot v_1 + \ldots + 1 \cdot v_i + \ldots
+0 \cdot v_n = v_i \iff \varphi_{\mathcal{B}}^{-1}(v_i) = e_i</span></li>
+<li><span class="math inline">L_A(e_i) = \left(\begin{array}{cccc}
+a_{1,1} &amp; \ldots &amp; a_{1,n} \\ \vdots &amp; \ddots &amp; \vdots
+\\ a_{m, 1} &amp; \ldots &amp; a_{m,
+n}\end{array}\right)\left(\begin{array}{c} 0 \\ \vdots \\ 1 \\ \vdots \\
+0 \end{array}\right) = \left(\begin{array}{c} a_{1, i} \\ \vdots \\
+a_{m, i}\end{array}\right) = A^i \in \mathbb{K}^m</span></li>
+<li><span class="math inline">\varphi_{\mathcal{C}}(A^i)=a_{1, i}w_1+
+\ldots + a_{m, i} w_m = w_i</span></li>
+<li>⚠️ <strong>da completare</strong></li>
 </ul></li>
 </ul>
-</blockquote>
 </body>
 </html>

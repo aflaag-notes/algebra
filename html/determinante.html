@@ -192,18 +192,22 @@
 <blockquote>
 <ul>
 <li><span class="math inline">\mathbb{K}</span> campo</li>
-<li><span class="math inline">k \in \mathbb{N}</span></li>
-<li><span class="math inline">V_1, \ldots, V_k, W</span> spazi
-vettoriali</li>
-<li><span class="math inline">f: V_1 \times \ldots \times V_k
-\rightarrow W:(v_1, \ldots, v_k) \rightarrow w</span></li>
-<li><span class="math inline">f</span> <strong>multilineare</strong>
-<span class="math inline">\iff \forall i \in [1, k], \ \forall v_1 \in
-V_1, \ldots, v_i&#39;, v_i&#39;&#39; \in V_i, \ldots, v_k \in V_k, \
-\forall \lambda, \mu \in \mathbb{K} \quad f(v_1, \ldots, \lambda
-v_i&#39;+\mu v_i&#39;&#39;, \ldots, v_k) = \lambda f(v_1, \ldots,
-v_i&#39;, \ldots, v_k) + \mu f(v_1, \ldots, v_i&#39;&#39;, \ldots,
-v_k)</span></li>
+<li><span class="math inline">n \in \mathbb{N}</span></li>
+<li><span class="math inline">V_1, \ldots, V_n, W</span> spazi
+vettoriali su <span class="math inline">\mathbb{K}</span></li>
+<li><span class="math inline">f: V_1 \times \ldots \times V_n
+\rightarrow W:(v_1, \ldots, v_n) \rightarrow w</span></li>
+<li><span class="math inline">f</span> è detta
+<strong>multilineare</strong> <span class="math inline">\iff \forall i
+\in [1, n], v_1 , \ldots, v_n \in V_1 \times \ldots \times V_n, v_i,
+v_i&#39; \in V_i, \lambda, \mu \in \mathbb{K} \quad f(v_1, \ldots,
+\lambda v_i+\mu v_i&#39;, \ldots, v_n) = \lambda f(v_1, \ldots, v_i,
+\ldots, v_n) + \mu f(v_1, \ldots, v_i&#39;, \ldots, v_k)</span>
+<ul>
+<li>in particolare, tenendo fisse tutte le variabili tranne la <span
+class="math inline">i</span>-esima, <span class="math inline">f</span> è
+una trasformazione lineare</li>
+</ul></li>
 </ul>
 </blockquote>
 <ul>
@@ -212,7 +216,7 @@ v_k)</span></li>
 <blockquote>
 <ul>
 <li><span class="math inline">\mathbb{K}</span> campo</li>
-<li><span class="math inline">n \in \mathbb{N} - \{0\}</span></li>
+<li><span class="math inline">n \in \mathbb{N}</span></li>
 <li><span class="math inline">\det : \textrm{Mat}_{n \times
 n}(\mathbb{K}) \rightarrow \mathbb{K}</span></li>
 <li><ol type="1">
@@ -226,16 +230,24 @@ class="math inline">A^1, \ldots, A^n</span></li>
 n}(\mathbb{K}) \quad A_1, \ldots A_n</span> e <span
 class="math inline">A^1, \ldots, A^n</span> basi di <span
 class="math inline">\mathbb{K}^n \iff \det(A) \neq 0</span></li>
-</ol></li>
+</ol>
+<ul>
+<li>in particolare <span class="math inline">\exists i, j \in [1, n], i
+\neq j \mid A^i = A^j \lor A_i = A_j \implies \det(A) = 0</span></li>
+</ul></li>
 <li><ol start="3" type="1">
 <li><span class="math inline">\det(I_n) = 1</span></li>
 </ol></li>
 <li><ol start="4" type="1">
-<li>per <span class="math inline">\mathbb{K} \mid 1 \neq -1 \quad</span>
-scambiando due righe o due colonne <span
+<li>per <span class="math inline">\mathbb{K} \mid 1_{\mathbb{K}} \neq
+-1_{\mathbb{K}} \quad</span> scambiando due righe o due colonne <span
 class="math inline">\det(A)</span> cambia segno</li>
-</ol></li>
-<li><span class="math inline">\det</span> è il
+</ol>
+<ul>
+<li>ad esempio in <span class="math inline">\mathbb{Z}_2 = \{[0],
+[1]\}</span> si ha che <span class="math inline">[1] = [-1]</span></li>
+</ul></li>
+<li><span class="math inline">\det</span> è detto
 <strong>determinante</strong> <span class="math inline">\iff \det</span>
 verifica 1, 2 e 3, oppure 1, 3 e 4
 <ul>
@@ -251,34 +263,36 @@ caratteristiche</li>
 <li><strong>Hp</strong>
 <ul>
 <li><span class="math inline">\mathbb{K}</span> campo <span
-class="math inline">\mid 1 \neq -1</span></li>
-<li><span class="math inline">n \in \mathbb{N} - \{0\}</span></li>
-<li><span class="math inline">f : \textrm{Mat}_{n \times n}(\mathbb{K})
-\rightarrow \mathbb{K}</span></li>
-</ul>
-<ol start="4" type="1">
-<li><strong>⚠️ SCRIVI</strong></li>
-</ol></li>
-<li><strong>Th</strong>
-<ul>
-<li><strong>⚠️ DETERMINANTE ALTERNANTE</strong></li>
-</ul></li>
-</ul>
-<a href="#def-1"><h2 id="def-1">Def</h2></a>
-<ul>
-<li><strong>Matrice singolare</strong></li>
-</ul>
-<blockquote>
-<ul>
-<li><span class="math inline">\mathbb{K}</span> campo</li>
-<li><span class="math inline">n \in \mathbb{N} - \{0\}</span></li>
+class="math inline">\mid 1_{\mathbb{K}} \neq -1_{\mathbb{K}}</span></li>
+<li><span class="math inline">n \in \mathbb{N}</span></li>
 <li><span class="math inline">A \in \textrm{Mat}_{n \times
 n}(\mathbb{K})</span></li>
-<li><span class="math inline">A</span> è detta
-<strong>singolare</strong> <span class="math inline">\iff \det(A) =
-0</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\forall A_i, A_j \in A \quad \det(A_1,
+\ldots, A_i, \ldots, A_j , \ldots, A_n) = -\det(A_1, \ldots, A_j,
+\ldots, A_i, \ldots, A_n)</span></li>
+</ul></li>
+<li><strong>Dim</strong>
+<ul>
+<li>per il punto <span class="math inline">2</span> della definizione di
+<span class="math inline">\det</span> si ha che <span
+class="math inline">\det(A_1, \ldots, A_i + A_j, \ldots, A_j + A_i,
+\ldots, A_n) = 0</span></li>
+<li>allora, per multilinearità di <span class="math inline">\det</span>
+si ha che <span class="math inline">\det</span> si ha che <span
+class="math inline">0 =\det(A_1, \ldots, A_i + A_j, \ldots, A_j + A_i,
+\ldots, A_n) = \det(A_1, \ldots, A_i, \ldots, A_j + A_i, \ldots, A_n) +
+\det(A_1, \ldots, A_j, \ldots, A_j + A_i, \ldots, A_n) =\det(A_1,
+\ldots, A_i, \ldots, A_j, \ldots, A_n)+\det(A_1, \ldots, A_i, \ldots,
+A_i, \ldots, A_n) + \det(A_1, \ldots, A_j, \ldots,A_j, \ldots, A_n) +
+\det(A_1, \ldots, A_j, \ldots, A_i, \ldots, A_n) = \det(A_1, \ldots,
+A_i, \ldots, A_j, \ldots, A_n) + 0 + 0 + \det(A_1, \ldots, A_j , \ldots,
+A_i, \ldots, A_n) \iff \det(A_1, \ldots, A_i, \ldots, A_j, \ldots, A_n)
+= -\det(A_1,\ldots, A_j, \ldots, A_i, \ldots, A_n)</span></li>
+</ul></li>
 </ul>
-</blockquote>
 <a href="#oss-1"><h2 id="oss-1">Oss</h2></a>
 <ul>
 <li><strong>Hp</strong>
@@ -512,7 +526,7 @@ n}(\mathbb{K})</span></li>
 \det(A_h^j)}</span></li>
 </ul></li>
 </ul>
-<a href="#def-2"><h2 id="def-2">Def</h2></a>
+<a href="#def-1"><h2 id="def-1">Def</h2></a>
 <ul>
 <li><strong>Aggiunta di una matrice</strong></li>
 </ul>
@@ -562,7 +576,7 @@ a\end{array}\right)</span></li>
 </ul>
 <hr />
 <a href="#polinomio-caratteristico"><h1 id="polinomio-caratteristico">Polinomio caratteristico</h1></a>
-<a href="#def-3"><h2 id="def-3">Def</h2></a>
+<a href="#def-2"><h2 id="def-2">Def</h2></a>
 <blockquote>
 <ul>
 <li><span class="math inline">\mathbb{K}</span> campo</li>
@@ -604,7 +618,7 @@ class="math inline">B</span></li>
 <li><span class="math inline">p_A(x) = p_B(x)</span></li>
 </ul></li>
 </ul>
-<a href="#def-4"><h2 id="def-4">Def</h2></a>
+<a href="#def-3"><h2 id="def-3">Def</h2></a>
 <ul>
 <li><strong>Autovalore</strong></li>
 </ul>
@@ -685,7 +699,7 @@ precedente, e <span class="math inline">\det(A - \lambda \cdot I_n) =
 p_A(\lambda) = 0 \iff \lambda</span> autovalore</li>
 </ul></li>
 </ul>
-<a href="#def-5"><h2 id="def-5">Def</h2></a>
+<a href="#def-4"><h2 id="def-4">Def</h2></a>
 <ul>
 <li><strong>Autovettore relativo ad un autovalore</strong></li>
 </ul>
@@ -722,7 +736,7 @@ class="math inline">\lambda_1, \ldots, \lambda_k</span></li>
 indipendenti</li>
 </ul></li>
 </ul>
-<a href="#def-6"><h2 id="def-6">Def</h2></a>
+<a href="#def-5"><h2 id="def-5">Def</h2></a>
 <ul>
 <li><strong>Autospazio relativo ad un autovalore</strong></li>
 </ul>
@@ -759,7 +773,7 @@ n}(\mathbb{K})</span></li>
 \mathbb{K}</span> sottospazio vettoriale</li>
 </ul></li>
 </ul>
-<a href="#def-7"><h2 id="def-7">Def</h2></a>
+<a href="#def-6"><h2 id="def-6">Def</h2></a>
 <ul>
 <li><strong>Molteplicità algebrica di un autovalore</strong></li>
 </ul>
@@ -794,7 +808,7 @@ class="math inline">B</span></li>
 \mu_B(\lambda)</span></li>
 </ul></li>
 </ul>
-<a href="#def-8"><h2 id="def-8">Def</h2></a>
+<a href="#def-7"><h2 id="def-7">Def</h2></a>
 <ul>
 <li><strong>Molteplicità geometrica di un autovalore</strong></li>
 </ul>
