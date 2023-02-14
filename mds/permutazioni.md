@@ -149,7 +149,7 @@
 > - $\sigma \in \mathcal{S}_n$
 > - $\textrm{Inv}(\sigma) := \{ (i, j) \mid 1 \leq i \lt j \le n : \sigma(i) \gt \sigma(j)\}$ è detto **insieme delle inversioni di $\sigma$**
 > - $\textrm{sgn}(\sigma) := (-1)^{|\textrm{Inv}(\sigma)|} =$$\left\{\begin{array}{ll}+1 & |\operatorname{Inv}(\sigma)| \equiv 0 \ (\bmod  \ 2) \\ -1 & |\operatorname{Inv}(\sigma)| \equiv 1 \ (\bmod \ 2)\end{array}\right.$
->   - in particolare $\sigma$ _pari_ $\iff \textrm{sgn}(\sigma) = +1$, e vivecersa
+>   - in particolare $\sigma$ è detta _pari_ $\iff \textrm{sgn}(\sigma) = +1$, e vivecersa
 
 ## Oss
 
@@ -290,5 +290,5 @@
   - si noti che $d_1 + \ldots + d_k$ è il numero di colonne di $\sigma^\prime \in \mathcal{S}_n$, dunque è pari a $n$
   - allora si hanno $d_1 + \ldots + d_1 - 1 \cdot k = n - k$ trasposizioni adiacenti
   - di conseguenza, $\textrm{id} = \sigma^\prime \tau_1 \ldots \tau_{n -k} \iff \sigma^\prime = \tau_{n - k} \ldots \tau_1 \implies \textrm{sgn}(\sigma^\prime) = \textrm{sgn}(\tau_{n-k} \ldots \tau_1)= (-1)^{n -k}$ per dimostrazione precedente
-  - poiché $\sigma$ e $\sigma^\prime$ hanno lo stesso numero di cicli, e i cicli hanno la stessa lunghezza, allora per dimostrazione precedente $\sigma \sim \sigma^\prime \implies \textrm{sgn}(\sigma^\prime)=\textrm{sgn}(\sigma)$ per dimostrazione precedente, e dunque $\textrm{sgn}(\sigma') = \textrm{sgn}(\sigma)=(-1)^{n - k}$
+  - poiché $\sigma$ e $\sigma^\prime$ hanno lo stesso numero di cicli, e i cicli hanno la stessa lunghezza, allora $\sigma \sim \sigma^\prime \implies \textrm{sgn}(\sigma^\prime)=\textrm{sgn}(\sigma)$ per dimostrazione precedente, e dunque $\textrm{sgn}(\sigma') = \textrm{sgn}(\sigma)=(-1)^{n - k}$
 

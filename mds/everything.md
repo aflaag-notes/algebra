@@ -1196,7 +1196,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 > - $\sigma \in \mathcal{S}_n$
 > - $\textrm{Inv}(\sigma) := \{ (i, j) \mid 1 \leq i \lt j \le n : \sigma(i) \gt \sigma(j)\}$ è detto **insieme delle inversioni di $\sigma$**
 > - $\textrm{sgn}(\sigma) := (-1)^{|\textrm{Inv}(\sigma)|} =$$\left\{\begin{array}{ll}+1 & |\operatorname{Inv}(\sigma)| \equiv 0 \ (\bmod  \ 2) \\ -1 & |\operatorname{Inv}(\sigma)| \equiv 1 \ (\bmod \ 2)\end{array}\right.$
->   - in particolare $\sigma$ _pari_ $\iff \textrm{sgn}(\sigma) = +1$, e vivecersa
+>   - in particolare $\sigma$ è detta _pari_ $\iff \textrm{sgn}(\sigma) = +1$, e vivecersa
 
 
 
