@@ -168,7 +168,7 @@
 - **Dim**
     - $n = 0 \implies (a+b)^0 = \displaystyle{\sum_{k = 0}^{0}{\binom{0}{k}a^kb^{0 - k}}} = \binom{0}{0}a^0b^0=1$
     - $n \ge 1 \implies (a+ b)^{n + 1} = (a+b) \cdot (a+b)^n = (a + b) \cdot \displaystyle \sum_{k = 0}^{n}{\binom{n}{k} a^k b^{n - k}} = \sum_{k = 0}^n{\binom{n}{k} a^{k +1}b^{n - k}}$
-    - ⚠️ **NON HO CAPITO UN CAZZO**
+    - ⚠️ **incompleta**
 
 ****
 
@@ -325,12 +325,11 @@
     - $\mathbb{K}$ campo
     - $m, n \in \mathbb{N}$
     - $A \in \textrm{Mat}_{m \times n}(\mathbb{K})$
-    - $b \in \textrm{Mat}_{m \times 1}(\mathbb{K})$
+    - $b \in \mathbb{K}^m$
 - **Th**
-    - ⚠️ **da rivedere**
-    - $\exists x \in \textrm{Mat}_{n \times 1}(\mathbb{K}) \mid A x = b \iff \textrm{rk}(A) = \textrm{rk}(A_b)$
+    - $\exists x \in \mathbb{K}^n \mid A x = b \iff \textrm{rk}(A) = \textrm{rk}(A_b)$
 - **Dim**
-    - $\exists x \in \textrm{Mat}_{n \times 1}(\mathbb{K}) \mid A x = b \iff \exists x_1, \ldots, x_n \in \mathbb{K} \mid x_1A^1 + \ldots + x_nA^n=b \iff b \in \textrm{span}(A^1, \ldots, A^n) \subseteq \textrm{span}(A^1, \ldots, A^n, b)$
+    - $\exists x \in \mathbb{K}^n \mid A x = b \iff \exists x_1, \ldots, x_n \in \mathbb{K} \mid x_1A^1 + \ldots + x_nA^n=b \iff b \in \textrm{span}(A^1, \ldots, A^n) \subseteq \textrm{span}(A^1, \ldots, A^n, b)$
     - $b \in \textrm{span}(A^1, \ldots, A^n) \implies \exists \mu_1, \ldots, \mu_n \mid v = \mu_1A^1 + \ldots + \mu_n A^n$
     - $\forall v \in \textrm{span}(A^1, \ldots, A^n, b) \quad \exists \lambda_1, \ldots, \lambda_n, c \in \mathbb{K} \mid v = \lambda_1A^1 + \ldots + \lambda_nA^n + cb = \lambda_1A^1 + \ldots + \lambda_nA^n + c(\mu_1A^1 + \ldots + \mu_nA^n) = (\lambda_1 + c\mu_1)A^1 + \ldots + (\lambda_n + c\mu_n)A^n \implies v \in \textrm{span}(A^1, \ldots, A^n) \implies \textrm{span}(A^1, \ldots, A^n, b) \subseteq \textrm{span}(A^1, \ldots, A^n)$
     - allora $\textrm{span}(A^1, \ldots, A^n) = \textrm{span}(A^1, \ldots, A^n, b) \iff \dim(\textrm{span}(A^1, \ldots, A^n)) = \dim(\textrm{span}(A^1, \ldots, A^n, b))$

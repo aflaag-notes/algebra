@@ -6,8 +6,10 @@
 
 > - $G$ gruppo
 > - $\sim$ relazione di equivalenza in $G$
-> - $\forall x \in G \quad [x]:=\{y \in G \mid x \sim y\}$
-> - $G/\sim := \{[x] \mid x \in G\}$ è detto **insieme quoziente**, ovvero l'insieme delle classi di equivalenza determinate da $\sim$
+> - $x \in G$
+> - $[x]:=\{y \in G \mid x \sim y\}$
+> - $G/\sim := \{[x] \mid x \in G\}$ è detto **insieme quoziente**
+>   - corrisponde all'insieme delle classi di equivalenza determinate da $\sim$
 
 ## Def
 

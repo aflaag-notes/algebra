@@ -196,8 +196,6 @@
 <li><span class="math inline">\cdot : \mathbb{K} \times V \rightarrow
 V</span></li>
 <li><span class="math inline">\mathbb{K}</span> campo</li>
-<li><span class="math inline">x \in \mathbb{K}</span> è detto
-<strong>scalare</strong></li>
 <li><span class="math inline">V</span> è detto <strong>spazio vettoriale
 su <span class="math inline">\mathbb{K}</span></strong> <span
 class="math inline">\iff</span>
@@ -228,6 +226,8 @@ del prodotto per scalare</em></li>
 prodotto per scalare</em></li>
 </ul></li>
 </ul></li>
+<li><span class="math inline">x \in \mathbb{K}</span> è detto
+<strong>scalare</strong></li>
 <li><span class="math inline">x \in V</span> è detto
 <strong>vettore</strong></li>
 </ul>
@@ -1431,31 +1431,78 @@ class="math inline">f</span></strong></li>
 </ul>
 </blockquote>
 <hr />
-<a href="#sottospazi-affini"><h1 id="sottospazi-affini">Sottospazi affini</h1></a>
+<a href="#spazi-affini"><h1 id="spazi-affini">Spazi affini</h1></a>
 <a href="#def-9"><h2 id="def-9">Def</h2></a>
 <ul>
-<li>⚠️ <strong>TODO</strong></li>
+<li><strong>Spazio affine</strong></li>
 </ul>
-<hr />
+<blockquote>
+<ul>
+<li><span class="math inline">\mathbb{K}</span> campo</li>
+<li><span class="math inline">V</span> spazio vettoriale su <span
+class="math inline">\mathbb{K}</span></li>
+<li><span class="math inline">A \subseteq V</span></li>
+<li><span class="math inline">+: A \times V \rightarrow A: (P, v)
+\rightarrow P + v</span></li>
+<li><span class="math inline">(A, +)</span> è detto <strong>spazio
+affine a <span class="math inline">V</span> su <span
+class="math inline">\mathbb{K}</span></strong> <span
+class="math inline">\iff</span>
+<ul>
+<li><span class="math inline">\forall P \in A \quad +_P:V \rightarrow A
+: v \rightarrow P + v</span> trasformazione lineare biiettiva</li>
+<li><span class="math inline">\forall P \in A, v, w \in V \quad (P + v)
++ w = P + (v + w)</span>
+<ul>
+<li>in particolare, deve valere la <em>proprietà associativa
+mista</em></li>
+</ul></li>
+</ul></li>
+</ul>
+</blockquote>
+<ul>
+<li><strong>Sottospazio affine</strong></li>
+</ul>
+<blockquote>
+<ul>
+<li><span class="math inline">\mathbb{K}</span> campo</li>
+<li><span class="math inline">V</span> spazio vettoriale su <span
+class="math inline">\mathbb{K}</span></li>
+<li><span class="math inline">W \subset V</span> sottospazio
+vettoriale</li>
+<li><span class="math inline">v \in V</span></li>
+<li><span class="math inline">S := v + W := \{v + w \mid w \in
+W\}</span> è detto <strong>sottospazio affine a <span
+class="math inline">W</span></strong>
+<ul>
+<li>in particolare, si tratta di una classe laterale rispetto a <span
+class="math inline">+</span> di <span class="math inline">W</span></li>
+<li>può essere visualizzato graficamente come traslazione di <span
+class="math inline">W</span> di un fattore pari a <span
+class="math inline">v</span></li>
+</ul></li>
+<li><span class="math inline">\textrm{Giac}(S) = W</span> è detta
+<strong>giacitura di <span class="math inline">S</span></strong></li>
+</ul>
+</blockquote>
 <a href="#oss-13"><h2 id="oss-13">Oss</h2></a>
 <ul>
 <li><strong>Hp</strong>
 <ul>
 <li><span class="math inline">\mathbb{K}</span> campo</li>
-<li><span class="math inline">m, n \in \mathbb{N} - \{0\}</span></li>
+<li><span class="math inline">m, n \in \mathbb{N}</span></li>
 <li><span class="math inline">A \in \textrm{Mat}_{m \times
 n}(\mathbb{K})</span></li>
-<li><span class="math inline">b \in \textrm{Mat}_{m \times
-1}(\mathbb{K})</span></li>
-<li><span class="math inline">X := \{x \in \textrm{Mat}_{n \times
-1}(\mathbb{K}) \mid A\cdot x = b\}</span></li>
+<li><span class="math inline">b \in \mathbb{K}^m</span></li>
+<li><span class="math inline">X := \{x \in \mathbb{K}^n \mid A x =
+b\}</span></li>
 <li><span class="math inline">X \neq \varnothing</span></li>
 </ul></li>
 <li><strong>Th</strong>
 <ul>
 <li><span class="math inline">X</span> sottospazio affine di <span
-class="math inline">\mathbb{K}^n</span>, con dimensione pari a <span
-class="math inline">n - \textrm{rk}(A)</span></li>
+class="math inline">\mathbb{K}^n</span></li>
+<li><span class="math inline">\dim(X) = n - \textrm{rk}(A)</span></li>
 </ul></li>
 <li><strong>Dim</strong>
 <ul>

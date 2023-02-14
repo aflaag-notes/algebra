@@ -32,7 +32,7 @@
 - [Spazi vettoriali](https://ph04.github.io/algebra/html/spazi-vettoriali.html)
     - [Spazi vettoriali](https://ph04.github.io/algebra/html/spazi-vettoriali.html#spazi-vettoriali)
     - [Applicazioni lineari](https://ph04.github.io/algebra/html/spazi-vettoriali.html#applicazioni-lineari)
-    - [Sottospazi affini](https://ph04.github.io/algebra/html/spazi-vettoriali.html#sottospazi-affini)
+    - [Spazi affini](https://ph04.github.io/algebra/html/spazi-vettoriali.html#spazi-affini)
     - [Interpretazione geometrica dei vettori](https://ph04.github.io/algebra/html/spazi-vettoriali.html#interpretazione-geometrica-dei-vettori)
 - [Matrici](https://ph04.github.io/algebra/html/matrici.html)
     - [Matrici](https://ph04.github.io/algebra/html/matrici.html#matrici)

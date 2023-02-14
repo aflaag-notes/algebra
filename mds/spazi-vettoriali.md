@@ -8,7 +8,6 @@
 > - $+: V \times V \rightarrow V$
 > - $\cdot : \mathbb{K} \times V \rightarrow V$
 > - $\mathbb{K}$ campo
-> - $x \in \mathbb{K}$ è detto **scalare**
 > - $V$ è detto **spazio vettoriale su $\mathbb{K}$** $\iff$
 >   - $(V, +)$ gruppo abeliano
 >   - $\exists 1 \in \mathbb{K} \mid \forall v \in V \quad 1v = v$
@@ -19,6 +18,7 @@
 >     - in particolare, deve valere la _proprietà distributiva a sinistra del prodotto per scalare_
 >   - $\forall v \in V, k, h \in \mathbb{K} \quad (ab)v = a(bv)$
 >      - in particolare, deve valere la _proprietà associativa del prodotto per scalare_
+> - $x \in \mathbb{K}$ è detto **scalare**
 > - $x \in V$ è detto **vettore**
 
 ## Ex
@@ -475,25 +475,44 @@
 
 ****
 
-# Sottospazi affini
+# Spazi affini
 
 ## Def
 
-- ⚠️ **TODO**
+- **Spazio affine**
 
-****
+> - $\mathbb{K}$ campo
+> - $V$ spazio vettoriale su $\mathbb{K}$
+> - $A \subseteq V$
+> - $+: A \times V \rightarrow A: (P, v) \rightarrow P + v$
+> - $(A, +)$ è detto **spazio affine a $V$ su $\mathbb{K}$** $\iff$
+>   - $\forall P \in A \quad +_P:V \rightarrow A : v \rightarrow P + v$ trasformazione lineare biiettiva
+>   - $\forall P \in A, v, w \in V \quad (P + v) + w = P + (v + w)$
+>     - in particolare, deve valere la _proprietà associativa mista_
+
+- **Sottospazio affine**
+
+> - $\mathbb{K}$ campo
+> - $V$ spazio vettoriale su $\mathbb{K}$
+> - $W \subset V$ sottospazio vettoriale
+> - $v \in V$
+> - $S := v + W := \{v + w \mid w \in W\}$ è detto **sottospazio affine a $W$**
+>   - in particolare, si tratta di una classe laterale rispetto a $+$ di $W$
+>   - può essere visualizzato graficamente come traslazione di $W$ di un fattore pari a $v$
+> - $\textrm{Giac}(S) = W$ è detta **giacitura di $S$**
 
 ## Oss
 
 - **Hp**
     - $\mathbb{K}$ campo
-    - $m, n \in \mathbb{N} - \{0\}$
+    - $m, n \in \mathbb{N}$
     - $A \in \textrm{Mat}_{m \times n}(\mathbb{K})$
-    - $b \in \textrm{Mat}_{m \times 1}(\mathbb{K})$
-    - $X := \{x \in \textrm{Mat}_{n \times 1}(\mathbb{K}) \mid A\cdot x = b\}$
+    - $b \in \mathbb{K}^m$
+    - $X := \{x \in \mathbb{K}^n \mid A x = b\}$
     - $X \neq \varnothing$
 - **Th**
-    - $X$ sottospazio affine di $\mathbb{K}^n$, con dimensione pari a $n - \textrm{rk}(A)$
+    - $X$ sottospazio affine di $\mathbb{K}^n$
+    - $\dim(X) = n - \textrm{rk}(A)$
 - **Dim**
     - ⚠️ **TODO**
 
