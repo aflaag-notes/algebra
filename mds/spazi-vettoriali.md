@@ -206,6 +206,22 @@
 >   - in particolare, coincide con la cardinalità delle basi di $V$, che per dimostrazione precedente è unica
 > - $V$ si dice avere **dimensione infinita** $\iff$ non esiste un insieme finito di generatori in $V$
 
+## Ex
+
+- **Hp**
+    - $\mathbb{K}$ campo
+    - $n \in \mathbb{N}$
+    - $\mathbb{K}[x]_{\le n} := \{p(x) \in \mathbb{K}[x] \mid \deg(p(x)) \le n\}$
+- **Dim**
+    - $\mathbb{K}[x]_{\le n}$ spazio vettoriale su $\mathbb{K}$
+    - $\dim(\mathbb{K}[x]_{\le n}) = n + 1$
+- **Th**
+    - sia $p(x) \in \mathbb{K}[x]_{\le n} \mid \deg(p(x)) = n$
+    - allora $\exists a_0, \ldots, a_n \in \mathbb{K} \mid p(x) = a_0x^0 + \ldots + a_nx^n$, che di fatto costituisce una combinazione lineare dei $x^0, \ldots, x^n$ attraverso i coefficienti $a_0, \ldots, a_n$
+    - allora, si vede facilmente che $\{1, x, x^2, \ldots, x^n\}$ costituiscono una base di $\mathbb{K}[x]_{\le n}$, il che implica che $\dim(\mathbb{K}[x]_{\le n}) = n + 1$
+        - si noti che di fatto si ha $n + 1$ per via del termine noto nei polinomi 
+        - inoltre, questo dimostra che $\mathbb{K}[x]$ ha dimensione infinita, poiché non c'è limite al grado del polinomio e la cardinalità delle basi è necessariamente infinita
+
 ## Oss
 
 - **Hp**
