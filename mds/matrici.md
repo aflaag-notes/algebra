@@ -100,7 +100,7 @@
 > - $\mathbb{K}$ campo
 > - $m,n \in \mathbb{N}$
 > - $A \in \textrm{Mat}_{m \times n}(\mathbb{K})$
-> - $L_A:\mathbb{K}^n \rightarrow \mathbb{K}^m: x \rightarrow Ax$ è detta **moltiplicazione sinistra di $A$**
+> - $\mathscr{L}_A:\mathbb{K}^n \rightarrow \mathbb{K}^m: x \rightarrow Ax$ è detta **moltiplicazione sinistra di $A$**
 
 ## Oss
 
@@ -109,10 +109,10 @@
     - $m,n \in \mathbb{N}$
     - $A \in \textrm{Mat}_{m \times n}(\mathbb{K})$
 - **Th**
-    - $L_A$ trasformazione lineare
+    - $\mathscr{L}_A$ trasformazione lineare
 - **Dim**
-    - $\forall x, y \in \mathbb{K}^n \quad L_A(x + y) = A(x + y) = Ax + Ay = L_A(x) + L_A(y)$
-    - $\forall k \in \mathbb{K}, x \in \mathbb{K}^n \quad L_A(kx) = A(kx) = k(Ax)=kL_A(x)$
+    - $\forall x, y \in \mathbb{K}^n \quad \mathscr{L}_A(x + y) = A(x + y) = Ax + Ay = \mathscr{L}_A(x) + \mathscr{L}_A(y)$
+    - $\forall k \in \mathbb{K}, x \in \mathbb{K}^n \quad \mathscr{L}_A(kx) = A(kx) = k(Ax)=k\mathscr{L}_A(x)$
 
 ## Oss
 
@@ -121,11 +121,11 @@
     - $m,n \in \mathbb{N}$
     - $A \in \textrm{Mat}_{m \times n}(\mathbb{K})$
 - **Th**
-    - $\ker(L_A) = \textrm{span}(A_1, \ldots, A_m)^\bot$
-    - $\textrm{im}(L_A) = \textrm{span}(A^1, \ldots, A^n)$
+    - $\ker(\mathscr{L}_A) = \textrm{span}(A_1, \ldots, A_m)^\bot$
+    - $\textrm{im}(\mathscr{L}_A) = \textrm{span}(A^1, \ldots, A^n)$
 - **Dim**
-    - $\ker(L_A) := \left\{x \in \mathbb{K}^n \mid L_A(x) = 0_{\mathbb{K}^m} \iff A x = 0_{\mathbb{K}^m} \iff \left(\begin{array}{c}A_1\cdot x \\ \vdots \\ A_m \cdot x\end{array}\right)= \left(\begin{array}{c} 0 \\ \vdots \\ 0\end{array}\right)\right\} =: \textrm{span}(A_1, \ldots, A_m)^\bot$
-    - $\forall A \in \textrm{Mat}_{m \times n}(\mathbb{K}) \quad L_A(x) = A x = \left(\begin{array}{ccc} a_{1,1} & \cdots & a_{1,n}\\ \vdots & \ddots & \vdots \\ a_{m,1} & \cdots & a_{m,n}\end{array}\right) \left(\begin{array}{c} x_1 \\ \vdots \\ x_n \end{array}\right) = \left(\begin{array}{c}a_{1, 1} x_1 + \ldots + a_{1,n}x_n \\ \vdots \\ a_{m,1}x_1 + \ldots + a_{m,n} x_n \end{array}\right) =  x_1 \left(\begin{array}{c}a_{1, 1} \\ \vdots \\ a_{m, 1}\end{array}\right) + \ldots + x_n \left(\begin{array}{c}a_{1, n}\\ \vdots \\ a_{m, n}\end{array}\right) = x_1A^1 + \ldots + x_nA^n =: y \iff y \in \textrm{span}(A^1, \ldots, A^n) \implies \textrm{im}(L_A) = \textrm{span}(A^1, \ldots, A^n)$
+    - $\ker(\mathscr{L}_A) := \left\{x \in \mathbb{K}^n \mid \mathscr{L}_A(x) = 0_{\mathbb{K}^m} \iff A x = 0_{\mathbb{K}^m} \iff \left(\begin{array}{c}A_1\cdot x \\ \vdots \\ A_m \cdot x\end{array}\right)= \left(\begin{array}{c} 0 \\ \vdots \\ 0\end{array}\right)\right\} =: \textrm{span}(A_1, \ldots, A_m)^\bot$
+    - $\forall A \in \textrm{Mat}_{m \times n}(\mathbb{K}) \quad \mathscr{L}_A(x) = A x = \left(\begin{array}{ccc} a_{1,1} & \cdots & a_{1,n}\\ \vdots & \ddots & \vdots \\ a_{m,1} & \cdots & a_{m,n}\end{array}\right) \left(\begin{array}{c} x_1 \\ \vdots \\ x_n \end{array}\right) = \left(\begin{array}{c}a_{1, 1} x_1 + \ldots + a_{1,n}x_n \\ \vdots \\ a_{m,1}x_1 + \ldots + a_{m,n} x_n \end{array}\right) =  x_1 \left(\begin{array}{c}a_{1, 1} \\ \vdots \\ a_{m, 1}\end{array}\right) + \ldots + x_n \left(\begin{array}{c}a_{1, n}\\ \vdots \\ a_{m, n}\end{array}\right) = x_1A^1 + \ldots + x_nA^n =: y \iff y \in \textrm{span}(A^1, \ldots, A^n) \implies \textrm{im}(\mathscr{L}_A) = \textrm{span}(A^1, \ldots, A^n)$
 
 ## Oss
 
@@ -134,8 +134,8 @@
 > - $\mathbb{K}$ campo
 > - $m,n \in \mathbb{N}$
 > - $A \in \textrm{Mat}_{m \times n}(\mathbb{K})$
-> - $\textrm{rk}(A):=\textrm{rk}(L_A)$ è detto **rango di $A$**
->   - in particolare $\textrm{rk}(A) := \textrm{rk}(L_A) := \dim(\textrm{im}(L_A))$
+> - $\textrm{rk}(A):=\textrm{rk}(\mathscr{L}_A)$ è detto **rango di $A$**
+>   - in particolare $\textrm{rk}(A) := \textrm{rk}(\mathscr{L}_A) := \dim(\textrm{im}(\mathscr{L}_A))$
 >   - inoltre, $\textrm{rk}(A) \le \min(m, n)$
 
 ## Oss
@@ -147,9 +147,9 @@
 - **Th**
     - $\textrm{rk}(A) =\dim(\textrm{span}(A^1, \ldots, A^n)) = \dim(\textrm{span}(A_1, \ldots, A_n))$
 - **Dim**
-    - per definizione $\textrm{rk}(A) = \textrm{rk}(L_A)$
-    - per dimostrazione precedente $\left \{ \begin{array}{l}\ker(L_A) = \textrm{span}(A_1, \ldots, A_n)^{\bot} \\ \textrm{im}(L_A) = \textrm{span}(A^1, \ldots, A^n) \end{array} \right. \implies \left \{ \begin{array}{l} \dim(\ker(L_A)) = \dim(\textrm{span}(A_1, \ldots, A_m)^\bot) \\ \textrm{rk}(A) := \textrm{rk}(L_A) := \dim(\textrm{im}(L_A)) = \dim(\textrm{span}(A^1, \ldots, A^n))\end{array} \right.$
-    - per il teorema del rango $\dim(\textrm{im}(L_A)) = \dim(\mathbb{K}^n) - \dim(\ker(L_A)) = \dim(\mathbb{K}^n) - \dim(\textrm{span}(A_1, \ldots, A_m)^\bot)$
+    - per definizione $\textrm{rk}(A) = \textrm{rk}(\mathscr{L}_A)$
+    - per dimostrazione precedente $\left \{ \begin{array}{l}\ker(\mathscr{L}_A) = \textrm{span}(A_1, \ldots, A_n)^{\bot} \\ \textrm{im}(\mathscr{L}_A) = \textrm{span}(A^1, \ldots, A^n) \end{array} \right. \implies \left \{ \begin{array}{l} \dim(\ker(\mathscr{L}_A)) = \dim(\textrm{span}(A_1, \ldots, A_m)^\bot) \\ \textrm{rk}(A) := \textrm{rk}(\mathscr{L}_A) := \dim(\textrm{im}(\mathscr{L}_A)) = \dim(\textrm{span}(A^1, \ldots, A^n))\end{array} \right.$
+    - per il teorema del rango $\dim(\textrm{im}(\mathscr{L}_A)) = \dim(\mathbb{K}^n) - \dim(\ker(\mathscr{L}_A)) = \dim(\mathbb{K}^n) - \dim(\textrm{span}(A_1, \ldots, A_m)^\bot)$
     - per dimostrazione precedente $\dim(\textrm{span}(A_1, \ldots, A_m)^\bot)= \dim(\mathbb{K}^n) - \dim(\textrm{span}(A_1, \ldots, A_m))$
     - allora $\textrm{rk}(A) = \dim(\textrm{span}(A^1, \ldots, A^n)) = \dim(\mathbb{K}^n) - (\dim(\mathbb{K}^n) - \dim(\textrm{span}(A_1, \ldots, A_m))) = \dim(\textrm{span}(A_1, \ldots, A_m))$
 
@@ -164,7 +164,7 @@
 > - $\mathbb{K}$ campo
 > - $m, n \in \mathbb{N}$
 > - $A \in \textrm{Mat}_{m \times n}(\mathbb{K})$
-> - $\forall A_1, \ldots, A_m$ righe di $A$, scambiare $A_i$ e $A_j$ lascia invariato $\ker(L_A)$
+> - $\forall A_1, \ldots, A_m$ righe di $A$, scambiare $A_i$ e $A_j$ lascia invariato $\ker(\mathscr{L}_A)$
 
 - **Moltiplicazione di una riga per una costante**
 
@@ -172,7 +172,7 @@
 > - $m, n \in \mathbb{N}$
 > - $A \in \textrm{Mat}_{m \times n}(\mathbb{K})$
 > - $\lambda \in \mathbb{K}^*$
-> - $\forall A_1, \ldots, A_m$ righe di $A$, moltiplicare $A_i$ per $\lambda$ lascia invariato $\ker(L_A)$
+> - $\forall A_1, \ldots, A_m$ righe di $A$, moltiplicare $A_i$ per $\lambda$ lascia invariato $\ker(\mathscr{L}_A)$
 
 - **Somma di una riga con un multiplo di un'altra**
 
@@ -180,14 +180,14 @@
 > - $m, n \in \mathbb{N}$
 > - $A \in \textrm{Mat}_{m \times n}(\mathbb{K})$
 > - $\lambda \in \mathbb{K}^*$
-> - $\forall A_1, \ldots, A_m$ righe di $A$, sommare ad $A_i$ un certo $\lambda \cdot A_j$ lascia invariato $\ker(L_A)$
+> - $\forall A_1, \ldots, A_m$ righe di $A$, sommare ad $A_i$ un certo $\lambda \cdot A_j$ lascia invariato $\ker(\mathscr{L}_A)$
 
 - **Scambio di colonne di una matrice**
 
 > - $\mathbb{K}$ campo
 > - $m, n \in \mathbb{N}$
 > - $A \in \textrm{Mat}_{m \times n}(\mathbb{K})$
-> - $\forall A^1, \ldots, A^m$ colonne di $A$, scambiare $A^i$ e $A^j$ lascia invariato $\textrm{im}(L_A)$
+> - $\forall A^1, \ldots, A^m$ colonne di $A$, scambiare $A^i$ e $A^j$ lascia invariato $\textrm{im}(\mathscr{L}_A)$
 
 - **Moltiplicazione di una colonna per una costante**
 
@@ -195,7 +195,7 @@
 > - $m, n \in \mathbb{N}$
 > - $A \in \textrm{Mat}_{m \times n}(\mathbb{K})$
 > - $\lambda \in \mathbb{K}^*$
-> - $\forall A^1, \ldots, A^m$ colonne di $A$, moltiplicare $A^i$ per $\lambda$ lascia invariato $\textrm{im}(L_A)$
+> - $\forall A^1, \ldots, A^m$ colonne di $A$, moltiplicare $A^i$ per $\lambda$ lascia invariato $\textrm{im}(\mathscr{L}_A)$
 
 - **Somma di una colonna con un multiplo di un'altra**
 
@@ -203,7 +203,7 @@
 > - $m, n \in \mathbb{N}$
 > - $A \in \textrm{Mat}_{m \times n}(\mathbb{K})$
 > - $\lambda \in \mathbb{K}^*$
-> - $\forall A^1, \ldots, A^m$ righe di $A$, sommare ad $A^i$ un certo $\lambda \cdot A^j$ lascia invariato $\textrm{im}(L_A)$
+> - $\forall A^1, \ldots, A^m$ righe di $A$, sommare ad $A^i$ un certo $\lambda \cdot A^j$ lascia invariato $\textrm{im}(\mathscr{L}_A)$
 
 ## Oss
 
@@ -214,7 +214,7 @@
     - $A \equiv_R B \iff$ è possibile ricavare $B$ da $A$ eseguendo operazioni tra righe
 - **Th**
     - $\equiv_R$ relazione di equivalenza
-    - $A \equiv_R B \implies \left \{ \begin{array}{l}\ker(L_A) = \ker(L_B) \\ \textrm{rk}(A) = \textrm{rk}(B) \end{array} \right.$
+    - $A \equiv_R B \implies \left \{ \begin{array}{l}\ker(\mathscr{L}_A) = \ker(\mathscr{L}_B) \\ \textrm{rk}(A) = \textrm{rk}(B) \end{array} \right.$
 
 ## Oss
 
@@ -225,7 +225,7 @@
     - $A \equiv_C B \iff$ è possibile ricavare $B$ da $A$ eseguendo operazioni tra colonne
 - **Th**
     - $\equiv_C$ una relazione di equivalenza
-    - $A \equiv_C B \implies \left \{ \begin{array}{l}\textrm{im}(L_A) = \textrm{im}(L_B) \\ \textrm{rk}(A) = \textrm{rk}(B) \end{array}\right.$
+    - $A \equiv_C B \implies \left \{ \begin{array}{l}\textrm{im}(\mathscr{L}_A) = \textrm{im}(\mathscr{L}_B) \\ \textrm{rk}(A) = \textrm{rk}(B) \end{array}\right.$
 
 ****
 
@@ -551,13 +551,13 @@
     - $\varphi_\mathcal{B}: \mathbb{K}^n \rightarrow V: (b_1, \ldots, b_n) \rightarrow b_1v_1 + \ldots + b_nv_n$ isomorfismo
     - $\varphi_\mathcal{C}: \mathbb{K}^m \rightarrow W: (c_1, \ldots, c_m) \rightarrow c_1w_1 + \ldots + c_mw_m$ isomorfismo
 - **Th**
-    - $\exists !A \in \textrm{Mat}_{m \times n}(\mathbb{K}) \mid f = \varphi_\mathcal{C}\cdot L_A \cdot \varphi_\mathcal{B}^{-1}$, e prende il nome di _matrice di $f$_
+    - $\exists !A \in \textrm{Mat}_{m \times n}(\mathbb{K}) \mid f = \varphi_\mathcal{C}\cdot \mathscr{L}_A \cdot \varphi_\mathcal{B}^{-1}$, e prende il nome di _matrice di $f$_
 - **Dim**
     - si noti che $V \cong \mathbb{K}^n$ per dimostrazione precedente, dunque esiste $\varphi_{\mathcal{B}}$, e analogamente $W \cong \mathbb{K}^m$ implica che esiste $\varphi_{\mathcal{C}}$
     - sia $e_1, \ldots, e_n$ base canonica di $\mathbb{K}^n$
     - sia $A \in \textrm{Mat}_{m \times n}(\mathbb{K})$
     - $\forall i \in [1, n] \quad \varphi_{\mathcal{B}}(e_i) = 0 \cdot v_1 + \ldots + 1 \cdot v_i + \ldots 0 \cdot v_n = v_i \iff \varphi_{\mathcal{B}}^{-1}(v_i) = e_i$
-    - $L_A(e_i) = \left(\begin{array}{cccc} a_{1,1} & \ldots & a_{1,n} \\ \vdots & \ddots & \vdots \\ a_{m, 1} & \ldots & a_{m, n}\end{array}\right)\left(\begin{array}{c} 0 \\ \vdots \\ 1 \\ \vdots \\ 0 \end{array}\right) = \left(\begin{array}{c} a_{1, i} \\ \vdots \\ a_{m, i}\end{array}\right) = A^i \in \mathbb{K}^m$
+    - $\mathscr{L}_A(e_i) = \left(\begin{array}{cccc} a_{1,1} & \ldots & a_{1,n} \\ \vdots & \ddots & \vdots \\ a_{m, 1} & \ldots & a_{m, n}\end{array}\right)\left(\begin{array}{c} 0 \\ \vdots \\ 1 \\ \vdots \\ 0 \end{array}\right) = \left(\begin{array}{c} a_{1, i} \\ \vdots \\ a_{m, i}\end{array}\right) = A^i \in \mathbb{K}^m$
     - $\varphi_{\mathcal{C}}(A^i)=a_{1, i}w_1+ \ldots + a_{m, i} w_m = w_i$
     - ⚠️ **da completare**
 

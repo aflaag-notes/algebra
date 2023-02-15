@@ -512,19 +512,20 @@ class="math inline">\mathbb{K}^n</span></li>
 \textrm{Mat}_{n \times n}(\mathbb{K}) \mid A \cdot B = B \cdot A =
 I_n</span></li>
 <li>allora <span class="math inline">I_n = A \cdot B = (A \cdot B^1,
-\ldots, A \cdot B^n) = (L_A(B^1), \ldots, L_A(B^n)) \iff \left \{
-\begin{array}{c} L_A(B^1) = e_1 \\ \vdots \\ L_A(B^n) = e_n \end{array}
-\right.\iff e_1, \ldots, e_n \in \textrm{im}(L_A) \implies
-\textrm{span}(e_1, \ldots, e_n) \subseteq \textrm{im}(L_A)</span></li>
+\ldots, A \cdot B^n) = (\mathscr{L}_A(B^1), \ldots, \mathscr{L}_A(B^n))
+\iff \left \{ \begin{array}{c} \mathscr{L}_A(B^1) = e_1 \\ \vdots \\
+\mathscr{L}_A(B^n) = e_n \end{array} \right.\iff e_1, \ldots, e_n \in
+\textrm{im}(\mathscr{L}_A) \implies \textrm{span}(e_1, \ldots, e_n)
+\subseteq \textrm{im}(\mathscr{L}_A)</span></li>
 <li><span class="math inline">e_1, \ldots, e_n</span> base canonica di
 <span class="math inline">\mathbb{K}^n \implies \dim(\textrm{span}(e_1,
 \ldots, e_n)) = n</span>, allora segue necessariamente che <span
 class="math inline">\textrm{span}(e_1, \ldots, e_n) \subseteq
-\textrm{im}(L_A) \iff \textrm{span}(e_1, \ldots, e_n) =
-\textrm{im}(L_A)</span></li>
-<li>allora <span class="math inline">\textrm{rk}(A) := \textrm{rk}(L_A)
-= \dim(\textrm{span}(A^1, \ldots, A^n)) = \dim(\textrm{im}(L_A)) =
-\dim(\mathbb{K}^n) = n</span></li>
+\textrm{im}(\mathscr{L}_A) \iff \textrm{span}(e_1, \ldots, e_n) =
+\textrm{im}(\mathscr{L}_A)</span></li>
+<li>allora <span class="math inline">\textrm{rk}(A) :=
+\textrm{rk}(\mathscr{L}_A) = \dim(\textrm{span}(A^1, \ldots, A^n)) =
+\dim(\textrm{im}(\mathscr{L}_A)) = \dim(\mathbb{K}^n) = n</span></li>
 </ul></li>
 <li>2 <span class="math inline">\iff</span> 3 <span
 class="math inline">\land</span> 4
@@ -683,18 +684,20 @@ class="math inline">\iff \exists v \in \mathbb{K}^n -
 <li><span class="math inline">\exists v \in \mathbb{K}^n -
 \{0_{\mathbb{K}^n}\} \mid A \cdot v = \lambda \cdot v = \lambda \cdot
 I_n \cdot v \iff \exists v \in \mathbb{K}^n - \{0_{\mathbb{K}^n}\} \mid
-(A - \lambda \cdot I_n)\cdot v = 0 \iff v \in \ker(L_{A - \lambda \cdot
-I_n}) \iff \ker(L_{A - \lambda \cdot I_n}) \neq \varnothing \implies
-\dim(\ker(L_{A - \lambda \cdot I_n})) \gt 0</span></li>
-<li>per il teorema del rango <span class="math inline">\textrm{rk}(L_{A
-- \lambda \cdot I_n}) = \dim(\mathbb{K}^n) - \dim(\ker(L_{A - \lambda
-\cdot I_n})) = n - \dim(\ker(L_{A - \lambda \cdot I_n})) \lt n</span>, e
-in particolare <span class="math inline">\textrm{rk}(L_{A-\lambda \cdot
-I_n}) \neq n</span></li>
-<li><span class="math inline">\textrm{rk}(L_{A- \lambda \cdot I_n}) \neq
-n \iff \det(A - \lambda \cdot I_n) = 0</span> per dimostrazione
-precedente, e <span class="math inline">\det(A - \lambda \cdot I_n) :=
-p_A(\lambda) = 0 \iff \lambda</span> autovalore</li>
+(A - \lambda \cdot I_n)\cdot v = 0 \iff v \in \ker(\mathscr{L}_{A -
+\lambda \cdot I_n}) \iff \ker(\mathscr{L}_{A - \lambda \cdot I_n}) \neq
+\varnothing \implies \dim(\ker(\mathscr{L}_{A - \lambda \cdot I_n})) \gt
+0</span></li>
+<li>per il teorema del rango <span
+class="math inline">\textrm{rk}(\mathscr{L}_{A - \lambda \cdot I_n}) =
+\dim(\mathbb{K}^n) - \dim(\ker(\mathscr{L}_{A - \lambda \cdot I_n})) = n
+- \dim(\ker(\mathscr{L}_{A - \lambda \cdot I_n})) \lt n</span>, e in
+particolare <span class="math inline">\textrm{rk}(\mathscr{L}_{A-\lambda
+\cdot I_n}) \neq n</span></li>
+<li><span class="math inline">\textrm{rk}(\mathscr{L}_{A- \lambda \cdot
+I_n}) \neq n \iff \det(A - \lambda \cdot I_n) = 0</span> per
+dimostrazione precedente, e <span class="math inline">\det(A - \lambda
+\cdot I_n) := p_A(\lambda) = 0 \iff \lambda</span> autovalore</li>
 </ul></li>
 </ul>
 <a href="#def-4"><h2 id="def-4">Def</h2></a>
@@ -847,11 +850,12 @@ n}(\mathbb{K})</span></li>
 <li><span class="math inline">\textrm{E}_\lambda(A) := \{v \in
 \mathbb{K}^n \mid (A - \lambda \cdot I_n) \cdot v = 0\}</span> per
 definizione, allora <span class="math inline">\textrm{E}_\lambda(A) =
-\ker(L_{A- \lambda \cdot I_n})</span></li>
+\ker(\mathscr{L}_{A- \lambda \cdot I_n})</span></li>
 <li>allora, per il teorema del rango <span
-class="math inline">\textrm{rk}(L_{A - \lambda \cdot I_n}) = n -
-\dim(\ker(L_{A - \lambda \cdot I_n})) \iff \dim(\ker(L_{A - \lambda
-\cdot I_n})) = n - \textrm{rk}(L_{A - \lambda \cdot I_n}) =
+class="math inline">\textrm{rk}(\mathscr{L}_{A - \lambda \cdot I_n}) = n
+- \dim(\ker(\mathscr{L}_{A - \lambda \cdot I_n})) \iff
+\dim(\ker(\mathscr{L}_{A - \lambda \cdot I_n})) = n -
+\textrm{rk}(\mathscr{L}_{A - \lambda \cdot I_n}) =
 \dim(\textrm{E}_\lambda(A)) =: \nu(\lambda)</span></li>
 </ul></li>
 </ul>

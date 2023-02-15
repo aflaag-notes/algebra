@@ -158,9 +158,9 @@
     - 1 $\iff$ 2
         - **⚠️ dimostra roba sullo span**
         - sia $B = (B^1, \ldots, B^n) \in \textrm{Mat}_{n \times n}(\mathbb{K}) \mid A \cdot B = B \cdot A = I_n$
-        - allora $I_n = A \cdot B = (A \cdot B^1, \ldots, A \cdot B^n) = (L_A(B^1), \ldots, L_A(B^n)) \iff \left \{ \begin{array}{c} L_A(B^1) = e_1 \\  \vdots \\  L_A(B^n) = e_n \end{array} \right.\iff e_1, \ldots, e_n \in \textrm{im}(L_A) \implies \textrm{span}(e_1, \ldots, e_n) \subseteq \textrm{im}(L_A)$
-        - $e_1, \ldots, e_n$ base canonica di $\mathbb{K}^n \implies \dim(\textrm{span}(e_1, \ldots, e_n)) = n$, allora segue necessariamente che $\textrm{span}(e_1, \ldots, e_n) \subseteq \textrm{im}(L_A) \iff \textrm{span}(e_1, \ldots, e_n) = \textrm{im}(L_A)$ 
-        - allora $\textrm{rk}(A) := \textrm{rk}(L_A) = \dim(\textrm{span}(A^1, \ldots, A^n)) = \dim(\textrm{im}(L_A)) = \dim(\mathbb{K}^n) = n$
+        - allora $I_n = A \cdot B = (A \cdot B^1, \ldots, A \cdot B^n) = (\mathscr{L}_A(B^1), \ldots, \mathscr{L}_A(B^n)) \iff \left \{ \begin{array}{c} \mathscr{L}_A(B^1) = e_1 \\  \vdots \\  \mathscr{L}_A(B^n) = e_n \end{array} \right.\iff e_1, \ldots, e_n \in \textrm{im}(\mathscr{L}_A) \implies \textrm{span}(e_1, \ldots, e_n) \subseteq \textrm{im}(\mathscr{L}_A)$
+        - $e_1, \ldots, e_n$ base canonica di $\mathbb{K}^n \implies \dim(\textrm{span}(e_1, \ldots, e_n)) = n$, allora segue necessariamente che $\textrm{span}(e_1, \ldots, e_n) \subseteq \textrm{im}(\mathscr{L}_A) \iff \textrm{span}(e_1, \ldots, e_n) = \textrm{im}(\mathscr{L}_A)$ 
+        - allora $\textrm{rk}(A) := \textrm{rk}(\mathscr{L}_A) = \dim(\textrm{span}(A^1, \ldots, A^n)) = \dim(\textrm{im}(\mathscr{L}_A)) = \dim(\mathbb{K}^n) = n$
     - 2 $\iff$ 3 $\land$ 4
         - sia $\textrm{rk}(A) = n$
         - per dimostrazione precedente $n = \textrm{rk}(A) = \dim(\textrm{span}(A^1, \ldots, A^n)) = \dim(\textrm{span}(A_1, \ldots, A_n))$
@@ -240,9 +240,9 @@
 - **Th**
     - $\lambda$ autovalore $\iff \exists v \in \mathbb{K}^n - \{0_{\mathbb{K}^n}\} \mid A \cdot v = \lambda \cdot v$
 - **Dim**
-    - $\exists v \in \mathbb{K}^n - \{0_{\mathbb{K}^n}\} \mid A \cdot v = \lambda \cdot v = \lambda \cdot I_n \cdot v \iff \exists v \in \mathbb{K}^n - \{0_{\mathbb{K}^n}\} \mid (A - \lambda \cdot I_n)\cdot v = 0 \iff v \in \ker(L_{A - \lambda \cdot I_n}) \iff \ker(L_{A - \lambda \cdot I_n}) \neq \varnothing \implies \dim(\ker(L_{A - \lambda \cdot I_n})) \gt 0$
-    - per il teorema del rango $\textrm{rk}(L_{A - \lambda \cdot I_n}) = \dim(\mathbb{K}^n) - \dim(\ker(L_{A - \lambda \cdot I_n})) = n - \dim(\ker(L_{A - \lambda \cdot I_n})) \lt n$, e in particolare $\textrm{rk}(L_{A-\lambda \cdot I_n}) \neq n$
-    - $\textrm{rk}(L_{A- \lambda \cdot I_n}) \neq n \iff \det(A - \lambda \cdot I_n) = 0$ per dimostrazione precedente, e $\det(A - \lambda \cdot I_n) := p_A(\lambda) = 0 \iff \lambda$ autovalore
+    - $\exists v \in \mathbb{K}^n - \{0_{\mathbb{K}^n}\} \mid A \cdot v = \lambda \cdot v = \lambda \cdot I_n \cdot v \iff \exists v \in \mathbb{K}^n - \{0_{\mathbb{K}^n}\} \mid (A - \lambda \cdot I_n)\cdot v = 0 \iff v \in \ker(\mathscr{L}_{A - \lambda \cdot I_n}) \iff \ker(\mathscr{L}_{A - \lambda \cdot I_n}) \neq \varnothing \implies \dim(\ker(\mathscr{L}_{A - \lambda \cdot I_n})) \gt 0$
+    - per il teorema del rango $\textrm{rk}(\mathscr{L}_{A - \lambda \cdot I_n}) = \dim(\mathbb{K}^n) - \dim(\ker(\mathscr{L}_{A - \lambda \cdot I_n})) = n - \dim(\ker(\mathscr{L}_{A - \lambda \cdot I_n})) \lt n$, e in particolare $\textrm{rk}(\mathscr{L}_{A-\lambda \cdot I_n}) \neq n$
+    - $\textrm{rk}(\mathscr{L}_{A- \lambda \cdot I_n}) \neq n \iff \det(A - \lambda \cdot I_n) = 0$ per dimostrazione precedente, e $\det(A - \lambda \cdot I_n) := p_A(\lambda) = 0 \iff \lambda$ autovalore
 
 ## Def
 
@@ -326,8 +326,8 @@
 - **Th**
     - $\nu(\lambda) = n - \textrm{rk}(A - \lambda \cdot I_n)$
 - **Dim**
-    - $\textrm{E}_\lambda(A) := \{v \in \mathbb{K}^n \mid (A - \lambda \cdot I_n) \cdot v = 0\}$ per definizione, allora $\textrm{E}_\lambda(A) = \ker(L_{A- \lambda \cdot I_n})$
-    - allora, per il teorema del rango $\textrm{rk}(L_{A - \lambda \cdot I_n}) = n - \dim(\ker(L_{A - \lambda \cdot I_n})) \iff  \dim(\ker(L_{A - \lambda \cdot I_n})) = n - \textrm{rk}(L_{A - \lambda \cdot I_n}) = \dim(\textrm{E}_\lambda(A)) =: \nu(\lambda)$
+    - $\textrm{E}_\lambda(A) := \{v \in \mathbb{K}^n \mid (A - \lambda \cdot I_n) \cdot v = 0\}$ per definizione, allora $\textrm{E}_\lambda(A) = \ker(\mathscr{L}_{A- \lambda \cdot I_n})$
+    - allora, per il teorema del rango $\textrm{rk}(\mathscr{L}_{A - \lambda \cdot I_n}) = n - \dim(\ker(\mathscr{L}_{A - \lambda \cdot I_n})) \iff  \dim(\ker(\mathscr{L}_{A - \lambda \cdot I_n})) = n - \textrm{rk}(\mathscr{L}_{A - \lambda \cdot I_n}) = \dim(\textrm{E}_\lambda(A)) =: \nu(\lambda)$
 
 ## Oss
 

@@ -509,14 +509,14 @@
     - $b \in \mathbb{K}^m$
     - $X := \{x \in \mathbb{K}^n \mid A x = b\} \neq \varnothing$, dunque il sistema ammette almeno una soluzione
 - **Th**
-    - $X$ sottospazio di $\mathbb{K}^n$ affine a $\ker(L_A)$
+    - $X$ sottospazio di $\mathbb{K}^n$ affine a $\ker(\mathscr{L}_A)$
     - $\dim(X) = n - \textrm{rk}(A)$
 - **Dim**
-    - $\ker(L_A) := \{x \in \mathbb{K}^n \mid Ax = 0\} \subset \mathbb{K}^n$ sottospazio per dimostrazione precedente
+    - $\ker(\mathscr{L}_A) := \{x \in \mathbb{K}^n \mid Ax = 0\} \subset \mathbb{K}^n$ sottospazio per dimostrazione precedente
     - sia $x_0 \in X$, che esiste poiché $X \neq \varnothing$ in ipotesi
-    - allora $x_0 + \ker(L_A) := \{x_0 + x \mid x \in \ker(L_A)\}$ sottospazio di $\mathbb{K}^n$ affine a $\ker(L_A)$, dove $\textrm{Giac}(x_0 + \ker(L_A)) = \ker(L_A)$
-    - $\forall x \in X \quad Ax = b = Ax_0 \iff A(x - x_0) = 0 \iff x - x_0 \in \ker(L_A) \iff x \in x_0 + \ker(L_A)$, di conseguenza le soluzioni in $X$ generano un sottospazio di $\mathbb{K}^n$ affine a $\ker(L_A)$
-    - allora, per il teorema del rango $\dim(X) = \dim(x_0 + \ker(f)) = \dim(\textrm{Giac}(x_0 + \ker(f))) = \dim(\ker(L_A)) = n - \textrm{rk}(L_A) = n - \textrm{rk}(A)$
+    - allora $x_0 + \ker(\mathscr{L}_A) := \{x_0 + x \mid x \in \ker(\mathscr{L}_A)\}$ sottospazio di $\mathbb{K}^n$ affine a $\ker(\mathscr{L}_A)$, dove $\textrm{Giac}(x_0 + \ker(\mathscr{L}_A)) = \ker(\mathscr{L}_A)$
+    - $\forall x \in X \quad Ax = b = Ax_0 \iff A(x - x_0) = 0 \iff x - x_0 \in \ker(\mathscr{L}_A) \iff x \in x_0 + \ker(\mathscr{L}_A)$, di conseguenza le soluzioni in $X$ generano un sottospazio di $\mathbb{K}^n$ affine a $\ker(\mathscr{L}_A)$
+    - allora, per il teorema del rango $\dim(X) = \dim(x_0 + \ker(f)) = \dim(\textrm{Giac}(x_0 + \ker(f))) = \dim(\ker(\mathscr{L}_A)) = n - \textrm{rk}(\mathscr{L}_A) = n - \textrm{rk}(A)$
 
 ****
 

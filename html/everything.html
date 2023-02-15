@@ -3538,7 +3538,7 @@ soluzione</li>
 <ul>
 <li><span class="math inline">X</span> sottospazio di <span
 class="math inline">\mathbb{K}^n</span> affine a <span
-class="math inline">\ker(L_A)</span></li>
+class="math inline">\ker(\mathscr{L}_A)</span></li>
 <li><span class="math inline">\dim(X) = n - \textrm{rk}(A)</span></li>
 </ul></li>
 </ul>
@@ -3879,9 +3879,9 @@ vettoriale</li>
 <li><span class="math inline">m,n \in \mathbb{N}</span></li>
 <li><span class="math inline">A \in \textrm{Mat}_{m \times
 n}(\mathbb{K})</span></li>
-<li><span class="math inline">L_A:\mathbb{K}^n \rightarrow \mathbb{K}^m:
-x \rightarrow Ax</span> è detta <strong>moltiplicazione sinistra di
-<span class="math inline">A</span></strong></li>
+<li><span class="math inline">\mathscr{L}_A:\mathbb{K}^n \rightarrow
+\mathbb{K}^m: x \rightarrow Ax</span> è detta <strong>moltiplicazione
+sinistra di <span class="math inline">A</span></strong></li>
 </ul>
 </blockquote>
 <a href="#teorema-142"><h2 id="teorema-142">Teorema 142</h2></a>
@@ -3895,7 +3895,8 @@ n}(\mathbb{K})</span></li>
 </ul></li>
 <li><strong>Th</strong>
 <ul>
-<li><span class="math inline">L_A</span> trasformazione lineare</li>
+<li><span class="math inline">\mathscr{L}_A</span> trasformazione
+lineare</li>
 </ul></li>
 </ul>
 <a href="#teorema-143"><h2 id="teorema-143">Teorema 143</h2></a>
@@ -3909,10 +3910,10 @@ n}(\mathbb{K})</span></li>
 </ul></li>
 <li><strong>Th</strong>
 <ul>
-<li><span class="math inline">\ker(L_A) = \textrm{span}(A_1, \ldots,
-A_m)^\bot</span></li>
-<li><span class="math inline">\textrm{im}(L_A) = \textrm{span}(A^1,
-\ldots, A^n)</span></li>
+<li><span class="math inline">\ker(\mathscr{L}_A) = \textrm{span}(A_1,
+\ldots, A_m)^\bot</span></li>
+<li><span class="math inline">\textrm{im}(\mathscr{L}_A) =
+\textrm{span}(A^1, \ldots, A^n)</span></li>
 </ul></li>
 </ul>
 <a href="#definizione-56"><h2 id="definizione-56">Definizione 56</h2></a>
@@ -3925,11 +3926,13 @@ A_m)^\bot</span></li>
 <li><span class="math inline">m,n \in \mathbb{N}</span></li>
 <li><span class="math inline">A \in \textrm{Mat}_{m \times
 n}(\mathbb{K})</span></li>
-<li><span class="math inline">\textrm{rk}(A):=\textrm{rk}(L_A)</span> è
+<li><span
+class="math inline">\textrm{rk}(A):=\textrm{rk}(\mathscr{L}_A)</span> è
 detto <strong>rango di <span class="math inline">A</span></strong>
 <ul>
 <li>in particolare <span class="math inline">\textrm{rk}(A) :=
-\textrm{rk}(L_A) := \dim(\textrm{im}(L_A))</span></li>
+\textrm{rk}(\mathscr{L}_A) :=
+\dim(\textrm{im}(\mathscr{L}_A))</span></li>
 <li>inoltre, <span class="math inline">\textrm{rk}(A) \le \min(m,
 n)</span></li>
 </ul></li>
@@ -3966,7 +3969,8 @@ n}(\mathbb{K})</span></li>
 <li><span class="math inline">\forall A_1, \ldots, A_m</span> righe di
 <span class="math inline">A</span>, scambiare <span
 class="math inline">A_i</span> e <span class="math inline">A_j</span>
-lascia invariato <span class="math inline">\ker(L_A)</span></li>
+lascia invariato <span
+class="math inline">\ker(\mathscr{L}_A)</span></li>
 </ul>
 </blockquote>
 <ul>
@@ -3983,7 +3987,7 @@ n}(\mathbb{K})</span></li>
 <span class="math inline">A</span>, moltiplicare <span
 class="math inline">A_i</span> per <span
 class="math inline">\lambda</span> lascia invariato <span
-class="math inline">\ker(L_A)</span></li>
+class="math inline">\ker(\mathscr{L}_A)</span></li>
 </ul>
 </blockquote>
 <ul>
@@ -4000,7 +4004,7 @@ n}(\mathbb{K})</span></li>
 <span class="math inline">A</span>, sommare ad <span
 class="math inline">A_i</span> un certo <span
 class="math inline">\lambda \cdot A_j</span> lascia invariato <span
-class="math inline">\ker(L_A)</span></li>
+class="math inline">\ker(\mathscr{L}_A)</span></li>
 </ul>
 </blockquote>
 <ul>
@@ -4015,7 +4019,8 @@ n}(\mathbb{K})</span></li>
 <li><span class="math inline">\forall A^1, \ldots, A^m</span> colonne di
 <span class="math inline">A</span>, scambiare <span
 class="math inline">A^i</span> e <span class="math inline">A^j</span>
-lascia invariato <span class="math inline">\textrm{im}(L_A)</span></li>
+lascia invariato <span
+class="math inline">\textrm{im}(\mathscr{L}_A)</span></li>
 </ul>
 </blockquote>
 <ul>
@@ -4033,7 +4038,7 @@ n}(\mathbb{K})</span></li>
 <span class="math inline">A</span>, moltiplicare <span
 class="math inline">A^i</span> per <span
 class="math inline">\lambda</span> lascia invariato <span
-class="math inline">\textrm{im}(L_A)</span></li>
+class="math inline">\textrm{im}(\mathscr{L}_A)</span></li>
 </ul>
 </blockquote>
 <ul>
@@ -4051,7 +4056,7 @@ n}(\mathbb{K})</span></li>
 <span class="math inline">A</span>, sommare ad <span
 class="math inline">A^i</span> un certo <span
 class="math inline">\lambda \cdot A^j</span> lascia invariato <span
-class="math inline">\textrm{im}(L_A)</span></li>
+class="math inline">\textrm{im}(\mathscr{L}_A)</span></li>
 </ul>
 </blockquote>
 <a href="#teorema-145"><h2 id="teorema-145">Teorema 145</h2></a>
@@ -4071,8 +4076,8 @@ class="math inline">A</span> eseguendo operazioni tra righe</li>
 <li><span class="math inline">\equiv_R</span> relazione di
 equivalenza</li>
 <li><span class="math inline">A \equiv_R B \implies \left \{
-\begin{array}{l}\ker(L_A) = \ker(L_B) \\ \textrm{rk}(A) = \textrm{rk}(B)
-\end{array} \right.</span></li>
+\begin{array}{l}\ker(\mathscr{L}_A) = \ker(\mathscr{L}_B) \\
+\textrm{rk}(A) = \textrm{rk}(B) \end{array} \right.</span></li>
 </ul></li>
 </ul>
 <a href="#teorema-146"><h2 id="teorema-146">Teorema 146</h2></a>
@@ -4092,8 +4097,8 @@ class="math inline">A</span> eseguendo operazioni tra colonne</li>
 <li><span class="math inline">\equiv_C</span> una relazione di
 equivalenza</li>
 <li><span class="math inline">A \equiv_C B \implies \left \{
-\begin{array}{l}\textrm{im}(L_A) = \textrm{im}(L_B) \\ \textrm{rk}(A) =
-\textrm{rk}(B) \end{array}\right.</span></li>
+\begin{array}{l}\textrm{im}(\mathscr{L}_A) = \textrm{im}(\mathscr{L}_B)
+\\ \textrm{rk}(A) = \textrm{rk}(B) \end{array}\right.</span></li>
 </ul></li>
 </ul>
 <hr />
@@ -4674,7 +4679,7 @@ c_mw_m</span> isomorfismo</li>
 <li><strong>Th</strong>
 <ul>
 <li><span class="math inline">\exists !A \in \textrm{Mat}_{m \times
-n}(\mathbb{K}) \mid f = \varphi_\mathcal{C}\cdot L_A \cdot
+n}(\mathbb{K}) \mid f = \varphi_\mathcal{C}\cdot \mathscr{L}_A \cdot
 \varphi_\mathcal{B}^{-1}</span>, e prende il nome di <em>matrice di
 <span class="math inline">f</span></em></li>
 </ul></li>

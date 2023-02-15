@@ -2189,7 +2189,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
     - $b \in \mathbb{K}^m$
     - $X := \{x \in \mathbb{K}^n \mid A x = b\} \neq \varnothing$, dunque il sistema ammette almeno una soluzione
 - **Th**
-    - $X$ sottospazio di $\mathbb{K}^n$ affine a $\ker(L_A)$
+    - $X$ sottospazio di $\mathbb{K}^n$ affine a $\ker(\mathscr{L}_A)$
     - $\dim(X) = n - \textrm{rk}(A)$
 
 ****
@@ -2409,7 +2409,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 > - $\mathbb{K}$ campo
 > - $m,n \in \mathbb{N}$
 > - $A \in \textrm{Mat}_{m \times n}(\mathbb{K})$
-> - $L_A:\mathbb{K}^n \rightarrow \mathbb{K}^m: x \rightarrow Ax$ è detta **moltiplicazione sinistra di $A$**
+> - $\mathscr{L}_A:\mathbb{K}^n \rightarrow \mathbb{K}^m: x \rightarrow Ax$ è detta **moltiplicazione sinistra di $A$**
 
 
 
@@ -2421,7 +2421,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
     - $m,n \in \mathbb{N}$
     - $A \in \textrm{Mat}_{m \times n}(\mathbb{K})$
 - **Th**
-    - $L_A$ trasformazione lineare
+    - $\mathscr{L}_A$ trasformazione lineare
 
 ## Teorema 143
 
@@ -2431,8 +2431,8 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
     - $m,n \in \mathbb{N}$
     - $A \in \textrm{Mat}_{m \times n}(\mathbb{K})$
 - **Th**
-    - $\ker(L_A) = \textrm{span}(A_1, \ldots, A_m)^\bot$
-    - $\textrm{im}(L_A) = \textrm{span}(A^1, \ldots, A^n)$
+    - $\ker(\mathscr{L}_A) = \textrm{span}(A_1, \ldots, A_m)^\bot$
+    - $\textrm{im}(\mathscr{L}_A) = \textrm{span}(A^1, \ldots, A^n)$
 
 ## Definizione 56
 
@@ -2442,8 +2442,8 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 > - $\mathbb{K}$ campo
 > - $m,n \in \mathbb{N}$
 > - $A \in \textrm{Mat}_{m \times n}(\mathbb{K})$
-> - $\textrm{rk}(A):=\textrm{rk}(L_A)$ è detto **rango di $A$**
->   - in particolare $\textrm{rk}(A) := \textrm{rk}(L_A) := \dim(\textrm{im}(L_A))$
+> - $\textrm{rk}(A):=\textrm{rk}(\mathscr{L}_A)$ è detto **rango di $A$**
+>   - in particolare $\textrm{rk}(A) := \textrm{rk}(\mathscr{L}_A) := \dim(\textrm{im}(\mathscr{L}_A))$
 >   - inoltre, $\textrm{rk}(A) \le \min(m, n)$
 
 
@@ -2471,7 +2471,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 > - $\mathbb{K}$ campo
 > - $m, n \in \mathbb{N}$
 > - $A \in \textrm{Mat}_{m \times n}(\mathbb{K})$
-> - $\forall A_1, \ldots, A_m$ righe di $A$, scambiare $A_i$ e $A_j$ lascia invariato $\ker(L_A)$
+> - $\forall A_1, \ldots, A_m$ righe di $A$, scambiare $A_i$ e $A_j$ lascia invariato $\ker(\mathscr{L}_A)$
 
 - **Moltiplicazione di una riga per una costante**
 
@@ -2479,7 +2479,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 > - $m, n \in \mathbb{N}$
 > - $A \in \textrm{Mat}_{m \times n}(\mathbb{K})$
 > - $\lambda \in \mathbb{K}^*$
-> - $\forall A_1, \ldots, A_m$ righe di $A$, moltiplicare $A_i$ per $\lambda$ lascia invariato $\ker(L_A)$
+> - $\forall A_1, \ldots, A_m$ righe di $A$, moltiplicare $A_i$ per $\lambda$ lascia invariato $\ker(\mathscr{L}_A)$
 
 - **Somma di una riga con un multiplo di un'altra**
 
@@ -2487,14 +2487,14 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 > - $m, n \in \mathbb{N}$
 > - $A \in \textrm{Mat}_{m \times n}(\mathbb{K})$
 > - $\lambda \in \mathbb{K}^*$
-> - $\forall A_1, \ldots, A_m$ righe di $A$, sommare ad $A_i$ un certo $\lambda \cdot A_j$ lascia invariato $\ker(L_A)$
+> - $\forall A_1, \ldots, A_m$ righe di $A$, sommare ad $A_i$ un certo $\lambda \cdot A_j$ lascia invariato $\ker(\mathscr{L}_A)$
 
 - **Scambio di colonne di una matrice**
 
 > - $\mathbb{K}$ campo
 > - $m, n \in \mathbb{N}$
 > - $A \in \textrm{Mat}_{m \times n}(\mathbb{K})$
-> - $\forall A^1, \ldots, A^m$ colonne di $A$, scambiare $A^i$ e $A^j$ lascia invariato $\textrm{im}(L_A)$
+> - $\forall A^1, \ldots, A^m$ colonne di $A$, scambiare $A^i$ e $A^j$ lascia invariato $\textrm{im}(\mathscr{L}_A)$
 
 - **Moltiplicazione di una colonna per una costante**
 
@@ -2502,7 +2502,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 > - $m, n \in \mathbb{N}$
 > - $A \in \textrm{Mat}_{m \times n}(\mathbb{K})$
 > - $\lambda \in \mathbb{K}^*$
-> - $\forall A^1, \ldots, A^m$ colonne di $A$, moltiplicare $A^i$ per $\lambda$ lascia invariato $\textrm{im}(L_A)$
+> - $\forall A^1, \ldots, A^m$ colonne di $A$, moltiplicare $A^i$ per $\lambda$ lascia invariato $\textrm{im}(\mathscr{L}_A)$
 
 - **Somma di una colonna con un multiplo di un'altra**
 
@@ -2510,7 +2510,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 > - $m, n \in \mathbb{N}$
 > - $A \in \textrm{Mat}_{m \times n}(\mathbb{K})$
 > - $\lambda \in \mathbb{K}^*$
-> - $\forall A^1, \ldots, A^m$ righe di $A$, sommare ad $A^i$ un certo $\lambda \cdot A^j$ lascia invariato $\textrm{im}(L_A)$
+> - $\forall A^1, \ldots, A^m$ righe di $A$, sommare ad $A^i$ un certo $\lambda \cdot A^j$ lascia invariato $\textrm{im}(\mathscr{L}_A)$
 
 
 
@@ -2524,7 +2524,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
     - $A \equiv_R B \iff$ è possibile ricavare $B$ da $A$ eseguendo operazioni tra righe
 - **Th**
     - $\equiv_R$ relazione di equivalenza
-    - $A \equiv_R B \implies \left \{ \begin{array}{l}\ker(L_A) = \ker(L_B) \\ \textrm{rk}(A) = \textrm{rk}(B) \end{array} \right.$
+    - $A \equiv_R B \implies \left \{ \begin{array}{l}\ker(\mathscr{L}_A) = \ker(\mathscr{L}_B) \\ \textrm{rk}(A) = \textrm{rk}(B) \end{array} \right.$
 
 
 
@@ -2538,7 +2538,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
     - $A \equiv_C B \iff$ è possibile ricavare $B$ da $A$ eseguendo operazioni tra colonne
 - **Th**
     - $\equiv_C$ una relazione di equivalenza
-    - $A \equiv_C B \implies \left \{ \begin{array}{l}\textrm{im}(L_A) = \textrm{im}(L_B) \\ \textrm{rk}(A) = \textrm{rk}(B) \end{array}\right.$
+    - $A \equiv_C B \implies \left \{ \begin{array}{l}\textrm{im}(\mathscr{L}_A) = \textrm{im}(\mathscr{L}_B) \\ \textrm{rk}(A) = \textrm{rk}(B) \end{array}\right.$
 
 ****
 
@@ -2911,7 +2911,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
     - $\varphi_\mathcal{B}: \mathbb{K}^n \rightarrow V: (b_1, \ldots, b_n) \rightarrow b_1v_1 + \ldots + b_nv_n$ isomorfismo
     - $\varphi_\mathcal{C}: \mathbb{K}^m \rightarrow W: (c_1, \ldots, c_m) \rightarrow c_1w_1 + \ldots + c_mw_m$ isomorfismo
 - **Th**
-    - $\exists !A \in \textrm{Mat}_{m \times n}(\mathbb{K}) \mid f = \varphi_\mathcal{C}\cdot L_A \cdot \varphi_\mathcal{B}^{-1}$, e prende il nome di _matrice di $f$_
+    - $\exists !A \in \textrm{Mat}_{m \times n}(\mathbb{K}) \mid f = \varphi_\mathcal{C}\cdot \mathscr{L}_A \cdot \varphi_\mathcal{B}^{-1}$, e prende il nome di _matrice di $f$_
 
 
 ****
