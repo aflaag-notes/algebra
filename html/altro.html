@@ -158,6 +158,24 @@
       vertical-align: middle;
     }
   </style>
+  <script defer=""
+  src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js"></script>
+  <script>document.addEventListener("DOMContentLoaded", function () {
+ var mathElements = document.getElementsByClassName("math");
+ var macros = [];
+ for (var i = 0; i < mathElements.length; i++) {
+  var texText = mathElements[i].firstChild;
+  if (mathElements[i].tagName == "SPAN") {
+   katex.render(texText.data, mathElements[i], {
+    displayMode: mathElements[i].classList.contains('display'),
+    throwOnError: false,
+    macros: macros,
+    fleqn: false
+   });
+}}});
+  </script>
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css" />
   <!--[if lt IE 9]>
     <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
   <![endif]-->
@@ -171,7 +189,102 @@
 <ul>
 <li>⚠️ <strong>algoritmo di euclide todo</strong></li>
 </ul>
+<a href="#def"><h2 id="def">Def</h2></a>
+<ul>
+<li><strong>RSA</strong></li>
+</ul>
+<blockquote>
+<ul>
+<li>L’RSA è un algoritmo di crittografia asimmetrica che permette il
+trasferimento di messaggi, in sicurezza, senza l’utilizzo di un canale
+sicuro per scambio di chiavi, poiché vengono utilizzati chiavi pubbliche
+e private, dove le chiavi pubbliche servono solamente a crittare, mentre
+le chiavi private servono solamente a decrittare</li>
+<li><span class="math inline">A, B</span> interlocutori</li>
+<li><span class="math inline">m</span> messaggio che <span
+class="math inline">B</span> vuole mandare a <span
+class="math inline">A</span></li>
+<li><span class="math inline">\texttt{pub}_A, \texttt{priv}_A</span>
+chiavi rispettivamente pubblica e privata di <span
+class="math inline">A</span></li>
+<li>allora <span class="math inline">B</span> manda ad <span
+class="math inline">A</span> la versione crittata di <span
+class="math inline">m</span> tramite la chiave pubblica di <span
+class="math inline">A</span>, ovvero <span
+class="math inline">\texttt{pub}_A(m)</span></li>
+<li>per poter leggere il messaggio, <span class="math inline">A</span>
+userà la sua chiave privata per decrittare il messaggio crittato
+ricevuto da <span class="math inline">B</span>, ovvero <span
+class="math inline">\texttt{priv}_A(\texttt{pub}_A(m)) = m</span></li>
+</ul>
+</blockquote>
 <a href="#alg-1"><h2 id="alg-1">Alg</h2></a>
+<ul>
+<li><strong>In</strong>
+<ul>
+<li><span class="math inline">A</span> interlocutore</li>
+<li><span class="math inline">p, q \in \mathbb{P} \mid p \neq q</span>,
+con <span class="math inline">p, q</span> sufficientemente grandi</li>
+<li><span class="math inline">m</span> messaggio ricevuto da <span
+class="math inline">A \mid \textrm{MCD}(m, n) = 1</span></li>
+</ul></li>
+<li><strong>Out</strong>
+<ul>
+<li><span class="math inline">\texttt{pub}_A,
+\texttt{priv}_A</span></li>
+</ul></li>
+<li><strong>Alg</strong>
+<ul>
+<li><span class="math inline">n := pq</span></li>
+<li><span class="math inline">\lambda(n) := \textrm{mcm}(p-1,
+q-1)</span></li>
+<li><span class="math inline">e \in \mathbb{N} \mid \left \{
+\begin{array}{l} 1 \lt e \lt \lambda(n) \\ \textrm{MCD}(e, \lambda(n))=
+1 \end{array} \right.</span></li>
+<li><span class="math inline">d:= e^{-1} \ (\bmod \
+\lambda(n))</span></li>
+<li><span class="math inline">\texttt{pub}_A = (n, e)</span></li>
+<li><span class="math inline">\texttt{priv}_A = (n, d)</span></li>
+</ul></li>
+<li><strong>Oss</strong>
+<ul>
+<li><span class="math inline">p \mid m \implies m^{ed} \equiv m \equiv 0
+\ (\bmod \ p)</span>, il che comporterebbe una perdita di
+informazione</li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\texttt{priv}_A(\texttt{pub}_A(m)) =
+m</span></li>
+</ul></li>
+<li><strong>Dim</strong>
+<ul>
+<li><span class="math inline">\left \{ \begin{array}{l} (p-1) \mid
+\lambda(n) \\ (q - 1) \mid \lambda(n) \end{array} \right. \implies
+\exists i, j \in \mathbb{Z} \mid \lambda(n) = (p-1) \cdot i = (q - 1)
+\cdot j</span></li>
+<li><span class="math inline">\textrm{MCD}(m, n) = 1 \implies p \nmid m
+\land q \nmid m \implies \left \{ \begin{array}{l}p \nmid m \implies m^p
+\equiv m \iff m^{p-1} \equiv 1 \implies m^{\lambda(n)} \equiv
+m^{(p-1)\cdot i} \equiv 1 \ (\bmod \ p) \\ q \nmid m \implies m^q \equiv
+m \iff m^{q-1} \equiv 1 \implies m^{\lambda(n)} \equiv m^{(q-1)\cdot j}
+\equiv 1 \ (\bmod \ q) \end{array} \right. \iff m^{\lambda(n)} \equiv 1
+\ (\bmod \ n)</span></li>
+<li><span class="math inline">\textrm{MCD}(e, \lambda(n)) = 1 \iff [e]
+\in \mathbb{Z}^*_{\lambda(n)} \implies \exists ! [d] \in
+\mathbb{Z}^*_{\lambda(n)} \mid ed \equiv 1 \ (\bmod \ \lambda(n))
+\implies \forall k \in \mathbb{Z} \quad ed = 1 + k
+\cdot\lambda(n)</span></li>
+<li>allora si ha che <span class="math inline">(m^e)^d \equiv m^{1 + k
+\cdot \lambda(n)} \equiv m \cdot (m^{\lambda(n)})^k \equiv m \ (\bmod \
+n)</span></li>
+<li>allora <span class="math inline">m^e</span> sarà il messaggio
+crittato ricevuto da <span class="math inline">A</span>, e <span
+class="math inline">(m^e)^d \ (\bmod \ n)</span> restituirà <span
+class="math inline">m</span></li>
+</ul></li>
+</ul>
+<a href="#alg-2"><h2 id="alg-2">Alg</h2></a>
 <ul>
 <li>⚠️ <strong>regola di ruffini</strong></li>
 </ul>

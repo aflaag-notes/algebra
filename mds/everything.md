@@ -3592,10 +3592,46 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
+## Definizione 84
+
+
+- **RSA**
+
+> - L'RSA è un algoritmo di crittografia asimmetrica che permette il trasferimento di messaggi, in sicurezza, senza l'utilizzo di un canale sicuro per scambio di chiavi, poiché vengono utilizzati chiavi pubbliche e private, dove le chiavi pubbliche servono solamente a crittare, mentre le chiavi private servono solamente a decrittare
+> - $A, B$ interlocutori
+> - $m$ messaggio che $B$ vuole mandare a $A$
+> - $\texttt{pub}_A, \texttt{priv}_A$ chiavi rispettivamente pubblica e privata di $A$
+> - allora $B$ manda ad $A$ la versione crittata di $m$ tramite la chiave pubblica di $A$, ovvero $\texttt{pub}_A(m)$
+> - per poter leggere il messaggio, $A$ userà la sua chiave privata per decrittare il messaggio crittato ricevuto da $B$, ovvero $\texttt{priv}_A(\texttt{pub}_A(m)) = m$
+
+
+
 ## Teorema 199
 
 
+- **In**
+    - $A$ interlocutore
+    - $p, q \in \mathbb{P} \mid p \neq q$, con $p, q$ sufficientemente grandi
+    - $m$ messaggio ricevuto da $A \mid \textrm{MCD}(m, n) = 1$
+- **Out**
+    - $\texttt{pub}_A, \texttt{priv}_A$
+- **Alg**
+    - $n := pq$
+    - $\lambda(n) := \textrm{mcm}(p-1, q-1)$
+    - $e \in \mathbb{N} \mid \left \{ \begin{array}{l} 1 \lt e \lt \lambda(n) \\ \textrm{MCD}(e, \lambda(n))= 1 \end{array} \right.$
+    - $d:= e^{-1} \ (\bmod \ \lambda(n))$
+    - $\texttt{pub}_A = (n, e)$
+    - $\texttt{priv}_A = (n, d)$
+- **Oss**
+    - $p \mid m \implies m^{ed} \equiv m \equiv 0 \ (\bmod \ p)$, il che comporterebbe una perdita di informazione
+- **Th**
+    - $\texttt{priv}_A(\texttt{pub}_A(m)) = m$
+
+## Teorema 200
+
+
 - ⚠️ **regola di ruffini**
+
 
 
 
@@ -3621,7 +3657,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
     - $\exists ! \ q, r \in \mathbb{Z} \mid m=n q+r \quad 0 \leq r<n$
 
-## Teorema 200
+## Teorema 201
 
 
 - **Hp**
@@ -3657,7 +3693,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 # Teorema cinese dei resti
 
 
-## Teorema 201
+## Teorema 202
 
 
 - **Hp**
@@ -3666,7 +3702,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
   - $m = a_1 \cdot \ldots \cdot a_n$
 
-## Teorema 202
+## Teorema 203
 
 
 - **Hp**
@@ -3677,7 +3713,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
   - $\exists \phi \mid \phi: \mathbb{Z}_m \rightarrow \mathbb{Z}_{a_1} \times \ldots \times \mathbb{Z}_{a_n}: x \ (\bmod \ m) \rightarrow (x \ (\bmod \ a_1), \ldots, x \ (\bmod \ a_n))$
   - $\phi$ è una funzione ben definita, ed è iniettiva
 
-## Teorema 203
+## Teorema 204
 
 
 - **Hp**
@@ -3688,7 +3724,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
   - $\exists ! x \ (\bmod \ m) \mid$ $\left\{\begin{array}{c}x \equiv b_{1}\ \left(\bmod  \ a_{1}\right) \\ \vdots \\ x \equiv b_{n}\ \left(\bmod  \ a_{n}\right)\end{array}\right.$
 
-## Teorema 204
+## Teorema 205
 
 
 - **Hp**
@@ -3725,7 +3761,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
   - $a^{p} \equiv a \ (\bmod \ p)$
 
-## Teorema 205
+## Teorema 206
 
 
 - **Hp**
@@ -3734,7 +3770,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
   - $[a]^{-1}=\left[a\right]^{p-2}$
 
-## Teorema 206
+## Teorema 207
 
 
 - **Hp**
@@ -3763,7 +3799,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
     - $A / \textrm{ker}(f) \cong \textrm{im}(f)$, ovvero $\exists \varphi \mid \varphi : A / \textrm{ker}(f) \rightarrow \textrm{im}(f): [a] \rightarrow f(a)$ isomorfismo di anelli
 
-## Teorema 207
+## Teorema 208
 
 
 - **Hp**
@@ -3773,7 +3809,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
   - $G / \textrm{ker}(f) \cong \textrm{im}(f)$, o alternativamente $\exists \varphi \mid \varphi : G / \textrm{ker}(f) \rightarrow \textrm{im}(f): [g] \rightarrow f(g)$ isomorfismo di gruppi
 
 
-## Teorema 208
+## Teorema 209
 
 
 - **Hp**
@@ -3811,7 +3847,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
     - $||u - v||^2 = ||u||^2 + ||v||^2 - 2\cos(\theta) \cdot||u||\cdot ||v||$
 
 
-## Teorema 209
+## Teorema 210
 
 
 - **Hp**
@@ -3892,7 +3928,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
     - $\det(A \cdot B) = \det(A) \cdot \det(B)$
 
 
-## Teorema 210
+## Teorema 211
 
 
 - **Hp**

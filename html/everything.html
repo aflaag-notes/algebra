@@ -5630,7 +5630,76 @@ F_{n}=\dfrac{\varphi^{n}-\psi^{n}}{\varphi-\psi}=\dfrac{\varphi^{n}-\psi^{n}}{\s
 <ul>
 <li>⚠️ <strong>algoritmo di euclide todo</strong></li>
 </ul>
+<a href="#definizione-84"><h2 id="definizione-84">Definizione 84</h2></a>
+<ul>
+<li><strong>RSA</strong></li>
+</ul>
+<blockquote>
+<ul>
+<li>L’RSA è un algoritmo di crittografia asimmetrica che permette il
+trasferimento di messaggi, in sicurezza, senza l’utilizzo di un canale
+sicuro per scambio di chiavi, poiché vengono utilizzati chiavi pubbliche
+e private, dove le chiavi pubbliche servono solamente a crittare, mentre
+le chiavi private servono solamente a decrittare</li>
+<li><span class="math inline">A, B</span> interlocutori</li>
+<li><span class="math inline">m</span> messaggio che <span
+class="math inline">B</span> vuole mandare a <span
+class="math inline">A</span></li>
+<li><span class="math inline">\texttt{pub}_A, \texttt{priv}_A</span>
+chiavi rispettivamente pubblica e privata di <span
+class="math inline">A</span></li>
+<li>allora <span class="math inline">B</span> manda ad <span
+class="math inline">A</span> la versione crittata di <span
+class="math inline">m</span> tramite la chiave pubblica di <span
+class="math inline">A</span>, ovvero <span
+class="math inline">\texttt{pub}_A(m)</span></li>
+<li>per poter leggere il messaggio, <span class="math inline">A</span>
+userà la sua chiave privata per decrittare il messaggio crittato
+ricevuto da <span class="math inline">B</span>, ovvero <span
+class="math inline">\texttt{priv}_A(\texttt{pub}_A(m)) = m</span></li>
+</ul>
+</blockquote>
 <a href="#teorema-199"><h2 id="teorema-199">Teorema 199</h2></a>
+<ul>
+<li><strong>In</strong>
+<ul>
+<li><span class="math inline">A</span> interlocutore</li>
+<li><span class="math inline">p, q \in \mathbb{P} \mid p \neq q</span>,
+con <span class="math inline">p, q</span> sufficientemente grandi</li>
+<li><span class="math inline">m</span> messaggio ricevuto da <span
+class="math inline">A \mid \textrm{MCD}(m, n) = 1</span></li>
+</ul></li>
+<li><strong>Out</strong>
+<ul>
+<li><span class="math inline">\texttt{pub}_A,
+\texttt{priv}_A</span></li>
+</ul></li>
+<li><strong>Alg</strong>
+<ul>
+<li><span class="math inline">n := pq</span></li>
+<li><span class="math inline">\lambda(n) := \textrm{mcm}(p-1,
+q-1)</span></li>
+<li><span class="math inline">e \in \mathbb{N} \mid \left \{
+\begin{array}{l} 1 \lt e \lt \lambda(n) \\ \textrm{MCD}(e, \lambda(n))=
+1 \end{array} \right.</span></li>
+<li><span class="math inline">d:= e^{-1} \ (\bmod \
+\lambda(n))</span></li>
+<li><span class="math inline">\texttt{pub}_A = (n, e)</span></li>
+<li><span class="math inline">\texttt{priv}_A = (n, d)</span></li>
+</ul></li>
+<li><strong>Oss</strong>
+<ul>
+<li><span class="math inline">p \mid m \implies m^{ed} \equiv m \equiv 0
+\ (\bmod \ p)</span>, il che comporterebbe una perdita di
+informazione</li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\texttt{priv}_A(\texttt{pub}_A(m)) =
+m</span></li>
+</ul></li>
+</ul>
+<a href="#teorema-200"><h2 id="teorema-200">Teorema 200</h2></a>
 <ul>
 <li>⚠️ <strong>regola di ruffini</strong></li>
 </ul>
@@ -5665,7 +5734,7 @@ a_{0}x^0 + \ldots +a_{n} x^{n}</span></li>
 q+r \quad 0 \leq r&lt;n</span></li>
 </ul></li>
 </ul>
-<a href="#teorema-200"><h2 id="teorema-200">Teorema 200</h2></a>
+<a href="#teorema-201"><h2 id="teorema-201">Teorema 201</h2></a>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -5708,7 +5777,7 @@ b) = a \cdot b</span></li>
 </ul>
 <hr />
 <a href="#teorema-cinese-dei-resti"><h1 id="teorema-cinese-dei-resti">Teorema cinese dei resti</h1></a>
-<a href="#teorema-201"><h2 id="teorema-201">Teorema 201</h2></a>
+<a href="#teorema-202"><h2 id="teorema-202">Teorema 202</h2></a>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -5723,7 +5792,7 @@ a_n)</span></li>
 <li><span class="math inline">m = a_1 \cdot \ldots \cdot a_n</span></li>
 </ul></li>
 </ul>
-<a href="#teorema-202"><h2 id="teorema-202">Teorema 202</h2></a>
+<a href="#teorema-203"><h2 id="teorema-203">Teorema 203</h2></a>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -5743,7 +5812,7 @@ a_n))</span></li>
 ed è iniettiva</li>
 </ul></li>
 </ul>
-<a href="#teorema-203"><h2 id="teorema-203">Teorema 203</h2></a>
+<a href="#teorema-204"><h2 id="teorema-204">Teorema 204</h2></a>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -5764,7 +5833,7 @@ a_n)</span></li>
 a_{n}\right)\end{array}\right.</span></li>
 </ul></li>
 </ul>
-<a href="#teorema-204"><h2 id="teorema-204">Teorema 204</h2></a>
+<a href="#teorema-205"><h2 id="teorema-205">Teorema 205</h2></a>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -5817,7 +5886,7 @@ o_k)</span></li>
 <li><span class="math inline">a^{p} \equiv a \ (\bmod \ p)</span></li>
 </ul></li>
 </ul>
-<a href="#teorema-205"><h2 id="teorema-205">Teorema 205</h2></a>
+<a href="#teorema-206"><h2 id="teorema-206">Teorema 206</h2></a>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -5829,7 +5898,7 @@ o_k)</span></li>
 <li><span class="math inline">[a]^{-1}=\left[a\right]^{p-2}</span></li>
 </ul></li>
 </ul>
-<a href="#teorema-206"><h2 id="teorema-206">Teorema 206</h2></a>
+<a href="#teorema-207"><h2 id="teorema-207">Teorema 207</h2></a>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -5873,7 +5942,7 @@ anelli</li>
 \rightarrow f(a)</span> isomorfismo di anelli</li>
 </ul></li>
 </ul>
-<a href="#teorema-207"><h2 id="teorema-207">Teorema 207</h2></a>
+<a href="#teorema-208"><h2 id="teorema-208">Teorema 208</h2></a>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -5890,7 +5959,7 @@ class="math inline">\exists \varphi \mid \varphi : G / \textrm{ker}(f)
 gruppi</li>
 </ul></li>
 </ul>
-<a href="#teorema-208"><h2 id="teorema-208">Teorema 208</h2></a>
+<a href="#teorema-209"><h2 id="teorema-209">Teorema 209</h2></a>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -5941,7 +6010,7 @@ class="math inline">u</span> e <span class="math inline">v</span></li>
 2\cos(\theta) \cdot||u||\cdot ||v||</span></li>
 </ul></li>
 </ul>
-<a href="#teorema-209"><h2 id="teorema-209">Teorema 209</h2></a>
+<a href="#teorema-210"><h2 id="teorema-210">Teorema 210</h2></a>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -6062,7 +6131,7 @@ n}(\mathbb{K})</span></li>
 \det(B)</span></li>
 </ul></li>
 </ul>
-<a href="#teorema-210"><h2 id="teorema-210">Teorema 210</h2></a>
+<a href="#teorema-211"><h2 id="teorema-211">Teorema 211</h2></a>
 <ul>
 <li><strong>Hp</strong>
 <ul>
