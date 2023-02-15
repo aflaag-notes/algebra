@@ -1171,7 +1171,7 @@ su <span class="math inline">\mathbb{K}</span></li>
 </ul></li>
 </ul>
 <hr />
-<a href="#applicazioni-lineari"><h1 id="applicazioni-lineari">Applicazioni lineari</h1></a>
+<a href="#trasformazioni-lineari"><h1 id="trasformazioni-lineari">Trasformazioni lineari</h1></a>
 <a href="#def-6"><h2 id="def-6">Def</h2></a>
 <ul>
 <li><strong>Applicazioni lineari</strong></li>
@@ -1182,7 +1182,7 @@ su <span class="math inline">\mathbb{K}</span></li>
 <li><span class="math inline">V, W</span> spazi vettoriali su <span
 class="math inline">\mathbb{K}</span></li>
 <li><span class="math inline">f: V \rightarrow W</span> è detta
-<strong>applicazione lineare</strong> <span
+<strong>trasformazione lineare</strong> <span
 class="math inline">\iff</span>
 <ul>
 <li><span class="math inline">\forall v, w \in V \quad f(v + w) = f(v) +
@@ -1217,7 +1217,7 @@ class="math inline">\mathbb{K}</span></li>
 f</span> isomorfismo di spazi vettoriali</li>
 <li>sia <span class="math inline">f: \mathbb{K}^n \rightarrow V: (t_1,
 \ldots, t_n) \rightarrow t_1v_1 + \ldots + t_nv_n</span></li>
-<li><span class="math inline">f</span> biiettiva
+<li><span class="math inline">f</span> biettiva
 <ul>
 <li><span class="math inline">v_1, \ldots, v_n</span> basi di <span
 class="math inline">V</span>, in particolare linearmente indipendenti
@@ -1225,7 +1225,7 @@ class="math inline">V</span>, in particolare linearmente indipendenti
 <li><span class="math inline">v_1, \ldots, v_n</span> basi di <span
 class="math inline">V</span>, in particolare generatori di <span
 class="math inline">V \implies f</span> suriettiva</li>
-<li>allora <span class="math inline">f</span> biiettiva</li>
+<li>allora <span class="math inline">f</span> biettiva</li>
 </ul></li>
 <li><span class="math inline">f</span> morfismo
 <ul>
@@ -1257,47 +1257,35 @@ class="math inline">\mathbb{K}</span></li>
 <ul>
 <li><em>prima implicazione</em>
 <ul>
-<li>⚠️ <strong>mo non me va</strong></li>
 <li><span class="math inline">V \cong W \implies \exists f : V
 \rightarrow W \mid f</span> isomorfismo</li>
-<li>sia <span class="math inline">v_1, \ldots, v_n</span> una base di
-<span class="math inline">V</span></li>
-<li><span class="math inline">f</span> isomorfismo, in particolare <span
-class="math inline">f</span> biiettiva, e in particolare <span
-class="math inline">f</span> suriettiva ed iniettiva</li>
-<li><span class="math inline">f</span> suriettiva <span
-class="math inline">\iff \forall w \in W \quad \exists v \in V \mid w =
-f(v)</span></li>
-<li><span class="math inline">v_1, \ldots, v_n</span> base di <span
-class="math inline">V</span>, e in particolare generatori di <span
-class="math inline">W \implies \forall v \in V \quad \exists \lambda_1,
-\ldots, \lambda_n \mid v = \lambda_1 v_1 + \ldots + \lambda_n v_n \iff
-f(v) = f(\lambda_1 v_1 + \ldots + \lambda_n v_n) = f(\lambda_1v_1) +
-\ldots + f(\lambda_n v_n) = \lambda_1 f(v_1) + \ldots + \lambda_n
-f(v_n)</span> perché <span class="math inline">f</span> morfismo</li>
-<li><span class="math inline">v \in V \implies f(w) \in W</span>, e
-inoltre <span class="math inline">f(v) = \lambda_1f(v_1) + \ldots +
-\lambda_nf(v_n) \implies f(v_1), \ldots f(v_n)</span> generatori di
-<span class="math inline">W</span></li>
-<li>per osservazione precedente <span class="math inline">f(v_1),
-\ldots, f(v_n)</span> generatori di <span class="math inline">W \implies
-\forall w \in W \quad \exists \lambda_1, \ldots, \lambda_n \mid w =
-\lambda_1f(v_1) + \ldots + \lambda_nf(v_n)</span>, e in particolare
-<span class="math inline">\exists \lambda_1, \ldots, \lambda_n \mid 0_W
-= \lambda_1f(v_1) + \ldots + \lambda_nf(v_n) = f(\lambda_1v_1 + \ldots +
-\lambda_nv_n)</span></li>
+<li>sia <span class="math inline">v_1, \ldots, v_n</span> base di <span
+class="math inline">V</span></li>
+<li>allora <span class="math inline">\forall v \in V \quad \exists
+\lambda_1, \ldots, \lambda_n \in \mathbb{K} \mid v = \lambda_1 v_1 +
+\ldots + \lambda_n v_n \iff f(v) = f(\lambda_1 v_1 + \ldots + \lambda_n
+v_n) = f(\lambda_1v_1) + \ldots + f(\lambda_n v_n) = \lambda_1 f(v_1) +
+\ldots + \lambda_n f(v_n)</span></li>
+<li>⚠️ <strong>non vale solo per le trasformazioni
+lineari?</strong></li>
+<li><span class="math inline">f</span> suriettiva, allora <span
+class="math inline">f(v_1), \ldots f(v_n)</span> generatori di <span
+class="math inline">W</span>, e in particolare <span
+class="math inline">\exists \lambda_1, \ldots, \lambda_n \in \mathbb{K}
+\mid 0_W = \lambda_1f(v_1) + \ldots + \lambda_nf(v_n) = f(\lambda_1v_1 +
+\ldots + \lambda_nv_n)</span></li>
 <li><span class="math inline">f</span> iniettiva, allora <span
 class="math inline">0_W = f(\lambda_1v_1 + \ldots + \lambda_n v_n)
 \implies 0_V = \lambda_1 v_1 + \ldots + \lambda_nv_n</span></li>
 <li><span class="math inline">v_1, \ldots, v_n</span> linearmente
-indipendenti di <span class="math inline">W \implies 0_V = \lambda_1v_1
-+ \ldots + \lambda_nv_n \iff \lambda_1 = \ldots = \lambda_n =
-0_V</span></li>
-<li>allora <span class="math inline">\exists \lambda_1, \ldots,
-\lambda_n \mid 0_W = \lambda_1 f(v_1) + \ldots + \lambda_nf(v_n)
-\implies \lambda_1 = \ldots = \lambda_n = 0_V</span> corrisponde alla
-definizione di indipendenza lineare degli <span
-class="math inline">f(v_1), \ldots, f(v_n)</span></li>
+indipendenti <span class="math inline">\implies 0_V = \lambda_1v_1 +
+\ldots + \lambda_nv_n \iff \lambda_1 = \ldots = \lambda_n =
+0_\mathbb{K}</span></li>
+<li>allora si ha che <span class="math inline">0_W = \lambda_1f(v_1) +
+\ldots + \lambda_nf(v_n) \iff \lambda_1 = \ldots = \lambda_n =
+0_{\mathbb{K}} \implies f(v_1), \ldots, f(v_n)</span> linearmente
+indipendenti
+<!-- - allora $\exists \lambda_1, \ldots, \lambda_n \in \mathbb{K} \mid 0_W = \lambda_1 f(v_1) + \ldots + \lambda_nf(v_n) \implies \lambda_1 = \ldots = \lambda_n = 0_V$ corrisponde alla definizione di indipendenza lineare degli $f(v_1), \ldots, f(v_n)$ --></li>
 <li>allora <span class="math inline">f(v_1), \ldots, f(v_n)</span> base
 di <span class="math inline">W</span>, ed ha cardinalità <span
 class="math inline">n</span>, pari alla cardinalità della base <span
@@ -1332,7 +1320,7 @@ lineare</li>
 0_W\}</span> è detto <strong>kernel/nucleo di <span
 class="math inline">f</span></strong></li>
 <li><span class="math inline">\textrm{im}(f) = \{w \in W \mid \exists v
-\in V : w = f(v)\}</span> è detto <strong>immagine di <span
+\in V : w = f(v)\}</span> è detta <strong>immagine di <span
 class="math inline">f</span></strong></li>
 </ul>
 </blockquote>
@@ -1450,7 +1438,7 @@ class="math inline">\mathbb{K}</span></strong> <span
 class="math inline">\iff</span>
 <ul>
 <li><span class="math inline">\forall P \in A \quad +_P:V \rightarrow A
-: v \rightarrow P + v</span> trasformazione lineare biiettiva</li>
+: v \rightarrow P + v</span> trasformazione lineare biettiva</li>
 <li><span class="math inline">\forall P \in A, v, w \in V \quad (P + v)
 + w = P + (v + w)</span>
 <ul>

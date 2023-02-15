@@ -1066,7 +1066,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Permutazioni**
 
 > - $X$ insieme
-> - $\mathcal{S}_X := \{f \mid f:X \rightarrow X$ biiettiva$\}$ è l'**insieme delle permutazioni di $X$**
+> - $\mathcal{S}_X := \{f \mid f:X \rightarrow X$ biettiva$\}$ è l'**insieme delle permutazioni di $X$**
 >   - in particolare, una _permutazione_ è una biezione $X \rightarrow X$
 >   - inoltre, si ha che $|\mathcal{S}_X| = |X|!$
 
@@ -1078,7 +1078,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Hp**
     - $f$ funzione
 - **Th**
-    - $f$ biiettiva $\iff f$ invertibile
+    - $f$ biettiva $\iff f$ invertibile
 
 
 
@@ -1086,7 +1086,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 - **Hp**
-  - $\mathcal{S}_X := \{f \mid f : X \rightarrow X$ biiettiva$\}$
+  - $\mathcal{S}_X := \{f \mid f : X \rightarrow X$ biettiva$\}$
 - **Th**
   - $(\mathcal{S}_X, \circ)$ è un gruppo, non abeliano se $|X| \ge 3$
 
@@ -1097,7 +1097,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 > - $n \in \mathbb{N} - \{0\}$
 > - $X = \{1, \ldots, n\}$
-> - $\mathcal{S}_n := \{f \mid f: X \rightarrow X$ biiettiva$\}$ è detto **gruppo simmetrico di $n$**
+> - $\mathcal{S}_n := \{f \mid f: X \rightarrow X$ biettiva$\}$ è detto **gruppo simmetrico di $n$**
 >   - inoltre, si ha che $|\mathcal{S}_n| = n!$
 
 
@@ -2065,7 +2065,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 ****
 
-# Applicazioni lineari
+# Trasformazioni lineari
 
 
 
@@ -2076,7 +2076,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 > - $\mathbb{K}$ campo
 > - $V, W$ spazi vettoriali su $\mathbb{K}$
-> - $f: V \rightarrow W$ è detta **applicazione lineare** $\iff$
+> - $f: V \rightarrow W$ è detta **trasformazione lineare** $\iff$
 >   - $\forall v, w \in V \quad f(v + w) = f(v) + f(w)$
 >      - in particolare, deve essere _morfismo rispetto a $+$_
 >   - $\forall v \in V, \lambda \in \mathbb{K} \quad f(\lambda v) = \lambda f(v)$
@@ -2111,7 +2111,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 > - $V, W$ spazi vettoriali su $\mathbb{K}$
 > - $f : V \rightarrow W$ trasformazione lineare
 > - $\ker(f) = \{v \in V \mid f(v) = 0_W\}$ è detto **kernel/nucleo di $f$**
-> - $\textrm{im}(f) = \{w \in W \mid \exists v \in V : w = f(v)\}$ è detto **immagine di $f$**
+> - $\textrm{im}(f) = \{w \in W \mid \exists v \in V : w = f(v)\}$ è detta **immagine di $f$**
 
 
 
@@ -2161,7 +2161,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 > - $A \subseteq V$
 > - $+: A \times V \rightarrow A: (P, v) \rightarrow P + v$
 > - $(A, +)$ è detto **spazio affine a $V$ su $\mathbb{K}$** $\iff$
->   - $\forall P \in A \quad +_P:V \rightarrow A : v \rightarrow P + v$ trasformazione lineare biiettiva
+>   - $\forall P \in A \quad +_P:V \rightarrow A : v \rightarrow P + v$ trasformazione lineare biettiva
 >   - $\forall P \in A, v, w \in V \quad (P + v) + w = P + (v + w)$
 >     - in particolare, deve valere la _proprietà associativa mista_
 

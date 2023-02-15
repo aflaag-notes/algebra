@@ -5,7 +5,7 @@
 - **Permutazioni**
 
 > - $X$ insieme
-> - $\mathcal{S}_X := \{f \mid f:X \rightarrow X$ biiettiva$\}$ è l'**insieme delle permutazioni di $X$**
+> - $\mathcal{S}_X := \{f \mid f:X \rightarrow X$ biettiva$\}$ è l'**insieme delle permutazioni di $X$**
 >   - in particolare, una _permutazione_ è una biezione $X \rightarrow X$
 >   - inoltre, si ha che $|\mathcal{S}_X| = |X|!$
 
@@ -14,19 +14,19 @@
 - **Hp**
     - $f$ funzione
 - **Th**
-    - $f$ biiettiva $\iff f$ invertibile
+    - $f$ biettiva $\iff f$ invertibile
 
 ## Oss
 
 - **Hp**
-  - $\mathcal{S}_X := \{f \mid f : X \rightarrow X$ biiettiva$\}$
+  - $\mathcal{S}_X := \{f \mid f : X \rightarrow X$ biettiva$\}$
 - **Th**
   - $(\mathcal{S}_X, \circ)$ è un gruppo, non abeliano se $|X| \ge 3$
 - **Dim**
   - la composizione di funzioni è associativa
-  - $\textrm{id}$ è biiettiva $\implies \textrm{id} \in \mathcal{S}_X$ per definizione, e costituisce l'elemento neutro
-  - $\forall f \in \mathcal{S}_X \quad \exists f^{-1} \in \mathcal{S}_X$ poiché $f \in \mathcal{S}_X \implies f$ biiettiva, e dunque invertibile per dimostrazione precedente
-  - $\forall f \in \mathcal{S}_X \quad f$ biiettiva $\iff f$ invertibile $\iff \exists f^{-1} \in \mathcal{S}_X$, poiché $f^{-1}$ anch'essa biiettiva
+  - $\textrm{id}$ è biettiva $\implies \textrm{id} \in \mathcal{S}_X$ per definizione, e costituisce l'elemento neutro
+  - $\forall f \in \mathcal{S}_X \quad \exists f^{-1} \in \mathcal{S}_X$ poiché $f \in \mathcal{S}_X \implies f$ biettiva, e dunque invertibile per dimostrazione precedente
+  - $\forall f \in \mathcal{S}_X \quad f$ biettiva $\iff f$ invertibile $\iff \exists f^{-1} \in \mathcal{S}_X$, poiché $f^{-1}$ anch'essa biettiva
   - $|X| = 2 \implies X$ è della forma $X = \{a, b\}$, quindi $\mathcal{S}_X =\left\{\begin{array}{l}a \rightarrow a \\ b \rightarrow b\end{array}\right. , \left.\begin{array}{l}a \rightarrow b \\ b \rightarrow a\end{array}\right\}$, dove uno dei due elementi è $\rm id$
     - $\rm id \circ id = id$
     - $\rm \sigma \circ id = id \circ \sigma = \sigma$
@@ -40,7 +40,7 @@
 
 > - $n \in \mathbb{N} - \{0\}$
 > - $X = \{1, \ldots, n\}$
-> - $\mathcal{S}_n := \{f \mid f: X \rightarrow X$ biiettiva$\}$ è detto **gruppo simmetrico di $n$**
+> - $\mathcal{S}_n := \{f \mid f: X \rightarrow X$ biettiva$\}$ è detto **gruppo simmetrico di $n$**
 >   - inoltre, si ha che $|\mathcal{S}_n| = n!$
 
 ## Def

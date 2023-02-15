@@ -365,7 +365,7 @@
 
 ****
 
-# Applicazioni lineari
+# Trasformazioni lineari
 
 ## Def
 
@@ -373,7 +373,7 @@
 
 > - $\mathbb{K}$ campo
 > - $V, W$ spazi vettoriali su $\mathbb{K}$
-> - $f: V \rightarrow W$ è detta **applicazione lineare** $\iff$
+> - $f: V \rightarrow W$ è detta **trasformazione lineare** $\iff$
 >   - $\forall v, w \in V \quad f(v + w) = f(v) + f(w)$
 >      - in particolare, deve essere _morfismo rispetto a $+$_
 >   - $\forall v \in V, \lambda \in \mathbb{K} \quad f(\lambda v) = \lambda f(v)$
@@ -390,10 +390,10 @@
     - sia $v_1, \ldots, v_n \in V$ base di $V$
     - $V \cong \mathbb{K}^n \iff \exists f \mid f$ isomorfismo di spazi vettoriali
     - sia $f: \mathbb{K}^n \rightarrow V: (t_1, \ldots, t_n) \rightarrow t_1v_1 + \ldots + t_nv_n$
-    - $f$ biiettiva
+    - $f$ biettiva
         - $v_1, \ldots, v_n$ basi di $V$, in particolare linearmente indipendenti $\implies f$ iniettiva
         - $v_1, \ldots, v_n$ basi di $V$, in particolare generatori di $V \implies f$ suriettiva
-        - allora $f$ biiettiva
+        - allora $f$ biettiva
     - $f$ morfismo
         - $x, y \in \mathbb{K}^n \mid \left \{ \begin{array}{l} x = (x_1, \ldots, x_n) \\ y=(y_1, \ldots, y_n) \end{array} \right.$ si ha che $f(x + y) = (x_1 + y_1)v_1 + \ldots + (x_n + y_n) v_n = x_1v_1+ \ldots + x_nv_n + y_1v_1 + \ldots + y_nv_n = f(x) + f(y)$
         - $\forall x \in V, \lambda \in \mathbb{K} \quad f(\lambda x) = \lambda x_1v_1 + \ldots + \lambda x_n v_n = \lambda(x_1v_1 + \ldots + x_n v_n) = \lambda f(x)$
@@ -407,17 +407,15 @@
     - $V \cong W \iff \dim(V) = \dim(W)$
 - **Dim**
     - _prima implicazione_
-        - ⚠️ **mo non me va**
         - $V \cong W \implies \exists f : V \rightarrow W \mid f$ isomorfismo
-        - sia $v_1, \ldots, v_n$ una base di $V$
-        - $f$ isomorfismo, in particolare $f$ biiettiva, e in particolare $f$ suriettiva ed iniettiva
-        - $f$ suriettiva $\iff \forall w \in W \quad \exists v \in V \mid w = f(v)$
-        - $v_1, \ldots, v_n$ base di $V$, e in particolare generatori di $W \implies \forall v \in V \quad \exists \lambda_1, \ldots, \lambda_n \mid v = \lambda_1 v_1 + \ldots + \lambda_n v_n \iff f(v) = f(\lambda_1 v_1 + \ldots + \lambda_n v_n) = f(\lambda_1v_1) + \ldots + f(\lambda_n v_n) = \lambda_1 f(v_1) + \ldots + \lambda_n f(v_n)$ perché $f$ morfismo
-        - $v \in V \implies f(w) \in W$, e inoltre $f(v) = \lambda_1f(v_1) + \ldots + \lambda_nf(v_n) \implies f(v_1), \ldots f(v_n)$ generatori di $W$
-        - per osservazione precedente $f(v_1), \ldots, f(v_n)$ generatori di $W \implies \forall w \in W \quad \exists \lambda_1, \ldots, \lambda_n \mid w = \lambda_1f(v_1) + \ldots + \lambda_nf(v_n)$, e in particolare $\exists \lambda_1, \ldots, \lambda_n \mid 0_W = \lambda_1f(v_1) + \ldots + \lambda_nf(v_n) = f(\lambda_1v_1 + \ldots + \lambda_nv_n)$
+        - sia $v_1, \ldots, v_n$ base di $V$
+        - allora $\forall v \in V \quad \exists \lambda_1, \ldots, \lambda_n \in \mathbb{K} \mid v = \lambda_1 v_1 + \ldots + \lambda_n v_n \iff f(v) = f(\lambda_1 v_1 + \ldots + \lambda_n v_n) = f(\lambda_1v_1) + \ldots + f(\lambda_n v_n) = \lambda_1 f(v_1) + \ldots + \lambda_n f(v_n)$
+        - ⚠️ **non vale solo per le trasformazioni lineari?**
+        - $f$ suriettiva, allora $f(v_1), \ldots f(v_n)$ generatori di $W$, e in particolare $\exists \lambda_1, \ldots, \lambda_n \in \mathbb{K} \mid 0_W = \lambda_1f(v_1) + \ldots + \lambda_nf(v_n) = f(\lambda_1v_1 + \ldots + \lambda_nv_n)$
         - $f$ iniettiva, allora $0_W = f(\lambda_1v_1 + \ldots + \lambda_n v_n) \implies 0_V = \lambda_1 v_1 + \ldots + \lambda_nv_n$
-        - $v_1, \ldots, v_n$ linearmente indipendenti di $W \implies 0_V = \lambda_1v_1 + \ldots + \lambda_nv_n \iff \lambda_1 = \ldots = \lambda_n = 0_V$
-        - allora $\exists \lambda_1, \ldots, \lambda_n \mid 0_W = \lambda_1 f(v_1) + \ldots + \lambda_nf(v_n) \implies \lambda_1 = \ldots = \lambda_n = 0_V$ corrisponde alla definizione di indipendenza lineare degli $f(v_1), \ldots, f(v_n)$
+        - $v_1, \ldots, v_n$ linearmente indipendenti $\implies 0_V = \lambda_1v_1 + \ldots + \lambda_nv_n \iff \lambda_1 = \ldots = \lambda_n = 0_\mathbb{K}$
+        - allora si ha che $0_W = \lambda_1f(v_1) + \ldots + \lambda_nf(v_n) \iff \lambda_1 = \ldots = \lambda_n = 0_{\mathbb{K}} \implies f(v_1), \ldots, f(v_n)$ linearmente indipendenti
+        <!-- - allora $\exists \lambda_1, \ldots, \lambda_n \in \mathbb{K} \mid 0_W = \lambda_1 f(v_1) + \ldots + \lambda_nf(v_n) \implies \lambda_1 = \ldots = \lambda_n = 0_V$ corrisponde alla definizione di indipendenza lineare degli $f(v_1), \ldots, f(v_n)$ -->
         - allora $f(v_1), \ldots, f(v_n)$ base di $W$, ed ha cardinalità $n$, pari alla cardinalità della base $v_1, \ldots, v_n$ di $V$, dunque per definizione $\dim(V) = \dim(W)$
     - _seconda implicazione_
         - $n:=\dim(V) = \dim(W)$
@@ -432,7 +430,7 @@
 > - $V, W$ spazi vettoriali su $\mathbb{K}$
 > - $f : V \rightarrow W$ trasformazione lineare
 > - $\ker(f) = \{v \in V \mid f(v) = 0_W\}$ è detto **kernel/nucleo di $f$**
-> - $\textrm{im}(f) = \{w \in W \mid \exists v \in V : w = f(v)\}$ è detto **immagine di $f$**
+> - $\textrm{im}(f) = \{w \in W \mid \exists v \in V : w = f(v)\}$ è detta **immagine di $f$**
 
 ## Oss
 
@@ -486,7 +484,7 @@
 > - $A \subseteq V$
 > - $+: A \times V \rightarrow A: (P, v) \rightarrow P + v$
 > - $(A, +)$ è detto **spazio affine a $V$ su $\mathbb{K}$** $\iff$
->   - $\forall P \in A \quad +_P:V \rightarrow A : v \rightarrow P + v$ trasformazione lineare biiettiva
+>   - $\forall P \in A \quad +_P:V \rightarrow A : v \rightarrow P + v$ trasformazione lineare biettiva
 >   - $\forall P \in A, v, w \in V \quad (P + v) + w = P + (v + w)$
 >     - in particolare, deve valere la _proprietà associativa mista_
 

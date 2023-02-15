@@ -58,7 +58,7 @@
         - per $n = 3$, numerando ogni vertice del triangolo equilatero, partendo dal vertice in basso a destra, si ottiene $\left \{ \begin{array}{l} f(\rho^0)=\left(\begin{array}{lll}1 & 2 & 3 \\ 1&2&3\end{array}\right)=\textrm{id} \\ f(\rho^1)=\left(\begin{array}{lll}1 & 2 & 3 \\ 2 & 3 & 1\end{array}\right) \\ f(\rho^2)=\left(\begin{array}{lll}1 & 2 & 3 \\ 3&1&2\end{array}\right) \\ f(\sigma_0)=\left(\begin{array}{lll}1 & 2 & 3 \\ 1&3&2\end{array}\right) \\ f(\sigma_1)=\left(\begin{array}{lll}1 & 2 & 3 \\ 2&1&3\end{array}\right) \\ f(\sigma_2)=\left(\begin{array}{lll}1 & 2 & 3 \\ 3&2&1\end{array}\right) \end{array} \right.$
   - poiché la permutazione equivalente è unica, $f$ iniettiva
   - allora $\mathcal{D}_n \hookrightarrow \mathcal{S}_n$, ovvero, l'inclusione è iniettiva ma non necessariamente suriettiva, infatti in generale si ha $|\mathcal{D}_n| \le |\mathcal{S}_n|$
-  - ma per ragionamento analogo $\exists \mathcal{X} \leqslant \mathcal{S}_n \ \big\vert \ |\mathcal{X}| = |\mathcal{D}_n| \implies f$ suriettiva $\implies f$ biiettiva
+  - ma per ragionamento analogo $\exists \mathcal{X} \leqslant \mathcal{S}_n \ \big\vert \ |\mathcal{X}| = |\mathcal{D}_n| \implies f$ suriettiva $\implies f$ biettiva
   - in particolare, $\mathcal{D}_3$ risulta essere il caso in cui $\mathcal{X} = \mathcal{S}_n$
   - $\mathcal{D}_n \cong \mathcal{X}$
     - siano $\alpha, \beta \in \mathcal{D}_n, \sigma_\alpha, \sigma_\beta \in \mathcal{S}_n \mid \left \{ \begin{array}{l} f(\alpha)= \sigma_\alpha \\ f(\beta) = \sigma_\beta \\ \alpha, \sigma_\alpha: i \rightarrow j \\ \beta, \sigma_\beta : j \rightarrow k \end{array} \implies \beta \alpha, \sigma_\beta \sigma_\alpha : i \rightarrow k \right .$

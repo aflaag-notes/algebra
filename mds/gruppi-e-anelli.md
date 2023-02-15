@@ -374,7 +374,7 @@
     - $m, n \in \mathbb{Z} \mid g^m = g^n \implies g^{-m} \cdot g^m=g^{-m} \cdot g^n \iff e = g^{n - m} \implies n - m \in I(g) = I(d) \implies d \mid n - m$
     - $d = 0 \implies 0 \mid n - m \iff n -m = 0 \iff n = m$, di conseguenza $g^m = g^n \implies n = m$
     - la suriettività di $f$ è data al fatto che l'immagine di $f$ coincide con $H(g)$
-    - $f$ biiettiva $\implies o(g) := |H(g)| = |\mathbb{Z}| = + \infty$
+    - $f$ biettiva $\implies o(g) := |H(g)| = |\mathbb{Z}| = + \infty$
   - $d \gt 0$
     - $|H(g)| \le d$, ovvero $g$ ha _al massimo $d$_ potenze
         - $d \in I(g)_{\ge 0} \implies g^d = e$
@@ -483,7 +483,7 @@
     - per dimostrazione precedente $\exists ! d \in I(g)_{\ge 0} \mid I(g) = I(d)$, dove $\left \{ \begin{array}{l} d = 0 \implies o(g) = + \infty \\ d \gt 0 \implies o(g) = d \end{array} \right.$
     - allora $H(g) = \textrm{im}(f) \cong \mathbb{Z}/ \ker(f) = \mathbb{Z}/I(d) = \mathbb{Z}_d$
     - in particolare $d = 0 \implies \mathbb{Z}/I(0) =: \mathbb{Z}_0 \cong H(g)$
-    - considerando $\mathbb{Z}_0$, si ha che $\forall x, y \in \mathbb{Z} \quad x \sim_S y \iff y - x \in I(0) \iff \exists k \in \mathbb{Z} \mid y - x = 0 \cdot k = 0 \iff x = y$, dunque $\mathbb{Z}_0$ conterrà esclusivamente classi laterali di singoli elementi, allora $\pi: \mathbb{Z} \rightarrow \mathbb{Z}_0: x \rightarrow [x]$ è biiettiva, e per come è definito $+$ in $\mathbb{Z}_0$ è anche morfismo
+    - considerando $\mathbb{Z}_0$, si ha che $\forall x, y \in \mathbb{Z} \quad x \sim_S y \iff y - x \in I(0) \iff \exists k \in \mathbb{Z} \mid y - x = 0 \cdot k = 0 \iff x = y$, dunque $\mathbb{Z}_0$ conterrà esclusivamente classi laterali di singoli elementi, allora $\pi: \mathbb{Z} \rightarrow \mathbb{Z}_0: x \rightarrow [x]$ è biettiva, e per come è definito $+$ in $\mathbb{Z}_0$ è anche morfismo
     - allora poiché $\pi$ isomorfismo, si ha che $\mathbb{Z}_0 \cong \mathbb{Z}$, allora per transitività di $\cong$ si ha che $d = 0 \implies H(g) \cong \mathbb{Z}_0 \land \mathbb{Z}_0 \cong \mathbb{Z} \implies H(g) \cong \mathbb{Z}$
     - allora $H(g) \cong \left \{ \begin{array}{ll} \mathbb{Z} & o(g) = + \infty \\ \mathbb{Z}_d & o(g) = d\end{array} \right.$
 
