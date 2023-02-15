@@ -2080,6 +2080,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 >   - $\forall v, w \in V \quad f(v + w) = f(v) + f(w)$
 >      - in particolare, deve essere _morfismo rispetto a $+$_
 >   - $\forall v \in V, \lambda \in \mathbb{K} \quad f(\lambda v) = \lambda f(v)$
+> - si noti che $V \cong W \iff \exists f: V \rightarrow W \mid f$ trasformazione lineare biettiva
 
 
 
@@ -2098,7 +2099,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 - **Hp**
     - $\mathbb{K}$ campo
-    - $V, W$ spazi vettoriali su $\mathbb{K}$
+    - $V, W$ spazi vettoriali su $\mathbb{K} \mid \dim(V), \dim(W)$ finita
 - **Th**
     - $V \cong W \iff \dim(V) = \dim(W)$
 
@@ -2130,7 +2131,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 - **Hp**
     - $\mathbb{K}$ campo
-    - $V, W$ spazi vettoriali su $\mathbb{K}$
+    - $V, W$ spazi vettoriali su $\mathbb{K} \mid V, W$ hanno dimensione finita
     - $f : V \rightarrow W$ trasformazione lineare
 - **Th**
     - $\textrm{im}(f) \subset W$ sottospazio

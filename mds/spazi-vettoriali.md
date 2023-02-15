@@ -377,6 +377,7 @@
 >   - $\forall v, w \in V \quad f(v + w) = f(v) + f(w)$
 >      - in particolare, deve essere _morfismo rispetto a $+$_
 >   - $\forall v \in V, \lambda \in \mathbb{K} \quad f(\lambda v) = \lambda f(v)$
+> - si noti che $V \cong W \iff \exists f: V \rightarrow W \mid f$ trasformazione lineare biettiva
 
 ## Oss
 
@@ -388,13 +389,12 @@
     - $V \cong \mathbb{K}^n$
 - **Dim**
     - sia $v_1, \ldots, v_n \in V$ base di $V$
-    - $V \cong \mathbb{K}^n \iff \exists f \mid f$ isomorfismo di spazi vettoriali
     - sia $f: \mathbb{K}^n \rightarrow V: (t_1, \ldots, t_n) \rightarrow t_1v_1 + \ldots + t_nv_n$
     - $f$ biettiva
         - $v_1, \ldots, v_n$ basi di $V$, in particolare linearmente indipendenti $\implies f$ iniettiva
         - $v_1, \ldots, v_n$ basi di $V$, in particolare generatori di $V \implies f$ suriettiva
         - allora $f$ biettiva
-    - $f$ morfismo
+    - $f$ trasformazione lineare
         - $x, y \in \mathbb{K}^n \mid \left \{ \begin{array}{l} x = (x_1, \ldots, x_n) \\ y=(y_1, \ldots, y_n) \end{array} \right.$ si ha che $f(x + y) = (x_1 + y_1)v_1 + \ldots + (x_n + y_n) v_n = x_1v_1+ \ldots + x_nv_n + y_1v_1 + \ldots + y_nv_n = f(x) + f(y)$
         - $\forall x \in V, \lambda \in \mathbb{K} \quad f(\lambda x) = \lambda x_1v_1 + \ldots + \lambda x_n v_n = \lambda(x_1v_1 + \ldots + x_n v_n) = \lambda f(x)$
 
@@ -402,20 +402,18 @@
 
 - **Hp**
     - $\mathbb{K}$ campo
-    - $V, W$ spazi vettoriali su $\mathbb{K}$
+    - $V, W$ spazi vettoriali su $\mathbb{K} \mid \dim(V), \dim(W)$ finita
 - **Th**
     - $V \cong W \iff \dim(V) = \dim(W)$
 - **Dim**
     - _prima implicazione_
-        - $V \cong W \implies \exists f : V \rightarrow W \mid f$ isomorfismo
+        - $V \cong W \implies \exists f : V \rightarrow W \mid f$ trasformazione lineare biettiva
         - sia $v_1, \ldots, v_n$ base di $V$
         - allora $\forall v \in V \quad \exists \lambda_1, \ldots, \lambda_n \in \mathbb{K} \mid v = \lambda_1 v_1 + \ldots + \lambda_n v_n \iff f(v) = f(\lambda_1 v_1 + \ldots + \lambda_n v_n) = f(\lambda_1v_1) + \ldots + f(\lambda_n v_n) = \lambda_1 f(v_1) + \ldots + \lambda_n f(v_n)$
-        - ⚠️ **non vale solo per le trasformazioni lineari?**
         - $f$ suriettiva, allora $f(v_1), \ldots f(v_n)$ generatori di $W$, e in particolare $\exists \lambda_1, \ldots, \lambda_n \in \mathbb{K} \mid 0_W = \lambda_1f(v_1) + \ldots + \lambda_nf(v_n) = f(\lambda_1v_1 + \ldots + \lambda_nv_n)$
         - $f$ iniettiva, allora $0_W = f(\lambda_1v_1 + \ldots + \lambda_n v_n) \implies 0_V = \lambda_1 v_1 + \ldots + \lambda_nv_n$
         - $v_1, \ldots, v_n$ linearmente indipendenti $\implies 0_V = \lambda_1v_1 + \ldots + \lambda_nv_n \iff \lambda_1 = \ldots = \lambda_n = 0_\mathbb{K}$
         - allora si ha che $0_W = \lambda_1f(v_1) + \ldots + \lambda_nf(v_n) \iff \lambda_1 = \ldots = \lambda_n = 0_{\mathbb{K}} \implies f(v_1), \ldots, f(v_n)$ linearmente indipendenti
-        <!-- - allora $\exists \lambda_1, \ldots, \lambda_n \in \mathbb{K} \mid 0_W = \lambda_1 f(v_1) + \ldots + \lambda_nf(v_n) \implies \lambda_1 = \ldots = \lambda_n = 0_V$ corrisponde alla definizione di indipendenza lineare degli $f(v_1), \ldots, f(v_n)$ -->
         - allora $f(v_1), \ldots, f(v_n)$ base di $W$, ed ha cardinalità $n$, pari alla cardinalità della base $v_1, \ldots, v_n$ di $V$, dunque per definizione $\dim(V) = \dim(W)$
     - _seconda implicazione_
         - $n:=\dim(V) = \dim(W)$
@@ -451,7 +449,7 @@
 
 - **Hp**
     - $\mathbb{K}$ campo
-    - $V, W$ spazi vettoriali su $\mathbb{K}$
+    - $V, W$ spazi vettoriali su $\mathbb{K} \mid V, W$ hanno dimensione finita
     - $f : V \rightarrow W$ trasformazione lineare
 - **Th**
     - $\textrm{im}(f) \subset W$ sottospazio
