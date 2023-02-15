@@ -1472,7 +1472,8 @@ class="math inline">\mathbb{K}</span></li>
 vettoriale</li>
 <li><span class="math inline">v \in V</span></li>
 <li><span class="math inline">S := v + W := \{v + w \mid w \in
-W\}</span> è detto <strong>sottospazio affine a <span
+W\}</span> è detto <strong>sottospazio di <span
+class="math inline">V</span> affine a <span
 class="math inline">W</span></strong>
 <ul>
 <li>in particolare, si tratta di una classe laterale rispetto a <span
@@ -1494,19 +1495,37 @@ class="math inline">v</span></li>
 <li><span class="math inline">A \in \textrm{Mat}_{m \times
 n}(\mathbb{K})</span></li>
 <li><span class="math inline">b \in \mathbb{K}^m</span></li>
-<li><span class="math inline">X := \{x \in \mathbb{K}^n \mid A x =
-b\}</span></li>
-<li><span class="math inline">X \neq \varnothing</span></li>
+<li><span class="math inline">X := \{x \in \mathbb{K}^n \mid A x = b\}
+\neq \varnothing</span>, dunque il sistema ammette almeno una
+soluzione</li>
 </ul></li>
 <li><strong>Th</strong>
 <ul>
-<li><span class="math inline">X</span> sottospazio affine di <span
-class="math inline">\mathbb{K}^n</span></li>
+<li>⚠️ <strong>non so se questa cosa è corretta</strong></li>
+<li><span class="math inline">X</span> sottospazio di <span
+class="math inline">\mathbb{K}^n</span> affine a <span
+class="math inline">\ker(L_A)</span></li>
 <li><span class="math inline">\dim(X) = n - \textrm{rk}(A)</span></li>
 </ul></li>
 <li><strong>Dim</strong>
 <ul>
-<li>⚠️ <strong>TODO</strong></li>
+<li><span class="math inline">\ker(L_A) := \{x \in \mathbb{K}^n \mid Ax
+= 0\} \subset \mathbb{K}^n</span> sottospazio per dimostrazione
+precedente</li>
+<li>sia <span class="math inline">x_0 \in X</span>, che esiste poiché
+<span class="math inline">X \neq \varnothing</span> in ipotesi</li>
+<li>allora <span class="math inline">x_0 + \ker(L_A) := \{x_0 + x \mid x
+\in \ker(L_A)\}</span> sottospazio di <span
+class="math inline">\mathbb{K}^n</span> affine a <span
+class="math inline">\ker(L_A)</span>, dove <span
+class="math inline">\textrm{Giac}(x_0 + \ker(L_A)) =
+\ker(L_A)</span></li>
+<li><span class="math inline">\forall x \in X \quad Ax = b = Ax_0 \iff
+A(x - x_0) = 0 \iff x - x_0 \in \ker(L_A) \iff x \in x_0 +
+\ker(L_A)</span>, di conseguenza le soluzioni in <span
+class="math inline">X</span> generano un sottospazio di <span
+class="math inline">\mathbb{K}^n</span> affine a <span
+class="math inline">\ker(L_A)</span></li>
 </ul></li>
 </ul>
 <hr />

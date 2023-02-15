@@ -136,6 +136,7 @@
 > - $A \in \textrm{Mat}_{m \times n}(\mathbb{K})$
 > - $\textrm{rk}(A):=\textrm{rk}(L_A)$ è detto **rango di $A$**
 >   - in particolare $\textrm{rk}(A) := \textrm{rk}(L_A) := \dim(\textrm{im}(L_A))$
+>   - inoltre, $\textrm{rk}(A) \le \min(m, n)$
 
 ## Oss
 

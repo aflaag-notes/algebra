@@ -28,14 +28,44 @@
 ## Oss
 
 - **Hp**
+    - $\mathbb{K}$ campo
+    - $n \in \mathbb{N}$
+    - $\lambda \in \mathbb{K}$
+    - $A \in \textrm{Mat}_{n \times n}(\mathbb{K})$
+    - $A_i \in A$
+- **Th**
+    - $\det(A_1, \ldots, \lambda A_i, \ldots, A_n) = \lambda \cdot \det(A)$
+- **Dim**
+    - per il punto 1 della definizione di $\det$, si ha che $\det(A_1, \ldots,\lambda A_i, \ldots, A_n) = \lambda \cdot \det(A_1, \ldots, A_n) = \lambda \cdot \det(A)$
+    - si noti che la tesi è verificata sia per righe che per colonne, per definizione di $\det$
+
+## Oss
+
+- **Hp**
     - $\mathbb{K}$ campo $\mid 1_{\mathbb{K}} \neq -1_{\mathbb{K}}$
     - $n \in \mathbb{N}$
     - $A \in \textrm{Mat}_{n \times n}(\mathbb{K})$
+    - $A_i, A_j \in A$
 - **Th**
-    - $\forall A_i, A_j \in A \quad \det(A_1, \ldots, A_i, \ldots, A_j , \ldots, A_n) = -\det(A_1, \ldots, A_j, \ldots, A_i, \ldots, A_n)$
+    - $\det(A_1, \ldots, A_i, \ldots, A_j , \ldots, A_n) = -\det(A_1, \ldots, A_j, \ldots, A_i, \ldots, A_n)$
 - **Dim**
     - per il punto 2 della definizione di $\det$ si ha che $\det(A_1, \ldots, A_i + A_j, \ldots, A_j + A_i, \ldots, A_n) = 0$
     - allora, per multilinearità di $\det$ si ha che $\det$ si ha che $0 =\det(A_1, \ldots, A_i + A_j, \ldots, A_j + A_i, \ldots, A_n) = \det(A_1, \ldots, A_i, \ldots, A_j + A_i, \ldots, A_n) + \det(A_1, \ldots, A_j, \ldots, A_j + A_i, \ldots, A_n) =\det(A_1, \ldots, A_i, \ldots, A_j, \ldots, A_n)+\det(A_1, \ldots, A_i, \ldots, A_i, \ldots, A_n) + \det(A_1, \ldots, A_j, \ldots,A_j, \ldots, A_n) + \det(A_1, \ldots, A_j, \ldots, A_i, \ldots, A_n) = \det(A_1, \ldots, A_i, \ldots, A_j, \ldots, A_n) + 0 + 0 + \det(A_1, \ldots, A_j , \ldots, A_i, \ldots, A_n) \iff \det(A_1, \ldots, A_i, \ldots, A_j, \ldots, A_n) = -\det(A_1,\ldots, A_j, \ldots, A_i, \ldots, A_n)$
+    - si noti che la tesi è verificata sia per righe che per colonne, per definizione di $\det$
+
+## Oss
+
+- **Hp**
+    - $\mathbb{K}$ campo
+    - $n \in \mathbb{N}$
+    - $\mu \in \mathbb{K}$
+    - $A \in \textrm{Mat}_{n \times n}(\mathbb{K})$
+    - $A_i, A_j \in A$
+- **Th**
+    - $\det(A_1, \ldots, A_i + \mu A_j , \ldots, A_n) = \det(A)$
+- **Dim**
+    - per il punto 1 della definizione di $\det$ si ha che $\det(A_1, \ldots, A_i + \mu A_j , \ldots, A_n) = \det(A_1,\ldots, A_i, \ldots, A_j, \ldots, A_n) + \mu \cdot\det(A_1, \ldots, A_j, \ldots, A_j, \ldots, A_n) = \det(A_1, \ldots, A_n) + \mu \cdot 0 = \det(A)$
+    - si noti che la tesi è verificata sia per righe che per colonne, per definizione di $\det$
 
 ## Formula di Leibniz
 
@@ -72,19 +102,6 @@
     - $A \in \textrm{Mat}_{n \times n}(\mathbb{K})$
 - **Th**
     - $\det(A) = \det(A^T)$
-
-## Oss
-
-- **Hp**
-    - $\mathbb{K}$ campo
-    - $n \in \mathbb{N}$
-    - $\lambda \in \mathbb{K}$
-    - $A \in \textrm{Mat}_{n \times n}(\mathbb{K})$
-    - $A' = \left(\begin{array}{c}A_1 \\ \vdots \\ \lambda A_i \\ \vdots \\ A_n \end{array}\right)$
-- **Th**
-    - $\det(A')=\lambda \cdot \det(A)$
-- **Dim**
-    - ⚠️ **todo**
 
 ## Formula di Laplace
 
