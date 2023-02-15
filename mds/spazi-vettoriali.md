@@ -499,6 +499,7 @@
 > - $S := v + W := \{v + w \mid w \in W\}$ è detto **sottospazio di $V$ affine a $W$**
 >   - in particolare, si tratta di una classe laterale rispetto a $+$ di $W$
 >   - può essere visualizzato graficamente come traslazione di $W$ di un fattore pari a $v$
+>   - in particolare, questo mostra che $\dim(S) = \dim(W)$, poiché è stata applicata solamente una traslazione senza alterarne la dimensione
 > - $\textrm{Giac}(S) = W$ è detta **giacitura di $S$**
 
 ## Oss
@@ -510,7 +511,6 @@
     - $b \in \mathbb{K}^m$
     - $X := \{x \in \mathbb{K}^n \mid A x = b\} \neq \varnothing$, dunque il sistema ammette almeno una soluzione
 - **Th**
-    - ⚠️ **non so se questa cosa è corretta**
     - $X$ sottospazio di $\mathbb{K}^n$ affine a $\ker(L_A)$
     - $\dim(X) = n - \textrm{rk}(A)$
 - **Dim**
@@ -518,6 +518,7 @@
     - sia $x_0 \in X$, che esiste poiché $X \neq \varnothing$ in ipotesi
     - allora $x_0 + \ker(L_A) := \{x_0 + x \mid x \in \ker(L_A)\}$ sottospazio di $\mathbb{K}^n$ affine a $\ker(L_A)$, dove $\textrm{Giac}(x_0 + \ker(L_A)) = \ker(L_A)$
     - $\forall x \in X \quad Ax = b = Ax_0 \iff A(x - x_0) = 0 \iff x - x_0 \in \ker(L_A) \iff x \in x_0 + \ker(L_A)$, di conseguenza le soluzioni in $X$ generano un sottospazio di $\mathbb{K}^n$ affine a $\ker(L_A)$
+    - allora, per il teorema del rango $\dim(X) = \dim(x_0 + \ker(f)) = \dim(\textrm{Giac}(x_0 + \ker(f))) = \dim(\ker(L_A)) = n - \textrm{rk}(L_A) = n - \textrm{rk}(A)$
 
 ****
 

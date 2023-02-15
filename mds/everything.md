@@ -2174,6 +2174,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 > - $S := v + W := \{v + w \mid w \in W\}$ è detto **sottospazio di $V$ affine a $W$**
 >   - in particolare, si tratta di una classe laterale rispetto a $+$ di $W$
 >   - può essere visualizzato graficamente come traslazione di $W$ di un fattore pari a $v$
+>   - in particolare, questo mostra che $\dim(S) = \dim(W)$, poiché è stata applicata solamente una traslazione senza alterarne la dimensione
 > - $\textrm{Giac}(S) = W$ è detta **giacitura di $S$**
 
 
@@ -2188,7 +2189,6 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
     - $b \in \mathbb{K}^m$
     - $X := \{x \in \mathbb{K}^n \mid A x = b\} \neq \varnothing$, dunque il sistema ammette almeno una soluzione
 - **Th**
-    - ⚠️ **non so se questa cosa è corretta**
     - $X$ sottospazio di $\mathbb{K}^n$ affine a $\ker(L_A)$
     - $\dim(X) = n - \textrm{rk}(A)$
 
