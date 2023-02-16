@@ -1757,7 +1757,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 - **Hp**
     - $\mathbb{K}$ campo
-    - $p(x) \in \mathbb{K}[x]$
+    - $p(x) \in \mathbb{C}[x]$
 - **Th**
     - $p(x)$ irriducibile $\iff \deg(p(x)) = 1$
 

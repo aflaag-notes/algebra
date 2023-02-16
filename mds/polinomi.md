@@ -214,19 +214,19 @@
 
 - **Hp**
     - $\mathbb{K}$ campo
-    - $p(x) \in \mathbb{K}[x]$
+    - $p(x) \in \mathbb{C}[x]$
 - **Th**
     - $p(x)$ irriducibile $\iff \deg(p(x)) = 1$
 - **Dim**
     - _prima implicazione_    
         - ipotizzando che $\deg(p(x)) \gt 1 \implies \exists z \in \mathbb{C} \mid p(z) = 0$ per il teorema fondamentale dell'algebra
-        - per dimostrazione precedente $p(z) = 0 \iff (x - z) \mid p(x) \iff \exists q(x) \in \mathbb{K}[x] \mid p(x) = (x - z) \cdot q(x)$
+        - per dimostrazione precedente $p(z) = 0 \iff (x - z) \mid p(x) \iff \exists q(x) \in \mathbb{C}[x] \mid p(x) = (x - z) \cdot q(x)$
         - poiché $\deg(x - z) = 1$, allora necessariamente $\deg(q(x)) = \deg(p(x)) - 1$
         - $\deg(p(x)) \gt 1 \implies \deg(q(x)) = \deg(p(x)) - 1 \gt 0 \implies p(x)$ non è irriducibile $\bot$ ⚠️ **perche?**
     - _seconda implicazione_
         - per dimostrazione precedente $\forall a(x), b(x), c(x) \in \mathbb{K}[x] \quad a(x) = b(x) \cdot c(x) \implies \deg(a(x)) = \deg(b(x)) + \deg(c(x))$
-        - $\deg(p(x)) = 1$, se $\exists a(x), b(x) \in \mathbb{K}[x] \mid p(x) = a(x) \cdot b(x)$, allora $\deg(p(x)) = \deg(a(x))+\deg(b(x)) \implies \deg(a(x)) = 1 \land \deg(b(x)) = 0$ oppure $\deg(a(x)) = 0 \land \deg(b(x)) = 1$
-        - dunque, ad esempio se $\deg(a(x)) = 1 \land \deg(b(x)) = 0 \implies b(x) \in \mathbb{K}[x]^*$, e dunque $p(x)$ è dato dal prodotto di un polinomio irriducibile e una costante, e dunque $p(x)$ è irriducibile
+        - $\deg(p(x)) = 1$, se $\exists a(x), b(x) \in \mathbb{C}[x] \mid p(x) = a(x) \cdot b(x)$, allora $\deg(p(x)) = \deg(a(x))+\deg(b(x)) \implies \deg(a(x)) = 1 \land \deg(b(x)) = 0$ oppure $\deg(a(x)) = 0 \land \deg(b(x)) = 1$
+        - dunque, ad esempio se $\deg(a(x)) = 1 \land \deg(b(x)) = 0 \implies b(x) \in \mathbb{C}[x]^*$, e dunque $p(x)$ è dato dal prodotto di un polinomio irriducibile e una costante, e dunque $p(x)$ è irriducibile
 
 ## Oss
 
