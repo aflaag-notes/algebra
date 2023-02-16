@@ -190,7 +190,7 @@
     - $p \in \mathbb{P} \implies \mathbb{Z}_p^* = \mathbb{Z} - \{[0]\}$ per dimostrazione precedente, e dunque $|\mathbb{Z}_p^*| = p - 1$
     - $[a] \in \mathbb{Z}_p \mid [a] = [0] \implies [0^p]=[0]$
     - $[a] \in \mathbb{Z}_p \mid [a] \neq [0] \implies [a] \in \mathbb{Z}_p^*$ per osservazione precedente
-    - per dimostrazione precedente si ha che $g^{|G|} = e$, allora $[a]^{|\mathbb{Z}_p^*|}=[1] \iff [a]^{p - 1} = [1] \iff [a]^p \cdot [a]^{-1} = [1] \iff [a]^p = [a]eq$
+    - per dimostrazione precedente si ha che $g^{|G|} = e$, allora $[a]^{|\mathbb{Z}_p^*|}=[1] \iff [a]^{p - 1} = [1] \iff [a]^p \cdot [a]^{-1} = [1] \iff [a]^p = [a]$
    
 ## Cor
 
