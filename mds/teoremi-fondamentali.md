@@ -330,7 +330,7 @@
     - $\exists x \in \mathbb{K}^n \mid A x = b \iff \textrm{rk}(A) = \textrm{rk}(A_b)$
 - **Dim**
     - $\exists x \in \mathbb{K}^n \mid A x = b \iff \exists x_1, \ldots, x_n \in \mathbb{K} \mid x_1A^1 + \ldots + x_nA^n=b \iff b \in \textrm{span}(A^1, \ldots, A^n) \subseteq \textrm{span}(A^1, \ldots, A^n, b)$
-    - $b \in \textrm{span}(A^1, \ldots, A^n) \implies \exists \mu_1, \ldots, \mu_n \mid v = \mu_1A^1 + \ldots + \mu_n A^n$
+    - $b \in \textrm{span}(A^1, \ldots, A^n) \implies \exists \mu_1, \ldots, \mu_n \in \mathbb{K} \mid v = \mu_1A^1 + \ldots + \mu_n A^n$
     - $\forall v \in \textrm{span}(A^1, \ldots, A^n, b) \quad \exists \lambda_1, \ldots, \lambda_n, c \in \mathbb{K} \mid v = \lambda_1A^1 + \ldots + \lambda_nA^n + cb = \lambda_1A^1 + \ldots + \lambda_nA^n + c(\mu_1A^1 + \ldots + \mu_nA^n) = (\lambda_1 + c\mu_1)A^1 + \ldots + (\lambda_n + c\mu_n)A^n \implies v \in \textrm{span}(A^1, \ldots, A^n) \implies \textrm{span}(A^1, \ldots, A^n, b) \subseteq \textrm{span}(A^1, \ldots, A^n)$
     - allora $\textrm{span}(A^1, \ldots, A^n) = \textrm{span}(A^1, \ldots, A^n, b) \iff \dim(\textrm{span}(A^1, \ldots, A^n)) = \dim(\textrm{span}(A^1, \ldots, A^n, b))$
     - per dimostrazione precedente $\dim(\textrm{span}(A^1, \ldots, A^n)) = \textrm{rk}(A)$, e analogamente $\dim(\textrm{span}(A^1, \ldots, A^n, b)) = \textrm{rk}(A_b)$
