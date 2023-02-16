@@ -5,9 +5,9 @@
 - **Spazio vettoriale**
 
 > - $V$ insieme
+> - $\mathbb{K}$ campo
 > - $+: V \times V \rightarrow V$
 > - $\cdot : \mathbb{K} \times V \rightarrow V$
-> - $\mathbb{K}$ campo
 > - $V$ è detto **spazio vettoriale su $\mathbb{K}$** $\iff$
 >   - $(V, +)$ gruppo abeliano
 >   - $\exists 1 \in \mathbb{K} \mid \forall v \in V \quad 1v = v$
@@ -45,7 +45,7 @@
 > - $W \subseteq V$
 > - $W \subset V$ è detto **sottospazio vettoriale di $V$** $\iff$
 >   - $(W, +) \leqslant (V, +)$
->   - $\forall w \in W, \lambda \in \mathbb{K} \quad \lambda \cdot w \in W$
+>   - $\mathbb{K} \cdot W \subseteq W$
 
 ## Def
 
@@ -122,8 +122,8 @@
 ## Lem
 
 - **Hp**
-    - $n \in \mathbb{N}$
     - $\mathbb{K}$ campo
+    - $n \in \mathbb{N}$
     - $V$ spazio vettoriale su $\mathbb{K}$
     - $v_1, \ldots, v_n \in V - \{0_V\}$
 - **Th**
@@ -181,8 +181,8 @@
 ## Cor
 
 - **Hp**
-    - $n, m \in \mathbb{N}$
     - $\mathbb{K}$ campo
+    - $n, m \in \mathbb{N}$
     - $V$ spazio vettoriale su $\mathbb{K}$
     - $w_1, \ldots, w_m \in V \mid w_1, \ldots, w_m$ base di $V$
     - $v_1, \ldots, v_n \in V \mid v_1, \ldots, v_n$ base di $V$
@@ -225,8 +225,8 @@
 ## Oss
 
 - **Hp**
-    - $n \in \mathbb{N}$
     - $\mathbb{K}$ campo
+    - $n \in \mathbb{N}$
     - $V$ spazio vettoriale su $\mathbb{K}$
     - $v_1, \ldots, v_n \in V$
 - **Th**
@@ -254,7 +254,9 @@
 - **Dim**
     - $k \lt n \implies \textrm{span}(w_1, \ldots, w_k) \subsetneqq W \implies \exists w_{k + 1} \in W \mid w_{k + 1} \notin \textrm{span}(w_1, \ldots, w_k)$, allora per dimostrazione precedente $w_1, \ldots, w_{k +1}$ sono linearmente indipendenti
     - per ragionamento analogo, è possibile estendere $w_1, \ldots, w_{k + 1}$ fino ad avere $w_1, \ldots, w_n$ vettori linearmente indipendenti
-    - allora $\textrm{span}(w_1, \ldots, w_n) = W \implies w_1, \ldots, w_n$ base di $W$
+    - sia $v_1, \ldots, v_n$ base di $W$
+    - per dimostrazione precedente, poiché $w_1, \ldots, w_n$ e $v_1, \ldots, v_1$ linearmente indipendenti, si ha che $W=\textrm{span}(v_1, \ldots, v_n) = \textrm{span}(w_1, \ldots, w_n) \implies w_1, \ldots, w_n$ base di $W$
+        - si noti che, per lo stesso teorema, non è possibile avere $w_{n + 1} \in W \mid w_1, \ldots, w_{n +1}$ siano linearmente indipendenti
 
 ## Oss
 
@@ -270,7 +272,7 @@
     - è possibile assumere che $w_{i_1}$ non sia nullo, poiché $w_1, \ldots, w_m$ sono sicuramente non tutti nulli in quanto generatori di $W$
     - $w_{i_1} \neq 0 \implies w_{i_1}$ linearmente indipendente, ma non può costituire un generatore poiché sono meno di $n$ vettori $\implies \textrm{span}(w_{i_1}) \subsetneqq W \implies \exists w_{i_2} \in W \mid w_{i_2} \notin \textrm{span}(w_{i_1})$, allora per dimostrazione precedente $w_{i_1}, w_{i_2}$ linearmente indipendenti
     - è possible ripetere il ragionamento fino ad ottenere esattamente $n$ vettori, ottenendo $w_{i_1}, \ldots, w_{i_n}$ vettori linearmente indipendenti
-        - si noti che non è possibile ripetere il ragionamento $n + 1$ volte, poiché $w_{i_{n + 1}} \in W = \textrm{span}(w_{i_1}, \ldots, w_{i_n})$, allora non linearmente indipendenti, e dunque non base di $W$
+        - analogamente al teorema precedente, non è possibile ripetere il ragionamento $n + 1$ volte
 
 ## Oss
 
@@ -316,25 +318,24 @@
     - $k:=\dim(U \cap V)$
     - $m:=\dim(U)$
     - $n := \dim (V)$
-    - $w_1, \ldots, w_k \in U \cap V$ base di $U \cap V$
+    - sia $w_1, \ldots, w_k$ base di $U \cap V$
     - $\mathcal{B}_1 := \{w_1, \ldots, w_k, u_{k + 1}, \ldots, u_m\}$ base di $U$
     - $\mathcal{B}_2 := \{w_1, \ldots, w_k, v_{k + 1}, \ldots, v_n\}$ base di $V$
     - $\mathcal{B}_1 \cup \mathcal{B}_2 := \{w_1, \ldots w_k, u_{k + 1}, \ldots, u_m, v_{k + 1}, \ldots, v_n\}$
-    - per definizione, si ha che $\textrm{span}(\mathcal{B}_1 \cup \mathcal{B}_2) \subseteq U + V$
-    - $\forall u \in U, v \in V \mid \left \{ \begin{array}{l}u := \displaystyle \sum_{i = 1}^k{\lambda_iw_i} + \sum_{j = k + 1}^m{\lambda_j u_j} \\ \displaystyle v :=\sum_{i = 1}^k{\mu_iw_i} + \sum_{h = k + 1}^n {\mu_hv_h} \end{array} \right.\implies  \displaystyle u + v =\sum_{i = 1}^k{(\lambda_i + \mu_i)w_i} + \sum_{j = k + 1}^m{\lambda_j u_j} + \sum_{h = k + 1}^n {\mu_hv_h} \implies u + v \in \textrm{span}(\mathcal{B}_1 \cup \mathcal{B}_2) \implies U + V \subseteq \textrm{span}(\mathcal{B}_1 \cup \mathcal{B}_2)$
-    - allora $\mathcal{B}_1 \cup \mathcal{B}_2$ generatori di $U + V$
+    - $u + v \in U + V \iff \exists u \in U, v \in V \mid \left \{ \begin{array}{l}u := \displaystyle \sum_{i = 1}^k{\lambda_iw_i} + \sum_{j = k + 1}^m{\lambda_j u_j} \\ \displaystyle v :=\sum_{i = 1}^k{\mu_iw_i} + \sum_{h = k + 1}^n {\mu_hv_h} \end{array} \right.\iff  \displaystyle u + v =\sum_{i = 1}^k{(\lambda_i + \mu_i)w_i} + \sum_{j = k + 1}^m{\lambda_j u_j} + \sum_{h = k + 1}^n {\mu_hv_h} \iff u + v \in \textrm{span}(\mathcal{B}_1 \cup \mathcal{B}_2)$
+    - allora $U + V = \textrm{span}(\mathcal{B}_1 \cup \mathcal{B}_2) \implies \mathcal{B}_1 \cup \mathcal{B}_2$ generatori di $U + V$
     - $a := \displaystyle \sum_{i = 1}^k{\lambda_iw_i}$
     - $b := \displaystyle \sum_{j = k +1}^m{\mu_j u_j } \implies b \in \textrm{span}(u_{k +1 }, \ldots, u_k) \subsetneqq U \implies b \in U$
     - $c := \displaystyle \sum_{h = k + 1} ^n{\eta_hv_h}$
     - siano i coefficienti tali che $a + b + c= 0_W \iff b = - a - c$
-    - $b \in U$ per osservazione precedente, mentre $a + c = v \in V \implies -(a + c) \in V \implies b = - a- c \in V \implies b \in U \cap V$, allora $b$ deve essere generato dalla base $w_1, \ldots, w_k$ di $U \cap V \implies \displaystyle \exists \alpha_1, \ldots, \alpha_k \in \mathbb{K} \mid \sum_{j = k +1}^m{\mu_j u_j }=:b = \displaystyle \sum_{i = 1}^k {\alpha_i w_i} \implies \sum_{j = k +1}^m{\mu_j u_j } - \displaystyle \sum_{i = 1}^k {\alpha_i w_i} = 0_W$
-    - poiché per ipotesi $w_i, \ldots, w_k, u_{k +1}, \ldots, u_m$ è una base di $U$, in $U$ tali vettori sono linearmente indipendenti, dunque segue che ogni $\alpha_i$ e $\mu_j$ deve essere necessariamente $0_{\mathbb{K}}$
+    - $b \in U$ per osservazione precedente, mentre $a + c \in V \implies -(a + c) \in V \implies b = - a- c \in V \implies b \in U \cap V$, allora $b$ deve essere generato dalla base $w_1, \ldots, w_k$ di $U \cap V \implies \displaystyle \exists \alpha_1, \ldots, \alpha_k \in \mathbb{K} \mid \sum_{j = k +1}^m{\mu_j u_j }=:b = \displaystyle \sum_{i = 1}^k {\alpha_i w_i} \implies \sum_{j = k +1}^m{\mu_j u_j } - \displaystyle \sum_{i = 1}^k {\alpha_i w_i} = 0_W$
+    - poiché per ipotesi $w_1, \ldots, w_k, u_{k +1}, \ldots, u_m$ è una base di $U$, in $U$ tali vettori sono linearmente indipendenti, dunque segue che ogni $\alpha_i$ e $\mu_j$ deve essere necessariamente $0_{\mathbb{K}}$
     - in particolare, si ottiene che $\forall j \in [k +1, m] \quad \mu_j =0 \implies b = 0_W \implies a + c = 0_W$
     - per ragionamento analogo, sapendo che $c = - a- b$ si otterrà che $c = 0_W$, e dunque $a + b + c = 0_W \iff a = 0_W$
     - per definizione $a$ è combinazione lineare della base di $U \cap V$, e poichè $a = 0_W$ si ha necessariamente che i coefficienti di $a$ sono tutti nulli
     - dunque, l'equazione di partenza $a + b + c = 0_W$ è verificata solamente per coefficienti di $a$, $b$ e $c$ nulli, il che implica che i vettori che generano $a + b + c$, ovvero $\mathcal{B}_1 \cup \mathcal{B}_2$, sono linearmente indipendenti
     - allora, poiché generatori di $U + V$ e linearmente indipendenti, $\mathcal{B}_1 \cup \mathcal{B}_2$ sono una base di $U + V$
-    - per definizione, la dimensione di uno spazio vettoriale è la cardinalità di una delle sue basi, e dunque la cardinalità di $\mathcal{B}_1 \cup \mathcal{B}_2$ è pari a $k + (m - k) + (n - k) = k + m - k + n - k = m + n - k \implies \dim(U + V) = \dim(U) + \dim(V) - \dim(U \cap V)$
+    - per definizione, la dimensione di uno spazio vettoriale è la cardinalità di una delle sue basi, e dunque la cardinalità di $\mathcal{B}_1 \cup \mathcal{B}_2$ è pari a $k + (m - k) + (n - k) = m + n - k \implies \dim(U + V) = \dim(U) + \dim(V) - \dim(U \cap V)$
 
 ## Oss
 
@@ -360,15 +361,14 @@
     - $n := \dim(V)$
     - $k := \dim(W)$
     - sia $w_1, \ldots, w_k$ base di $W$
-    - ipotizzando $n \gt k$, allora per dimostrazione precedente $w_1, \ldots, w_k$ non è base di $V$, e in particolare non generano $V \implies \textrm{span}(w_1, \ldots, w_k) \subsetneqq V \implies \exists v_{k + 1} \in V \mid v_{k + 1} \notin \textrm{span}(w_1, \ldots, w_k)$, allora per dimostrazione precedente $w_1, \ldots w_k$ linearmente indipendenti $\land v_{k + 1} \notin \textrm{span}(w_1, \ldots, w_k) \implies w_1, \ldots, w_k, v_{k + 1}$ linearmente indipendenti
-    - per ragionamento analogo, avendo $n \gt k + 1$ si otterrà che $\exists v_{k + 2} \in V - \textrm{span}(w_1, \ldots, w_k, v_{k + 1}) \mid w_1, \ldots, w_k, v_{k +1}, v_{k +2}$ linearmente indipendenti
+    - $\textrm{span}(w_1, \ldots, w_k) \subsetneqq V \implies \exists v_{k + 1} \in V \mid v_{k + 1} \notin \textrm{span}(w_1, \ldots, w_k)$, allora per dimostrazione precedent $w_1, \ldots, w_k, v_{k + 1}$ linearmente indipendenti
     - dunque, è possibile estendere la base di $W$ scelta, fino ad ottenere una base di $V$ della forma $w_1, \ldots, w_k, v_{k +1}, \ldots, v_n$, dove i vettori aggiunti sono proprio $n - k$, che per definizione equivale a $\dim(V) - \dim(W)$
-    - $\forall v \in \textrm{span}(w_1, \ldots, w_k, v_{k +1}, \ldots, v_n) \quad \exists \lambda_1, \ldots, \lambda_n \in \mathbb{K} \mid v = \lambda_1 w_1 + \ldots + \lambda_k w_k + \lambda_{k + 1} v_{k +1} + \ldots + \lambda_nv_{n} \implies [v] = \lambda_1 [w_1] + \ldots + \lambda_n[w_k] + \lambda_{k +1} [v_{k +1 }] + \lambda_n[v_n]$ in $V / W$
+    - $\forall v \in \textrm{span}(w_1, \ldots, w_k, v_{k +1}, \ldots, v_n) \quad \exists \lambda_1, \ldots, \lambda_n \in \mathbb{K} \mid v = \lambda_1 w_1 + \ldots + \lambda_k w_k + \lambda_{k + 1} v_{k +1} + \ldots + \lambda_nv_{n} \implies \forall [v] \in V/W \quad [v] = \lambda_1 [w_1] + \ldots + \lambda_n[w_k] + \lambda_{k +1} [v_{k +1 }] + \lambda_n[v_n]$
     - per dimostrazione precedente $W = [0_V] \in V/W \implies [w_1] = \ldots = [w_k] = 0_V \implies [v] = \lambda_{k +1}[v_{k +1}] + \ldots + \lambda_n[v_n] \implies [v_{k +1}], \ldots, [v_n]$ generatori di $V/W$
     - $[v_{k +1}], \ldots, [v_n]$ generatori di $V/W$, in particolare implica che $\exists \lambda_{k +1}, \ldots, \lambda_n \in \mathbb{K} \mid W = [0_V] = \lambda_{k +1}[v_{k+ 1}] + \ldots+ \lambda_n[v_n] = [\lambda_{k +1} v_{k+1} + \ldots + \lambda_nv_n]$, e in particolare $u:=\lambda_{k + 1}v_{k + 1} + \ldots + \lambda_nv_n \in W$
     - $u \in W \implies \exists \lambda_1, \ldots, \lambda_k \in \mathbb{K} \mid u = \lambda_1 w_1 + \ldots + \lambda_k w_k \implies \lambda_1w_1+ \ldots + \lambda_kw_k = \lambda_{k +1} v_{k +1} + \ldots + \lambda_nv_n \iff \lambda_1w_1+ \ldots + \lambda_kw_k - \lambda_{k +1} v_{k +1} - \ldots - \lambda_nv_n = 0_V$
-    - per osservazione precedente $w_1, \ldots, w_k, v_{k +1}, \ldots v_k$ è una base di $V$, allora $\lambda_1= \ldots= \lambda_k= -\lambda_{k +1}= \ldots= -\lambda_{n} = 0_V$, e in particolare $-\lambda_{k+1} = \ldots = -\lambda_n = 0_V \implies v_{k +1}, \ldots, v_n$ linearmente indipendenti, e dunque $[v_{k +1}], \ldots, [v_n]$ linearmente indipendenti
-    - allora $[v_{k +1}], \ldots, [v_n]$ sono una base di $V/W$ di cardinalità $n - k$, il che dimostra che $\dim(V/W) = \dim(V)-\dim(W)$
+    - per osservazione precedente $w_1, \ldots, w_k, v_{k +1}, \ldots v_k$ è una base di $V$, allora $\lambda_1= \ldots= \lambda_k= -\lambda_{k +1}= \ldots= -\lambda_{n} = 0_V$, e in particolare $-\lambda_{k+1} = \ldots = -\lambda_n = 0_V \implies [v_{k +1}], \ldots, [v_n]$ linearmente indipendenti in $V/W$
+    - allora $[v_{k +1}], \ldots, [v_n]$ sono una base di $V/W$ di cardinalità $n - k \implies \dim(V/W) = \dim(V)-\dim(W)$
 
 ## Oss
 

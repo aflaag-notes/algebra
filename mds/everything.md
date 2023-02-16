@@ -1802,9 +1802,9 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Spazio vettoriale**
 
 > - $V$ insieme
+> - $\mathbb{K}$ campo
 > - $+: V \times V \rightarrow V$
 > - $\cdot : \mathbb{K} \times V \rightarrow V$
-> - $\mathbb{K}$ campo
 > - $V$ è detto **spazio vettoriale su $\mathbb{K}$** $\iff$
 >   - $(V, +)$ gruppo abeliano
 >   - $\exists 1 \in \mathbb{K} \mid \forall v \in V \quad 1v = v$
@@ -1839,7 +1839,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 > - $W \subseteq V$
 > - $W \subset V$ è detto **sottospazio vettoriale di $V$** $\iff$
 >   - $(W, +) \leqslant (V, +)$
->   - $\forall w \in W, \lambda \in \mathbb{K} \quad \lambda \cdot w \in W$
+>   - $\mathbb{K} \cdot W \subseteq W$
 
 
 
@@ -1916,8 +1916,8 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 - **Hp**
-    - $n \in \mathbb{N}$
     - $\mathbb{K}$ campo
+    - $n \in \mathbb{N}$
     - $V$ spazio vettoriale su $\mathbb{K}$
     - $v_1, \ldots, v_n \in V - \{0_V\}$
 - **Th**
@@ -1939,8 +1939,8 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 - **Hp**
-    - $n, m \in \mathbb{N}$
     - $\mathbb{K}$ campo
+    - $n, m \in \mathbb{N}$
     - $V$ spazio vettoriale su $\mathbb{K}$
     - $w_1, \ldots, w_m \in V \mid w_1, \ldots, w_m$ base di $V$
     - $v_1, \ldots, v_n \in V \mid v_1, \ldots, v_n$ base di $V$
@@ -1973,8 +1973,8 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 - **Hp**
-    - $n \in \mathbb{N}$
     - $\mathbb{K}$ campo
+    - $n \in \mathbb{N}$
     - $V$ spazio vettoriale su $\mathbb{K}$
     - $v_1, \ldots, v_n \in V$
 - **Th**
