@@ -9,8 +9,9 @@
 - **Alg**
     - $r_0:=b$
     - $r_1:=a$
+    - $r_{i + 1} := r_iq_i + r_{i + 1}$
     - $\texttt{while} \ r_{i + 1} \neq 0 \texttt{:}$
-        - $r_{i + 1} := r_iq_i + r_{i + 1}$
+        - $r_{i + 1} = r_iq_i + r_{i + 1}$
     - $\texttt{return} \ r_{i + 1}$
 - **Oss**
     - ⚠️ **todo**
