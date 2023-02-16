@@ -1871,6 +1871,43 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 ## Definizione 42
 
 
+- **Sottospazio ortogonale**
+
+> - $\mathbb{K}$ campo
+> - $n \in \mathbb{N}$
+> - $V \subset \mathbb{K}^n$ sottospazio vettoriale
+> - $V^{\perp} := \{w \in \mathbb{K}^n \mid \forall v \in V \quad w \cdot v = 0_{\mathbb{K}^n}\}$ è detto **sottospazio di $\mathbb{K}^n$ ortogonale a $V$**
+>     - la definizione ha significato poiché il prodotto scalare tra due vettori è nullo esattamente quando i due vettori sono perpendicolari tra loro
+
+
+
+## Teorema 118
+
+
+- **Hp**
+    - $\mathbb{K}$ campo
+    - $n \in \mathbb{N}$
+    - $V \subset \mathbb{K}^n$ sottospazio vettoriale
+- **Th**
+    - $V^{\bot} \subset \mathbb{K}^n$ sottospazio vettoriale
+
+
+
+## Teorema 119
+
+
+- **Hp**
+    - $\mathbb{K}$ campo
+    - $n \in \mathbb{N}$
+    - $V \subset \mathbb{K}^n$ sottospazio vettoriale
+- **Th**
+    - $\dim(V^{\bot}) + \dim(V) = \dim(\mathbb{K}^n)$
+
+
+
+## Definizione 43
+
+
 - **Generatori di uno spazio vettoriale**
 
 > - $n \in \mathbb{N}$
@@ -1902,7 +1939,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 118
+## Teorema 120
 
 
 - **Hp**
@@ -1912,7 +1949,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
     - $e_1, \ldots, e_n$ sono una base di $\mathbb{K}^n$, ed è detta _base canonica_
 
-## Teorema 119
+## Teorema 121
 
 
 - **Hp**
@@ -1923,7 +1960,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
     - $v_1, \ldots, v_n$ linearmente indipendenti $\iff v_1, \ldots, v_{n - 1}$ linearmente indipendenti $\land v_n \notin \textrm{span}(v_1, \ldots, v_{n - 1})$
 
-## Teorema 120
+## Teorema 122
 
 
 - **Hp**
@@ -1935,7 +1972,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
     - $i \le n$
 
-## Teorema 121
+## Teorema 123
 
 
 - **Hp**
@@ -1947,7 +1984,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
     - $n = m$, il che implica che la cardinalità delle basi di uno spazio vettoriale è unica
 
-## Definizione 43
+## Definizione 44
 
 
 - **Dimensione di uno spazio vettoriale**
@@ -1961,7 +1998,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 122
+## Teorema 124
 
 
 - **Hp**
@@ -1969,7 +2006,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
     - $n \in \mathbb{N}$
     - $\mathbb{K}[x]_{\le n} := \{p(x) \in \mathbb{K}[x] \mid \deg(p(x)) \le n\}$
 
-## Teorema 123
+## Teorema 125
 
 
 - **Hp**
@@ -1980,7 +2017,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
     - $v_1, \ldots, v_n$ base di $V \iff \forall v \in V \quad \exists ! \lambda_1, \ldots, \lambda_n \in \mathbb{K} \mid v = \lambda_1 v_1 + \ldots + \lambda_n v_n$
 
-## Teorema 124
+## Teorema 126
 
 
 - **Hp**
@@ -1992,7 +2029,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
     - $\exists w_{k + 1}, \ldots, w_n \in W \mid w_1, \ldots, w_n$ base di $W$
 
-## Teorema 125
+## Teorema 127
 
 
 - **Hp**
@@ -2004,7 +2041,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
     - $\exists 1 \le i_1, \ldots, i_n \le m \mid w_{i_1}, \ldots, w_{i_n}$ base di $W$
 
-## Teorema 126
+## Teorema 128
 
 
 - **Hp**
@@ -2015,7 +2052,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
     - $w_1, \ldots, w_n$ linearmente indipendenti $\iff w_1, \ldots, w_n$ generatori di $W$
 
-## Definizione 44
+## Definizione 45
 
 
 - **$+$ tra spazi vettoriali**
@@ -2032,7 +2069,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 127
+## Teorema 129
 
 
 - **Hp**
@@ -2042,7 +2079,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
     - $\dim(U + V) = \dim(U) + \dim(V) - \dim(U \cap V)$
 
-## Teorema 128
+## Teorema 130
 
 
 - **Hp**
@@ -2052,7 +2089,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
     - $V/W$ sottospazio vettoriale
 
-## Teorema 129
+## Teorema 131
 
 
 - **Hp**
@@ -2062,7 +2099,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
     - $\dim(V/W) = \dim(V) - \dim(W)$
 
-## Teorema 130
+## Teorema 132
 
 
 - **Hp**
@@ -2078,7 +2115,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Definizione 45
+## Definizione 46
 
 
 - **Applicazioni lineari**
@@ -2093,7 +2130,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 131
+## Teorema 133
 
 
 - **Hp**
@@ -2103,7 +2140,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
     - $V \cong \mathbb{K}^n$
 
-## Teorema 132
+## Teorema 134
 
 
 - **Hp**
@@ -2112,7 +2149,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
     - $V \cong W \iff \dim(V) = \dim(W)$
 
-## Definizione 46
+## Definizione 47
 
 
 - **Kernel e immagine di spazi vettoriali**
@@ -2125,7 +2162,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 133
+## Teorema 135
 
 
 - **Hp**
@@ -2135,7 +2172,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
     - $\ker(f) \subset V$ sottospazio
 
-## Teorema 134
+## Teorema 136
 
 
 - **Hp**
@@ -2145,7 +2182,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
     - $\textrm{im}(f) \subset W$ sottospazio
 
-## Definizione 47
+## Definizione 48
 
 
 - **Rango di un'applicazione lineare**
@@ -2161,7 +2198,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Definizione 48
+## Definizione 49
 
 
 - **Spazio affine**
@@ -2189,7 +2226,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 135
+## Teorema 137
 
 
 - **Hp**
@@ -2207,7 +2244,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 # Interpretazione geometrica dei vettori
 
 
-## Definizione 49
+## Definizione 50
 
 
 - **Prodotto scalare**
@@ -2243,7 +2280,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 136
+## Teorema 138
 
 
 - **Hp**
@@ -2256,7 +2293,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Definizione 50
+## Definizione 51
 
 
 - **Norma di un vettore**
@@ -2269,7 +2306,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 137
+## Teorema 139
 
 
 - **Hp**
@@ -2279,7 +2316,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
     - $||u|| = \sqrt{u \cdot u}$
 
-## Teorema 138
+## Teorema 140
 
 
 - **Hp**
@@ -2298,7 +2335,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Definizione 51
+## Definizione 52
 
 
 - **Matrice**
@@ -2317,7 +2354,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Definizione 52
+## Definizione 53
 
 
 - **$+$ tra matrici**
@@ -2331,7 +2368,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 139
+## Teorema 141
 
 
 - **Hp**
@@ -2341,7 +2378,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
     - $\textrm{Mat}_{m \times n}(\mathbb{K})$ spazio vettoriale
     - $\dim(\textrm{Mat}_{m \times n}{\mathbb{K}}) = m \cdot n$
 
-## Definizione 53
+## Definizione 54
 
 
 - **$\cdot$ tra matrici**
@@ -2354,7 +2391,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 140
+## Teorema 142
 
 
 - **Hp**
@@ -2370,43 +2407,6 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 ****
 
 # Rango
-
-
-
-## Definizione 54
-
-
-- **Sottospazio ortogonale**
-
-> - $\mathbb{K}$ campo
-> - $n \in \mathbb{N}$
-> - $V \subset \mathbb{K}^n$ sottospazio vettoriale
-> - $V^{\perp} := \{w \in \mathbb{K}^n \mid \forall v \in V \quad w \cdot v = 0_{\mathbb{K}^n}\}$ è detto **sottospazio ortogonale di $\mathbb{K}^n$**
->     - la definizione ha significato poiché il prodotto scalare tra due vettori è nullo esattamente quando i due vettori sono perpendicolari tra loro
-
-
-
-## Teorema 141
-
-
-- **Hp**
-    - $\mathbb{K}$ campo
-    - $n \in \mathbb{N}$
-    - $V \subset \mathbb{K}^n$ sottospazio vettoriale
-- **Th**
-    - $V^{\bot} \subset \mathbb{K}^n$ sottospazio vettoriale
-
-
-
-## Teorema 142
-
-
-- **Hp**
-    - $\mathbb{K}$ campo
-    - $n \in \mathbb{N}$
-    - $V \subset \mathbb{K}^n$ sottospazio vettoriale
-- **Th**
-    - $\dim(V^{\bot}) + \dim(V) = \dim(\mathbb{K}^n)$
 
 
 
