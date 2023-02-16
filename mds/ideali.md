@@ -13,8 +13,8 @@
 ## Oss
 
 - **Hp**
-  - $(A, +, \cdot)$ anello
-  - $a \in \mathbb{Z}$
+  - $(A, +, \cdot)$ anello commutativo
+  - $a \in A$
   - $I(a) := \{ax \mid x \in A\}$
 - **Th**
   - $I(a)$ è un ideale, e prende il nome di _ideale di $A$ generato da $a$_
@@ -56,11 +56,11 @@
 - **Th**
   - $I(a)=I(b) \iff a=\pm b$
 - **Dim**
-    - $a=\pm b \implies I(a)=I(b)$
+  - _prima implicazione_
+      - $I(a) = I(b) \iff a \in I(b) \land b \in I(a) \implies \exists p, q \in \mathbb{Z} \mid a = pb \wedge b = qa$, di conseguenza $b = q (pb) \implies b = (qp)b \implies pq = 1 \iff p = q = 1 \lor p = q = -1 \implies a = \pm b$
+  - _seconda implicazione_
       - $a = b \implies I(a)$ e $I(b)$ coincidono
       - $a = -b \implies I(-b) = \{ k(-b) \mid k \in \mathbb{Z}\} = \{(-k)b \mid (-k) \in \mathbb{Z}\} = I(b) = I(-b)=I(a)$
-    - $I(a) = I(b) \implies a = \pm b$
-      - $I(a) = I(b) \iff a \in I(b) \land b \in I(a) \implies \exists p, q \in \mathbb{Z} \mid a = pb \wedge b = qa$, di conseguenza $b = q (pb) \implies b = (qp)b \implies pq = 1 \iff p = q = 1 \lor p = q = -1 \implies a = \pm b$
 
 ## Oss
 
@@ -94,8 +94,8 @@
     - $d = 0$
         - $I = \{0\} \implies I = I(0)$ poiché i multipli di $0$ sono tutti pari a $0$
         - se invece $I \neq \{0\} \implies I \cap \mathbb{Z}_{>0} \neq \varnothing$, dunque $I$ contiene almeno un numero non nullo, in particolare positivo
-        - è possibile considerare solo il caso dei positivi in quanto $\forall x \in I - \{0\} \quad -x \in I$ per definizione di $I$, dunque per valori negativi è sufficiente considerare il loro opposto
-        - dunque, ha senso considerare $d:=\min(I \cap \mathbb{Z}_{\gt 0})$, che esiste per principio del minimo numero
+    - è possibile considerare solo il caso dei positivi in quanto $\forall x \in I - \{0\} \quad -x \in I$ per definizione di $I$, dunque per valori negativi è sufficiente considerare il loro opposto
+    - dunque, ha senso considerare $d:=\min(I \cap \mathbb{Z}_{\gt 0})$, che esiste per principio del minimo numero
     - $d \gt 0$
         - $I(d)=I \implies I(d) \subseteq I \wedge I \subseteq I(d)$
           - $I(d) \subseteq I$
@@ -111,7 +111,7 @@
                 - quindi $x = dq + r \implies r = x - dq \in I$ poiché $I$ è un ideale
                 - $r \neq 0 \implies r \in I \cap \mathbb{Z}_{\gt 0}$
                 - per definizione, $0 \le r \lt d$, ma $d:=\min(I \cap \mathbb{Z}_{\gt 0})$, quindi il minimo numero che $d$ può assumere è $1$, e poiché $r < d \implies r = 0$ necessariamente, dunque segue la dimostrazione precedente
-    - dunque, ogni ideale in $\mathbb{Z}$ è generato dall'insieme dei multipli di un certo $d \ge 0$, che esiste sempre ed è unico, e di conseguenza $\mathbb{Z}$ è un anello ad ideali principali
+    - dunque, ogni ideale in $\mathbb{Z}$ è generato dall'insieme dei multipli di un certo $d$ nell'ideale, di conseguenza $\mathbb{Z}$ è un anello ad ideali principali
 
 ## Def
 

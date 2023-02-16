@@ -154,6 +154,7 @@
   - $X$ insieme
 - **Th**
   - $\forall x, y \in X \quad \left \{ \begin{array}{ll}x \nsim y \iff [x] \cap [y] = \varnothing \\ x \sim y \iff [x] = [y]\end{array}\right.$, ovvero $\sim$ _induce una partizione_
+  - in particolare $\displaystyle X = \bigsqcup_{[x] \in X/\sim}[x]$
 - **Dim**
     - $x \sim y \iff [x] = [y]$
         - _prima implicazione_
@@ -175,7 +176,7 @@
     - $I$ insieme di indici
     - $\displaystyle X = \bigsqcup_{i \in I}X_i$ partizione di $X$
 - **Th**
-    - $\displaystyle X = \bigsqcup_{[x] \in X/\sim}[x]$, ovvero una partizione _induce una relazione di equivalenza_, dove $x \sim y \iff \exists i \in I \mid x, y \in X_i$
+    - una partizione _induce una relazione di equivalenza_, dove $x \sim y \iff \exists i \in I \mid x, y \in X_i$
 - **Dim**
     - $\forall x \in X \quad \exists i \in I \mid x \in X_i \implies x \sim x$
     - $x \sim y \implies \exists i \in I \mid x, y \in X_i \implies y \sim x$

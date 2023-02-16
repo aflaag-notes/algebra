@@ -52,7 +52,7 @@
 - **Th**
   - $\forall x \in G \quad x^{-1}$ è unico in $G$, rispetto a $m$
 - **Dim**
-  - per assurdo, ipotizzando che per un certo $x \in G \quad \exists x^{-1}_1, x^{-1}_2 \mid x^{-1}_1 \neq x^{-1}_2$, allora $\left.\begin{array}{l}m\left(x, x_{1}^{-1}\right)=m\left(x_{1}^{-1}, x\right)=e \\ m\left(x, x_{2}^{-1}\right)=m\left(x_{2}^{-1}, x\right)=e \end{array}\right\} \implies m\left(e_{1}^{-1}, x\right)=m\left(x_{2}^{-1}, x\right) \implies x_1^{-1}=x_2^{-1}$ necessariamente, quindi è unico
+  - per assurdo, ipotizzando che per un certo $x \in G \quad \exists x^{-1}_1, x^{-1}_2 \mid x^{-1}_1 \neq x^{-1}_2$, allora $\left.\begin{array}{l}m\left(x, x_{1}^{-1}\right)=m\left(x_{1}^{-1}, x\right)=e \\ m\left(x, x_{2}^{-1}\right)=m\left(x_{2}^{-1}, x\right)=e \end{array}\right\} \implies m\left(x_{1}^{-1}, x\right)=m\left(x_{2}^{-1}, x\right) \implies x_1^{-1}=x_2^{-1}$ necessariamente, quindi è unico
 
 ## Ex
 
@@ -97,8 +97,8 @@
 
 - **Campo**
 
-> - $(A, +, \cdot)$ anello
-> - $(A, +, \cdot)$ è detto **campo** $\iff \forall x \in A \quad \exists x^{-1}$ rispetto a $\cdot$
+> - $(A, +, \cdot)$ anello commutativo
+> - $(A, +, \cdot)$ è detto **campo** $\iff \forall x \in A \quad \exists x^{-1} \in A$ rispetto a $\cdot$
 
 - **Semianello commutativo**
 
@@ -141,7 +141,7 @@
 - **Dominio di integrità**
 
 > - $(A, +, \cdot)$ anello commutativo
-> - $A$ è detto **dominio di integrità** $\iff \nexists x \in A, x\neq 0 : x \mid 0$
+> - $A$ è detto **dominio di integrità** $\iff \nexists x \in A - \{0\} : x \mid 0$
 >   - in particolare, $A$ è dominio di integrità $\iff$ in $A$ vale la legge di annullamento del prodotto
 
 ## Oss
@@ -179,7 +179,7 @@
 
 - **Interi primi**
 
-> - $\mathbb{P} := \{x \in \mathbb{N} - \{0, 1\} \mid \nexists y \in \mathbb{N} - \{1, p\} : y \mid x\}$ è detto **insieme degli interi primi**
+> - $\mathbb{P} := \{p \in \mathbb{N} - \{0, 1\} \mid \nexists y \in \mathbb{N} - \{1, p\} : y \mid p\}$ è detto **insieme degli interi primi**
 >   - si noti che $\mathbb{P}$ _non coincide necessariamente_ con gli _elementi primi_
 
 ## Oss

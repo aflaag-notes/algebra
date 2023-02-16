@@ -109,8 +109,8 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 - **Campo**
 
-> - $(A, +, \cdot)$ anello
-> - $(A, +, \cdot)$ è detto **campo** $\iff \forall x \in A \quad \exists x^{-1}$ rispetto a $\cdot$
+> - $(A, +, \cdot)$ anello commutativo
+> - $(A, +, \cdot)$ è detto **campo** $\iff \forall x \in A \quad \exists x^{-1} \in A$ rispetto a $\cdot$
 
 - **Semianello commutativo**
 
@@ -155,7 +155,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Dominio di integrità**
 
 > - $(A, +, \cdot)$ anello commutativo
-> - $A$ è detto **dominio di integrità** $\iff \nexists x \in A, x\neq 0 : x \mid 0$
+> - $A$ è detto **dominio di integrità** $\iff \nexists x \in A - \{0\} : x \mid 0$
 >   - in particolare, $A$ è dominio di integrità $\iff$ in $A$ vale la legge di annullamento del prodotto
 
 
@@ -193,7 +193,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 - **Interi primi**
 
-> - $\mathbb{P} := \{x \in \mathbb{N} - \{0, 1\} \mid \nexists y \in \mathbb{N} - \{1, p\} : y \mid x\}$ è detto **insieme degli interi primi**
+> - $\mathbb{P} := \{p \in \mathbb{N} - \{0, 1\} \mid \nexists y \in \mathbb{N} - \{1, p\} : y \mid p\}$ è detto **insieme degli interi primi**
 >   - si noti che $\mathbb{P}$ _non coincide necessariamente_ con gli _elementi primi_
 
 
@@ -472,8 +472,8 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 - **Hp**
-  - $(A, +, \cdot)$ anello
-  - $a \in \mathbb{Z}$
+  - $(A, +, \cdot)$ anello commutativo
+  - $a \in A$
   - $I(a) := \{ax \mid x \in A\}$
 - **Th**
   - $I(a)$ è un ideale, e prende il nome di _ideale di $A$ generato da $a$_
@@ -807,6 +807,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
   - $X$ insieme
 - **Th**
   - $\forall x, y \in X \quad \left \{ \begin{array}{ll}x \nsim y \iff [x] \cap [y] = \varnothing \\ x \sim y \iff [x] = [y]\end{array}\right.$, ovvero $\sim$ _induce una partizione_
+  - in particolare $\displaystyle X = \bigsqcup_{[x] \in X/\sim}[x]$
 
 ## Teorema 46
 
@@ -816,7 +817,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
     - $I$ insieme di indici
     - $\displaystyle X = \bigsqcup_{i \in I}X_i$ partizione di $X$
 - **Th**
-    - $\displaystyle X = \bigsqcup_{[x] \in X/\sim}[x]$, ovvero una partizione _induce una relazione di equivalenza_, dove $x \sim y \iff \exists i \in I \mid x, y \in X_i$
+    - una partizione _induce una relazione di equivalenza_, dove $x \sim y \iff \exists i \in I \mid x, y \in X_i$
      
 ****
 

@@ -368,10 +368,11 @@ a</span>
 </ul>
 <blockquote>
 <ul>
-<li><span class="math inline">(A, +, \cdot)</span> anello</li>
+<li><span class="math inline">(A, +, \cdot)</span> anello
+commutativo</li>
 <li><span class="math inline">(A, +, \cdot)</span> è detto
 <strong>campo</strong> <span class="math inline">\iff \forall x \in A
-\quad \exists x^{-1}</span> rispetto a <span
+\quad \exists x^{-1} \in A</span> rispetto a <span
 class="math inline">\cdot</span></li>
 </ul>
 </blockquote>
@@ -452,8 +453,8 @@ class="math inline">\iff \exists b \in A - \{0\} \mid a \cdot b =
 <li><span class="math inline">(A, +, \cdot)</span> anello
 commutativo</li>
 <li><span class="math inline">A</span> è detto <strong>dominio di
-integrità</strong> <span class="math inline">\iff \nexists x \in A,
-x\neq 0 : x \mid 0</span>
+integrità</strong> <span class="math inline">\iff \nexists x \in A -
+\{0\} : x \mid 0</span>
 <ul>
 <li>in particolare, <span class="math inline">A</span> è dominio di
 integrità <span class="math inline">\iff</span> in <span
@@ -515,8 +516,8 @@ c \in A \mid a = b c \implies b \in A^* \lor c \in A^*</span></li>
 </ul>
 <blockquote>
 <ul>
-<li><span class="math inline">\mathbb{P} := \{x \in \mathbb{N} - \{0,
-1\} \mid \nexists y \in \mathbb{N} - \{1, p\} : y \mid x\}</span> è
+<li><span class="math inline">\mathbb{P} := \{p \in \mathbb{N} - \{0,
+1\} \mid \nexists y \in \mathbb{N} - \{1, p\} : y \mid p\}</span> è
 detto <strong>insieme degli interi primi</strong>
 <ul>
 <li>si noti che <span class="math inline">\mathbb{P}</span> <em>non
@@ -901,8 +902,9 @@ class="math inline">\big\vert p := |G| \in \mathbb{P}</span></li>
 <ul>
 <li><strong>Hp</strong>
 <ul>
-<li><span class="math inline">(A, +, \cdot)</span> anello</li>
-<li><span class="math inline">a \in \mathbb{Z}</span></li>
+<li><span class="math inline">(A, +, \cdot)</span> anello
+commutativo</li>
+<li><span class="math inline">a \in A</span></li>
 <li><span class="math inline">I(a) := \{ax \mid x \in A\}</span></li>
 </ul></li>
 <li><strong>Th</strong>
@@ -1435,6 +1437,8 @@ class="math inline">X</span></strong>
 \begin{array}{ll}x \nsim y \iff [x] \cap [y] = \varnothing \\ x \sim y
 \iff [x] = [y]\end{array}\right.</span>, ovvero <span
 class="math inline">\sim</span> <em>induce una partizione</em></li>
+<li>in particolare <span class="math inline">\displaystyle X =
+\bigsqcup_{[x] \in X/\sim}[x]</span></li>
 </ul></li>
 </ul>
 <a href="#teorema-46"><h2 id="teorema-46">Teorema 46</h2></a>
@@ -1448,10 +1452,9 @@ I}X_i</span> partizione di <span class="math inline">X</span></li>
 </ul></li>
 <li><strong>Th</strong>
 <ul>
-<li><span class="math inline">\displaystyle X = \bigsqcup_{[x] \in
-X/\sim}[x]</span>, ovvero una partizione <em>induce una relazione di
-equivalenza</em>, dove <span class="math inline">x \sim y \iff \exists i
-\in I \mid x, y \in X_i</span></li>
+<li>una partizione <em>induce una relazione di equivalenza</em>, dove
+<span class="math inline">x \sim y \iff \exists i \in I \mid x, y \in
+X_i</span></li>
 </ul></li>
 </ul>
 <hr />

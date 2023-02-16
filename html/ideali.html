@@ -205,8 +205,9 @@
 <ul>
 <li><strong>Hp</strong>
 <ul>
-<li><span class="math inline">(A, +, \cdot)</span> anello</li>
-<li><span class="math inline">a \in \mathbb{Z}</span></li>
+<li><span class="math inline">(A, +, \cdot)</span> anello
+commutativo</li>
+<li><span class="math inline">a \in A</span></li>
 <li><span class="math inline">I(a) := \{ax \mid x \in A\}</span></li>
 </ul></li>
 <li><strong>Th</strong>
@@ -311,21 +312,21 @@ inclusione</li>
 </ul></li>
 <li><strong>Dim</strong>
 <ul>
-<li><span class="math inline">a=\pm b \implies I(a)=I(b)</span>
-<ul>
-<li><span class="math inline">a = b \implies I(a)</span> e <span
-class="math inline">I(b)</span> coincidono</li>
-<li><span class="math inline">a = -b \implies I(-b) = \{ k(-b) \mid k
-\in \mathbb{Z}\} = \{(-k)b \mid (-k) \in \mathbb{Z}\} = I(b) =
-I(-b)=I(a)</span></li>
-</ul></li>
-<li><span class="math inline">I(a) = I(b) \implies a = \pm b</span>
+<li><em>prima implicazione</em>
 <ul>
 <li><span class="math inline">I(a) = I(b) \iff a \in I(b) \land b \in
 I(a) \implies \exists p, q \in \mathbb{Z} \mid a = pb \wedge b =
 qa</span>, di conseguenza <span class="math inline">b = q (pb) \implies
 b = (qp)b \implies pq = 1 \iff p = q = 1 \lor p = q = -1 \implies a =
 \pm b</span></li>
+</ul></li>
+<li><em>seconda implicazione</em>
+<ul>
+<li><span class="math inline">a = b \implies I(a)</span> e <span
+class="math inline">I(b)</span> coincidono</li>
+<li><span class="math inline">a = -b \implies I(-b) = \{ k(-b) \mid k
+\in \mathbb{Z}\} = \{(-k)b \mid (-k) \in \mathbb{Z}\} = I(b) =
+I(-b)=I(a)</span></li>
 </ul></li>
 </ul></li>
 </ul>
@@ -406,6 +407,7 @@ class="math inline">0</span></li>
 \mathbb{Z}_{&gt;0} \neq \varnothing</span>, dunque <span
 class="math inline">I</span> contiene almeno un numero non nullo, in
 particolare positivo</li>
+</ul></li>
 <li>è possibile considerare solo il caso dei positivi in quanto <span
 class="math inline">\forall x \in I - \{0\} \quad -x \in I</span> per
 definizione di <span class="math inline">I</span>, dunque per valori
@@ -413,7 +415,6 @@ negativi è sufficiente considerare il loro opposto</li>
 <li>dunque, ha senso considerare <span class="math inline">d:=\min(I
 \cap \mathbb{Z}_{\gt 0})</span>, che esiste per principio del minimo
 numero</li>
-</ul></li>
 <li><span class="math inline">d \gt 0</span>
 <ul>
 <li><span class="math inline">I(d)=I \implies I(d) \subseteq I \wedge I
@@ -461,9 +462,9 @@ dunque segue la dimostrazione precedente</li>
 </ul></li>
 <li>dunque, ogni ideale in <span class="math inline">\mathbb{Z}</span> è
 generato dall’insieme dei multipli di un certo <span
-class="math inline">d \ge 0</span>, che esiste sempre ed è unico, e di
-conseguenza <span class="math inline">\mathbb{Z}</span> è un anello ad
-ideali principali</li>
+class="math inline">d</span> nell’ideale, di conseguenza <span
+class="math inline">\mathbb{Z}</span> è un anello ad ideali
+principali</li>
 </ul></li>
 </ul>
 <a href="#def-2"><h2 id="def-2">Def</h2></a>
