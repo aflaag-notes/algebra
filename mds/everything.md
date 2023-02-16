@@ -2343,7 +2343,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 ## Definizione 53
 
 
-- **Prodotto tra matrici**
+- **$\cdot$ tra matrici**
 
 > - $\mathbb{K}$ campo
 > - $l, m, n \in \mathbb{N}$
@@ -2364,7 +2364,6 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
     - $\forall C \in \textrm{Mat}_{n \times k}(\mathbb{K}) \quad (AB)C = A(BC)$
     - $\forall C \in \textrm{Mat}_{m \times n}(\mathbb{K}) \quad A(B+C) = AB+AC$
-    - $\forall C \in \textrm{Mat}_{n \times k}(\mathbb{K}) \quad (A+B)C = AC+BC$
     - $\forall \lambda \in \mathbb{K} \quad \lambda(AB) = (\lambda A)B = A (\lambda B)$
 
 ****
@@ -2930,7 +2929,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 > - $\mathbb{K}$ campo
 > - $n \in \mathbb{N}$
 > - $b_0, \ldots, b_n \in \mathbb{K} \mid \forall i, j \in [1, n], i \neq j \quad b_i \neq b_j$
-> - $V(b_0, \ldots, b_n) = \left ( \begin{array}{cccc} b_0^0 & b_0^1 & \cdots & b_0^n \\ b_1^0 & b_1^1 & \cdots & b_1^n \\ \vdots & \ddots & & \vdots \\\vdots & &\ddots  & \vdots \\ b_n^0 & b_n^1 & \cdots & b_n^n\end{array}\right)$ è detta **matrice di Vandermonde a coefficienti $b_0, \ldots, b_n$**
+> - $V(b_0, \ldots, b_n) := \left ( \begin{array}{cccc} b_0^0 & b_0^1 & \cdots & b_0^n \\ b_1^0 & b_1^1 & \cdots & b_1^n \\ \vdots & \ddots & & \vdots \\\vdots & &\ddots  & \vdots \\ b_n^0 & b_n^1 & \cdots & b_n^n\end{array}\right)$ è detta **matrice di Vandermonde a coefficienti $b_0, \ldots, b_n$**
 
 
 
@@ -3796,7 +3795,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 - **Hp**
   - $p \in \mathbb{P}$
-  - $[a] \in \mathbb{Z}_{p}-\{0\}$
+  - $[a] \in \mathbb{Z}_{p}-\{[0]\}$
 - **Th**
   - $[a]^{-1}=\left[a\right]^{p-2}$
 

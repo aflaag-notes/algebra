@@ -271,7 +271,8 @@ n}{\mathbb{K}}) = m \cdot n</span></li>
 </ul>
 <a href="#def-2"><h2 id="def-2">Def</h2></a>
 <ul>
-<li><strong>Prodotto tra matrici</strong></li>
+<li><strong><span class="math inline">\cdot</span> tra
+matrici</strong></li>
 </ul>
 <blockquote>
 <ul>
@@ -313,8 +314,6 @@ n}(\mathbb{K})</span></li>
 k}(\mathbb{K}) \quad (AB)C = A(BC)</span></li>
 <li><span class="math inline">\forall C \in \textrm{Mat}_{m \times
 n}(\mathbb{K}) \quad A(B+C) = AB+AC</span></li>
-<li><span class="math inline">\forall C \in \textrm{Mat}_{n \times
-k}(\mathbb{K}) \quad (A+B)C = AC+BC</span></li>
 <li><span class="math inline">\forall \lambda \in \mathbb{K} \quad
 \lambda(AB) = (\lambda A)B = A (\lambda B)</span></li>
 </ul></li>
@@ -1335,7 +1334,7 @@ a_{m, i}\end{array}\right) = A^i \in \mathbb{K}^m</span></li>
 <li><span class="math inline">n \in \mathbb{N}</span></li>
 <li><span class="math inline">b_0, \ldots, b_n \in \mathbb{K} \mid
 \forall i, j \in [1, n], i \neq j \quad b_i \neq b_j</span></li>
-<li><span class="math inline">V(b_0, \ldots, b_n) = \left (
+<li><span class="math inline">V(b_0, \ldots, b_n) := \left (
 \begin{array}{cccc} b_0^0 &amp; b_0^1 &amp; \cdots &amp; b_0^n \\ b_1^0
 &amp; b_1^1 &amp; \cdots &amp; b_1^n \\ \vdots &amp; \ddots &amp; &amp;
 \vdots \\\vdots &amp; &amp;\ddots &amp; \vdots \\ b_n^0 &amp; b_n^1
@@ -1405,7 +1404,7 @@ b_0 &amp; \cdots &amp; b_1^{n - 1} + \ldots + b_0^{ n - 1} \\1 &amp;
 b_2+b_0&amp;\cdots &amp; b_2^{n -1} + \ldots + b_0^{n - 1} \\ \vdots
 &amp; \ddots &amp; &amp;\vdots \\ \vdots &amp; &amp; \ddots &amp; \vdots
 \\ 1 &amp; b_n + b_0 &amp; \cdots &amp; b_n^{n -1}+ \ldots + b_0^{n
--1}\end{array}\right)\xrightarrow{\left \{ \begin{array}{c}C^2 -= b_0
+-1}\end{array}\right)\xrightarrow{\left . \begin{array}{c}C^2 -= b_0
 \cdot C^1 \\ C^3 -= b_0 \cdot C^1 + b_0 \cdot C^2 \\ \vdots \\ C^n -=
 b_0 \cdot C^1 + \ldots + b_0 \cdot C^{n - 1}\end{array}\right.} \left (
 \begin{array}{cccc} 1 &amp; b_1 &amp; \cdots &amp; b_1^{n - 1} \\1 &amp;

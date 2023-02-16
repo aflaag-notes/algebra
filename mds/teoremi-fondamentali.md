@@ -196,7 +196,7 @@
 
 - **Hp**
   - $p \in \mathbb{P}$
-  - $[a] \in \mathbb{Z}_{p}-\{0\}$
+  - $[a] \in \mathbb{Z}_{p}-\{[0]\}$
 - **Th**
   - $[a]^{-1}=\left[a\right]^{p-2}$
 - **Dim**

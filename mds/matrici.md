@@ -40,7 +40,7 @@
 
 ## Def
 
-- **Prodotto tra matrici**
+- **$\cdot$ tra matrici**
 
 > - $\mathbb{K}$ campo
 > - $l, m, n \in \mathbb{N}$
@@ -58,7 +58,6 @@
 - **Th**
     - $\forall C \in \textrm{Mat}_{n \times k}(\mathbb{K}) \quad (AB)C = A(BC)$
     - $\forall C \in \textrm{Mat}_{m \times n}(\mathbb{K}) \quad A(B+C) = AB+AC$
-    - $\forall C \in \textrm{Mat}_{n \times k}(\mathbb{K}) \quad (A+B)C = AC+BC$
     - $\forall \lambda \in \mathbb{K} \quad \lambda(AB) = (\lambda A)B = A (\lambda B)$
 
 ****
@@ -568,7 +567,7 @@
 > - $\mathbb{K}$ campo
 > - $n \in \mathbb{N}$
 > - $b_0, \ldots, b_n \in \mathbb{K} \mid \forall i, j \in [1, n], i \neq j \quad b_i \neq b_j$
-> - $V(b_0, \ldots, b_n) = \left ( \begin{array}{cccc} b_0^0 & b_0^1 & \cdots & b_0^n \\ b_1^0 & b_1^1 & \cdots & b_1^n \\ \vdots & \ddots & & \vdots \\\vdots & &\ddots  & \vdots \\ b_n^0 & b_n^1 & \cdots & b_n^n\end{array}\right)$ è detta **matrice di Vandermonde a coefficienti $b_0, \ldots, b_n$**
+> - $V(b_0, \ldots, b_n) := \left ( \begin{array}{cccc} b_0^0 & b_0^1 & \cdots & b_0^n \\ b_1^0 & b_1^1 & \cdots & b_1^n \\ \vdots & \ddots & & \vdots \\\vdots & &\ddots  & \vdots \\ b_n^0 & b_n^1 & \cdots & b_n^n\end{array}\right)$ è detta **matrice di Vandermonde a coefficienti $b_0, \ldots, b_n$**
 
 ## Oss
 
@@ -584,6 +583,6 @@
     - eseguendo lo sviluppo di Laplace sulla prima colonna, si ottiene $1 \cdot \det\left ( \begin{array}{cccc} b_1 - b_0 & b_1^2 -b_0^2 & \cdots & b_1^n - b_0^n \\ b_2 - b_0 & b_2^2-b_0^2&\cdots & b_2^n - b_0^n \\ \vdots & \ddots & &\vdots \\ \vdots &  & \ddots & \vdots \\  b_n - b_0 &  b_n^2-b_0^2 & \cdots & b_n^n - b_0^n\end{array}\right)$
     - $\forall i \in [1, n] \quad b_i^n - b_0^n = (b_i - b_0)(b_i^{n - 1} + b_i^{n - 2}b_0 + \ldots + b_ib_0^{n - 2} + b_0^{n - 1})$
     - allora si ottiene $\det\left ( \begin{array}{cccc} (b_1 - b_0) \cdot 1 & (b_1 -b_0)\cdot(b_1 + b_0) & \cdots & (b_1 - b_0)\cdot(b_1^{n - 1} + \ldots + b_0^{ n - 1}) \\ (b_2 - b_0) \cdot 1 & (b_2 - b_0)\cdot (b_2+b_0)&\cdots & (b_2 - b_0)\cdot(b_2^{n -1} + \ldots +  b_0^{n - 1}) \\ \vdots & \ddots & &\vdots \\ \vdots & & \ddots & \vdots \\  (b_n - b_0) \cdot 1 &  (b_n-b_0)\cdot (b_n + b_0) & \cdots & (b_n - b_0) \cdot (b_n^{n -1}+ \ldots + b_0^{n -1})\end{array}\right) = (b_n - b_0)\cdot \ldots \cdot(b_1 - b_0) \cdot \det\left ( \begin{array}{cccc} 1 & b_1 + b_0 & \cdots & b_1^{n - 1} + \ldots + b_0^{ n - 1} \\1 & b_2+b_0&\cdots & b_2^{n -1} + \ldots +  b_0^{n - 1} \\ \vdots & \ddots & &\vdots \\ \vdots & & \ddots & \vdots \\   1 &  b_n + b_0 & \cdots & b_n^{n -1}+ \ldots + b_0^{n -1}\end{array}\right)$ per multilinearità del determinante
-    - $\left( \begin{array}{cccc} 1 & b_1 + b_0 & \cdots & b_1^{n - 1} + \ldots + b_0^{ n - 1} \\1 & b_2+b_0&\cdots & b_2^{n -1} + \ldots +  b_0^{n - 1} \\ \vdots & \ddots & &\vdots \\ \vdots & & \ddots & \vdots \\   1 &  b_n + b_0 & \cdots & b_n^{n -1}+ \ldots + b_0^{n -1}\end{array}\right)\xrightarrow{\left \{ \begin{array}{c}C^2 -= b_0 \cdot C^1 \\ C^3 -= b_0  \cdot C^1 + b_0 \cdot C^2 \\ \vdots \\ C^n -= b_0 \cdot C^1 + \ldots + b_0 \cdot C^{n - 1}\end{array}\right.} \left ( \begin{array}{cccc} 1 & b_1 & \cdots & b_1^{n - 1} \\1 & b_2 &\cdots & b_2^{n -1} \\ \vdots & \ddots & &\vdots \\ \vdots & & \ddots & \vdots \\   1 &  b_n  & \cdots & b_n^{n -1}\end{array}\right) = V(b_1, \ldots, b_n)$
+    - $\left( \begin{array}{cccc} 1 & b_1 + b_0 & \cdots & b_1^{n - 1} + \ldots + b_0^{ n - 1} \\1 & b_2+b_0&\cdots & b_2^{n -1} + \ldots +  b_0^{n - 1} \\ \vdots & \ddots & &\vdots \\ \vdots & & \ddots & \vdots \\   1 &  b_n + b_0 & \cdots & b_n^{n -1}+ \ldots + b_0^{n -1}\end{array}\right)\xrightarrow{\left . \begin{array}{c}C^2 -= b_0 \cdot C^1 \\ C^3 -= b_0  \cdot C^1 + b_0 \cdot C^2 \\ \vdots \\ C^n -= b_0 \cdot C^1 + \ldots + b_0 \cdot C^{n - 1}\end{array}\right.} \left ( \begin{array}{cccc} 1 & b_1 & \cdots & b_1^{n - 1} \\1 & b_2 &\cdots & b_2^{n -1} \\ \vdots & \ddots & &\vdots \\ \vdots & & \ddots & \vdots \\   1 &  b_n  & \cdots & b_n^{n -1}\end{array}\right) = V(b_1, \ldots, b_n)$
     - allora si ha che $\det(V(b_0, \ldots, b_n)) = (b_n - b_0) \cdot \ldots \cdot(b_1 - b_0) \cdot \det(V(b_1, \ldots, b_n)) = (b_n - b_0) \cdot \ldots \cdot(b_1 - b_0) \cdot (b_n - b_1) \cdot \ldots \cdot (b_2 - b_1) \cdot \det(V(b_2, \ldots, b_n)) \implies \det(V(b_0, \ldots, b_n)) = \displaystyle \prod_{0 \le i \lt j \le n}{(b_j - b_i)}$
 
