@@ -110,7 +110,7 @@
                 - $dq \in I(d) \implies dq \in I$ per dimostrazione precedente
                 - quindi $x = dq + r \implies r = x - dq \in I$ poiché $I$ è un ideale
                 - $r \neq 0 \implies r \in I \cap \mathbb{Z}_{\gt 0}$
-                - per definizione, $0 \le r \lt d$, ma $d:=\min(I \cap \mathbb{Z}_{\gt 0})$, quindi il minimo numero che $d$ può assumere è $1$, e poiché $r < d \implies r = 0$ necessariamente, dunque segue la dimostrazione precedente
+                - per definizione, $0 \le r \lt d$, in particolare $r \lt d$, ma poiché $d:=\min(I \cap \mathbb{Z}_{\gt 0})$ è impossibile che $r \lt d \ \bot$
     - dunque, ogni ideale in $\mathbb{Z}$ è generato dall'insieme dei multipli di un certo $d$ nell'ideale, di conseguenza $\mathbb{Z}$ è un anello ad ideali principali
 
 ## Def
@@ -170,12 +170,13 @@
 - **Th**
   - $I + J$ è un ideale
 - **Dim**
-  - ⚠️ **rivedila fa schifo**
-  - $0 \in I, 0 \in J, 0+0=0 \implies 0 \in I + J$
-  - la chiusura rispetto a $+$ deve implicare che $\forall i_1, i_2 \in I, j_1, j_2 \in J \quad (i_1 + j_1) + (i_2 + j_2) \in I + J$, allora si ottiene che $(i_1 + j_1) + (i_2 + j_2) = (i_1 + i_2) + (j_1 + j_2)$, e $i_1 + i_2 \in I, j_1 + j_2 \in J \implies (i_1 + i_2) + (j_1 + j_2) \in I + J$
-  - $\forall i \in I, j \in J \quad i + j \in I + J$, l'opposto rispetto a $+$ di $i + j$ è $- (i + j) = (-i) + (-j)$, e $\forall i \in I, j \in J \quad -i \in I, -j \in J  \implies (-i) + (-j) \in I + J$
-  - $A \cdot I \subseteq I \implies \forall a \in A, i \in I, j \in J \quad a(i + j) \in I + J$
-    - $i + j \in I + J$ per definizione, e $a(i + j) = ai + aj$, e $ai \in I, aj \in J$ per definizione, quindi $ai + aj \in I + J$
+  - $0 \in I, J \implies 0+0=0 \in I + J$
+  - la chiusura rispetto a $+$ deve implicare che $\forall i_1, i_2 \in I, j_1, j_2 \in J \quad (i_1 + j_1) + (i_2 + j_2) \in I + J$, allora si ottiene che $(i_1 + j_1) + (i_2 + j_2) = (i_1 + i_2) + (j_1 + j_2)$, e inoltre $i_1 + i_2 \in I, j_1 + j_2 \in J$
+  - $i + j \in I + J \implies i \in I \land j \in J \implies -i \in I \land -j \in J \implies (-i) + (-j) = - (i + j) \in I + J$
+  <!-- - $A \cdot I \subseteq I \implies \forall a \in A, i \in I, j \in J \quad a(i + j) \in I + J$ -->
+    <!-- - $i + j \in I + J$ per definizione, e $a(i + j) = ai + aj$, e $ai \in I, aj \in J$ per definizione, quindi $ai + aj \in I + J$ -->
+  - $a \in A, i + j \in I + J \implies ai \in I \land aj \in J \implies ai + aj = a(i + j) \in I + J \implies A \cdot I \subseteq I$
+      - vale anche per $I \cdot A \subseteq I$ poiché $(A, + , \cdot)$ anello commutativo
 
 ## Def
 

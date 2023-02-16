@@ -120,7 +120,7 @@
 
 - **Hp**
     - $p \in \mathbb{P}$
-    - $k \in \mathbb{N} \mid k \ge 1$
+    - $k \in \mathbb{N} - \{0\}$
 - **Th**
     - $\varphi(p^k) = p^{k -1}(p-1)$
 - **Dim**
