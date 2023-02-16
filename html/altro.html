@@ -185,48 +185,24 @@
 <h1 class="title"> </h1>
 </header>
 <a href="#altro"><h1 id="altro">Altro</h1></a>
-<a href="#alg"><h2 id="alg">Alg</h2></a>
-<ul>
-<li>⚠️ <strong>algoritmo di euclide todo</strong></li>
-</ul>
 <a href="#def"><h2 id="def">Def</h2></a>
 <ul>
-<li><strong>RSA</strong></li>
+<li><strong>Algoritmo di Euclide</strong></li>
 </ul>
 <blockquote>
 <ul>
-<li>L’RSA è un algoritmo di crittografia asimmetrica che permette il
-trasferimento di messaggi, in sicurezza, senza l’utilizzo di un canale
-sicuro per scambio di chiavi, poiché vengono utilizzati chiavi pubbliche
-e private, dove le chiavi pubbliche servono solamente a crittare, mentre
-le chiavi private servono solamente a decrittare</li>
-<li><span class="math inline">A, B</span> interlocutori</li>
-<li><span class="math inline">m</span> messaggio che <span
-class="math inline">B</span> vuole mandare a <span
-class="math inline">A</span></li>
-<li><span class="math inline">\texttt{pub}_A, \texttt{priv}_A</span>
-chiavi rispettivamente pubblica e privata di <span
-class="math inline">A</span></li>
-<li>allora <span class="math inline">B</span> manda ad <span
-class="math inline">A</span> la versione crittata di <span
-class="math inline">m</span> tramite la chiave pubblica di <span
-class="math inline">A</span>, ovvero <span
-class="math inline">\texttt{pub}_A(m)</span></li>
-<li>per poter leggere il messaggio, <span class="math inline">A</span>
-userà la sua chiave privata per decrittare il messaggio crittato
-ricevuto da <span class="math inline">B</span>, ovvero <span
-class="math inline">\texttt{priv}_A(\texttt{pub}_A(m)) = m</span></li>
+<li>⚠️ <strong>todo</strong></li>
 </ul>
 </blockquote>
-<a href="#alg-1"><h2 id="alg-1">Alg</h2></a>
+<a href="#alg"><h2 id="alg">Alg</h2></a>
 <ul>
 <li><strong>In</strong>
 <ul>
 <li><span class="math inline">A</span> interlocutore</li>
 <li><span class="math inline">p, q \in \mathbb{P} \mid p \neq q</span>,
 con <span class="math inline">p, q</span> sufficientemente grandi</li>
-<li><span class="math inline">m</span> messaggio ricevuto da <span
-class="math inline">A \mid \textrm{MCD}(m, n) = 1</span></li>
+<li><span class="math inline">m</span> messaggio <span
+class="math inline">\mid \textrm{MCD}(m, n) = 1</span></li>
 </ul></li>
 <li><strong>Out</strong>
 <ul>
@@ -243,19 +219,26 @@ q-1)</span></li>
 1 \end{array} \right.</span></li>
 <li><span class="math inline">d:= e^{-1} \ (\bmod \
 \lambda(n))</span></li>
-<li><span class="math inline">\texttt{pub}_A = (n, e)</span></li>
-<li><span class="math inline">\texttt{priv}_A = (n, d)</span></li>
+<li><span class="math inline">\texttt{pub}_A(m, e, n) := m^e \ (\bmod \
+n)</span></li>
+<li><span class="math inline">\texttt{priv}_A(m, d, n) := (m^e)^d \
+(\bmod \ n)</span></li>
 </ul></li>
 <li><strong>Oss</strong>
 <ul>
+<li>se <span class="math inline">p,q</span> non fossero sufficientemente
+grandi, poiché <span class="math inline">n</span> è pubblico, si
+rischierebbe di poter trovare <span class="math inline">p</span> e <span
+class="math inline">q</span>, permettendo di decrittare il messaggio
+anche da chi non possiede <span class="math inline">d</span></li>
 <li><span class="math inline">p \mid m \implies m^{ed} \equiv m \equiv 0
 \ (\bmod \ p)</span>, il che comporterebbe una perdita di
 informazione</li>
 </ul></li>
 <li><strong>Th</strong>
 <ul>
-<li><span class="math inline">\texttt{priv}_A(\texttt{pub}_A(m)) =
-m</span></li>
+<li><span class="math inline">\texttt{priv}_A(\texttt{pub}_A(m, e, n),
+d, n) = m</span></li>
 </ul></li>
 <li><strong>Dim</strong>
 <ul>
@@ -278,15 +261,85 @@ m \iff m^{q-1} \equiv 1 \implies m^{\lambda(n)} \equiv m^{(q-1)\cdot j}
 <li>allora si ha che <span class="math inline">(m^e)^d \equiv m^{1 + k
 \cdot \lambda(n)} \equiv m \cdot (m^{\lambda(n)})^k \equiv m \ (\bmod \
 n)</span></li>
-<li>allora <span class="math inline">m^e</span> sarà il messaggio
-crittato ricevuto da <span class="math inline">A</span>, e <span
-class="math inline">(m^e)^d \ (\bmod \ n)</span> restituirà <span
-class="math inline">m</span></li>
 </ul></li>
 </ul>
-<a href="#alg-2"><h2 id="alg-2">Alg</h2></a>
+<a href="#alg-1"><h2 id="alg-1">Alg</h2></a>
 <ul>
-<li>⚠️ <strong>regola di ruffini</strong></li>
+<li><strong>In</strong>
+<ul>
+<li><span class="math inline">n \in \mathbb{N}</span></li>
+<li><span class="math inline">b_0, \ldots, b_n, c_0, \ldots, c_n \in
+\mathbb{K} \left \{ \begin{array}{c}(b_0, c_0) \\ \vdots \\ (b_n, c_n)
+\end{array} \right.</span> sono punti del <span
+class="math inline">p(x)</span> da trovare, e inoltre <span
+class="math inline">\forall i \in [1, n], i \neq j \quad b_i \neq
+b_j</span></li>
+</ul></li>
+<li><strong>Out</strong>
+<ul>
+<li><span class="math inline">p(x) \in \mathbb{K}[x]_{\le n} \mid \left
+\{ \begin{array}{c} c_0 := a_0 + a_1b_0 + a_2b_0^2 + \ldots + a_nb_0^n =
+p(b_0) \\ c_1:=a_0 + a_1b_1 + a_2b_1^2 + \ldots + a_nb_1^n = p(b_1) \\
+\vdots \\ c_n := a_0 + a_1b_n + a_2b_n^2 + \ldots + a_nb_n^n = p(b_n)
+\end{array} \right.</span></li>
+</ul></li>
+<li><strong>Alg</strong>
+<ul>
+<li><span class="math inline">\forall i \in [0, n] \quad p_i(x) :=
+\displaystyle \prod_{\begin{subarray}{c}0 \le j \le n \\ i \neq\ j
+\end{subarray}}{\dfrac{x - b_j}{b_i - b_j}}</span></li>
+<li><span class="math inline">p(x) := c_0p_0(x) + \ldots + c_n
+p_n(x)</span></li>
+</ul></li>
+<li><strong>Oss</strong>
+<ul>
+<li>è possibile sfruttare questo algoritmo per lo scambio di messaggi,
+ponendo il messaggio da inviare all’interno del termine noto di <span
+class="math inline">p(x)</span></li>
+<li>una volta reperito <span class="math inline">p(x)</span> a partire
+dai punti <span class="math inline">\left \{ \begin{array}{c}(b_0, c_0)
+\\ \vdots \\ (b_n, c_n) \end{array} \right.</span>, basterà porre <span
+class="math inline">p(0)</span> per recuperare il messaggio</li>
+<li>la sicurezza di tale algoritmo è fornita dal fatto che è impossibile
+ricostruire <span class="math inline">p(x)</span> senza avere
+<em>tutti</em> i punti necessari, altrimenti non è possibile ricostruire
+<span class="math inline">p(x)</span> come combinazione lineare in <span
+class="math inline">\mathbb{K}[x]_{\le n}</span></li>
+</ul></li>
+<li><strong>Dim</strong>
+<ul>
+<li>si noti che la matrice dei coefficienti del sistema considerato in
+ipotesi è una matrice di Vandermonde a coefficienti <span
+class="math inline">V(b_0, \ldots, b_n)</span>, dunque per dimostrazione
+precedente <span class="math inline">\det(V(b_0, \ldots, b_n)) \neq
+0</span> poiché <span class="math inline">b_0, \ldots, b_n</span> sono
+stati scelti distinti</li>
+<li>per dimostrazione precedente <span
+class="math inline">\mathbb{K}[x]_{\le n}</span> è uno spazio
+vettoriale, e in particolare <span
+class="math inline">\dim(\mathbb{K}[x]_{\le n}) = n + 1</span></li>
+<li>allora <span class="math inline">\mathcal{P} :=\{p_0(x), \ldots,
+p_n(x)\}</span> base di <span class="math inline">\mathbb{K}[x]_{\le
+n}</span>, e dunque determineranno univocamente il polinomio
+cercato</li>
+<li>si noti inoltre che <span class="math inline">\forall i \in [1, n]
+\quad p_i(x)= \dfrac{(x-b_n)(x - b_{n - 1})\cdot \ldots \cdot (x-b_{i +
+1})(x - b_{i - 1})\cdot \ldots \cdot (x-b_1)(x-b_0)}{(b_i-b_n)(b_i -
+b_{n - 1})\cdot \ldots \cdot (b_i-b_{i + 1})(b_i - b_{i - 1})\cdot
+\ldots \cdot (b_i -b_1)(b_i-b_0)} \implies p_i(b_j) = \left \{
+\begin{array}{l} 1 &amp; i = j \\ 0 &amp; i \neq j \end{array}
+\right.</span>
+<ul>
+<li><span class="math inline">(x - b_i)</span> non è presente nel
+numeratore, ma <span class="math inline">(x - b_j)</span> sarà
+sicuramente presente</li>
+</ul></li>
+<li>allora, ponendo <span class="math inline">p(x) := c_0 p_0(x) +
+\ldots + c_np_n(x)</span>, ad esempio per <span class="math inline">b_i
+= 0</span> si ha che <span class="math inline">p(x) = c_0 p_0(b_0) +
+\ldots + c_np_n(b_0) = c_0 \cdot 1 + c_1 \cdot 0 \ldots + c_n \cdot 0 =
+c_0</span></li>
+</ul></li>
 </ul>
 </body>
 </html>

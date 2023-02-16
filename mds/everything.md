@@ -3615,34 +3615,22 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Teorema 200
-
-
-- ⚠️ **algoritmo di euclide todo**
-
-
-
 ## Definizione 85
 
 
-- **RSA**
+- **Algoritmo di Euclide**
 
-> - L'RSA è un algoritmo di crittografia asimmetrica che permette il trasferimento di messaggi, in sicurezza, senza l'utilizzo di un canale sicuro per scambio di chiavi, poiché vengono utilizzati chiavi pubbliche e private, dove le chiavi pubbliche servono solamente a crittare, mentre le chiavi private servono solamente a decrittare
-> - $A, B$ interlocutori
-> - $m$ messaggio che $B$ vuole mandare a $A$
-> - $\texttt{pub}_A, \texttt{priv}_A$ chiavi rispettivamente pubblica e privata di $A$
-> - allora $B$ manda ad $A$ la versione crittata di $m$ tramite la chiave pubblica di $A$, ovvero $\texttt{pub}_A(m)$
-> - per poter leggere il messaggio, $A$ userà la sua chiave privata per decrittare il messaggio crittato ricevuto da $B$, ovvero $\texttt{priv}_A(\texttt{pub}_A(m)) = m$
+> - ⚠️ **todo**
 
 
 
-## Teorema 201
+## Teorema 200
 
 
 - **In**
     - $A$ interlocutore
     - $p, q \in \mathbb{P} \mid p \neq q$, con $p, q$ sufficientemente grandi
-    - $m$ messaggio ricevuto da $A \mid \textrm{MCD}(m, n) = 1$
+    - $m$ messaggio $\mid \textrm{MCD}(m, n) = 1$
 - **Out**
     - $\texttt{pub}_A, \texttt{priv}_A$
 - **Alg**
@@ -3650,19 +3638,29 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
     - $\lambda(n) := \textrm{mcm}(p-1, q-1)$
     - $e \in \mathbb{N} \mid \left \{ \begin{array}{l} 1 \lt e \lt \lambda(n) \\ \textrm{MCD}(e, \lambda(n))= 1 \end{array} \right.$
     - $d:= e^{-1} \ (\bmod \ \lambda(n))$
-    - $\texttt{pub}_A = (n, e)$
-    - $\texttt{priv}_A = (n, d)$
+    - $\texttt{pub}_A(m, e, n) := m^e \ (\bmod \ n)$
+    - $\texttt{priv}_A(m, d, n) := (m^e)^d \ (\bmod \ n)$
 - **Oss**
+    - se $p,q$ non fossero sufficientemente grandi, poiché $n$ è pubblico, si rischierebbe di poter trovare $p$ e $q$, permettendo di decrittare il messaggio anche da chi non possiede $d$
     - $p \mid m \implies m^{ed} \equiv m \equiv 0 \ (\bmod \ p)$, il che comporterebbe una perdita di informazione
 - **Th**
-    - $\texttt{priv}_A(\texttt{pub}_A(m)) = m$
+    - $\texttt{priv}_A(\texttt{pub}_A(m, e, n), d, n) = m$
 
-## Teorema 202
-
-
-- ⚠️ **regola di ruffini**
+## Teorema 201
 
 
+- **In**
+    - $n \in \mathbb{N}$
+    - $b_0, \ldots, b_n, c_0, \ldots, c_n \in \mathbb{K} \left \{ \begin{array}{c}(b_0, c_0) \\ \vdots \\ (b_n, c_n) \end{array} \right.$ sono punti del $p(x)$ da trovare, e inoltre $\forall i \in [1, n], i \neq j \quad b_i \neq b_j$
+- **Out**
+    - $p(x) \in \mathbb{K}[x]_{\le n} \mid \left \{ \begin{array}{c} c_0 := a_0 + a_1b_0 + a_2b_0^2 + \ldots + a_nb_0^n = p(b_0) \\ c_1:=a_0 + a_1b_1 + a_2b_1^2 + \ldots + a_nb_1^n = p(b_1) \\ \vdots \\ c_n := a_0 + a_1b_n + a_2b_n^2 + \ldots + a_nb_n^n = p(b_n) \end{array} \right.$
+- **Alg**
+    - $\forall i \in [0, n] \quad p_i(x) := \displaystyle \prod_{\begin{subarray}{c}0 \le  j \le n \\ i \neq\ j \end{subarray}}{\dfrac{x - b_j}{b_i - b_j}}$
+    - $p(x) := c_0p_0(x) + \ldots + c_n p_n(x)$
+- **Oss**
+    - è possibile sfruttare questo algoritmo per lo scambio di messaggi, ponendo il messaggio da inviare all'interno del termine noto di $p(x)$
+    - una volta reperito $p(x)$ a partire dai punti $\left \{ \begin{array}{c}(b_0, c_0) \\ \vdots \\ (b_n, c_n) \end{array} \right.$, basterà porre $p(0)$ per recuperare il messaggio
+    - la sicurezza di tale algoritmo è fornita dal fatto che è impossibile ricostruire $p(x)$ senza avere _tutti_ i punti necessari, altrimenti non è possibile ricostruire $p(x)$ come combinazione lineare in $\mathbb{K}[x]_{\le n}$
 
 
 ****
@@ -3687,7 +3685,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
     - $\exists ! \ q, r \in \mathbb{Z} \mid m=n q+r \quad 0 \leq r<n$
 
-## Teorema 203
+## Teorema 202
 
 
 - **Hp**
@@ -3723,7 +3721,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 # Teorema cinese dei resti
 
 
-## Teorema 204
+## Teorema 203
 
 
 - **Hp**
@@ -3732,7 +3730,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
   - $m = a_1 \cdot \ldots \cdot a_n$
 
-## Teorema 205
+## Teorema 204
 
 
 - **Hp**
@@ -3743,7 +3741,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
   - $\exists \phi \mid \phi: \mathbb{Z}_m \rightarrow \mathbb{Z}_{a_1} \times \ldots \times \mathbb{Z}_{a_n}: x \ (\bmod \ m) \rightarrow (x \ (\bmod \ a_1), \ldots, x \ (\bmod \ a_n))$
   - $\phi$ è una funzione ben definita, ed è iniettiva
 
-## Teorema 206
+## Teorema 205
 
 
 - **Hp**
@@ -3754,7 +3752,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
   - $\exists ! x \ (\bmod \ m) \mid$ $\left\{\begin{array}{c}x \equiv b_{1}\ \left(\bmod  \ a_{1}\right) \\ \vdots \\ x \equiv b_{n}\ \left(\bmod  \ a_{n}\right)\end{array}\right.$
 
-## Teorema 207
+## Teorema 206
 
 
 - **Hp**
@@ -3791,7 +3789,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
   - $a^{p} \equiv a \ (\bmod \ p)$
 
-## Teorema 208
+## Teorema 207
 
 
 - **Hp**
@@ -3800,7 +3798,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
   - $[a]^{-1}=\left[a\right]^{p-2}$
 
-## Teorema 209
+## Teorema 208
 
 
 - **Hp**
@@ -3829,7 +3827,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
     - $A / \textrm{ker}(f) \cong \textrm{im}(f)$, ovvero $\exists \varphi \mid \varphi : A / \textrm{ker}(f) \rightarrow \textrm{im}(f): [a] \rightarrow f(a)$ isomorfismo di anelli
 
-## Teorema 210
+## Teorema 209
 
 
 - **Hp**
@@ -3839,7 +3837,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
   - $G / \textrm{ker}(f) \cong \textrm{im}(f)$, o alternativamente $\exists \varphi \mid \varphi : G / \textrm{ker}(f) \rightarrow \textrm{im}(f): [g] \rightarrow f(g)$ isomorfismo di gruppi
 
 
-## Teorema 211
+## Teorema 210
 
 
 - **Hp**
@@ -3877,7 +3875,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
     - $||u - v||^2 = ||u||^2 + ||v||^2 - 2\cos(\theta) \cdot||u||\cdot ||v||$
 
 
-## Teorema 212
+## Teorema 211
 
 
 - **Hp**
@@ -3958,7 +3956,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
     - $\det(A \cdot B) = \det(A) \cdot \det(B)$
 
 
-## Teorema 213
+## Teorema 212
 
 
 - **Hp**
