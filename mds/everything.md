@@ -3615,16 +3615,23 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 
-## Definizione 85
-
-
-- **Algoritmo di Euclide**
-
-> - ⚠️ **todo**
-
-
-
 ## Teorema 200
+
+
+- **In**
+    - $a, b \in \mathbb{Z} \mid 0 \lt a \le b$
+- **Out**
+    - $\textrm{MCD}(a, b)$
+- **Alg**
+    - $r_0:=b$
+    - $r_1:=a$
+    - $\texttt{while} \ r_{i + 1} \neq 0 \texttt{:}$
+        - $r_{i + 1} := r_iq_i + r_{i + 1}$
+    - $\texttt{return} \ r_{i + 1}$
+- **Oss**
+    - ⚠️ **todo**
+
+## Teorema 201
 
 
 - **In**
@@ -3646,7 +3653,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
     - $\texttt{priv}_A(\texttt{pub}_A(m, e, n), d, n) = m$
 
-## Teorema 201
+## Teorema 202
 
 
 - **In**
@@ -3685,7 +3692,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
     - $\exists ! \ q, r \in \mathbb{Z} \mid m=n q+r \quad 0 \leq r<n$
 
-## Teorema 202
+## Teorema 203
 
 
 - **Hp**
@@ -3721,7 +3728,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 # Teorema cinese dei resti
 
 
-## Teorema 203
+## Teorema 204
 
 
 - **Hp**
@@ -3730,7 +3737,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
   - $m = a_1 \cdot \ldots \cdot a_n$
 
-## Teorema 204
+## Teorema 205
 
 
 - **Hp**
@@ -3741,7 +3748,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
   - $\exists \phi \mid \phi: \mathbb{Z}_m \rightarrow \mathbb{Z}_{a_1} \times \ldots \times \mathbb{Z}_{a_n}: x \ (\bmod \ m) \rightarrow (x \ (\bmod \ a_1), \ldots, x \ (\bmod \ a_n))$
   - $\phi$ è una funzione ben definita, ed è iniettiva
 
-## Teorema 205
+## Teorema 206
 
 
 - **Hp**
@@ -3752,7 +3759,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
   - $\exists ! x \ (\bmod \ m) \mid$ $\left\{\begin{array}{c}x \equiv b_{1}\ \left(\bmod  \ a_{1}\right) \\ \vdots \\ x \equiv b_{n}\ \left(\bmod  \ a_{n}\right)\end{array}\right.$
 
-## Teorema 206
+## Teorema 207
 
 
 - **Hp**
@@ -3789,7 +3796,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
   - $a^{p} \equiv a \ (\bmod \ p)$
 
-## Teorema 207
+## Teorema 208
 
 
 - **Hp**
@@ -3798,7 +3805,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
   - $[a]^{-1}=\left[a\right]^{p-2}$
 
-## Teorema 208
+## Teorema 209
 
 
 - **Hp**
@@ -3827,7 +3834,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
     - $A / \textrm{ker}(f) \cong \textrm{im}(f)$, ovvero $\exists \varphi \mid \varphi : A / \textrm{ker}(f) \rightarrow \textrm{im}(f): [a] \rightarrow f(a)$ isomorfismo di anelli
 
-## Teorema 209
+## Teorema 210
 
 
 - **Hp**
@@ -3837,7 +3844,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
   - $G / \textrm{ker}(f) \cong \textrm{im}(f)$, o alternativamente $\exists \varphi \mid \varphi : G / \textrm{ker}(f) \rightarrow \textrm{im}(f): [g] \rightarrow f(g)$ isomorfismo di gruppi
 
 
-## Teorema 210
+## Teorema 211
 
 
 - **Hp**
@@ -3875,7 +3882,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
     - $||u - v||^2 = ||u||^2 + ||v||^2 - 2\cos(\theta) \cdot||u||\cdot ||v||$
 
 
-## Teorema 211
+## Teorema 212
 
 
 - **Hp**
@@ -3956,7 +3963,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
     - $\det(A \cdot B) = \det(A) \cdot \det(B)$
 
 
-## Teorema 212
+## Teorema 213
 
 
 - **Hp**

@@ -1,10 +1,21 @@
 # Altro
 
-## Def
+## Alg
 
-- **Algoritmo di Euclide**
-
-> - ⚠️ **todo**
+- **In**
+    - $a, b \in \mathbb{Z} \mid 0 \lt a \le b$
+- **Out**
+    - $\textrm{MCD}(a, b)$
+- **Alg**
+    - $r_0:=b$
+    - $r_1:=a$
+    - $\texttt{while} \ r_{i + 1} \neq 0 \texttt{:}$
+        - $r_{i + 1} := r_iq_i + r_{i + 1}$
+    - $\texttt{return} \ r_{i + 1}$
+- **Oss**
+    - ⚠️ **todo**
+- **Dim**
+    - ⚠️ **todo**
 
 ## Alg
 
