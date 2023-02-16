@@ -110,7 +110,7 @@
                 - $dq \in I(d) \implies dq \in I$ per dimostrazione precedente
                 - quindi $x = dq + r \implies r = x - dq \in I$ poiché $I$ è un ideale
                 - $r \neq 0 \implies r \in I \cap \mathbb{Z}_{\gt 0}$
-                - per definizione, $0 \le r \lt d$, in particolare $r \lt d$, ma poiché $d:=\min(I \cap \mathbb{Z}_{\gt 0})$ è impossibile che $r \lt d \ \bot$
+                - per definizione, $0 \le r \lt d$, in particolare $r \lt d$, ma poiché $d:=\min(I \cap \mathbb{Z}_{\gt 0})$ necessariamente $r = 0$, e dunque segue la dimostrazione precedente
     - dunque, ogni ideale in $\mathbb{Z}$ è generato dall'insieme dei multipli di un certo $d$ nell'ideale, di conseguenza $\mathbb{Z}$ è un anello ad ideali principali
 
 ## Def
