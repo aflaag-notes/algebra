@@ -219,7 +219,7 @@
     - allora $\exists a_0, \ldots, a_n \in \mathbb{K} \mid p(x) = a_0x^0 + \ldots + a_nx^n$, che di fatto costituisce una combinazione lineare dei $x^0, \ldots, x^n$ attraverso i coefficienti $a_0, \ldots, a_n$
     - allora, si vede facilmente che $\{1, x, x^2, \ldots, x^n\}$ costituiscono una base di $\mathbb{K}[x]_{\le n}$, il che implica che $\dim(\mathbb{K}[x]_{\le n}) = n + 1$
         - si noti che di fatto si ha $n + 1$ per via del termine noto nei polinomi 
-        - inoltre, questo dimostra che $\mathbb{K}[x]$ ha dimensione infinita, poiché non c'è limite al grado del polinomio e la cardinalità delle basi è necessariamente infinita
+        - inoltre, questo dimostra che $\mathbb{K}[x]$ ha dimensione infinita, poiché non c'è limite al grado di un polinomio in $\mathbb{K}[x]$, dunque la cardinalità delle basi è necessariamente infinita
 
 ## Oss
 
@@ -360,7 +360,7 @@
     - $n := \dim(V)$
     - $k := \dim(W)$
     - sia $w_1, \ldots, w_k$ base di $W$
-    - $\textrm{span}(w_1, \ldots, w_k) \subsetneqq V \implies \exists v_{k + 1} \in V \mid v_{k + 1} \notin \textrm{span}(w_1, \ldots, w_k)$, allora per dimostrazione precedent $w_1, \ldots, w_k, v_{k + 1}$ linearmente indipendenti
+    - $\textrm{span}(w_1, \ldots, w_k) \subsetneqq V \implies \exists v_{k + 1} \in V \mid v_{k + 1} \notin \textrm{span}(w_1, \ldots, w_k)$, allora per dimostrazione precedente $w_1, \ldots, w_k, v_{k + 1}$ linearmente indipendenti
     - dunque, è possibile estendere la base di $W$ scelta, fino ad ottenere una base di $V$ della forma $w_1, \ldots, w_k, v_{k +1}, \ldots, v_n$, dove i vettori aggiunti sono proprio $n - k$, che per definizione equivale a $\dim(V) - \dim(W)$
     - $\forall v \in \textrm{span}(w_1, \ldots, w_k, v_{k +1}, \ldots, v_n) \quad \exists \lambda_1, \ldots, \lambda_n \in \mathbb{K} \mid v = \lambda_1 w_1 + \ldots + \lambda_k w_k + \lambda_{k + 1} v_{k +1} + \ldots + \lambda_nv_{n} \implies \forall [v] \in V/W \quad [v] = \lambda_1 [w_1] + \ldots + \lambda_n[w_k] + \lambda_{k +1} [v_{k +1 }] + \lambda_n[v_n]$
     - per dimostrazione precedente $W = [0_V] \in V/W \implies [w_1] = \ldots = [w_k] = 0_V \implies [v] = \lambda_{k +1}[v_{k +1}] + \ldots + \lambda_n[v_n] \implies [v_{k +1}], \ldots, [v_n]$ generatori di $V/W$
