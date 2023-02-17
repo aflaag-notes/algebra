@@ -426,7 +426,7 @@
         - sia $v_1, \ldots, v_n$ base di $V$
         - allora $\forall v \in V \quad \exists \lambda_1, \ldots, \lambda_n \in \mathbb{K} \mid v = \lambda_1 v_1 + \ldots + \lambda_n v_n \iff f(v) = f(\lambda_1 v_1 + \ldots + \lambda_n v_n) = f(\lambda_1v_1) + \ldots + f(\lambda_n v_n) = \lambda_1 f(v_1) + \ldots + \lambda_n f(v_n)$
         - $f$ suriettiva, allora $f(v_1), \ldots f(v_n)$ generatori di $W$, e in particolare $\exists \lambda_1, \ldots, \lambda_n \in \mathbb{K} \mid 0_W = \lambda_1f(v_1) + \ldots + \lambda_nf(v_n) = f(\lambda_1v_1 + \ldots + \lambda_nv_n)$
-        - $f$ iniettiva, allora $0_W = f(\lambda_1v_1 + \ldots + \lambda_n v_n) \implies 0_V = \lambda_1 v_1 + \ldots + \lambda_nv_n$
+        - $f$ iniettiva, allora $\ker(f) = \{0_V\} \implies 0_W = f(\lambda_1v_1 + \ldots + \lambda_n v_n) \iff 0_V = \lambda_1 v_1 + \ldots + \lambda_nv_n$
         - $v_1, \ldots, v_n$ linearmente indipendenti $\implies 0_V = \lambda_1v_1 + \ldots + \lambda_nv_n \iff \lambda_1 = \ldots = \lambda_n = 0_\mathbb{K}$
         - allora si ha che $0_W = \lambda_1f(v_1) + \ldots + \lambda_nf(v_n) \iff \lambda_1 = \ldots = \lambda_n = 0_{\mathbb{K}} \implies f(v_1), \ldots, f(v_n)$ linearmente indipendenti
         - allora $f(v_1), \ldots, f(v_n)$ base di $W$, ed ha cardinalità $n$, pari alla cardinalità della base $v_1, \ldots, v_n$ di $V$, dunque per definizione $\dim(V) = \dim(W)$
