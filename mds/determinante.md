@@ -128,7 +128,7 @@
     - $n \in \mathbb{N}$
     - $A \in \textrm{Mat}_{n \times n}(\mathbb{K}) \mid \det(A) \neq 0$
 - **Th**
-    - $A^{-1}=\dfrac{(A^*)^T}{\det(A)}$
+    - $A^{-1}=\det(A)^{-1} \cdot (A^*)^T$
 
 ## Oss
 
