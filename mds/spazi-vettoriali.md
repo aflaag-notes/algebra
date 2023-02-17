@@ -16,7 +16,7 @@
 >     - in particolare, deve valere la _proprietà distributiva a destra del prodotto per scalare_
 >   - $\forall v \in V, k, h \in \mathbb{K} \quad (k + h)v = kv + hv$
 >     - in particolare, deve valere la _proprietà distributiva a sinistra del prodotto per scalare_
->   - $\forall v \in V, k, h \in \mathbb{K} \quad (ab)v = a(bv)$
+>   - $\forall v \in V, k, h \in \mathbb{K} \quad (kh)v = k(hv)$
 >      - in particolare, deve valere la _proprietà associativa del prodotto per scalare_
 > - $x \in \mathbb{K}$ è detto **scalare**
 > - $x \in V$ è detto **vettore**
@@ -73,34 +73,6 @@
         - $\forall u, v \in \textrm{span}(v_1, \ldots, v_n) \quad \exists \lambda_1, \ldots , \lambda_n, \mu_1 \ldots \mu_n \in \mathbb{K} \mid \left \{ \begin{array}{l}u= \lambda_1v_1 + \ldots + \lambda_n v_n \\ w = \mu_1 v_1+ \ldots + \mu_nv_n \end{array} \right. \implies v + w = (\lambda_1 \mu_1) v_1 + \ldots + (\lambda_n \mu_n) v_n \implies v + w \in \textrm{span}(v_1, \ldots, v_n)$
         - $\forall u \in \textrm{span}(v_1, \ldots, v_n) \quad \exists \lambda_1 , \ldots \lambda_n \in \mathbb{K} \mid u = \lambda_1 v_1 + \ldots + \lambda_n v_n \iff - u = (-\lambda _1) v_1 + \ldots + (- \lambda_n) v_n \implies -u \in \textrm{span}(v_1, \ldots, v_n)$
     - $\forall w \in \textrm{span}(v_1, \ldots, v_n) \quad \exists \lambda_1 , \ldots , \lambda_n \in \mathbb{K} \mid w = \lambda_1 v_1 + \ldots + \lambda_n v_n \implies \forall c \in \mathbb{K} \quad c\cdot w = c \cdot (\lambda_1v_1 + \ldots + \lambda_n v_n) =(c\lambda_1) v_1 + \ldots + (c\lambda_n) v_n \implies c\cdot w \in \textrm{span}(v_1, \ldots, v_n)$
-
-## Def
-
-- **Sottospazio ortogonale**
-
-> - $\mathbb{K}$ campo
-> - $n \in \mathbb{N}$
-> - $V \subset \mathbb{K}^n$ sottospazio vettoriale
-> - $V^{\perp} := \{w \in \mathbb{K}^n \mid \forall v \in V \quad w \cdot v = 0_{\mathbb{K}^n}\}$ è detto **sottospazio di $\mathbb{K}^n$ ortogonale a $V$**
->     - la definizione ha significato poiché il prodotto scalare tra due vettori è nullo esattamente quando i due vettori sono perpendicolari tra loro
-
-## Oss
-
-- **Hp**
-    - $\mathbb{K}$ campo
-    - $n \in \mathbb{N}$
-    - $V \subset \mathbb{K}^n$ sottospazio vettoriale
-- **Th**
-    - $V^{\bot} \subset \mathbb{K}^n$ sottospazio vettoriale
-
-## Oss
-
-- **Hp**
-    - $\mathbb{K}$ campo
-    - $n \in \mathbb{N}$
-    - $V \subset \mathbb{K}^n$ sottospazio vettoriale
-- **Th**
-    - $\dim(V^{\bot}) + \dim(V) = \dim(\mathbb{K}^n)$
 
 ## Def
 
@@ -637,4 +609,32 @@
     - $v_1, \ldots, v_n$ base ortonormale di $\mathbb{K}^n$
 - **Th**
     - $v = (v \cdot v_1)v_1 + \ldots + (v \cdot v_n)v_n$
+
+## Def
+
+- **Sottospazio ortogonale**
+
+> - $\mathbb{K}$ campo
+> - $n \in \mathbb{N}$
+> - $V \subset \mathbb{K}^n$ sottospazio vettoriale
+> - $V^{\perp} := \{w \in \mathbb{K}^n \mid \forall v \in V \quad w \cdot v = 0_{\mathbb{K}^n}\}$ è detto **sottospazio di $\mathbb{K}^n$ ortogonale a $V$**
+>     - la definizione ha significato poiché il prodotto scalare tra due vettori è nullo esattamente quando i due vettori sono perpendicolari tra loro
+
+## Oss
+
+- **Hp**
+    - $\mathbb{K}$ campo
+    - $n \in \mathbb{N}$
+    - $V \subset \mathbb{K}^n$ sottospazio vettoriale
+- **Th**
+    - $V^{\bot} \subset \mathbb{K}^n$ sottospazio vettoriale
+
+## Oss
+
+- **Hp**
+    - $\mathbb{K}$ campo
+    - $n \in \mathbb{N}$
+    - $V \subset \mathbb{K}^n$ sottospazio vettoriale
+- **Th**
+    - $\dim(V^{\bot}) + \dim(V) = \dim(\mathbb{K}^n)$
 
