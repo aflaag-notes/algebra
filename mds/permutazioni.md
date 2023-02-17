@@ -62,7 +62,7 @@
   - $i \in \mathbb{N} \mid 1 \le i \le n$
   - $I(\sigma, i):=\left\{n \in \mathbb{Z} \mid \sigma^{n}(i)=i\right\}$
 - **Th**
-  - $(I(\sigma, i), +) \subset (\mathbb{Z}, +)$ è un ideale
+  - $(I(\sigma, i), +) \subset (\mathbb{Z}, +)$ ideale
 - **Dim**
   - $(I(\sigma, i), +) \leqslant (\mathbb{Z}, +)$
     - $\sigma ^0 = \textrm{id} \implies \forall i \quad \sigma ^0(i) = \textrm{id}(i) = i \implies 0 \in I(\sigma, i)$

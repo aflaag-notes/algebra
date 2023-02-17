@@ -1126,7 +1126,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
   - $i \in \mathbb{N} \mid 1 \le i \le n$
   - $I(\sigma, i):=\left\{n \in \mathbb{Z} \mid \sigma^{n}(i)=i\right\}$
 - **Th**
-  - $(I(\sigma, i), +) \subset (\mathbb{Z}, +)$ è un ideale
+  - $(I(\sigma, i), +) \subset (\mathbb{Z}, +)$ ideale
 
 ## Teorema 67
 
