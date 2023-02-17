@@ -95,7 +95,7 @@
 - **Th**
   - $o(\sigma) = m$
 - **Dim**
-  - $n \in I(\sigma) \iff \sigma^{n}=\textrm{id} \iff \forall 1 \leq i \leq n \quad \sigma^{n}(i)=i \iff \forall 1 \leq i \leq n \quad n \in I(\sigma, i) \iff n \in I(\sigma, 1) \cap \ldots \cap I(\sigma, n)$
+  - $x \in I(\sigma) \iff \sigma^{n}=\textrm{id} \iff \forall 1 \leq i \leq n \quad \sigma^{x}(i)=i \iff \forall 1 \leq i \leq n \quad x \in I(\sigma, i) \iff x \in I(\sigma, 1) \cap \ldots \cap I(\sigma, n)$
   - inoltre, per dimostrazione precedente $I(\sigma) = I(\sigma, 1) \cap \ldots \cap I(\sigma, n) = I(d_1) \cap \ldots \cap I(d_k)$
   - $m:= \textrm{mcm}(d_1, \ldots, d_k) \implies I(d_1) \cap \ldots \cap I(d_k) = I(m)$
   - allora $I(\sigma) = I(m) \implies o(\sigma) = m$
