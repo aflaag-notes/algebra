@@ -1633,10 +1633,12 @@ e_n</span> tramite rotazioni e riflessioni</li>
 <li><strong>Th</strong>
 <ul>
 <li><span class="math inline">u \cdot v = v \cdot u</span></li>
-<li><span class="math inline">\forall w \in \mathbb{K}^n \quad u \cdot
-(v + w) = u \cdot v + u \cdot w</span></li>
-<li><span class="math inline">u \cdot (\lambda v) = \lambda(u \cdot
-v)</span></li>
+<li><span class="math inline">\forall \lambda \in \mathbb{K} \quad u
+\cdot (\lambda v) = \lambda(u \cdot v) = (\lambda u) \cdot v</span></li>
+<li><span class="math inline">\forall w \in \mathbb{K}^n \quad w \cdot
+(u + v) = w \cdot u + w \cdot v</span></li>
+<li><span class="math inline">\forall w \in \mathbb{K}^n \quad (u + v)
+\cdot w = u \cdot w + v \cdot w</span></li>
 </ul></li>
 </ul>
 <a href="#def-11"><h2 id="def-11">Def</h2></a>
@@ -1729,6 +1731,25 @@ vettoriale</li>
 <ul>
 <li><span class="math inline">V^{\bot} \subset \mathbb{K}^n</span>
 sottospazio vettoriale</li>
+</ul></li>
+<li><strong>Dim</strong>
+<ul>
+<li><span class="math inline">(V^{\bot}, +) \leqslant (\mathbb{K}^n,
++)</span>
+<ul>
+<li><span class="math inline">\forall v \in V \quad 0 \cdot v = 0
+\implies 0 \in V^{\bot}</span></li>
+<li><span class="math inline">w_1, w_2 \in V^{\bot} \implies \forall v
+\in V \quad \left \{ \begin{array}{l} w_1 \cdot v = 0 \\ w_2 \cdot v = 0
+\end{array} \right. \implies w_1 \cdot v + w_2 \cdot v = 0 \iff (w_1 +
+w_2) \cdot v = 0 \implies w_1 + w_2 \in V^{\bot}</span></li>
+<li><span class="math inline">w \in V^{\bot} \implies \forall v \in V
+\quad w \cdot v = 0 \iff - (w \cdot v) = 0 \iff (-w) \cdot v = 0
+\implies -w \in V^{\bot}</span></li>
+</ul></li>
+<li><span class="math inline">w \in V^{\bot} \implies \forall v \in V
+\quad w \cdot v = 0 \iff \forall k \in \mathbb{K} \quad k(w \cdot v) = 0
+\iff (kw) \cdot v = 0 \implies kw \in V^{\bot}</span></li>
 </ul></li>
 </ul>
 <a href="#oss-18"><h2 id="oss-18">Oss</h2></a>

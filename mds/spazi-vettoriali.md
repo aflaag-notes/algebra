@@ -576,8 +576,9 @@
     - $u, v \in \mathbb{K}^n$
 - **Th**
     - $u \cdot v = v \cdot u$
-    - $\forall w \in \mathbb{K}^n \quad u \cdot (v + w) = u \cdot v + u \cdot w$
-    - $u \cdot (\lambda v) = \lambda(u \cdot v)$
+    - $\forall \lambda \in \mathbb{K} \quad u \cdot (\lambda v) = \lambda(u \cdot v) = (\lambda u) \cdot v$
+    - $\forall w \in \mathbb{K}^n \quad w \cdot (u + v) = w \cdot u + w \cdot v$
+    - $\forall w \in \mathbb{K}^n \quad (u + v) \cdot w = u \cdot w + v \cdot w$
 
 ## Def
 
@@ -628,6 +629,12 @@
     - $V \subset \mathbb{K}^n$ sottospazio vettoriale
 - **Th**
     - $V^{\bot} \subset \mathbb{K}^n$ sottospazio vettoriale
+- **Dim**
+    - $(V^{\bot}, +) \leqslant (\mathbb{K}^n, +)$
+        - $\forall v \in V \quad 0 \cdot v = 0 \implies 0 \in V^{\bot}$
+        - $w_1, w_2 \in V^{\bot} \implies \forall v \in V \quad \left \{ \begin{array}{l} w_1 \cdot v = 0 \\ w_2 \cdot v = 0 \end{array} \right. \implies w_1 \cdot v + w_2 \cdot v = 0 \iff (w_1 + w_2) \cdot v = 0 \implies w_1 + w_2 \in V^{\bot}$
+        - $w \in V^{\bot} \implies \forall v \in V \quad w \cdot v = 0 \iff - (w \cdot v) = 0 \iff (-w) \cdot v = 0 \implies -w \in V^{\bot}$
+    - $w \in V^{\bot} \implies \forall v \in V \quad w \cdot v = 0 \iff \forall k \in \mathbb{K} \quad k(w \cdot v) = 0 \iff (kw) \cdot v = 0 \implies kw \in V^{\bot}$
 
 ## Oss
 

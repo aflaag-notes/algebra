@@ -3648,10 +3648,12 @@ e_n</span> tramite rotazioni e riflessioni</li>
 <li><strong>Th</strong>
 <ul>
 <li><span class="math inline">u \cdot v = v \cdot u</span></li>
-<li><span class="math inline">\forall w \in \mathbb{K}^n \quad u \cdot
-(v + w) = u \cdot v + u \cdot w</span></li>
-<li><span class="math inline">u \cdot (\lambda v) = \lambda(u \cdot
-v)</span></li>
+<li><span class="math inline">\forall \lambda \in \mathbb{K} \quad u
+\cdot (\lambda v) = \lambda(u \cdot v) = (\lambda u) \cdot v</span></li>
+<li><span class="math inline">\forall w \in \mathbb{K}^n \quad w \cdot
+(u + v) = w \cdot u + w \cdot v</span></li>
+<li><span class="math inline">\forall w \in \mathbb{K}^n \quad (u + v)
+\cdot w = u \cdot w + v \cdot w</span></li>
 </ul></li>
 </ul>
 <a href="#definizione-50"><h2 id="definizione-50">Definizione 50</h2></a>
@@ -5679,6 +5681,18 @@ F_{n}=\dfrac{\varphi^{n}-\psi^{n}}{\varphi-\psi}=\dfrac{\varphi^{n}-\psi^{n}}{\s
 <a href="#altro"><h1 id="altro">Altro</h1></a>
 <a href="#teorema-200"><h2 id="teorema-200">Teorema 200</h2></a>
 <ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">a, b, c, \in \mathbb{Z}</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">a \mid b \land a \mid c \implies \forall z
+\in I(b, c) \quad a \mid z</span></li>
+</ul></li>
+</ul>
+<a href="#teorema-201"><h2 id="teorema-201">Teorema 201</h2></a>
+<ul>
 <li><strong>In</strong>
 <ul>
 <li><span class="math inline">a, b \in \mathbb{Z} \mid 0 \lt a \le
@@ -5686,27 +5700,28 @@ b</span></li>
 </ul></li>
 <li><strong>Out</strong>
 <ul>
-<li><span class="math inline">\textrm{MCD}(a, b)</span></li>
+<li><span class="math inline">d:=\textrm{MCD}(a, b)</span></li>
 </ul></li>
 <li><strong>Alg</strong>
 <ul>
 <li><span class="math inline">r_0:=b</span></li>
 <li><span class="math inline">r_1:=a</span></li>
-<li><span class="math inline">r_{i + 1} := r_iq_i + r_{i +
-1}</span></li>
-<li><span class="math inline">\texttt{while} \ r_{i + 1} \neq 0
+<li><span class="math inline">r_i = r_0q_0 + r_1</span></li>
+<li><span class="math inline">\texttt{while} \ r_i \neq 0
 \texttt{:}</span>
 <ul>
-<li><span class="math inline">r_{i + 1} = r_iq_i + r_{i + 1}</span></li>
+<li><span class="math inline">r_{i + 1} = r_{i - 1}q_{i - 1} +
+r_i</span></li>
+<li><span class="math inline">r_i := r_{i + 1}</span></li>
 </ul></li>
-<li><span class="math inline">\texttt{return} \ r_{i + 1}</span></li>
+<li><span class="math inline">\texttt{return} \ r_i</span></li>
 </ul></li>
-<li><strong>Oss</strong>
+<li><strong>Th</strong>
 <ul>
-<li>⚠️ <strong>todo</strong></li>
+<li><span class="math inline">r_n = d</span></li>
 </ul></li>
 </ul>
-<a href="#teorema-201"><h2 id="teorema-201">Teorema 201</h2></a>
+<a href="#teorema-202"><h2 id="teorema-202">Teorema 202</h2></a>
 <ul>
 <li><strong>In</strong>
 <ul>
@@ -5753,7 +5768,7 @@ informazione</li>
 d, n) = m</span></li>
 </ul></li>
 </ul>
-<a href="#teorema-202"><h2 id="teorema-202">Teorema 202</h2></a>
+<a href="#teorema-203"><h2 id="teorema-203">Teorema 203</h2></a>
 <ul>
 <li><strong>In</strong>
 <ul>
@@ -5828,7 +5843,7 @@ a_{0}x^0 + \ldots +a_{n} x^{n}</span></li>
 q+r \quad 0 \leq r&lt;n</span></li>
 </ul></li>
 </ul>
-<a href="#teorema-203"><h2 id="teorema-203">Teorema 203</h2></a>
+<a href="#teorema-204"><h2 id="teorema-204">Teorema 204</h2></a>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -5871,7 +5886,7 @@ b) = a \cdot b</span></li>
 </ul>
 <hr />
 <a href="#teorema-cinese-dei-resti"><h1 id="teorema-cinese-dei-resti">Teorema cinese dei resti</h1></a>
-<a href="#teorema-204"><h2 id="teorema-204">Teorema 204</h2></a>
+<a href="#teorema-205"><h2 id="teorema-205">Teorema 205</h2></a>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -5886,7 +5901,7 @@ a_n)</span></li>
 <li><span class="math inline">m = a_1 \cdot \ldots \cdot a_n</span></li>
 </ul></li>
 </ul>
-<a href="#teorema-205"><h2 id="teorema-205">Teorema 205</h2></a>
+<a href="#teorema-206"><h2 id="teorema-206">Teorema 206</h2></a>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -5906,7 +5921,7 @@ a_n))</span></li>
 ed è iniettiva</li>
 </ul></li>
 </ul>
-<a href="#teorema-206"><h2 id="teorema-206">Teorema 206</h2></a>
+<a href="#teorema-207"><h2 id="teorema-207">Teorema 207</h2></a>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -5927,7 +5942,7 @@ a_n)</span></li>
 a_{n}\right)\end{array}\right.</span></li>
 </ul></li>
 </ul>
-<a href="#teorema-207"><h2 id="teorema-207">Teorema 207</h2></a>
+<a href="#teorema-208"><h2 id="teorema-208">Teorema 208</h2></a>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -5980,7 +5995,7 @@ o_k)</span></li>
 <li><span class="math inline">a^{p} \equiv a \ (\bmod \ p)</span></li>
 </ul></li>
 </ul>
-<a href="#teorema-208"><h2 id="teorema-208">Teorema 208</h2></a>
+<a href="#teorema-209"><h2 id="teorema-209">Teorema 209</h2></a>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -5992,7 +6007,7 @@ o_k)</span></li>
 <li><span class="math inline">[a]^{-1}=\left[a\right]^{p-2}</span></li>
 </ul></li>
 </ul>
-<a href="#teorema-209"><h2 id="teorema-209">Teorema 209</h2></a>
+<a href="#teorema-210"><h2 id="teorema-210">Teorema 210</h2></a>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -6036,7 +6051,7 @@ anelli</li>
 \rightarrow f(a)</span> isomorfismo di anelli</li>
 </ul></li>
 </ul>
-<a href="#teorema-210"><h2 id="teorema-210">Teorema 210</h2></a>
+<a href="#teorema-211"><h2 id="teorema-211">Teorema 211</h2></a>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -6053,7 +6068,7 @@ class="math inline">\exists \varphi \mid \varphi : G / \textrm{ker}(f)
 gruppi</li>
 </ul></li>
 </ul>
-<a href="#teorema-211"><h2 id="teorema-211">Teorema 211</h2></a>
+<a href="#teorema-212"><h2 id="teorema-212">Teorema 212</h2></a>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -6104,7 +6119,7 @@ class="math inline">u</span> e <span class="math inline">v</span></li>
 2\cos(\theta) \cdot||u||\cdot ||v||</span></li>
 </ul></li>
 </ul>
-<a href="#teorema-212"><h2 id="teorema-212">Teorema 212</h2></a>
+<a href="#teorema-213"><h2 id="teorema-213">Teorema 213</h2></a>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -6225,7 +6240,7 @@ n}(\mathbb{K})</span></li>
 \det(B)</span></li>
 </ul></li>
 </ul>
-<a href="#teorema-213"><h2 id="teorema-213">Teorema 213</h2></a>
+<a href="#teorema-214"><h2 id="teorema-214">Teorema 214</h2></a>
 <ul>
 <li><strong>Hp</strong>
 <ul>

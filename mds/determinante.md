@@ -240,7 +240,7 @@
 - **Th**
     - $\lambda$ autovalore $\iff \exists v \in \mathbb{K}^n - \{0_{\mathbb{K}^n}\} \mid A \cdot v = \lambda \cdot v$
 - **Dim**
-    - $\exists v \in \mathbb{K}^n - \{0_{\mathbb{K}^n}\} \mid A \cdot v = \lambda \cdot v = \lambda \cdot I_n \cdot v \iff \exists v \in \mathbb{K}^n - \{0_{\mathbb{K}^n}\} \mid (A - \lambda \cdot I_n)\cdot v = 0 \iff v \in \ker(\mathscr{L}_{A - \lambda \cdot I_n}) \iff \ker(\mathscr{L}_{A - \lambda \cdot I_n}) \neq \varnothing \implies \dim(\ker(\mathscr{L}_{A - \lambda \cdot I_n})) \gt 0$
+    - $\exists v \in \mathbb{K}^n - \{0_{\mathbb{K}^n}\} \mid A \cdot v = \lambda \cdot v = \lambda \cdot I_n \cdot v \iff \exists v \in \mathbb{K}^n - \{0_{\mathbb{K}^n}\} \mid (A - \lambda \cdot I_n)\cdot v = 0 \iff v \in \ker(\mathscr{L}_{A - \lambda \cdot I_n}) \iff \ker(\mathscr{L}_{A - \lambda \cdot I_n}) \neq \{0_{\mathbb{K}^n}\} \iff \dim(\ker(\mathscr{L}_{A - \lambda \cdot I_n})) \gt 0$
     - per il teorema del rango $\textrm{rk}(\mathscr{L}_{A - \lambda \cdot I_n}) = \dim(\mathbb{K}^n) - \dim(\ker(\mathscr{L}_{A - \lambda \cdot I_n})) = n - \dim(\ker(\mathscr{L}_{A - \lambda \cdot I_n})) \lt n$, e in particolare $\textrm{rk}(\mathscr{L}_{A-\lambda \cdot I_n}) \neq n$
     - $\textrm{rk}(\mathscr{L}_{A- \lambda \cdot I_n}) \neq n \iff \det(A - \lambda \cdot I_n) = 0$ per dimostrazione precedente, e $\det(A - \lambda \cdot I_n) := p_A(\lambda) = 0 \iff \lambda$ autovalore
 

@@ -1,22 +1,52 @@
 # Altro
 
+## Lem
+
+- **Hp**
+    - $a, b, c, \in \mathbb{Z}$
+- **Th**
+    - $a \mid b \land a \mid c \implies \forall z \in I(b, c) \quad a \mid z$
+- **Dim**
+    - $\left \{ \begin{array}{l}a \mid b \iff \exists k \in \mathbb{Z} \mid ak = b \\ a \mid c \iff \exists h \in \mathbb{Z} \mid ah = c \end{array} \right.$
+    - $\forall z \in I(b, c) \quad \exists x, y \in \mathbb{Z} \mid z = bx + cy = akx + ahy = a(kx + cy) \iff a \mid z$
+
 ## Alg
 
 - **In**
     - $a, b \in \mathbb{Z} \mid 0 \lt a \le b$
 - **Out**
-    - $\textrm{MCD}(a, b)$
+    - $d:=\textrm{MCD}(a, b)$
 - **Alg**
     - $r_0:=b$
     - $r_1:=a$
-    - $r_{i + 1} := r_iq_i + r_{i + 1}$
-    - $\texttt{while} \ r_{i + 1} \neq 0 \texttt{:}$
-        - $r_{i + 1} = r_iq_i + r_{i + 1}$
-    - $\texttt{return} \ r_{i + 1}$
-- **Oss**
-    - ⚠️ **todo**
+    - $r_i = r_0q_0 + r_1$
+    - $\texttt{while} \ r_i \neq 0 \texttt{:}$
+        - $r_{i + 1} = r_{i - 1}q_{i - 1} + r_i$
+        - $r_i := r_{i + 1}$
+    - $\texttt{return} \ r_i$
+- **Th**
+    - $r_n = d$
 - **Dim**
-    - ⚠️ **todo**
+    - siano $i \in [0, n + 1]$ le iterazioni dell'algoritmo, dove $r_{n + 1} = 0$
+    - $d \mid r_n$
+        - _caso base_
+            - si noti che, per dimostrazione precedente, $I(a, b) = I(d)$
+            - $r_0:= b \in I(a,b)$
+            - $r_1:=a \in I(a,b)$
+            - $r_2 \equiv r_0 \ (\bmod \ r_1) \iff \exists q_1 \in \mathbb{Z} \mid r_0 = r_1q_1 + r_2 \iff r_2 = r_0 - r_1q_1 = b - aq_1 \in I(a,b) = I(d)$
+        - _ipotesi induttiva forte_
+            - $\forall i \in [0, n] \quad r_i \in I(a,b) = I(d)$
+        - _passo induttivo_
+            - $r_{i + 1} \equiv r_{i - 1} \ (\bmod \ r_i) \iff \exists q_i \in \mathbb{Z} \mid r_{i - 1} = r_iq_i + r_{i + 1} \iff r_{i + 1} = r_{i - 1} - r_iq_i$
+            - $r_{i - 1}, r_i \in I(a, b) = I(d)$ per ipotesi induttiva forte $\implies r_{i - 1} - r_iq_i \in I(a, b) = I(d)$
+        - in particolare, si ha che $r_n \in I(a,b) = I(d) \iff \exists p \in \mathbb{Z} \mid dp = r_n \iff d \mid r_n$
+    - $r_n \mid d$
+        - $\left \{ \begin{array}{l} r_{n + 1} = 0 \\  0 \equiv r_{n + 1} \equiv r_{n - 1} \ (\bmod \ r_n) \iff \exists q_n \in \mathbb{Z} \mid r_{n- 1} = r_nq_n \end{array} \iff r_n \mid r_{n - 1}\right.$
+        - $r_n \equiv r_{n - 2} \ (\bmod r_{n - 1}) \iff \exists q_{n - 1} \in \mathbb{Z} \mid r_n =r_{n - 1} q_{n - 1} + r_{n - 2} \iff r_{n - 2} = r_n - r_{n - 1}q_{n - 1} \in I(r_n, r_{n - 1})$
+        - per dimostrazione precedente $r_n \mid r_n \land r_n \mid r_{n - 1} \implies \forall z \in I(r_n, r_{n - 1}) \quad r_n \mid z$, e in particolare $r_2 \in I(r_n, r_{n - 1}) \implies r_n \mid r_{n-2}$
+        - è possibile riptere il ragionamento analogo ottenendo $\left \{ \begin{array}{c} r_n \mid r_n \land r_n \mid r_{n - 1} \implies r_n \mid r_{n -2} \\ r_n \mid r_{n - 1} \land r_n \mid r_{n - 2} \implies r_n \mid r_{n - 3} \\ \vdots \\ r_n \mid r_{n - i} \land r_i \mid r_{n - (i + 1)} \implies r_n \mid r_{n - (i + 2)} \\ \vdots \\ r_n \mid r_2 \land r_n \mid r_1 \implies r_n \mid r_0 \end{array} \right.$
+        - $d := \textrm{MCD}(a,b) \implies d \mid a \land d \mid b$, e poiché $r_n \mid r_0 =: b \land r_n \mid r_1 =: a \implies r_n \mid d$
+    - $d \mid r_n \land r_n \mid d \implies r_n = d$
 
 ## Alg
 
