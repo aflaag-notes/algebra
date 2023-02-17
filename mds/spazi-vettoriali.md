@@ -212,10 +212,10 @@
     - $\mathbb{K}$ campo
     - $n \in \mathbb{N}$
     - $\mathbb{K}[x]_{\le n} := \{p(x) \in \mathbb{K}[x] \mid \deg(p(x)) \le n\}$
-- **Dim**
+- **Th**
     - $\mathbb{K}[x]_{\le n}$ spazio vettoriale su $\mathbb{K}$
     - $\dim(\mathbb{K}[x]_{\le n}) = n + 1$
-- **Th**
+- **Dim**
     - sia $p(x) \in \mathbb{K}[x]_{\le n} \mid \deg(p(x)) = n$
     - allora $\exists a_0, \ldots, a_n \in \mathbb{K} \mid p(x) = a_0x^0 + \ldots + a_nx^n$, che di fatto costituisce una combinazione lineare dei $x^0, \ldots, x^n$ attraverso i coefficienti $a_0, \ldots, a_n$
     - allora, si vede facilmente che $\{1, x, x^2, \ldots, x^n\}$ costituiscono una base di $\mathbb{K}[x]_{\le n}$, il che implica che $\dim(\mathbb{K}[x]_{\le n}) = n + 1$

@@ -1968,6 +1968,9 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
     - $\mathbb{K}$ campo
     - $n \in \mathbb{N}$
     - $\mathbb{K}[x]_{\le n} := \{p(x) \in \mathbb{K}[x] \mid \deg(p(x)) \le n\}$
+- **Th**
+    - $\mathbb{K}[x]_{\le n}$ spazio vettoriale su $\mathbb{K}$
+    - $\dim(\mathbb{K}[x]_{\le n}) = n + 1$
 
 ## Teorema 123
 
