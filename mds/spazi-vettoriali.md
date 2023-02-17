@@ -27,14 +27,13 @@
     - $n \in \mathbb{N}$
     - $\mathbb{K}$ campo
 - **Th**
-    - $\mathbb{K}^n$ spazio vettoriale su $\mathbb{K}$
+    - $\mathbb{K}^n$ spazio vettoriale su $\mathbb{K}$, ed è detto _spazio di coordinate_
 - **Dim**
-    - è possibile definire operazioni $+$ e $\cdot$ tra scalari e vettori che verificano gli assiomi per spazi vettoriali
     - $\forall v \in \mathbb{K}^n \quad \exists t_1, \ldots, t_n \in \mathbb{K} \mid v = (t_1, \ldots, t_n)$
     - $\forall w \in \mathbb{K}^n \quad \exists s_1, \ldots, s_n \in \mathbb{K} \mid w = (s_1, \ldots, s_n)$
     - $\forall \lambda \in \mathbb{K} \quad \lambda \cdot v := (\lambda \cdot t_1, \ldots, \lambda \cdot t_n)$
     - $v + w := (s_1 + t_1, \ldots, s_n + t_n)$
-    - con queste definizioni, segue che gli assiomi per gli spazi vettoriali sono necessariamente rispettati
+    - avendo definito $+$ e $\cdot$ in questo modo, gli assiomi di spazio vettoriale sono rispettati necessariamente
 
 ## Def
 

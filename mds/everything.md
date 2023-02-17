@@ -1827,7 +1827,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
     - $n \in \mathbb{N}$
     - $\mathbb{K}$ campo
 - **Th**
-    - $\mathbb{K}^n$ spazio vettoriale su $\mathbb{K}$
+    - $\mathbb{K}^n$ spazio vettoriale su $\mathbb{K}$, ed è detto _spazio di coordinate_
 
 ## Definizione 40
 
