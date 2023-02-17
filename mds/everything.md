@@ -250,7 +250,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 - **Hp**
-  - $(A, +, \cdot)$ anello commutativo
+    - $(A, \cdot)$ gruppo
 - **Th**
     - $(A^*, \cdot) \leqslant (A, \cdot)$
 

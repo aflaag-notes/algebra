@@ -242,16 +242,13 @@
 ## Oss
 
 - **Hp**
-  - $(A, +, \cdot)$ anello commutativo
+    - $(A, \cdot)$ gruppo
 - **Th**
     - $(A^*, \cdot) \leqslant (A, \cdot)$
 - **Dim**
-    - _neutro_
-        - esiste il neutro per dimostrazione precedente
-    - _chiusura sull'operazione_
-        - $\forall x, y \in A^{*} \quad \exists x^{-1}, y^{-1} \in A^*$, e in particolare $y^{-1}x^{-1} = (xy)^{-1} \implies xy \in A^*$ per definizione
-    - _chiusura sugli inversi_
-        - è chiuso rispetto agli inversi per dimostrazione precedente
+    - esiste il neutro per dimostrazione precedente
+    - $\forall x, y \in A^{*} \quad \exists x^{-1}, y^{-1} \in A^*$, e in particolare $y^{-1}x^{-1} = (xy)^{-1} \implies xy \in A^*$ per definizione
+    - è chiuso rispetto agli inversi per dimostrazione precedente
 
 ## Def
 
