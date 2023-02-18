@@ -1927,13 +1927,13 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 - **Hp**
-    - $n, i \in \mathbb{N}$
     - $\mathbb{K}$ campo
+    - $n, k \in \mathbb{N}$
     - $V$ spazio vettoriale su $\mathbb{K}$
     - $w_1, \ldots, w_n \in V$
-    - $v_1, \ldots, v_i \in \textrm{span}(w_1, \ldots, w_n) \mid v_1, \ldots, v_i$ linearmente indipendenti
+    - $v_1, \ldots, v_k \in \textrm{span}(w_1, \ldots, w_n) \mid v_1, \ldots, v_k$ linearmente indipendenti
 - **Th**
-    - $i \le n$
+    - $k \le n$
 
 ## Teorema 121
 

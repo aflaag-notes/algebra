@@ -137,15 +137,15 @@
 ## Oss
 
 - **Hp**
-    - $n, i \in \mathbb{N}$
     - $\mathbb{K}$ campo
+    - $n, k \in \mathbb{N}$
     - $V$ spazio vettoriale su $\mathbb{K}$
     - $w_1, \ldots, w_n \in V$
-    - $v_1, \ldots, v_i \in \textrm{span}(w_1, \ldots, w_n) \mid v_1, \ldots, v_i$ linearmente indipendenti
+    - $v_1, \ldots, v_k \in \textrm{span}(w_1, \ldots, w_n) \mid v_1, \ldots, v_k$ linearmente indipendenti
 - **Th**
-    - $i \le n$
+    - $k \le n$
 - **Dim**
-    - dimostrazione per induzione su $i$
+    - dimostrazione per induzione sui $k$ vettori
     - _caso base_
         - bisogna dimostrare che per $i = 1$ vettori linearmente indipendenti si ha che $\textrm{span}(v_1, w_2, \ldots, w_n) = \textrm{span}(w_1, \ldots, w_n)$
             - la tesi equivale a dimostrare che $v_1$ e $w_1$ sono intercambiabili nello span
@@ -238,7 +238,7 @@
             - per assurdo $\forall v \in V \quad \exists \lambda_1, \ldots, \lambda_n , \mu_1, \ldots, \mu_n \in \mathbb{K} \mid \lambda_1 v_1 + \ldots + \lambda_n v_n = v = \mu_1 v_1 + \ldots + \mu_n v_n \iff \lambda_1 v_1 + \ldots + \lambda_n v_n + (-\mu_1 ) v_1 + \ldots + (-\mu_n) v_n = 0_V \iff (\lambda_1 - \mu_1) v_1 + \ldots + (\lambda_n - v_n) v_n = 0_V$
             - $v_1, \ldots, v_n$ base di $V \implies v_1, \ldots, v_n$ linearmente indipendenti, allora $(\lambda_1 - \mu_1) v_1 + \ldots + (\lambda_n - \mu_n) v_n = 0_V \implies \lambda_1 - \mu_1 = \ldots = \lambda_n - \mu_n = 0_{\mathbb{K}} \iff \left \{ \begin{array}{c} \lambda_1 = \mu_1 \\ \vdots \\ \lambda_n = \mu_n \end{array} \right.$
     - _seconda implicazione_
-        - ⚠️ **?**
+        - _omessa dal professore_
 
 ## Oss
 
@@ -329,10 +329,10 @@
     - siano i coefficienti tali che $a + b + c= 0_W \iff b = - a - c$
     - $b \in U$ per osservazione precedente, mentre $a + c \in V \implies -(a + c) \in V \implies b = - a- c \in V \implies b \in U \cap V$, allora $b$ deve essere generato dalla base $w_1, \ldots, w_k$ di $U \cap V \implies \displaystyle \exists \alpha_1, \ldots, \alpha_k \in \mathbb{K} \mid \sum_{j = k +1}^m{\mu_j u_j }=:b = \displaystyle \sum_{i = 1}^k {\alpha_i w_i} \implies \sum_{j = k +1}^m{\mu_j u_j } - \displaystyle \sum_{i = 1}^k {\alpha_i w_i} = 0_W$
     - poiché per ipotesi $w_1, \ldots, w_k, u_{k +1}, \ldots, u_m$ è una base di $U$, in $U$ tali vettori sono linearmente indipendenti, dunque segue che ogni $\alpha_i$ e $\mu_j$ deve essere necessariamente $0_{\mathbb{K}}$
-    - in particolare, si ottiene che $\forall j \in [k +1, m] \quad \mu_j =0 \implies b = 0_W \implies a + c = 0_W$
-    - per ragionamento analogo, sapendo che $c = - a- b$ si otterrà che $c = 0_W$, e dunque $a + b + c = 0_W \iff a = 0_W$
-    - per definizione $a$ è combinazione lineare della base di $U \cap V$, e poichè $a = 0_W$ si ha necessariamente che i coefficienti di $a$ sono tutti nulli
-    - dunque, l'equazione di partenza $a + b + c = 0_W$ è verificata solamente per coefficienti di $a$, $b$ e $c$ nulli, il che implica che i vettori che generano $a + b + c$, ovvero $\mathcal{B}_1 \cup \mathcal{B}_2$, sono linearmente indipendenti
+    - in particolare, si ha che $\forall j \in [k +1, m] \quad \mu_j =0 \implies b = 0_W \implies a + c = 0_W$
+    <!-- - per ragionamento analogo, sapendo che $c = - a- b$ si otterrà che $c = 0_W$, e dunque $a + b + c = 0_W \iff a = 0_W$ -->
+    - poiché $a + c = 0_W$, e $a + c$ è combinazione lineare di $\mathcal{B}_2$, allora i coefficienti della combinazione lineare saranno necessariamente nulli
+    - dunque, l'equazione di partenza $a + b + c = 0_W$ è verificata solamente per coefficienti della combinazione lineare nulli, il che implica che i vettori che generano $a + b + c$, ovvero $\mathcal{B}_1 \cup \mathcal{B}_2$, sono linearmente indipendenti
     - allora, poiché generatori di $U + V$ e linearmente indipendenti, $\mathcal{B}_1 \cup \mathcal{B}_2$ sono una base di $U + V$
     - per definizione, la dimensione di uno spazio vettoriale è la cardinalità di una delle sue basi, e dunque la cardinalità di $\mathcal{B}_1 \cup \mathcal{B}_2$ è pari a $k + (m - k) + (n - k) = m + n - k \implies \dim(U + V) = \dim(U) + \dim(V) - \dim(U \cap V)$
 

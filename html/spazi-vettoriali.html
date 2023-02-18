@@ -498,22 +498,22 @@ indipendenti <span class="math inline">\implies \exists \lambda_1,
 <ul>
 <li><strong>Hp</strong>
 <ul>
-<li><span class="math inline">n, i \in \mathbb{N}</span></li>
 <li><span class="math inline">\mathbb{K}</span> campo</li>
+<li><span class="math inline">n, k \in \mathbb{N}</span></li>
 <li><span class="math inline">V</span> spazio vettoriale su <span
 class="math inline">\mathbb{K}</span></li>
 <li><span class="math inline">w_1, \ldots, w_n \in V</span></li>
-<li><span class="math inline">v_1, \ldots, v_i \in \textrm{span}(w_1,
-\ldots, w_n) \mid v_1, \ldots, v_i</span> linearmente indipendenti</li>
+<li><span class="math inline">v_1, \ldots, v_k \in \textrm{span}(w_1,
+\ldots, w_n) \mid v_1, \ldots, v_k</span> linearmente indipendenti</li>
 </ul></li>
 <li><strong>Th</strong>
 <ul>
-<li><span class="math inline">i \le n</span></li>
+<li><span class="math inline">k \le n</span></li>
 </ul></li>
 <li><strong>Dim</strong>
 <ul>
-<li>dimostrazione per induzione su <span
-class="math inline">i</span></li>
+<li>dimostrazione per induzione sui <span class="math inline">k</span>
+vettori</li>
 <li><em>caso base</em>
 <ul>
 <li>bisogna dimostrare che per <span class="math inline">i = 1</span>
@@ -814,7 +814,7 @@ indipendenti, allora <span class="math inline">(\lambda_1 - \mu_1) v_1 +
 </ul></li>
 <li><em>seconda implicazione</em>
 <ul>
-<li>⚠️ <strong>?</strong></li>
+<li><em>omessa dal professore</em></li>
 </ul></li>
 </ul></li>
 </ul>
@@ -1059,23 +1059,17 @@ vettori sono linearmente indipendenti, dunque segue che ogni <span
 class="math inline">\alpha_i</span> e <span
 class="math inline">\mu_j</span> deve essere necessariamente <span
 class="math inline">0_{\mathbb{K}}</span></li>
-<li>in particolare, si ottiene che <span class="math inline">\forall j
-\in [k +1, m] \quad \mu_j =0 \implies b = 0_W \implies a + c =
-0_W</span></li>
-<li>per ragionamento analogo, sapendo che <span class="math inline">c =
-- a- b</span> si otterrà che <span class="math inline">c = 0_W</span>, e
-dunque <span class="math inline">a + b + c = 0_W \iff a =
-0_W</span></li>
-<li>per definizione <span class="math inline">a</span> è combinazione
-lineare della base di <span class="math inline">U \cap V</span>, e
-poichè <span class="math inline">a = 0_W</span> si ha necessariamente
-che i coefficienti di <span class="math inline">a</span> sono tutti
-nulli</li>
+<li>in particolare, si ha che <span class="math inline">\forall j \in [k
++1, m] \quad \mu_j =0 \implies b = 0_W \implies a + c = 0_W</span>
+<!-- - per ragionamento analogo, sapendo che $c = - a- b$ si otterrà che $c = 0_W$, e dunque $a + b + c = 0_W \iff a = 0_W$ --></li>
+<li>poiché <span class="math inline">a + c = 0_W</span>, e <span
+class="math inline">a + c</span> è combinazione lineare di <span
+class="math inline">\mathcal{B}_2</span>, allora i coefficienti della
+combinazione lineare saranno necessariamente nulli</li>
 <li>dunque, l’equazione di partenza <span class="math inline">a + b + c
-= 0_W</span> è verificata solamente per coefficienti di <span
-class="math inline">a</span>, <span class="math inline">b</span> e <span
-class="math inline">c</span> nulli, il che implica che i vettori che
-generano <span class="math inline">a + b + c</span>, ovvero <span
+= 0_W</span> è verificata solamente per coefficienti della combinazione
+lineare nulli, il che implica che i vettori che generano <span
+class="math inline">a + b + c</span>, ovvero <span
 class="math inline">\mathcal{B}_1 \cup \mathcal{B}_2</span>, sono
 linearmente indipendenti</li>
 <li>allora, poiché generatori di <span class="math inline">U + V</span>
