@@ -1873,12 +1873,13 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 - **Generatori di uno spazio vettoriale**
 
-> - $n \in \mathbb{N}$
 > - $\mathbb{K}$ campo
+> - $n \in \mathbb{N}$
 > - $V$ spazio vettoriale su $\mathbb{K}$
 > - $v_1, \ldots, v_n \in V$
-> - $v_1, \ldots, v_n$ sono detti **generatori di $V$** $\iff \textrm{span}(v_1, \ldots, v_n) = V$
+> - $v_1, \ldots, v_n$ sono detti **generatori di $V$** $\iff V \subseteq \textrm{span}(v_1, \ldots, v_n)$
 >     - equivalentemente, ogni vettore in $V$ è una combinazione lineare degli $v_1, \ldots, v_n$
+>     - si noti che è sempre vero che $\textrm{span}(v_1, \ldots, v_n) \subseteq V$, di conseguenza è possibile considerare nella definizione $\textrm{span}(v_1, \ldots, v_n) = V$ senza perdita di generalità
 
 - **Indipendenza lineare**
 
