@@ -242,10 +242,17 @@
         - per il teorema fondamentale dell'algebra $\exists z \in \mathbb{C} \mid p(z) = 0 \iff (x - z) \mid p(x)$
         - si noti che $\forall a \in \mathbb{R} \quad \overline{a} = a$
         - allora si ha che $p(\overline{z}) = a_0 (\overline{z})^0 + \ldots + a_n (\overline{z})^n = \overline{a_0}(\overline{z}^0) + \ldots + \overline{a_n}(\overline{z})^n = \overline{a_0x^0 + \ldots + a_nx^n} = \overline{p(z)} = \overline{0} = 0 \implies p(\overline{z}) = 0 \iff (x - \overline{z}) \mid p(x)$
-        - $\left \{ \begin{array}{l}(x - z) \mid p(x) \\ (x - \overline{z}) \mid p(x) \end{array} \right. \implies (x - z) (x - \overline{z}) \mid p(x) \iff (x^2 - \overline{z}x -zx + z\overline{z}) \mid p(x)$
         - siano $a, b \in \mathbb{R} \mid z:= a + i b$
-        - allora $[x^2 - (a - ib)x-(a + ib)x + (a^2 + b^2)] \mid p(z) \iff (x^2 - ax - ibx - ax + ibx + a^2 + b^2) \mid p(x) \iff (x^2 - 2ax + a^2 + b^2) \mid p(x)$
-        - $p(x)$ irriducibile $\implies \exists k \in \mathbb{R} \mid$ ⚠️ **da finire**
+        - $\left \{ \begin{array}{l}(x - z) \mid p(x) \iff \exists q(x) \in \mathbb{R}[x] \mid (x - z) q(x) = p(x) \\ (x - \overline{z}) \mid p(x) \iff \exists k(x) \in \mathbb{R}[x] \mid (x - \overline{z})k(x) = p(x) \end{array} \right.$
+        - $x = z \implies (z - \overline{z})k(z) = p(z) = 0$, e poiché $\mathbb{R}[x]$ è un dominio di integrità, $(z - \overline{z}) = 0 \lor k(z) = 0$
+        - $b \neq 0$
+            - allora si ha che $z \in \mathbb{C} - \mathbb{R} \implies z - \overline{z} = a + ib - (a - ib) =a +ib - a + ib = 2ib \neq 0 \implies k(z) = 0$ necessariamente
+            - $k(z) = 0 \iff (x - z) \mid k(x) \iff \exists h(x) \in \mathbb{R}[x] \mid (x - z)h(x) = k(x)$
+            - allora si ha che $(x - \overline{z})k(x) = (x - \overline{z})(x -z)h(x) = p(x) \iff (x - \overline{z})(x - z) \mid p(x) \iff (x^2 - \overline{z}x -zx + z\overline{z}) \mid p(x) \iff [x^2 - (a - ib)x-(a + ib)x + (a^2 + b^2)] \mid p(z) \iff (x^2 - ax - ibx - ax + ibx + a^2 + b^2) \mid p(x) \iff (x^2 - 2ax + a^2 + b^2) \mid p(x)$
+            - $p(x)$ irriducibile, e poiché $\deg(x^2 - 2ax + a^2 + b^2) \neq 0 \iff (x ^2 - 2ax +a^2 + b^2) \notin \mathbb{R}[x]^*$, allora necessariamente $\exists k \in \mathbb{R}[x]^* = \mathbb{R}^* \mid p(x) = k(x^2 - 2ax + a^2 + b^2) = kx^2 -2kax +ka^2+kb^2 \implies \Delta = (-2ka)^2 - 4k(ka^2+kb^2) =4k^2a^2 -4k^2a^2 -4k^2b^2=-4k^2b^2 \lt 0$, per ogni scelta di $k,b \in \mathbb{R}[x]^* = \mathbb{R}^*$
+        - $b = 0$
+            - allora si ha che $z \in \mathbb{R} \implies z = \overline{z}$ per osservazione precedente
+            - $\deg(p(x)) \ge 2 \implies p(x) = q(x) (x - z)$ implica necessariamente che $\deg(q(x)) \ge 1$, e in particolare $\deg(q(x)), \deg(x - z) \neq 0 \iff q(x),(x - z) \notin \mathbb{R}[x]^* \implies p(x)$ non irriducibile $\bot$
     - _seconda implicazione_
         - $\deg(p(x)) = 1 \implies p(x)$ irriducibile
             - segue la dimostrazione precedente, poiché questa implicazione è valida in ogni campo

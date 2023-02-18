@@ -763,18 +763,49 @@ class="math inline">\exists z \in \mathbb{C} \mid p(z) = 0 \iff (x - z)
 = \overline{a_0x^0 + \ldots + a_nx^n} = \overline{p(z)} = \overline{0} =
 0 \implies p(\overline{z}) = 0 \iff (x - \overline{z}) \mid
 p(x)</span></li>
-<li><span class="math inline">\left \{ \begin{array}{l}(x - z) \mid p(x)
-\\ (x - \overline{z}) \mid p(x) \end{array} \right. \implies (x - z) (x
-- \overline{z}) \mid p(x) \iff (x^2 - \overline{z}x -zx + z\overline{z})
-\mid p(x)</span></li>
 <li>siano <span class="math inline">a, b \in \mathbb{R} \mid z:= a + i
 b</span></li>
-<li>allora <span class="math inline">[x^2 - (a - ib)x-(a + ib)x + (a^2 +
-b^2)] \mid p(z) \iff (x^2 - ax - ibx - ax + ibx + a^2 + b^2) \mid p(x)
-\iff (x^2 - 2ax + a^2 + b^2) \mid p(x)</span></li>
-<li><span class="math inline">p(x)</span> irriducibile <span
-class="math inline">\implies \exists k \in \mathbb{R} \mid</span> ⚠️
-<strong>da finire</strong></li>
+<li><span class="math inline">\left \{ \begin{array}{l}(x - z) \mid p(x)
+\iff \exists q(x) \in \mathbb{R}[x] \mid (x - z) q(x) = p(x) \\ (x -
+\overline{z}) \mid p(x) \iff \exists k(x) \in \mathbb{R}[x] \mid (x -
+\overline{z})k(x) = p(x) \end{array} \right.</span></li>
+<li><span class="math inline">x = z \implies (z - \overline{z})k(z) =
+p(z) = 0</span>, e poiché <span class="math inline">\mathbb{R}[x]</span>
+è un dominio di integrità, <span class="math inline">(z - \overline{z})
+= 0 \lor k(z) = 0</span></li>
+<li><span class="math inline">b \neq 0</span>
+<ul>
+<li>allora si ha che <span class="math inline">z \in \mathbb{C} -
+\mathbb{R} \implies z - \overline{z} = a + ib - (a - ib) =a +ib - a + ib
+= 2ib \neq 0 \implies k(z) = 0</span> necessariamente</li>
+<li><span class="math inline">k(z) = 0 \iff (x - z) \mid k(x) \iff
+\exists h(x) \in \mathbb{R}[x] \mid (x - z)h(x) = k(x)</span></li>
+<li>allora si ha che <span class="math inline">(x - \overline{z})k(x) =
+(x - \overline{z})(x -z)h(x) = p(x) \iff (x - \overline{z})(x - z) \mid
+p(x) \iff (x^2 - \overline{z}x -zx + z\overline{z}) \mid p(x) \iff [x^2
+- (a - ib)x-(a + ib)x + (a^2 + b^2)] \mid p(z) \iff (x^2 - ax - ibx - ax
++ ibx + a^2 + b^2) \mid p(x) \iff (x^2 - 2ax + a^2 + b^2) \mid
+p(x)</span></li>
+<li><span class="math inline">p(x)</span> irriducibile, e poiché <span
+class="math inline">\deg(x^2 - 2ax + a^2 + b^2) \neq 0 \iff (x ^2 - 2ax
++a^2 + b^2) \notin \mathbb{R}[x]^*</span>, allora necessariamente <span
+class="math inline">\exists k \in \mathbb{R}[x]^* = \mathbb{R}^* \mid
+p(x) = k(x^2 - 2ax + a^2 + b^2) = kx^2 -2kax +ka^2+kb^2 \implies \Delta
+= (-2ka)^2 - 4k(ka^2+kb^2) =4k^2a^2 -4k^2a^2 -4k^2b^2=-4k^2b^2 \lt
+0</span>, per ogni scelta di <span class="math inline">k,b \in
+\mathbb{R}[x]^* = \mathbb{R}^*</span></li>
+</ul></li>
+<li><span class="math inline">b = 0</span>
+<ul>
+<li>allora si ha che <span class="math inline">z \in \mathbb{R} \implies
+z = \overline{z}</span> per osservazione precedente</li>
+<li><span class="math inline">\deg(p(x)) \ge 2 \implies p(x) = q(x) (x -
+z)</span> implica necessariamente che <span
+class="math inline">\deg(q(x)) \ge 1</span>, e in particolare <span
+class="math inline">\deg(q(x)), \deg(x - z) \neq 0 \iff q(x),(x - z)
+\notin \mathbb{R}[x]^* \implies p(x)</span> non irriducibile <span
+class="math inline">\bot</span></li>
+</ul></li>
 </ul></li>
 <li><em>seconda implicazione</em>
 <ul>
