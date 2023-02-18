@@ -2344,7 +2344,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 > - $\mathbb{K}$ campo
 > - $m, n \in \mathbb{N}$
-> - $\textrm{Mat}_{m \times n}(\mathbb{K})$ è detto **insieme delle matrici aventi $m$ righe e $n$ colonne a coefficienti in $\mathbb{K}$**
+> - $\textrm{Mat}_{m \times n}(\mathbb{K}):= \underbrace{\mathbb{K}^m \times \ldots \times \mathbb{K}^m}_{n \ \textrm{volte}}$ è detto **insieme delle matrici aventi $m$ righe e $n$ colonne a coefficienti in $\mathbb{K}$**
 
 - **Vettori riga e vettori colonna**
 
@@ -2379,6 +2379,8 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
     - $\textrm{Mat}_{m \times n}(\mathbb{K})$ spazio vettoriale
     - $\dim(\textrm{Mat}_{m \times n}{\mathbb{K}}) = m \cdot n$
+
+
 
 ## Definizione 54
 
