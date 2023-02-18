@@ -247,7 +247,7 @@
     - $\varphi$ iniettiva
       - $\varphi$ iniettiva $\iff \textrm{ker}(\varphi)=\{[0_A]\}$ per dimostrazione precedente
       - $x \in \textrm{ker}(f) \iff x - 0_A \in \textrm{ker}(f) \iff x \equiv 0_A \ (\bmod \ \textrm{ker}(f)) \iff [x] = [0_A] \implies \varphi([x]) = \varphi([0_A])$, poiché $\varphi$ è ben definita
-      - allora $\varphi([x])= \varphi([0_A]) = f(0_A) = 0_B$ per dimostrazione precedente $\implies x = 0_A$ necessariamente $\implies \ker(f) = \{[0_A]\}$
+      - allora $\varphi([x])= \varphi([0_A]) = f(0_A) = 0_B$ per dimostrazione precedente $\implies x = 0_A$ necessariamente $\implies \ker(\varphi) = \{[0_A]\}$
     - $\varphi$ suriettiva
       - $\textrm{im}(\varphi) := \{f(a) \mid \exists [a] \in A/\ker(f) : \varphi([a]) = f(a)\} =: \textrm{im}(f)$
 
