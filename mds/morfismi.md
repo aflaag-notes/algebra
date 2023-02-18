@@ -108,7 +108,7 @@
     - $f$ è biettiva per costruzione di $\mathbb{Z}_n := \{[0], [1], \ldots, [n - 1]\}$ e $H := \{\zeta ^0, \zeta^1, \ldots, \zeta^{n-1}\}$
     - $f$ morfismo $\iff f([i]+[j])=f([i]) \cdot f([j])$
         - $[i] + [j] = [k]$ per un certo $k \in \mathbb{Z}_n \implies \exists h \in \mathbb{Z} \mid i + j = k + hn$
-        - $f([i]+[j])= f([k]) = \zeta^k$
+        - allora $f([i]+[j])= f([k]) = \zeta^k$
         - $f([i]) \cdot f([j]) = \zeta^i \cdot \zeta ^j = \zeta ^{i + j}$, ma per osservazione precedente $\zeta^{i + j} = \zeta^{k + nh} = \zeta^{k} \cdot (\zeta^n)^h = \zeta^k \cdot 1^h = \zeta^k$
         - allora $f([i] + [j]) = \zeta^k = f([i]) \cdot f([j])$
 
