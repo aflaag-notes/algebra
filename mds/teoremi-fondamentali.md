@@ -245,9 +245,10 @@
       - per $\cdot$ vale il ragionamento analogo
     - $\varphi$ isomorfismo di anelli $\iff \varphi$ iniettiva e suriettiva
     - $\varphi$ iniettiva
-      - $\varphi$ iniettiva $\iff \textrm{ker}(\varphi)=\{[0_A]\}$ per dimostrazione precedente
-      - $x \in \textrm{ker}(f) \iff x - 0_A \in \textrm{ker}(f) \iff x \equiv 0_A \ (\bmod \ \textrm{ker}(f)) \iff [x] = [0_A] \implies \varphi([x]) = \varphi([0_A])$, poiché $\varphi$ è ben definita
-      - allora $\varphi([x])= \varphi([0_A]) = f(0_A) = 0_B$ per dimostrazione precedente $\implies x = 0_A$ necessariamente $\implies \ker(\varphi) = \{[0_A]\}$
+      - $[x] \in \ker(\varphi) \iff \varphi([x]) = f(x) = 0_B \iff x \in \ker(f) \iff x - 0_A \in \ker(f) \iff x \equiv 0_A \ (\bmod \ \ker(f)) \iff [x] = [0_A]$
+      - allora $\textrm{ker}(\varphi)=\{[0_A]\} \iff \varphi$ iniettiva
+      <!-- - $x \in \textrm{ker}(f) \iff x - 0_A \in \textrm{ker}(f) \iff x \equiv 0_A \ (\bmod \ \textrm{ker}(f)) \iff [x] = [0_A] \implies \varphi([x]) = \varphi([0_A])$, poiché $\varphi$ è ben definita -->
+      <!-- - allora $\varphi([x])= \varphi([0_A]) = f(0_A) = 0_B$ per dimostrazione precedente $\implies x = 0_A$ necessariamente $\implies \ker(\varphi) = \{[0_A]\}$ -->
     - $\varphi$ suriettiva
       - $\textrm{im}(\varphi) := \{f(a) \mid \exists [a] \in A/\ker(f) : \varphi([a]) = f(a)\} =: \textrm{im}(f)$
 
