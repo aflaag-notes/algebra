@@ -74,7 +74,7 @@
     - $n \in \mathbb{N}$
     - $A \in \textrm{Mat}_{n \times n}(\mathbb{K})$
 - **Th**
-    - $\displaystyle{\det(A) = \sum_{\sigma \in \mathcal{S}_n} \textrm{sgn}(\sigma) \cdot \prod_{i=1}^n{a_{i, \sigma_i}}}$
+    - $\displaystyle{\det(A) = \sum_{\sigma \in \mathcal{S}_n} \textrm{sgn}(\sigma) \cdot \prod_{i=1}^n{a_{i, \sigma(i)}}}$
 
 ## Oss
 
@@ -156,7 +156,6 @@
     - le proposizioni sono equivalenti
 - **Dim**
     - 1 $\iff$ 2
-        - **⚠️ dimostra roba sullo span**
         - sia $B = (B^1, \ldots, B^n) \in \textrm{Mat}_{n \times n}(\mathbb{K}) \mid A \cdot B = B \cdot A = I_n$
         - allora $I_n = A \cdot B = (A \cdot B^1, \ldots, A \cdot B^n) = (\mathscr{L}_A(B^1), \ldots, \mathscr{L}_A(B^n)) \iff \left \{ \begin{array}{c} \mathscr{L}_A(B^1) = e_1 \\  \vdots \\  \mathscr{L}_A(B^n) = e_n \end{array} \right.\iff e_1, \ldots, e_n \in \textrm{im}(\mathscr{L}_A) \implies \textrm{span}(e_1, \ldots, e_n) \subseteq \textrm{im}(\mathscr{L}_A)$
         - $e_1, \ldots, e_n$ base canonica di $\mathbb{K}^n \implies \dim(\textrm{span}(e_1, \ldots, e_n)) = n$, allora segue necessariamente che $\textrm{span}(e_1, \ldots, e_n) \subseteq \textrm{im}(\mathscr{L}_A) \iff \textrm{span}(e_1, \ldots, e_n) = \textrm{im}(\mathscr{L}_A)$ 

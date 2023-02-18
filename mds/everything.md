@@ -3023,7 +3023,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
     - $n \in \mathbb{N}$
     - $A \in \textrm{Mat}_{n \times n}(\mathbb{K})$
 - **Th**
-    - $\displaystyle{\det(A) = \sum_{\sigma \in \mathcal{S}_n} \textrm{sgn}(\sigma) \cdot \prod_{i=1}^n{a_{i, \sigma_i}}}$
+    - $\displaystyle{\det(A) = \sum_{\sigma \in \mathcal{S}_n} \textrm{sgn}(\sigma) \cdot \prod_{i=1}^n{a_{i, \sigma(i)}}}$
 
 
 

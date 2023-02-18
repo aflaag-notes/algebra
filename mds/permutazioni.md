@@ -226,7 +226,6 @@
     - $\sigma \sim \sigma^\prime \iff \exists\alpha \in \mathcal{S}_n \mid \sigma^\prime = \alpha \sigma \alpha^{-1}$
     - $\forall i_1, \ldots, i_d \mid (i_1 \ldots i_d)$ è un ciclo di $\sigma$, per la relazione di coniugio si ottiene che $\sigma^\prime(\alpha(i_j))=(\alpha \sigma \alpha^{-1})(\alpha(i_j))= (\alpha\sigma)(i_j)=\left\{\begin{array}{ll}\alpha\left(i_{j+1}\right) & j<d \\ \alpha\left(i_{1}\right) & j=d\end{array}\right. \implies$ la relazione di coniugio determina un ciclo in $\sigma^\prime$ della forma $(\alpha(i_1) \ldots \alpha(i_d))$
     - allora, vi è una corrispondenza biunivoca tra cicli di $\sigma$ e $\sigma^\prime$, e dunque necessariamente $\sigma$ e $\sigma'$ devono avere lo stesso numero di cicli, ovvero $h = k$, e i cicli devono avere stessa lunghezza, e dunque $\left\{\begin{array}{c} d_1=d_{1}^{\prime} \\ \vdots \\ d_{k}=d_{h}^{\prime}\end{array}\right.$
-    - ⚠️ **questa conclusione è abbastanza affrettata in realtà**
   - _seconda implicazione_
     - $\sigma = (i_1 \ldots i_{d_1}) \ldots (j_1 \ldots j_{d_k})$ è la decomposizione in cicli di $\sigma$
     - $\sigma^\prime =(a_1 \ldots a_{d_1}) \ldots (b_1 \ldots b_{d_k})$ è la decomposizione in cicli di $\sigma'$
