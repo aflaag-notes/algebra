@@ -495,10 +495,9 @@
 
 > - $\mathbb{K}$ campo
 > - $V$ spazio vettoriale su $\mathbb{K}$
-> - $A \subseteq V$
 > - $+: A \times V \rightarrow A: (P, v) \rightarrow P + v$
 > - $(A, +)$ è detto **spazio affine a $V$ su $\mathbb{K}$** $\iff$
->   - $\forall P \in A \quad +_P:V \rightarrow A : v \rightarrow P + v$ trasformazione lineare biettiva
+>   - $\forall P \in A \quad +_P:V \rightarrow A : v \rightarrow P + v$ biettiva
 >   - $\forall P \in A, v, w \in V \quad (P + v) + w = P + (v + w)$
 >     - in particolare, deve valere la _proprietà associativa mista_
 

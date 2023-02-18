@@ -413,7 +413,8 @@ class="math inline">p(x)</span></strong></li>
 </ul></li>
 <li><strong>Th</strong>
 <ul>
-<li><span class="math inline">p(c) = 0 \iff x - c \mid p(x)</span></li>
+<li><span class="math inline">p(c) = 0 \iff (x - c) \mid
+p(x)</span></li>
 </ul></li>
 <li><strong>Dim</strong>
 <ul>
@@ -425,7 +426,7 @@ c)</span> si ottiene che <span class="math inline">\exists!q(x), r(x)
 \in \mathbb{K}[x] \mid p(x) = q(x) \cdot (x - c) + r(x)</span></li>
 <li><span class="math inline">0 = p(c) = q(c) (c - c) + r(c) = 0 + r(c)
 \iff r(c) = 0</span>, allora r(x) è il polinomio nullo <span
-class="math inline">\implies p(x) = q(x)(x - c) \implies x- c \mid
+class="math inline">\implies p(x) = q(x)(x - c) \implies (x- c) \mid
 p(x)</span></li>
 </ul></li>
 <li><em>seconda implicazione</em>
@@ -706,28 +707,107 @@ necessariamente <span class="math inline">\deg(q(x)) = \deg(p(x)) -
 1</span></li>
 <li><span class="math inline">\deg(p(x)) \gt 1 \implies \deg(q(x)) =
 \deg(p(x)) - 1 \gt 0 \implies p(x)</span> non è irriducibile <span
-class="math inline">\bot</span> ⚠️ <strong>perche?</strong></li>
+class="math inline">\bot</span></li>
 </ul></li>
 <li><em>seconda implicazione</em>
 <ul>
 <li>per dimostrazione precedente <span class="math inline">\forall a(x),
 b(x), c(x) \in \mathbb{K}[x] \quad a(x) = b(x) \cdot c(x) \implies
 \deg(a(x)) = \deg(b(x)) + \deg(c(x))</span></li>
-<li><span class="math inline">\deg(p(x)) = 1</span>, se <span
+<li><span class="math inline">\deg(p(x)) = 1</span>, allora se <span
 class="math inline">\exists a(x), b(x) \in \mathbb{C}[x] \mid p(x) =
-a(x) \cdot b(x)</span>, allora <span class="math inline">\deg(p(x)) =
-\deg(a(x))+\deg(b(x)) \implies \deg(a(x)) = 1 \land \deg(b(x)) =
-0</span> oppure <span class="math inline">\deg(a(x)) = 0 \land
-\deg(b(x)) = 1</span></li>
+a(x) \cdot b(x)</span>, allora <span class="math inline">\deg(a(x)) = 1
+\land \deg(b(x)) = 0</span> oppure <span class="math inline">\deg(a(x))
+= 0 \land \deg(b(x)) = 1</span></li>
 <li>dunque, ad esempio se <span class="math inline">\deg(a(x)) = 1 \land
-\deg(b(x)) = 0 \implies b(x) \in \mathbb{C}[x]^*</span>, e dunque <span
-class="math inline">p(x)</span> è dato dal prodotto di un polinomio
-irriducibile e una costante, e dunque <span
-class="math inline">p(x)</span> è irriducibile</li>
+\deg(b(x)) = 0 \implies b(x) \in \mathbb{C}[x]^* \implies p(x)</span> è
+irriducibile</li>
+<li>si noti che questa implicazione è vera in ogni campo</li>
 </ul></li>
 </ul></li>
 </ul>
 <a href="#oss-12"><h2 id="oss-12">Oss</h2></a>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">p(x) \in \mathbb{R}[x]</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">p(x)</span> irriducibile <span
+class="math inline">\iff \deg(p(x)) = 1 \lor \left \{ \begin{array}{l}
+\deg(p(x)) = 2 \\ \Delta \lt 0 \end{array} \right.</span>, dove <span
+class="math inline">p(x) = ax^2 + bx + c \implies \Delta := b^2 -
+4ac</span></li>
+</ul></li>
+<li><strong>Dim</strong>
+<ul>
+<li><em>prima implicazione</em>
+<ul>
+<li>se <span class="math inline">\deg(p(x)) = 1</span>, allora segue la
+dimostrazione precedente, poiché <span class="math inline">\mathbb{R}[x]
+\subset \mathbb{C}[x]</span></li>
+<li>allora sia <span class="math inline">p(x) \in \mathbb{R}[x] \subset
+\mathbb{C}[x] \mid \deg(p(x)) \ge 2 \implies p(x)</span> è della forma
+<span class="math inline">p(x) := a_0x^0 + \ldots + a_nx^n</span>, per
+certi <span class="math inline">a_0, \ldots, a_n \in \mathbb{R}</span> e
+<span class="math inline">n \ge 2</span></li>
+<li>per il teorema fondamentale dell’algebra <span
+class="math inline">\exists z \in \mathbb{C} \mid p(z) = 0 \iff (x - z)
+\mid p(x)</span></li>
+<li>si noti che <span class="math inline">\forall a \in \mathbb{R} \quad
+\overline{a} = a</span></li>
+<li>allora si ha che <span class="math inline">p(\overline{z}) = a_0
+(\overline{z})^0 + \ldots + a_n (\overline{z})^n =
+\overline{a_0}(\overline{z}^0) + \ldots + \overline{a_n}(\overline{z})^n
+= \overline{a_0x^0 + \ldots + a_nx^n} = \overline{p(z)} = \overline{0} =
+0 \implies p(\overline{z}) = 0 \iff (x - \overline{z}) \mid
+p(x)</span></li>
+<li><span class="math inline">\left \{ \begin{array}{l}(x - z) \mid p(x)
+\\ (x - \overline{z}) \mid p(x) \end{array} \right. \implies (x - z) (x
+- \overline{z}) \mid p(x) \iff (x^2 - \overline{z}x -zx + z\overline{z})
+\mid p(x)</span></li>
+<li>siano <span class="math inline">a, b \in \mathbb{R} \mid z:= a + i
+b</span></li>
+<li>allora <span class="math inline">[x^2 - (a - ib)x-(a + ib)x + (a^2 +
+b^2)] \mid p(z) \iff (x^2 - ax - ibx - ax + ibx + a^2 + b^2) \mid p(x)
+\iff (x^2 - 2ax + a^2 + b^2) \mid p(x)</span></li>
+<li><span class="math inline">p(x)</span> irriducibile <span
+class="math inline">\implies \exists k \in \mathbb{R} \mid</span> ⚠️
+<strong>da finire</strong></li>
+</ul></li>
+<li><em>seconda implicazione</em>
+<ul>
+<li><span class="math inline">\deg(p(x)) = 1 \implies p(x)</span>
+irriducibile
+<ul>
+<li>segue la dimostrazione precedente, poiché questa implicazione è
+valida in ogni campo</li>
+</ul></li>
+<li><span class="math inline">\deg(p(x)) = 2 \land \Delta \lt 0 \implies
+p(x)</span> irriducibile
+<ul>
+<li>per assurdo, sia <span class="math inline">p(x)</span> non
+irriducibile, allora <span class="math inline">\exists a(x), b(x) \in
+\mathbb{R}[x] \mid p(x) = a(x)b(x) \implies a(x), b(x) \notin
+\mathbb{R}[x]^* \implies \deg(a(x)), \deg(b(x)) \neq 0 \implies
+\deg(a(x)) = \deg(b(x)) = 1</span> poiché <span
+class="math inline">\deg(p(x)) = 2</span> in ipotesi</li>
+<li>dunque <span class="math inline">a(x)</span> e <span
+class="math inline">b(x)</span> sono della forma <span
+class="math inline">a(x) = cx + d</span>, dove <span
+class="math inline">c \in \mathbb{R} - \{0\}</span>, ma allora <span
+class="math inline">x&#39; := -c^{-1}d</span> è radice di <span
+class="math inline">a(x)</span>, e dunque necessariamente è anche radice
+di <span class="math inline">p(x)</span></li>
+<li>allora <span class="math inline">\deg(p(x)) = 2 \land \exists x&#39;
+\in \mathbb{R} \mid p(x&#39;) = 0 \implies \Delta \ge 0 \
+\bot</span></li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul>
+<a href="#oss-13"><h2 id="oss-13">Oss</h2></a>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -798,69 +878,6 @@ q_k(x) = p(x) = c&#39; \cdot q_1&#39;(x) \cdot \ldots \cdot q_k&#39;(x)
 = c&#39; \cdot k \cdot q_1(x) \cdot \ldots, \cdot
 q_k&#39;(x)</span></li>
 <li>⚠️ <strong>tutto sbagliato che palle</strong></li>
-</ul></li>
-</ul></li>
-</ul></li>
-</ul>
-<a href="#oss-13"><h2 id="oss-13">Oss</h2></a>
-<ul>
-<li><strong>Hp</strong>
-<ul>
-<li><span class="math inline">p(x) \in \mathbb{R}[x]</span></li>
-</ul></li>
-<li><strong>Th</strong>
-<ul>
-<li><span class="math inline">p(x)</span> irriducibile <span
-class="math inline">\iff \deg(p(x)) = 1 \lor \left \{ \begin{array}{l}
-\deg(p(x)) = 2 \\ \Delta \lt 0 \end{array} \right.</span></li>
-</ul></li>
-<li><strong>Dim</strong>
-<ul>
-<li>⚠️ <strong>VA RIVISTA LETTERALMENTE TUTTA È UN MACELLO STA
-ROBA</strong></li>
-<li><em>prima implicazione</em>
-<ul>
-<li><span class="math inline">p(x)</span> irriducibile <span
-class="math inline">\implies \deg(p(x)) = 1</span>
-<ul>
-<li>per dimostrazione precedente <span
-class="math inline">\mathbb{R}</span> campo <span
-class="math inline">\implies \forall p(x) \in \mathbb{R}[x] \quad
-p(x)</span> irriducibile <span class="math inline">\iff \deg(p(x)) =
-1</span></li>
-</ul></li>
-<li><span class="math inline">p(x)</span> irriducibile <span
-class="math inline">\implies \deg(p(x)) = 2 \land \Delta \lt 0</span>
-<ul>
-<li>questa tesi implica che se <span class="math inline">p(x)</span> è
-irriducibile, e non ha grado <span class="math inline">1</span>, allora
-necessariamente ha grado <span class="math inline">2</span> e <span
-class="math inline">\Delta \lt 0</span></li>
-</ul></li>
-</ul></li>
-<li><em>seconda implicazione</em>
-<ul>
-<li><span class="math inline">\deg(p(x)) = 1 \implies p(x)</span>
-irriducibile
-<ul>
-<li>segue la dimostrazione precedente</li>
-</ul></li>
-<li><span class="math inline">\deg(p(x)) = 2 \land \Delta \lt 0 \implies
-p(x)</span> irriducibile
-<ul>
-<li>ipotizzando <span class="math inline">p(x)</span> non irriducibile
-<span class="math inline">\exists a(x), b(x) \in \mathbb{R}[x] \mid p(x)
-= a(x) \cdot b(x) \implies \deg(a(x)) = \deg(b(x)) = 1</span> per
-dimostrazione precedente</li>
-<li>dunque <span class="math inline">a(x)</span> e <span
-class="math inline">b(x)</span> sono della forma <span
-class="math inline">a(x) = cx + d \quad c \in R - \{0\}</span>, ma
-allora <span class="math inline">x&#39; := -c^{-1}d</span> è radice di
-<span class="math inline">a(x)</span>, e dunque necessariamente è anche
-radice di <span class="math inline">p(x)</span></li>
-<li><span class="math inline">\deg(p(x)) = 2 \land \exists x&#39; \in
-\mathbb{R} \mid p(x&#39;) = 0 \implies p(x)</span> non è irriducibile
-<span class="math inline">\bot</span></li>
 </ul></li>
 </ul></li>
 </ul></li>

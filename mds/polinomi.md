@@ -102,11 +102,11 @@
     - $p(x) \in \mathbb{K}[x]$
     - $c \in \mathbb{K}$
 - **Th**
-    - $p(c) = 0 \iff x - c \mid p(x)$
+    - $p(c) = 0 \iff (x - c) \mid p(x)$
 - **Dim**
     - _prima implicazione_
         - per il teorema della divisione con il resto tra polinomi, dividendo $p(x)$ per $(x - c)$ si ottiene che $\exists!q(x), r(x) \in \mathbb{K}[x] \mid p(x) = q(x) \cdot (x - c) + r(x)$
-        - $0 = p(c) = q(c) (c - c) + r(c) = 0 + r(c) \iff r(c) = 0$, allora r(x) è il polinomio nullo $\implies p(x) = q(x)(x - c) \implies x- c \mid p(x)$
+        - $0 = p(c) = q(c) (c - c) + r(c) = 0 + r(c) \iff r(c) = 0$, allora r(x) è il polinomio nullo $\implies p(x) = q(x)(x - c) \implies (x- c) \mid p(x)$
     - _seconda implicazione_
         - $x - c \mid p(x) \iff \exists p(x) \in \mathbb{K}[x] \mid p(x) = q(x)\cdot (x - c)$, allora $p(c) = q(c) \cdot (c - c) = 0 \implies c$ radice di $p(x)$
 
@@ -222,11 +222,37 @@
         - ipotizzando che $\deg(p(x)) \gt 1 \implies \exists z \in \mathbb{C} \mid p(z) = 0$ per il teorema fondamentale dell'algebra
         - per dimostrazione precedente $p(z) = 0 \iff (x - z) \mid p(x) \iff \exists q(x) \in \mathbb{C}[x] \mid p(x) = (x - z) \cdot q(x)$
         - poiché $\deg(x - z) = 1$, allora necessariamente $\deg(q(x)) = \deg(p(x)) - 1$
-        - $\deg(p(x)) \gt 1 \implies \deg(q(x)) = \deg(p(x)) - 1 \gt 0 \implies p(x)$ non è irriducibile $\bot$ ⚠️ **perche?**
+        - $\deg(p(x)) \gt 1 \implies \deg(q(x)) = \deg(p(x)) - 1 \gt 0 \implies p(x)$ non è irriducibile $\bot$
     - _seconda implicazione_
         - per dimostrazione precedente $\forall a(x), b(x), c(x) \in \mathbb{K}[x] \quad a(x) = b(x) \cdot c(x) \implies \deg(a(x)) = \deg(b(x)) + \deg(c(x))$
-        - $\deg(p(x)) = 1$, se $\exists a(x), b(x) \in \mathbb{C}[x] \mid p(x) = a(x) \cdot b(x)$, allora $\deg(p(x)) = \deg(a(x))+\deg(b(x)) \implies \deg(a(x)) = 1 \land \deg(b(x)) = 0$ oppure $\deg(a(x)) = 0 \land \deg(b(x)) = 1$
-        - dunque, ad esempio se $\deg(a(x)) = 1 \land \deg(b(x)) = 0 \implies b(x) \in \mathbb{C}[x]^*$, e dunque $p(x)$ è dato dal prodotto di un polinomio irriducibile e una costante, e dunque $p(x)$ è irriducibile
+        - $\deg(p(x)) = 1$, allora se $\exists a(x), b(x) \in \mathbb{C}[x] \mid p(x) = a(x) \cdot b(x)$, allora $\deg(a(x)) = 1 \land \deg(b(x)) = 0$ oppure $\deg(a(x)) = 0 \land \deg(b(x)) = 1$
+        - dunque, ad esempio se $\deg(a(x)) = 1 \land \deg(b(x)) = 0 \implies b(x) \in \mathbb{C}[x]^* \implies p(x)$ è irriducibile
+        - si noti che questa implicazione è vera in ogni campo
+
+## Oss
+
+- **Hp**
+    - $p(x) \in \mathbb{R}[x]$
+- **Th**
+    - $p(x)$ irriducibile $\iff \deg(p(x)) = 1 \lor \left \{ \begin{array}{l} \deg(p(x)) = 2 \\ \Delta \lt 0 \end{array} \right.$, dove $p(x) = ax^2 + bx + c \implies \Delta := b^2 - 4ac$
+- **Dim**
+    - _prima implicazione_
+        - se $\deg(p(x)) = 1$, allora segue la dimostrazione precedente, poiché $\mathbb{R}[x] \subset \mathbb{C}[x]$
+        - allora sia $p(x) \in \mathbb{R}[x] \subset \mathbb{C}[x] \mid \deg(p(x)) \ge 2 \implies p(x)$ è della forma $p(x) := a_0x^0 + \ldots + a_nx^n$, per certi $a_0, \ldots, a_n \in \mathbb{R}$ e $n \ge 2$
+        - per il teorema fondamentale dell'algebra $\exists z \in \mathbb{C} \mid p(z) = 0 \iff (x - z) \mid p(x)$
+        - si noti che $\forall a \in \mathbb{R} \quad \overline{a} = a$
+        - allora si ha che $p(\overline{z}) = a_0 (\overline{z})^0 + \ldots + a_n (\overline{z})^n = \overline{a_0}(\overline{z}^0) + \ldots + \overline{a_n}(\overline{z})^n = \overline{a_0x^0 + \ldots + a_nx^n} = \overline{p(z)} = \overline{0} = 0 \implies p(\overline{z}) = 0 \iff (x - \overline{z}) \mid p(x)$
+        - $\left \{ \begin{array}{l}(x - z) \mid p(x) \\ (x - \overline{z}) \mid p(x) \end{array} \right. \implies (x - z) (x - \overline{z}) \mid p(x) \iff (x^2 - \overline{z}x -zx + z\overline{z}) \mid p(x)$
+        - siano $a, b \in \mathbb{R} \mid z:= a + i b$
+        - allora $[x^2 - (a - ib)x-(a + ib)x + (a^2 + b^2)] \mid p(z) \iff (x^2 - ax - ibx - ax + ibx + a^2 + b^2) \mid p(x) \iff (x^2 - 2ax + a^2 + b^2) \mid p(x)$
+        - $p(x)$ irriducibile $\implies \exists k \in \mathbb{R} \mid$ ⚠️ **da finire**
+    - _seconda implicazione_
+        - $\deg(p(x)) = 1 \implies p(x)$ irriducibile
+            - segue la dimostrazione precedente, poiché questa implicazione è valida in ogni campo
+        - $\deg(p(x)) = 2 \land \Delta \lt 0 \implies p(x)$ irriducibile
+            - per assurdo, sia $p(x)$ non irriducibile, allora $\exists a(x), b(x) \in \mathbb{R}[x] \mid p(x) = a(x)b(x) \implies a(x), b(x) \notin \mathbb{R}[x]^* \implies \deg(a(x)), \deg(b(x)) \neq 0 \implies \deg(a(x)) = \deg(b(x)) = 1$ poiché $\deg(p(x)) = 2$ in ipotesi
+            - dunque $a(x)$ e $b(x)$ sono della forma $a(x) = cx + d$, dove $c \in \mathbb{R} - \{0\}$, ma allora $x' := -c^{-1}d$ è radice di $a(x)$, e dunque necessariamente è anche radice di $p(x)$
+            - allora $\deg(p(x)) = 2 \land \exists x' \in \mathbb{R} \mid p(x') = 0 \implies \Delta \ge 0 \ \bot$
 
 ## Oss
 
@@ -253,27 +279,6 @@
             - ipotizzando $q_1 \mid q_1'(x)$, poiché $\deg(q_1(x)) = \deg(q_1'(x))$, allora necessariamente $q_1 \mid q_1'(x) \iff \exists k \in \mathbb{K}^* \mid q_1(x) \cdot k = q_1'(x)$
             - allora $c \cdot q_1(x) \cdot \ldots \cdot q_k(x) = p(x) = c' \cdot q_1'(x) \cdot \ldots \cdot q_k'(x) = c' \cdot k \cdot q_1(x) \cdot \ldots, \cdot q_k'(x)$
             - ⚠️  **tutto sbagliato che palle**
-
-## Oss
-
-- **Hp**
-    - $p(x) \in \mathbb{R}[x]$
-- **Th**
-    - $p(x)$ irriducibile $\iff \deg(p(x)) = 1 \lor \left \{ \begin{array}{l} \deg(p(x)) = 2 \\ \Delta \lt 0 \end{array} \right.$
-- **Dim**
-    - ⚠️ **VA RIVISTA LETTERALMENTE TUTTA È UN MACELLO STA ROBA**
-    - _prima implicazione_
-        - $p(x)$ irriducibile $\implies \deg(p(x)) = 1$
-            - per dimostrazione precedente $\mathbb{R}$ campo $\implies \forall p(x) \in \mathbb{R}[x] \quad p(x)$ irriducibile $\iff \deg(p(x)) = 1$
-        - $p(x)$ irriducibile $\implies \deg(p(x)) = 2 \land \Delta \lt 0$
-            - questa tesi implica che se $p(x)$ è irriducibile, e non ha grado $1$, allora necessariamente ha grado $2$ e $\Delta \lt 0$
-    - _seconda implicazione_
-        - $\deg(p(x)) = 1 \implies p(x)$ irriducibile
-            - segue la dimostrazione precedente
-        - $\deg(p(x)) = 2 \land \Delta \lt 0 \implies p(x)$ irriducibile
-            - ipotizzando $p(x)$ non irriducibile $\exists a(x), b(x) \in \mathbb{R}[x] \mid p(x) = a(x) \cdot b(x) \implies \deg(a(x)) = \deg(b(x)) = 1$ per dimostrazione precedente
-            - dunque $a(x)$ e $b(x)$ sono della forma $a(x) = cx + d \quad c \in R - \{0\}$, ma allora $x' := -c^{-1}d$ è radice di $a(x)$, e dunque necessariamente è anche radice di $p(x)$
-            - $\deg(p(x)) = 2 \land \exists x' \in \mathbb{R} \mid p(x') = 0 \implies p(x)$ non è irriducibile $\bot$
 
 ## Oss
 

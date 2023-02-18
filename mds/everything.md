@@ -1692,7 +1692,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
     - $p(x) \in \mathbb{K}[x]$
     - $c \in \mathbb{K}$
 - **Th**
-    - $p(c) = 0 \iff x - c \mid p(x)$
+    - $p(c) = 0 \iff (x - c) \mid p(x)$
 
 ## Teorema 106
 
@@ -1765,19 +1765,19 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 - **Hp**
-    - $\mathbb{K}$ campo
-    - $p(x) \in \mathbb{K}[x] - \{0\}$
+    - $p(x) \in \mathbb{R}[x]$
 - **Th**
-    - $\exists ! q_1(x), \ldots ,q_k(x) \in \mathbb{K}[x]$ irriducibili e monici$, c \in \mathbb{K}^* \mid p(x) = c \cdot q_1(x) \cdot \ldots \cdot q_k(x)$
-        - in particolare, i polinomi sono unici a meno di un riordinamento
+    - $p(x)$ irriducibile $\iff \deg(p(x)) = 1 \lor \left \{ \begin{array}{l} \deg(p(x)) = 2 \\ \Delta \lt 0 \end{array} \right.$, dove $p(x) = ax^2 + bx + c \implies \Delta := b^2 - 4ac$
 
 ## Teorema 114
 
 
 - **Hp**
-    - $p(x) \in \mathbb{R}[x]$
+    - $\mathbb{K}$ campo
+    - $p(x) \in \mathbb{K}[x] - \{0\}$
 - **Th**
-    - $p(x)$ irriducibile $\iff \deg(p(x)) = 1 \lor \left \{ \begin{array}{l} \deg(p(x)) = 2 \\ \Delta \lt 0 \end{array} \right.$
+    - $\exists ! q_1(x), \ldots ,q_k(x) \in \mathbb{K}[x]$ irriducibili e monici$, c \in \mathbb{K}^* \mid p(x) = c \cdot q_1(x) \cdot \ldots \cdot q_k(x)$
+        - in particolare, i polinomi sono unici a meno di un riordinamento
 
 ## Teorema 115
 
@@ -2172,10 +2172,9 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 > - $\mathbb{K}$ campo
 > - $V$ spazio vettoriale su $\mathbb{K}$
-> - $A \subseteq V$
 > - $+: A \times V \rightarrow A: (P, v) \rightarrow P + v$
 > - $(A, +)$ è detto **spazio affine a $V$ su $\mathbb{K}$** $\iff$
->   - $\forall P \in A \quad +_P:V \rightarrow A : v \rightarrow P + v$ trasformazione lineare biettiva
+>   - $\forall P \in A \quad +_P:V \rightarrow A : v \rightarrow P + v$ biettiva
 >   - $\forall P \in A, v, w \in V \quad (P + v) + w = P + (v + w)$
 >     - in particolare, deve valere la _proprietà associativa mista_
 
@@ -3422,7 +3421,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 > - $a, b \in \mathbb{R}$
 > - $z \in \mathbb{C} \mid z=a+i b$
-> - $\bar{z}:=a-i b$ è detto **coniugato di $z$**
+> - $\overline{z}:=a-i b$ è detto **coniugato di $z$**
 
 
 

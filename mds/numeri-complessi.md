@@ -23,7 +23,7 @@
 
 > - $a, b \in \mathbb{R}$
 > - $z \in \mathbb{C} \mid z=a+i b$
-> - $\bar{z}:=a-i b$ è detto **coniugato di $z$**
+> - $\overline{z}:=a-i b$ è detto **coniugato di $z$**
 
 ## Oss
 
