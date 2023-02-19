@@ -378,9 +378,10 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 - **Hp**
     - $G$ gruppo finito
+    - $g \in G$
     - $k \in \mathbb{Z}$
 - **Th**
-    - $\forall g \in G \quad o(g^k) \mid o(g)$
+    - $o(g^k) \mid o(g)$
 
 ## Teorema 20
 

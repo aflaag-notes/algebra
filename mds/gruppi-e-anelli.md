@@ -411,15 +411,16 @@
 
 - **Hp**
     - $G$ gruppo finito
+    - $g \in G$
     - $k \in \mathbb{Z}$
 - **Th**
-    - $\forall g \in G \quad o(g^k) \mid o(g)$
+    - $o(g^k) \mid o(g)$
 - **Dim**
     - $\forall (g^k)^n \in H(g^k) \quad (g^k)^n = g^{nk} \implies g^{nk} \in H(g) \implies H(g^k) \subseteq H(g)$
     - $(H(g^k), \cdot) \leqslant (H(g), \cdot)$
         - $(g^k)^0 = g^0 =e \implies e \in H(g)$
         - $\forall (g^k)^x, (g^k)^y \in H(g^k) \quad (g^k)^x \cdot (g^k)^y = g^{kx} \cdot g^{ky} = g^{k(x + y)} = (g^k)^{x + y} \in H(g^k)$
-        - $\forall g^k \in H(g^k) \quad (g^k)^{-1} \in H(g^k)$
+        - $\forall (g^k)^x \in H(g^k) \quad (g^k)^{-x} \in H(g^k)$
     - allora, per il teorema di Lagrange si ha che $o(g^k) = | H(g^k)| \bigg\vert |H(g)| = o(g)$
 
 ## Oss
