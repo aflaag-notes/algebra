@@ -262,9 +262,9 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 > - $A$ insieme
 > - $B \subseteq A$
 > - $+: A \times A \rightarrow A$
+> - $(A, +, \cdot)$ anello
 > - $\cdot: A \times A \rightarrow A$
 > - $(B, + , \cdot) \leqslant (A, +, \cdot)$ è detto **sottoanello** $\iff$
->   - $(A, +, \cdot)$ anello
 >   - $(B, +) \leqslant (A, +)$
 >   - $B \cdot B \subseteq B$
 >     - in particolare $B \cdot B := \{b_1 \cdot b_2 \mid b_1, b_2 \in B\}$
@@ -707,7 +707,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 > - $S$ insieme
 > - $R \subseteq S \times S$ relazione su $S$
-> - $R$ è detta **transitiva** $\iff \forall x, y \in S \quad (x, y), (y, x) \in R \implies x = y$
+> - $R$ è detta **antisimmetrica** $\iff \forall x, y \in S \quad (x, y), (y, x) \in R \implies x = y$
 
 - **Relazione totale**
 
@@ -1163,17 +1163,19 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Trasposizione**
 
 > - $n \in \mathbb{N}$
-> - $i, j \in \mathbb{N} \mid 1 \leq i \lt j \leq n \quad$
-> - $k \in [1, n]$
-> - $\tau_{i, j} \in \mathcal{S}_n \mid \tau_{i, j} =$$\left\{\begin{array}{ll}j & k=i \\ i & k=j \\ k & k \neq i, j\end{array}\right.$ è detta **trasposizione**, ovvero una permutazione che inverte esclusivamente due elementi tra loro
->   - in particolare, si ha che $\tau_{i, j}^2 = \textrm{id} \iff \tau_{i, j} = \tau_{i, j} ^{-1}$
+> - $i, j \in [1, n] \mid i \neq j$
+> - $\tau_{i, j} \in \mathcal{S}_n$
+> - $\tau_{i, j}$ è detta **trasposizione** $\iff \forall k \in [1,n] \quad \tau_{i, j}(k) =\left\{\begin{array}{ll}j & k=i \\ i & k=j \\ k & k \neq i, j\end{array}\right.$
+>   - in particolare, una trasposizione è una permutazione che inverte esclusivamente due elementi
+>   - inoltre, si ha che $\tau_{i, j}^2 = \textrm{id} \iff \tau_{i, j} = \tau_{i, j} ^{-1}$
 
 - **Trasposizione adiacente**
 
 > - $n \in \mathbb{N}$
-> - $i, j \in \mathbb{N} \mid 1 \le i \le  n$
-> - $\tau_{i, i+1}$ è detta **trasposizione adiacente**
->   - in particolare, inverte esclusivamente due elementi $i$ e $i + 1$ adiacenti
+> - $i, j \in [1, n] \mid i \neq j$
+> - $\tau_{i, j} \in \mathcal{S}_n$ trasposizione
+> - $\tau_{i, j}$ è detta **trasposizione adiacente** $\iff j = i + 1$
+>   - in particolare, sono trasposizioni della forma $\tau_{i, i + 1}$, e sono dette _adiacenti_ poiché invertono esclusivamente due elementi adiacenti
 
 
 
@@ -1184,7 +1186,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
   - $n \in \mathbb{N}$
   - $\sigma \in \mathcal{S}_n$
 - **Th**
-  - $\exists 1 \leq i_1, \ldots, i_k \le n \mid \sigma = \tau_{i_1, i_1 + 1} \ldots \tau_{i_k, i_k + 1}$, quindi ogni permutazione può essere riscritta come composizione di trasposizioni adiacenti
+  - $\exists 1 \leq i_1, \ldots, i_k \le n \mid \sigma = \tau_{i_1, i_1 + 1} \ldots \tau_{i_k, i_k + 1}$, dunque ogni permutazione può essere ottenuta come composizione di trasposizioni adiacenti
      
 ****
 
@@ -3159,7 +3161,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 - **Hp**
     - $\mathbb{K}$ campo
-    - $n \in \mathbb{N} - \{0\}$
+    - $n \in \mathbb{N}$
     - $A, B \in \textrm{Mat}_{n \times n}(\mathbb{K}) \mid A$ simile a $B$
 - **Th**
     - $p_A(x) = p_B(x)$
@@ -3288,7 +3290,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 - **Hp**
     - $\mathbb{K}$ campo
-    - $n \in \mathbb{N} - \{0\}$
+    - $n \in \mathbb{N}$
     - $A, B \in \textrm{Mat}_{n \times n}(\mathbb{K}) \mid A$ simile a $B$
     - $\lambda \in \textrm{sp}(A) = \textrm{sp}(B)$
 - **Th**

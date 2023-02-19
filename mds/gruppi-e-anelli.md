@@ -257,9 +257,9 @@
 > - $A$ insieme
 > - $B \subseteq A$
 > - $+: A \times A \rightarrow A$
+> - $(A, +, \cdot)$ anello
 > - $\cdot: A \times A \rightarrow A$
 > - $(B, + , \cdot) \leqslant (A, +, \cdot)$ è detto **sottoanello** $\iff$
->   - $(A, +, \cdot)$ anello
 >   - $(B, +) \leqslant (A, +)$
 >   - $B \cdot B \subseteq B$
 >     - in particolare $B \cdot B := \{b_1 \cdot b_2 \mid b_1, b_2 \in B\}$

@@ -398,7 +398,7 @@ d_k)</span></li>
 <li><strong>Dim</strong>
 <ul>
 <li><span class="math inline">x \in I(\sigma) \iff
-\sigma^{n}=\textrm{id} \iff \forall 1 \leq i \leq n \quad
+\sigma^{x}=\textrm{id} \iff \forall 1 \leq i \leq n \quad
 \sigma^{x}(i)=i \iff \forall 1 \leq i \leq n \quad x \in I(\sigma, i)
 \iff x \in I(\sigma, 1) \cap \ldots \cap I(\sigma, n)</span></li>
 <li>inoltre, per dimostrazione precedente <span
@@ -419,16 +419,16 @@ n) = I(d_1) \cap \ldots \cap I(d_k)</span></li>
 <blockquote>
 <ul>
 <li><span class="math inline">n \in \mathbb{N}</span></li>
-<li><span class="math inline">i, j \in \mathbb{N} \mid 1 \leq i \lt j
-\leq n \quad</span></li>
-<li><span class="math inline">k \in [1, n]</span></li>
-<li><span class="math inline">\tau_{i, j} \in \mathcal{S}_n \mid
-\tau_{i, j} =</span><span class="math inline">\left\{\begin{array}{ll}j
-&amp; k=i \\ i &amp; k=j \\ k &amp; k \neq i, j\end{array}\right.</span>
-è detta <strong>trasposizione</strong>, ovvero una permutazione che
-inverte esclusivamente due elementi tra loro
+<li><span class="math inline">i, j \in [1, n] \mid i \neq j</span></li>
+<li><span class="math inline">\tau_{i, j} \in \mathcal{S}_n</span></li>
+<li><span class="math inline">\tau_{i, j}</span> è detta
+<strong>trasposizione</strong> <span class="math inline">\iff \forall k
+\in [1,n] \quad \tau_{i, j}(k) =\left\{\begin{array}{ll}j &amp; k=i \\ i
+&amp; k=j \\ k &amp; k \neq i, j\end{array}\right.</span>
 <ul>
-<li>in particolare, si ha che <span class="math inline">\tau_{i, j}^2 =
+<li>in particolare, una trasposizione è una permutazione che inverte
+esclusivamente due elementi</li>
+<li>inoltre, si ha che <span class="math inline">\tau_{i, j}^2 =
 \textrm{id} \iff \tau_{i, j} = \tau_{i, j} ^{-1}</span></li>
 </ul></li>
 </ul>
@@ -439,13 +439,16 @@ inverte esclusivamente due elementi tra loro
 <blockquote>
 <ul>
 <li><span class="math inline">n \in \mathbb{N}</span></li>
-<li><span class="math inline">i, j \in \mathbb{N} \mid 1 \le i \le
-n</span></li>
-<li><span class="math inline">\tau_{i, i+1}</span> è detta
-<strong>trasposizione adiacente</strong>
+<li><span class="math inline">i, j \in [1, n] \mid i \neq j</span></li>
+<li><span class="math inline">\tau_{i, j} \in \mathcal{S}_n</span>
+trasposizione</li>
+<li><span class="math inline">\tau_{i, j}</span> è detta
+<strong>trasposizione adiacente</strong> <span class="math inline">\iff
+j = i + 1</span>
 <ul>
-<li>in particolare, inverte esclusivamente due elementi <span
-class="math inline">i</span> e <span class="math inline">i + 1</span>
+<li>in particolare, sono trasposizioni della forma <span
+class="math inline">\tau_{i, i + 1}</span>, e sono dette
+<em>adiacenti</em> poiché invertono esclusivamente due elementi
 adiacenti</li>
 </ul></li>
 </ul>
@@ -460,9 +463,9 @@ adiacenti</li>
 <li><strong>Th</strong>
 <ul>
 <li><span class="math inline">\exists 1 \leq i_1, \ldots, i_k \le n \mid
-\sigma = \tau_{i_1, i_1 + 1} \ldots \tau_{i_k, i_k + 1}</span>, quindi
-ogni permutazione può essere riscritta come composizione di
-trasposizioni adiacenti</li>
+\sigma = \tau_{i_1, i_1 + 1} \ldots \tau_{i_k, i_k + 1}</span>, dunque
+ogni permutazione può essere ottenuta come composizione di trasposizioni
+adiacenti</li>
 </ul></li>
 <li><strong>Dim</strong>
 <ul>

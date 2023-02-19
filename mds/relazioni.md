@@ -29,7 +29,7 @@
 
 > - $S$ insieme
 > - $R \subseteq S \times S$ relazione su $S$
-> - $R$ è detta **transitiva** $\iff \forall x, y \in S \quad (x, y), (y, x) \in R \implies x = y$
+> - $R$ è detta **antisimmetrica** $\iff \forall x, y \in S \quad (x, y), (y, x) \in R \implies x = y$
 
 - **Relazione totale**
 
