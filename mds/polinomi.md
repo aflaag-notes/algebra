@@ -21,7 +21,7 @@
     - ($\mathbb{K}, +, \cdot)$ anello commutativo
     - $+, \cdot : \mathbb{K}[x] \times \mathbb{K}[x] \rightarrow \mathbb{K}[x]$
 - **Th**
-    - $(\mathbb{K}[x], +, \cdot)$ è un anello commutativo
+    - $(\mathbb{K}[x], +, \cdot)$ anello commutativo
 - **Dim**
     - le operazioni $+$ e $\cdot$ sono ben definite
         - $p(x), q(x) \in \mathbb{K}[x] \mid \left \{ \begin{array}{l} p(x) =  \displaystyle{\sum_{i = 0}^n a_ix^i} \\ q(x) = \displaystyle{\sum_{j = 0}^m b_jx^j} \end{array} \right.$
@@ -245,14 +245,15 @@
         - siano $a, b \in \mathbb{R} \mid z:= a + i b$
         - $\left \{ \begin{array}{l}(x - z) \mid p(x) \iff \exists q(x) \in \mathbb{R}[x] \mid (x - z) q(x) = p(x) \\ (x - \overline{z}) \mid p(x) \iff \exists k(x) \in \mathbb{R}[x] \mid (x - \overline{z})k(x) = p(x) \end{array} \right.$
         - $x = z \implies (z - \overline{z})k(z) = p(z) = 0$, e poiché $\mathbb{R}[x]$ è un dominio di integrità, $(z - \overline{z}) = 0 \lor k(z) = 0$
+        - $b = 0$
+            - allora si ha che $z \in \mathbb{R} \implies z = \overline{z}$ per osservazione precedente
+            - $\deg(p(x)) \ge 2 \implies p(x) = q(x) (x - z)$ implica necessariamente che $\deg(q(x)) \ge 1$, e in particolare $\deg(q(x)), \deg(x - z) \neq 0 \iff q(x),(x - z) \notin \mathbb{R}[x]^* \implies p(x)$ non irriducibile $\bot$
+            - allora, segue esclusivamente il caso in cui $b \neq 0$
         - $b \neq 0$
             - allora si ha che $z \in \mathbb{C} - \mathbb{R} \implies z - \overline{z} = a + ib - (a - ib) =a +ib - a + ib = 2ib \neq 0 \implies k(z) = 0$ necessariamente
             - $k(z) = 0 \iff (x - z) \mid k(x) \iff \exists h(x) \in \mathbb{R}[x] \mid (x - z)h(x) = k(x)$
             - allora si ha che $(x - \overline{z})k(x) = (x - \overline{z})(x -z)h(x) = p(x) \iff (x - \overline{z})(x - z) \mid p(x) \iff (x^2 - \overline{z}x -zx + z\overline{z}) \mid p(x) \iff [x^2 - (a - ib)x-(a + ib)x + (a^2 + b^2)] \mid p(z) \iff (x^2 - ax - ibx - ax + ibx + a^2 + b^2) \mid p(x) \iff (x^2 - 2ax + a^2 + b^2) \mid p(x)$
             - $p(x)$ irriducibile, e poiché $\deg(x^2 - 2ax + a^2 + b^2) \neq 0 \iff (x ^2 - 2ax +a^2 + b^2) \notin \mathbb{R}[x]^*$, allora necessariamente $\exists k \in \mathbb{R}[x]^* = \mathbb{R}^* \mid p(x) = k(x^2 - 2ax + a^2 + b^2) = kx^2 -2kax +ka^2+kb^2 \implies \Delta = (-2ka)^2 - 4k(ka^2+kb^2) =4k^2a^2 -4k^2a^2 -4k^2b^2=-4k^2b^2 \lt 0$, per ogni scelta di $k,b \in \mathbb{R}[x]^* = \mathbb{R}^*$
-        - $b = 0$
-            - allora si ha che $z \in \mathbb{R} \implies z = \overline{z}$ per osservazione precedente
-            - $\deg(p(x)) \ge 2 \implies p(x) = q(x) (x - z)$ implica necessariamente che $\deg(q(x)) \ge 1$, e in particolare $\deg(q(x)), \deg(x - z) \neq 0 \iff q(x),(x - z) \notin \mathbb{R}[x]^* \implies p(x)$ non irriducibile $\bot$
     - _seconda implicazione_
         - $\deg(p(x)) = 1 \implies p(x)$ irriducibile
             - segue la dimostrazione precedente, poiché questa implicazione è valida in ogni campo
@@ -268,7 +269,7 @@
     - $p(x) \in \mathbb{K}[x] - \{0\}$
 - **Th**
     - $\exists ! q_1(x), \ldots ,q_k(x) \in \mathbb{K}[x]$ irriducibili e monici$, c \in \mathbb{K}^* \mid p(x) = c \cdot q_1(x) \cdot \ldots \cdot q_k(x)$
-        - in particolare, i polinomi sono unici a meno di un riordinamento
+        - in particolare, i polinomi sono unici a meno di riordinamento
 - **Dim**
     - _esistenza_:
         - dimostrazione per induzione sul grado di $p(x)$
@@ -300,6 +301,6 @@
     - $0 = p\left(\frac{a}{b}\right) = a_n\left(\frac{a}{b}\right)^n + a_{n - 1}\left(\frac{a^{n - 1}}{b^{n - 1}}\right) + \ldots + a_0$
     - moltiplicando entrambe i membri dell'equazione per $b^n$ si ottiene $0 = a_na^n + a_{n -1}a^{n - 1}b + \ldots + a_1a^1b^{n -1 } + a_0b^n$
     - allora $a_na^n = - a_{n - 1} a^{n - 1}b - \ldots - a_1a^1 b^{n - 1}- a_0b^n \implies b \mid a_na^n$ poiché ogni termine del secondo membro dell'equazione contiene una potenza di $b$
-    - $\textrm{MCD}(a, b) = 1 \implies \textrm{MCD}(a^n, b) = 1$, ma allora $b \mid a_na^n \implies b \mid a_n$ ⚠️ **perché**
+    - $\textrm{MCD}(a, b) = 1 \implies \textrm{MCD}(a^n, b) = 1$, ma allora $b \mid a_na^n \implies b \mid a_n$
     - è possibile ripetere il ragionamento analogo per $a_0b^n$, e dall'equazione ottenuta si noterà che $a \mid a_0b^n$, che per ragionamento analogo all'osservazione precedente deve necessariamente implicare che $a \mid a_0$
 

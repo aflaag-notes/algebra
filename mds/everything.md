@@ -1627,7 +1627,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
     - ($\mathbb{K}, +, \cdot)$ anello commutativo
     - $+, \cdot : \mathbb{K}[x] \times \mathbb{K}[x] \rightarrow \mathbb{K}[x]$
 - **Th**
-    - $(\mathbb{K}[x], +, \cdot)$ è un anello commutativo
+    - $(\mathbb{K}[x], +, \cdot)$ anello commutativo
 
 ## Definizione 37
 
@@ -1777,7 +1777,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
     - $p(x) \in \mathbb{K}[x] - \{0\}$
 - **Th**
     - $\exists ! q_1(x), \ldots ,q_k(x) \in \mathbb{K}[x]$ irriducibili e monici$, c \in \mathbb{K}^* \mid p(x) = c \cdot q_1(x) \cdot \ldots \cdot q_k(x)$
-        - in particolare, i polinomi sono unici a meno di un riordinamento
+        - in particolare, i polinomi sono unici a meno di riordinamento
 
 ## Teorema 115
 
@@ -3025,11 +3025,23 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
     - $n \in \mathbb{N}$
     - $A \in \textrm{Mat}_{n \times n}(\mathbb{K})$
 - **Th**
-    - $\displaystyle{\det(A) = \sum_{\sigma \in \mathcal{S}_n} \textrm{sgn}(\sigma) \cdot \prod_{i=1}^n{a_{i, \sigma(i)}}}$
+    - $\det(A) = \det(A^T)$
 
 
 
 ## Teorema 166
+
+
+- **Hp**
+    - $\mathbb{K}$ campo
+    - $n \in \mathbb{N}$
+    - $A \in \textrm{Mat}_{n \times n}(\mathbb{K})$
+- **Th**
+    - $\displaystyle{\det(A) = \sum_{\sigma \in \mathcal{S}_n} \textrm{sgn}(\sigma) \cdot \prod_{i=1}^n{a_{i, \sigma(i)}}}$
+
+
+
+## Teorema 167
 
 
 - **Hp**
@@ -3039,9 +3051,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
     - $\det(A) = a_{1,1}a_{2,2}-a_{1,2}a_{2,1}$
 
-
-
-## Teorema 167
+## Teorema 168
 
 
 - **Hp**
@@ -3050,20 +3060,6 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
     - $A = \left(\begin{array}{ccc}a_{1,1} & a_{1, 2} & a_{1,3}\\ a_{2, 1} & a_{2, 2} & a_{2,3} \\ a_{3,1} & a_{3,2} & a_{3,3}\end{array}\right)$
 - **Th**
     - $\det(A) = a_{1,1}a_{2,2}a_{3,3}+a_{1,3}a_{2,1}a_{3,2}+a_{1,2}a_{2,3}a_{3,1} - a_{1,3}a_{2,2}a_{3,1}-a_{1,1}a_{2,3}a_{3,2}-a_{1,2}a_{2,1}a_{3,3}$
-
-
-
-## Teorema 168
-
-
-- **Hp**
-    - $\mathbb{K}$ campo
-    - $n \in \mathbb{N}$
-    - $A \in \textrm{Mat}_{n \times n}(\mathbb{K})$
-- **Th**
-    - $\det(A) = \det(A^T)$
-
-
 
 ## Teorema 169
 

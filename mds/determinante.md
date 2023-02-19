@@ -67,6 +67,15 @@
     - per il punto 1 della definizione di $\det$ si ha che $\det(A_1, \ldots, A_i + \mu A_j , \ldots, A_n) = \det(A_1,\ldots, A_i, \ldots, A_j, \ldots, A_n) + \mu \cdot\det(A_1, \ldots, A_j, \ldots, A_j, \ldots, A_n) = \det(A_1, \ldots, A_n) + \mu \cdot 0 = \det(A)$
     - si noti che la tesi è verificata sia per righe che per colonne, per definizione di $\det$
 
+## Oss
+
+- **Hp**
+    - $\mathbb{K}$ campo
+    - $n \in \mathbb{N}$
+    - $A \in \textrm{Mat}_{n \times n}(\mathbb{K})$
+- **Th**
+    - $\det(A) = \det(A^T)$
+
 ## Formula di Leibniz
 
 - **Hp**
@@ -76,7 +85,7 @@
 - **Th**
     - $\displaystyle{\det(A) = \sum_{\sigma \in \mathcal{S}_n} \textrm{sgn}(\sigma) \cdot \prod_{i=1}^n{a_{i, \sigma(i)}}}$
 
-## Oss
+## Ex
 
 - **Hp**
     - $\mathbb{K}$ campo
@@ -84,8 +93,12 @@
     - $A = \left(\begin{array}{cc}a_{1,1} & a_{1, 2} \\ a_{2, 1} & a_{2, 2}\end{array}\right)$
 - **Th**
     - $\det(A) = a_{1,1}a_{2,2}-a_{1,2}a_{2,1}$
+- **Dim**
+    - $\mathcal{S}_2 = \{(1,2), (2,1)\}$
+    - si noti che $\left \{ \begin{array}{l} \textrm{sgn}(1,2)=(-1)^{|\varnothing|}=+1 \\ \textrm{sgn}(2,1)=(-1)^{\left|\{(2,1)\}\right|}=-1 \end{array}\right.$
+    - allora, per la formula di Leibniz si ha $\det(A) = \textrm{sgn}(1, 2) (a_{1,1} a_{2, 2}) + \textrm{sgn}(2,1)(a_{1,2}a_{2,1}) = a_{1,1}a_{2,2} - a_{1,2}a_{2,1}$
 
-## Oss
+## Ex
 
 - **Hp**
     - $\mathbb{K}$ campo
@@ -93,15 +106,10 @@
     - $A = \left(\begin{array}{ccc}a_{1,1} & a_{1, 2} & a_{1,3}\\ a_{2, 1} & a_{2, 2} & a_{2,3} \\ a_{3,1} & a_{3,2} & a_{3,3}\end{array}\right)$
 - **Th**
     - $\det(A) = a_{1,1}a_{2,2}a_{3,3}+a_{1,3}a_{2,1}a_{3,2}+a_{1,2}a_{2,3}a_{3,1} - a_{1,3}a_{2,2}a_{3,1}-a_{1,1}a_{2,3}a_{3,2}-a_{1,2}a_{2,1}a_{3,3}$
-
-## Oss
-
-- **Hp**
-    - $\mathbb{K}$ campo
-    - $n \in \mathbb{N}$
-    - $A \in \textrm{Mat}_{n \times n}(\mathbb{K})$
-- **Th**
-    - $\det(A) = \det(A^T)$
+- **Dim**
+    - $\mathcal{S}_3 = \{(1,2,3), (1,3,2), (2,1,3), (2,3,1),(3,1,2),(3,2,1)\}$
+    - si noti che $\left \{ \begin{array}{l} \textrm{sgn}(1,2,3)=(-1)^{|\varnothing|}=+1 \\ \textrm{sgn}(1,3,2)=(-1)^{\left|\{(3,2)\}\right|}=-1 \\ \textrm{sgn}(2,1,3)=(-1)^{\left|\{(2,1)\}\right|}=-1 \\ \textrm{sgn}(2,3,1)=(-1)^{\left| \{(3,1),(2,1)\}\right|}=+1 \\ \textrm{sgn}(3,1,2)=(-1)^{\left|\{(3,1),(3,2)\}\right|}=+1 \\ \textrm{sgn}(3,2,1)=(-1)^{\left|\{(3,2),(2,1),(3,1)\}\right|}=-1 \end{array}\right.$
+    - allora, per la formula di Leibniz si ha $\det(A) =\textrm{sgn}(1,2,3)(a_{1,1}a_{2,2}a_{3,3})+\textrm{sgn}(1,3,2)(a_{1,1}a_{2,3}a_{3,2})+\textrm{sgn}(2,1,3)(a_{1,2}a_{2,1}a_{3,3})+\textrm{sgn}(2,3,1)(a_{1,2}a_{2,3}a_{3,1})+\textrm{sgn}(3,1,2)(a_{1,3}a_{2,1}a_{3,2})+\textrm{sgn}(3,2,1)(a_{1,3}a_{2,2}a_{3,1})=a_{1,1}a_{2,2}a_{3,3}-a_{1,1}a_{2,3}a_{3,2}-a_{1,2}a_{2,1}a_{3,3}+a_{1,2}a_{2,3}a_{3,1}+a_{1,3}a_{2,1}a_{3,2})-a_{1,3}a_{2,2}a_{3,1}$
 
 ## Formula di Laplace
 

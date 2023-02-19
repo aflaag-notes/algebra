@@ -4,7 +4,8 @@ Questi sono i miei [appunti di algebra](https://ph04.github.io/algebra/html/inde
 
 ## TODO list
 
-- dimostrazione per cui $\mathbb{Z}_p$ è ciclico
+- fixa dimostrazione polinomio
+- polinomi in $\mathbb{Z}_p$
 - matrice di transizione
 - equazioni parametriche
 

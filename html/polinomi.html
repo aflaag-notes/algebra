@@ -228,8 +228,8 @@ commutativo</li>
 </ul></li>
 <li><strong>Th</strong>
 <ul>
-<li><span class="math inline">(\mathbb{K}[x], +, \cdot)</span> è un
-anello commutativo</li>
+<li><span class="math inline">(\mathbb{K}[x], +, \cdot)</span> anello
+commutativo</li>
 </ul></li>
 <li><strong>Dim</strong>
 <ul>
@@ -773,6 +773,19 @@ b</span></li>
 p(z) = 0</span>, e poiché <span class="math inline">\mathbb{R}[x]</span>
 è un dominio di integrità, <span class="math inline">(z - \overline{z})
 = 0 \lor k(z) = 0</span></li>
+<li><span class="math inline">b = 0</span>
+<ul>
+<li>allora si ha che <span class="math inline">z \in \mathbb{R} \implies
+z = \overline{z}</span> per osservazione precedente</li>
+<li><span class="math inline">\deg(p(x)) \ge 2 \implies p(x) = q(x) (x -
+z)</span> implica necessariamente che <span
+class="math inline">\deg(q(x)) \ge 1</span>, e in particolare <span
+class="math inline">\deg(q(x)), \deg(x - z) \neq 0 \iff q(x),(x - z)
+\notin \mathbb{R}[x]^* \implies p(x)</span> non irriducibile <span
+class="math inline">\bot</span></li>
+<li>allora, segue esclusivamente il caso in cui <span
+class="math inline">b \neq 0</span></li>
+</ul></li>
 <li><span class="math inline">b \neq 0</span>
 <ul>
 <li>allora si ha che <span class="math inline">z \in \mathbb{C} -
@@ -794,17 +807,6 @@ p(x) = k(x^2 - 2ax + a^2 + b^2) = kx^2 -2kax +ka^2+kb^2 \implies \Delta
 = (-2ka)^2 - 4k(ka^2+kb^2) =4k^2a^2 -4k^2a^2 -4k^2b^2=-4k^2b^2 \lt
 0</span>, per ogni scelta di <span class="math inline">k,b \in
 \mathbb{R}[x]^* = \mathbb{R}^*</span></li>
-</ul></li>
-<li><span class="math inline">b = 0</span>
-<ul>
-<li>allora si ha che <span class="math inline">z \in \mathbb{R} \implies
-z = \overline{z}</span> per osservazione precedente</li>
-<li><span class="math inline">\deg(p(x)) \ge 2 \implies p(x) = q(x) (x -
-z)</span> implica necessariamente che <span
-class="math inline">\deg(q(x)) \ge 1</span>, e in particolare <span
-class="math inline">\deg(q(x)), \deg(x - z) \neq 0 \iff q(x),(x - z)
-\notin \mathbb{R}[x]^* \implies p(x)</span> non irriducibile <span
-class="math inline">\bot</span></li>
 </ul></li>
 </ul></li>
 <li><em>seconda implicazione</em>
@@ -852,8 +854,7 @@ di <span class="math inline">p(x)</span></li>
 \in \mathbb{K}^* \mid p(x) = c \cdot q_1(x) \cdot \ldots \cdot
 q_k(x)</span>
 <ul>
-<li>in particolare, i polinomi sono unici a meno di un
-riordinamento</li>
+<li>in particolare, i polinomi sono unici a meno di riordinamento</li>
 </ul></li>
 </ul></li>
 <li><strong>Dim</strong>
@@ -944,7 +945,7 @@ ogni termine del secondo membro dell’equazione contiene una potenza di
 <span class="math inline">b</span></li>
 <li><span class="math inline">\textrm{MCD}(a, b) = 1 \implies
 \textrm{MCD}(a^n, b) = 1</span>, ma allora <span class="math inline">b
-\mid a_na^n \implies b \mid a_n</span> ⚠️ <strong>perché</strong></li>
+\mid a_na^n \implies b \mid a_n</span></li>
 <li>è possibile ripetere il ragionamento analogo per <span
 class="math inline">a_0b^n</span>, e dall’equazione ottenuta si noterà
 che <span class="math inline">a \mid a_0b^n</span>, che per ragionamento
