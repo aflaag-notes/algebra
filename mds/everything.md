@@ -3911,7 +3911,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 - **Hp**
     - $\mathbb{K}$ campo
-    - $V$ spazi vettoriali su $\mathbb{K}$
+    - $V, W$ spazi vettoriali su $\mathbb{K}$
     - $f:V \rightarrow W$ trasformazione lineare
 - **Th**
     - $\dim(\textrm{im}(f)) + \dim(\ker(f)) = \dim(V)$
