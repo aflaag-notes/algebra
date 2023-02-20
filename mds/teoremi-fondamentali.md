@@ -92,10 +92,9 @@
 - **Th**
   - $m = a_1 \cdot \ldots \cdot a_n$
 - **Dim**
-  - $\textrm{MCD}(a_i, a_j) = 1 \implies \forall p \in \mathbb{P} \quad p \mid a_i \implies p \nmid a_j$, poiché altrimenti $p \mid \textrm{MCD}(a_i, a_j)$
-  - prese le fattorizzazioni $\displaystyle a_1 = \prod_{p \in \mathbb{P}}{p^{a_{1_p}}}, \ \ldots ,\ a_n = \prod_{p \in \mathbb{P}}{p^{a_{n_p}}}$, allora $\forall p \in \mathbb{P} \quad a_{i_p} \gt 0 \implies a_{j_p} = 0 \quad \forall i \neq j$, dunque ogni fattore è presente solo in una delle fattorizzazioni degli $n$ interi, poiché coprimi
-    - $a_{k_p} = 0 \implies p^{a_{k_p}} = 1 \implies$ non compare nella fattorizzazione
-  - di conseguenza, la somma degli esponenti di $p$ su tutte le fattorizzazioni degli $n$ interi, sarà il numero stesso, poiché nelle altre fattorizzazioni varrà $0$, e quindi $\forall p \in \mathbb{P} \quad a_{1_p} + \ldots + a_{n_p} = \max(a_{1_p}, \ldots, a_{n_p})$
+  - $\forall i, j \in [1, n] \mid i \neq j \quad \textrm{MCD}(a_i, a_j) = 1 \implies \forall p \in \mathbb{P} \quad p \mid a_i \implies p \nmid a_j$, poiché altrimenti $p \mid \textrm{MCD}(a_i, a_j)$
+  - allora considerando le fattorizzazioni $\left \{ \begin{array}{c}a_1 = \displaystyle{\prod_{p \in \mathbb{P}}{p^{a_{1_p}}}} \\ \vdots \\ \displaystyle{ a_n = \prod_{p \in \mathbb{P}}{p^{a_{n_p}}}}\end{array} \right.$, si ha che $\forall p \in \mathbb{P}, i \in [1, n] \quad a_{i_p} \gt 0 \implies \forall j \in [1, n] \mid i \neq j \quad a_{j_p} = 0 \implies p^{a_{j_p}} = 1$, dunque ogni fattore è presente solo in una delle fattorizzazioni degli $n$ interi, poiché coprimi
+  - di conseguenza, la somma degli esponenti di un $p$ fissato, su tutte le fattorizzazioni degli $n$ interi, equivale all'unico esponente non nullo, poiché nelle altre fattorizzazioni varrà $0$, e dunque $\forall p \in \mathbb{P} \quad a_{1_p} + \ldots + a_{n_p} = \max(a_{1_p}, \ldots, a_{n_p})$
   - allora $m = \displaystyle \prod_{p \in \mathbb{P}}{p^{\max(a_{1_p}, \ldots, a_{n_p})}}=\prod_{p \in \mathbb{P}}{p^{a_{1_p} + \ldots + a_{n_p}}} = \prod_{p \in \mathbb{P}}{p^{a_{1_p}}} \cdot \ldots \cdot \prod_{p \in \mathbb{P}}{p^{a_{n_p}}} = a_1 \cdot \ldots \cdot a_n$
     
 ## Lem
@@ -105,13 +104,11 @@
   - $a_1, \ldots, a_n \in \mathbb{Z}_{n \ge 2}$
   - $m:= \textrm{mcm}(a_1, \ldots, a_n)$
 - **Th**
-  - $\exists \phi \mid \phi: \mathbb{Z}_m \rightarrow \mathbb{Z}_{a_1} \times \ldots \times \mathbb{Z}_{a_n}: x \ (\bmod \ m) \rightarrow (x \ (\bmod \ a_1), \ldots, x \ (\bmod \ a_n))$
-  - $\phi$ è una funzione ben definita, ed è iniettiva
+  - $\exists \phi \mid \phi: \mathbb{Z}_m \rightarrow \mathbb{Z}_{a_1} \times \ldots \times \mathbb{Z}_{a_n}: x \ (\bmod \ m) \rightarrow (x \ (\bmod \ a_1), \ldots, x \ (\bmod \ a_n))$ è una funzione ben definita, ed è iniettiva
 - **Dim**
-  - $\phi$ ben definita $\implies \phi$ non dipende dalla scelta di $[x] \in \mathbb{Z}_m$
-  - se $\phi$ è ben definita, allora $x\equiv x^{\prime} \ (\bmod \ m) \implies \left\{\begin{array}{c}x \equiv x^{\prime}\ \left(\bmod \ a_{1}\right) \\ \vdots \\ x \equiv x^{\prime}\ \left(\bmod \ a_{n}\right)\end{array}\right.$
-  - $\left\{\begin{array}{c}x \equiv x^{\prime}\ \left(\bmod \ a_{1}\right) \\ \vdots \\ x \equiv x^{\prime}\ \left(\bmod \ a_{n}\right)\end{array}\right. \iff \left\{\begin{array}{c}x^{\prime}-x \in I\left(a_{1}\right) \\ \vdots \\ x^{\prime}-x \in I\left(a_{n}\right)\end{array}\right. \iff x - x^\prime \in I(a_1) \cap \ldots \cap I(a_n) = I(m)$, e per definizione $x - x^\prime \in I(m) \implies x \equiv x^\prime \ (\bmod \ m)$
-  - poiché tale osservazione è valida in entrambe i versi dell'implicazione, $\phi$ risulta essere iniettiva
+  - $\phi$ ben definita $\iff \forall [x], [x'] \in \mathbb{Z}_m \quad [x] = [x'] \implies \phi([x]) = \phi([x'])$, o equivalentemente $\forall x, x' \in \mathbb{Z} \quad x\equiv x^{\prime} \ (\bmod \ m) \implies \left\{\begin{array}{c}x \equiv x^{\prime}\ \left(\bmod \ a_{1}\right) \\ \vdots \\ x \equiv x^{\prime}\ \left(\bmod \ a_{n}\right)\end{array}\right.$
+  - $\left\{\begin{array}{c}x \equiv x^{\prime}\ \left(\bmod \ a_{1}\right) \\ \vdots \\ x \equiv x^{\prime}\ \left(\bmod \ a_{n}\right)\end{array}\right. \iff \left\{\begin{array}{c}x^{\prime}-x \in I\left(a_{1}\right) \\ \vdots \\ x^{\prime}-x \in I\left(a_{n}\right)\end{array}\right. \iff x - x^\prime \in I(a_1) \cap \ldots \cap I(a_n) = I(m) \iff x \equiv x^\prime \ (\bmod \ m)$
+  - in particolare, tale osservazione è valida in entrambe i versi dell'implicazione, e poiché il verso opposto implica l'iniettività di $\phi$, si ha che $\phi$ iniettiva
 
 ## Teorema cinese dei resti
 
@@ -124,15 +121,12 @@
   - $\exists ! x \ (\bmod \ m) \mid$ $\left\{\begin{array}{c}x \equiv b_{1}\ \left(\bmod  \ a_{1}\right) \\ \vdots \\ x \equiv b_{n}\ \left(\bmod  \ a_{n}\right)\end{array}\right.$
 - **Dim**
   - per il primo lemma $m = a_1 \cdot \ldots \cdot a_n$ poiché coprimi a due a due in ipotesi
-  - per il secondo lemma $m = \textrm{mcm}(a_1, \ldots, a_n) \implies \exists \phi : \mathbb{Z}_m \rightarrow \mathbb{Z}_ {a_1} \times \cdots \times \mathbb{Z}_{a_n}$ ben definita e iniettiva
-  - $\left|X_{1} \times \cdots \times X_{n}\right|=\left|X_{1}\right| \cdot\ldots\cdot\left|X_{n}\right| \implies$ $\left|\mathbb{Z}_{a_{1}} \times \ldots \times \mathbb{Z}_{a_{n}}\right|=\left|\mathbb{Z}_{a_{1}}\right| \cdot\ldots\cdot\left|\mathbb{Z}_{a_{n}}\right|$
-    - $\mathbb{Z}_n := \{[0],[1], \cdots,[n-1]\} \implies \left|\mathbb{Z}_{n}\right|=n$, quindi $\left|\mathbb{Z}_{a_{1}}\right| \cdot\ldots\cdot\left|\mathbb{Z}_{a_{n}}\right|  = a_1 \cdot \ldots \cdot a_n = m = \left| \mathbb{Z}_m \right|$ per ragionamento analogo
-  - $|X|=|Y|<+\infty \implies f: X \rightarrow Y$ iniettiva $\iff$ $f$ suriettiva
-    - applicando questa osservazione, $\phi$ iniettiva $\implies \phi$ suriettiva, in quanto, per l'osservazione precedente, insieme di partenza e di arrivo di $\phi$ hanno la stessa cardinalità $\left| \mathbb{Z}_m \right|$
+  - per il secondo lemma $m := \textrm{mcm}(a_1, \ldots, a_n) \implies \phi : \mathbb{Z}_m \rightarrow \mathbb{Z}_ {a_1} \times \cdots \times \mathbb{Z}_{a_n}$ ben definita e iniettiva
+  - allora $\left|\mathbb{Z}_{a_{1}} \times \ldots \times \mathbb{Z}_{a_{n}}\right|=\left|\mathbb{Z}_{a_{1}}\right| \cdot\ldots\cdot\left|\mathbb{Z}_{a_{n}}\right| = a_1 \cdot \ldots \cdot a_n = m = \left|\mathbb{Z}_m\right| \implies \phi$ iniettiva $\iff \phi$ suriettiva
   - $\phi$ suriettiva $\implies$ $\exists x \mid x \ (\bmod \ m)$ è soluzione del sistema
-    - $\varphi(x \ (\bmod \ m))=\left(b_{1}\ \left( \bmod \ a_{1}\right), \ldots, b_{n} \ (\bmod \ a_{n})\right)$, e poiché $\phi$ è suriettiva, allora ogni tupla di $n$ elementi dell'insieme di arrivo, che descrive un sistema come in ipotesi, ha una controimmagine $x \ (\bmod \ m)$, e $x \ (\bmod \ m)\in \mathbb{Z}_m$ per definizione, dunque esiste sempre una soluzione
+    - $\varphi(x \ (\bmod \ m))=\left(b_{1}\ \left( \bmod \ a_{1}\right), \ldots, b_{n} \ (\bmod \ a_{n})\right)$, e poiché $\phi$ è suriettiva, allora ogni tupla di $n$ elementi dell'insieme di arrivo, che descrive un sistema come in ipotesi, ha una controimmagine $x \ (\bmod \ m)$
   - $\phi$ iniettiva $\implies$ $\exists ! x \mid x \ (\bmod \ m)$ è soluzione del sistema
-    - poiché $\phi$ è iniettiva, $x \ (\bmod \ m) \in \mathbb{Z}_m$ è unico, dunque la soluzione è sempre unica
+    - poiché $\phi$ è iniettiva, $x \ (\bmod \ m) \in \mathbb{Z}_m$ è unico
 
 ## Cor
 

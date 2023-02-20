@@ -396,27 +396,26 @@ a_n)</span></li>
 </ul></li>
 <li><strong>Dim</strong>
 <ul>
-<li><span class="math inline">\textrm{MCD}(a_i, a_j) = 1 \implies
-\forall p \in \mathbb{P} \quad p \mid a_i \implies p \nmid a_j</span>,
-poiché altrimenti <span class="math inline">p \mid \textrm{MCD}(a_i,
-a_j)</span></li>
-<li>prese le fattorizzazioni <span class="math inline">\displaystyle a_1
-= \prod_{p \in \mathbb{P}}{p^{a_{1_p}}}, \ \ldots ,\ a_n = \prod_{p \in
-\mathbb{P}}{p^{a_{n_p}}}</span>, allora <span
-class="math inline">\forall p \in \mathbb{P} \quad a_{i_p} \gt 0
-\implies a_{j_p} = 0 \quad \forall i \neq j</span>, dunque ogni fattore
-è presente solo in una delle fattorizzazioni degli <span
-class="math inline">n</span> interi, poiché coprimi
-<ul>
-<li><span class="math inline">a_{k_p} = 0 \implies p^{a_{k_p}} = 1
-\implies</span> non compare nella fattorizzazione</li>
-</ul></li>
-<li>di conseguenza, la somma degli esponenti di <span
-class="math inline">p</span> su tutte le fattorizzazioni degli <span
-class="math inline">n</span> interi, sarà il numero stesso, poiché nelle
-altre fattorizzazioni varrà <span class="math inline">0</span>, e quindi
-<span class="math inline">\forall p \in \mathbb{P} \quad a_{1_p} +
-\ldots + a_{n_p} = \max(a_{1_p}, \ldots, a_{n_p})</span></li>
+<li><span class="math inline">\forall i, j \in [1, n] \mid i \neq j
+\quad \textrm{MCD}(a_i, a_j) = 1 \implies \forall p \in \mathbb{P} \quad
+p \mid a_i \implies p \nmid a_j</span>, poiché altrimenti <span
+class="math inline">p \mid \textrm{MCD}(a_i, a_j)</span></li>
+<li>allora considerando le fattorizzazioni <span
+class="math inline">\left \{ \begin{array}{c}a_1 =
+\displaystyle{\prod_{p \in \mathbb{P}}{p^{a_{1_p}}}} \\ \vdots \\
+\displaystyle{ a_n = \prod_{p \in \mathbb{P}}{p^{a_{n_p}}}}\end{array}
+\right.</span>, si ha che <span class="math inline">\forall p \in
+\mathbb{P}, i \in [1, n] \quad a_{i_p} \gt 0 \implies \forall j \in [1,
+n] \mid i \neq j \quad a_{j_p} = 0 \implies p^{a_{j_p}} = 1</span>,
+dunque ogni fattore è presente solo in una delle fattorizzazioni degli
+<span class="math inline">n</span> interi, poiché coprimi</li>
+<li>di conseguenza, la somma degli esponenti di un <span
+class="math inline">p</span> fissato, su tutte le fattorizzazioni degli
+<span class="math inline">n</span> interi, equivale all’unico esponente
+non nullo, poiché nelle altre fattorizzazioni varrà <span
+class="math inline">0</span>, e dunque <span class="math inline">\forall
+p \in \mathbb{P} \quad a_{1_p} + \ldots + a_{n_p} = \max(a_{1_p},
+\ldots, a_{n_p})</span></li>
 <li>allora <span class="math inline">m = \displaystyle \prod_{p \in
 \mathbb{P}}{p^{\max(a_{1_p}, \ldots, a_{n_p})}}=\prod_{p \in
 \mathbb{P}}{p^{a_{1_p} + \ldots + a_{n_p}}} = \prod_{p \in
@@ -439,17 +438,15 @@ a_n)</span></li>
 <li><span class="math inline">\exists \phi \mid \phi: \mathbb{Z}_m
 \rightarrow \mathbb{Z}_{a_1} \times \ldots \times \mathbb{Z}_{a_n}: x \
 (\bmod \ m) \rightarrow (x \ (\bmod \ a_1), \ldots, x \ (\bmod \
-a_n))</span></li>
-<li><span class="math inline">\phi</span> è una funzione ben definita,
-ed è iniettiva</li>
+a_n))</span> è una funzione ben definita, ed è iniettiva</li>
 </ul></li>
 <li><strong>Dim</strong>
 <ul>
 <li><span class="math inline">\phi</span> ben definita <span
-class="math inline">\implies \phi</span> non dipende dalla scelta di
-<span class="math inline">[x] \in \mathbb{Z}_m</span></li>
-<li>se <span class="math inline">\phi</span> è ben definita, allora
-<span class="math inline">x\equiv x^{\prime} \ (\bmod \ m) \implies
+class="math inline">\iff \forall [x], [x&#39;] \in \mathbb{Z}_m \quad
+[x] = [x&#39;] \implies \phi([x]) = \phi([x&#39;])</span>, o
+equivalentemente <span class="math inline">\forall x, x&#39; \in
+\mathbb{Z} \quad x\equiv x^{\prime} \ (\bmod \ m) \implies
 \left\{\begin{array}{c}x \equiv x^{\prime}\ \left(\bmod \ a_{1}\right)
 \\ \vdots \\ x \equiv x^{\prime}\ \left(\bmod \
 a_{n}\right)\end{array}\right.</span></li>
@@ -458,12 +455,12 @@ x^{\prime}\ \left(\bmod \ a_{1}\right) \\ \vdots \\ x \equiv x^{\prime}\
 \left(\bmod \ a_{n}\right)\end{array}\right. \iff
 \left\{\begin{array}{c}x^{\prime}-x \in I\left(a_{1}\right) \\ \vdots \\
 x^{\prime}-x \in I\left(a_{n}\right)\end{array}\right. \iff x - x^\prime
-\in I(a_1) \cap \ldots \cap I(a_n) = I(m)</span>, e per definizione
-<span class="math inline">x - x^\prime \in I(m) \implies x \equiv
-x^\prime \ (\bmod \ m)</span></li>
-<li>poiché tale osservazione è valida in entrambe i versi
-dell’implicazione, <span class="math inline">\phi</span> risulta essere
-iniettiva</li>
+\in I(a_1) \cap \ldots \cap I(a_n) = I(m) \iff x \equiv x^\prime \
+(\bmod \ m)</span></li>
+<li>in particolare, tale osservazione è valida in entrambe i versi
+dell’implicazione, e poiché il verso opposto implica l’iniettività di
+<span class="math inline">\phi</span>, si ha che <span
+class="math inline">\phi</span> iniettiva</li>
 </ul></li>
 </ul>
 <a href="#teorema-cinese-dei-resti-1"><h2 id="teorema-cinese-dei-resti-1">Teorema cinese dei resti</h2></a>
@@ -490,35 +487,15 @@ a_{n}\right)\end{array}\right.</span></li>
 <ul>
 <li>per il primo lemma <span class="math inline">m = a_1 \cdot \ldots
 \cdot a_n</span> poiché coprimi a due a due in ipotesi</li>
-<li>per il secondo lemma <span class="math inline">m = \textrm{mcm}(a_1,
-\ldots, a_n) \implies \exists \phi : \mathbb{Z}_m \rightarrow
+<li>per il secondo lemma <span class="math inline">m :=
+\textrm{mcm}(a_1, \ldots, a_n) \implies \phi : \mathbb{Z}_m \rightarrow
 \mathbb{Z}_ {a_1} \times \cdots \times \mathbb{Z}_{a_n}</span> ben
 definita e iniettiva</li>
-<li><span class="math inline">\left|X_{1} \times \cdots \times
-X_{n}\right|=\left|X_{1}\right| \cdot\ldots\cdot\left|X_{n}\right|
-\implies</span> <span class="math inline">\left|\mathbb{Z}_{a_{1}}
-\times \ldots \times
-\mathbb{Z}_{a_{n}}\right|=\left|\mathbb{Z}_{a_{1}}\right|
-\cdot\ldots\cdot\left|\mathbb{Z}_{a_{n}}\right|</span>
-<ul>
-<li><span class="math inline">\mathbb{Z}_n := \{[0],[1], \cdots,[n-1]\}
-\implies \left|\mathbb{Z}_{n}\right|=n</span>, quindi <span
-class="math inline">\left|\mathbb{Z}_{a_{1}}\right|
+<li>allora <span class="math inline">\left|\mathbb{Z}_{a_{1}} \times
+\ldots \times \mathbb{Z}_{a_{n}}\right|=\left|\mathbb{Z}_{a_{1}}\right|
 \cdot\ldots\cdot\left|\mathbb{Z}_{a_{n}}\right| = a_1 \cdot \ldots \cdot
-a_n = m = \left| \mathbb{Z}_m \right|</span> per ragionamento
-analogo</li>
-</ul></li>
-<li><span class="math inline">|X|=|Y|&lt;+\infty \implies f: X
-\rightarrow Y</span> iniettiva <span class="math inline">\iff</span>
-<span class="math inline">f</span> suriettiva
-<ul>
-<li>applicando questa osservazione, <span
-class="math inline">\phi</span> iniettiva <span
-class="math inline">\implies \phi</span> suriettiva, in quanto, per
-l’osservazione precedente, insieme di partenza e di arrivo di <span
-class="math inline">\phi</span> hanno la stessa cardinalità <span
-class="math inline">\left| \mathbb{Z}_m \right|</span></li>
-</ul></li>
+a_n = m = \left|\mathbb{Z}_m\right| \implies \phi</span> iniettiva <span
+class="math inline">\iff \phi</span> suriettiva</li>
 <li><span class="math inline">\phi</span> suriettiva <span
 class="math inline">\implies</span> <span class="math inline">\exists x
 \mid x \ (\bmod \ m)</span> è soluzione del sistema
@@ -529,17 +506,14 @@ a_{n})\right)</span>, e poiché <span class="math inline">\phi</span> è
 suriettiva, allora ogni tupla di <span class="math inline">n</span>
 elementi dell’insieme di arrivo, che descrive un sistema come in
 ipotesi, ha una controimmagine <span class="math inline">x \ (\bmod \
-m)</span>, e <span class="math inline">x \ (\bmod \ m)\in
-\mathbb{Z}_m</span> per definizione, dunque esiste sempre una
-soluzione</li>
+m)</span></li>
 </ul></li>
 <li><span class="math inline">\phi</span> iniettiva <span
 class="math inline">\implies</span> <span class="math inline">\exists !
 x \mid x \ (\bmod \ m)</span> è soluzione del sistema
 <ul>
 <li>poiché <span class="math inline">\phi</span> è iniettiva, <span
-class="math inline">x \ (\bmod \ m) \in \mathbb{Z}_m</span> è unico,
-dunque la soluzione è sempre unica</li>
+class="math inline">x \ (\bmod \ m) \in \mathbb{Z}_m</span> è unico</li>
 </ul></li>
 </ul></li>
 </ul>

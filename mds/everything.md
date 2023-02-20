@@ -3758,8 +3758,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
   - $a_1, \ldots, a_n \in \mathbb{Z}_{n \ge 2}$
   - $m:= \textrm{mcm}(a_1, \ldots, a_n)$
 - **Th**
-  - $\exists \phi \mid \phi: \mathbb{Z}_m \rightarrow \mathbb{Z}_{a_1} \times \ldots \times \mathbb{Z}_{a_n}: x \ (\bmod \ m) \rightarrow (x \ (\bmod \ a_1), \ldots, x \ (\bmod \ a_n))$
-  - $\phi$ è una funzione ben definita, ed è iniettiva
+  - $\exists \phi \mid \phi: \mathbb{Z}_m \rightarrow \mathbb{Z}_{a_1} \times \ldots \times \mathbb{Z}_{a_n}: x \ (\bmod \ m) \rightarrow (x \ (\bmod \ a_1), \ldots, x \ (\bmod \ a_n))$ è una funzione ben definita, ed è iniettiva
 
 ## Teorema 207
 
