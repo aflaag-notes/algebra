@@ -94,7 +94,7 @@
     - $\textrm{im}(\mathscr{L}_A) = \textrm{span}(A^1, \ldots, A^n)$
 - **Dim**
     - $\ker(\mathscr{L}_A) := \left\{x \in \mathbb{K}^n \mid \mathscr{L}_A(x) = 0_{\mathbb{K}^m} \iff A x = 0_{\mathbb{K}^m} \iff \left(\begin{array}{c}A_1\cdot x \\ \vdots \\ A_m \cdot x\end{array}\right)= \left(\begin{array}{c} 0 \\ \vdots \\ 0\end{array}\right)\right\} =: \textrm{span}(A_1, \ldots, A_m)^\bot$
-    - $\textrm{im}(\mathscr{L}_A):=\left\{y \in \mathbb{K}^m \mid \exists x \in \mathbb{K}^n : y = \mathscr{L}_A(x) = A x = \left(\begin{array}{ccc} a_{1,1} & \cdots & a_{1,n}\\ \vdots & \ddots & \vdots \\ a_{m,1} & \cdots & a_{m,n}\end{array}\right) \left(\begin{array}{c} x_1 \\ \vdots \\ x_n \end{array}\right) = \left(\begin{array}{c}a_{1, 1} x_1 + \ldots + a_{1,n}x_n \\ \vdots \\ a_{m,1}x_1 + \ldots + a_{m,n} x_n \end{array}\right) =  x_1 \left(\begin{array}{c}a_{1, 1} \\ \vdots \\ a_{m, 1}\end{array}\right) + \ldots + x_n \left(\begin{array}{c}a_{1, n}\\ \vdots \\ a_{m, n}\end{array}\right) = x_1A^1 + \ldots + x_nA^n \right\}=:\textrm{span}(A^1, \ldots, A^n)$
+    - $\textrm{im}(\mathscr{L}_A):=\left\{y \in \mathbb{K}^m \mid \exists x \in \mathbb{K}^n : y = \mathscr{L}_A(x) = A x = \left(\begin{array}{ccc} a_{1,1} & \cdots & a_{1,n}\\ \vdots & \ddots & \vdots \\ a_{m,1} & \cdots & a_{m,n}\end{array}\right) \left(\begin{array}{c} x_1 \\ \vdots \\ x_n \end{array}\right) =\right.$$\left.\left(\begin{array}{c}a_{1, 1} x_1 + \ldots + a_{1,n}x_n \\ \vdots \\ a_{m,1}x_1 + \ldots + a_{m,n} x_n \end{array}\right) =  x_1 \left(\begin{array}{c}a_{1, 1} \\ \vdots \\ a_{m, 1}\end{array}\right) + \ldots + x_n \left(\begin{array}{c}a_{1, n}\\ \vdots \\ a_{m, n}\end{array}\right) = x_1A^1 + \ldots + x_nA^n \right\}=:\textrm{span}(A^1, \ldots, A^n)$
 
 ## Oss
 
