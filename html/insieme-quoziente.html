@@ -255,43 +255,32 @@ class="math inline">\mathbb{Z}_n</span></strong></li>
 <ul>
 <li><em>prima implicazione</em>
 <ul>
-<li>per assurdo, ipotizzando <span class="math inline">n \notin
-\mathbb{P} \implies \exists a, b \in \mathbb{Z} \mid n = ab \quad 0 \lt
-a, b \lt n</span> per definizione
-<ul>
-<li>in particolare <span class="math inline">a, b \neq 0</span></li>
-</ul></li>
-<li><span class="math inline">n = ab \iff [n] = [ab]</span> in <span
-class="math inline">\mathbb{Z}_n</span></li>
-<li><span class="math inline">[n] = [0]</span> in <span
-class="math inline">\mathbb{Z}_n</span>, dunque <span
-class="math inline">[ab] = [0]</span></li>
+<li>per assurdo, <span class="math inline">n \notin \mathbb{P} \implies
+\exists a, b \in (0, n) \mid n = ab</span>, in particolare <span
+class="math inline">a, b \neq 0</span></li>
+<li><span class="math inline">n = ab \implies [0] = [n] = [ab]</span> in
+<span class="math inline">\mathbb{Z}_n</span></li>
 <li><span class="math inline">\mathbb{Z}_n</span> dominio di integrità
 <span class="math inline">\implies</span> in <span
 class="math inline">\mathbb{Z}_n</span> vale la legge di annullamento
-del prodotto, e dunque <span class="math inline">[ab] = [0] \iff [a] = 0
+del prodotto, allora <span class="math inline">[ab] = [0] \iff [a] = 0
 \lor [b] = [0] \ \bot</span></li>
 </ul></li>
 <li><em>seconda implicazione</em>
 <ul>
-<li>per assurdo, ipotizzando <span
-class="math inline">\mathbb{Z}_n</span> non sia dominio di integrità
-<span class="math inline">\implies \exists[a] \in \mathbb{Z}_n : [a]
-\neq [0], a \mid 0</span></li>
-<li><span class="math inline">a \mid 0 \implies \exists b \in \mathbb{Z}
-\mid [a][b] = [0] \quad b \neq 0</span></li>
-<li><span class="math inline">[0]=[a][b] \iff [0]=[ab] \iff 0 \equiv ab
-\ (\bmod \  n) \iff n \mid ab - 0 \iff n \mid ab</span></li>
+<li>per assurdo, <span class="math inline">\mathbb{Z}_n</span> non
+dominio di integrità <span class="math inline">\implies \exists[a] \in
+\mathbb{Z}_n - \{[0]\} : a \mid 0 \iff \exists b \in \mathbb{Z} -
+\{[0]\} \mid [0] = [a][b] = [ab] \iff 0 \equiv ab \ (\bmod \  n) \iff n
+\mid ab</span></li>
 <li><span class="math inline">n \in \mathbb{P}</span>, allora <span
 class="math inline">n \mid ab \implies n \mid a \lor n \mid b</span> per
-dimostrazione precedente
+dimostrazione precedente, allora
 <ul>
 <li><span class="math inline">n \mid a \implies [a] = [n] = [0]</span>
 in <span class="math inline">\mathbb{Z}_n \ \bot</span></li>
 <li><span class="math inline">n \mid b \implies [b] = [n] = [0]</span>
-in <span class="math inline">\mathbb{Z}_n</span>, ma <span
-class="math inline">b \neq 0</span> in ipotesi, dunque necessariamente
-<span class="math inline">[a] =[0] \ \bot</span></li>
+in <span class="math inline">\mathbb{Z}_n \ \bot</span></li>
 </ul></li>
 </ul></li>
 </ul></li>
@@ -315,36 +304,27 @@ class="math inline">b \neq 0</span> in ipotesi, dunque necessariamente
 <li><span class="math inline">[a] \in \mathbb{Z}_n^* \implies \exists b
 \in \mathbb{Z} \mid [a][b] = [1] \quad 0 \lt b \lt n \iff ab \equiv 1 \
 (\bmod \ n) \iff n \mid 1 - ab \iff \exists k \in \mathbb{Z} \mid nk = 1
-- ab</span></li>
-<li>allora <span class="math inline">\exists b, k \in \mathbb{Z} \mid n
-k = 1 - ab \iff 1 = nk + ab</span></li>
-<li><span class="math inline">d : = \textrm{MCD}(a, n)</span></li>
-<li>per definizione, <span class="math inline">d \mid a \land d \mid
-n</span>
-<ul>
-<li><span class="math inline">d \mid a \implies \exists x \in \mathbb{Z}
-\mid dx = a</span></li>
-<li><span class="math inline">d \mid n \implies \exists y \in \mathbb{Z}
-\mid dy = n</span></li>
-</ul></li>
-<li><span class="math inline">1 = nk + ab \iff 1 = dyk + dxb = d(yk +
-xb) \implies \exists yk + xb \in \mathbb{Z} \mid 1 = d(yk +xb) \implies
-d \mid 1</span></li>
+- ab \iff 1 = nk + ab</span></li>
+<li><span class="math inline">d : = \textrm{MCD}(a, n) \implies d \mid a
+\land d \mid n \implies \left \{ \begin{array}{l} d \mid a \implies
+\exists x \in \mathbb{Z} \mid dx = a \\ d \mid n \implies \exists y \in
+\mathbb{Z} \mid dy = n \end{array} \right. \implies 1 = nk + ab \iff 1 =
+dyk + dxb = d(yk + xb) \implies \exists yk + xb \in \mathbb{Z} \mid 1 =
+d(yk +xb) \implies d \mid 1</span></li>
 <li><span class="math inline">d \mid 1 \iff d = \pm 1</span>, ma <span
 class="math inline">d := \textrm{MCD}(a, n) \implies d \ge 0 \implies d
 = 1</span></li>
 </ul></li>
 <li><em>seconda implicazione</em>
 <ul>
+<li>⚠️ <strong>questo verso non è totalmente corretto</strong></li>
 <li><span class="math inline">d := \textrm{MCD}(a, n) = 1</span></li>
 <li>per dimostrazione precedente, <span class="math inline">I(d) = I(a,
 n) \implies d \in I(a, n) \implies \exists b, k \in \mathbb{Z} \mid d =
 ab + nk</span> per definizione di <span class="math inline">I(a,
 n)</span>, allora <span class="math inline">d = 1 = ab + nk \iff nk = 1
 - ab \iff n \mid 1 - ab \iff ab \equiv 1 \ (\bmod \ n) \implies [a][b] =
-[1]</span> in <span class="math inline">\mathbb{Z}_n</span>, dunque sono
-uno l’inverso dell’altro, e in particolare <span class="math inline">[a]
-= [b]^{-1} \implies \exists [b] \in \mathbb{Z}_n \mid [a]\in
+[1]</span> in <span class="math inline">\mathbb{Z}_n \iff [a] \in
 \mathbb{Z}_n^*</span></li>
 </ul></li>
 </ul></li>

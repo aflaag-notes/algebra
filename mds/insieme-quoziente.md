@@ -37,18 +37,14 @@
   - $\mathbb{Z}_n$ dominio di integrità $\iff n \in \mathbb{P}$
 - **Dim**
   - _prima implicazione_
-    - per assurdo, ipotizzando $n \notin \mathbb{P} \implies \exists a, b \in \mathbb{Z} \mid n = ab \quad 0 \lt a, b \lt n$ per definizione
-        - in particolare $a, b \neq 0$
-    - $n = ab \iff [n] = [ab]$ in $\mathbb{Z}_n$
-    - $[n] = [0]$ in $\mathbb{Z}_n$, dunque $[ab] = [0]$
-    - $\mathbb{Z}_n$ dominio di integrità $\implies$ in $\mathbb{Z}_n$ vale la legge di annullamento del prodotto, e dunque $[ab] = [0] \iff [a] = 0 \lor [b] = [0] \ \bot$
+    - per assurdo, $n \notin \mathbb{P} \implies \exists a, b \in (0, n) \mid n = ab$, in particolare $a, b \neq 0$
+    - $n = ab \implies [0] = [n] = [ab]$ in $\mathbb{Z}_n$
+    - $\mathbb{Z}_n$ dominio di integrità $\implies$ in $\mathbb{Z}_n$ vale la legge di annullamento del prodotto, allora $[ab] = [0] \iff [a] = 0 \lor [b] = [0] \ \bot$
   - _seconda implicazione_
-    - per assurdo, ipotizzando $\mathbb{Z}_n$ non sia dominio di integrità $\implies \exists[a] \in \mathbb{Z}_n : [a] \neq [0], a \mid 0$
-    - $a \mid 0 \implies \exists b \in \mathbb{Z} \mid [a][b] = [0] \quad b \neq 0$
-    - $[0]=[a][b] \iff [0]=[ab] \iff 0 \equiv ab \ (\bmod \  n) \iff n \mid ab - 0 \iff n \mid ab$
-    - $n \in \mathbb{P}$, allora $n \mid ab \implies n \mid a \lor n \mid b$ per dimostrazione precedente
+    - per assurdo, $\mathbb{Z}_n$ non dominio di integrità $\implies \exists[a] \in \mathbb{Z}_n - \{[0]\} : a \mid 0 \iff \exists b \in \mathbb{Z} - \{[0]\} \mid [0] = [a][b] = [ab] \iff 0 \equiv ab \ (\bmod \  n) \iff n \mid ab$
+    - $n \in \mathbb{P}$, allora $n \mid ab \implies n \mid a \lor n \mid b$ per dimostrazione precedente, allora
       - $n \mid a \implies [a] = [n] = [0]$ in $\mathbb{Z}_n \ \bot$
-      - $n \mid b \implies [b] = [n] = [0]$ in $\mathbb{Z}_n$, ma $b \neq 0$ in ipotesi, dunque necessariamente $[a] =[0] \ \bot$
+      - $n \mid b \implies [b] = [n] = [0]$ in $\mathbb{Z}_n \ \bot$
 
 ## Oss
 
@@ -59,17 +55,13 @@
   - $[a] \in \mathbb{Z}^*_n \iff \textrm{MCD}(a, n) = 1$
 - **Dim**
   - _prima implicazione_
-    - $[a] \in \mathbb{Z}_n^* \implies \exists b \in \mathbb{Z} \mid [a][b] = [1] \quad 0 \lt b \lt n \iff ab \equiv 1 \ (\bmod \ n) \iff n \mid 1 - ab \iff \exists k \in \mathbb{Z} \mid nk = 1 - ab$
-    - allora $\exists b, k \in \mathbb{Z} \mid n k = 1 - ab \iff 1 = nk + ab$
-    - $d : = \textrm{MCD}(a, n)$
-    - per definizione, $d \mid a \land d \mid n$
-      - $d \mid a \implies \exists x \in \mathbb{Z} \mid dx = a$
-      - $d \mid n \implies \exists y \in \mathbb{Z} \mid dy = n$
-    - $1 = nk + ab \iff 1 = dyk + dxb = d(yk + xb) \implies \exists yk + xb \in \mathbb{Z} \mid 1 = d(yk +xb) \implies d \mid 1$
+    - $[a] \in \mathbb{Z}_n^* \implies \exists b \in \mathbb{Z} \mid [a][b] = [1] \quad 0 \lt b \lt n \iff ab \equiv 1 \ (\bmod \ n) \iff n \mid 1 - ab \iff \exists k \in \mathbb{Z} \mid nk = 1 - ab \iff 1 = nk + ab$
+    - $d : = \textrm{MCD}(a, n) \implies d \mid a \land d \mid n \implies \left \{ \begin{array}{l} d \mid a \implies \exists x \in \mathbb{Z} \mid dx = a \\ d \mid n \implies \exists y \in \mathbb{Z} \mid dy = n \end{array} \right. \implies 1 = nk + ab \iff 1 = dyk + dxb = d(yk + xb) \implies \exists yk + xb \in \mathbb{Z} \mid 1 = d(yk +xb) \implies d \mid 1$
     - $d \mid 1 \iff d = \pm 1$, ma $d := \textrm{MCD}(a, n) \implies d \ge 0 \implies d = 1$
   - _seconda implicazione_
+    - ⚠️ **questo verso non è totalmente corretto**
     - $d := \textrm{MCD}(a, n) = 1$
-    - per dimostrazione precedente, $I(d) = I(a, n) \implies d \in I(a, n) \implies \exists b, k \in \mathbb{Z} \mid d = ab + nk$ per definizione di $I(a, n)$, allora $d = 1 = ab + nk \iff nk = 1 - ab \iff n \mid 1 - ab \iff ab \equiv 1 \ (\bmod \ n) \implies [a][b] = [1]$ in $\mathbb{Z}_n$, dunque sono uno l'inverso dell'altro, e in particolare $[a] = [b]^{-1} \implies \exists [b] \in \mathbb{Z}_n \mid [a]\in \mathbb{Z}_n^*$
+    - per dimostrazione precedente, $I(d) = I(a, n) \implies d \in I(a, n) \implies \exists b, k \in \mathbb{Z} \mid d = ab + nk$ per definizione di $I(a, n)$, allora $d = 1 = ab + nk \iff nk = 1 - ab \iff n \mid 1 - ab \iff ab \equiv 1 \ (\bmod \ n) \implies [a][b] = [1]$ in $\mathbb{Z}_n \iff [a] \in \mathbb{Z}_n^*$
 
 ## Oss
 
