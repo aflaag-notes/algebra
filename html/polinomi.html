@@ -353,7 +353,7 @@ nullo, in quanto <span class="math inline">\forall n \in \mathbb{N}
 </ul></li>
 <li><strong>Th</strong>
 <ul>
-<li><span class="math inline">\mathbb{K}[x]^* = \mathbb{K}^* \subseteq
+<li><span class="math inline">\mathbb{K}[x]^* = \mathbb{K}^* \subset
 \mathbb{K} \subset \mathbb{K}[x]</span></li>
 </ul></li>
 <li><strong>Dim</strong>
@@ -370,7 +370,7 @@ polinomio costante</li>
 \mathbb{K}[x]</span>, dunque gli unici polinomi invertibili rispetto a
 <span class="math inline">\cdot</span> sono i polinomi costanti, e
 poiché <span class="math inline">0</span> non è invertibile, allora
-<span class="math inline">\mathbb{K}[x]^* = \mathbb{K}^* \subseteq
+<span class="math inline">\mathbb{K}[x]^* = \mathbb{K}^* \subset
 \mathbb{K} \subset \mathbb{K}[x]</span></li>
 </ul></li>
 </ul>
@@ -420,21 +420,19 @@ p(x)</span></li>
 <ul>
 <li><em>prima implicazione</em>
 <ul>
-<li>per il teorema della divisione con il resto tra polinomi, dividendo
-<span class="math inline">p(x)</span> per <span class="math inline">(x -
-c)</span> si ottiene che <span class="math inline">\exists!q(x), r(x)
-\in \mathbb{K}[x] \mid p(x) = q(x) \cdot (x - c) + r(x)</span></li>
-<li><span class="math inline">0 = p(c) = q(c) (c - c) + r(c) = 0 + r(c)
-\iff r(c) = 0</span>, allora r(x) è il polinomio nullo <span
-class="math inline">\implies p(x) = q(x)(x - c) \implies (x- c) \mid
+<li>per il teorema della divisione con il resto tra polinomi, si ha che
+<span class="math inline">\exists!q(x), r(x) \in \mathbb{K}[x] \mid p(x)
+= q(x) (x - c) + r(x) \quad \deg(r(x)) \lt \deg(x - c) = 1</span></li>
+<li><span class="math inline">\left \{ \begin{array}{l}0 = p(c) = q(c)
+(c - c) + r(c) = 0 + r(c) \iff r(c) = 0 \\ \deg(r(x)) \lt 1 \end{array}
+\right. \implies r(x) = 0 \implies p(x) = q(x)(x - c) \iff (x- c) \mid
 p(x)</span></li>
 </ul></li>
 <li><em>seconda implicazione</em>
 <ul>
-<li><span class="math inline">x - c \mid p(x) \iff \exists p(x) \in
-\mathbb{K}[x] \mid p(x) = q(x)\cdot (x - c)</span>, allora <span
-class="math inline">p(c) = q(c) \cdot (c - c) = 0 \implies c</span>
-radice di <span class="math inline">p(x)</span></li>
+<li><span class="math inline">(x - c) \mid p(x) \iff \exists q(x) \in
+\mathbb{K}[x] \mid p(x) = q(x) (x - c) \implies p(c) = q(c) (c - c) =
+0</span></li>
 </ul></li>
 </ul></li>
 </ul>

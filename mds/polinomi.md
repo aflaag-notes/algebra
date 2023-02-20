@@ -72,12 +72,12 @@
 - **Hp**
     - $\mathbb{K}$ campo
 - **Th**
-    - $\mathbb{K}[x]^* = \mathbb{K}^* \subseteq \mathbb{K} \subset \mathbb{K}[x]$
+    - $\mathbb{K}[x]^* = \mathbb{K}^* \subset \mathbb{K} \subset \mathbb{K}[x]$
 - **Dim**
     - $a(x) \in \mathbb{K}[x] \mid \deg(a(x)) \ge 1$, dunque $a(x)$ non è un polinomio costante
     - $\forall b(x) \in \mathbb{K}[x] - \{0\} \quad \deg(a(x) \cdot b(x)) \ge \deg(a(x)) \ge 1$
     - per assurdo, ipotizzando $\exists a^{-1}(x) \in \mathbb{K}[x] - \{0\} \mid a(x) \cdot a^{-1}(x) = 1 \quad \deg(a(x) \cdot a^{-1}(x)) = \deg(1) = \deg(1 \cdot x^0) = 0 \ \bot$
-    - allora $\nexists a^{-1}(x) \in \mathbb{K}[x]$, dunque gli unici polinomi invertibili rispetto a $\cdot$ sono i polinomi costanti, e poiché $0$ non è invertibile, allora $\mathbb{K}[x]^* = \mathbb{K}^* \subseteq \mathbb{K} \subset \mathbb{K}[x]$
+    - allora $\nexists a^{-1}(x) \in \mathbb{K}[x]$, dunque gli unici polinomi invertibili rispetto a $\cdot$ sono i polinomi costanti, e poiché $0$ non è invertibile, allora $\mathbb{K}[x]^* = \mathbb{K}^* \subset \mathbb{K} \subset \mathbb{K}[x]$
 
 ## Oss
 
@@ -105,10 +105,10 @@
     - $p(c) = 0 \iff (x - c) \mid p(x)$
 - **Dim**
     - _prima implicazione_
-        - per il teorema della divisione con il resto tra polinomi, dividendo $p(x)$ per $(x - c)$ si ottiene che $\exists!q(x), r(x) \in \mathbb{K}[x] \mid p(x) = q(x) \cdot (x - c) + r(x)$
-        - $0 = p(c) = q(c) (c - c) + r(c) = 0 + r(c) \iff r(c) = 0$, allora r(x) è il polinomio nullo $\implies p(x) = q(x)(x - c) \implies (x- c) \mid p(x)$
+        - per il teorema della divisione con il resto tra polinomi, si ha che $\exists!q(x), r(x) \in \mathbb{K}[x] \mid p(x) = q(x) (x - c) + r(x) \quad \deg(r(x)) \lt \deg(x - c) = 1$
+        - $\left \{ \begin{array}{l}0 = p(c) = q(c) (c - c) + r(c) = 0 + r(c) \iff r(c) = 0 \\ \deg(r(x)) \lt 1 \end{array} \right. \implies r(x) = 0 \implies p(x) = q(x)(x - c) \iff (x- c) \mid p(x)$
     - _seconda implicazione_
-        - $x - c \mid p(x) \iff \exists p(x) \in \mathbb{K}[x] \mid p(x) = q(x)\cdot (x - c)$, allora $p(c) = q(c) \cdot (c - c) = 0 \implies c$ radice di $p(x)$
+        - $(x - c) \mid p(x) \iff \exists q(x) \in \mathbb{K}[x] \mid p(x) = q(x) (x - c) \implies p(c) = q(c) (c - c) = 0$
 
 ## Oss
 

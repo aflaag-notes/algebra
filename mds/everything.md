@@ -1663,7 +1663,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Hp**
     - $\mathbb{K}$ campo
 - **Th**
-    - $\mathbb{K}[x]^* = \mathbb{K}^* \subseteq \mathbb{K} \subset \mathbb{K}[x]$
+    - $\mathbb{K}[x]^* = \mathbb{K}^* \subset \mathbb{K} \subset \mathbb{K}[x]$
 
 ## Teorema 104
 
