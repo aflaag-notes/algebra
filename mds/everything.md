@@ -1005,6 +1005,14 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
   - $\mathbb{Z}_p$ campo
 
+## Teorema 60
+
+
+- **Hp**
+    - $p \in \mathbb{P}$
+- **Th**
+    - $(\mathbb{Z}_p, \cdot)$ ciclico
+
 ****
 
 # Funzione totiente di Eulero
@@ -1015,18 +1023,9 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 - **Funzione totiente di Eulero**
 
-> - $n \in \mathbb{N}$
-> - $\varphi(n) := |\mathbb{Z}_n^* |$ è detta **funzione totiente di Eulero**
+> - $\varphi(n) : \mathbb{N} \rightarrow \mathbb{N}: n \rightarrow |\mathbb{Z}_n^* |$ è detta **funzione totiente di Eulero**
 
 
-
-## Teorema 60
-
-
-- **Hp**
-  - $n, m \in \mathbb{N} \mid \textrm{MCD}(a, n) = 1$
-- **Th**
-  - $[a]  \in \mathbb{Z}_{m n}^{*} \iff[a] \in \mathbb{Z}_{m}^{*} \land [a] \in \mathbb{Z}^*_{n}$
 
 ## Teorema 61
 
@@ -1049,7 +1048,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 - **Hp**
-    - $k \in \mathbb{N} \mid k \ge 1$
+    - $k \in \mathbb{N} - \{0\}$
     - $p_1, \ldots, p_k \in \mathbb{P}$
     - $i_1, \ldots, i_k \in \mathbb{Z}_{\ge 1}$
     - $n \in \mathbb{N} \mid n = p_1^{i_1} \cdot \ldots \cdot p_k^{i_k}$ 

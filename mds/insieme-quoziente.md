@@ -74,6 +74,15 @@
   - $p \in \mathbb{P} \implies \forall x \in [1, p - 1] \quad \textrm{MCD}(x, p) = 1$
   - allora $\mathbb{Z}_p^* = \mathbb{Z}_p - \{[0]\} \implies \mathbb{Z}_p$ campo
 
+## Oss
+
+- **Hp**
+    - $p \in \mathbb{P}$
+- **Th**
+    - $(\mathbb{Z}_p, \cdot)$ ciclico
+- **Dim**
+    - ⚠️ **manca la dimostrazione**
+
 ****
 
 # Funzione totiente di Eulero
@@ -82,21 +91,7 @@
 
 - **Funzione totiente di Eulero**
 
-> - $n \in \mathbb{N}$
-> - $\varphi(n) := |\mathbb{Z}_n^* |$ è detta **funzione totiente di Eulero**
-
-## Lem
-
-- **Hp**
-  - $n, m \in \mathbb{N} \mid \textrm{MCD}(a, n) = 1$
-- **Th**
-  - $[a]  \in \mathbb{Z}_{m n}^{*} \iff[a] \in \mathbb{Z}_{m}^{*} \land [a] \in \mathbb{Z}^*_{n}$
-- **Dim**
-  - _prima implicazione_
-      - $a \ (\bmod \ \ n) \in \mathbb{Z}_{mn}^* \implies \exists x \in \mathbb{Z} \mid ax \equiv 1 \ (\bmod \ \ mn)$
-        - per dimostrazione precedente $\left.\begin{array}{l}a \mid b \\ x \equiv y \ (\bmod \ \ b)\end{array}\right\} x \equiv y \ (\bmod \ a) \implies \left\{\begin{array}{l}m, n \mid m n \\ a x \equiv 1\ (\bmod \ m n)\end{array}\iff\left\{\begin{array}{l}a x \equiv 1\ (\bmod \ m) \\ a x \equiv 1 \ ( \bmod \ n)\end{array}\right.\right.$ $\implies\left\{\begin{array}{l}{[a] \in \mathbb{Z}_{m}^{*}} \\ {[a] \in \mathbb{Z}_{n}^{*}}\end{array}\right.$
-  - _seconda implicazione_
-    - $[a] \in \mathbb{Z}_{m}^{*} \wedge[a] \in \mathbb{Z}_{n}^{*} \Longrightarrow \exists y, z \mid\left\{\begin{array}{l}a y \equiv 1 \ (\bmod \ m) \\ a z \equiv 1\ (\bmod \ n )\end{array}\right.$, e per il teorema cinese dei resti $\exists ! [x] \in \mathbb{Z}_{mn}$, che si trova ponendo $\left\{\begin{array}{l}x \equiv y\ (\bmod \ m) \\ x \equiv z\ (\bmod \ n)\end{array}\right. \implies \left\{\begin{array}{l}a x \equiv a y\ (\bmod \ m) \\ a x \equiv a z\ (\bmod \ n)\end{array}\right.$ moltiplicando entrambe le equazioni per $a$, e per il sistema precedente $\left\{\begin{array}{ll}a x\equiv1 \ (\bmod \ m) \\ a x\equiv1 \ (\bmod \ n)\end{array}\right.$, e poiché $m$ e $n$ sono coprimi in ipotesi, per il teorema cinese dei resti $ax \equiv 1 \ (\bmod \ mn) \implies [a ] \in \mathbb{Z}_{mn}^*$
+> - $\varphi(n) : \mathbb{N} \rightarrow \mathbb{N}: n \rightarrow |\mathbb{Z}_n^* |$ è detta **funzione totiente di Eulero**
 
 ## Oss
 
@@ -105,8 +100,8 @@
 - **Th**
   - $\varphi(m \cdot n) = \varphi(m) \cdot \varphi(n)$
 - **Dim**
-    - per dimostrazione precedente, esiste una biezione definita come $\mathbb{Z}_{m n}^{*} \rightarrow \mathbb{Z}_{m}^{*} \times \mathbb{Z}_{n}^{*}$
-  - $\varphi(m \cdot n):=\left|\mathbb{Z}_{m n}^{*}\right|=\left|\mathbb{Z}_{m}^{*} \times \mathbb{Z}_{n}^{*}\right|$ perché è una biezione, e dunque è pari a $\left|\mathbb{Z}_{m}^{*}\right| \cdot\left|\mathbb{Z}_{n}^{*}\right|=\varphi(m) \cdot \varphi(n)$ per definizione
+    - sia $f: \mathbb{Z}_{m n}^{*} \rightarrow \mathbb{Z}_{m}^{*} \times \mathbb{Z}_{n}^{*}$
+    - per il teorema cinese dei resti, si ha che $[a] \in \mathbb{Z}_{mn}^* \iff \exists x \in \mathbb{Z} \mid ax \equiv 1 \ (\bmod \ \ mn) \iff \left\{\begin{array}{l}a x \equiv 1\ (\bmod \ m) \\ a x \equiv 1 \ ( \bmod \ n)\end{array}\right.\iff\left\{\begin{array}{l}{[a] \in \mathbb{Z}_{m}^{*}} \\ {[a] \in \mathbb{Z}_{n}^{*}}\end{array}\right. \iff f$ biettiva $\implies \phi(m \cdot n) := \left|\mathbb{Z}_{m n}^{*}\right|=\left|\mathbb{Z}_{m}^{*} \times \mathbb{Z}_{n}^{*}\right|=\left|\mathbb{Z}_{m}^{*}\right| \cdot\left|\mathbb{Z}_{n}^{*}\right| =\varphi(m) \cdot \varphi(n)$
 
 ## Oss
 
@@ -116,16 +111,15 @@
 - **Th**
     - $\varphi(p^k) = p^{k -1}(p-1)$
 - **Dim**
-  - $0 \le a \lt p^k \in \mathbb{Z}_{p^k}^* \iff \textrm{MCD}(a, p^k)=1$, che è vero quando $p \nmid a$ poiché $p \in \mathbb{P}$
-  - simmetricamente, $0 \le a \lt p^k \notin \mathbb{Z}_{p^k}^* \iff \exists n \in \mathbb{Z} \mid a = np$
-    - i multipli di $p$ sono tutti $0 \leq n p<p^{k} \implies 0 \leq n \lt p ^{k - 1}$
-    - **⚠️ INCOMPLETA**
-  - $\varphi \left( p^{k}\right):=\left|\mathbb{Z}_{p^{k}}^{*}\right|=$$\left| \mathbb{Z}_{p^{k}}-\left\{[a] \in \mathbb{Z}_{p^{k}} \mid\nexists[a]^{-1} \in \mathbb{Z}_{p^{k}}\right\} \right|$ = $p^k - p^{k - 1} = p^{k - 1}(p - 1)$
+  <!-- - $\forall 0 \le a \lt p^k  \quad [a]\in \mathbb{Z}_{p^k}^* \iff \textrm{MCD}(a, p^k)=1$, che è vero quando $p \nmid a$ poiché $p \in \mathbb{P}$ -->
+  - $\forall 0 \le a \lt p^k \quad [a] \notin \mathbb{Z}_{p^k}^* \iff \textrm{MCD}(a, p^k) \neq 1 \iff p \mid a$, poiché $p \in \mathbb{P}$
+  - $\forall 0 \le a \lt p^k \quad p \mid a \iff \exists n \in \mathbb{Z} \mid a = np \implies 0 \leq n p<p^{k} \iff 0 \leq n \lt p ^{k - 1} \implies$ gli elementi non invertibili in $\mathbb{Z}_{p^k}$ sono $p^{k - 1}$
+  - allora $\varphi \left( p^{k}\right):=\left|\mathbb{Z}_{p^{k}}^{*}\right|=$$\left| \mathbb{Z}_{p^{k}}-\left\{[a] \in \mathbb{Z}_{p^{k}} \mid\nexists[a]^{-1} \in \mathbb{Z}_{p^{k}}\right\} \right|$ = $p^k - p^{k - 1} = p^{k - 1}(p - 1)$
 
 ## Oss
 
 - **Hp**
-    - $k \in \mathbb{N} \mid k \ge 1$
+    - $k \in \mathbb{N} - \{0\}$
     - $p_1, \ldots, p_k \in \mathbb{P}$
     - $i_1, \ldots, i_k \in \mathbb{Z}_{\ge 1}$
     - $n \in \mathbb{N} \mid n = p_1^{i_1} \cdot \ldots \cdot p_k^{i_k}$ 

@@ -350,6 +350,21 @@ n)</span>, allora <span class="math inline">d = 1 = ab + nk \iff nk = 1
 \{[0]\} \implies \mathbb{Z}_p</span> campo</li>
 </ul></li>
 </ul>
+<a href="#oss-4"><h2 id="oss-4">Oss</h2></a>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">p \in \mathbb{P}</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">(\mathbb{Z}_p, \cdot)</span> ciclico</li>
+</ul></li>
+<li><strong>Dim</strong>
+<ul>
+<li>⚠️ <strong>manca la dimostrazione</strong></li>
+</ul></li>
+</ul>
 <hr />
 <a href="#funzione-totiente-di-eulero"><h1 id="funzione-totiente-di-eulero">Funzione totiente di Eulero</h1></a>
 <a href="#def-2"><h2 id="def-2">Def</h2></a>
@@ -358,64 +373,12 @@ n)</span>, allora <span class="math inline">d = 1 = ab + nk \iff nk = 1
 </ul>
 <blockquote>
 <ul>
-<li><span class="math inline">n \in \mathbb{N}</span></li>
-<li><span class="math inline">\varphi(n) := |\mathbb{Z}_n^* |</span> è
-detta <strong>funzione totiente di Eulero</strong></li>
+<li><span class="math inline">\varphi(n) : \mathbb{N} \rightarrow
+\mathbb{N}: n \rightarrow |\mathbb{Z}_n^* |</span> è detta
+<strong>funzione totiente di Eulero</strong></li>
 </ul>
 </blockquote>
-<a href="#lem"><h2 id="lem">Lem</h2></a>
-<ul>
-<li><strong>Hp</strong>
-<ul>
-<li><span class="math inline">n, m \in \mathbb{N} \mid \textrm{MCD}(a,
-n) = 1</span></li>
-</ul></li>
-<li><strong>Th</strong>
-<ul>
-<li><span class="math inline">[a] \in \mathbb{Z}_{m n}^{*} \iff[a] \in
-\mathbb{Z}_{m}^{*} \land [a] \in \mathbb{Z}^*_{n}</span></li>
-</ul></li>
-<li><strong>Dim</strong>
-<ul>
-<li><em>prima implicazione</em>
-<ul>
-<li><span class="math inline">a \ (\bmod \ \ n) \in \mathbb{Z}_{mn}^*
-\implies \exists x \in \mathbb{Z} \mid ax \equiv 1 \ (\bmod \ \
-mn)</span>
-<ul>
-<li>per dimostrazione precedente <span
-class="math inline">\left.\begin{array}{l}a \mid b \\ x \equiv y \
-(\bmod \ \ b)\end{array}\right\} x \equiv y \ (\bmod \ a) \implies
-\left\{\begin{array}{l}m, n \mid m n \\ a x \equiv 1\ (\bmod \ m
-n)\end{array}\iff\left\{\begin{array}{l}a x \equiv 1\ (\bmod \ m) \\ a x
-\equiv 1 \ ( \bmod \ n)\end{array}\right.\right.</span> <span
-class="math inline">\implies\left\{\begin{array}{l}{[a] \in
-\mathbb{Z}_{m}^{*}} \\ {[a] \in
-\mathbb{Z}_{n}^{*}}\end{array}\right.</span></li>
-</ul></li>
-</ul></li>
-<li><em>seconda implicazione</em>
-<ul>
-<li><span class="math inline">[a] \in \mathbb{Z}_{m}^{*} \wedge[a] \in
-\mathbb{Z}_{n}^{*} \Longrightarrow \exists y, z
-\mid\left\{\begin{array}{l}a y \equiv 1 \ (\bmod \ m) \\ a z \equiv 1\
-(\bmod \ n )\end{array}\right.</span>, e per il teorema cinese dei resti
-<span class="math inline">\exists ! [x] \in \mathbb{Z}_{mn}</span>, che
-si trova ponendo <span class="math inline">\left\{\begin{array}{l}x
-\equiv y\ (\bmod \ m) \\ x \equiv z\ (\bmod \ n)\end{array}\right.
-\implies \left\{\begin{array}{l}a x \equiv a y\ (\bmod \ m) \\ a x
-\equiv a z\ (\bmod \ n)\end{array}\right.</span> moltiplicando entrambe
-le equazioni per <span class="math inline">a</span>, e per il sistema
-precedente <span class="math inline">\left\{\begin{array}{ll}a x\equiv1
-\ (\bmod \ m) \\ a x\equiv1 \ (\bmod \ n)\end{array}\right.</span>, e
-poiché <span class="math inline">m</span> e <span
-class="math inline">n</span> sono coprimi in ipotesi, per il teorema
-cinese dei resti <span class="math inline">ax \equiv 1 \ (\bmod \ mn)
-\implies [a ] \in \mathbb{Z}_{mn}^*</span></li>
-</ul></li>
-</ul></li>
-</ul>
-<a href="#oss-4"><h2 id="oss-4">Oss</h2></a>
+<a href="#oss-5"><h2 id="oss-5">Oss</h2></a>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -429,18 +392,22 @@ n) = 1</span></li>
 </ul></li>
 <li><strong>Dim</strong>
 <ul>
-<li>per dimostrazione precedente, esiste una biezione definita come
-<span class="math inline">\mathbb{Z}_{m n}^{*} \rightarrow
+<li>sia <span class="math inline">f: \mathbb{Z}_{m n}^{*} \rightarrow
 \mathbb{Z}_{m}^{*} \times \mathbb{Z}_{n}^{*}</span></li>
-<li><span class="math inline">\varphi(m \cdot n):=\left|\mathbb{Z}_{m
-n}^{*}\right|=\left|\mathbb{Z}_{m}^{*} \times
-\mathbb{Z}_{n}^{*}\right|</span> perché è una biezione, e dunque è pari
-a <span class="math inline">\left|\mathbb{Z}_{m}^{*}\right|
-\cdot\left|\mathbb{Z}_{n}^{*}\right|=\varphi(m) \cdot \varphi(n)</span>
-per definizione</li>
+<li>per il teorema cinese dei resti, si ha che <span
+class="math inline">[a] \in \mathbb{Z}_{mn}^* \iff \exists x \in
+\mathbb{Z} \mid ax \equiv 1 \ (\bmod \ \ mn) \iff
+\left\{\begin{array}{l}a x \equiv 1\ (\bmod \ m) \\ a x \equiv 1 \ (
+\bmod \ n)\end{array}\right.\iff\left\{\begin{array}{l}{[a] \in
+\mathbb{Z}_{m}^{*}} \\ {[a] \in \mathbb{Z}_{n}^{*}}\end{array}\right.
+\iff f</span> biettiva <span class="math inline">\implies \phi(m \cdot
+n) := \left|\mathbb{Z}_{m n}^{*}\right|=\left|\mathbb{Z}_{m}^{*} \times
+\mathbb{Z}_{n}^{*}\right|=\left|\mathbb{Z}_{m}^{*}\right|
+\cdot\left|\mathbb{Z}_{n}^{*}\right| =\varphi(m) \cdot
+\varphi(n)</span></li>
 </ul></li>
 </ul>
-<a href="#oss-5"><h2 id="oss-5">Oss</h2></a>
+<a href="#oss-6"><h2 id="oss-6">Oss</h2></a>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -452,20 +419,17 @@ per definizione</li>
 <li><span class="math inline">\varphi(p^k) = p^{k -1}(p-1)</span></li>
 </ul></li>
 <li><strong>Dim</strong>
+<!-- - $\forall 0 \le a \lt p^k  \quad [a]\in \mathbb{Z}_{p^k}^* \iff \textrm{MCD}(a, p^k)=1$, che è vero quando $p \nmid a$ poiché $p \in \mathbb{P}$ -->
 <ul>
-<li><span class="math inline">0 \le a \lt p^k \in \mathbb{Z}_{p^k}^*
-\iff \textrm{MCD}(a, p^k)=1</span>, che è vero quando <span
-class="math inline">p \nmid a</span> poiché <span class="math inline">p
-\in \mathbb{P}</span></li>
-<li>simmetricamente, <span class="math inline">0 \le a \lt p^k \notin
-\mathbb{Z}_{p^k}^* \iff \exists n \in \mathbb{Z} \mid a = np</span>
-<ul>
-<li>i multipli di <span class="math inline">p</span> sono tutti <span
-class="math inline">0 \leq n p&lt;p^{k} \implies 0 \leq n \lt p ^{k -
-1}</span></li>
-<li><strong>⚠️ INCOMPLETA</strong></li>
-</ul></li>
-<li><span class="math inline">\varphi \left(
+<li><span class="math inline">\forall 0 \le a \lt p^k \quad [a] \notin
+\mathbb{Z}_{p^k}^* \iff \textrm{MCD}(a, p^k) \neq 1 \iff p \mid
+a</span>, poiché <span class="math inline">p \in \mathbb{P}</span></li>
+<li><span class="math inline">\forall 0 \le a \lt p^k \quad p \mid a
+\iff \exists n \in \mathbb{Z} \mid a = np \implies 0 \leq n p&lt;p^{k}
+\iff 0 \leq n \lt p ^{k - 1} \implies</span> gli elementi non
+invertibili in <span class="math inline">\mathbb{Z}_{p^k}</span> sono
+<span class="math inline">p^{k - 1}</span></li>
+<li>allora <span class="math inline">\varphi \left(
 p^{k}\right):=\left|\mathbb{Z}_{p^{k}}^{*}\right|=</span><span
 class="math inline">\left| \mathbb{Z}_{p^{k}}-\left\{[a] \in
 \mathbb{Z}_{p^{k}} \mid\nexists[a]^{-1} \in \mathbb{Z}_{p^{k}}\right\}
@@ -473,11 +437,11 @@ class="math inline">\left| \mathbb{Z}_{p^{k}}-\left\{[a] \in
 - 1)</span></li>
 </ul></li>
 </ul>
-<a href="#oss-6"><h2 id="oss-6">Oss</h2></a>
+<a href="#oss-7"><h2 id="oss-7">Oss</h2></a>
 <ul>
 <li><strong>Hp</strong>
 <ul>
-<li><span class="math inline">k \in \mathbb{N} \mid k \ge 1</span></li>
+<li><span class="math inline">k \in \mathbb{N} - \{0\}</span></li>
 <li><span class="math inline">p_1, \ldots, p_k \in
 \mathbb{P}</span></li>
 <li><span class="math inline">i_1, \ldots, i_k \in \mathbb{Z}_{\ge
