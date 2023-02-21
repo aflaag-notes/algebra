@@ -348,7 +348,6 @@
     - $I_n = I_n^{-1} = I_n^T \implies I_n \in \textrm{O}(n)$
     - $A, B \in \textrm{O}(n) \implies \left \{ \begin{array}{l} A^{-1} = A^T \\ B^{-1} = B^T \end{array} \right. \implies (AB)^{-1} = B^{-1}A^{-1} = B^TA^T = (AB)^T \implies AB \in \textrm{O}(n)$
     - $A \in \textrm{O}(n) \implies A^{-1} = A^T \implies (A^{-1}A) = I_n = (A^{-1}A)^T \iff I_n = A^T(A^{-1})^T = A^{-1}(A^{-1})^T \iff (A^{-1})^T = A = (A^{-1})^{-1} \implies A^{-1} \in \textrm{O}(n)$
-    - $p_1, \ldots, p_k \in \mathbb{P}$
 
 ## Def
 
