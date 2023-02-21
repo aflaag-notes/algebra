@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Algoritmo di Euclide</title>
+  <style>
+    html {
+      color: #fdfdfd;
+      background-color: #1f1f1f;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      max-width: 60em;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #fdfdfd;
+    }
+    a:visited {
+      color: #fdfdfd;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #adbac7;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #fdfdfd;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #fdfdfd;
+      border-bottom: 1px solid #fdfdfd;
+    }
+    th {
+      border-top: 1px solid #fdfdfd;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+  </style>
+  <script defer=""
+  src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js"></script>
+  <script>document.addEventListener("DOMContentLoaded", function () {
+ var mathElements = document.getElementsByClassName("math");
+ var macros = [];
+ for (var i = 0; i < mathElements.length; i++) {
+  var texText = mathElements[i].firstChild;
+  if (mathElements[i].tagName == "SPAN") {
+   katex.render(texText.data, mathElements[i], {
+    displayMode: mathElements[i].classList.contains('display'),
+    throwOnError: false,
+    macros: macros,
+    fleqn: false
+   });
+}}});
+  </script>
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css" />
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title"> </h1>
+</header>
+<a href="#algoritmo-di-euclide"><h1 id="algoritmo-di-euclide">Algoritmo di Euclide</h1></a>
+<a href="#lem"><h2 id="lem">Lem</h2></a>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">a, b, c, \in \mathbb{Z}</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">a \mid b \land a \mid c \implies \forall z
+\in I(b, c) \quad a \mid z</span></li>
+</ul></li>
+<li><strong>Dim</strong>
+<ul>
+<li><span class="math inline">\left \{ \begin{array}{l}a \mid b \iff
+\exists k \in \mathbb{Z} \mid ak = b \\ a \mid c \iff \exists h \in
+\mathbb{Z} \mid ah = c \end{array} \right.</span></li>
+<li><span class="math inline">\forall z \in I(b, c) \quad \exists x, y
+\in \mathbb{Z} \mid z = bx + cy = akx + ahy = a(kx + cy) \iff a \mid
+z</span></li>
+</ul></li>
+</ul>
+<a href="#alg"><h2 id="alg">Alg</h2></a>
+<ul>
+<li><strong>In</strong>
+<ul>
+<li><span class="math inline">a, b \in \mathbb{Z} \mid 0 \lt a \le
+b</span></li>
+</ul></li>
+<li><strong>Out</strong>
+<ul>
+<li><span class="math inline">d:=\textrm{MCD}(a, b)</span></li>
+</ul></li>
+<li><strong>Alg</strong>
+<ul>
+<li><span class="math inline">r_0:=b</span></li>
+<li><span class="math inline">r_1:=a</span></li>
+<li><span class="math inline">r_i = r_0q_0 + r_1</span></li>
+<li><span class="math inline">\texttt{while} \ r_i \neq 0
+\texttt{:}</span>
+<ul>
+<li><span class="math inline">r_{i + 1} = r_{i - 1}q_{i - 1} +
+r_i</span></li>
+<li><span class="math inline">r_i := r_{i + 1}</span></li>
+</ul></li>
+<li><span class="math inline">\texttt{return} \ r_i</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">r_n = d</span></li>
+</ul></li>
+<li><strong>Dim</strong>
+<ul>
+<li>siano <span class="math inline">i \in [0, n + 1]</span> le
+iterazioni dell’algoritmo, dove <span class="math inline">r_{n + 1} =
+0</span></li>
+<li><span class="math inline">d \mid r_n</span>
+<ul>
+<li><em>caso base</em>
+<ul>
+<li>si noti che, per dimostrazione precedente, <span
+class="math inline">I(a, b) = I(d)</span></li>
+<li><span class="math inline">r_0:= b \in I(a,b)</span></li>
+<li><span class="math inline">r_1:=a \in I(a,b)</span></li>
+<li><span class="math inline">r_2 \equiv r_0 \ (\bmod \ r_1) \iff
+\exists q_1 \in \mathbb{Z} \mid r_0 = r_1q_1 + r_2 \iff r_2 = r_0 -
+r_1q_1 = b - aq_1 \in I(a,b) = I(d)</span></li>
+</ul></li>
+<li><em>ipotesi induttiva forte</em>
+<ul>
+<li><span class="math inline">\forall i \in [0, n] \quad r_i \in I(a,b)
+= I(d)</span></li>
+</ul></li>
+<li><em>passo induttivo</em>
+<ul>
+<li><span class="math inline">r_{i + 1} \equiv r_{i - 1} \ (\bmod \ r_i)
+\iff \exists q_i \in \mathbb{Z} \mid r_{i - 1} = r_iq_i + r_{i + 1} \iff
+r_{i + 1} = r_{i - 1} - r_iq_i</span></li>
+<li><span class="math inline">r_{i - 1}, r_i \in I(a, b) = I(d)</span>
+per ipotesi induttiva forte <span class="math inline">\implies r_{i - 1}
+- r_iq_i \in I(a, b) = I(d)</span></li>
+</ul></li>
+<li>in particolare, si ha che <span class="math inline">r_n \in I(a,b) =
+I(d) \iff \exists p \in \mathbb{Z} \mid dp = r_n \iff d \mid
+r_n</span></li>
+</ul></li>
+<li><span class="math inline">r_n \mid d</span>
+<ul>
+<li><span class="math inline">\left \{ \begin{array}{l} r_{n + 1} = 0 \\
+0 \equiv r_{n + 1} \equiv r_{n - 1} \ (\bmod \ r_n) \iff \exists q_n \in
+\mathbb{Z} \mid r_{n- 1} = r_nq_n \end{array} \iff r_n \mid r_{n -
+1}\right.</span></li>
+<li><span class="math inline">r_n \equiv r_{n - 2} \ (\bmod r_{n - 1})
+\iff \exists q_{n - 1} \in \mathbb{Z} \mid r_n =r_{n - 1} q_{n - 1} +
+r_{n - 2} \iff r_{n - 2} = r_n - r_{n - 1}q_{n - 1} \in I(r_n, r_{n -
+1})</span></li>
+<li>per dimostrazione precedente <span class="math inline">r_n \mid r_n
+\land r_n \mid r_{n - 1} \implies \forall z \in I(r_n, r_{n - 1}) \quad
+r_n \mid z</span>, e in particolare <span class="math inline">r_2 \in
+I(r_n, r_{n - 1}) \implies r_n \mid r_{n-2}</span></li>
+<li>è possibile riptere il ragionamento analogo ottenendo <span
+class="math inline">\left \{ \begin{array}{c} r_n \mid r_n \land r_n
+\mid r_{n - 1} \implies r_n \mid r_{n -2} \\ r_n \mid r_{n - 1} \land
+r_n \mid r_{n - 2} \implies r_n \mid r_{n - 3} \\ \vdots \\ r_n \mid
+r_{n - i} \land r_i \mid r_{n - (i + 1)} \implies r_n \mid r_{n - (i +
+2)} \\ \vdots \\ r_n \mid r_2 \land r_n \mid r_1 \implies r_n \mid r_0
+\end{array} \right.</span></li>
+<li><span class="math inline">d := \textrm{MCD}(a,b) \implies d \mid a
+\land d \mid b</span>, e poiché <span class="math inline">r_n \mid r_0
+=: b \land r_n \mid r_1 =: a \implies r_n \mid d</span></li>
+</ul></li>
+<li><span class="math inline">d \mid r_n \land r_n \mid d \implies r_n =
+d</span></li>
+</ul></li>
+</ul>
+<hr />
+<a href="#rsa"><h1 id="rsa">RSA</h1></a>
+<ul>
+<li><strong>In</strong>
+<ul>
+<li><span class="math inline">A</span> interlocutore</li>
+<li><span class="math inline">p, q \in \mathbb{P} \mid p \neq q</span>,
+con <span class="math inline">p, q</span> sufficientemente grandi</li>
+<li><span class="math inline">m</span> messaggio <span
+class="math inline">\mid \textrm{MCD}(m, n) = 1</span></li>
+</ul></li>
+<li><strong>Out</strong>
+<ul>
+<li><span class="math inline">\texttt{pub}_A,
+\texttt{priv}_A</span></li>
+</ul></li>
+<li><strong>Alg</strong>
+<ul>
+<li><span class="math inline">n := pq</span></li>
+<li><span class="math inline">\lambda(n) := \textrm{mcm}(p-1,
+q-1)</span></li>
+<li><span class="math inline">e \in \mathbb{N} \mid \left \{
+\begin{array}{l} 1 \lt e \lt \lambda(n) \\ \textrm{MCD}(e, \lambda(n))=
+1 \end{array} \right.</span></li>
+<li><span class="math inline">d:= e^{-1} \ (\bmod \
+\lambda(n))</span></li>
+<li><span class="math inline">\texttt{pub}_A(m, e, n) := m^e \ (\bmod \
+n)</span></li>
+<li><span class="math inline">\texttt{priv}_A(m, d, n) := (m^e)^d \
+(\bmod \ n)</span></li>
+</ul></li>
+<li><strong>Oss</strong>
+<ul>
+<li>se <span class="math inline">p,q</span> non fossero sufficientemente
+grandi, poiché <span class="math inline">n</span> è pubblico, si
+rischierebbe di poter trovare <span class="math inline">p</span> e <span
+class="math inline">q</span>, permettendo di decrittare il messaggio
+anche da chi non possiede <span class="math inline">d</span></li>
+<li><span class="math inline">p \mid m \implies m^{ed} \equiv m \equiv 0
+\ (\bmod \ p)</span>, il che comporterebbe una perdita di
+informazione</li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\texttt{priv}_A(\texttt{pub}_A(m, e, n),
+d, n) = m</span></li>
+</ul></li>
+<li><strong>Dim</strong>
+<ul>
+<li><span class="math inline">\left \{ \begin{array}{l} (p-1) \mid
+\lambda(n) \\ (q - 1) \mid \lambda(n) \end{array} \right. \implies
+\exists i, j \in \mathbb{Z} \mid \lambda(n) = (p-1) \cdot i = (q - 1)
+\cdot j</span></li>
+<li><span class="math inline">\textrm{MCD}(m, n) = 1 \implies p \nmid m
+\land q \nmid m \implies \left \{ \begin{array}{l}p \nmid m \implies m^p
+\equiv m \iff m^{p-1} \equiv 1 \implies m^{\lambda(n)} \equiv
+m^{(p-1)\cdot i} \equiv 1 \ (\bmod \ p) \\ q \nmid m \implies m^q \equiv
+m \iff m^{q-1} \equiv 1 \implies m^{\lambda(n)} \equiv m^{(q-1)\cdot j}
+\equiv 1 \ (\bmod \ q) \end{array} \right. \iff m^{\lambda(n)} \equiv 1
+\ (\bmod \ n)</span></li>
+<li><span class="math inline">\textrm{MCD}(e, \lambda(n)) = 1 \iff [e]
+\in \mathbb{Z}^*_{\lambda(n)} \implies \exists ! [d] \in
+\mathbb{Z}^*_{\lambda(n)} \mid ed \equiv 1 \ (\bmod \ \lambda(n))
+\implies \forall k \in \mathbb{Z} \quad ed = 1 + k
+\cdot\lambda(n)</span></li>
+<li>allora si ha che <span class="math inline">(m^e)^d \equiv m^{1 + k
+\cdot \lambda(n)} \equiv m \cdot (m^{\lambda(n)})^k \equiv m \ (\bmod \
+n)</span></li>
+</ul></li>
+</ul>
+<hr />
+<a href="#interpolazione-di-lagrange"><h1 id="interpolazione-di-lagrange">Interpolazione di Lagrange</h1></a>
+<ul>
+<li><strong>In</strong>
+<ul>
+<li><span class="math inline">n \in \mathbb{N}</span></li>
+<li><span class="math inline">b_0, \ldots, b_n, c_0, \ldots, c_n \in
+\mathbb{K} \left \{ \begin{array}{c}(b_0, c_0) \\ \vdots \\ (b_n, c_n)
+\end{array} \right.</span> sono punti del <span
+class="math inline">p(x)</span> da trovare, e inoltre <span
+class="math inline">\forall i \in [1, n], i \neq j \quad b_i \neq
+b_j</span></li>
+</ul></li>
+<li><strong>Out</strong>
+<ul>
+<li><span class="math inline">p(x) \in \mathbb{K}[x]_{\le n} \mid \left
+\{ \begin{array}{c} c_0 := a_0 + a_1b_0 + a_2b_0^2 + \ldots + a_nb_0^n =
+p(b_0) \\ c_1:=a_0 + a_1b_1 + a_2b_1^2 + \ldots + a_nb_1^n = p(b_1) \\
+\vdots \\ c_n := a_0 + a_1b_n + a_2b_n^2 + \ldots + a_nb_n^n = p(b_n)
+\end{array} \right.</span></li>
+</ul></li>
+<li><strong>Alg</strong>
+<ul>
+<li><span class="math inline">\forall i \in [0, n] \quad p_i(x) :=
+\displaystyle \prod_{\begin{subarray}{c}0 \le j \le n \\ i \neq\ j
+\end{subarray}}{\dfrac{x - b_j}{b_i - b_j}}</span></li>
+<li><span class="math inline">p(x) := c_0p_0(x) + \ldots + c_n
+p_n(x)</span></li>
+</ul></li>
+<li><strong>Oss</strong>
+<ul>
+<li>è possibile sfruttare questo algoritmo per lo scambio di messaggi,
+ponendo il messaggio da inviare all’interno del termine noto di <span
+class="math inline">p(x)</span></li>
+<li>una volta reperito <span class="math inline">p(x)</span> a partire
+dai punti <span class="math inline">\left \{ \begin{array}{c}(b_0, c_0)
+\\ \vdots \\ (b_n, c_n) \end{array} \right.</span>, basterà porre <span
+class="math inline">p(0)</span> per recuperare il messaggio</li>
+<li>la sicurezza di tale algoritmo è fornita dal fatto che è impossibile
+ricostruire <span class="math inline">p(x)</span> senza avere
+<em>tutti</em> i punti necessari, altrimenti non è possibile ricostruire
+<span class="math inline">p(x)</span> come combinazione lineare in <span
+class="math inline">\mathbb{K}[x]_{\le n}</span></li>
+</ul></li>
+<li><strong>Dim</strong>
+<ul>
+<li>si noti che la matrice dei coefficienti del sistema considerato in
+ipotesi è una matrice di Vandermonde a coefficienti <span
+class="math inline">V(b_0, \ldots, b_n)</span>, dunque per dimostrazione
+precedente <span class="math inline">\det(V(b_0, \ldots, b_n)) \neq
+0</span> poiché <span class="math inline">b_0, \ldots, b_n</span> sono
+stati scelti distinti</li>
+<li>per dimostrazione precedente <span
+class="math inline">\mathbb{K}[x]_{\le n}</span> è uno spazio
+vettoriale, e in particolare <span
+class="math inline">\dim(\mathbb{K}[x]_{\le n}) = n + 1</span></li>
+<li>allora <span class="math inline">\mathcal{P} :=\{p_0(x), \ldots,
+p_n(x)\}</span> base di <span class="math inline">\mathbb{K}[x]_{\le
+n}</span>, e dunque determineranno univocamente il polinomio
+cercato</li>
+<li>si noti inoltre che <span class="math inline">\forall i \in [1, n]
+\quad p_i(x)= \dfrac{(x-b_n)(x - b_{n - 1})\cdot \ldots \cdot (x-b_{i +
+1})(x - b_{i - 1})\cdot \ldots \cdot (x-b_1)(x-b_0)}{(b_i-b_n)(b_i -
+b_{n - 1})\cdot \ldots \cdot (b_i-b_{i + 1})(b_i - b_{i - 1})\cdot
+\ldots \cdot (b_i -b_1)(b_i-b_0)} \implies p_i(b_j) = \left \{
+\begin{array}{l} 1 &amp; i = j \\ 0 &amp; i \neq j \end{array}
+\right.</span>
+<ul>
+<li><span class="math inline">(x - b_i)</span> non è presente nel
+numeratore, ma <span class="math inline">(x - b_j)</span> sarà
+sicuramente presente</li>
+</ul></li>
+<li>allora, ponendo <span class="math inline">p(x) := c_0 p_0(x) +
+\ldots + c_np_n(x)</span>, ad esempio per <span class="math inline">x =
+b_0</span> si ha che <span class="math inline">p(x) = c_0 p_0(b_0) +
+\ldots + c_np_n(b_0) = c_0 \cdot 1 + c_1 \cdot 0 + \ldots + c_n \cdot 0
+= c_0</span></li>
+</ul></li>
+</ul>
+<hr />
+<a href="#algoritmo-di-gram-schmidt"><h1 id="algoritmo-di-gram-schmidt">Algoritmo di Gram-Schmidt</h1></a>
+<ul>
+<li><strong>In</strong>
+<ul>
+<li><span class="math inline">\mathbb{K}</span> campo</li>
+<li><span class="math inline">V</span> spazio vettoriale su <span
+class="math inline">\mathbb{K}</span></li>
+<li><span class="math inline">v_1, \ldots, v_n</span> base di <span
+class="math inline">V</span></li>
+<li><span class="math inline">\textrm{proj}_u(v) := \dfrac{u \cdot v}{u
+\cdot u} u</span></li>
+</ul></li>
+<li><strong>Out</strong>
+<ul>
+<li><span class="math inline">u_1, \ldots, u_n</span> base ortogonale di
+<span class="math inline">V</span></li>
+</ul></li>
+<li><strong>Alg</strong>
+<ul>
+<li><span class="math inline">\left \{ \begin{array}{l} u_1 := v_1 \\
+u_2 := v_2 - \textrm{proj}_{u_1}(v_2) \\ u_3 := v_3 -
+\textrm{proj}_{u_1}(v_3) - \textrm{proj}_{u_2}(v_3) \\ \ \ \ \ \ \ \ \ \
+\ \ \ \ \ \ \ \ \vdots \\ u_n := v_n - \displaystyle{\sum_{i = 1}^{n -
+1}{\textrm{proj}_{u_i}(v_n)}}\end{array}\right.</span></li>
+</ul></li>
+<li><strong>Oss</strong>
+<ul>
+<li>siano <span class="math inline">u, v \in V</span>, e <span
+class="math inline">\theta</span> l’angolo compreso tra <span
+class="math inline">u</span> e <span class="math inline">v</span>, e
+<span class="math inline">x</span> la norma della proiezione di <span
+class="math inline">v</span> su <span class="math inline">u</span></li>
+<li>allora <span class="math inline">\textrm{proj}_u(v)= xu</span>,
+poiché <span class="math inline">x</span> è la norma della proiezione e
+<span class="math inline">u</span> ne dà la direzione</li>
+<li>per definizione <span class="math inline">\cos
+(\theta)=\dfrac{x}{||v||}</span></li>
+<li>inoltre, per dimostrazione precedente <span class="math inline">\cos
+(\theta)=\dfrac{u \cdot v}{||u|| \cdot ||v||}</span></li>
+<li>allora <span class="math inline">\dfrac{x}{||v||}=\cos
+(\theta)=\dfrac{u \cdot v}{||u|| \cdot ||v||} \implies x = \dfrac{u
+\cdot v}{||u||}</span></li>
+<li>allora, ha significato la funzione che proietta <span
+class="math inline">v</span> su <span class="math inline">u</span>,
+poiché <span class="math inline">\textrm{proj}_u(v)=xu=\dfrac{u \cdot
+v}{||u||} \cdot \dfrac{u}{||u||} =\dfrac{u \cdot v}{u \cdot
+u}u</span></li>
+</ul></li>
+<li><strong>Dim</strong>
+<ul>
+<li><span class="math inline">u_1 := v_1</span>, poiché il primo vettore
+deve essere ortogonale solamente a sé stesso</li>
+<li>allora <span class="math inline">u_2 := v_2 -
+\textrm{proj}_{u_1}(v_2)</span> è la differenza vettoriale tra <span
+class="math inline">v_2</span> e la sua proiezione su <span
+class="math inline">u_1</span>, che per costruzione sarà un vettore
+perpendicolare a <span class="math inline">u_1</span>
+<ul>
+<li>si noti che <span class="math inline">u_2 \cdot u_1 = (v_2 -
+\textrm{proj}_{u_1}(v_2))\cdot u_1 = v_2 \cdot u_1 - \dfrac{u_1 \cdot
+v_2}{u_1 \cdot u_1}\cdot u_1\cdot u_1=0 \implies u_2 \ \bot \
+u_1</span></li>
+</ul></li>
+<li>allora <span class="math inline">u_n := v_n - \displaystyle{\sum_{i
+= 1}^{n - 1}{\textrm{proj}_{u_i}(v_n)}}</span>, poiché è necessario
+assicurarsi che il vettore <span class="math inline">v_n</span> sia
+ortogonale a tutti gli altri <span class="math inline">u_1, \ldots,
+u_{n-1}</span> già creati</li>
+</ul></li>
+</ul>
+</body>
+</html>

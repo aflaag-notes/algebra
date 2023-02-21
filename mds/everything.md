@@ -3600,96 +3600,6 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 ****
-# Altro
-
-
-
-## Teorema 199
-
-
-- **Hp**
-    - $a, b, c, \in \mathbb{Z}$
-- **Th**
-    - $a \mid b \land a \mid c \implies \forall z \in I(b, c) \quad a \mid z$
-
-## Teorema 200
-
-
-- **In**
-    - $a, b \in \mathbb{Z} \mid 0 \lt a \le b$
-- **Out**
-    - $d:=\textrm{MCD}(a, b)$
-- **Alg**
-    - $r_0:=b$
-    - $r_1:=a$
-    - $r_i = r_0q_0 + r_1$
-    - $\texttt{while} \ r_i \neq 0 \texttt{:}$
-        - $r_{i + 1} = r_{i - 1}q_{i - 1} + r_i$
-        - $r_i := r_{i + 1}$
-    - $\texttt{return} \ r_i$
-- **Th**
-    - $r_n = d$
-
-## Teorema 201
-
-
-- **In**
-    - $A$ interlocutore
-    - $p, q \in \mathbb{P} \mid p \neq q$, con $p, q$ sufficientemente grandi
-    - $m$ messaggio $\mid \textrm{MCD}(m, n) = 1$
-- **Out**
-    - $\texttt{pub}_A, \texttt{priv}_A$
-- **Alg**
-    - $n := pq$
-    - $\lambda(n) := \textrm{mcm}(p-1, q-1)$
-    - $e \in \mathbb{N} \mid \left \{ \begin{array}{l} 1 \lt e \lt \lambda(n) \\ \textrm{MCD}(e, \lambda(n))= 1 \end{array} \right.$
-    - $d:= e^{-1} \ (\bmod \ \lambda(n))$
-    - $\texttt{pub}_A(m, e, n) := m^e \ (\bmod \ n)$
-    - $\texttt{priv}_A(m, d, n) := (m^e)^d \ (\bmod \ n)$
-- **Oss**
-    - se $p,q$ non fossero sufficientemente grandi, poiché $n$ è pubblico, si rischierebbe di poter trovare $p$ e $q$, permettendo di decrittare il messaggio anche da chi non possiede $d$
-    - $p \mid m \implies m^{ed} \equiv m \equiv 0 \ (\bmod \ p)$, il che comporterebbe una perdita di informazione
-- **Th**
-    - $\texttt{priv}_A(\texttt{pub}_A(m, e, n), d, n) = m$
-
-## Teorema 202
-
-
-- **In**
-    - $n \in \mathbb{N}$
-    - $b_0, \ldots, b_n, c_0, \ldots, c_n \in \mathbb{K} \left \{ \begin{array}{c}(b_0, c_0) \\ \vdots \\ (b_n, c_n) \end{array} \right.$ sono punti del $p(x)$ da trovare, e inoltre $\forall i \in [1, n], i \neq j \quad b_i \neq b_j$
-- **Out**
-    - $p(x) \in \mathbb{K}[x]_{\le n} \mid \left \{ \begin{array}{c} c_0 := a_0 + a_1b_0 + a_2b_0^2 + \ldots + a_nb_0^n = p(b_0) \\ c_1:=a_0 + a_1b_1 + a_2b_1^2 + \ldots + a_nb_1^n = p(b_1) \\ \vdots \\ c_n := a_0 + a_1b_n + a_2b_n^2 + \ldots + a_nb_n^n = p(b_n) \end{array} \right.$
-- **Alg**
-    - $\forall i \in [0, n] \quad p_i(x) := \displaystyle \prod_{\begin{subarray}{c}0 \le  j \le n \\ i \neq\ j \end{subarray}}{\dfrac{x - b_j}{b_i - b_j}}$
-    - $p(x) := c_0p_0(x) + \ldots + c_n p_n(x)$
-- **Oss**
-    - è possibile sfruttare questo algoritmo per lo scambio di messaggi, ponendo il messaggio da inviare all'interno del termine noto di $p(x)$
-    - una volta reperito $p(x)$ a partire dai punti $\left \{ \begin{array}{c}(b_0, c_0) \\ \vdots \\ (b_n, c_n) \end{array} \right.$, basterà porre $p(0)$ per recuperare il messaggio
-    - la sicurezza di tale algoritmo è fornita dal fatto che è impossibile ricostruire $p(x)$ senza avere _tutti_ i punti necessari, altrimenti non è possibile ricostruire $p(x)$ come combinazione lineare in $\mathbb{K}[x]_{\le n}$
-
-## Teorema 203
-
-
-- **In**
-    - $\mathbb{K}$ campo
-    - $V$ spazio vettoriale su $\mathbb{K}$
-    - $v_1, \ldots, v_n$ base di $V$
-    - $\textrm{proj}_u(v) := \dfrac{u \cdot v}{u \cdot u} u$
-- **Out**
-    - $u_1, \ldots, u_n$ base ortogonale di $V$
-- **Alg**
-    - $\left \{ \begin{array}{l} u_1 := v_1 \\ u_2 := v_2 - \textrm{proj}_{u_1}(v_2) \\ u_3 := v_3 - \textrm{proj}_{u_1}(v_3) - \textrm{proj}_{u_2}(v_3) \\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \vdots \\ u_n := v_n - \displaystyle{\sum_{i = 1}^{n - 1}{\textrm{proj}_{u_i}(v_n)}}\end{array}\right.$
-- **Oss**
-    - siano $u, v \in V$, e $\theta$ l'angolo compreso tra $u$ e $v$, e $x$ la norma della proiezione di $v$ su $u$
-    - allora $\textrm{proj}_u(v)= xu$, poiché $x$ è la norma della proiezione e $u$ ne dà la direzione
-    - per definizione $\cos (\theta)=\dfrac{x}{||v||}$
-    - inoltre, per dimostrazione precedente $\cos (\theta)=\dfrac{u \cdot v}{||u|| \cdot ||v||}$
-    - allora $\dfrac{x}{||v||}=\cos (\theta)=\dfrac{u \cdot v}{||u|| \cdot ||v||} \implies x = \dfrac{u \cdot v}{||u||}$
-    - allora, ha significato la funzione che proietta $v$ su $u$, poiché $\textrm{proj}_u(v)=xu=\dfrac{u \cdot v}{||u||} \cdot \dfrac{u}{||u||} =\dfrac{u \cdot v}{u \cdot u}u$
-
-
-****
 # Teorema fondamentale dell'algebra
 
 - **Hp**
@@ -3711,7 +3621,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
     - $\exists ! \ q, r \in \mathbb{Z} \mid m=n q+r \quad 0 \leq r<n$
 
-## Teorema 204
+## Teorema 199
 
 
 - **Hp**
@@ -3747,7 +3657,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 # Teorema cinese dei resti
 
 
-## Teorema 205
+## Teorema 200
 
 
 - **Hp**
@@ -3756,7 +3666,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
   - $m = a_1 \cdot \ldots \cdot a_n$
 
-## Teorema 206
+## Teorema 201
 
 
 - **Hp**
@@ -3766,7 +3676,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
   - $\exists \phi \mid \phi: \mathbb{Z}_m \rightarrow \mathbb{Z}_{a_1} \times \ldots \times \mathbb{Z}_{a_n}: x \ (\bmod \ m) \rightarrow (x \ (\bmod \ a_1), \ldots, x \ (\bmod \ a_n))$ è una funzione ben definita, ed è iniettiva
 
-## Teorema 207
+## Teorema 202
 
 
 - **Hp**
@@ -3777,7 +3687,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
   - $\exists ! x \ (\bmod \ m) \mid$ $\left\{\begin{array}{c}x \equiv b_{1}\ \left(\bmod  \ a_{1}\right) \\ \vdots \\ x \equiv b_{n}\ \left(\bmod  \ a_{n}\right)\end{array}\right.$
 
-## Teorema 208
+## Teorema 203
 
 
 - **Hp**
@@ -3814,7 +3724,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
   - $a^{p} \equiv a \ (\bmod \ p)$
 
-## Teorema 209
+## Teorema 204
 
 
 - **Hp**
@@ -3823,7 +3733,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
   - $[a]^{-1}=\left[a\right]^{p-2}$
 
-## Teorema 210
+## Teorema 205
 
 
 - **Hp**
@@ -3852,7 +3762,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
     - $A / \textrm{ker}(f) \cong \textrm{im}(f)$, ovvero $\exists \varphi \mid \varphi : A / \textrm{ker}(f) \rightarrow \textrm{im}(f): [a] \rightarrow f(a)$ isomorfismo di anelli
 
-## Teorema 211
+## Teorema 206
 
 
 - **Hp**
@@ -3862,7 +3772,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
   - $G / \textrm{ker}(f) \cong \textrm{im}(f)$, o alternativamente $\exists \varphi \mid \varphi : G / \textrm{ker}(f) \rightarrow \textrm{im}(f): [g] \rightarrow f(g)$ isomorfismo di gruppi
 
 
-## Teorema 212
+## Teorema 207
 
 
 - **Hp**
@@ -3900,7 +3810,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
     - $||u - v||^2 = ||u||^2 + ||v||^2 - 2\cos(\theta) \cdot||u||\cdot ||v||$
 
 
-## Teorema 213
+## Teorema 208
 
 
 - **Hp**
@@ -3981,7 +3891,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
     - $\det(A \cdot B) = \det(A) \cdot \det(B)$
 
 
-## Teorema 214
+## Teorema 209
 
 
 - **Hp**
@@ -4007,3 +3917,97 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
     - le proposizioni sono equivalenti
 
 
+
+****
+# Algoritmo di Euclide
+
+
+## Teorema 210
+
+
+- **Hp**
+    - $a, b, c, \in \mathbb{Z}$
+- **Th**
+    - $a \mid b \land a \mid c \implies \forall z \in I(b, c) \quad a \mid z$
+
+## Teorema 211
+
+
+- **In**
+    - $a, b \in \mathbb{Z} \mid 0 \lt a \le b$
+- **Out**
+    - $d:=\textrm{MCD}(a, b)$
+- **Alg**
+    - $r_0:=b$
+    - $r_1:=a$
+    - $r_i = r_0q_0 + r_1$
+    - $\texttt{while} \ r_i \neq 0 \texttt{:}$
+        - $r_{i + 1} = r_{i - 1}q_{i - 1} + r_i$
+        - $r_i := r_{i + 1}$
+    - $\texttt{return} \ r_i$
+- **Th**
+    - $r_n = d$
+
+****
+
+
+# RSA
+
+- **In**
+    - $A$ interlocutore
+    - $p, q \in \mathbb{P} \mid p \neq q$, con $p, q$ sufficientemente grandi
+    - $m$ messaggio $\mid \textrm{MCD}(m, n) = 1$
+- **Out**
+    - $\texttt{pub}_A, \texttt{priv}_A$
+- **Alg**
+    - $n := pq$
+    - $\lambda(n) := \textrm{mcm}(p-1, q-1)$
+    - $e \in \mathbb{N} \mid \left \{ \begin{array}{l} 1 \lt e \lt \lambda(n) \\ \textrm{MCD}(e, \lambda(n))= 1 \end{array} \right.$
+    - $d:= e^{-1} \ (\bmod \ \lambda(n))$
+    - $\texttt{pub}_A(m, e, n) := m^e \ (\bmod \ n)$
+    - $\texttt{priv}_A(m, d, n) := (m^e)^d \ (\bmod \ n)$
+- **Oss**
+    - se $p,q$ non fossero sufficientemente grandi, poiché $n$ è pubblico, si rischierebbe di poter trovare $p$ e $q$, permettendo di decrittare il messaggio anche da chi non possiede $d$
+    - $p \mid m \implies m^{ed} \equiv m \equiv 0 \ (\bmod \ p)$, il che comporterebbe una perdita di informazione
+- **Th**
+    - $\texttt{priv}_A(\texttt{pub}_A(m, e, n), d, n) = m$
+
+****
+
+
+# Interpolazione di Lagrange
+
+- **In**
+    - $n \in \mathbb{N}$
+    - $b_0, \ldots, b_n, c_0, \ldots, c_n \in \mathbb{K} \left \{ \begin{array}{c}(b_0, c_0) \\ \vdots \\ (b_n, c_n) \end{array} \right.$ sono punti del $p(x)$ da trovare, e inoltre $\forall i \in [1, n], i \neq j \quad b_i \neq b_j$
+- **Out**
+    - $p(x) \in \mathbb{K}[x]_{\le n} \mid \left \{ \begin{array}{c} c_0 := a_0 + a_1b_0 + a_2b_0^2 + \ldots + a_nb_0^n = p(b_0) \\ c_1:=a_0 + a_1b_1 + a_2b_1^2 + \ldots + a_nb_1^n = p(b_1) \\ \vdots \\ c_n := a_0 + a_1b_n + a_2b_n^2 + \ldots + a_nb_n^n = p(b_n) \end{array} \right.$
+- **Alg**
+    - $\forall i \in [0, n] \quad p_i(x) := \displaystyle \prod_{\begin{subarray}{c}0 \le  j \le n \\ i \neq\ j \end{subarray}}{\dfrac{x - b_j}{b_i - b_j}}$
+    - $p(x) := c_0p_0(x) + \ldots + c_n p_n(x)$
+- **Oss**
+    - è possibile sfruttare questo algoritmo per lo scambio di messaggi, ponendo il messaggio da inviare all'interno del termine noto di $p(x)$
+    - una volta reperito $p(x)$ a partire dai punti $\left \{ \begin{array}{c}(b_0, c_0) \\ \vdots \\ (b_n, c_n) \end{array} \right.$, basterà porre $p(0)$ per recuperare il messaggio
+    - la sicurezza di tale algoritmo è fornita dal fatto che è impossibile ricostruire $p(x)$ senza avere _tutti_ i punti necessari, altrimenti non è possibile ricostruire $p(x)$ come combinazione lineare in $\mathbb{K}[x]_{\le n}$
+
+****
+
+
+# Algoritmo di Gram-Schmidt
+
+- **In**
+    - $\mathbb{K}$ campo
+    - $V$ spazio vettoriale su $\mathbb{K}$
+    - $v_1, \ldots, v_n$ base di $V$
+    - $\textrm{proj}_u(v) := \dfrac{u \cdot v}{u \cdot u} u$
+- **Out**
+    - $u_1, \ldots, u_n$ base ortogonale di $V$
+- **Alg**
+    - $\left \{ \begin{array}{l} u_1 := v_1 \\ u_2 := v_2 - \textrm{proj}_{u_1}(v_2) \\ u_3 := v_3 - \textrm{proj}_{u_1}(v_3) - \textrm{proj}_{u_2}(v_3) \\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \vdots \\ u_n := v_n - \displaystyle{\sum_{i = 1}^{n - 1}{\textrm{proj}_{u_i}(v_n)}}\end{array}\right.$
+- **Oss**
+    - siano $u, v \in V$, e $\theta$ l'angolo compreso tra $u$ e $v$, e $x$ la norma della proiezione di $v$ su $u$
+    - allora $\textrm{proj}_u(v)= xu$, poiché $x$ è la norma della proiezione e $u$ ne dà la direzione
+    - per definizione $\cos (\theta)=\dfrac{x}{||v||}$
+    - inoltre, per dimostrazione precedente $\cos (\theta)=\dfrac{u \cdot v}{||u|| \cdot ||v||}$
+    - allora $\dfrac{x}{||v||}=\cos (\theta)=\dfrac{u \cdot v}{||u|| \cdot ||v||} \implies x = \dfrac{u \cdot v}{||u||}$
+    - allora, ha significato la funzione che proietta $v$ su $u$, poiché $\textrm{proj}_u(v)=xu=\dfrac{u \cdot v}{||u||} \cdot \dfrac{u}{||u||} =\dfrac{u \cdot v}{u \cdot u}u$

@@ -48,7 +48,11 @@
 - [Numeri complessi](https://ph04.github.io/algebra/html/numeri-complessi.html)
 - [Coefficienti binomiali](https://ph04.github.io/algebra/html/coefficienti-binomiali.html)
 - [Induzione](https://ph04.github.io/algebra/html/induzione.html)
-- [Altro](https://ph04.github.io/algebra/html/altro.html)
+- [Algoritmi](https://ph04.github.io/algebra/html/altro.html)
+    - [Algoritmo di Euclide](https://ph04.github.io/algebra/html/altro.html#algoritmo-di-euclide)
+    - [RSA](https://ph04.github.io/algebra/html/altro.html#rsa)
+    - [Interpolazione di Lagrange](https://ph04.github.io/algebra/html/altro.html#interpolazione-di-lagrange)
+    - [Algoritmo di Gram-Schmidt](https://ph04.github.io/algebra/html/altro.html#algoritmo-di-gram-schmidt)
 
 ## Teoremi fondamentali
 

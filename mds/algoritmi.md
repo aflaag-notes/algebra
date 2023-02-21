@@ -1,4 +1,4 @@
-# Altro
+# Algoritmo di Euclide
 
 ## Lem
 
@@ -48,7 +48,9 @@
         - $d := \textrm{MCD}(a,b) \implies d \mid a \land d \mid b$, e poiché $r_n \mid r_0 =: b \land r_n \mid r_1 =: a \implies r_n \mid d$
     - $d \mid r_n \land r_n \mid d \implies r_n = d$
 
-## Alg
+****
+
+# RSA
 
 - **In**
     - $A$ interlocutore
@@ -74,7 +76,9 @@
     - $\textrm{MCD}(e, \lambda(n)) = 1 \iff [e] \in \mathbb{Z}^*_{\lambda(n)} \implies \exists ! [d] \in \mathbb{Z}^*_{\lambda(n)} \mid ed \equiv 1 \ (\bmod \ \lambda(n)) \implies \forall k \in \mathbb{Z} \quad ed = 1 + k \cdot\lambda(n)$
     - allora si ha che $(m^e)^d \equiv m^{1 + k \cdot \lambda(n)} \equiv m \cdot (m^{\lambda(n)})^k \equiv m \ (\bmod \ n)$
 
-## Alg
+****
+
+# Interpolazione di Lagrange
 
 - **In**
     - $n \in \mathbb{N}$
@@ -96,7 +100,9 @@
         - $(x - b_i)$ non è presente nel numeratore, ma $(x - b_j)$ sarà sicuramente presente
     - allora, ponendo $p(x) := c_0 p_0(x) + \ldots + c_np_n(x)$, ad esempio per $x = b_0$ si ha che $p(x) = c_0 p_0(b_0) + \ldots + c_np_n(b_0) = c_0 \cdot 1 + c_1 \cdot 0 + \ldots + c_n \cdot 0 = c_0$
 
-## Alg
+****
+
+# Algoritmo di Gram-Schmidt
 
 - **In**
     - $\mathbb{K}$ campo
