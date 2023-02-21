@@ -95,7 +95,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 >   - $(A, +)$ gruppo abeliano
 >   - $(A, \cdot)$ monoide
 >   - $\forall a, b, c \in A \quad a \cdot (b + c) = a \cdot b + a \cdot c$
->     - in particolare, deve valere la _proprietà distributiva a sinistra_
+>     - in particolare, deve valere la _proprietà distributiva a destra_ 
 
 - **Anello commutativo**
 
@@ -182,13 +182,13 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Elemento irriducibile**
 
 > - $A$ anello commutativo
-> - $a \in A - \{0\} \mid a \in A^*$
+> - $a \in A - \{0\} \mid a \notin A^*$
 > - $a$ è detto **irriducibile** $\iff \exists b, c \in A \mid a = b c \implies b \in A^* \lor c \in A^*$
 
 - **Elemento primo**
 
 > - $A$ anello commutativo
-> - $a \in A - \{0\} \mid a \in A^*$
+> - $a \in A - \{0\} \mid a \notin A^*$
 > - $a$ è detto **primo** $\iff \exists b, c \in A : a \mid bc \implies a \mid b \lor a \mid c$
 
 - **Interi primi**
@@ -1721,7 +1721,8 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 - **Hp**
     - $\mathbb{K}$ campo
-    - $\exists d(x) \in \mathbb{K}[x]\mid I(a_1(x), \ldots, a_n(x)) = I(d(x))$
+    - $a_1(x), \ldots, a_n(x) \in \mathbb{K}[x]$
+    - $\exists d(x) \in I(a_1(x), \ldots, a_n(x)) \mid I(a_1(x), \ldots, a_n(x)) = I(d(x))$
 - **Th**
     - $d(x)=\textrm{MCD}(a_1(x), \ldots, a_n(x))$
 
@@ -1730,8 +1731,8 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 - **Hp**
     - $\mathbb{K}$ campo
-    - $I(a_1(x)), \ldots, I(a_n(x)) \subset \mathbb{K}[x]$ ideali
-    - $\exists m(x) \in \mathbb{K}[x] \mid I(a_1(x)) \cap \ldots \cap I(a_1(x)) = I(m(x))$
+    - $a_1(x), \ldots, a_n(x) \in \mathbb{K}[x]$
+    - $\exists m(x) \in I(a_1(x)) \cap \ldots \cap I(a_n(x)) \mid I(a_1(x)) \cap \ldots \cap I(a_1(x)) = I(m(x))$
 - **Th**
     - $m(x)=\textrm{mcm}(a_1(x), \ldots, a_n(x))$
 
@@ -1759,7 +1760,6 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 - **Hp**
-    - $\mathbb{K}$ campo
     - $p(x) \in \mathbb{C}[x]$
 - **Th**
     - $p(x)$ irriducibile $\iff \deg(p(x)) = 1$

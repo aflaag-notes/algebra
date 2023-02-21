@@ -91,11 +91,9 @@
 - **Th**
   -  $\exists  d  \in I \mid I = I(d)$, o equivalentemente, in $\mathbb{Z}$ ogni ideale è principale
 - **Dim**
-    - $d = 0$
-        - $I = \{0\} \implies I = I(0)$ poiché i multipli di $0$ sono tutti pari a $0$
-        - se invece $I \neq \{0\} \implies I \cap \mathbb{Z}_{>0} \neq \varnothing$, dunque $I$ contiene almeno un numero non nullo, in particolare positivo
-    - è possibile considerare solo il caso dei positivi in quanto $\forall x \in I - \{0\} \quad -x \in I$ per definizione di $I$, dunque per valori negativi è sufficiente considerare il loro opposto
-    - dunque, ha senso considerare $d:=\min(I \cap \mathbb{Z}_{\gt 0})$, che esiste per principio del minimo numero
+    - $d = 0 \implies I = \{0\} \implies I = I(0)$ poiché i multipli di $0$ sono tutti pari a $0$
+    - se invece $I \neq \{0\} \implies I \cap \mathbb{Z}_{>0} \neq \varnothing$, dunque $I$ contiene almeno un numero non nullo, in particolare positivo, ed è possibile considerare solo il caso dei positivi in quanto $\forall x \in I - \{0\} \quad -x \in I$, dunque per valori negativi è sufficiente considerare il loro opposto
+    - allora, ha senso considerare $d:=\min(I \cap \mathbb{Z}_{\gt 0})$, che esiste per principio del minimo numero
     - $d \gt 0$
         - $I(d)=I \implies I(d) \subseteq I \wedge I \subseteq I(d)$
           - $I(d) \subseteq I$

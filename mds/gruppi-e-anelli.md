@@ -83,7 +83,7 @@
 >   - $(A, +)$ gruppo abeliano
 >   - $(A, \cdot)$ monoide
 >   - $\forall a, b, c \in A \quad a \cdot (b + c) = a \cdot b + a \cdot c$
->     - in particolare, deve valere la _proprietà distributiva a sinistra_
+>     - in particolare, deve valere la _proprietà distributiva a destra_ 
 
 - **Anello commutativo**
 
@@ -168,13 +168,13 @@
 - **Elemento irriducibile**
 
 > - $A$ anello commutativo
-> - $a \in A - \{0\} \mid a \in A^*$
+> - $a \in A - \{0\} \mid a \notin A^*$
 > - $a$ è detto **irriducibile** $\iff \exists b, c \in A \mid a = b c \implies b \in A^* \lor c \in A^*$
 
 - **Elemento primo**
 
 > - $A$ anello commutativo
-> - $a \in A - \{0\} \mid a \in A^*$
+> - $a \in A - \{0\} \mid a \notin A^*$
 > - $a$ è detto **primo** $\iff \exists b, c \in A : a \mid bc \implies a \mid b \lor a \mid c$
 
 - **Interi primi**
@@ -200,7 +200,6 @@
     - $a$ irriducibile
 - **Dim**
     - si supponga $\exists b, c \in A \mid a = bc$
-    - $\forall a \in A \quad a \mid a$ per riflessività
     - per ipotesi $a$ primo, dunque per definizione $\exists b, c \in A : a \mid bc \implies a \mid b \lor a \mid c$, ma poiché $a \mid a = bc$, allora i coefficienti moltiplicativi sono proprio gli stessi che compongono $a$
     - prendendo ad esempio $a \mid b \implies \exists d \in A \mid ad = b \implies a = bc \iff a = adc \iff a \cdot( 1 - dc ) = 0$
     - $A$ dominio di integrità per ipotesi, e dunque in esso vale la legge di annullamento del prodotto

@@ -7,18 +7,15 @@
   <title>Ideali</title>
   <style>
     html {
-      line-height: 1.5;
-      font-family: Georgia, serif;
-      font-size: 20px;
       color: #fdfdfd;
       background-color: #1f1f1f;
     }
     body {
       margin: 0 auto;
-      max-width: 60em;
+      max-width: 36em;
       padding-left: 50px;
       padding-right: 50px;
-      padding-top: 50px;
+      max-width: 60em;
       padding-bottom: 50px;
       hyphens: auto;
       overflow-wrap: break-word;
@@ -28,13 +25,16 @@
     @media (max-width: 600px) {
       body {
         font-size: 0.9em;
-        padding: 1em;
+        padding: 12px;
       }
       h1 {
         font-size: 1.8em;
       }
     }
     @media print {
+      html {
+        background-color: white;
+      }
       body {
         background-color: transparent;
         color: black;
@@ -84,9 +84,10 @@
       color: #adbac7;
     }
     code {
-      font-family: Menlo, Monaco, 'Lucida Console', Consolas, monospace;
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
       font-size: 85%;
       margin: 0;
+      hyphens: manual;
     }
     pre {
       margin: 1em 0;
@@ -398,21 +399,17 @@ ideale è principale</li>
 </ul></li>
 <li><strong>Dim</strong>
 <ul>
-<li><span class="math inline">d = 0</span>
-<ul>
-<li><span class="math inline">I = \{0\} \implies I = I(0)</span> poiché
-i multipli di <span class="math inline">0</span> sono tutti pari a <span
-class="math inline">0</span></li>
+<li><span class="math inline">d = 0 \implies I = \{0\} \implies I =
+I(0)</span> poiché i multipli di <span class="math inline">0</span> sono
+tutti pari a <span class="math inline">0</span></li>
 <li>se invece <span class="math inline">I \neq \{0\} \implies I \cap
 \mathbb{Z}_{&gt;0} \neq \varnothing</span>, dunque <span
 class="math inline">I</span> contiene almeno un numero non nullo, in
-particolare positivo</li>
-</ul></li>
-<li>è possibile considerare solo il caso dei positivi in quanto <span
-class="math inline">\forall x \in I - \{0\} \quad -x \in I</span> per
-definizione di <span class="math inline">I</span>, dunque per valori
-negativi è sufficiente considerare il loro opposto</li>
-<li>dunque, ha senso considerare <span class="math inline">d:=\min(I
+particolare positivo, ed è possibile considerare solo il caso dei
+positivi in quanto <span class="math inline">\forall x \in I - \{0\}
+\quad -x \in I</span>, dunque per valori negativi è sufficiente
+considerare il loro opposto</li>
+<li>allora, ha senso considerare <span class="math inline">d:=\min(I
 \cap \mathbb{Z}_{\gt 0})</span>, che esiste per principio del minimo
 numero</li>
 <li><span class="math inline">d \gt 0</span>

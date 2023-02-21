@@ -138,40 +138,41 @@
     - $\exists  p(x) \in I \mid I = I(p(x))$, o equivalentemente, in $\mathbb{K}[x]$ ogni ideale è principale
 - **Dim**
     - $p(x) = 0 \implies I = \{0\} \implies I = I(0)$, ovvero l'ideale principale generato da $0$
-    - $p(x) \in I - \{0\} \mid \deg(p(x))$ sia il minore possibile, allora $\forall q(x) \in I \mid \deg(q(x)) \lt \deg(p(x)) \implies q(x) \in I(0) \implies q(x) = 0$, di conseguenza è unico in quanto l'elemento minore in $I - \{0\}$ è unico
-    - per osservazione precedente $\exists p(x) \in I - \{0\} \mid I = I(p(x))$, dove $p(x)$ è il polinomio di grado minore in $I - \{0\}$
+    - sia $p(x) \in I - \{0\} \mid \deg(p(x))$ sia il minore possibile, che esiste per principio del minimo numero
+    - allora $\forall q(x) \in I \mid \deg(q(x)) \lt \deg(p(x)) \implies q(x) \in I(0) \implies q(x) = 0$, dunque $p(x)$ è unico in quanto l'elemento con grado minore in $I - \{0\}$ è unico, non considerando $-p(x)$
     - $I = I(p(x)) \iff I \subseteq I(p(x)) \land I(p(x)) \subseteq I$
         - $I \subseteq I(p(x))$
-            - per il teorema della divisione con il resto tra polinomi $\forall a(x) \in I \quad \exists ! q(x), r(x) \mid a(x) = p(x) \cdot q(x) + r(x) \quad \deg(r(x)) \lt \deg(p(x)) \implies r(x) = a(x) - p(x) \cdot q(x)$
-            - $\left.\begin{array}{l} a(x) \in I \\ p(x) \in I - \{0\} \implies p(x) \cdot q(x) \in I \end{array}\right\} \implies r(x) \in I$
-            - ma poiché $\deg(r(x)) \lt \deg(p(x))$, e $p(x)$ è stato preso con il grado minore possibile, per osservazione precedente segue necessariamente che $r(x) = 0$, e dunque $a(x) = p(x) \cdot q(x) \implies a(x) \in I(p(x))$
+            - per il teorema della divisione con il resto tra polinomi, poiché $p(x) \neq 0$, allora $\forall a(x) \in I \quad \exists ! q(x), r(x) \in \mathbb{K}[x] \mid a(x) = p(x) \cdot q(x) + r(x) \quad \deg(r(x)) \lt \deg(p(x)) \implies r(x) = a(x) - p(x) \cdot q(x)$
+            - $\left.\begin{array}{l} a(x) \in I \\ q(x) \in \mathbb{K}[x],p(x) \in I - \{0\} \implies p(x) \cdot q(x) \in I \end{array}\right\} \implies r(x) \in I$
+            - ma poiché $\deg(r(x)) \lt \deg(p(x))$, e $p(x)$ è stato preso con il grado minore possibile in $I$, per osservazione precedente segue necessariamente che $r(x) = 0 \implies a(x) = p(x) \cdot q(x) \implies a(x) \in I(p(x))$
         - $I(p(x)) \subseteq I$
-            - $p(x) \in I - \{0\}$ e $I$ è un ideale per ipotesi, dunque in particolare $\mathbb{K}[x] \cdot I \subseteq I$, allora $\forall q(x) \in \mathbb{K}[x] \quad q(x) \cdot p(x) \in I$
+            - $I \subset \mathbb{K}[x]$ ideale $\implies \mathbb{K}[x] \cdot I \subseteq I$, e poiché $p(x) \in I - \{0\}$, allora $\forall q(x) \in \mathbb{K}[x] \quad q(x) \cdot p(x) \in I$
             - $\forall a(x) \in I(p(x)) \quad \exists q(x) \in \mathbb{K}[x] \mid q(x)\cdot p(x) = a(x)$, dunque $a(x) \in I$
 
 ## Oss
 
 - **Hp**
     - $\mathbb{K}$ campo
-    - $\exists d(x) \in \mathbb{K}[x]\mid I(a_1(x), \ldots, a_n(x)) = I(d(x))$
+    - $a_1(x), \ldots, a_n(x) \in \mathbb{K}[x]$
+    - $\exists d(x) \in I(a_1(x), \ldots, a_n(x)) \mid I(a_1(x), \ldots, a_n(x)) = I(d(x))$
 - **Th**
     - $d(x)=\textrm{MCD}(a_1(x), \ldots, a_n(x))$
 - **Dim**
     - la dimostrazione è analoga al caso di $\mathbb{Z}$
-    - in particolare, $\textrm{MCD}(a_1(x), \ldots, a_n(x))$ è ben definito in quanto, per dimostrazione precedente, la divisione con il resto tra polinomi è ben definita, ed è dunque possibile calcolare il massimo comun divisore attraverso, ad esempio, l'algoritmo di Euclide
+    - in particolare, $\textrm{MCD}(a_1(x), \ldots, a_n(x))$ è ben definito in quanto, per dimostrazione precedente, la divisione con il resto tra polinomi è ben definita, ed è dunque possibile calcolare il massimo comun divisore tra polinomi attraverso, ad esempio, l'algoritmo di Euclide
     - inoltre, $d(x)$ è ben definito a meno di una costante moltiplicativa non nulla
 
 ## Oss
 
 - **Hp**
     - $\mathbb{K}$ campo
-    - $I(a_1(x)), \ldots, I(a_n(x)) \subset \mathbb{K}[x]$ ideali
-    - $\exists m(x) \in \mathbb{K}[x] \mid I(a_1(x)) \cap \ldots \cap I(a_1(x)) = I(m(x))$
+    - $a_1(x), \ldots, a_n(x) \in \mathbb{K}[x]$
+    - $\exists m(x) \in I(a_1(x)) \cap \ldots \cap I(a_n(x)) \mid I(a_1(x)) \cap \ldots \cap I(a_1(x)) = I(m(x))$
 - **Th**
     - $m(x)=\textrm{mcm}(a_1(x), \ldots, a_n(x))$
 - **Dim**
     - la dimostrazione è analoga al caso in $\mathbb{Z}$
-    - in particolare, $\textrm{mcm}(a_1(x), \ldots, a_n(x))$ è ben definito in quanto il teorema fondamentale dell'aritmetica è applicabile anche ai polinomi
+    - in particolare, è possibile calcolare $\textrm{mcm}(a_1(x), \ldots, a_n(x))$ attraverso il teorema fondamentale dell'aritmetica, poiché applicabile anche ai polinomi
     - inoltre, $m(x)$ è ben definito a meno di una costante moltiplicativa non nulla
 
 ## Oss
@@ -213,17 +214,18 @@
 ## Oss
 
 - **Hp**
-    - $\mathbb{K}$ campo
     - $p(x) \in \mathbb{C}[x]$
 - **Th**
     - $p(x)$ irriducibile $\iff \deg(p(x)) = 1$
 - **Dim**
     - _prima implicazione_    
-        - ipotizzando che $\deg(p(x)) \gt 1 \implies \exists z \in \mathbb{C} \mid p(z) = 0$ per il teorema fondamentale dell'algebra
+        - per assurdo, $\deg(p(x)) \gt 1 \implies \exists z \in \mathbb{C} \mid p(z) = 0$ per il teorema fondamentale dell'algebra
         - per dimostrazione precedente $p(z) = 0 \iff (x - z) \mid p(x) \iff \exists q(x) \in \mathbb{C}[x] \mid p(x) = (x - z) \cdot q(x)$
         - poiché $\deg(x - z) = 1$, allora necessariamente $\deg(q(x)) = \deg(p(x)) - 1$
-        - $\deg(p(x)) \gt 1 \implies \deg(q(x)) = \deg(p(x)) - 1 \gt 0 \implies p(x)$ non è irriducibile $\bot$
+        - $\deg(p(x)) \gt 1 \implies \deg(q(x)) = \deg(p(x)) - 1 \gt 0 \implies p(x)$ non è irriducibile, poiché esisterebbe una sua radice in $\mathbb{C}$ $\bot$
+        - si noti che $\deg(p(x)) = 0 \implies p(x) \in \mathbb{C}^* \implies p(x)$ non irriducibile per definizione $\bot$
     - _seconda implicazione_
+        - si noti che $\deg(p(x)) \neq 0 \implies p(x) \notin \mathbb{C}[x]^* = \mathbb{C}^*$
         - per dimostrazione precedente $\forall a(x), b(x), c(x) \in \mathbb{K}[x] \quad a(x) = b(x) \cdot c(x) \implies \deg(a(x)) = \deg(b(x)) + \deg(c(x))$
         - $\deg(p(x)) = 1$, allora se $\exists a(x), b(x) \in \mathbb{C}[x] \mid p(x) = a(x) \cdot b(x)$, allora $\deg(a(x)) = 1 \land \deg(b(x)) = 0$ oppure $\deg(a(x)) = 0 \land \deg(b(x)) = 1$
         - dunque, ad esempio se $\deg(a(x)) = 1 \land \deg(b(x)) = 0 \implies b(x) \in \mathbb{C}[x]^* \implies p(x)$ è irriducibile
@@ -259,7 +261,7 @@
             - segue la dimostrazione precedente, poiché questa implicazione è valida in ogni campo
         - $\deg(p(x)) = 2 \land \Delta \lt 0 \implies p(x)$ irriducibile
             - per assurdo, sia $p(x)$ non irriducibile, allora $\exists a(x), b(x) \in \mathbb{R}[x] \mid p(x) = a(x)b(x) \implies a(x), b(x) \notin \mathbb{R}[x]^* \implies \deg(a(x)), \deg(b(x)) \neq 0 \implies \deg(a(x)) = \deg(b(x)) = 1$ poiché $\deg(p(x)) = 2$ in ipotesi
-            - dunque $a(x)$ e $b(x)$ sono della forma $a(x) = cx + d$, dove $c \in \mathbb{R} - \{0\}$, ma allora $x' := -c^{-1}d$ è radice di $a(x)$, e dunque necessariamente è anche radice di $p(x)$
+            - dunque $a(x)$ e $b(x)$ sono della forma $a(x) = cx + d$, dove $c \in \mathbb{R} - \{0\}$, ma allora $x' := -c^{-1}d$ è radice di $a(x)$, e dunque necessariamente anche radice di $p(x)$
             - allora $\deg(p(x)) = 2 \land \exists x' \in \mathbb{R} \mid p(x') = 0 \implies \Delta \ge 0 \ \bot$
 
 ## Oss
@@ -277,8 +279,9 @@
             - allora $p(x)$ è della forma $p(x) = ax + b$, con $a, b, k \in \mathbb{K}^* \implies p(x) = a \cdot \left(x + \dfrac{b}{a}\right)$, dove $\deg \left( x + \dfrac{b}{a}\right ) = 1 \iff \left( x + \dfrac{b}{a}\right)$ irriducibile
         - $\deg(p(x)) \gt 1$
             - per dimostrazione precedente $\deg(p(x)) \neq 1 \iff p(x)$ non irriducibile $\iff \exists a(x), b(x) \in \mathbb{K}[x] - \mathbb{K}[x]^* \mid p(x) = a(x) b(x)$
-        - ⚠️  **poi?**
+        - ⚠️  **incompleta**
     - _unicità_
+        - ⚠️  **interamente da rifare**
         - $\deg(p(x)) = 0$
             - allora $p(x)$ è della forma $p(x) = c$, con $c \in \mathbb{K}$, allora $p(x) = c \cdot (1 \cdot x^0)$
         - $\deg(p(x)) \gt 0$
@@ -286,7 +289,6 @@
             - allora, ad esempio $q_1(x) \mid p(x) = c' \cdot q_1'(x) \cdot \ldots \cdot q_k'(x) \implies q_1(x) \mid q_1'(x) \lor \ldots \lor q_1(x) \mid q_k'(x)$
             - ipotizzando $q_1 \mid q_1'(x)$, poiché $\deg(q_1(x)) = \deg(q_1'(x))$, allora necessariamente $q_1 \mid q_1'(x) \iff \exists k \in \mathbb{K}^* \mid q_1(x) \cdot k = q_1'(x)$
             - allora $c \cdot q_1(x) \cdot \ldots \cdot q_k(x) = p(x) = c' \cdot q_1'(x) \cdot \ldots \cdot q_k'(x) = c' \cdot k \cdot q_1(x) \cdot \ldots, \cdot q_k'(x)$
-            - ⚠️  **tutto sbagliato che palle**
 
 ## Oss
 
@@ -298,9 +300,7 @@
 - **Th**
     - $a \mid a_0 \land b \mid a_n$
 - **Dim**
-    - $0 = p\left(\frac{a}{b}\right) = a_n\left(\frac{a}{b}\right)^n + a_{n - 1}\left(\frac{a^{n - 1}}{b^{n - 1}}\right) + \ldots + a_0$
-    - moltiplicando entrambe i membri dell'equazione per $b^n$ si ottiene $0 = a_na^n + a_{n -1}a^{n - 1}b + \ldots + a_1a^1b^{n -1 } + a_0b^n$
-    - allora $a_na^n = - a_{n - 1} a^{n - 1}b - \ldots - a_1a^1 b^{n - 1}- a_0b^n \implies b \mid a_na^n$ poiché ogni termine del secondo membro dell'equazione contiene una potenza di $b$
-    - $\textrm{MCD}(a, b) = 1 \implies \textrm{MCD}(a^n, b) = 1$, ma allora $b \mid a_na^n \implies b \mid a_n$
+    - $0 = p\left(\frac{a}{b}\right) = a_n\left(\frac{a}{b}\right)^n + a_{n - 1}\left(\frac{a^{n - 1}}{b^{n - 1}}\right) + \ldots + a_0 \iff b^n \cdot 0 = a_na^n + a_{n -1}a^{n - 1}b + \ldots + a_1a^1b^{n -1 } + a_0b^n \iff a_na^n = - a_{n - 1} a^{n - 1}b - \ldots - a_1a^1 b^{n - 1}- a_0b^n = b(-a_{n - 1}a^{n-1} - \ldots - a_1a^1b^{n - 2} - a_0b^{n-1}) \implies b \mid a_na^n$
+    - $\textrm{MCD}(a, b) = 1 \implies \textrm{MCD}(a^n, b) = 1$, allora $b \mid a_na^n \implies b \mid a_n$
     - è possibile ripetere il ragionamento analogo per $a_0b^n$, e dall'equazione ottenuta si noterà che $a \mid a_0b^n$, che per ragionamento analogo all'osservazione precedente deve necessariamente implicare che $a \mid a_0$
 

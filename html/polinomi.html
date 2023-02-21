@@ -7,18 +7,15 @@
   <title>Polinomi</title>
   <style>
     html {
-      line-height: 1.5;
-      font-family: Georgia, serif;
-      font-size: 20px;
       color: #fdfdfd;
       background-color: #1f1f1f;
     }
     body {
       margin: 0 auto;
-      max-width: 60em;
+      max-width: 36em;
       padding-left: 50px;
       padding-right: 50px;
-      padding-top: 50px;
+      max-width: 60em;
       padding-bottom: 50px;
       hyphens: auto;
       overflow-wrap: break-word;
@@ -28,13 +25,16 @@
     @media (max-width: 600px) {
       body {
         font-size: 0.9em;
-        padding: 1em;
+        padding: 12px;
       }
       h1 {
         font-size: 1.8em;
       }
     }
     @media print {
+      html {
+        background-color: white;
+      }
       body {
         background-color: transparent;
         color: black;
@@ -84,9 +84,10 @@
       color: #adbac7;
     }
     code {
-      font-family: Menlo, Monaco, 'Lucida Console', Consolas, monospace;
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
       font-size: 85%;
       margin: 0;
+      hyphens: manual;
     }
     pre {
       margin: 1em 0;
@@ -499,41 +500,41 @@ class="math inline">\mathbb{K}[x]</span> ogni ideale è principale</li>
 <li><span class="math inline">p(x) = 0 \implies I = \{0\} \implies I =
 I(0)</span>, ovvero l’ideale principale generato da <span
 class="math inline">0</span></li>
-<li><span class="math inline">p(x) \in I - \{0\} \mid \deg(p(x))</span>
-sia il minore possibile, allora <span class="math inline">\forall q(x)
-\in I \mid \deg(q(x)) \lt \deg(p(x)) \implies q(x) \in I(0) \implies
-q(x) = 0</span>, di conseguenza è unico in quanto l’elemento minore in
-<span class="math inline">I - \{0\}</span> è unico</li>
-<li>per osservazione precedente <span class="math inline">\exists p(x)
-\in I - \{0\} \mid I = I(p(x))</span>, dove <span
-class="math inline">p(x)</span> è il polinomio di grado minore in <span
-class="math inline">I - \{0\}</span></li>
+<li>sia <span class="math inline">p(x) \in I - \{0\} \mid
+\deg(p(x))</span> sia il minore possibile, che esiste per principio del
+minimo numero</li>
+<li>allora <span class="math inline">\forall q(x) \in I \mid \deg(q(x))
+\lt \deg(p(x)) \implies q(x) \in I(0) \implies q(x) = 0</span>, dunque
+<span class="math inline">p(x)</span> è unico in quanto l’elemento con
+grado minore in <span class="math inline">I - \{0\}</span> è unico, non
+considerando <span class="math inline">-p(x)</span></li>
 <li><span class="math inline">I = I(p(x)) \iff I \subseteq I(p(x)) \land
 I(p(x)) \subseteq I</span>
 <ul>
 <li><span class="math inline">I \subseteq I(p(x))</span>
 <ul>
-<li>per il teorema della divisione con il resto tra polinomi <span
-class="math inline">\forall a(x) \in I \quad \exists ! q(x), r(x) \mid
-a(x) = p(x) \cdot q(x) + r(x) \quad \deg(r(x)) \lt \deg(p(x)) \implies
-r(x) = a(x) - p(x) \cdot q(x)</span></li>
-<li><span class="math inline">\left.\begin{array}{l} a(x) \in I \\ p(x)
-\in I - \{0\} \implies p(x) \cdot q(x) \in I \end{array}\right\}
-\implies r(x) \in I</span></li>
+<li>per il teorema della divisione con il resto tra polinomi, poiché
+<span class="math inline">p(x) \neq 0</span>, allora <span
+class="math inline">\forall a(x) \in I \quad \exists ! q(x), r(x) \in
+\mathbb{K}[x] \mid a(x) = p(x) \cdot q(x) + r(x) \quad \deg(r(x)) \lt
+\deg(p(x)) \implies r(x) = a(x) - p(x) \cdot q(x)</span></li>
+<li><span class="math inline">\left.\begin{array}{l} a(x) \in I \\ q(x)
+\in \mathbb{K}[x],p(x) \in I - \{0\} \implies p(x) \cdot q(x) \in I
+\end{array}\right\} \implies r(x) \in I</span></li>
 <li>ma poiché <span class="math inline">\deg(r(x)) \lt
 \deg(p(x))</span>, e <span class="math inline">p(x)</span> è stato preso
-con il grado minore possibile, per osservazione precedente segue
-necessariamente che <span class="math inline">r(x) = 0</span>, e dunque
-<span class="math inline">a(x) = p(x) \cdot q(x) \implies a(x) \in
-I(p(x))</span></li>
+con il grado minore possibile in <span class="math inline">I</span>, per
+osservazione precedente segue necessariamente che <span
+class="math inline">r(x) = 0 \implies a(x) = p(x) \cdot q(x) \implies
+a(x) \in I(p(x))</span></li>
 </ul></li>
 <li><span class="math inline">I(p(x)) \subseteq I</span>
 <ul>
-<li><span class="math inline">p(x) \in I - \{0\}</span> e <span
-class="math inline">I</span> è un ideale per ipotesi, dunque in
-particolare <span class="math inline">\mathbb{K}[x] \cdot I \subseteq
-I</span>, allora <span class="math inline">\forall q(x) \in
-\mathbb{K}[x] \quad q(x) \cdot p(x) \in I</span></li>
+<li><span class="math inline">I \subset \mathbb{K}[x]</span> ideale
+<span class="math inline">\implies \mathbb{K}[x] \cdot I \subseteq
+I</span>, e poiché <span class="math inline">p(x) \in I - \{0\}</span>,
+allora <span class="math inline">\forall q(x) \in \mathbb{K}[x] \quad
+q(x) \cdot p(x) \in I</span></li>
 <li><span class="math inline">\forall a(x) \in I(p(x)) \quad \exists
 q(x) \in \mathbb{K}[x] \mid q(x)\cdot p(x) = a(x)</span>, dunque <span
 class="math inline">a(x) \in I</span></li>
@@ -546,8 +547,10 @@ class="math inline">a(x) \in I</span></li>
 <li><strong>Hp</strong>
 <ul>
 <li><span class="math inline">\mathbb{K}</span> campo</li>
-<li><span class="math inline">\exists d(x) \in \mathbb{K}[x]\mid
-I(a_1(x), \ldots, a_n(x)) = I(d(x))</span></li>
+<li><span class="math inline">a_1(x), \ldots, a_n(x) \in
+\mathbb{K}[x]</span></li>
+<li><span class="math inline">\exists d(x) \in I(a_1(x), \ldots, a_n(x))
+\mid I(a_1(x), \ldots, a_n(x)) = I(d(x))</span></li>
 </ul></li>
 <li><strong>Th</strong>
 <ul>
@@ -561,8 +564,8 @@ class="math inline">\mathbb{Z}</span></li>
 <li>in particolare, <span class="math inline">\textrm{MCD}(a_1(x),
 \ldots, a_n(x))</span> è ben definito in quanto, per dimostrazione
 precedente, la divisione con il resto tra polinomi è ben definita, ed è
-dunque possibile calcolare il massimo comun divisore attraverso, ad
-esempio, l’algoritmo di Euclide</li>
+dunque possibile calcolare il massimo comun divisore tra polinomi
+attraverso, ad esempio, l’algoritmo di Euclide</li>
 <li>inoltre, <span class="math inline">d(x)</span> è ben definito a meno
 di una costante moltiplicativa non nulla</li>
 </ul></li>
@@ -572,10 +575,11 @@ di una costante moltiplicativa non nulla</li>
 <li><strong>Hp</strong>
 <ul>
 <li><span class="math inline">\mathbb{K}</span> campo</li>
-<li><span class="math inline">I(a_1(x)), \ldots, I(a_n(x)) \subset
-\mathbb{K}[x]</span> ideali</li>
-<li><span class="math inline">\exists m(x) \in \mathbb{K}[x] \mid
-I(a_1(x)) \cap \ldots \cap I(a_1(x)) = I(m(x))</span></li>
+<li><span class="math inline">a_1(x), \ldots, a_n(x) \in
+\mathbb{K}[x]</span></li>
+<li><span class="math inline">\exists m(x) \in I(a_1(x)) \cap \ldots
+\cap I(a_n(x)) \mid I(a_1(x)) \cap \ldots \cap I(a_1(x)) =
+I(m(x))</span></li>
 </ul></li>
 <li><strong>Th</strong>
 <ul>
@@ -586,9 +590,10 @@ a_n(x))</span></li>
 <ul>
 <li>la dimostrazione è analoga al caso in <span
 class="math inline">\mathbb{Z}</span></li>
-<li>in particolare, <span class="math inline">\textrm{mcm}(a_1(x),
-\ldots, a_n(x))</span> è ben definito in quanto il teorema fondamentale
-dell’aritmetica è applicabile anche ai polinomi</li>
+<li>in particolare, è possibile calcolare <span
+class="math inline">\textrm{mcm}(a_1(x), \ldots, a_n(x))</span>
+attraverso il teorema fondamentale dell’aritmetica, poiché applicabile
+anche ai polinomi</li>
 <li>inoltre, <span class="math inline">m(x)</span> è ben definito a meno
 di una costante moltiplicativa non nulla</li>
 </ul></li>
@@ -682,7 +687,6 @@ elemento primo è anche irriducibile</li>
 <ul>
 <li><strong>Hp</strong>
 <ul>
-<li><span class="math inline">\mathbb{K}</span> campo</li>
 <li><span class="math inline">p(x) \in \mathbb{C}[x]</span></li>
 </ul></li>
 <li><strong>Th</strong>
@@ -694,7 +698,7 @@ class="math inline">\iff \deg(p(x)) = 1</span></li>
 <ul>
 <li><em>prima implicazione</em>
 <ul>
-<li>ipotizzando che <span class="math inline">\deg(p(x)) \gt 1 \implies
+<li>per assurdo, <span class="math inline">\deg(p(x)) \gt 1 \implies
 \exists z \in \mathbb{C} \mid p(z) = 0</span> per il teorema
 fondamentale dell’algebra</li>
 <li>per dimostrazione precedente <span class="math inline">p(z) = 0 \iff
@@ -704,11 +708,18 @@ z) \cdot q(x)</span></li>
 necessariamente <span class="math inline">\deg(q(x)) = \deg(p(x)) -
 1</span></li>
 <li><span class="math inline">\deg(p(x)) \gt 1 \implies \deg(q(x)) =
-\deg(p(x)) - 1 \gt 0 \implies p(x)</span> non è irriducibile <span
+\deg(p(x)) - 1 \gt 0 \implies p(x)</span> non è irriducibile, poiché
+esisterebbe una sua radice in <span
+class="math inline">\mathbb{C}</span> <span
 class="math inline">\bot</span></li>
+<li>si noti che <span class="math inline">\deg(p(x)) = 0 \implies p(x)
+\in \mathbb{C}^* \implies p(x)</span> non irriducibile per definizione
+<span class="math inline">\bot</span></li>
 </ul></li>
 <li><em>seconda implicazione</em>
 <ul>
+<li>si noti che <span class="math inline">\deg(p(x)) \neq 0 \implies
+p(x) \notin \mathbb{C}[x]^* = \mathbb{C}^*</span></li>
 <li>per dimostrazione precedente <span class="math inline">\forall a(x),
 b(x), c(x) \in \mathbb{K}[x] \quad a(x) = b(x) \cdot c(x) \implies
 \deg(a(x)) = \deg(b(x)) + \deg(c(x))</span></li>
@@ -829,7 +840,7 @@ class="math inline">b(x)</span> sono della forma <span
 class="math inline">a(x) = cx + d</span>, dove <span
 class="math inline">c \in \mathbb{R} - \{0\}</span>, ma allora <span
 class="math inline">x&#39; := -c^{-1}d</span> è radice di <span
-class="math inline">a(x)</span>, e dunque necessariamente è anche radice
+class="math inline">a(x)</span>, e dunque necessariamente anche radice
 di <span class="math inline">p(x)</span></li>
 <li>allora <span class="math inline">\deg(p(x)) = 2 \land \exists x&#39;
 \in \mathbb{R} \mid p(x&#39;) = 0 \implies \Delta \ge 0 \
@@ -877,10 +888,11 @@ x + \dfrac{b}{a}\right)</span> irriducibile</li>
 \exists a(x), b(x) \in \mathbb{K}[x] - \mathbb{K}[x]^* \mid p(x) = a(x)
 b(x)</span></li>
 </ul></li>
-<li>⚠️ <strong>poi?</strong></li>
+<li>⚠️ <strong>incompleta</strong></li>
 </ul></li>
 <li><em>unicità</em>
 <ul>
+<li>⚠️ <strong>interamente da rifare</strong></li>
 <li><span class="math inline">\deg(p(x)) = 0</span>
 <ul>
 <li>allora <span class="math inline">p(x)</span> è della forma <span
@@ -907,7 +919,6 @@ class="math inline">q_1 \mid q_1&#39;(x) \iff \exists k \in \mathbb{K}^*
 q_k(x) = p(x) = c&#39; \cdot q_1&#39;(x) \cdot \ldots \cdot q_k&#39;(x)
 = c&#39; \cdot k \cdot q_1(x) \cdot \ldots, \cdot
 q_k&#39;(x)</span></li>
-<li>⚠️ <strong>tutto sbagliato che palle</strong></li>
 </ul></li>
 </ul></li>
 </ul></li>
@@ -932,18 +943,13 @@ b) = 1</span></li>
 <ul>
 <li><span class="math inline">0 = p\left(\frac{a}{b}\right) =
 a_n\left(\frac{a}{b}\right)^n + a_{n - 1}\left(\frac{a^{n - 1}}{b^{n -
-1}}\right) + \ldots + a_0</span></li>
-<li>moltiplicando entrambe i membri dell’equazione per <span
-class="math inline">b^n</span> si ottiene <span class="math inline">0 =
-a_na^n + a_{n -1}a^{n - 1}b + \ldots + a_1a^1b^{n -1 } +
-a_0b^n</span></li>
-<li>allora <span class="math inline">a_na^n = - a_{n - 1} a^{n - 1}b -
-\ldots - a_1a^1 b^{n - 1}- a_0b^n \implies b \mid a_na^n</span> poiché
-ogni termine del secondo membro dell’equazione contiene una potenza di
-<span class="math inline">b</span></li>
+1}}\right) + \ldots + a_0 \iff b^n \cdot 0 = a_na^n + a_{n -1}a^{n - 1}b
++ \ldots + a_1a^1b^{n -1 } + a_0b^n \iff a_na^n = - a_{n - 1} a^{n - 1}b
+- \ldots - a_1a^1 b^{n - 1}- a_0b^n = b(-a_{n - 1}a^{n-1} - \ldots -
+a_1a^1b^{n - 2} - a_0b^{n-1}) \implies b \mid a_na^n</span></li>
 <li><span class="math inline">\textrm{MCD}(a, b) = 1 \implies
-\textrm{MCD}(a^n, b) = 1</span>, ma allora <span class="math inline">b
-\mid a_na^n \implies b \mid a_n</span></li>
+\textrm{MCD}(a^n, b) = 1</span>, allora <span class="math inline">b \mid
+a_na^n \implies b \mid a_n</span></li>
 <li>è possibile ripetere il ragionamento analogo per <span
 class="math inline">a_0b^n</span>, e dall’equazione ottenuta si noterà
 che <span class="math inline">a \mid a_0b^n</span>, che per ragionamento

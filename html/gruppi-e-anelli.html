@@ -7,18 +7,15 @@
   <title>Gruppi e Anelli</title>
   <style>
     html {
-      line-height: 1.5;
-      font-family: Georgia, serif;
-      font-size: 20px;
       color: #fdfdfd;
       background-color: #1f1f1f;
     }
     body {
       margin: 0 auto;
-      max-width: 60em;
+      max-width: 36em;
       padding-left: 50px;
       padding-right: 50px;
-      padding-top: 50px;
+      max-width: 60em;
       padding-bottom: 50px;
       hyphens: auto;
       overflow-wrap: break-word;
@@ -28,13 +25,16 @@
     @media (max-width: 600px) {
       body {
         font-size: 0.9em;
-        padding: 1em;
+        padding: 12px;
       }
       h1 {
         font-size: 1.8em;
       }
     }
     @media print {
+      html {
+        background-color: white;
+      }
       body {
         background-color: transparent;
         color: black;
@@ -84,9 +84,10 @@
       color: #adbac7;
     }
     code {
-      font-family: Menlo, Monaco, 'Lucida Console', Consolas, monospace;
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
       font-size: 85%;
       margin: 0;
+      hyphens: manual;
     }
     pre {
       margin: 1em 0;
@@ -359,7 +360,7 @@ A</span></li>
 c) = a \cdot b + a \cdot c</span>
 <ul>
 <li>in particolare, deve valere la <em>proprietà distributiva a
-sinistra</em></li>
+destra</em></li>
 </ul></li>
 </ul></li>
 </ul>
@@ -551,7 +552,8 @@ definizione</li>
 <blockquote>
 <ul>
 <li><span class="math inline">A</span> anello commutativo</li>
-<li><span class="math inline">a \in A - \{0\} \mid a \in A^*</span></li>
+<li><span class="math inline">a \in A - \{0\} \mid a \notin
+A^*</span></li>
 <li><span class="math inline">a</span> è detto
 <strong>irriducibile</strong> <span class="math inline">\iff \exists b,
 c \in A \mid a = b c \implies b \in A^* \lor c \in A^*</span></li>
@@ -563,7 +565,8 @@ c \in A \mid a = b c \implies b \in A^* \lor c \in A^*</span></li>
 <blockquote>
 <ul>
 <li><span class="math inline">A</span> anello commutativo</li>
-<li><span class="math inline">a \in A - \{0\} \mid a \in A^*</span></li>
+<li><span class="math inline">a \in A - \{0\} \mid a \notin
+A^*</span></li>
 <li><span class="math inline">a</span> è detto <strong>primo</strong>
 <span class="math inline">\iff \exists b, c \in A : a \mid bc \implies a
 \mid b \lor a \mid c</span></li>
@@ -621,8 +624,6 @@ class="math inline">p</span> primo</li>
 <ul>
 <li>si supponga <span class="math inline">\exists b, c \in A \mid a =
 bc</span></li>
-<li><span class="math inline">\forall a \in A \quad a \mid a</span> per
-riflessività</li>
 <li>per ipotesi <span class="math inline">a</span> primo, dunque per
 definizione <span class="math inline">\exists b, c \in A : a \mid bc
 \implies a \mid b \lor a \mid c</span>, ma poiché <span
