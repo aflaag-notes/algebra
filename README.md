@@ -5,7 +5,6 @@ Questi sono i miei [appunti di algebra](https://ph04.github.io/algebra/html/inde
 ## TODO list
 
 - fixa dimostrazione polinomio
-- algoritmo di gram-schmidt
 - polinomi in $\mathbb{Z}_p$
 - matrice di transizione
 - equazioni parametriche
