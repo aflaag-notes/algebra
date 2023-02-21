@@ -42,7 +42,8 @@
     - _unicità_
         - per assurdo $\exists q_1(x), q_2(x), r_1(x), r_2(x) \in \mathbb{K}[x] \mid \left \{ \begin{array}{l}  a(x) = b(x)q_1(x) + r_1(x) & \deg(r_1(x)) \lt \deg(b(x)) \\ a(x) = b(x)q_2(x) + r_2(x) & \deg(r_2(x)) \lt \deg(b(x))\end{array} \right.$
         - allora $b(x)q_1(x) + r_1(x) = a(x) = b(x)q_2(x)+ r_2(x) \iff b(x)[q_1(x) - q_2(x)] = r_2(x) - r_1(x)$
-        - per ipotesi $\deg(r_2(x) - r_1(x)) \lt \deg(b(x))$, allora $\deg(b(x)[q_1(x) - q_2(x)]) \lt \deg(b(x))\iff q_1(x) - q_2(x) = 0 \iff q_1(x) = q_2(x) \implies r_1(x) = r_2(x)$
+        - si noti che  $\deg(r_2(x) - r_1(x)) = \max(\deg(r_2(x)), \deg(r_1(x)) \lt \deg(b(x))$
+        - allora $\deg(b(x)[q_1(x) - q_2(x)]) \lt \deg(b(x))\iff q_1(x) - q_2(x) = 0 \iff q_1(x) = q_2(x) \implies r_1(x) = r_2(x)$
 
 ****
 
