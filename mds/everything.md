@@ -3954,7 +3954,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 # RSA
 
 
-## Algoritmo 1
+## Algoritmo 2
 
 
 - **In**
@@ -3982,7 +3982,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 # Interpolazione di Lagrange
 
 
-## Algoritmo 1
+## Algoritmo 3
 
 
 - **In**
@@ -4004,7 +4004,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 # Algoritmo di Gram-Schmidt
 
 
-## Algoritmo 1
+## Algoritmo 4
 
 
 - **In**

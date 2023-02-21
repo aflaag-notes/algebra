@@ -37,7 +37,7 @@ def process_others(out, content, i, d, a):
                 continue
             elif line.startswith("## Alg"):
                 s2.append("\n## Algoritmo " + str(a) + "\n")
-                i += 1
+                a += 1
 
                 indim = False
                 continue
