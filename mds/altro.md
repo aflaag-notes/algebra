@@ -96,3 +96,27 @@
         - $(x - b_i)$ non è presente nel numeratore, ma $(x - b_j)$ sarà sicuramente presente
     - allora, ponendo $p(x) := c_0 p_0(x) + \ldots + c_np_n(x)$, ad esempio per $x = b_0$ si ha che $p(x) = c_0 p_0(b_0) + \ldots + c_np_n(b_0) = c_0 \cdot 1 + c_1 \cdot 0 + \ldots + c_n \cdot 0 = c_0$
 
+## Alg
+
+- **In**
+    - $\mathbb{K}$ campo
+    - $V$ spazio vettoriale su $\mathbb{K}$
+    - $v_1, \ldots, v_n$ base di $V$
+    - $\textrm{proj}_u(v) := \dfrac{u \cdot v}{u \cdot u} u$
+- **Out**
+    - $u_1, \ldots, u_n$ base ortogonale di $V$
+- **Alg**
+    - $\left \{ \begin{array}{l} u_1 := v_1 \\ u_2 := v_2 - \textrm{proj}_{u_1}(v_2) \\ u_3 := v_3 - \textrm{proj}_{u_1}(v_3) - \textrm{proj}_{u_2}(v_3) \\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \vdots \\ u_n := v_n - \displaystyle{\sum_{i = 1}^{n - 1}{\textrm{proj}_{u_i}(v_n)}}\end{array}\right.$
+- **Oss**
+    - siano $u, v \in V$, e $\theta$ l'angolo compreso tra $u$ e $v$, e $x$ la norma della proiezione di $v$ su $u$
+    - allora $\textrm{proj}_u(v)= xu$, poiché $x$ è la norma della proiezione e $u$ ne dà la direzione
+    - per definizione $\cos (\theta)=\dfrac{x}{||v||}$
+    - inoltre, per dimostrazione precedente $\cos (\theta)=\dfrac{u \cdot v}{||u|| \cdot ||v||}$
+    - allora $\dfrac{x}{||v||}=\cos (\theta)=\dfrac{u \cdot v}{||u|| \cdot ||v||} \implies x = \dfrac{u \cdot v}{||u||}$
+    - allora, ha significato la funzione che proietta $v$ su $u$, poiché $\textrm{proj}_u(v)=xu=\dfrac{u \cdot v}{||u||} \cdot \dfrac{u}{||u||} =\dfrac{u \cdot v}{u \cdot u}u$
+- **Dim**
+    - $u_1 := v_1$, poiché il primo vettore deve essere ortogonale solamente a sé stesso
+    - allora $u_2 := v_2 - \textrm{proj}_{u_1}(v_2)$ è la differenza vettoriale tra $v_2$ e la sua proiezione su $u_1$, che per costruzione sarà un vettore perpendicolare a $u_1$
+        - si noti che $u_2 \cdot u_1 = (v_2 - \textrm{proj}_{u_1}(v_2))\cdot u_1 = v_2 \cdot u_1 - \dfrac{u_1 \cdot v_2}{u_1 \cdot u_1}\cdot u_1\cdot u_1=0 \implies u_2 \ \bot \ u_1$
+    - allora $u_n := v_n - \displaystyle{\sum_{i = 1}^{n - 1}{\textrm{proj}_{u_i}(v_n)}}$, poiché è necessario assicurarsi che il vettore $v_n$ sia ortogonale a tutti gli altri $u_1, \ldots, u_{n-1}$ già creati
+

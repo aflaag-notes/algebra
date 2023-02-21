@@ -600,16 +600,6 @@
 - **Dim**
     - $||u|| = \sqrt{x_1^2 + \ldots + x_n^2} = \displaystyle \sqrt{\sum_{i= 1}^n{x_i^2}}=\sqrt{u\cdot u}$
 
-## Oss
-
-- **Hp**
-    - $\mathbb{K}$ campo
-    - $n \in \mathbb{N}$
-    - $v \in \mathbb{K}^n$
-    - $v_1, \ldots, v_n$ base ortonormale di $\mathbb{K}^n$
-- **Th**
-    - $v = (v \cdot v_1)v_1 + \ldots + (v \cdot v_n)v_n$
-
 ## Def
 
 - **Sottospazio ortogonale**

@@ -447,5 +447,75 @@ b_0</span> si ha che <span class="math inline">p(x) = c_0 p_0(b_0) +
 = c_0</span></li>
 </ul></li>
 </ul>
+<a href="#alg-3"><h2 id="alg-3">Alg</h2></a>
+<ul>
+<li><strong>In</strong>
+<ul>
+<li><span class="math inline">\mathbb{K}</span> campo</li>
+<li><span class="math inline">V</span> spazio vettoriale su <span
+class="math inline">\mathbb{K}</span></li>
+<li><span class="math inline">v_1, \ldots, v_n</span> base di <span
+class="math inline">V</span></li>
+<li><span class="math inline">\textrm{proj}_u(v) := \dfrac{u \cdot v}{u
+\cdot u} u</span></li>
+</ul></li>
+<li><strong>Out</strong>
+<ul>
+<li><span class="math inline">u_1, \ldots, u_n</span> base ortogonale di
+<span class="math inline">V</span></li>
+</ul></li>
+<li><strong>Alg</strong>
+<ul>
+<li><span class="math inline">\left \{ \begin{array}{l} u_1 := v_1 \\
+u_2 := v_2 - \textrm{proj}_{u_1}(v_2) \\ u_3 := v_3 -
+\textrm{proj}_{u_1}(v_3) - \textrm{proj}_{u_2}(v_3) \\ \ \ \ \ \ \ \ \ \
+\ \ \ \ \ \ \ \ \vdots \\ u_n := v_n - \displaystyle{\sum_{i = 1}^{n -
+1}{\textrm{proj}_{u_i}(v_n)}}\end{array}\right.</span></li>
+</ul></li>
+<li><strong>Oss</strong>
+<ul>
+<li>siano <span class="math inline">u, v \in V</span>, e <span
+class="math inline">\theta</span> l’angolo compreso tra <span
+class="math inline">u</span> e <span class="math inline">v</span>, e
+<span class="math inline">x</span> la norma della proiezione di <span
+class="math inline">v</span> su <span class="math inline">u</span></li>
+<li>allora <span class="math inline">\textrm{proj}_u(v)= xu</span>,
+poiché <span class="math inline">x</span> è la norma della proiezione e
+<span class="math inline">u</span> ne dà la direzione</li>
+<li>per definizione <span class="math inline">\cos
+(\theta)=\dfrac{x}{||v||}</span></li>
+<li>inoltre, per dimostrazione precedente <span class="math inline">\cos
+(\theta)=\dfrac{u \cdot v}{||u|| \cdot ||v||}</span></li>
+<li>allora <span class="math inline">\dfrac{x}{||v||}=\cos
+(\theta)=\dfrac{u \cdot v}{||u|| \cdot ||v||} \implies x = \dfrac{u
+\cdot v}{||u||}</span></li>
+<li>allora, ha significato la funzione che proietta <span
+class="math inline">v</span> su <span class="math inline">u</span>,
+poiché <span class="math inline">\textrm{proj}_u(v)=xu=\dfrac{u \cdot
+v}{||u||} \cdot \dfrac{u}{||u||} =\dfrac{u \cdot v}{u \cdot
+u}u</span></li>
+</ul></li>
+<li><strong>Dim</strong>
+<ul>
+<li><span class="math inline">u_1 := v_1</span>, poiché il primo vettore
+deve essere ortogonale solamente a sé stesso</li>
+<li>allora <span class="math inline">u_2 := v_2 -
+\textrm{proj}_{u_1}(v_2)</span> è la differenza vettoriale tra <span
+class="math inline">v_2</span> e la sua proiezione su <span
+class="math inline">u_1</span>, che per costruzione sarà un vettore
+perpendicolare a <span class="math inline">u_1</span>
+<ul>
+<li>si noti che <span class="math inline">u_2 \cdot u_1 = (v_2 -
+\textrm{proj}_{u_1}(v_2))\cdot u_1 = v_2 \cdot u_1 - \dfrac{u_1 \cdot
+v_2}{u_1 \cdot u_1}\cdot u_1\cdot u_1=0 \implies u_2 \ \bot \
+u_1</span></li>
+</ul></li>
+<li>allora <span class="math inline">u_n := v_n - \displaystyle{\sum_{i
+= 1}^{n - 1}{\textrm{proj}_{u_i}(v_n)}}</span>, poiché è necessario
+assicurarsi che il vettore <span class="math inline">v_n</span> sia
+ortogonale a tutti gli altri <span class="math inline">u_1, \ldots,
+u_{n-1}</span> già creati</li>
+</ul></li>
+</ul>
 </body>
 </html>
