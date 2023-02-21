@@ -102,7 +102,7 @@
     - allora $\mathcal{P} :=\{p_0(x), \ldots, p_n(x)\}$ base di $\mathbb{K}[x]_{\le n}$, e dunque determineranno univocamente il polinomio cercato
     - si noti inoltre che $\forall i \in [1, n] \quad p_i(x)= \dfrac{(x-b_n)(x - b_{n - 1})\cdot \ldots \cdot (x-b_{i + 1})(x - b_{i - 1})\cdot \ldots \cdot (x-b_1)(x-b_0)}{(b_i-b_n)(b_i - b_{n - 1})\cdot \ldots \cdot (b_i-b_{i + 1})(b_i - b_{i - 1})\cdot \ldots \cdot (b_i -b_1)(b_i-b_0)} \implies p_i(b_j) = \left \{ \begin{array}{l} 1 & i = j \\ 0 & i \neq j \end{array} \right.$
         - $(x - b_i)$ non è presente nel numeratore, ma $(x - b_j)$ sarà sicuramente presente
-    - allora, ponendo $p(x) := c_0 p_0(x) + \ldots + c_np_n(x)$, ad esempio per $x = b_0$ si ha che $p(x) = c_0 p_0(b_0) + \ldots + c_np_n(b_0) = c_0 \cdot 1 + c_1 \cdot 0 + \ldots + c_n \cdot 0 = c_0$
+    - allora, ponendo $p(x) := c_0 p_0(x) + \ldots + c_np_n(x)$, ad esempio per $x = b_0$ si ha $p(b_0) = c_0 p_0(b_0) + \ldots + c_np_n(b_0) = c_0 \cdot 1 + c_1 \cdot 0 + \ldots + c_n \cdot 0 = c_0$
 
 ****
 
