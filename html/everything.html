@@ -5677,6 +5677,193 @@ F_{n}=\dfrac{\varphi^{n}-\psi^{n}}{\varphi-\psi}=\dfrac{\varphi^{n}-\psi^{n}}{\s
 </ul></li>
 </ul>
 <hr />
+<a href="#algoritmo-di-euclide"><h1 id="algoritmo-di-euclide">Algoritmo di Euclide</h1></a>
+<a href="#teorema-199"><h2 id="teorema-199">Teorema 199</h2></a>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">a, b, c, \in \mathbb{Z}</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">a \mid b \land a \mid c \implies \forall z
+\in I(b, c) \quad a \mid z</span></li>
+</ul></li>
+</ul>
+<a href="#algoritmo-1"><h2 id="algoritmo-1">Algoritmo 1</h2></a>
+<ul>
+<li><strong>In</strong>
+<ul>
+<li><span class="math inline">a, b \in \mathbb{Z} \mid 0 \lt a \le
+b</span></li>
+</ul></li>
+<li><strong>Out</strong>
+<ul>
+<li><span class="math inline">d:=\textrm{MCD}(a, b)</span></li>
+</ul></li>
+<li><strong>Alg</strong>
+<ul>
+<li><span class="math inline">r_0:=b</span></li>
+<li><span class="math inline">r_1:=a</span></li>
+<li><span class="math inline">r_i = r_0q_0 + r_1</span></li>
+<li><span class="math inline">\texttt{while} \ r_i \neq 0
+\texttt{:}</span>
+<ul>
+<li><span class="math inline">r_{i + 1} = r_{i - 1}q_{i - 1} +
+r_i</span></li>
+<li><span class="math inline">r_i := r_{i + 1}</span></li>
+</ul></li>
+<li><span class="math inline">\texttt{return} \ r_i</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">r_n = d</span></li>
+</ul></li>
+</ul>
+<hr />
+<a href="#rsa"><h1 id="rsa">RSA</h1></a>
+<ul>
+<li><strong>In</strong>
+<ul>
+<li><span class="math inline">A</span> interlocutore</li>
+<li><span class="math inline">p, q \in \mathbb{P} \mid p \neq q</span>,
+con <span class="math inline">p, q</span> sufficientemente grandi</li>
+<li><span class="math inline">m</span> messaggio <span
+class="math inline">\mid \textrm{MCD}(m, n) = 1</span></li>
+</ul></li>
+<li><strong>Out</strong>
+<ul>
+<li><span class="math inline">\texttt{pub}_A,
+\texttt{priv}_A</span></li>
+</ul></li>
+<li><strong>Alg</strong>
+<ul>
+<li><span class="math inline">n := pq</span></li>
+<li><span class="math inline">\lambda(n) := \textrm{mcm}(p-1,
+q-1)</span></li>
+<li><span class="math inline">e \in \mathbb{N} \mid \left \{
+\begin{array}{l} 1 \lt e \lt \lambda(n) \\ \textrm{MCD}(e, \lambda(n))=
+1 \end{array} \right.</span></li>
+<li><span class="math inline">d:= e^{-1} \ (\bmod \
+\lambda(n))</span></li>
+<li><span class="math inline">\texttt{pub}_A(m, e, n) := m^e \ (\bmod \
+n)</span></li>
+<li><span class="math inline">\texttt{priv}_A(m, d, n) := (m^e)^d \
+(\bmod \ n)</span></li>
+</ul></li>
+<li><strong>Oss</strong>
+<ul>
+<li>se <span class="math inline">p,q</span> non fossero sufficientemente
+grandi, poiché <span class="math inline">n</span> è pubblico, si
+rischierebbe di poter trovare <span class="math inline">p</span> e <span
+class="math inline">q</span>, permettendo di decrittare il messaggio
+anche da chi non possiede <span class="math inline">d</span></li>
+<li><span class="math inline">p \mid m \implies m^{ed} \equiv m \equiv 0
+\ (\bmod \ p)</span>, il che comporterebbe una perdita di
+informazione</li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">\texttt{priv}_A(\texttt{pub}_A(m, e, n),
+d, n) = m</span></li>
+</ul></li>
+</ul>
+<hr />
+<a href="#interpolazione-di-lagrange"><h1 id="interpolazione-di-lagrange">Interpolazione di Lagrange</h1></a>
+<ul>
+<li><strong>In</strong>
+<ul>
+<li><span class="math inline">n \in \mathbb{N}</span></li>
+<li><span class="math inline">b_0, \ldots, b_n, c_0, \ldots, c_n \in
+\mathbb{K} \left \{ \begin{array}{c}(b_0, c_0) \\ \vdots \\ (b_n, c_n)
+\end{array} \right.</span> sono punti del <span
+class="math inline">p(x)</span> da trovare, e inoltre <span
+class="math inline">\forall i \in [1, n], i \neq j \quad b_i \neq
+b_j</span></li>
+</ul></li>
+<li><strong>Out</strong>
+<ul>
+<li><span class="math inline">p(x) \in \mathbb{K}[x]_{\le n} \mid \left
+\{ \begin{array}{c} c_0 := a_0 + a_1b_0 + a_2b_0^2 + \ldots + a_nb_0^n =
+p(b_0) \\ c_1:=a_0 + a_1b_1 + a_2b_1^2 + \ldots + a_nb_1^n = p(b_1) \\
+\vdots \\ c_n := a_0 + a_1b_n + a_2b_n^2 + \ldots + a_nb_n^n = p(b_n)
+\end{array} \right.</span></li>
+</ul></li>
+<li><strong>Alg</strong>
+<ul>
+<li><span class="math inline">\forall i \in [0, n] \quad p_i(x) :=
+\displaystyle \prod_{\begin{subarray}{c}0 \le j \le n \\ i \neq\ j
+\end{subarray}}{\dfrac{x - b_j}{b_i - b_j}}</span></li>
+<li><span class="math inline">p(x) := c_0p_0(x) + \ldots + c_n
+p_n(x)</span></li>
+</ul></li>
+<li><strong>Oss</strong>
+<ul>
+<li>è possibile sfruttare questo algoritmo per lo scambio di messaggi,
+ponendo il messaggio da inviare all’interno del termine noto di <span
+class="math inline">p(x)</span></li>
+<li>una volta reperito <span class="math inline">p(x)</span> a partire
+dai punti <span class="math inline">\left \{ \begin{array}{c}(b_0, c_0)
+\\ \vdots \\ (b_n, c_n) \end{array} \right.</span>, basterà porre <span
+class="math inline">p(0)</span> per recuperare il messaggio</li>
+<li>la sicurezza di tale algoritmo è fornita dal fatto che è impossibile
+ricostruire <span class="math inline">p(x)</span> senza avere
+<em>tutti</em> i punti necessari, altrimenti non è possibile ricostruire
+<span class="math inline">p(x)</span> come combinazione lineare in <span
+class="math inline">\mathbb{K}[x]_{\le n}</span></li>
+</ul></li>
+</ul>
+<hr />
+<a href="#algoritmo-di-gram-schmidt"><h1 id="algoritmo-di-gram-schmidt">Algoritmo di Gram-Schmidt</h1></a>
+<ul>
+<li><strong>In</strong>
+<ul>
+<li><span class="math inline">\mathbb{K}</span> campo</li>
+<li><span class="math inline">V</span> spazio vettoriale su <span
+class="math inline">\mathbb{K}</span></li>
+<li><span class="math inline">v_1, \ldots, v_n</span> base di <span
+class="math inline">V</span></li>
+<li><span class="math inline">\textrm{proj}_u(v) := \dfrac{u \cdot v}{u
+\cdot u} u</span></li>
+</ul></li>
+<li><strong>Out</strong>
+<ul>
+<li><span class="math inline">u_1, \ldots, u_n</span> base ortogonale di
+<span class="math inline">V</span></li>
+</ul></li>
+<li><strong>Alg</strong>
+<ul>
+<li><span class="math inline">\left \{ \begin{array}{l} u_1 := v_1 \\
+u_2 := v_2 - \textrm{proj}_{u_1}(v_2) \\ u_3 := v_3 -
+\textrm{proj}_{u_1}(v_3) - \textrm{proj}_{u_2}(v_3) \\ \ \ \ \ \ \ \ \ \
+\ \ \ \ \ \ \ \ \vdots \\ u_n := v_n - \displaystyle{\sum_{i = 1}^{n -
+1}{\textrm{proj}_{u_i}(v_n)}}\end{array}\right.</span></li>
+</ul></li>
+<li><strong>Oss</strong>
+<ul>
+<li>siano <span class="math inline">u, v \in V</span>, e <span
+class="math inline">\theta</span> l’angolo compreso tra <span
+class="math inline">u</span> e <span class="math inline">v</span>, e
+<span class="math inline">x</span> la norma della proiezione di <span
+class="math inline">v</span> su <span class="math inline">u</span></li>
+<li>allora <span class="math inline">\textrm{proj}_u(v)= xu</span>,
+poiché <span class="math inline">x</span> è la norma della proiezione e
+<span class="math inline">u</span> ne dà la direzione</li>
+<li>per definizione <span class="math inline">\cos
+(\theta)=\dfrac{x}{||v||}</span></li>
+<li>inoltre, per dimostrazione precedente <span class="math inline">\cos
+(\theta)=\dfrac{u \cdot v}{||u|| \cdot ||v||}</span></li>
+<li>allora <span class="math inline">\dfrac{x}{||v||}=\cos
+(\theta)=\dfrac{u \cdot v}{||u|| \cdot ||v||} \implies x = \dfrac{u
+\cdot v}{||u||}</span></li>
+<li>allora, ha significato la funzione che proietta <span
+class="math inline">v</span> su <span class="math inline">u</span>,
+poiché <span class="math inline">\textrm{proj}_u(v)=xu=\dfrac{u \cdot
+v}{||u||} \cdot \dfrac{u}{||u||} =\dfrac{u \cdot v}{u \cdot
+u}u</span></li>
+</ul></li>
+</ul>
+<hr />
 <a href="#teorema-fondamentale-dellalgebra"><h1 id="teorema-fondamentale-dellalgebra">Teorema fondamentale dell’algebra</h1></a>
 
 <ul>
@@ -5707,7 +5894,7 @@ a_{0}x^0 + \ldots +a_{n} x^{n}</span></li>
 q+r \quad 0 \leq r&lt;n</span></li>
 </ul></li>
 </ul>
-<a href="#teorema-199"><h2 id="teorema-199">Teorema 199</h2></a>
+<a href="#teorema-200"><h2 id="teorema-200">Teorema 200</h2></a>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -5750,7 +5937,7 @@ b) = a \cdot b</span></li>
 </ul>
 <hr />
 <a href="#teorema-cinese-dei-resti"><h1 id="teorema-cinese-dei-resti">Teorema cinese dei resti</h1></a>
-<a href="#teorema-200"><h2 id="teorema-200">Teorema 200</h2></a>
+<a href="#teorema-201"><h2 id="teorema-201">Teorema 201</h2></a>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -5765,7 +5952,7 @@ a_n)</span></li>
 <li><span class="math inline">m = a_1 \cdot \ldots \cdot a_n</span></li>
 </ul></li>
 </ul>
-<a href="#teorema-201"><h2 id="teorema-201">Teorema 201</h2></a>
+<a href="#teorema-202"><h2 id="teorema-202">Teorema 202</h2></a>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -5783,7 +5970,7 @@ a_n)</span></li>
 a_n))</span> è una funzione ben definita, ed è iniettiva</li>
 </ul></li>
 </ul>
-<a href="#teorema-202"><h2 id="teorema-202">Teorema 202</h2></a>
+<a href="#teorema-203"><h2 id="teorema-203">Teorema 203</h2></a>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -5804,7 +5991,7 @@ a_n)</span></li>
 a_{n}\right)\end{array}\right.</span></li>
 </ul></li>
 </ul>
-<a href="#teorema-203"><h2 id="teorema-203">Teorema 203</h2></a>
+<a href="#teorema-204"><h2 id="teorema-204">Teorema 204</h2></a>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -5857,7 +6044,7 @@ o_k)</span></li>
 <li><span class="math inline">a^{p} \equiv a \ (\bmod \ p)</span></li>
 </ul></li>
 </ul>
-<a href="#teorema-204"><h2 id="teorema-204">Teorema 204</h2></a>
+<a href="#teorema-205"><h2 id="teorema-205">Teorema 205</h2></a>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -5869,7 +6056,7 @@ o_k)</span></li>
 <li><span class="math inline">[a]^{-1}=\left[a\right]^{p-2}</span></li>
 </ul></li>
 </ul>
-<a href="#teorema-205"><h2 id="teorema-205">Teorema 205</h2></a>
+<a href="#teorema-206"><h2 id="teorema-206">Teorema 206</h2></a>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -5913,7 +6100,7 @@ anelli</li>
 \rightarrow f(a)</span> isomorfismo di anelli</li>
 </ul></li>
 </ul>
-<a href="#teorema-206"><h2 id="teorema-206">Teorema 206</h2></a>
+<a href="#teorema-207"><h2 id="teorema-207">Teorema 207</h2></a>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -5930,7 +6117,7 @@ class="math inline">\exists \varphi \mid \varphi : G / \textrm{ker}(f)
 gruppi</li>
 </ul></li>
 </ul>
-<a href="#teorema-207"><h2 id="teorema-207">Teorema 207</h2></a>
+<a href="#teorema-208"><h2 id="teorema-208">Teorema 208</h2></a>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -5981,7 +6168,7 @@ class="math inline">u</span> e <span class="math inline">v</span></li>
 2\cos(\theta) \cdot||u||\cdot ||v||</span></li>
 </ul></li>
 </ul>
-<a href="#teorema-208"><h2 id="teorema-208">Teorema 208</h2></a>
+<a href="#teorema-209"><h2 id="teorema-209">Teorema 209</h2></a>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -6101,7 +6288,7 @@ n}(\mathbb{K})</span></li>
 \det(B)</span></li>
 </ul></li>
 </ul>
-<a href="#teorema-209"><h2 id="teorema-209">Teorema 209</h2></a>
+<a href="#teorema-210"><h2 id="teorema-210">Teorema 210</h2></a>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -6137,196 +6324,6 @@ B^{-1}AB</span> diagonale</li>
 <li><strong>Th</strong>
 <ul>
 <li>le proposizioni sono equivalenti</li>
-</ul></li>
-</ul>
-<hr />
-<a href="#algoritmo-di-euclide"><h1 id="algoritmo-di-euclide">Algoritmo di Euclide</h1></a>
-<a href="#teorema-210"><h2 id="teorema-210">Teorema 210</h2></a>
-<ul>
-<li><strong>Hp</strong>
-<ul>
-<li><span class="math inline">a, b, c, \in \mathbb{Z}</span></li>
-</ul></li>
-<li><strong>Th</strong>
-<ul>
-<li><span class="math inline">a \mid b \land a \mid c \implies \forall z
-\in I(b, c) \quad a \mid z</span></li>
-</ul></li>
-</ul>
-<a href="#algoritmo-1"><h2 id="algoritmo-1">Algoritmo 1</h2></a>
-<ul>
-<li><strong>In</strong>
-<ul>
-<li><span class="math inline">a, b \in \mathbb{Z} \mid 0 \lt a \le
-b</span></li>
-</ul></li>
-<li><strong>Out</strong>
-<ul>
-<li><span class="math inline">d:=\textrm{MCD}(a, b)</span></li>
-</ul></li>
-<li><strong>Alg</strong>
-<ul>
-<li><span class="math inline">r_0:=b</span></li>
-<li><span class="math inline">r_1:=a</span></li>
-<li><span class="math inline">r_i = r_0q_0 + r_1</span></li>
-<li><span class="math inline">\texttt{while} \ r_i \neq 0
-\texttt{:}</span>
-<ul>
-<li><span class="math inline">r_{i + 1} = r_{i - 1}q_{i - 1} +
-r_i</span></li>
-<li><span class="math inline">r_i := r_{i + 1}</span></li>
-</ul></li>
-<li><span class="math inline">\texttt{return} \ r_i</span></li>
-</ul></li>
-<li><strong>Th</strong>
-<ul>
-<li><span class="math inline">r_n = d</span></li>
-</ul></li>
-</ul>
-<hr />
-<a href="#rsa"><h1 id="rsa">RSA</h1></a>
-<a href="#algoritmo-2"><h2 id="algoritmo-2">Algoritmo 2</h2></a>
-<ul>
-<li><strong>In</strong>
-<ul>
-<li><span class="math inline">A</span> interlocutore</li>
-<li><span class="math inline">p, q \in \mathbb{P} \mid p \neq q</span>,
-con <span class="math inline">p, q</span> sufficientemente grandi</li>
-<li><span class="math inline">m</span> messaggio <span
-class="math inline">\mid \textrm{MCD}(m, n) = 1</span></li>
-</ul></li>
-<li><strong>Out</strong>
-<ul>
-<li><span class="math inline">\texttt{pub}_A,
-\texttt{priv}_A</span></li>
-</ul></li>
-<li><strong>Alg</strong>
-<ul>
-<li><span class="math inline">n := pq</span></li>
-<li><span class="math inline">\lambda(n) := \textrm{mcm}(p-1,
-q-1)</span></li>
-<li><span class="math inline">e \in \mathbb{N} \mid \left \{
-\begin{array}{l} 1 \lt e \lt \lambda(n) \\ \textrm{MCD}(e, \lambda(n))=
-1 \end{array} \right.</span></li>
-<li><span class="math inline">d:= e^{-1} \ (\bmod \
-\lambda(n))</span></li>
-<li><span class="math inline">\texttt{pub}_A(m, e, n) := m^e \ (\bmod \
-n)</span></li>
-<li><span class="math inline">\texttt{priv}_A(m, d, n) := (m^e)^d \
-(\bmod \ n)</span></li>
-</ul></li>
-<li><strong>Oss</strong>
-<ul>
-<li>se <span class="math inline">p,q</span> non fossero sufficientemente
-grandi, poiché <span class="math inline">n</span> è pubblico, si
-rischierebbe di poter trovare <span class="math inline">p</span> e <span
-class="math inline">q</span>, permettendo di decrittare il messaggio
-anche da chi non possiede <span class="math inline">d</span></li>
-<li><span class="math inline">p \mid m \implies m^{ed} \equiv m \equiv 0
-\ (\bmod \ p)</span>, il che comporterebbe una perdita di
-informazione</li>
-</ul></li>
-<li><strong>Th</strong>
-<ul>
-<li><span class="math inline">\texttt{priv}_A(\texttt{pub}_A(m, e, n),
-d, n) = m</span></li>
-</ul></li>
-</ul>
-<hr />
-<a href="#interpolazione-di-lagrange"><h1 id="interpolazione-di-lagrange">Interpolazione di Lagrange</h1></a>
-<a href="#algoritmo-3"><h2 id="algoritmo-3">Algoritmo 3</h2></a>
-<ul>
-<li><strong>In</strong>
-<ul>
-<li><span class="math inline">n \in \mathbb{N}</span></li>
-<li><span class="math inline">b_0, \ldots, b_n, c_0, \ldots, c_n \in
-\mathbb{K} \left \{ \begin{array}{c}(b_0, c_0) \\ \vdots \\ (b_n, c_n)
-\end{array} \right.</span> sono punti del <span
-class="math inline">p(x)</span> da trovare, e inoltre <span
-class="math inline">\forall i \in [1, n], i \neq j \quad b_i \neq
-b_j</span></li>
-</ul></li>
-<li><strong>Out</strong>
-<ul>
-<li><span class="math inline">p(x) \in \mathbb{K}[x]_{\le n} \mid \left
-\{ \begin{array}{c} c_0 := a_0 + a_1b_0 + a_2b_0^2 + \ldots + a_nb_0^n =
-p(b_0) \\ c_1:=a_0 + a_1b_1 + a_2b_1^2 + \ldots + a_nb_1^n = p(b_1) \\
-\vdots \\ c_n := a_0 + a_1b_n + a_2b_n^2 + \ldots + a_nb_n^n = p(b_n)
-\end{array} \right.</span></li>
-</ul></li>
-<li><strong>Alg</strong>
-<ul>
-<li><span class="math inline">\forall i \in [0, n] \quad p_i(x) :=
-\displaystyle \prod_{\begin{subarray}{c}0 \le j \le n \\ i \neq\ j
-\end{subarray}}{\dfrac{x - b_j}{b_i - b_j}}</span></li>
-<li><span class="math inline">p(x) := c_0p_0(x) + \ldots + c_n
-p_n(x)</span></li>
-</ul></li>
-<li><strong>Oss</strong>
-<ul>
-<li>è possibile sfruttare questo algoritmo per lo scambio di messaggi,
-ponendo il messaggio da inviare all’interno del termine noto di <span
-class="math inline">p(x)</span></li>
-<li>una volta reperito <span class="math inline">p(x)</span> a partire
-dai punti <span class="math inline">\left \{ \begin{array}{c}(b_0, c_0)
-\\ \vdots \\ (b_n, c_n) \end{array} \right.</span>, basterà porre <span
-class="math inline">p(0)</span> per recuperare il messaggio</li>
-<li>la sicurezza di tale algoritmo è fornita dal fatto che è impossibile
-ricostruire <span class="math inline">p(x)</span> senza avere
-<em>tutti</em> i punti necessari, altrimenti non è possibile ricostruire
-<span class="math inline">p(x)</span> come combinazione lineare in <span
-class="math inline">\mathbb{K}[x]_{\le n}</span></li>
-</ul></li>
-</ul>
-<hr />
-<a href="#algoritmo-di-gram-schmidt"><h1 id="algoritmo-di-gram-schmidt">Algoritmo di Gram-Schmidt</h1></a>
-<a href="#algoritmo-4"><h2 id="algoritmo-4">Algoritmo 4</h2></a>
-<ul>
-<li><strong>In</strong>
-<ul>
-<li><span class="math inline">\mathbb{K}</span> campo</li>
-<li><span class="math inline">V</span> spazio vettoriale su <span
-class="math inline">\mathbb{K}</span></li>
-<li><span class="math inline">v_1, \ldots, v_n</span> base di <span
-class="math inline">V</span></li>
-<li><span class="math inline">\textrm{proj}_u(v) := \dfrac{u \cdot v}{u
-\cdot u} u</span></li>
-</ul></li>
-<li><strong>Out</strong>
-<ul>
-<li><span class="math inline">u_1, \ldots, u_n</span> base ortogonale di
-<span class="math inline">V</span></li>
-</ul></li>
-<li><strong>Alg</strong>
-<ul>
-<li><span class="math inline">\left \{ \begin{array}{l} u_1 := v_1 \\
-u_2 := v_2 - \textrm{proj}_{u_1}(v_2) \\ u_3 := v_3 -
-\textrm{proj}_{u_1}(v_3) - \textrm{proj}_{u_2}(v_3) \\ \ \ \ \ \ \ \ \ \
-\ \ \ \ \ \ \ \ \vdots \\ u_n := v_n - \displaystyle{\sum_{i = 1}^{n -
-1}{\textrm{proj}_{u_i}(v_n)}}\end{array}\right.</span></li>
-</ul></li>
-<li><strong>Oss</strong>
-<ul>
-<li>siano <span class="math inline">u, v \in V</span>, e <span
-class="math inline">\theta</span> l’angolo compreso tra <span
-class="math inline">u</span> e <span class="math inline">v</span>, e
-<span class="math inline">x</span> la norma della proiezione di <span
-class="math inline">v</span> su <span class="math inline">u</span></li>
-<li>allora <span class="math inline">\textrm{proj}_u(v)= xu</span>,
-poiché <span class="math inline">x</span> è la norma della proiezione e
-<span class="math inline">u</span> ne dà la direzione</li>
-<li>per definizione <span class="math inline">\cos
-(\theta)=\dfrac{x}{||v||}</span></li>
-<li>inoltre, per dimostrazione precedente <span class="math inline">\cos
-(\theta)=\dfrac{u \cdot v}{||u|| \cdot ||v||}</span></li>
-<li>allora <span class="math inline">\dfrac{x}{||v||}=\cos
-(\theta)=\dfrac{u \cdot v}{||u|| \cdot ||v||} \implies x = \dfrac{u
-\cdot v}{||u||}</span></li>
-<li>allora, ha significato la funzione che proietta <span
-class="math inline">v</span> su <span class="math inline">u</span>,
-poiché <span class="math inline">\textrm{proj}_u(v)=xu=\dfrac{u \cdot
-v}{||u||} \cdot \dfrac{u}{||u||} =\dfrac{u \cdot v}{u \cdot
-u}u</span></li>
 </ul></li>
 </ul>
 </body>

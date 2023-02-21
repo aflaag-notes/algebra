@@ -35,7 +35,7 @@ def process_others(out, content, i, d, a):
 
                 indim = False
                 continue
-            elif line.startswith("## Alg"):
+            elif line.startswith("## Alg") or line.startswith("## Algoritmo di Euclide"):
                 s2.append("\n## Algoritmo " + str(a) + "\n")
                 a += 1
 
@@ -100,11 +100,11 @@ for file in sorted(os.listdir("mds/"), key=lambda name: order[name]):
 
             out += "\n\n****\n"
 
-with open("mds/teoremi-fondamentali.md") as TF:
-    out, i, d, a = process_others(out, TF.read(), i, d, a)
-
 with open("mds/algoritmi.md") as A:
     out, i, d, a = process_others(out, A.read(), i, d, a)
+
+with open("mds/teoremi-fondamentali.md") as TF:
+    out, i, d, a = process_others(out, TF.read(), i, d, a)
 
 with open("mds/everything.md", "w+") as f:
     f.write("\n".join(out.split("\n")[:-2]))
