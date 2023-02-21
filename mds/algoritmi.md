@@ -52,6 +52,8 @@
 
 # RSA
 
+## Alg
+
 - **In**
     - $A$ interlocutore
     - $p, q \in \mathbb{P} \mid p \neq q$, con $p, q$ sufficientemente grandi
@@ -80,6 +82,8 @@
 
 # Interpolazione di Lagrange
 
+## Alg
+
 - **In**
     - $n \in \mathbb{N}$
     - $b_0, \ldots, b_n, c_0, \ldots, c_n \in \mathbb{K} \left \{ \begin{array}{c}(b_0, c_0) \\ \vdots \\ (b_n, c_n) \end{array} \right.$ sono punti del $p(x)$ da trovare, e inoltre $\forall i \in [1, n], i \neq j \quad b_i \neq b_j$
@@ -103,6 +107,8 @@
 ****
 
 # Algoritmo di Gram-Schmidt
+
+## Alg
 
 - **In**
     - $\mathbb{K}$ campo

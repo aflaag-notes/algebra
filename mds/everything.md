@@ -3930,7 +3930,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Th**
     - $a \mid b \land a \mid c \implies \forall z \in I(b, c) \quad a \mid z$
 
-## Teorema 211
+## Algoritmo 1
 
 
 - **In**
@@ -3952,6 +3952,10 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 # RSA
+
+
+## Algoritmo 1
+
 
 - **In**
     - $A$ interlocutore
@@ -3977,6 +3981,10 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 # Interpolazione di Lagrange
 
+
+## Algoritmo 1
+
+
 - **In**
     - $n \in \mathbb{N}$
     - $b_0, \ldots, b_n, c_0, \ldots, c_n \in \mathbb{K} \left \{ \begin{array}{c}(b_0, c_0) \\ \vdots \\ (b_n, c_n) \end{array} \right.$ sono punti del $p(x)$ da trovare, e inoltre $\forall i \in [1, n], i \neq j \quad b_i \neq b_j$
@@ -3994,6 +4002,10 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 # Algoritmo di Gram-Schmidt
+
+
+## Algoritmo 1
+
 
 - **In**
     - $\mathbb{K}$ campo
