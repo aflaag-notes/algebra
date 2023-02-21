@@ -653,22 +653,20 @@ class="math inline">\iff p(x)</span> primo</li>
 <ul>
 <li><em>prima implicazione</em>
 <ul>
-<li><span class="math inline">p(x) \in \mathbb{K}[x]</span>
-irriducibile, allora per definizione <span class="math inline">\exists
-d(x), q(x) \in \mathbb{K}[x] \mid p(x) = d(x) q(x) \implies d(x) \in
-\mathbb{K}[x]^*=\mathbb{K}^* \lor q(x) \in \mathbb{K}[x]^* =
-\mathbb{K}^*</span></li>
 <li>siano <span class="math inline">a(x), b(x) \in \mathbb{K}[x] : p(x)
 \mid a(x)b(x) \iff \exists k(x) \in \mathbb{K}[x] \mid p(x)k(x) =
 a(x)b(x)</span></li>
-<li>se <span class="math inline">p(x) \nmid a(x) \implies
-\textrm{MCD}(a(x), p(x))= 1</span>, allora per l’identità di Bézout
-<span class="math inline">\exists f(x), g(x) \in \mathbb{K}[x] \mid 1 =
-f(x)a(x) + g(x)p(x) \iff b(x) = a(x)b(x)f(x) + p(x)g(x)b(x) =
-p(x)k(x)f(x) +p(x)g(x)b(x) = p(x)[k(x)f(x) + g(x)b(x)] \implies p(x)
-\mid b(x)</span></li>
+<li>si assuma <span class="math inline">p(x) \nmid a(x)</span>
+<ul>
+<li>poiché <span class="math inline">p(x)</span> irriducibile, allora
+<span class="math inline">\textrm{MCD}(a(x), p(x))= 1</span>, allora per
+l’identità di Bézout <span class="math inline">\exists f(x), g(x) \in
+\mathbb{K}[x] \mid 1 = f(x)a(x) + g(x)p(x) \iff b(x) = a(x)b(x)f(x) +
+p(x)g(x)b(x) = p(x)k(x)f(x) +p(x)g(x)b(x) = p(x)[k(x)f(x) + g(x)b(x)]
+\implies p(x) \mid b(x)</span></li>
 <li>allora <span class="math inline">p(x) \mid a(x)b(x) \land p(x) \nmid
 a(x) \implies p(x) \mid b(x)</span></li>
+</ul></li>
 <li>ripetendo analogamente il ragionamento, è possibile dimostrare che
 <span class="math inline">p(x) \mid a(x)b(x) \land p(x) \nmid b(x)
 \implies p(x) \mid a(x)</span></li>
@@ -917,8 +915,7 @@ class="math inline">q_1 \mid q_1&#39;(x) \iff \exists k \in \mathbb{K}^*
 \mid q_1(x) \cdot k = q_1&#39;(x)</span></li>
 <li>allora <span class="math inline">c \cdot q_1(x) \cdot \ldots \cdot
 q_k(x) = p(x) = c&#39; \cdot q_1&#39;(x) \cdot \ldots \cdot q_k&#39;(x)
-= c&#39; \cdot k \cdot q_1(x) \cdot \ldots, \cdot
-q_k&#39;(x)</span></li>
+= c&#39; \cdot k \cdot q_1(x) \cdot \ldots \cdot q_k&#39;(x)</span></li>
 </ul></li>
 </ul></li>
 </ul></li>

@@ -202,10 +202,10 @@
     - $p(x)$ irriducibile $\iff p(x)$ primo
 - **Dim**
     - _prima implicazione_
-        - $p(x) \in \mathbb{K}[x]$ irriducibile, allora per definizione $\exists d(x), q(x) \in \mathbb{K}[x] \mid p(x) = d(x) q(x) \implies d(x) \in \mathbb{K}[x]^*=\mathbb{K}^* \lor q(x) \in \mathbb{K}[x]^* = \mathbb{K}^*$
         - siano $a(x), b(x) \in \mathbb{K}[x] : p(x) \mid a(x)b(x) \iff \exists k(x) \in \mathbb{K}[x] \mid p(x)k(x) = a(x)b(x)$
-        - se $p(x) \nmid a(x) \implies \textrm{MCD}(a(x), p(x))= 1$, allora per l'identità di Bézout $\exists f(x), g(x) \in \mathbb{K}[x] \mid 1 = f(x)a(x) + g(x)p(x) \iff b(x) = a(x)b(x)f(x) + p(x)g(x)b(x) = p(x)k(x)f(x) +p(x)g(x)b(x) = p(x)[k(x)f(x) + g(x)b(x)] \implies p(x) \mid b(x)$
-        - allora $p(x) \mid a(x)b(x) \land p(x) \nmid a(x) \implies p(x) \mid b(x)$
+        - si assuma $p(x) \nmid a(x)$
+            - poiché $p(x)$ irriducibile, allora $\textrm{MCD}(a(x), p(x))= 1$, allora per l'identità di Bézout $\exists f(x), g(x) \in \mathbb{K}[x] \mid 1 = f(x)a(x) + g(x)p(x) \iff b(x) = a(x)b(x)f(x) + p(x)g(x)b(x) = p(x)k(x)f(x) +p(x)g(x)b(x) = p(x)[k(x)f(x) + g(x)b(x)] \implies p(x) \mid b(x)$
+            - allora $p(x) \mid a(x)b(x) \land p(x) \nmid a(x) \implies p(x) \mid b(x)$
         - ripetendo analogamente il ragionamento, è possibile dimostrare che $p(x) \mid a(x)b(x) \land p(x) \nmid b(x) \implies p(x) \mid a(x)$
         - allora, per definizione $p(x)$ primo
     - _seconda implicazione_
@@ -288,7 +288,7 @@
             - per assurdo $\exists q_1(x), \ldots, q_k(x), q_1'(x), \ldots, q_k'(x) \in \mathbb{K}[x]$ irriducibili e monici, $c, c' \in \mathbb{K}^* \mid c \cdot q_1(x) \cdot \ldots \cdot q_k(x) = p(x) = c' \cdot q_1'(x) \cdot \ldots \cdot q_k'(x)$
             - allora, ad esempio $q_1(x) \mid p(x) = c' \cdot q_1'(x) \cdot \ldots \cdot q_k'(x) \implies q_1(x) \mid q_1'(x) \lor \ldots \lor q_1(x) \mid q_k'(x)$
             - ipotizzando $q_1 \mid q_1'(x)$, poiché $\deg(q_1(x)) = \deg(q_1'(x))$, allora necessariamente $q_1 \mid q_1'(x) \iff \exists k \in \mathbb{K}^* \mid q_1(x) \cdot k = q_1'(x)$
-            - allora $c \cdot q_1(x) \cdot \ldots \cdot q_k(x) = p(x) = c' \cdot q_1'(x) \cdot \ldots \cdot q_k'(x) = c' \cdot k \cdot q_1(x) \cdot \ldots, \cdot q_k'(x)$
+            - allora $c \cdot q_1(x) \cdot \ldots \cdot q_k(x) = p(x) = c' \cdot q_1'(x) \cdot \ldots \cdot q_k'(x) = c' \cdot k \cdot q_1(x) \cdot \ldots \cdot q_k'(x)$
 
 ## Oss
 
