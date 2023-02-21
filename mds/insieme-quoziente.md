@@ -54,14 +54,10 @@
 - **Th**
   - $[a] \in \mathbb{Z}^*_n \iff \textrm{MCD}(a, n) = 1$
 - **Dim**
-  - _prima implicazione_
-    - $[a] \in \mathbb{Z}_n^* \implies \exists b \in \mathbb{Z} \mid [a][b] = [1] \quad 0 \lt b \lt n \iff ab \equiv 1 \ (\bmod \ n) \iff n \mid 1 - ab \iff \exists k \in \mathbb{Z} \mid nk = 1 - ab \iff 1 = nk + ab$
-    - $d : = \textrm{MCD}(a, n) \implies d \mid a \land d \mid n \implies \left \{ \begin{array}{l} d \mid a \implies \exists x \in \mathbb{Z} \mid dx = a \\ d \mid n \implies \exists y \in \mathbb{Z} \mid dy = n \end{array} \right. \implies 1 = nk + ab \iff 1 = dyk + dxb = d(yk + xb) \implies \exists yk + xb \in \mathbb{Z} \mid 1 = d(yk +xb) \implies d \mid 1$
-    - $d \mid 1 \iff d = \pm 1$, ma $d := \textrm{MCD}(a, n) \implies d \ge 0 \implies d = 1$
-  - _seconda implicazione_
-    - ⚠️ **questo verso non è totalmente corretto**
-    - $d := \textrm{MCD}(a, n) = 1$
-    - per dimostrazione precedente, $I(d) = I(a, n) \implies d \in I(a, n) \implies \exists b, k \in \mathbb{Z} \mid d = ab + nk$ per definizione di $I(a, n)$, allora $d = 1 = ab + nk \iff nk = 1 - ab \iff n \mid 1 - ab \iff ab \equiv 1 \ (\bmod \ n) \implies [a][b] = [1]$ in $\mathbb{Z}_n \iff [a] \in \mathbb{Z}_n^*$
+  <!-- - _prima implicazione_ -->
+  - $[a] \in \mathbb{Z}_n^* \iff \exists b \in \mathbb{Z} \mid [a][b] = [1] \iff ab \equiv 1 \ (\bmod \ n) \iff n \mid 1 - ab \iff \exists k \in \mathbb{Z} \mid nk = 1 - ab \iff 1 = nk + ab$
+  - $\mathbb{Z}$ dominio ad ideali principali $\implies \exists d \in I(a,n) \mid I(a,n) = I(d)$, dove $d := \textrm{MCD}(a,n)$
+  - $nk + ab = 1 \in I(a,n) = I(d) \iff 1 \in I(d) \iff d \mid 1 \iff d= \pm 1$, e per definizione canonica di $\textrm{MCD}(a,n) \ge 0 \implies d=1$
 
 ## Oss
 

@@ -298,36 +298,20 @@ in <span class="math inline">\mathbb{Z}_n \ \bot</span></li>
 <li><span class="math inline">[a] \in \mathbb{Z}^*_n \iff
 \textrm{MCD}(a, n) = 1</span></li>
 </ul></li>
-<li><strong>Dim</strong>
+<li><strong>Dim</strong> <!-- - _prima implicazione_ -->
 <ul>
-<li><em>prima implicazione</em>
-<ul>
-<li><span class="math inline">[a] \in \mathbb{Z}_n^* \implies \exists b
-\in \mathbb{Z} \mid [a][b] = [1] \quad 0 \lt b \lt n \iff ab \equiv 1 \
-(\bmod \ n) \iff n \mid 1 - ab \iff \exists k \in \mathbb{Z} \mid nk = 1
-- ab \iff 1 = nk + ab</span></li>
-<li><span class="math inline">d : = \textrm{MCD}(a, n) \implies d \mid a
-\land d \mid n \implies \left \{ \begin{array}{l} d \mid a \implies
-\exists x \in \mathbb{Z} \mid dx = a \\ d \mid n \implies \exists y \in
-\mathbb{Z} \mid dy = n \end{array} \right. \implies 1 = nk + ab \iff 1 =
-dyk + dxb = d(yk + xb) \implies \exists yk + xb \in \mathbb{Z} \mid 1 =
-d(yk +xb) \implies d \mid 1</span></li>
-<li><span class="math inline">d \mid 1 \iff d = \pm 1</span>, ma <span
-class="math inline">d := \textrm{MCD}(a, n) \implies d \ge 0 \implies d
-= 1</span></li>
-</ul></li>
-<li><em>seconda implicazione</em>
-<ul>
-<li>⚠️ <strong>questo verso non è totalmente corretto</strong></li>
-<li><span class="math inline">d := \textrm{MCD}(a, n) = 1</span></li>
-<li>per dimostrazione precedente, <span class="math inline">I(d) = I(a,
-n) \implies d \in I(a, n) \implies \exists b, k \in \mathbb{Z} \mid d =
-ab + nk</span> per definizione di <span class="math inline">I(a,
-n)</span>, allora <span class="math inline">d = 1 = ab + nk \iff nk = 1
-- ab \iff n \mid 1 - ab \iff ab \equiv 1 \ (\bmod \ n) \implies [a][b] =
-[1]</span> in <span class="math inline">\mathbb{Z}_n \iff [a] \in
-\mathbb{Z}_n^*</span></li>
-</ul></li>
+<li><span class="math inline">[a] \in \mathbb{Z}_n^* \iff \exists b \in
+\mathbb{Z} \mid [a][b] = [1] \iff ab \equiv 1 \ (\bmod \ n) \iff n \mid
+1 - ab \iff \exists k \in \mathbb{Z} \mid nk = 1 - ab \iff 1 = nk +
+ab</span></li>
+<li><span class="math inline">\mathbb{Z}</span> dominio ad ideali
+principali <span class="math inline">\implies \exists d \in I(a,n) \mid
+I(a,n) = I(d)</span>, dove <span class="math inline">d :=
+\textrm{MCD}(a,n)</span></li>
+<li><span class="math inline">nk + ab = 1 \in I(a,n) = I(d) \iff 1 \in
+I(d) \iff d \mid 1 \iff d= \pm 1</span>, e per definizione canonica di
+<span class="math inline">\textrm{MCD}(a,n) \ge 0 \implies
+d=1</span></li>
 </ul></li>
 </ul>
 <a href="#oss-3"><h2 id="oss-3">Oss</h2></a>
