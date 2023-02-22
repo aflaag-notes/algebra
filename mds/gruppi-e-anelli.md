@@ -98,7 +98,7 @@
 - **Campo**
 
 > - $(A, +, \cdot)$ anello commutativo
-> - $(A, +, \cdot)$ è detto **campo** $\iff \forall x \in A \quad \exists x^{-1} \in A$ rispetto a $\cdot$
+> - $(A, +, \cdot)$ è detto **campo** $\iff \forall x \in A - \{0\} \quad \exists x^{-1} \in A$ rispetto a $\cdot$
 
 - **Semianello commutativo**
 
@@ -492,7 +492,7 @@
     - $G \cong \mathbb{Z}_p$
 - **Dim**
     - $\forall g \in G \quad |H(g)| \bigg\vert |G|$ per il teorema di Lagrange
-    - $p \in \mathbb{P} \implies |H(g)| = \left \{ \begin{array}{ll} 1 & g = 1_G \\ p & g \neq 1_G \end{array} \right. \implies \forall g \in G - \{1_G\} \quad |H(g)| = p =|G| \implies H(g) \iff G = H(g) \cong \mathbb{Z}_p$ per dimostrazione precedente
+    - $p \in \mathbb{P} \implies |H(g)| = \left \{ \begin{array}{ll} 1 & g = 1_G \\ p & g \neq 1_G \end{array} \right. \implies \forall g \in G - \{1_G\} \quad |H(g)| = p =|G| \implies G = H(g) \cong \mathbb{Z}_p$ per dimostrazione precedente
 
 ## Oss
 

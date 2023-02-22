@@ -110,7 +110,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Campo**
 
 > - $(A, +, \cdot)$ anello commutativo
-> - $(A, +, \cdot)$ è detto **campo** $\iff \forall x \in A \quad \exists x^{-1} \in A$ rispetto a $\cdot$
+> - $(A, +, \cdot)$ è detto **campo** $\iff \forall x \in A - \{0\} \quad \exists x^{-1} \in A$ rispetto a $\cdot$
 
 - **Semianello commutativo**
 

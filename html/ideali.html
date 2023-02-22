@@ -291,13 +291,12 @@ class="math inline">c</span></li>
 <li><em>seconda implicazione</em>
 <ul>
 <li><span class="math inline">\exists c \in A^* \mid a= bc \implies b
-\mid a \implies a \in I(b) \implies I(a) \subset I(b)</span></li>
+\mid a \implies a \in I(b) \implies I(a) \subseteq I(b)</span></li>
 <li><span class="math inline">c \in A^* \implies \exists c^{-1} \in
 A</span>, dunque <span class="math inline">a = bc \iff a \cdot c^{-1} =
-b \implies a \mid b \implies b \in I(a) \implies I(b) \subset
+b \implies a \mid b \implies b \in I(a) \implies I(b) \subseteq
 I(a)</span></li>
-<li>dunque <span class="math inline">I(a) = I(b)</span> per doppia
-inclusione</li>
+<li>allora <span class="math inline">I(a) = I(b)</span></li>
 </ul></li>
 </ul></li>
 </ul>
@@ -449,8 +448,8 @@ I</span> poiché <span class="math inline">I</span> è un ideale</li>
 <li>per definizione, <span class="math inline">0 \le r \lt d</span>, in
 particolare <span class="math inline">r \lt d</span>, ma poiché <span
 class="math inline">d:=\min(I \cap \mathbb{Z}_{\gt 0})</span>
-necessariamente <span class="math inline">r = 0</span>, e dunque segue
-la dimostrazione precedente</li>
+necessariamente <span class="math inline">r = 0 \implies x = dq \in
+I(d)</span></li>
 </ul></li>
 </ul></li>
 </ul></li>
@@ -507,15 +506,12 @@ a_n)</span></li>
 <li><strong>Dim</strong>
 <ul>
 <li><span class="math inline">d</span> è <em>divisore comune</em>
+<!-- - $I(d) = I(a_1, \ldots, a_n) \implies \forall x \in I(a_1, \ldots, a_n) \quad x \in I(d) \implies d \mid x$ per definizione di $I(d)$ -->
+<!-- - preso ad esempio $a_1$, è possibile riscriverlo come $a_1 = a_1 \cdot 1 + a_2 \cdot 0 + \ldots + a_n \cdot 0$, di conseguenza $a_1 \in I(a_1, \ldots, a_n)$, dunque $d \mid a_1$ -->
 <ul>
-<li><span class="math inline">I(d) = I(a_1, \ldots, a_n) \implies
-\forall x \in I(a_1, \ldots, a_n) \quad x \in I(d) \implies d \mid
-x</span> per definizione di <span class="math inline">I(d)</span></li>
-<li>preso ad esempio <span class="math inline">a_1</span>, è possibile
-riscriverlo come <span class="math inline">a_1 = a_1 \cdot 1 + a_2 \cdot
-0 + \ldots + a_n \cdot 0</span>, di conseguenza <span
-class="math inline">a_1 \in I(a_1, \ldots, a_n)</span>, dunque <span
-class="math inline">d \mid a_1</span></li>
+<li><span class="math inline">a_1 = a_1 \cdot 1 + a_2 \cdot 0 + \ldots +
+a_n \cdot 0 \in I(a_1, \ldots, a_n) = I(d) \implies d \mid
+a_1</span></li>
 <li>vale il ragionamento analogo per ogni <span class="math inline">a_1,
 \ldots , a_n</span>, dunque <span class="math inline">d \mid a_1,
 \ldots, a_n</span></li>
@@ -705,7 +701,7 @@ a_n)</span></li>
 <li><span class="math inline">I(m) = \displaystyle
 \bigcap_{i=1}^n{I(a_i)} \implies m \in I(a_1) \cap \ldots \cap I(a_n)
 \implies \forall i \in [1, n] \quad \exists x_i \in \mathbb{Z} : a_ix_i
-= m \iff a_i \mid k</span></li>
+= m \iff a_i \mid m</span></li>
 </ul></li>
 <li><span class="math inline">m</span> è il <em>minimo tra i multipli
 comuni</em>
@@ -826,15 +822,9 @@ J</span></li>
 <li>per dimostrazione precedente <span class="math inline">I(a)</span> e
 <span class="math inline">I(b)</span> sono ideali, e poiché la somma tra
 ideali è ben definita, allora <span class="math inline">I(a)+I(b)=\{i+j
-\mid i \in I(a), j \in I(b) \}</span></li>
-<li><span class="math inline">i \in I(a) \implies \exists x \in
-\mathbb{Z} \mid i = ax</span> e <span class="math inline">j \in I(b)
-\implies \exists y \in \mathbb{Z} \mid j = by</span></li>
-<li>quindi <span class="math inline">i + j = ax + by \implies</span>
-<span class="math inline">I(a)+I(b)=\{a x+b y \mid x, y \in \mathbb{Z}\}
-= I(a, b)</span> per definizione</li>
-<li>in particolare, per dimostrazione precedente, <span
-class="math inline">I(a, b) = I(d)</span></li>
+\mid i \in I(a), j \in I(b) \iff \exists x \in \mathbb{Z}, y \in
+\mathbb{Z} \mid i = ax \land j = by\} = \{ax + by \mid ax \in I(a), by
+\in I(b)\} =: I(a, b) = I(d)</span></li>
 <li>questa dimostrazione si può estendere per un numero arbitrario di
 ideali, ottenendo <span class="math inline">I(a_1) + \ldots + I(a_n) =
 I(\textrm{MCD}(a_1, \ldots, a_n))</span></li>

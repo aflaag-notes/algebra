@@ -45,9 +45,9 @@
                 - in particolare, $c := 1 \implies \exists c^{-1} = 1^{-1} = 1$
             - $1 - cd = 0 \iff -cd = -1 \iff cd = 1$, dunque $d$ è l'inverso di $c$
     - _seconda implicazione_
-        - $\exists c \in A^* \mid a= bc \implies b \mid a \implies a \in I(b) \implies I(a) \subset I(b)$
-        - $c \in A^* \implies \exists c^{-1} \in A$, dunque $a = bc \iff a \cdot c^{-1} = b \implies a \mid b \implies b \in I(a) \implies I(b) \subset I(a)$
-        - dunque $I(a) = I(b)$ per doppia inclusione
+        - $\exists c \in A^* \mid a= bc \implies b \mid a \implies a \in I(b) \implies I(a) \subseteq I(b)$
+        - $c \in A^* \implies \exists c^{-1} \in A$, dunque $a = bc \iff a \cdot c^{-1} = b \implies a \mid b \implies b \in I(a) \implies I(b) \subseteq I(a)$
+        - allora $I(a) = I(b)$
 
 ## Oss
 
@@ -108,7 +108,7 @@
                 - $dq \in I(d) \implies dq \in I$ per dimostrazione precedente
                 - quindi $x = dq + r \implies r = x - dq \in I$ poiché $I$ è un ideale
                 - $r \neq 0 \implies r \in I \cap \mathbb{Z}_{\gt 0}$
-                - per definizione, $0 \le r \lt d$, in particolare $r \lt d$, ma poiché $d:=\min(I \cap \mathbb{Z}_{\gt 0})$ necessariamente $r = 0$, e dunque segue la dimostrazione precedente
+                - per definizione, $0 \le r \lt d$, in particolare $r \lt d$, ma poiché $d:=\min(I \cap \mathbb{Z}_{\gt 0})$ necessariamente $r = 0 \implies x = dq \in I(d)$
     - dunque, ogni ideale in $\mathbb{Z}$ è generato dall'insieme dei multipli di un certo $d$ nell'ideale, di conseguenza $\mathbb{Z}$ è un anello ad ideali principali
 
 ## Def
@@ -130,8 +130,9 @@
     - $d = \textrm{MCD}(a_1, \ldots, a_n)$
 - **Dim**
     - $d$ è _divisore comune_
-        - $I(d) = I(a_1, \ldots, a_n) \implies \forall x \in I(a_1, \ldots, a_n) \quad x \in I(d) \implies d \mid x$ per definizione di $I(d)$
-        - preso ad esempio $a_1$, è possibile riscriverlo come $a_1 = a_1 \cdot 1 + a_2 \cdot 0 + \ldots + a_n \cdot 0$, di conseguenza $a_1 \in I(a_1, \ldots, a_n)$, dunque $d \mid a_1$
+        <!-- - $I(d) = I(a_1, \ldots, a_n) \implies \forall x \in I(a_1, \ldots, a_n) \quad x \in I(d) \implies d \mid x$ per definizione di $I(d)$ -->
+        <!-- - preso ad esempio $a_1$, è possibile riscriverlo come $a_1 = a_1 \cdot 1 + a_2 \cdot 0 + \ldots + a_n \cdot 0$, di conseguenza $a_1 \in I(a_1, \ldots, a_n)$, dunque $d \mid a_1$ -->
+        - $a_1 = a_1 \cdot 1 + a_2 \cdot 0 + \ldots + a_n \cdot 0 \in I(a_1, \ldots, a_n) = I(d) \implies d \mid a_1$
         - vale il ragionamento analogo per ogni $a_1, \ldots , a_n$, dunque $d \mid a_1, \ldots, a_n$
     - $d$ è il _massimo tra i divisori comuni_
         - $d$ è il massimo tra i divisori comuni se $\forall k \in \mathbb{Z}: k \mid a_1, \ldots, a_n \quad  k \mid d$
@@ -217,7 +218,7 @@
     - $m = \textrm{mcm}(a_1, \ldots, a_n)$
 - **Dim**
     - $m$ è _multiplo comune_
-        - $I(m) = \displaystyle \bigcap_{i=1}^n{I(a_i)} \implies m \in I(a_1) \cap \ldots \cap I(a_n) \implies \forall i \in [1, n] \quad \exists x_i \in \mathbb{Z} : a_ix_i = m \iff a_i \mid k$
+        - $I(m) = \displaystyle \bigcap_{i=1}^n{I(a_i)} \implies m \in I(a_1) \cap \ldots \cap I(a_n) \implies \forall i \in [1, n] \quad \exists x_i \in \mathbb{Z} : a_ix_i = m \iff a_i \mid m$
     - $m$ è il _minimo tra i multipli comuni_
         - $m$ è il minimo tra i multipli comuni se $\forall k \in \mathbb{Z} : a_1, \ldots, a_n \mid k \quad  m \mid k$
         - $\forall i \in [1, n] \quad a_i \mid k \iff \exists x_i \in \mathbb{Z} \mid a_ix_i = k \iff k \in I(a_i)$, allora $k \in I(a_1) \cap \ldots \cap I(a_n) = I(m)$
@@ -265,10 +266,7 @@
 - **Th**
   - $I(a) + I(b) = I(d)$
 - **Dim**
-   - per dimostrazione precedente $I(a)$ e $I(b)$ sono ideali, e poiché la somma tra ideali è ben definita, allora $I(a)+I(b)=\{i+j \mid i \in I(a), j \in I(b) \}$
-   - $i \in I(a) \implies \exists x \in \mathbb{Z} \mid i = ax$ e $j \in I(b) \implies \exists y \in \mathbb{Z} \mid j = by$
-   - quindi $i + j = ax + by \implies$ $I(a)+I(b)=\{a x+b y \mid x, y \in \mathbb{Z}\} = I(a, b)$ per definizione
-   - in particolare, per dimostrazione precedente, $I(a, b) = I(d)$
+   - per dimostrazione precedente $I(a)$ e $I(b)$ sono ideali, e poiché la somma tra ideali è ben definita, allora $I(a)+I(b)=\{i+j \mid i \in I(a), j \in I(b) \iff \exists x \in \mathbb{Z}, y \in \mathbb{Z} \mid i = ax \land j = by\} = \{ax + by \mid ax \in I(a), by \in I(b)\} =: I(a, b) = I(d)$
    - questa dimostrazione si può estendere per un numero arbitrario di ideali, ottenendo $I(a_1) + \ldots + I(a_n) = I(\textrm{MCD}(a_1, \ldots, a_n))$
 
 ## Oss
