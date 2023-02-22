@@ -255,9 +255,7 @@
     - $\textrm{sgn}(\textrm{id}) = (-1)^0 = 1$, in quanto $\textrm{id}$ non ha inversioni, dunque $\textrm{id} \in \mathcal{A}_n$
     - $\sigma, \sigma' \in \mathcal{A}_n \implies \textrm{sgn}(\sigma)=\textrm{sgn}(\sigma')=1 \implies \textrm{sgn}(\sigma)\cdot\textrm{sgn}(\sigma') = 1 = \textrm{sgn}(\sigma \sigma')$ per dimostrazione precedente $\implies \sigma \sigma' \in \mathcal{A}_n$
     - $\sigma \in \mathcal{A}_n \implies \textrm{sgn}(\sigma) = 1 = \textrm{sgn}(\sigma^{-1})$ per dimostrazione predecente $\implies \sigma^{-1} \in \mathcal{A}_n$
-    <!-- - $\mathcal{A}_n \trianglelefteq \mathcal{S}_n \iff \forall \sigma \in \mathcal{A}_n, \alpha \in \mathcal{S}_n \quad \sigma \alpha \sigma^{-1} \in \mathcal{A}_n$ per dimostrazione precedente -->
-    <!-- - inoltre, per dimostrazione precedente $\textrm{sgn}(\sigma) = 1 = \textrm{sgn}(\sigma \alpha \sigma^{-1}) \implies \sigma \alpha \sigma^{-1} \in \mathcal{A}_n$ -->
-    - $\sigma \in \mathcal{S}_n, \alpha \in \mathcal{A}_n \implies \left \{ \begin{array}{l} \textrm{sgn}(\sigma \alpha \sigma^{-1}) = \textrm{sgn}(\sigma) \cdot \textrm{sgn}(\alpha) \cdot \textrm{sgn}(\sigma^{-1}) = \textrm{sgn}(\sigma) \cdot \textrm{sgn}(\sigma)^{-1} = 1 \\ \textrm{sgn}(\alpha) = 1 \end{array} \right. \implies \sigma \alpha \sigma^{-1} \in \mathcal{A}_n \implies \mathcal{A}_n \trianglelefteq \mathcal{S}_n$
+    - $\sigma \in \mathcal{S}_n, \alpha \in \mathcal{A}_n \implies \left \{ \begin{array}{l} \textrm{sgn}(\sigma \alpha \sigma^{-1}) = \textrm{sgn}(\sigma) \cdot \textrm{sgn}(\alpha) \cdot \textrm{sgn}(\sigma^{-1}) = \textrm{sgn}(\sigma) \cdot \textrm{sgn}(\sigma^{-1}) = 1 \\ \textrm{sgn}(\alpha) = 1 \end{array} \right. \implies \sigma \alpha \sigma^{-1} \in \mathcal{A}_n \implies \mathcal{A}_n \trianglelefteq \mathcal{S}_n$
 
 ## Oss
 
@@ -287,7 +285,7 @@
     - _esempio_
       - nel ciclo $(2 \ 3 \ 4\ 5\ 6\ 1)$ è necessario applicare $6 - 1 = 5$ trasposizioni adiacenti per ottenere $(1\ 2\ 3\ 4\ 5 \ 6)$, e il ciclo è lungo $6$
   - allora, per ottenere $\textrm{id}$ a partire da $\sigma^\prime$, bisogna applicare $(d_1 -1) + (d_2 - 1) + \ldots + (d_k - 1)$ trasposizioni adiacenti, ovvero $d_1 + \ldots + d_k - 1 \cdot k$
-  - si noti che $d_1 + \ldots + d_k$ è il numero di colonne di $\sigma^\prime \in \mathcal{S}_n$, dunque è pari a $n$
+  - si noti che $d_1 + \ldots + d_k$ è la somma delle lunghezze dei cicli di $\sigma^\prime \in \mathcal{S}_n$, dunque è pari a $n$
   - allora si hanno $d_1 + \ldots + d_1 - 1 \cdot k = n - k$ trasposizioni adiacenti
   - di conseguenza, $\textrm{id} = \sigma^\prime \tau_1 \ldots \tau_{n -k} \iff \sigma^\prime = \tau_{n - k} \ldots \tau_1 \implies \textrm{sgn}(\sigma^\prime) = \textrm{sgn}(\tau_{n-k} \ldots \tau_1)= (-1)^{n -k}$ per dimostrazione precedente
   - poiché $\sigma$ e $\sigma^\prime$ hanno lo stesso numero di cicli, e i cicli hanno la stessa lunghezza, allora $\sigma \sim \sigma^\prime \implies \textrm{sgn}(\sigma^\prime)=\textrm{sgn}(\sigma)$ per dimostrazione precedente, e dunque $\textrm{sgn}(\sigma') = \textrm{sgn}(\sigma)=(-1)^{n - k}$

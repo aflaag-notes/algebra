@@ -325,9 +325,7 @@ x p=x \iff p = 1 \in \mathbb{N}</span></li>
 <li><span class="math inline">\left.\begin{array}{l}d \mid m \iff
 \exists p_{1} \in \mathbb{N}\mid d p_{1}=m \\ m\mid n \iff \exists p_{2}
 \in \mathbb{N}\mid m p_{2}=n\end{array}\right\} \implies d p_{1} p_{2}=n
-\implies d \mid n</span> poiché <span class="math inline">p_1 \in
-\mathbb{N} \land p_2 \in \mathbb{N} \implies p_1 p_2 \in
-\mathbb{N}</span></li>
+\implies d \mid n</span></li>
 </ul></li>
 <li><em>antisimmetria</em>
 <ul>
@@ -344,6 +342,7 @@ class="math inline">m p_1 =n \iff m = n</span></li>
 <li><strong>Hp</strong>
 <ul>
 <li><span class="math inline">a, b \in \mathbb{Z}</span></li>
+<li><span class="math inline">n \in \mathbb{Z}</span></li>
 <li><span class="math inline">a \equiv b \ (\bmod \ n) \iff m \mid
 b-a</span> è detta congruenza modulo <span
 class="math inline">n</span></li>
@@ -364,31 +363,18 @@ equivalenza</li>
 <li><em>simmetria</em>
 <ul>
 <li><span class="math inline">a \equiv b \ (\bmod \ n) \iff n \mid b - a
-\iff \exists p_1 \in \mathbb{Z} \mid n p_1 = b - a</span></li>
-<li><span class="math inline">b \equiv a \ (\bmod \ n) \iff n \mid a - b
-\iff \exists p_2 \in \mathbb{Z} \mid n p_2 = a - b</span></li>
-<li><span class="math inline">\left.\begin{array}{l}n p_{1}=b-a \implies
-b=n p_{1}+a \\ n p_{2}=a-b\end{array}\right\} \implies np_2 = a - np_1 -
-a = -np_1</span>, e dunque <span class="math inline">np_2 = -np_1 \iff
-np_2+np_1 = 0 \iff n(p_2 + p_1)=0</span></li>
-<li><span class="math inline">n \neq 0\implies n(p_2+p_1) 0 \iff
-p_{2}+p_{1}=0 \implies -p_{2}=p_{1}</span></li>
-<li><span class="math inline">n\mid b -a \iff np_1= b - a \iff n(-p_2) =
-b - a \iff np_2 = a - b \iff n \mid a- b</span></li>
+\iff \exists k \in \mathbb{Z} \mid n k = b - a \iff n(-k) = a - b \iff n
+\mid a - b \iff b \equiv a \ (\bmod \ n)</span></li>
 </ul></li>
 <li><em>transitivtà</em>
 <ul>
-<li><span class="math inline">a \equiv b \ (\bmod \ n) \iff n \mid b - a
-\iff \exists p_1 \in \mathbb{Z} \mid n p_1 = b - a</span></li>
-<li><span class="math inline">b \equiv c \ (\bmod \ n) \iff n \mid c - b
-\iff \exists p_2 \in \mathbb{Z} \mid n p_2 = c - b</span></li>
-<li><span class="math inline">\left.\begin{array}{l}n p_{1}=b-a \implies
-b=n p_{1}+a \\ n p_{2}=c-b\end{array}\right\} \implies np_2 = c - np_2 -
-a \iff np_2 + np_1 = c - a \implies n(p_2 + p_1)=c -a</span></li>
-<li><span class="math inline">p_{1}, p_{2} \in \mathbb{Z} \implies
-p_{1}+p_{2} \in \mathbb{Z}</span>, e qundue per la proposizione
-precedente <span class="math inline">\exists p_1 + p_2 \in \mathbb{Z}
-\mid n(p_1 + p_2) = c - a \iff n \mid c - a</span></li>
+<li><span class="math inline">\left. \begin{array}{l} a \equiv b \
+(\bmod \ n) \iff n \mid b - a \iff \exists p_1 \in \mathbb{Z} \mid n p_1
+= b - a \iff b = np_1 + a \\ b \equiv c \ (\bmod \ n) \iff n \mid c - b
+\iff \exists p_2 \in \mathbb{Z} \mid n p_2 = c - b \iff np_2 = c - (np_1
+- a) \end{array} \right\}\implies np_2 = c - np_1 - a \iff np_2 + np_1 =
+c - a \iff n(p_2 + p_1)=c -a \iff n \mid c - a \iff a \equiv c \ (\bmod
+\ n)</span></li>
 </ul></li>
 </ul></li>
 </ul>
@@ -434,7 +420,7 @@ che <span class="math inline">\dfrac{a}{d}x \equiv \dfrac{b}{d} \
 </ul></li>
 <li><strong>Dim</strong>
 <ul>
-<li>⚠️ <strong>tipo pag 40 appunti simone</strong></li>
+<li>⚠️ <strong>manca la dimostrazione</strong></li>
 </ul></li>
 </ul>
 <a href="#ex-2"><h2 id="ex-2">Ex</h2></a>
@@ -522,23 +508,19 @@ class="math inline">\sim</span> <em>induce una partizione</em></li>
 <ul>
 <li><em>prima implicazione</em>
 <ul>
-<li><span class="math inline">\forall x, y \in X \mid x \sim y</span>,
-sia <span class="math inline">z \in [x] \implies z \sim x \land x \sim y
-\implies z \sim y</span> per transitività di <span
-class="math inline">\sim \implies z \in [y] \implies [x] \subseteq
+<li><span class="math inline">z \in [x] \iff z \sim x</span>, ma <span
+class="math inline">x \sim y \implies z \sim y \iff z \in
 [y]</span></li>
-<li><span class="math inline">\forall x, y \in G \mid y \sim x</span>,
-sia <span class="math inline">z \in [y] \implies z \sim y \land y \sim x
-\implies z \sim x</span> per transitività si <span
-class="math inline">\sim \implies z \in [x] \implies [y] \subseteq
+<li><span class="math inline">z \in [y] \iff z \sim y</span>, ma <span
+class="math inline">x \sim y \iff y \sim x \implies z \sim x \iff z \in
 [x]</span></li>
 <li>allora necessariamente <span class="math inline">[x] =
 [y]</span></li>
 </ul></li>
 <li><em>seconda implicazione</em>
 <ul>
-<li><span class="math inline">[x] = [y] \implies x \sim y \land y \sim
-x</span></li>
+<li><span class="math inline">[x] = [y] \implies y \sim x \land x \sim
+y</span></li>
 </ul></li>
 </ul></li>
 <li><span class="math inline">x \nsim y \iff [x] \cap [y] =
@@ -686,55 +668,7 @@ l’inverso rispetto all’operazione considerata</li>
 </ul></li>
 </ul>
 </blockquote>
-<ul>
-<li><strong>Classi laterali su anelli</strong></li>
-</ul>
-<blockquote>
-<ul>
-<li><span class="math inline">(A, +, \cdot)</span> anello</li>
-<li><span class="math inline">I \subset A</span> ideale</li>
-<li><span class="math inline">[x] = \{y \in A \mid y \sim_S x\}</span> è
-detta <strong>classe laterale sinistra</strong></li>
-<li><span class="math inline">[x] = \{y \in A \mid y \sim_D x\}</span> è
-detta <strong>classe laterale destra</strong></li>
-<li><span class="math inline">A/I := \{[x] \mid x \in A\}</span> è
-l’<strong>insieme delle classi laterali sinistre o destre</strong>
-<ul>
-<li><span class="math inline">\sim_S</span> e <span
-class="math inline">\sim_D</span> sono dette anche <em>congruenza modulo
-<span class="math inline">I</span></em>, e dunque <span
-class="math inline">\forall a,b \in A \quad a \equiv b \ (\bmod \ I)
-\iff b - a \in I</span></li>
-</ul></li>
-</ul>
-</blockquote>
 <a href="#oss-6"><h2 id="oss-6">Oss</h2></a>
-<ul>
-<li><strong>Hp</strong>
-<ul>
-<li><span class="math inline">(\mathbb{Z}, +)</span> anello</li>
-<li><span class="math inline">n \in \mathbb{N}_{\ge 2}</span></li>
-<li><span class="math inline">I(n) := \{n k \mid k \in
-\mathbb{Z}\}</span></li>
-<li><span class="math inline">a, b \in \mathbb{Z}</span></li>
-</ul></li>
-<li><strong>Th</strong>
-<ul>
-<li><span class="math inline">a \sim_S b \iff a \equiv b \ (\bmod \
-n)</span></li>
-</ul></li>
-<li><strong>Dim</strong>
-<ul>
-<li><span class="math inline">a \equiv b \ (\bmod \ n) \iff n \mid b - a
-\iff \exists p \in \mathbb{Z} \mid n p = b - a</span>, ma allora <span
-class="math inline">b - a</span> è un multiplo di <span
-class="math inline">n</span>, quindi <span class="math inline">b - a \in
-I(n)</span> per definizione</li>
-<li><span class="math inline">(I(n), +) \leqslant (\mathbb{Z}, +)
-\implies b - a = (-a) + b \in I(n) \iff a \sim_S b</span></li>
-</ul></li>
-</ul>
-<a href="#oss-7"><h2 id="oss-7">Oss</h2></a>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -752,7 +686,7 @@ I(n)</span> per definizione</li>
 x</span></li>
 </ul></li>
 </ul>
-<a href="#oss-8"><h2 id="oss-8">Oss</h2></a>
+<a href="#oss-7"><h2 id="oss-7">Oss</h2></a>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -773,7 +707,7 @@ x\}</span></li>
 \iff x^{-1}y = h \in H \iff x \sim_S y \iff y \in [x]</span></li>
 </ul></li>
 </ul>
-<a href="#oss-9"><h2 id="oss-9">Oss</h2></a>
+<a href="#oss-8"><h2 id="oss-8">Oss</h2></a>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -794,7 +728,7 @@ x\}</span></li>
 \iff yx^{-1} = h \in H \iff x \sim_D y \iff y \in [x]</span></li>
 </ul></li>
 </ul>
-<a href="#oss-10"><h2 id="oss-10">Oss</h2></a>
+<a href="#oss-9"><h2 id="oss-9">Oss</h2></a>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -818,7 +752,7 @@ H \rightarrow xH : h \rightarrow xh</span></li>
 class="math inline">\implies |H| = |xH|</span></li>
 </ul></li>
 </ul>
-<a href="#oss-11"><h2 id="oss-11">Oss</h2></a>
+<a href="#oss-10"><h2 id="oss-10">Oss</h2></a>
 <ul>
 <li><strong>Hp</strong>
 <ul>
@@ -856,18 +790,76 @@ y&#39; - y \in H</span></li>
 <li><span class="math inline">\forall [x], [y], [z] \in G/H \quad
 ([x]+[y])+[z]=[x+y]+[z]=[(x+y)+z]=
 [x+(y+z)]=[x]+[y+z]=[x]+([y]+[z])</span></li>
+<li><span class="math inline">\forall [x] \in G/H \quad [x]+[0]=[ x + 0]
+= [x] = [0 + x] = [0] + [x]</span></li>
 <li><span class="math inline">\forall [x] \in G/H \quad
-[x]+[0]=[0]+[x]=[x]</span> e <span class="math inline">[0] + [x] = [0 +
-x] = [x]</span>, e <span class="math inline">[0] \in G/H</span> perché
-<span class="math inline">G</span> gruppo</li>
-<li><span class="math inline">\forall [x] \in G/H \quad
-[x]+[-x]=[x+(-x)]=[0]</span> e <span class="math inline">[-x] +[x]=[-x
-+x]=[0]</span><span class="math inline">\implies -[x] = [-x]</span></li>
+[x]+[-x]=[x-x]=[0] = [-x +x] = [-x] + [x] \implies [-x]
+=-[x]</span></li>
 <li><span class="math inline">\forall [x], [y] \in G/H \quad
 [x]+[y]=[x+y]=[y+x]=[y]+[x]</span></li>
 </ul></li>
 </ul></li>
 </ul>
+<a href="#oss-11"><h2 id="oss-11">Oss</h2></a>
+<ul>
+<li><strong>Hp</strong>
+<ul>
+<li><span class="math inline">(G, \cdot)</span> gruppo</li>
+<li><span class="math inline">H \trianglelefteq G</span></li>
+</ul></li>
+<li><strong>Th</strong>
+<ul>
+<li><span class="math inline">(G/H, \cdot)</span> è gruppo</li>
+</ul></li>
+<li><strong>Dim</strong>
+<ul>
+<li><span class="math inline">\cdot</span> ben definita <span
+class="math inline">\iff\left.\forall x, x^{\prime}, y, y&#39; \in G
+\quad \begin{array}{l}{[x]=\left[x^{\prime}\right]} \\
+{[y]=\left[y^{\prime}\right]}\end{array}\right\}
+\implies[xy]=\left[x^{\prime}y&#39; \right]</span>
+<ul>
+<li><span class="math inline">H \trianglelefteq G \implies \left \{
+\begin{array}{l} xH = Hx = [x] = [x&#39;] = x&#39;H = Hx&#39;\\ yH = Hy
+= [y] = [y&#39;] = y&#39;H = Hy&#39; \end{array} \right.</span></li>
+<li>allora <span class="math inline">[xy] = xyH = xy&#39;H =
+Hxy&#39;=Hx&#39;y&#39;=[x&#39;y&#39;]</span></li>
+</ul></li>
+<li><span class="math inline">(G/H, \cdot)</span> gruppo
+<ul>
+<li><span class="math inline">\forall [x], [y], [z] \in G/H \quad
+([x][y])[x] = [xy][z] = [xyz] = [x][yz] = [x]([y][z])</span></li>
+<li><span class="math inline">\forall [x] \in G/H \quad [x]\cdot[1]=[x
+\cdot 1]=[x] = [1 \cdot x]=[1]\cdot[x]</span></li>
+<li><span class="math inline">\forall [x] \in G/H \quad
+[x]\cdot[x^{-1}]=[x \cdot x^{-1}]=[1]=[x^{-1} \cdot x] = [x^{-1}]
+\cdot[x]\implies [x^{-1}]=[x]^{-1}</span></li>
+</ul></li>
+</ul></li>
+</ul>
+<a href="#def-3"><h2 id="def-3">Def</h2></a>
+<ul>
+<li><strong>Classi laterali su anelli</strong></li>
+</ul>
+<blockquote>
+<ul>
+<li><span class="math inline">(A, +, \cdot)</span> anello</li>
+<li><span class="math inline">I \subset A</span> ideale</li>
+<li><span class="math inline">[x] = \{y \in A \mid y \sim_S x\}</span> è
+detta <strong>classe laterale sinistra</strong></li>
+<li><span class="math inline">[x] = \{y \in A \mid y \sim_D x\}</span> è
+detta <strong>classe laterale destra</strong></li>
+<li><span class="math inline">A/I := \{[x] \mid x \in A\}</span> è
+l’<strong>insieme delle classi laterali sinistre o destre</strong>
+<ul>
+<li><span class="math inline">\sim_S</span> e <span
+class="math inline">\sim_D</span> sono dette anche <em>congruenza modulo
+<span class="math inline">I</span></em>, e dunque <span
+class="math inline">\forall a,b \in A \quad a \equiv b \ (\bmod \ I)
+\iff b - a \in I</span></li>
+</ul></li>
+</ul>
+</blockquote>
 <a href="#oss-12"><h2 id="oss-12">Oss</h2></a>
 <ul>
 <li><strong>Hp</strong>
@@ -900,76 +892,28 @@ class="math inline">\left.\begin{array}{l}x \sim x^{\prime} \\ y \sim
 y^{\prime}\end{array}\right\} \implies xy \sim
 x^{\prime}y^{\prime}</span></li>
 <li><span class="math inline">x \sim x&#39; \iff (-x)+x&#39; \in I \iff
-i_1:=x&#39; - x \in I</span></li>
+x&#39; - x \in I</span></li>
 <li><span class="math inline">y \sim y&#39; \iff (-y) +y&#39; \in I \iff
-i_2:=y&#39; - y \in I</span></li>
+y&#39; - y \in I</span></li>
 <li><span class="math inline">I</span> ideale <span
-class="math inline">\implies A \cdot I \subseteq I \implies \forall a
-\in A, i \in I \quad a i \in I</span>, in particolare <span
-class="math inline">i_1y&#39;, xi_2 \in I</span></li>
-<li><span class="math inline">(I, +) \leqslant (A, +) \implies i_1y&#39;
-+ xi_2 \in I</span></li>
-<li><span class="math inline">i_1y&#39; + xi_2 = (x&#39;-x)y&#39; +
-x(y&#39;-y) = x&#39;y&#39; - xy&#39; + xy&#39; - xy = x&#39;y&#39; - xy
-\in I \iff x&#39;y \sim xy</span></li>
+class="math inline">\implies A \cdot I \subseteq I</span>, e in
+particolare <span class="math inline">(x&#39;-x)y&#39;,x(y&#39;-y) \in
+I</span></li>
+<li><span class="math inline">(I, +) \leqslant (A, +) \implies
+(x&#39;-x)y&#39;+x(y&#39;-y) = x&#39;y&#39; - xy&#39; + xy&#39; - xy =
+x&#39;y&#39; - xy \in I \iff x&#39;y \sim xy</span></li>
 </ul></li>
 <li><span class="math inline">(A/I, +, \cdot)</span> anello commutativo
 <ul>
 <li><span class="math inline">\forall [x], [y], [z] \in A/I \quad
 ([x][y])[x] = [xy][z] = [xyz] = [x][yz] = [x]([y][z])</span></li>
-<li><span class="math inline">\forall [x] \in A/I \quad
-[x][1]=[1][x]=[x]</span> e <span class="math inline">[1] \cdot [x] = [1
-\cdot x] = [x]</span>, e <span class="math inline">[1] \in A/I</span>
-perché <span class="math inline">A</span> anello</li>
-<li><span class="math inline">\forall [x] \in A/I \quad
-[x]\cdot[x^{-1}]=[x \cdot x^{-1}]=[1]</span> e <span
-class="math inline">[x^{-1}] \cdot[x]=[x^{-1} \cdot x]=[1] \implies
-[x]^{-1} = [x^{-1}]</span></li>
+<li><span class="math inline">\forall [x] \in A/I \quad [x]\cdot[1]=[x
+\cdot 1]=[x] = [1 \cdot x]=[1]\cdot[x]</span></li>
 <li><span class="math inline">\forall [x], [y] \in A/I \quad [x] \cdot
 [y] = [x \cdot y] = [y \cdot x] = [y] \cdot [x]</span></li>
 <li><span class="math inline">\forall [x], [y], [z] \in A/I \quad
 [x]([y] + [z]) = [x]([y + z]) = [x(y + z)] = [xy + xz] = [xy] + [xz] =
 [x][y] + [x][z]</span></li>
-</ul></li>
-</ul></li>
-</ul>
-<a href="#oss-13"><h2 id="oss-13">Oss</h2></a>
-<ul>
-<li><strong>Hp</strong>
-<ul>
-<li><span class="math inline">(G, \cdot)</span> gruppo</li>
-<li><span class="math inline">H \trianglelefteq G</span></li>
-</ul></li>
-<li><strong>Th</strong>
-<ul>
-<li><span class="math inline">(G/H, \cdot)</span> è gruppo</li>
-</ul></li>
-<li><strong>Dim</strong>
-<ul>
-<li><span class="math inline">\cdot</span> ben definita <span
-class="math inline">\iff\left.\forall x, x^{\prime}, y, y&#39; \in G
-\quad \begin{array}{l}{[x]=\left[x^{\prime}\right]} \\
-{[y]=\left[y^{\prime}\right]}\end{array}\right\}
-\implies[xy]=\left[x^{\prime}y&#39; \right]</span>
-<ul>
-<li><span class="math inline">H \trianglelefteq G \implies \left \{
-\begin{array}{l} xH = Hx = [x] = [x&#39;] = x&#39;H = Hx&#39;\\ yH = Hy
-= [y] = [y&#39;] = y&#39;H = Hy&#39; \end{array} \right.</span></li>
-<li>allora <span class="math inline">[xy] = xyH = xy&#39;H = y&#39;xH =
-y&#39;x&#39;H = x&#39;y&#39;H = [x&#39;y&#39;]</span></li>
-</ul></li>
-<li><span class="math inline">(G/H, \cdot)</span> gruppo abeliano
-<ul>
-<li><span class="math inline">\forall [x], [y], [z] \in G/H \quad
-([x][y])[x] = [xy][z] = [xyz] = [x][yz] = [x]([y][z])</span></li>
-<li><span class="math inline">\forall [x] \in G/H \quad
-[x][1]=[1][x]=[x]</span> e <span class="math inline">[1] \cdot [x] = [1
-\cdot x] = [x]</span>, e <span class="math inline">[1] \in G/H</span>
-perché <span class="math inline">G</span> gruppo</li>
-<li><span class="math inline">\forall [x] \in G/H \quad
-[x]\cdot[x^{-1}]=[x \cdot x^{-1}]=[1]</span> e <span
-class="math inline">[x^{-1}] \cdot[x]=[x^{-1} \cdot x]=[1] \implies
-[x]^{-1} = [x^{-1}]</span></li>
 </ul></li>
 </ul></li>
 </ul>

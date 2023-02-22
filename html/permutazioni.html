@@ -844,14 +844,12 @@ inversioni, dunque <span class="math inline">\textrm{id} \in
 <li><span class="math inline">\sigma \in \mathcal{A}_n \implies
 \textrm{sgn}(\sigma) = 1 = \textrm{sgn}(\sigma^{-1})</span> per
 dimostrazione predecente <span class="math inline">\implies \sigma^{-1}
-\in \mathcal{A}_n</span>
-<!-- - $\mathcal{A}_n \trianglelefteq \mathcal{S}_n \iff \forall \sigma \in \mathcal{A}_n, \alpha \in \mathcal{S}_n \quad \sigma \alpha \sigma^{-1} \in \mathcal{A}_n$ per dimostrazione precedente -->
-<!-- - inoltre, per dimostrazione precedente $\textrm{sgn}(\sigma) = 1 = \textrm{sgn}(\sigma \alpha \sigma^{-1}) \implies \sigma \alpha \sigma^{-1} \in \mathcal{A}_n$ --></li>
+\in \mathcal{A}_n</span></li>
 <li><span class="math inline">\sigma \in \mathcal{S}_n, \alpha \in
 \mathcal{A}_n \implies \left \{ \begin{array}{l} \textrm{sgn}(\sigma
 \alpha \sigma^{-1}) = \textrm{sgn}(\sigma) \cdot \textrm{sgn}(\alpha)
 \cdot \textrm{sgn}(\sigma^{-1}) = \textrm{sgn}(\sigma) \cdot
-\textrm{sgn}(\sigma)^{-1} = 1 \\ \textrm{sgn}(\alpha) = 1 \end{array}
+\textrm{sgn}(\sigma^{-1}) = 1 \\ \textrm{sgn}(\alpha) = 1 \end{array}
 \right. \implies \sigma \alpha \sigma^{-1} \in \mathcal{A}_n \implies
 \mathcal{A}_n \trianglelefteq \mathcal{S}_n</span></li>
 </ul></li>
@@ -947,10 +945,10 @@ partire da <span class="math inline">\sigma^\prime</span>, bisogna
 applicare <span class="math inline">(d_1 -1) + (d_2 - 1) + \ldots + (d_k
 - 1)</span> trasposizioni adiacenti, ovvero <span
 class="math inline">d_1 + \ldots + d_k - 1 \cdot k</span></li>
-<li>si noti che <span class="math inline">d_1 + \ldots + d_k</span> è il
-numero di colonne di <span class="math inline">\sigma^\prime \in
-\mathcal{S}_n</span>, dunque è pari a <span
-class="math inline">n</span></li>
+<li>si noti che <span class="math inline">d_1 + \ldots + d_k</span> è la
+somma delle lunghezze dei cicli di <span
+class="math inline">\sigma^\prime \in \mathcal{S}_n</span>, dunque è
+pari a <span class="math inline">n</span></li>
 <li>allora si hanno <span class="math inline">d_1 + \ldots + d_1 - 1
 \cdot k = n - k</span> trasposizioni adiacenti</li>
 <li>di conseguenza, <span class="math inline">\textrm{id} =
