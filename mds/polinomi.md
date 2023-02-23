@@ -222,8 +222,8 @@
         - per assurdo, $\deg(p(x)) \gt 1 \implies \exists z \in \mathbb{C} \mid p(z) = 0$ per il teorema fondamentale dell'algebra
         - per dimostrazione precedente $p(z) = 0 \iff (x - z) \mid p(x) \iff \exists q(x) \in \mathbb{C}[x] \mid p(x) = (x - z) \cdot q(x)$
         - poiché $\deg(x - z) = 1$, allora necessariamente $\deg(q(x)) = \deg(p(x)) - 1$
-        - $\deg(p(x)) \gt 1 \implies \deg(q(x)) = \deg(p(x)) - 1 \gt 0 \implies p(x)$ non è irriducibile, poiché esisterebbe una sua radice in $\mathbb{C}$ $\bot$
-        - si noti che $\deg(p(x)) = 0 \implies p(x) \in \mathbb{C}^* \implies p(x)$ non irriducibile per definizione $\bot$
+        - $\deg(p(x)) \gt 1 \implies \deg(q(x)) = \deg(p(x)) - 1 \gt 0 \implies p(x)$ non è irriducibile, poiché $(x - z), q(x) \notin \mathbb{C}[x]^* = \mathbb{C}^*$
+        - si noti che $\deg(p(x)) = 0 \implies p(x) \in \mathbb{C}[x]^* = \mathbb{C}^* \implies p(x)$ non irriducibile per definizione $\bot$
     - _seconda implicazione_
         - si noti che $\deg(p(x)) \neq 0 \implies p(x) \notin \mathbb{C}[x]^* = \mathbb{C}^*$
         - per dimostrazione precedente $\forall a(x), b(x), c(x) \in \mathbb{K}[x] \quad a(x) = b(x) \cdot c(x) \implies \deg(a(x)) = \deg(b(x)) + \deg(c(x))$

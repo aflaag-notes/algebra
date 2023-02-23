@@ -176,7 +176,7 @@
             - $u \in \textrm{span}(w_1, \ldots, w_n) = \textrm{span}(v_1, \ldots, v_i, w_{i + 1}, \ldots, w_n)$ per ipotesi induttiva $\implies \exists \mu_1, \ldots, \mu_i, \lambda_{i + 1}, \ldots, \lambda_n \in \mathbb{K} \mid u = \mu_1v_1 + \dots + \mu_iv_i+ \lambda_{i + 1}w_{i + 1} + \ldots + \lambda_nw_n = \mu_1 v_1 + \ldots + \mu_i v_i + \lambda_{i + 1}(\eta_1 v_1 + \ldots + \eta_iv_i + \eta_{i + 1} v_{i + 1} + \varepsilon_{i + 2}w_{i + 2} + \ldots +\varepsilon_nw_n) + \lambda_{i + 2}w_{i + 2} + \ldots + \lambda_nw_n =(\mu_1\lambda_{i + 1}\eta_1)v_1 + \ldots + (\mu_i\lambda_{i + 1}\eta_i)v_i + (\lambda_{i + 1}\eta_{i + 1})v_{i + 1} + (\lambda_{i + 2}\lambda_{i+1}\varepsilon_{i + 2})w_{i + 2} + \ldots + (\lambda_n\lambda_{i + 1}\varepsilon_n)w_n \implies u \in \textrm{span}(v_1, \ldots, v_i, v_{i + 1}, w_{i + 2}, \ldots w_n)$
     - allora l'ipotesi induttiva è verificata, e per il caso $i = n$ si ha che $\textrm{span}(v_1, \ldots, v_n) = \textrm{span}(w_1, \ldots, w_n)$
     - per assurdo $\exists v_{n + 1} \in \textrm{span}(w_1, \ldots, w_n) \mid v_{n + 1}$ linearmente indipendente con $v_1, \ldots, v_n$, allora $v_{n + 1} \in \textrm{span}(w_1, \ldots, w_n) = \textrm{span}(v_1, \ldots, v_n) \implies v_{n + 1}$ è combinazione lineare degli altri $\bot$
-    - allora necessariamente $i \le n$
+    - allora necessariamente $k \le n$
  
 ## Cor
 
