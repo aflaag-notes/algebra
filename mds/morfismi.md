@@ -92,7 +92,7 @@
   - $(H, \cdot) \leqslant (\mathbb{C}^*, \cdot)$
 - **Dim**
   - $\zeta ^0 = 1 \implies 1 \in H$
-  - $z, w \in H \iff z^n=w^n = 1$, allora $1 = z^n \cdot w^n = (z \cdot w)^n = 1 \implies z \cdot w \in H$
+  - $z, w \in H \iff z^n=w^n = 1 \implies (z \cdot w)^n = z^n \cdot w^n = 1 \cdot 1 = 1 \implies z \cdot w \in H$
   - $z^n = 1 \iff \dfrac{1}{z^n} = 1 \iff (z^{-1})^n = 1 \implies z^{-1} \in H$
 
 ## Ex
@@ -240,8 +240,8 @@ $f([x \cdot y])=f([x]) \cdot f([y]) \iff f$ morfismo
 - **Th**
     - $H(\zeta) \cong \mathbb{Z}_n$
 - **Dim**
-    - sia $f: \mathbb{Z} \rightarrow \mathbb{C}^* : k \rightarrow \zeta^k$
-    - $\forall k, h \in \mathbb{Z} \quad f(k + h) = \zeta^{k + h} = \zeta^{k} \cdot \zeta^{h} = f(k) \cdot f(h) \iff f$ morfismo di gruppi tra $(\mathbb{Z}, +)$ e $(\mathbb{C}^*, \cdot)$
+    - sia $f: \mathbb{Z} \rightarrow H(\zeta) : k \rightarrow \zeta^k$
+    - $\forall k, h \in \mathbb{Z} \quad f(k + h) = \zeta^{k + h} = \zeta^{k} \cdot \zeta^{h} = f(k) \cdot f(h) \iff f$ morfismo di gruppi tra $(\mathbb{Z}, +)$ e $(H(\zeta), \cdot)$
     - $k \in \ker(f) \iff f(k) = 1 \in \mathbb{C} \iff \exists h \in \mathbb{Z} \mid f(k) = 1 = \zeta^k = (\zeta^n)^h \iff k \in I(n)$, allora $\ker(f) = I(n)$
     - per definizione $\mathbb{Z}_n = \mathbb{Z}/\equiv \ = \mathbb{Z}/I(n)$
     - allora $\mathbb{Z}/I(n) = \mathbb{Z}/\ker(f) \cong \textrm{im}(f)$ per il teorema di isomorfismo

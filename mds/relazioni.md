@@ -323,17 +323,17 @@
 ## Oss
 
 - **Hp**
-    - $(A, +, \cdot)$ anello commutativo
+    - $(A, +, \cdot)$ anello
     - $I \subset A$ ideale
 - **Th**
-    - $(A/I, +, \cdot)$ è anello commutativo
+    - $(A/I, +, \cdot)$ è anello
 - **Dim**
     - $+$ è ben definita per dimostrazione precedente, poiché $(I, +) \leqslant (A, +)$ gruppo abeliano per definizione di $I$
     - $\cdot$ ben definita $\iff\left.\forall x, x^{\prime}, y, y' \in A \quad \begin{array}{l}{[x]=\left[x^{\prime}\right]} \\ {[y]=\left[y^{\prime}\right]}\end{array}\right\} \implies[xy]=\left[x^{\prime}y' \right]$
         - $\forall k, k' \in A \quad [k]=\left[k^{\prime}\right] \iff k \sim k^{\prime}$, dunque il sistema precedente è equivalente a $\left.\begin{array}{l}x \sim x^{\prime} \\ y \sim y^{\prime}\end{array}\right\} \implies xy \sim x^{\prime}y^{\prime}$
         - $x \sim x' \iff (-x)+x' \in I \iff x' - x \in I$
         - $y \sim y' \iff (-y) +y' \in I \iff y' - y \in I$
-        - $I$ ideale $\implies A \cdot I \subseteq I$, e in particolare $(x'-x)y',x(y'-y) \in I$
+        - $I$ ideale $\implies I \cdot A \subseteq I \land A \cdot I \subseteq I$, e in particolare $(x'-x)y',x(y'-y) \in I$
         - $(I, +) \leqslant (A, +) \implies (x'-x)y'+x(y'-y) = x'y' - xy' + xy' - xy = x'y' - xy \in I \iff x'y \sim xy$
     - $(A/I, +, \cdot)$ anello commutativo
         - $\forall [x], [y], [z] \in A/I \quad ([x][y])[x] = [xy][z] = [xyz] = [x][yz] = [x]([y][z])$
