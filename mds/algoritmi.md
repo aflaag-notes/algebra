@@ -124,5 +124,5 @@
     - $u_1 := v_1$, poiché il primo vettore deve essere ortogonale solamente a sé stesso
     - allora $u_2 := v_2 - \textrm{proj}_{u_1}(v_2)$ è la differenza vettoriale tra $v_2$ e la sua proiezione su $u_1$, che per costruzione sarà un vettore perpendicolare a $u_1$
         - si noti che $u_2 \cdot u_1 = (v_2 - \textrm{proj}_{u_1}(v_2))\cdot u_1 = v_2 \cdot u_1 - \dfrac{u_1 \cdot v_2}{u_1 \cdot u_1}\cdot u_1\cdot u_1=0 \implies u_2 \ \bot \ u_1$
-    - allora $u_n := v_n - \displaystyle{\sum_{i = 1}^{n - 1}{\textrm{proj}_{u_i}(v_n)}}$, poiché è necessario assicurarsi che il vettore $v_n$ sia ortogonale a tutti gli altri $u_1, \ldots, u_{n-1}$ già creati
+    - allora $u_n := v_n - \displaystyle{\sum_{i = 1}^{n - 1}{\textrm{proj}_{u_i}(v_n)}}$, poiché è necessario assicurarsi che il vettore $u_n$ sia ortogonale a tutti gli altri $u_1, \ldots, u_{n-1}$ già creati
 
