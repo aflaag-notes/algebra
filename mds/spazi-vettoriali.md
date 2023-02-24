@@ -385,7 +385,7 @@
 
 ## Def
 
-- **Applicazioni lineari**
+- **Trasformazione lineari**
 
 > - $\mathbb{K}$ campo
 > - $V, W$ spazi vettoriali su $\mathbb{K}$
@@ -478,11 +478,11 @@
 
 ## Def
 
-- **Rango di un'applicazione lineare**
+- **Rango di una trasformazione lineare**
 
 > - $\mathbb{K}$ campo
 > - $V, W$ spazi vettoriali su $\mathbb{K}$
-> - $f: V \rightarrow W$ applicazione lineare
+> - $f: V \rightarrow W$ trasformazione lineare
 > - $\textrm{rk}(f) := \dim(\textrm{im}(f))$ è detto **rango di $f$**
 
 ****
