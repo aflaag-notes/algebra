@@ -22,9 +22,9 @@
 - **Hp**
   - $n, k \in \mathbb{N}$
 - **Th**
-  - $\displaystyle \binom{n}{k + 1} = \binom{n - 1}{k + 1} \binom{n - 1}{ k}$
+  - $\displaystyle \binom{n}{k + 1} = \binom{n - 1}{k + 1}+ \binom{n - 1}{ k}$
 - **Dim**
-   - $\displaystyle \binom{n - 1}{k +1}+ \binom{n - 1}{k}=\frac{(n-1) !}{(k+1) !(n-1-(k+1)) !}+\frac{(n-1) !}{k !(n-1-k) !}=\frac{(n-1) !}{(k+1) k !(n-2-k) !}+\frac{(n-1) !}{k !(n-1-k) !} =\frac{(n-1-k)(n-1) !+(k+1)(n-1) !}{(k+1) !(n-k-1) !}=\frac{(n-1) !(n-1-k+k+1)}{(k+1) !(n-1-k) !}=\frac{(n-1) ! \cdot n}{(n+1) !(n-1-k) !} =\frac{n !}{(k+1) !(n-k-1) !}=\binom{n}{k + 1}$
+   - $\displaystyle \binom{n - 1}{k +1}+ \binom{n - 1}{k}=\frac{(n-1) !}{(k+1) !(n-1-(k+1)) !}+\frac{(n-1) !}{k !(n-1-k) !}=\frac{(n-1) !}{(k+1) k !(n-2-k) !}+\frac{(n-1) !}{k !(n-1-k) !} =\frac{(n-1-k)(n-1) !+(k+1)(n-1) !}{(k+1) !(n-1 - k) !}=\frac{(n-1) !(n-1-k+k+1)}{(k+1) !(n-1-k) !}=\frac{(n-1) ! \cdot n}{(k+1) !(n-1-k) !} =\frac{n !}{(k+1) !(n-(k + 1)) !}=\binom{n}{k + 1}$
 
 ## Lem
 

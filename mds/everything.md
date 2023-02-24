@@ -3527,7 +3527,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Hp**
   - $n, k \in \mathbb{N}$
 - **Th**
-  - $\displaystyle \binom{n}{k + 1} = \binom{n - 1}{k + 1} \binom{n - 1}{ k}$
+  - $\displaystyle \binom{n}{k + 1} = \binom{n - 1}{k + 1}+ \binom{n - 1}{ k}$
 
 ## Teorema 193
 
