@@ -942,6 +942,7 @@ class="math inline">\bot</span></li>
 </ul></li>
 <li><em>seconda implicazione</em>
 <ul>
+<li>⚠️ <strong>da riscrivere non mi piace ed è imprecisa</strong></li>
 <li>per assurdo, siano <span class="math inline">w_1, \ldots, w_n</span>
 generatori di <span class="math inline">W</span> ma non linearmente
 indipendenti <span class="math inline">\implies \exists \lambda_1,
@@ -963,7 +964,7 @@ class="math inline">\textrm{span}(w_1, \ldots, \hat{w_i}, \ldots, w_n)
 \subseteq \textrm{span}(w_1, \ldots, w_n)</span></li>
 <li>allora segue che <span class="math inline">\textrm{span}(w_1,
 \ldots, \hat{w_i}, \ldots, w_n) = \textrm{span}(w_1, \ldots,
-w_n)</span>, ma questo non è possibile in queanto <span
+w_n)</span>, ma questo non è possibile in quanto <span
 class="math inline">w_1, \ldots, \hat{w_i}, \ldots, w_n</span> sono
 <span class="math inline">n - 1</span> generatori, e i generatori non
 possono essere meno di <span class="math inline">n \ \bot</span></li>
@@ -1030,16 +1031,20 @@ class="math inline">U</span></li>
 class="math inline">V</span></li>
 <li><span class="math inline">\mathcal{B}_1 \cup \mathcal{B}_2 := \{w_1,
 \ldots w_k, u_{k + 1}, \ldots, u_m, v_{k + 1}, \ldots, v_n\}</span></li>
-<li><span class="math inline">u + v \in U + V \iff \exists u \in U, v
-\in V \mid \left \{ \begin{array}{l}u := \displaystyle \sum_{i =
-1}^k{\lambda_iw_i} + \sum_{j = k + 1}^m{\lambda_j u_j} \\ \displaystyle
-v :=\sum_{i = 1}^k{\mu_iw_i} + \sum_{h = k + 1}^n {\mu_hv_h} \end{array}
-\right.\iff \displaystyle u + v =\sum_{i = 1}^k{(\lambda_i + \mu_i)w_i}
-+ \sum_{j = k + 1}^m{\lambda_j u_j} + \sum_{h = k + 1}^n {\mu_hv_h} \iff
-u + v \in \textrm{span}(\mathcal{B}_1 \cup \mathcal{B}_2)</span></li>
-<li>allora <span class="math inline">U + V = \textrm{span}(\mathcal{B}_1
-\cup \mathcal{B}_2) \implies \mathcal{B}_1 \cup \mathcal{B}_2</span>
-generatori di <span class="math inline">U + V</span></li>
+<li>si noti che <span class="math inline">\textrm{span}(\mathcal{B}_1
+\cup \mathcal{B}_2) \subseteq U + V</span></li>
+<li><span class="math inline">w \in U + V \iff \exists u \in U, v \in V
+\mid w = u + v</span>, allora <span class="math inline">\left \{
+\begin{array}{l}u \in U \implies u := \displaystyle \sum_{i =
+1}^k{\lambda_iw_i} + \sum_{j = k + 1}^m{\lambda_j u_j} \\ v \in V
+\implies \displaystyle v :=\sum_{i = 1}^k{\mu_iw_i} + \sum_{h = k + 1}^n
+{\mu_hv_h} \end{array} \right.\iff \displaystyle w := u + v =\sum_{i =
+1}^k{(\lambda_i + \mu_i)w_i} + \sum_{j = k + 1}^m{\lambda_j u_j} +
+\sum_{h = k + 1}^n {\mu_hv_h} \iff w := u + v \in
+\textrm{span}(\mathcal{B}_1 \cup \mathcal{B}_2) \implies U + V \subseteq
+\textrm{span}(\mathcal{B}_1 \cup \mathcal{B}_2) \implies \mathcal{B}_1
+\cup \mathcal{B}_2</span> generatori di <span class="math inline">U +
+V</span></li>
 <li><span class="math inline">a := \displaystyle \sum_{i =
 1}^k{\lambda_iw_i}</span></li>
 <li><span class="math inline">b := \displaystyle \sum_{j = k +1}^m{\mu_j
@@ -1047,8 +1052,12 @@ u_j } \implies b \in \textrm{span}(u_{k +1 }, \ldots, u_k) \subsetneqq U
 \implies b \in U</span></li>
 <li><span class="math inline">c := \displaystyle \sum_{h = k + 1}
 ^n{\eta_hv_h}</span></li>
-<li>siano i coefficienti tali che <span class="math inline">a + b + c=
-0_W \iff b = - a - c</span></li>
+<li>si noti che <span class="math inline">a + b + c \in U + V =
+\textrm{span}(\mathcal{B}_1 \cup \mathbcal{B}_2)</span> per osservazione
+precedente</li>
+<li><span class="math inline">0_W \in U + V</span>, allora, esisteranno
+dei coefficienti tali che <span class="math inline">a + b + c= 0_W \iff
+b = - a - c</span></li>
 <li><span class="math inline">b \in U</span> per osservazione
 precedente, mentre <span class="math inline">a + c \in V \implies -(a +
 c) \in V \implies b = - a- c \in V \implies b \in U \cap V</span>,
@@ -1067,8 +1076,7 @@ class="math inline">\alpha_i</span> e <span
 class="math inline">\mu_j</span> deve essere necessariamente <span
 class="math inline">0_{\mathbb{K}}</span></li>
 <li>in particolare, si ha che <span class="math inline">\forall j \in [k
-+1, m] \quad \mu_j =0 \implies b = 0_W \implies a + c = 0_W</span>
-<!-- - per ragionamento analogo, sapendo che $c = - a- b$ si otterrà che $c = 0_W$, e dunque $a + b + c = 0_W \iff a = 0_W$ --></li>
++1, m] \quad \mu_j =0 \implies b = 0_W \implies a + c = 0_W</span></li>
 <li>poiché <span class="math inline">a + c = 0_W</span>, e <span
 class="math inline">a + c</span> è combinazione lineare di <span
 class="math inline">\mathcal{B}_2</span>, allora i coefficienti della

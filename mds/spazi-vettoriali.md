@@ -287,10 +287,11 @@
     - _prima implicazione_
         - per assurdo, siano $w_1, \ldots, w_n$ linearmente indipendenti ma non generatori di $W \implies \textrm{span}(w_1, \ldots, w_n) \subsetneqq W \implies \exists w_{n + 1} \in W \mid w_{n + 1} \notin \textrm{span}(w_1, \ldots, w_n)$, ma allora $w_1, \ldots, w_{n + 1}$ linearmente indipendenti, mentre i vettori linearmente indipendenti possono essere al massimo $n$ $\bot$
     - _seconda implicazione_
+        - ⚠️ **da riscrivere non mi piace ed è imprecisa**
         - per assurdo, siano $w_1, \ldots, w_n$ generatori di $W$ ma non linearmente indipendenti $\implies \exists \lambda_1, \ldots, \lambda_n \in \mathbb{K} \mid \lambda_1w_1 + \ldots + \lambda_nw_n = 0_W$ dove $\exists i \in [1, n] \mid \lambda_i \neq 0 \implies w_i = -\lambda_i^{-1} \lambda_1w_1 - \ldots - \lambda_i^{-1} \lambda_nw_n$, dunque $w_i$ è combinazione lineare degli altri vettori, in simboli $w_i \in \textrm{span}(w_1, \ldots, \hat{w_i}, \ldots, w_n)$
         - inoltre $w_i \in \textrm{span}(w_1, \ldots, w_n)$, poiché $w_1, \ldots, w_n$ generatori di $W$, allora $\textrm{span}(w_1, \ldots, w_n) \subseteq \textrm{span}(w_1, \ldots, \hat{w_i}, \ldots, w_n)$
         - in generale, per qualsiasi insieme di vettori minore di $n$ si ha che $\textrm{span}(w_1, \ldots, \hat{w_i}, \ldots, w_n) \subseteq \textrm{span}(w_1, \ldots, w_n)$
-        - allora segue che $\textrm{span}(w_1, \ldots, \hat{w_i}, \ldots, w_n) = \textrm{span}(w_1, \ldots, w_n)$, ma questo non è possibile in queanto $w_1, \ldots, \hat{w_i}, \ldots, w_n$ sono $n - 1$ generatori, e i generatori non possono essere meno di $n \ \bot$
+        - allora segue che $\textrm{span}(w_1, \ldots, \hat{w_i}, \ldots, w_n) = \textrm{span}(w_1, \ldots, w_n)$, ma questo non è possibile in quanto $w_1, \ldots, \hat{w_i}, \ldots, w_n$ sono $n - 1$ generatori, e i generatori non possono essere meno di $n \ \bot$
 
 ## Def
 
@@ -322,16 +323,16 @@
     - $\mathcal{B}_1 := \{w_1, \ldots, w_k, u_{k + 1}, \ldots, u_m\}$ base di $U$
     - $\mathcal{B}_2 := \{w_1, \ldots, w_k, v_{k + 1}, \ldots, v_n\}$ base di $V$
     - $\mathcal{B}_1 \cup \mathcal{B}_2 := \{w_1, \ldots w_k, u_{k + 1}, \ldots, u_m, v_{k + 1}, \ldots, v_n\}$
-    - $u + v \in U + V \iff \exists u \in U, v \in V \mid \left \{ \begin{array}{l}u := \displaystyle \sum_{i = 1}^k{\lambda_iw_i} + \sum_{j = k + 1}^m{\lambda_j u_j} \\ \displaystyle v :=\sum_{i = 1}^k{\mu_iw_i} + \sum_{h = k + 1}^n {\mu_hv_h} \end{array} \right.\iff  \displaystyle u + v =\sum_{i = 1}^k{(\lambda_i + \mu_i)w_i} + \sum_{j = k + 1}^m{\lambda_j u_j} + \sum_{h = k + 1}^n {\mu_hv_h} \iff u + v \in \textrm{span}(\mathcal{B}_1 \cup \mathcal{B}_2)$
-    - allora $U + V = \textrm{span}(\mathcal{B}_1 \cup \mathcal{B}_2) \implies \mathcal{B}_1 \cup \mathcal{B}_2$ generatori di $U + V$
+    - si noti che $\textrm{span}(\mathcal{B}_1 \cup \mathcal{B}_2) \subseteq U + V$
+    - $w \in U + V \iff \exists u \in U, v \in V \mid w = u + v$, allora $\left \{ \begin{array}{l}u \in U \implies u := \displaystyle \sum_{i = 1}^k{\lambda_iw_i} + \sum_{j = k + 1}^m{\lambda_j u_j} \\ v \in V \implies \displaystyle v :=\sum_{i = 1}^k{\mu_iw_i} + \sum_{h = k + 1}^n {\mu_hv_h} \end{array} \right.\iff  \displaystyle w := u + v =\sum_{i = 1}^k{(\lambda_i + \mu_i)w_i} + \sum_{j = k + 1}^m{\lambda_j u_j} + \sum_{h = k + 1}^n {\mu_hv_h} \iff w := u + v \in \textrm{span}(\mathcal{B}_1 \cup \mathcal{B}_2) \implies U + V \subseteq \textrm{span}(\mathcal{B}_1 \cup \mathcal{B}_2) \implies \mathcal{B}_1 \cup \mathcal{B}_2$ generatori di $U + V$
     - $a := \displaystyle \sum_{i = 1}^k{\lambda_iw_i}$
     - $b := \displaystyle \sum_{j = k +1}^m{\mu_j u_j } \implies b \in \textrm{span}(u_{k +1 }, \ldots, u_k) \subsetneqq U \implies b \in U$
     - $c := \displaystyle \sum_{h = k + 1} ^n{\eta_hv_h}$
-    - siano i coefficienti tali che $a + b + c= 0_W \iff b = - a - c$
+    - si noti che $a + b + c \in U + V = \textrm{span}(\mathcal{B}_1 \cup \mathbcal{B}_2)$ per osservazione precedente
+    - $0_W \in U + V$, allora, esisteranno dei coefficienti tali che $a + b + c= 0_W \iff b = - a - c$
     - $b \in U$ per osservazione precedente, mentre $a + c \in V \implies -(a + c) \in V \implies b = - a- c \in V \implies b \in U \cap V$, allora $b$ deve essere generato dalla base $w_1, \ldots, w_k$ di $U \cap V \implies \displaystyle \exists \alpha_1, \ldots, \alpha_k \in \mathbb{K} \mid \sum_{j = k +1}^m{\mu_j u_j }=:b = \displaystyle \sum_{i = 1}^k {\alpha_i w_i} \implies \sum_{j = k +1}^m{\mu_j u_j } - \displaystyle \sum_{i = 1}^k {\alpha_i w_i} = 0_W$
     - poiché per ipotesi $w_1, \ldots, w_k, u_{k +1}, \ldots, u_m$ è una base di $U$, in $U$ tali vettori sono linearmente indipendenti, dunque segue che ogni $\alpha_i$ e $\mu_j$ deve essere necessariamente $0_{\mathbb{K}}$
     - in particolare, si ha che $\forall j \in [k +1, m] \quad \mu_j =0 \implies b = 0_W \implies a + c = 0_W$
-    <!-- - per ragionamento analogo, sapendo che $c = - a- b$ si otterrà che $c = 0_W$, e dunque $a + b + c = 0_W \iff a = 0_W$ -->
     - poiché $a + c = 0_W$, e $a + c$ è combinazione lineare di $\mathcal{B}_2$, allora i coefficienti della combinazione lineare saranno necessariamente nulli
     - dunque, l'equazione di partenza $a + b + c = 0_W$ è verificata solamente per coefficienti della combinazione lineare nulli, il che implica che i vettori che generano $a + b + c$, ovvero $\mathcal{B}_1 \cup \mathcal{B}_2$, sono linearmente indipendenti
     - allora, poiché generatori di $U + V$ e linearmente indipendenti, $\mathcal{B}_1 \cup \mathcal{B}_2$ sono una base di $U + V$
