@@ -1031,6 +1031,9 @@ class="math inline">U</span></li>
 class="math inline">V</span></li>
 <li><span class="math inline">\mathcal{B}_1 \cup \mathcal{B}_2 := \{w_1,
 \ldots w_k, u_{k + 1}, \ldots, u_m, v_{k + 1}, \ldots, v_n\}</span></li>
+<li><span class="math inline">\mathcal{B}_1 \cup \mathcal{B}_2</span>
+generatori di <span class="math inline">U + V</span>
+<ul>
 <li>si noti che <span class="math inline">\textrm{span}(\mathcal{B}_1
 \cup \mathcal{B}_2) \subseteq U + V</span></li>
 <li><span class="math inline">w \in U + V \iff \exists u \in U, v \in V
@@ -1045,54 +1048,55 @@ class="math inline">V</span></li>
 \textrm{span}(\mathcal{B}_1 \cup \mathcal{B}_2) \implies \mathcal{B}_1
 \cup \mathcal{B}_2</span> generatori di <span class="math inline">U +
 V</span></li>
-<li><span class="math inline">a := \displaystyle \sum_{i =
-1}^k{\lambda_iw_i}</span></li>
-<li><span class="math inline">b := \displaystyle \sum_{j = k +1}^m{\mu_j
-u_j } \implies b \in \textrm{span}(u_{k +1 }, \ldots, u_k) \subsetneqq U
-\implies b \in U</span></li>
-<li><span class="math inline">c := \displaystyle \sum_{h = k + 1}
-^n{\eta_hv_h}</span></li>
-<li>si noti che <span class="math inline">a + b + c \in U + V =
-\textrm{span}(\mathcal{B}_1 \cup \mathbcal{B}_2)</span> per osservazione
-precedente</li>
-<li><span class="math inline">0_W \in U + V</span>, allora, esisteranno
-dei coefficienti tali che <span class="math inline">a + b + c= 0_W \iff
-b = - a - c</span></li>
-<li><span class="math inline">b \in U</span> per osservazione
-precedente, mentre <span class="math inline">a + c \in V \implies -(a +
-c) \in V \implies b = - a- c \in V \implies b \in U \cap V</span>,
-allora <span class="math inline">b</span> deve essere generato dalla
-base <span class="math inline">w_1, \ldots, w_k</span> di <span
+</ul></li>
+<li><span class="math inline">\mathcal{B}_1 \cup \mathcal{B}_2</span>
+linearmente indipendenti
+<ul>
+<li><span class="math inline">\mathcal{B}_1 \cup \mathcal{B}_2</span>
+generatori di <span class="math inline">U + V \implies \exists
+\lambda_1, \ldots, \lambda_k, \mu_{k + 1}, \ldots, \mu_m, \eta_{k + 1},
+\ldots, \eta_n \in \mathbb{K} \mid \displaystyle \sum_{i =
+1}^k{\lambda_iw_i} +\sum_{j = k +1}^m{\mu_j u_j } +\displaystyle \sum_{h
+= k + 1} ^n{\eta_hv_h} = 0_W \in U + V</span></li>
+<li>siano <span class="math inline">\left \{ \begin{array}{l}a :=
+\displaystyle \sum_{i = 1}^k{\lambda_iw_i} \\ b := \displaystyle \sum_{j
+= k +1}^m{\mu_j u_j }\\ c := \displaystyle \sum_{h = k + 1}
+^n{\eta_hv_h} \end{array} \right.</span></li>
+<li><span class="math inline">\left \{ \begin{array}{l}b \in
+\textrm{span}(u_{k +1 }, \ldots, u_m) \subsetneqq U \implies b \in U \\
+a + c \in V \implies -(a + c) \in V \implies b = - a- c \in V
+\end{array} \right. \implies b \in U \cap V</span>, allora <span
+class="math inline">b</span> deve essere generato dalla base <span
+class="math inline">w_1, \ldots, w_k</span> di <span
 class="math inline">U \cap V \implies \displaystyle \exists \alpha_1,
 \ldots, \alpha_k \in \mathbb{K} \mid \sum_{j = k +1}^m{\mu_j u_j }=:b =
 \displaystyle \sum_{i = 1}^k {\alpha_i w_i} \implies \sum_{j = k
 +1}^m{\mu_j u_j } - \displaystyle \sum_{i = 1}^k {\alpha_i w_i} =
 0_W</span></li>
-<li>poiché per ipotesi <span class="math inline">w_1, \ldots, w_k, u_{k
-+1}, \ldots, u_m</span> è una base di <span
-class="math inline">U</span>, in <span class="math inline">U</span> tali
-vettori sono linearmente indipendenti, dunque segue che ogni <span
-class="math inline">\alpha_i</span> e <span
-class="math inline">\mu_j</span> deve essere necessariamente <span
-class="math inline">0_{\mathbb{K}}</span></li>
+<li>si noti che <span class="math inline">\displaystyle \sum_{j = k
++1}^m{\mu_j u_j } - \sum_{i = 1}^k {\alpha_i w_i} \in
+\textrm{span}(\mathcal{B}_1) \implies \sum_{j = k +1}^m{\mu_j u_j } -
+\sum_{i = 1}^k {\alpha_i w_i}= 0_W \iff \mu_{k + 1} = \ldots \mu_m =
+0_{\mathbb{K}}=\alpha_1 = \ldots = \alpha_k</span></li>
 <li>in particolare, si ha che <span class="math inline">\forall j \in [k
 +1, m] \quad \mu_j =0 \implies b = 0_W \implies a + c = 0_W</span></li>
-<li>poiché <span class="math inline">a + c = 0_W</span>, e <span
-class="math inline">a + c</span> è combinazione lineare di <span
-class="math inline">\mathcal{B}_2</span>, allora i coefficienti della
-combinazione lineare saranno necessariamente nulli</li>
+<li><span class="math inline">\left \{ \begin{array}{l}a + c = 0_W \\ a
++ c \in \textrm{span}(\mathcal{B}_2)=V \end{array} \right.\implies
+\lambda_1 = \ldots = \lambda_k = 0_{\mathbb{K}}=\eta_{k + 1} = \ldots =
+\eta_n</span></li>
 <li>dunque, l’equazione di partenza <span class="math inline">a + b + c
 = 0_W</span> è verificata solamente per coefficienti della combinazione
 lineare nulli, il che implica che i vettori che generano <span
 class="math inline">a + b + c</span>, ovvero <span
 class="math inline">\mathcal{B}_1 \cup \mathcal{B}_2</span>, sono
 linearmente indipendenti</li>
+</ul></li>
 <li>allora, poiché generatori di <span class="math inline">U + V</span>
 e linearmente indipendenti, <span class="math inline">\mathcal{B}_1 \cup
 \mathcal{B}_2</span> sono una base di <span class="math inline">U +
 V</span></li>
 <li>per definizione, la dimensione di uno spazio vettoriale è la
-cardinalità di una delle sue basi, e dunque la cardinalità di <span
+cardinalità delle sue basi, dunque la cardinalità di <span
 class="math inline">\mathcal{B}_1 \cup \mathcal{B}_2</span> è pari a
 <span class="math inline">k + (m - k) + (n - k) = m + n - k \implies
 \dim(U + V) = \dim(U) + \dim(V) - \dim(U \cap V)</span></li>
@@ -1161,9 +1165,10 @@ w_k, v_{k +1}, \ldots, v_n) \quad \exists \lambda_1, \ldots, \lambda_n
 \in V/W \quad [v] = \lambda_1 [w_1] + \ldots + \lambda_n[w_k] +
 \lambda_{k +1} [v_{k +1 }] + \lambda_n[v_n]</span></li>
 <li>per dimostrazione precedente <span class="math inline">W = [0_V] \in
-V/W \implies [w_1] = \ldots = [w_k] = 0_V \implies [v] = \lambda_{k
-+1}[v_{k +1}] + \ldots + \lambda_n[v_n] \implies [v_{k +1}], \ldots,
-[v_n]</span> generatori di <span class="math inline">V/W</span></li>
+V/W \implies w_1, \ldots, w_k \in W = [0_V] \implies [w_1] = \ldots =
+[w_k] = [0_V] \implies [v] = \lambda_{k +1}[v_{k +1}] + \ldots +
+\lambda_n[v_n] \implies [v_{k +1}], \ldots, [v_n]</span> generatori di
+<span class="math inline">V/W</span></li>
 <li><span class="math inline">[v_{k +1}], \ldots, [v_n]</span>
 generatori di <span class="math inline">V/W</span>, in particolare
 implica che <span class="math inline">\exists \lambda_{k +1}, \ldots,

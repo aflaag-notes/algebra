@@ -1,8 +1,7 @@
 # Teorema fondamentale dell'algebra
 
 - **Hp**
-  - $\mathbb{K}$ campo
-  - $p(x) \in \mathbb{K}[x] \mid p(x) = a_{0}x^0 + \ldots +a_{n} x^{n}$
+  - $p(x) \in \mathbb{C}[x]$
 - **Th**
   - $\exists z \in \mathbb{C} \mid p(z) = 0$
 
