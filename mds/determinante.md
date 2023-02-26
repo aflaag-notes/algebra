@@ -333,7 +333,7 @@
 - **Th**
     - $\nu(\lambda) = n - \textrm{rk}(A - \lambda \cdot I_n)$
 - **Dim**
-    - $\textrm{E}_\lambda(A) := \{v \in \mathbb{K}^n \mid (A - \lambda \cdot I_n) \cdot v = 0\}$ per definizione, allora $\textrm{E}_\lambda(A) = \ker(\mathscr{L}_{A- \lambda \cdot I_n})$
+    - $\textrm{E}_\lambda(A) := \{v \in \mathbb{K}^n \mid (A - \lambda \cdot I_n) \cdot v = 0\} =: \textrm{E}_\lambda(A) = \ker(\mathscr{L}_{A- \lambda \cdot I_n})$
     - allora, per il teorema del rango $\textrm{rk}(\mathscr{L}_{A - \lambda \cdot I_n}) = n - \dim(\ker(\mathscr{L}_{A - \lambda \cdot I_n})) \iff  \dim(\ker(\mathscr{L}_{A - \lambda \cdot I_n})) = n - \textrm{rk}(\mathscr{L}_{A - \lambda \cdot I_n}) = \dim(\textrm{E}_\lambda(A)) =: \nu(\lambda)$
 
 ## Oss

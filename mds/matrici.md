@@ -523,11 +523,9 @@
 - **Dim**
     - si noti che $V \cong \mathbb{K}^n$ per dimostrazione precedente, dunque esiste $\varphi_{\mathcal{B}}$, e analogamente $W \cong \mathbb{K}^m$ implica che esiste $\varphi_{\mathcal{C}}$
     - sia $e_1, \ldots, e_n$ base canonica di $\mathbb{K}^n$
-    - sia $A \in \textrm{Mat}_{m \times n}(\mathbb{K})$
     - $\forall i \in [1, n] \quad \varphi_{\mathcal{B}}(e_i) = 0 \cdot v_1 + \ldots + 1 \cdot v_i + \ldots 0 \cdot v_n = v_i \iff \varphi_{\mathcal{B}}^{-1}(v_i) = e_i$
-    - $\mathscr{L}_A(e_i) = \left(\begin{array}{cccc} a_{1,1} & \ldots & a_{1,n} \\ \vdots & \ddots & \vdots \\ a_{m, 1} & \ldots & a_{m, n}\end{array}\right)\left(\begin{array}{c} 0 \\ \vdots \\ 1 \\ \vdots \\ 0 \end{array}\right) = \left(\begin{array}{c} a_{1, i} \\ \vdots \\ a_{m, i}\end{array}\right) = A^i \in \mathbb{K}^m$
-    - $\varphi_{\mathcal{C}}(A^i)=a_{1, i}w_1+ \ldots + a_{m, i} w_m = w_i$
-    - ⚠️ **da completare**
+    - $\forall A \in \textrm{Mat}_{m \times n}(\mathbb{K}) \quad \mathscr{L}_A(e_i) = \left(\begin{array}{cccc} a_{1,1} & \ldots & a_{1,n} \\ \vdots & \ddots & \vdots \\ a_{m, 1} & \ldots & a_{m, n}\end{array}\right)\left(\begin{array}{c} 0 \\ \vdots \\ 1 \\ \vdots \\ 0 \end{array}\right) = \left(\begin{array}{c} a_{1, i} \\ \vdots \\ a_{m, i}\end{array}\right) = A^i \in \mathbb{K}^m$
+    - allora è sufficiente prendere $A \in \textrm{Mat}_{m \times n}(\mathbb{K}) \mid \varphi_{\mathcal{C}}(A^i)=a_{1, i}w_1+ \ldots + a_{m, i} w_m = w_i$
 
 ## Def
 
