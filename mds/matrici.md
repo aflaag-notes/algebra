@@ -516,8 +516,8 @@
     - $\mathcal{B}=\{v_1, \ldots, v_n\}$ base di $V$
     - $\mathcal{C}=\{w_1, \ldots, w_m\}$ base di $W$
     - $f: V \rightarrow W$ trasformazione lineare
-    - $\varphi_\mathcal{B}: \mathbb{K}^n \rightarrow V: (b_1, \ldots, b_n) \rightarrow b_1v_1 + \ldots + b_nv_n$ isomorfismo
-    - $\varphi_\mathcal{C}: \mathbb{K}^m \rightarrow W: (c_1, \ldots, c_m) \rightarrow c_1w_1 + \ldots + c_mw_m$ isomorfismo
+    - $\varphi_\mathcal{B}: \mathbb{K}^n \rightarrow V: (b_1, \ldots, b_n) \rightarrow b_1v_1 + \ldots + b_nv_n$ trasformazione lineare biettiva
+    - $\varphi_\mathcal{C}: \mathbb{K}^m \rightarrow W: (c_1, \ldots, c_m) \rightarrow c_1w_1 + \ldots + c_mw_m$ trasformazione lineare biettiva
 - **Th**
     - $\exists !A \in \textrm{Mat}_{m \times n}(\mathbb{K}) \mid f = \varphi_\mathcal{C}\cdot \mathscr{L}_A \cdot \varphi_\mathcal{B}^{-1}$, e prende il nome di _matrice di $f$_
 - **Dim**
