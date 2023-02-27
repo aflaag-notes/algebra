@@ -3616,12 +3616,16 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 - **Alg**
     - $r_0:=b$
     - $r_1:=a$
-    - $r_i = r_0q_0 + r_1$
-    - $\texttt{while} \ r_i \neq 0 \texttt{:}$
-        - $r_{i + 1} = r_{i - 1}q_{i - 1} + r_i$
+    - $r_{i - 1} := r_1$
+    - $r_i :\equiv r_0 \ (\bmod \ r_1)$
+    - $r_{i + 1} :\equiv r_{i - 1} \ (\bmod \ r_i)$
+    - $\texttt{while} \ r_{i + 1} \neq 0 \texttt{:}$
+        - $r_{i - 1} := r_i$
         - $r_i := r_{i + 1}$
+        - $r_{i + 1} \equiv r_{i - 1} \ (\bmod \ r_i)$
     - $\texttt{return} \ r_i$
 - **Th**
+    - siano $i \in [0, n + 1]$ le iterazioni dell'algoritmo, dove $r_{n + 1} = 0$
     - $r_n = d$
 
 ****

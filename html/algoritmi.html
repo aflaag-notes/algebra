@@ -222,50 +222,55 @@ b</span></li>
 <ul>
 <li><span class="math inline">r_0:=b</span></li>
 <li><span class="math inline">r_1:=a</span></li>
-<li><span class="math inline">r_i = r_0q_0 + r_1</span></li>
-<li><span class="math inline">\texttt{while} \ r_i \neq 0
+<li><span class="math inline">r_{i - 1} := r_1</span></li>
+<li><span class="math inline">r_i :\equiv r_0 \ (\bmod \
+r_1)</span></li>
+<li><span class="math inline">r_{i + 1} :\equiv r_{i - 1} \ (\bmod \
+r_i)</span></li>
+<li><span class="math inline">\texttt{while} \ r_{i + 1} \neq 0
 \texttt{:}</span>
 <ul>
-<li><span class="math inline">r_{i + 1} = r_{i - 1}q_{i - 1} +
-r_i</span></li>
+<li><span class="math inline">r_{i - 1} := r_i</span></li>
 <li><span class="math inline">r_i := r_{i + 1}</span></li>
+<li><span class="math inline">r_{i + 1} \equiv r_{i - 1} \ (\bmod \
+r_i)</span></li>
 </ul></li>
 <li><span class="math inline">\texttt{return} \ r_i</span></li>
 </ul></li>
 <li><strong>Th</strong>
 <ul>
+<li>siano <span class="math inline">i \in [0, n + 1]</span> le
+iterazioni dell’algoritmo, dove <span class="math inline">r_{n + 1} =
+0</span></li>
 <li><span class="math inline">r_n = d</span></li>
 </ul></li>
 <li><strong>Dim</strong>
 <ul>
-<li>siano <span class="math inline">i \in [0, n + 1]</span> le
-iterazioni dell’algoritmo, dove <span class="math inline">r_{n + 1} =
-0</span></li>
+<li>si noti che, per dimostrazione precedente, <span
+class="math inline">I(a, b) = I(d)</span></li>
 <li><span class="math inline">d \mid r_n</span>
 <ul>
 <li><em>caso base</em>
 <ul>
-<li>si noti che, per dimostrazione precedente, <span
-class="math inline">I(a, b) = I(d)</span></li>
 <li><span class="math inline">r_0:= b \in I(a,b)</span></li>
 <li><span class="math inline">r_1:=a \in I(a,b)</span></li>
 <li><span class="math inline">r_2 \equiv r_0 \ (\bmod \ r_1) \iff
-\exists q_1 \in \mathbb{Z} \mid r_0 = r_1q_1 + r_2 \iff r_2 = r_0 -
-r_1q_1 = b - aq_1 \in I(a,b) = I(d)</span></li>
+\exists q_1 \in \mathbb{Z} \mid r_2 = r_1q_1 + r_0 \in I(a,b) =
+I(d)</span></li>
 </ul></li>
 <li><em>ipotesi induttiva forte</em>
 <ul>
-<li><span class="math inline">\forall i \in [0, n] \quad r_i \in I(a,b)
-= I(d)</span></li>
+<li><span class="math inline">\forall i \in [0, n] \quad r_i \in
+I(a,b)=I(d)</span></li>
 </ul></li>
 <li><em>passo induttivo</em>
 <ul>
 <li><span class="math inline">r_{i + 1} \equiv r_{i - 1} \ (\bmod \ r_i)
-\iff \exists q_i \in \mathbb{Z} \mid r_{i - 1} = r_iq_i + r_{i + 1} \iff
-r_{i + 1} = r_{i - 1} - r_iq_i</span></li>
+\iff \exists q_i \in \mathbb{Z} \mid r_{i + 1} = r_iq_i + r_{i -
+1}</span></li>
 <li><span class="math inline">r_{i - 1}, r_i \in I(a, b) = I(d)</span>
-per ipotesi induttiva forte <span class="math inline">\implies r_{i - 1}
-- r_iq_i \in I(a, b) = I(d)</span></li>
+per ipotesi induttiva forte <span class="math inline">\implies r_iq_i +
+r_{i - 1}\in I(a, b) = I(d)</span></li>
 </ul></li>
 <li>in particolare, si ha che <span class="math inline">r_n \in I(a,b) =
 I(d) \iff \exists p \in \mathbb{Z} \mid dp = r_n \iff d \mid
@@ -283,18 +288,19 @@ r_{n - 2} \iff r_{n - 2} = r_n - r_{n - 1}q_{n - 1} \in I(r_n, r_{n -
 1})</span></li>
 <li>per dimostrazione precedente <span class="math inline">r_n \mid r_n
 \land r_n \mid r_{n - 1} \implies \forall z \in I(r_n, r_{n - 1}) \quad
-r_n \mid z</span>, e in particolare <span class="math inline">r_2 \in
-I(r_n, r_{n - 1}) \implies r_n \mid r_{n-2}</span></li>
+r_n \mid z</span>, e in particolare <span class="math inline">r_{n - 2}
+\in I(r_n, r_{n - 1}) \implies r_n \mid r_{n-2}</span></li>
 <li>è possibile riptere il ragionamento analogo ottenendo <span
 class="math inline">\left \{ \begin{array}{c} r_n \mid r_n \land r_n
 \mid r_{n - 1} \implies r_n \mid r_{n -2} \\ r_n \mid r_{n - 1} \land
 r_n \mid r_{n - 2} \implies r_n \mid r_{n - 3} \\ \vdots \\ r_n \mid
 r_{n - i} \land r_i \mid r_{n - (i + 1)} \implies r_n \mid r_{n - (i +
-2)} \\ \vdots \\ r_n \mid r_2 \land r_n \mid r_1 \implies r_n \mid r_0
+2)} \\ \vdots \\ r_n \mid r_3 \land r_n \mid r_2 \implies r_n \mid r_1
+=: a \\ r_n \mid r_2 \land r_n \mid r_1 \implies r_n \mid r_0 =: b
 \end{array} \right.</span></li>
-<li><span class="math inline">d := \textrm{MCD}(a,b) \implies d \mid a
-\land d \mid b</span>, e poiché <span class="math inline">r_n \mid r_0
-=: b \land r_n \mid r_1 =: a \implies r_n \mid d</span></li>
+<li>in particolare <span class="math inline">\left \{
+\begin{array}{l}r_n \mid r_0 =: b \\ r_n \mid r_1 =: a \end{array}
+\right. \implies r_n \mid d := \textrm{MCD}(a,b)</span></li>
 </ul></li>
 <li><span class="math inline">d \mid r_n \land r_n \mid d \implies r_n =
 d</span></li>

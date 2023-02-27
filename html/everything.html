@@ -5689,18 +5689,26 @@ b</span></li>
 <ul>
 <li><span class="math inline">r_0:=b</span></li>
 <li><span class="math inline">r_1:=a</span></li>
-<li><span class="math inline">r_i = r_0q_0 + r_1</span></li>
-<li><span class="math inline">\texttt{while} \ r_i \neq 0
+<li><span class="math inline">r_{i - 1} := r_1</span></li>
+<li><span class="math inline">r_i :\equiv r_0 \ (\bmod \
+r_1)</span></li>
+<li><span class="math inline">r_{i + 1} :\equiv r_{i - 1} \ (\bmod \
+r_i)</span></li>
+<li><span class="math inline">\texttt{while} \ r_{i + 1} \neq 0
 \texttt{:}</span>
 <ul>
-<li><span class="math inline">r_{i + 1} = r_{i - 1}q_{i - 1} +
-r_i</span></li>
+<li><span class="math inline">r_{i - 1} := r_i</span></li>
 <li><span class="math inline">r_i := r_{i + 1}</span></li>
+<li><span class="math inline">r_{i + 1} \equiv r_{i - 1} \ (\bmod \
+r_i)</span></li>
 </ul></li>
 <li><span class="math inline">\texttt{return} \ r_i</span></li>
 </ul></li>
 <li><strong>Th</strong>
 <ul>
+<li>siano <span class="math inline">i \in [0, n + 1]</span> le
+iterazioni dell’algoritmo, dove <span class="math inline">r_{n + 1} =
+0</span></li>
 <li><span class="math inline">r_n = d</span></li>
 </ul></li>
 </ul>
