@@ -21,7 +21,12 @@ for file in os.listdir("mds"):
         #     content = re.sub("\\\\lt", "<", content)
         #     content = re.sub("\\\\gt", ">", content)
 
-        title = content.split("\n")[0] if name_no_ext != "teoremi-fondamentali" else "  Teoremi fondamentali"
+        if name_no_ext == "teoremi-fondamentali":
+            title = "  Teoremi fondamentali"
+        elif name_no_ext == "algoritmi":
+            title = "  Algoritmi"
+        else:
+            title = content.split("\n")[0]
 
     with open("temp/" + name_no_ext + ".md", "w") as NF:
         NF.write(content)
