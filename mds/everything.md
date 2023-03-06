@@ -931,10 +931,10 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 - **Hp**
-    - $(A, +, \cdot)$ anello
+    - $(A, +, \cdot)$ anello commutativo
     - $I \subset A$ ideale
 - **Th**
-    - $(A/I, +, \cdot)$ è anello
+    - $(A/I, +, \cdot)$ è anello commutativo
 
 
 ****

@@ -323,10 +323,10 @@
 ## Oss
 
 - **Hp**
-    - $(A, +, \cdot)$ anello
+    - $(A, +, \cdot)$ anello commutativo
     - $I \subset A$ ideale
 - **Th**
-    - $(A/I, +, \cdot)$ è anello
+    - $(A/I, +, \cdot)$ è anello commutativo
 - **Dim**
     - $+$ è ben definita per dimostrazione precedente, poiché $(I, +) \leqslant (A, +)$ gruppo abeliano per definizione di $I$
     - $\cdot$ ben definita $\iff\left.\forall x, x^{\prime}, y, y' \in A \quad \begin{array}{l}{[x]=\left[x^{\prime}\right]} \\ {[y]=\left[y^{\prime}\right]}\end{array}\right\} \implies[xy]=\left[x^{\prime}y' \right]$
