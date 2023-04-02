@@ -119,8 +119,7 @@
 - **Th**
   - $f$ morfismo di anelli tra $\left(\mathbb{Z},+, \cdot\right)$ e $\left(\mathbb{Z}_{n},+, \cdot\right)$
 - **Dim**
-  - per come le operazioni $+$ e $\cdot$ sono state definite, $f([x+y])=f([x])+f([y])$ e
-$f([x \cdot y])=f([x]) \cdot f([y]) \iff f$ morfismo
+  - poiché $+$ e $\cdot$ sono ben definite, si ha che $[x + y] = f(x+y)=f(x)+f(y) = [x] + [y]$ e $[x \cdot y] = f(x \cdot y)=f(x) \cdot f(y) = [x] \cdot [y]$, e dunque $f$ morfismo
 
 ## Ex
 
