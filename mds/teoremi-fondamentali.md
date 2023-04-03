@@ -20,13 +20,13 @@
         - allora esiste $r:=\min(\{a \in [m]_n \mid a \ge 0 \})$ per il principio del minimo numero
         - in particolare, per definizione $r \ge 0$
         - per assurdo $r \ge n \implies r - n \ge 0$
-        - $r \in [m]_n \implies \exists q \in \mathbb{Z} \mid r = m - nq \implies r - n = (m - nq) - n = m - nq - n = m - n (q + 1) \in [m]_n$ per definizione, e in particolare $r - n \in [m]_n$
+        - $r \in [m]_n \implies \exists q \in \mathbb{Z} \mid r = m - nq \implies r - n = (m - nq) - n = m - nq - n = m - n (q + 1) \in [m]_n$ per definizione
         - $n \neq 0 \implies r - n \lt r \implies r$ non è il minimo in $[m]_n \ \bot$
     - _unicità_
         - per assurdo $\exists q_1, q_2, r_1, r_2 \in \mathbb{Z} \mid \left \{ \begin{array}{l} m = nq_1 + r_1 & 0 \le r_1 \lt n \\ m = nq_2 + r_2 & 0 \le r_2 \lt n\end{array}\right.$
         - allora $nq_1 + r_1 = m = nq_2 + r_2 \iff n(q_1 - q_2) = r_2 - r_1 \implies n \mid r_2 - r_1$
         - $0 \le r_1, r_2 \lt n \implies -n \lt r_2 - r_1 \lt n$, e in particolare $r_2 - r_1 \neq \pm n$, allora poiché $n \mid r_2 - r_1$ necessariamente $r_2 - r_1 = 0$
-        - $n = 0 \implies nq_1 + r_1 = n q_2 + r_2 \iff r_1 = r_2$, e dagli stessi calcoli segue che $q_1 = q_2$
+        - $n = 0 \implies nq_1 + r_1 = n q_2 + r_2 \iff r_1 = r_2$, e dagli stessi calcoli segue che $q_1 = q_2$, poiché $\mathbb{Z}$ è un dominio di integrità
 
 ## Oss
 

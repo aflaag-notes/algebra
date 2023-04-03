@@ -139,7 +139,7 @@
 - **Dim**
     - $p(x) = 0 \implies I = \{0\} \implies I = I(0)$, ovvero l'ideale principale generato da $0$
     - sia $p(x) \in I - \{0\} \mid \deg(p(x))$ sia il minore possibile, che esiste per principio del minimo numero
-    - allora $\forall q(x) \in I \mid \deg(q(x)) \lt \deg(p(x)) \implies q(x) \in I(0) \implies q(x) = 0$, dunque $p(x)$ è unico in quanto l'elemento con grado minore in $I - \{0\}$ è unico, non considerando $-p(x)$
+    - allora $\forall q(x) \in I \mid \deg(q(x)) \lt \deg(p(x)) \quad q(x) \in I(0) \implies q(x) = 0$, dunque $p(x)$ è unico in quanto l'elemento con grado minore in $I - \{0\}$ è unico, non considerando $-p(x)$
     - $I = I(p(x)) \iff I \subseteq I(p(x)) \land I(p(x)) \subseteq I$
         - $I \subseteq I(p(x))$
             - per il teorema della divisione con il resto tra polinomi, poiché $p(x) \neq 0$, allora $\forall a(x) \in I \quad \exists ! q(x), r(x) \in \mathbb{K}[x] \mid a(x) = p(x) \cdot q(x) + r(x) \quad \deg(r(x)) \lt \deg(p(x)) \implies r(x) = a(x) - p(x) \cdot q(x)$

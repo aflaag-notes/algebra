@@ -191,8 +191,8 @@
   - $f$ iniettiva $\iff \textrm{ker}(f) = \{1_G\}$
 - **Dim**
   - _prima implicazione_
-    - $\ker(f) \trianglelefteq G \implies 1_G \in \ker(f)$
-    - $f$ iniettiva $\implies \nexists x, y \in G \mid x \neq y \implies f(x) = f(y)$, di conseguenza è unico $1_G \in G \mid f(1_G) = 1_H$, dunque $\textrm{ker}(f)$ conterrà esclusivamente $1_G$
+    - per dimostrazione precedente $f(1_G) = 1_H \implies 1_G \in \ker(f)$
+    - $f$ iniettiva $\implies \forall x, x' \in G \mid x \neq x' \quad f(x) \neq f(x') \implies \forall x \in G - \{1_G\} \quad f(x) \neq 1_H \implies \mathrm{ker}(f)= \{1_G\}$
   - _seconda implicazione_
     - $\forall g, g^\prime \in G \quad f(g) = f(g^\prime) \iff f(g)^{-1} \cdot f(g) = f(g)^{-1} \cdot f(g^\prime) \iff 1_H = f(g^{-1}) \cdot f(g^\prime) = f(g ^{-1} \cdot g^\prime)$
     - $\textrm{ker}(f) = \{1_G\} \implies f(1_G)=1_H$ solamente per $1_G$, allora $f(g^{-1}\cdot g^\prime) = 1_H \implies g^{-1} \cdot g^\prime = 1_G$ necessariamente, e $g^{-1} \cdot g^\prime = 1_G \iff g= g^\prime \implies f$ iniettiva
