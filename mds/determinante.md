@@ -8,7 +8,7 @@
 > - $n \in \mathbb{N}$
 > - $V_1, \ldots, V_n, W$ spazi vettoriali su $\mathbb{K}$
 > - $f: V_1 \times \ldots \times V_n \rightarrow W:(v_1, \ldots, v_n) \rightarrow w$
-> - $f$ è detta **multilineare** $\iff \forall i \in [1, n],  v_1 , \ldots, v_n \in V_1 \times \ldots \times V_n, v_i, v_i' \in V_i, \lambda, \mu \in \mathbb{K} \quad f(v_1, \ldots, \lambda v_i+\mu v_i', \ldots, v_n) = \lambda f(v_1, \ldots, v_i, \ldots, v_n) + \mu f(v_1, \ldots, v_i', \ldots, v_k)$
+> - $f$ è detta **multilineare** $\iff \forall i \in [1, n],  v_1 , \ldots, v_n \in V_1 \times \ldots \times V_n, v_i, v_i' \in V_i, \lambda, \mu \in \mathbb{K} \quad f(v_1, \ldots, \lambda v_i+\mu v_i', \ldots, v_n) = \lambda f(v_1, \ldots, v_i, \ldots, v_n) + \mu f(v_1, \ldots, v_i', \ldots, v_n)$
 >   - in particolare, tenendo fisse tutte le variabili tranne la $i$-esima, $f$ è una trasformazione lineare
 
 - **Determinante**
@@ -302,7 +302,7 @@
 > - $n \in \mathbb{N}$
 > - $A \in \textrm{Mat}_{n \times n}(\mathbb{K})$
 > - $\lambda \in \textrm{sp}(A)$
-> - $\mu(\lambda) := \max(\{\varepsilon \in \mathbb{N} : (x - \lambda)^\varepsilon \mid p_A(x)\})$ è detta **molteplicità algebrica di $\lambda$**
+> - $\mu(\lambda) := \underset{\varepsilon \in \mathbb{N}}{\operatorname{argmax}} \ (x - \lambda)^\varepsilon \mid p_A(x)$ è detta **molteplicità algebrica di $\lambda$**
 
 - **Molteplicità geometrica di un autovalore**
 

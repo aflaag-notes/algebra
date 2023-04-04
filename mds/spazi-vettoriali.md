@@ -344,7 +344,7 @@
     - $V$ spazio vettoriale su $\mathbb{K}$
     - $W \subset V$ sottospazio vettoriale
 - **Th**
-    - $V/W$ sottospazio vettoriale
+    - $V/W$ spazio vettoriale su $\mathbb{K}$
 - **Dim**
     - $+$ è ben definito per dimostrazione analoga a dimostrazioe precedente
     - è necessario dimostrare che $\cdot: \mathbb{K} \times V/W \rightarrow V/W$ è ben definito, allora $\forall [v], [w] \quad [v] = [w] \iff w - v \in W \implies \forall k \in \mathbb{K} \quad k(w - v) = kw - kv \in W \iff [kw] = [kv]$

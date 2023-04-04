@@ -114,7 +114,7 @@
     - $m,n \in \mathbb{N}$
     - $A \in \textrm{Mat}_{m \times n}(\mathbb{K})$
 - **Th**
-    - $\textrm{rk}(A) =\dim(\textrm{span}(A^1, \ldots, A^n)) = \dim(\textrm{span}(A_1, \ldots, A_n))$
+    - $\textrm{rk}(A) =\dim(\textrm{span}(A^1, \ldots, A^n)) = \dim(\textrm{span}(A_1, \ldots, A_m))$
 - **Dim**
     - per definizione $\textrm{rk}(A) = \textrm{rk}(\mathscr{L}_A)$
     - per dimostrazione precedente $\left \{ \begin{array}{l}\ker(\mathscr{L}_A) = \textrm{span}(A_1, \ldots, A_n)^{\bot} \\ \textrm{im}(\mathscr{L}_A) = \textrm{span}(A^1, \ldots, A^n) \end{array} \right. \implies \left \{ \begin{array}{l} \dim(\ker(\mathscr{L}_A)) = \dim(\textrm{span}(A_1, \ldots, A_m)^\bot) \\ \textrm{rk}(A) := \textrm{rk}(\mathscr{L}_A) := \dim(\textrm{im}(\mathscr{L}_A)) = \dim(\textrm{span}(A^1, \ldots, A^n))\end{array} \right.$
@@ -276,6 +276,7 @@
     - $(\textrm{GL}(n, \mathbb{K}), \cdot)$ gruppo
 - **Dim**
     - $\det(I_n) \neq 0 \implies I_n \in \textrm{GL}(n, \mathbb{K})$
+    - $A, B \in \mathrm{GL}(n, \mathbb{K}) \implies \det(A), \det(B) \neq 0 \implies \det(A) \cdot \det(B) = \det(A \cdot B) \neq 0 \implies AB \in \mathrm{GL}(n, \mathbb{K})$
     - $A \in \textrm{GL}(n, \mathbb{K}) \implies \det(A) \neq 0 \implies \det(A)^{-1} \neq 0$, e per il corollario del teorema di Binet $0 \neq \det(A)^{-1} = \det(A^{-1}) \implies A^{-1} \in \textrm{GL}(n, \mathbb{K})$
 
 ## Oss
