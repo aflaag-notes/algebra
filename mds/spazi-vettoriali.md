@@ -132,8 +132,8 @@
     - _prima implicazione_
         - _omessa dal professore_
     - _seconda implicazione_
-        - per assurdo $\exists \lambda_n \in \mathbb{K} - \{0\}, \lambda_1, \ldots, \lambda_{n - 1} \in \mathbb{K} \mid \lambda_1 v_1 + \ldots + \lambda_n v_n = 0_V \iff -\lambda_n v_n = \lambda_1 v_1 + \ldots + \lambda_{n-1} v_{n-1} \iff v_n = (-\lambda_n^{-1})\lambda_1 v_1 + \ldots + (-\lambda_n^{-1})\lambda_{n - 1}v_{n - 1} \iff v_n \in \textrm{span}(v_1, \ldots, v_{n - 1}) \ \bot \implies \lambda_n = 0_V$
-        - $v_1, \ldots, v_{n - 1}$ linearmente indipendenti $\implies \exists \lambda_1, \ldots, \lambda_{n-1} \mid \lambda_1 v_1 + \ldots + \lambda_{n - 1} v_{n - 1} = 0_V \implies \lambda_1 = \ldots = \lambda_{n - 1} = 0_V = \lambda_n \implies v_1, \ldots, v_n$ linearmente indipendenti
+        - per assurdo $\exists \lambda_n \in \mathbb{K} - \{0\}, \lambda_1, \ldots, \lambda_{n - 1} \in \mathbb{K} \mid \lambda_1 v_1 + \ldots + \lambda_n v_n = 0_V \iff -\lambda_n v_n = \lambda_1 v_1 + \ldots + \lambda_{n-1} v_{n-1} \iff v_n = (-\lambda_n^{-1})\lambda_1 v_1 + \ldots + (-\lambda_n^{-1})\lambda_{n - 1}v_{n - 1} \iff v_n \in \textrm{span}(v_1, \ldots, v_{n - 1}) \ \bot \implies \lambda_n = 0_{\mathbb{K}}$
+        - $v_1, \ldots, v_{n - 1}$ linearmente indipendenti $\implies \exists \lambda_1, \ldots, \lambda_{n-1} \mid \lambda_1 v_1 + \ldots + \lambda_{n - 1} v_{n - 1} = 0_V \implies \lambda_1 = \ldots = \lambda_{n - 1} = 0_{\mathbb{K}} = \lambda_n \implies v_1, \ldots, v_n$ linearmente indipendenti
 
 ## Oss
 
@@ -255,7 +255,7 @@
     - $k \lt n \implies \textrm{span}(w_1, \ldots, w_k) \subsetneqq W \implies \exists w_{k + 1} \in W \mid w_{k + 1} \notin \textrm{span}(w_1, \ldots, w_k)$, allora per dimostrazione precedente $w_1, \ldots, w_{k +1}$ sono linearmente indipendenti
     - per ragionamento analogo, è possibile estendere $w_1, \ldots, w_{k + 1}$ fino ad avere $w_1, \ldots, w_n$ vettori linearmente indipendenti
     - sia $v_1, \ldots, v_n$ base di $W$
-    - per dimostrazione precedente, poiché $w_1, \ldots, w_n$ e $v_1, \ldots, v_1$ linearmente indipendenti, si ha che $W=\textrm{span}(v_1, \ldots, v_n) = \textrm{span}(w_1, \ldots, w_n) \implies w_1, \ldots, w_n$ base di $W$
+    - per dimostrazione precedente, poiché $w_1, \ldots, w_n$ e $v_1, \ldots, v_n$ linearmente indipendenti, si ha che $W=\textrm{span}(v_1, \ldots, v_n) = \textrm{span}(w_1, \ldots, w_n) \implies w_1, \ldots, w_n$ base di $W$
         - si noti che, per lo stesso teorema, non è possibile avere $w_{n + 1} \in W \mid w_1, \ldots, w_{n +1}$ siano linearmente indipendenti
 
 ## Oss

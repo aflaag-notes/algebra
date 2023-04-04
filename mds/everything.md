@@ -140,7 +140,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 
 - **Hp**
-  - $(A, +, \cdot)$ anello commutativo
+  - $(A, +, \cdot)$ anello
 - **Th**
   - $(A^*, \cdot)$ è un gruppo
 
