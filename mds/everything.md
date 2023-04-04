@@ -3254,7 +3254,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 > - $n \in \mathbb{N}$
 > - $A \in \textrm{Mat}_{n \times n}(\mathbb{K})$
 > - $\lambda \in \textrm{sp}(A)$
-> - $\mu(\lambda) := \underset{\varepsilon \in \mathbb{N}}{\operatorname{argmax}} \ (x - \lambda)^\varepsilon \mid p_A(x)$ è detta **molteplicità algebrica di $\lambda$**
+> - $\mu(\lambda) := \underset{\varepsilon \in \mathbb{N}}{\operatorname{arg\,max}} \ (x - \lambda)^\varepsilon \mid p_A(x)$ è detta **molteplicità algebrica di $\lambda$**
 
 - **Molteplicità geometrica di un autovalore**
 
