@@ -152,8 +152,11 @@
     div.columns{display: flex; gap: min(4vw, 1.5em);}
     div.column{flex: auto; overflow-x: auto;}
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
-    ul.task-list{list-style: none;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
     ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
       width: 0.8em;
       margin: 0 0.8em 0.2em -1.6em;
       vertical-align: middle;
@@ -171,206 +174,208 @@
 <a href="#teoria-dei-gruppi"><h2 id="teoria-dei-gruppi">Teoria dei gruppi</h2></a>
 <ul>
 <li><a
-href="https://ph04.github.io/algebra/html/gruppi-e-anelli.html">Gruppi e
-Anelli</a>
+href="https://ph-notes.github.io/algebra/html/gruppi-e-anelli.html">Gruppi
+e Anelli</a>
 <ul>
 <li><a
-href="https://ph04.github.io/algebra/html/gruppi-e-anelli.html#gruppi-e-anelli">Gruppi
+href="https://ph-notes.github.io/algebra/html/gruppi-e-anelli.html#gruppi-e-anelli">Gruppi
 e Anelli</a></li>
 <li><a
-href="https://ph04.github.io/algebra/html/gruppi-e-anelli.html#sottogruppi">Sottogruppi</a></li>
+href="https://ph-notes.github.io/algebra/html/gruppi-e-anelli.html#sottogruppi">Sottogruppi</a></li>
 <li><a
-href="https://ph04.github.io/algebra/html/gruppi-e-anelli.html#ordine">Ordine</a></li>
+href="https://ph-notes.github.io/algebra/html/gruppi-e-anelli.html#ordine">Ordine</a></li>
 </ul></li>
-<li><a href="https://ph04.github.io/algebra/html/ideali.html">Ideali</a>
+<li><a
+href="https://ph-notes.github.io/algebra/html/ideali.html">Ideali</a>
 <ul>
 <li><a
-href="https://ph04.github.io/algebra/html/ideali.html#ideali">Ideali</a></li>
+href="https://ph-notes.github.io/algebra/html/ideali.html#ideali">Ideali</a></li>
 <li><a
-href="https://ph04.github.io/algebra/html/ideali.html#operazioni-sugli-ideali">Operazioni
+href="https://ph-notes.github.io/algebra/html/ideali.html#operazioni-sugli-ideali">Operazioni
 sugli ideali</a></li>
 </ul></li>
 <li><a
-href="https://ph04.github.io/algebra/html/relazioni.html">Relazioni</a>
+href="https://ph-notes.github.io/algebra/html/relazioni.html">Relazioni</a>
 <ul>
 <li><a
-href="https://ph04.github.io/algebra/html/relazioni.html#relazioni">Relazioni</a></li>
+href="https://ph-notes.github.io/algebra/html/relazioni.html#relazioni">Relazioni</a></li>
 <li><a
-href="https://ph04.github.io/algebra/html/relazioni.html#partizioni">Partizioni</a></li>
+href="https://ph-notes.github.io/algebra/html/relazioni.html#partizioni">Partizioni</a></li>
 <li><a
-href="https://ph04.github.io/algebra/html/relazioni.html#classi-laterali">Classi
+href="https://ph-notes.github.io/algebra/html/relazioni.html#classi-laterali">Classi
 laterali</a></li>
 </ul></li>
 <li><a
-href="https://ph04.github.io/algebra/html/insieme-quoziente.html">Insieme
+href="https://ph-notes.github.io/algebra/html/insieme-quoziente.html">Insieme
 quoziente</a>
 <ul>
 <li><a
-href="https://ph04.github.io/algebra/html/insieme-quoziente.html#insieme-quoziente">Insieme
+href="https://ph-notes.github.io/algebra/html/insieme-quoziente.html#insieme-quoziente">Insieme
 quoziente</a></li>
 <li><a
-href="https://ph04.github.io/algebra/html/insieme-quoziente.html#funzione-totiente-di-eulero">Funzione
+href="https://ph-notes.github.io/algebra/html/insieme-quoziente.html#funzione-totiente-di-eulero">Funzione
 totiente di Eulero</a></li>
 </ul></li>
 <li><a
-href="https://ph04.github.io/algebra/html/permutazioni.html">Permutazioni</a>
+href="https://ph-notes.github.io/algebra/html/permutazioni.html">Permutazioni</a>
 <ul>
 <li><a
-href="https://ph04.github.io/algebra/html/permutazioni.html#permutazioni">Permutazioni</a></li>
+href="https://ph-notes.github.io/algebra/html/permutazioni.html#permutazioni">Permutazioni</a></li>
 <li><a
-href="https://ph04.github.io/algebra/html/permutazioni.html#trasposizioni">Trasposizioni</a></li>
+href="https://ph-notes.github.io/algebra/html/permutazioni.html#trasposizioni">Trasposizioni</a></li>
 <li><a
-href="https://ph04.github.io/algebra/html/permutazioni.html#segno">Segno</a></li>
+href="https://ph-notes.github.io/algebra/html/permutazioni.html#segno">Segno</a></li>
 </ul></li>
 <li><a
-href="https://ph04.github.io/algebra/html/morfismi.html">Morfismi</a>
+href="https://ph-notes.github.io/algebra/html/morfismi.html">Morfismi</a>
 <ul>
 <li><a
-href="https://ph04.github.io/algebra/html/morfismi.html#morfismi">Morfismi</a></li>
+href="https://ph-notes.github.io/algebra/html/morfismi.html#morfismi">Morfismi</a></li>
 <li><a
-href="https://ph04.github.io/algebra/html/morfismi.html#isomorfismi">Isomorfismi</a></li>
+href="https://ph-notes.github.io/algebra/html/morfismi.html#isomorfismi">Isomorfismi</a></li>
 <li><a
-href="https://ph04.github.io/algebra/html/morfismi.html#kernel-e-immagine">Kernel
+href="https://ph-notes.github.io/algebra/html/morfismi.html#kernel-e-immagine">Kernel
 e immagine</a></li>
 </ul></li>
 <li><a
-href="https://ph04.github.io/algebra/html/gruppi-diedrali.html">Gruppi
+href="https://ph-notes.github.io/algebra/html/gruppi-diedrali.html">Gruppi
 diedrali</a></li>
 <li><a
-href="https://ph04.github.io/algebra/html/polinomi.html">Polinomi</a></li>
+href="https://ph-notes.github.io/algebra/html/polinomi.html">Polinomi</a></li>
 </ul>
 <a href="#algebra-lineare"><h2 id="algebra-lineare">Algebra lineare</h2></a>
 <ul>
 <li><a
-href="https://ph04.github.io/algebra/html/spazi-vettoriali.html">Spazi
+href="https://ph-notes.github.io/algebra/html/spazi-vettoriali.html">Spazi
 vettoriali</a>
 <ul>
 <li><a
-href="https://ph04.github.io/algebra/html/spazi-vettoriali.html#spazi-vettoriali">Spazi
+href="https://ph-notes.github.io/algebra/html/spazi-vettoriali.html#spazi-vettoriali">Spazi
 vettoriali</a></li>
 <li><a
-href="https://ph04.github.io/algebra/html/spazi-vettoriali.html#trasformazioni-lineari">Trasformazioni
+href="https://ph-notes.github.io/algebra/html/spazi-vettoriali.html#trasformazioni-lineari">Trasformazioni
 lineari</a></li>
 <li><a
-href="https://ph04.github.io/algebra/html/spazi-vettoriali.html#spazi-affini">Spazi
+href="https://ph-notes.github.io/algebra/html/spazi-vettoriali.html#spazi-affini">Spazi
 affini</a></li>
 <li><a
-href="https://ph04.github.io/algebra/html/spazi-vettoriali.html#interpretazione-geometrica-dei-vettori">Interpretazione
+href="https://ph-notes.github.io/algebra/html/spazi-vettoriali.html#interpretazione-geometrica-dei-vettori">Interpretazione
 geometrica dei vettori</a></li>
 </ul></li>
 <li><a
-href="https://ph04.github.io/algebra/html/matrici.html">Matrici</a>
+href="https://ph-notes.github.io/algebra/html/matrici.html">Matrici</a>
 <ul>
 <li><a
-href="https://ph04.github.io/algebra/html/matrici.html#matrici">Matrici</a></li>
+href="https://ph-notes.github.io/algebra/html/matrici.html#matrici">Matrici</a></li>
 <li><a
-href="https://ph04.github.io/algebra/html/matrici.html#rango">Rango</a></li>
+href="https://ph-notes.github.io/algebra/html/matrici.html#rango">Rango</a></li>
 <li><a
-href="https://ph04.github.io/algebra/html/matrici.html#operazioni-su-righe-e-colonne">Operazioni
+href="https://ph-notes.github.io/algebra/html/matrici.html#operazioni-su-righe-e-colonne">Operazioni
 su righe e colonne</a></li>
 <li><a
-href="https://ph04.github.io/algebra/html/matrici.html#matrici-particolari">Matrici
+href="https://ph-notes.github.io/algebra/html/matrici.html#matrici-particolari">Matrici
 particolari</a></li>
 </ul></li>
 <li><a
-href="https://ph04.github.io/algebra/html/determinante.html">Determinante</a>
+href="https://ph-notes.github.io/algebra/html/determinante.html">Determinante</a>
 <ul>
 <li><a
-href="https://ph04.github.io/algebra/html/determinante.html#determinante">Determinante</a></li>
+href="https://ph-notes.github.io/algebra/html/determinante.html#determinante">Determinante</a></li>
 <li><a
-href="https://ph04.github.io/algebra/html/determinante.html#polinomio-caratteristico">Polinomio
+href="https://ph-notes.github.io/algebra/html/determinante.html#polinomio-caratteristico">Polinomio
 caratteristico</a></li>
 </ul></li>
 </ul>
 <a href="#altro"><h2 id="altro">Altro</h2></a>
 <ul>
 <li><a
-href="https://ph04.github.io/algebra/html/numeri-complessi.html">Numeri
+href="https://ph-notes.github.io/algebra/html/numeri-complessi.html">Numeri
 complessi</a></li>
 <li><a
-href="https://ph04.github.io/algebra/html/coefficienti-binomiali.html">Coefficienti
+href="https://ph-notes.github.io/algebra/html/coefficienti-binomiali.html">Coefficienti
 binomiali</a></li>
 <li><a
-href="https://ph04.github.io/algebra/html/induzione.html">Induzione</a></li>
+href="https://ph-notes.github.io/algebra/html/induzione.html">Induzione</a></li>
 <li><a
-href="https://ph04.github.io/algebra/html/algoritmi.html">Algoritmi</a>
+href="https://ph-notes.github.io/algebra/html/algoritmi.html">Algoritmi</a>
 <ul>
 <li><a
-href="https://ph04.github.io/algebra/html/algoritmi.html#algoritmo-di-euclide">Algoritmo
+href="https://ph-notes.github.io/algebra/html/algoritmi.html#algoritmo-di-euclide">Algoritmo
 di Euclide</a></li>
 <li><a
-href="https://ph04.github.io/algebra/html/algoritmi.html#rsa">RSA</a></li>
+href="https://ph-notes.github.io/algebra/html/algoritmi.html#rsa">RSA</a></li>
 <li><a
-href="https://ph04.github.io/algebra/html/algoritmi.html#interpolazione-di-lagrange">Interpolazione
+href="https://ph-notes.github.io/algebra/html/algoritmi.html#interpolazione-di-lagrange">Interpolazione
 di Lagrange</a></li>
 <li><a
-href="https://ph04.github.io/algebra/html/algoritmi.html#algoritmo-di-gram-schmidt">Algoritmo
+href="https://ph-notes.github.io/algebra/html/algoritmi.html#algoritmo-di-gram-schmidt">Algoritmo
 di Gram-Schmidt</a></li>
 </ul></li>
 </ul>
 <a href="#teoremi-fondamentali"><h2 id="teoremi-fondamentali">Teoremi fondamentali</h2></a>
 <ul>
 <li><a
-href="https://ph04.github.io/algebra/html/teoremi-fondamentali.html">Teoremi
+href="https://ph-notes.github.io/algebra/html/teoremi-fondamentali.html">Teoremi
 fondamentali</a>
 <ul>
 <li><a
-href="https://ph04.github.io/algebra/html/teoremi-fondamentali.html#teorema-fondamentale-dellalgebra">Teorema
+href="https://ph-notes.github.io/algebra/html/teoremi-fondamentali.html#teorema-fondamentale-dellalgebra">Teorema
 fondamentale dell’algebra</a></li>
 <li><a
-href="https://ph04.github.io/algebra/html/teoremi-fondamentali.html#teorema-della-divisione-euclidea-con-il-resto">Teorema
+href="https://ph-notes.github.io/algebra/html/teoremi-fondamentali.html#teorema-della-divisione-euclidea-con-il-resto">Teorema
 della divisione euclidea con il resto</a></li>
 <li><a
-href="https://ph04.github.io/algebra/html/teoremi-fondamentali.html#teorema-di-lagrange">Teorema
+href="https://ph-notes.github.io/algebra/html/teoremi-fondamentali.html#teorema-di-lagrange">Teorema
 di Lagrange</a></li>
 <li><a
-href="https://ph04.github.io/algebra/html/teoremi-fondamentali.html#teorema-fondamentale-dellaritmetica">Teorema
+href="https://ph-notes.github.io/algebra/html/teoremi-fondamentali.html#teorema-fondamentale-dellaritmetica">Teorema
 fondamentale dell’aritmetica</a></li>
 <li><a
-href="https://ph04.github.io/algebra/html/teoremi-fondamentali.html#teorema-cinese-dei-resti">Teorema
+href="https://ph-notes.github.io/algebra/html/teoremi-fondamentali.html#teorema-cinese-dei-resti">Teorema
 cinese dei resti</a></li>
 <li><a
-href="https://ph04.github.io/algebra/html/teoremi-fondamentali.html#teorema-del-binomio-di-newton">Teorema
+href="https://ph-notes.github.io/algebra/html/teoremi-fondamentali.html#teorema-del-binomio-di-newton">Teorema
 del binomio di Newton</a></li>
 <li><a
-href="https://ph04.github.io/algebra/html/teoremi-fondamentali.html#piccolo-teorema-di-fermat">Piccolo
+href="https://ph-notes.github.io/algebra/html/teoremi-fondamentali.html#piccolo-teorema-di-fermat">Piccolo
 teorema di Fermat</a></li>
 <li><a
-href="https://ph04.github.io/algebra/html/teoremi-fondamentali.html#teorema-di-eulero">Teorema
+href="https://ph-notes.github.io/algebra/html/teoremi-fondamentali.html#teorema-di-eulero">Teorema
 di Eulero</a></li>
 <li><a
-href="https://ph04.github.io/algebra/html/teoremi-fondamentali.html#teorema-fondamentale-di-isomorfismo">Teorema
+href="https://ph-notes.github.io/algebra/html/teoremi-fondamentali.html#teorema-fondamentale-di-isomorfismo">Teorema
 fondamentale di isomorfismo</a></li>
 <li><a
-href="https://ph04.github.io/algebra/html/teoremi-fondamentali.html#teorema-di-cauchy">Teorema
+href="https://ph-notes.github.io/algebra/html/teoremi-fondamentali.html#teorema-di-cauchy">Teorema
 di Cauchy</a></li>
 <li><a
-href="https://ph04.github.io/algebra/html/teoremi-fondamentali.html#teorema-di-carnot">Teorema
+href="https://ph-notes.github.io/algebra/html/teoremi-fondamentali.html#teorema-di-carnot">Teorema
 di Carnot</a></li>
 <li><a
-href="https://ph04.github.io/algebra/html/teoremi-fondamentali.html#teorema-del-rango">Teorema
+href="https://ph-notes.github.io/algebra/html/teoremi-fondamentali.html#teorema-del-rango">Teorema
 del rango</a></li>
 <li><a
-href="https://ph04.github.io/algebra/html/teoremi-fondamentali.html#teorema-di-rouché-capelli">Teorema
+href="https://ph-notes.github.io/algebra/html/teoremi-fondamentali.html#teorema-di-rouché-capelli">Teorema
 di Rouché-Capelli</a></li>
 <li><a
-href="https://ph04.github.io/algebra/html/teoremi-fondamentali.html#teorema-di-cramer">Teorema
+href="https://ph-notes.github.io/algebra/html/teoremi-fondamentali.html#teorema-di-cramer">Teorema
 di Cramer</a></li>
 <li><a
-href="https://ph04.github.io/algebra/html/teoremi-fondamentali.html#teorema-di-kronecker">Teorema
+href="https://ph-notes.github.io/algebra/html/teoremi-fondamentali.html#teorema-di-kronecker">Teorema
 di Kronecker</a></li>
 <li><a
-href="https://ph04.github.io/algebra/html/teoremi-fondamentali.html#teorema-di-binet">Teorema
+href="https://ph-notes.github.io/algebra/html/teoremi-fondamentali.html#teorema-di-binet">Teorema
 di Binet</a></li>
 <li><a
-href="https://ph04.github.io/algebra/html/teoremi-fondamentali.html#teorema-spettrale">Teorema
+href="https://ph-notes.github.io/algebra/html/teoremi-fondamentali.html#teorema-spettrale">Teorema
 spettrale</a></li>
 </ul></li>
 </ul>
 <a href="#tutti-i-teoremi"><h2 id="tutti-i-teoremi">Tutti i teoremi</h2></a>
 <ul>
-<li><a href="https://ph04.github.io/algebra/html/everything.html">Tutti
-i teoremi</a></li>
+<li><a
+href="https://ph-notes.github.io/algebra/html/everything.html">Tutti i
+teoremi</a></li>
 </ul>
 </body>
 </html>
