@@ -60,6 +60,10 @@
     img {
       max-width: 100%;
     }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
     h1, h2, h3, h4, h5, h6 {
       margin-top: 1.4em;
     }
@@ -297,7 +301,7 @@ r_n \mid z</span>, e in particolare <span class="math inline">r_{n - 2}
 class="math inline">\left \{ \begin{array}{c} r_n \mid r_n \land r_n
 \mid r_{n - 1} \implies r_n \mid r_{n -2} \\ r_n \mid r_{n - 1} \land
 r_n \mid r_{n - 2} \implies r_n \mid r_{n - 3} \\ \vdots \\ r_n \mid
-r_{n - i} \land r_i \mid r_{n - (i + 1)} \implies r_n \mid r_{n - (i +
+r_{n - i} \land r_n \mid r_{n - (i + 1)} \implies r_n \mid r_{n - (i +
 2)} \\ \vdots \\ r_n \mid r_3 \land r_n \mid r_2 \implies r_n \mid r_1
 =: a \\ r_n \mid r_2 \land r_n \mid r_1 \implies r_n \mid r_0 =: b
 \end{array} \right.</span></li>
