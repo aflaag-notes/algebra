@@ -14,7 +14,7 @@
 > - $f: A \rightarrow B$
 > - $f$ è detto **morfismo di anelli** $\iff$
 >     - $\forall x, y \in A \quad f(x+ y) = f(x) + f(y)$
->     - $\forall x, y, \in A \quad f(x \cdot y) = f(x) \cdot f(y)$
+>     - $\forall x, y \in A \quad f(x \cdot y) = f(x) \cdot f(y)$
 
 ## Oss
 
