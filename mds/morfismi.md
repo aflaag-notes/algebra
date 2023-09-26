@@ -49,7 +49,7 @@
 
 - **Isomorfismo**
 
-> - $f$ è detto **isomorfismo** $\iff f$ morfismo biiettivo
+> - $f$ è detto **isomorfismo** $\iff f$ morfismo biettivo
 
 ## Oss
 
@@ -79,7 +79,7 @@
     - _transitività_: $\forall G, H, K$ gruppi$\quad G \cong H \land H \cong K \implies G \cong K$
         - $G \cong H \implies \exists f: G \rightarrow H$ isomorfismo
         - $H \cong K \implies \exists g: H \rightarrow K$ isomorfismo
-        - $g \circ f: G \rightarrow K$ è ancora biettiva perché composizione di funzioni biiettive
+        - $g \circ f: G \rightarrow K$ è ancora biettiva perché composizione di funzioni biettive
         - $f: x \rightarrow f(x), g: x \rightarrow g(x) \implies g \circ f : x \rightarrow g(f(x)) \implies \forall x, y \in G \quad g(f(x))\cdot g(f(y)) =g(f(x)\cdot f(y)) = g(f(x \cdot y))$ poiché $f$ e $g$ sono isomorfismi, e questo dimostra che $g \circ f$ è un isomorfismo
 
 ## Ex

@@ -1348,7 +1348,7 @@ Questo è un file che contiene una lista di tutti i teoremi, osservazioni, defin
 
 - **Isomorfismo**
 
-> - $f$ è detto **isomorfismo** $\iff f$ morfismo biiettivo
+> - $f$ è detto **isomorfismo** $\iff f$ morfismo biettivo
 
 
 
