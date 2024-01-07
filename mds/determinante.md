@@ -50,7 +50,7 @@
     - $\det(A_1, \ldots, A_i, \ldots, A_j , \ldots, A_n) = -\det(A_1, \ldots, A_j, \ldots, A_i, \ldots, A_n)$
 - **Dim**
     - per il punto 2 della definizione di $\det$ si ha che $\det(A_1, \ldots, A_i + A_j, \ldots, A_j + A_i, \ldots, A_n) = 0$
-    - allora, per multilinearità di $\det$ si ha che $\det$ si ha che $0 =\det(A_1, \ldots, A_i + A_j, \ldots, A_j + A_i, \ldots, A_n) = \det(A_1, \ldots, A_i, \ldots, A_j + A_i, \ldots, A_n) + \det(A_1, \ldots, A_j, \ldots, A_j + A_i, \ldots, A_n) =\det(A_1, \ldots, A_i, \ldots, A_j, \ldots, A_n)+\det(A_1, \ldots, A_i, \ldots, A_i, \ldots, A_n) + \det(A_1, \ldots, A_j, \ldots,A_j, \ldots, A_n) + \det(A_1, \ldots, A_j, \ldots, A_i, \ldots, A_n) = \det(A_1, \ldots, A_i, \ldots, A_j, \ldots, A_n) + 0 + 0 + \det(A_1, \ldots, A_j , \ldots, A_i, \ldots, A_n) \iff \det(A_1, \ldots, A_i, \ldots, A_j, \ldots, A_n) = -\det(A_1,\ldots, A_j, \ldots, A_i, \ldots, A_n)$
+    - allora, per multilinearità di $\det$ si ha che $0 =\det(A_1, \ldots, A_i + A_j, \ldots, A_j + A_i, \ldots, A_n) = \det(A_1, \ldots, A_i, \ldots, A_j + A_i, \ldots, A_n) + \det(A_1, \ldots, A_j, \ldots, A_j + A_i, \ldots, A_n) =\det(A_1, \ldots, A_i, \ldots, A_j, \ldots, A_n)+\det(A_1, \ldots, A_i, \ldots, A_i, \ldots, A_n) + \det(A_1, \ldots, A_j, \ldots,A_j, \ldots, A_n) + \det(A_1, \ldots, A_j, \ldots, A_i, \ldots, A_n) = \det(A_1, \ldots, A_i, \ldots, A_j, \ldots, A_n) + 0 + 0 + \det(A_1, \ldots, A_j , \ldots, A_i, \ldots, A_n) \iff \det(A_1, \ldots, A_i, \ldots, A_j, \ldots, A_n) = -\det(A_1,\ldots, A_j, \ldots, A_i, \ldots, A_n)$
     - si noti che la tesi è verificata sia per righe che per colonne, per definizione di $\det$
 
 ## Oss

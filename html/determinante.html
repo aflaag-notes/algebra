@@ -207,7 +207,7 @@ vettoriali su <span class="math inline">\mathbb{K}</span></li>
 \rightarrow W:(v_1, \ldots, v_n) \rightarrow w</span></li>
 <li><span class="math inline">f</span> è detta
 <strong>multilineare</strong> <span class="math inline">\iff \forall i
-\in [1, n], v_1 , \ldots, v_n \in V_1 \times \ldots \times V_n, v_i,
+\in [1, n],  v_1 , \ldots, v_n \in V_1 \times \ldots \times V_n, v_i,
 v_i&#39; \in V_i, \lambda, \mu \in \mathbb{K} \quad f(v_1, \ldots,
 \lambda v_i+\mu v_i&#39;, \ldots, v_n) = \lambda f(v_1, \ldots, v_i,
 \ldots, v_n) + \mu f(v_1, \ldots, v_i&#39;, \ldots, v_n)</span>
@@ -316,16 +316,16 @@ class="math inline">\det</span> si ha che <span
 class="math inline">\det(A_1, \ldots, A_i + A_j, \ldots, A_j + A_i,
 \ldots, A_n) = 0</span></li>
 <li>allora, per multilinearità di <span class="math inline">\det</span>
-si ha che <span class="math inline">\det</span> si ha che <span
-class="math inline">0 =\det(A_1, \ldots, A_i + A_j, \ldots, A_j + A_i,
-\ldots, A_n) = \det(A_1, \ldots, A_i, \ldots, A_j + A_i, \ldots, A_n) +
-\det(A_1, \ldots, A_j, \ldots, A_j + A_i, \ldots, A_n) =\det(A_1,
-\ldots, A_i, \ldots, A_j, \ldots, A_n)+\det(A_1, \ldots, A_i, \ldots,
-A_i, \ldots, A_n) + \det(A_1, \ldots, A_j, \ldots,A_j, \ldots, A_n) +
-\det(A_1, \ldots, A_j, \ldots, A_i, \ldots, A_n) = \det(A_1, \ldots,
-A_i, \ldots, A_j, \ldots, A_n) + 0 + 0 + \det(A_1, \ldots, A_j , \ldots,
-A_i, \ldots, A_n) \iff \det(A_1, \ldots, A_i, \ldots, A_j, \ldots, A_n)
-= -\det(A_1,\ldots, A_j, \ldots, A_i, \ldots, A_n)</span></li>
+si ha che <span class="math inline">0 =\det(A_1, \ldots, A_i + A_j,
+\ldots, A_j + A_i, \ldots, A_n) = \det(A_1, \ldots, A_i, \ldots, A_j +
+A_i, \ldots, A_n) + \det(A_1, \ldots, A_j, \ldots, A_j + A_i, \ldots,
+A_n) =\det(A_1, \ldots, A_i, \ldots, A_j, \ldots, A_n)+\det(A_1, \ldots,
+A_i, \ldots, A_i, \ldots, A_n) + \det(A_1, \ldots, A_j, \ldots,A_j,
+\ldots, A_n) + \det(A_1, \ldots, A_j, \ldots, A_i, \ldots, A_n) =
+\det(A_1, \ldots, A_i, \ldots, A_j, \ldots, A_n) + 0 + 0 + \det(A_1,
+\ldots, A_j , \ldots, A_i, \ldots, A_n) \iff \det(A_1, \ldots, A_i,
+\ldots, A_j, \ldots, A_n) = -\det(A_1,\ldots, A_j, \ldots, A_i, \ldots,
+A_n)</span></li>
 <li>si noti che la tesi è verificata sia per righe che per colonne, per
 definizione di <span class="math inline">\det</span></li>
 </ul></li>
@@ -549,9 +549,9 @@ class="math inline">\mathbb{K}^n</span></li>
 I_n</span></li>
 <li>allora <span class="math inline">I_n = A \cdot B = (A \cdot B^1,
 \ldots, A \cdot B^n) = (\mathscr{L}_A(B^1), \ldots, \mathscr{L}_A(B^n))
-\iff \left \{ \begin{array}{c} \mathscr{L}_A(B^1) = e_1 \\ \vdots \\
-\mathscr{L}_A(B^n) = e_n \end{array} \right.\iff e_1, \ldots, e_n \in
-\textrm{im}(\mathscr{L}_A) \implies \textrm{span}(e_1, \ldots, e_n)
+\iff \left \{ \begin{array}{c} \mathscr{L}_A(B^1) = e_1 \\  \vdots
+\\  \mathscr{L}_A(B^n) = e_n \end{array} \right.\iff e_1, \ldots, e_n
+\in \textrm{im}(\mathscr{L}_A) \implies \textrm{span}(e_1, \ldots, e_n)
 \subseteq \textrm{im}(\mathscr{L}_A)</span></li>
 <li><span class="math inline">e_1, \ldots, e_n</span> base canonica di
 <span class="math inline">\mathbb{K}^n \implies \dim(\textrm{span}(e_1,
@@ -889,8 +889,8 @@ n}(\mathbb{K})</span></li>
 I_n})</span></li>
 <li>allora, per il teorema del rango <span
 class="math inline">\textrm{rk}(\mathscr{L}_{A - \lambda \cdot I_n}) = n
-- \dim(\ker(\mathscr{L}_{A - \lambda \cdot I_n})) \iff
-\dim(\ker(\mathscr{L}_{A - \lambda \cdot I_n})) = n -
+- \dim(\ker(\mathscr{L}_{A - \lambda \cdot I_n}))
+\iff  \dim(\ker(\mathscr{L}_{A - \lambda \cdot I_n})) = n -
 \textrm{rk}(\mathscr{L}_{A - \lambda \cdot I_n}) =
 \dim(\textrm{E}_\lambda(A)) =: \nu(\lambda)</span></li>
 </ul></li>

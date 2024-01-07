@@ -396,7 +396,7 @@ a_{m,n}\end{array}\right) \left(\begin{array}{c} x_1 \\ \vdots \\ x_n
 \end{array}\right) =\right.</span><span
 class="math inline">\left.\left(\begin{array}{c}a_{1, 1} x_1 + \ldots +
 a_{1,n}x_n \\ \vdots \\ a_{m,1}x_1 + \ldots + a_{m,n} x_n
-\end{array}\right) = x_1 \left(\begin{array}{c}a_{1, 1} \\ \vdots \\
+\end{array}\right) =  x_1 \left(\begin{array}{c}a_{1, 1} \\ \vdots \\
 a_{m, 1}\end{array}\right) + \ldots + x_n \left(\begin{array}{c}a_{1,
 n}\\ \vdots \\ a_{m, n}\end{array}\right) = x_1A^1 + \ldots + x_nA^n
 \right\}=:\textrm{span}(A^1, \ldots, A^n)</span></li>
@@ -1292,7 +1292,7 @@ w_i</span></li>
 <li><span class="math inline">V(b_0, \ldots, b_n) := \left (
 \begin{array}{cccc} b_0^0 &amp; b_0^1 &amp; \cdots &amp; b_0^n \\ b_1^0
 &amp; b_1^1 &amp; \cdots &amp; b_1^n \\ \vdots &amp; \ddots &amp; &amp;
-\vdots \\\vdots &amp; &amp;\ddots &amp; \vdots \\ b_n^0 &amp; b_n^1
+\vdots \\\vdots &amp; &amp;\ddots  &amp; \vdots \\ b_n^0 &amp; b_n^1
 &amp; \cdots &amp; b_n^n\end{array}\right)</span> è detta
 <strong>matrice di Vandermonde a coefficienti <span
 class="math inline">b_0, \ldots, b_n</span></strong></li>
@@ -1317,24 +1317,24 @@ class="math inline">b_0, \ldots, b_n</span></strong></li>
 <li><span class="math inline">\det(V(b_0, \ldots, b_n))=\det\left (
 \begin{array}{cccc} b_0^0 &amp; b_0^1 &amp; \cdots &amp; b_0^n \\ b_1^0
 &amp; b_1^1 &amp; \cdots &amp; b_1^n \\ \vdots &amp; \ddots &amp; &amp;
-\vdots \\\vdots &amp; &amp;\ddots &amp; \vdots \\ b_n^0 &amp; b_n^1
+\vdots \\\vdots &amp; &amp;\ddots  &amp; \vdots \\ b_n^0 &amp; b_n^1
 &amp; \cdots &amp; b_n^n\end{array}\right) = \det\left (
 \begin{array}{cccc} 1 &amp; b_0 &amp; \cdots &amp; b_0^n \\ 1 &amp; b_1
 &amp; \cdots &amp; b_1^n \\ \vdots &amp; \ddots &amp; &amp; \vdots
-\\\vdots &amp; &amp;\ddots &amp; \vdots \\ 1 &amp; b_n &amp; \cdots
+\\\vdots &amp; &amp;\ddots  &amp; \vdots \\ 1 &amp; b_n &amp; \cdots
 &amp; b_n^n\end{array}\right)</span></li>
 <li>sottraendo la prima riga a tutte le altre, si ottiene <span
 class="math inline">\det\left ( \begin{array}{cccc} 1 &amp; b_0 &amp;
 \cdots &amp; b_0^n \\ 0 &amp; b_1 - b_0 &amp; \cdots &amp; b_1^n - b_0^n
-\\ \vdots &amp; \ddots &amp; &amp; \vdots \\\vdots &amp; &amp;\ddots
-&amp; \vdots \\ 0 &amp; b_n - b_0 &amp; \cdots &amp; b_n^n -
-b_0^n\end{array}\right)</span></li>
+\\ \vdots &amp; \ddots &amp; &amp; \vdots \\\vdots &amp;
+&amp;\ddots  &amp; \vdots \\ 0 &amp; b_n - b_0 &amp; \cdots &amp; b_n^n
+- b_0^n\end{array}\right)</span></li>
 <li>eseguendo lo sviluppo di Laplace sulla prima colonna, si ottiene
 <span class="math inline">1 \cdot \det\left ( \begin{array}{cccc} b_1 -
 b_0 &amp; b_1^2 -b_0^2 &amp; \cdots &amp; b_1^n - b_0^n \\ b_2 - b_0
 &amp; b_2^2-b_0^2&amp;\cdots &amp; b_2^n - b_0^n \\ \vdots &amp; \ddots
-&amp; &amp;\vdots \\ \vdots &amp; &amp; \ddots &amp; \vdots \\ b_n - b_0
-&amp; b_n^2-b_0^2 &amp; \cdots &amp; b_n^n -
+&amp; &amp;\vdots \\ \vdots &amp;  &amp; \ddots &amp; \vdots \\  b_n -
+b_0 &amp;  b_n^2-b_0^2 &amp; \cdots &amp; b_n^n -
 b_0^n\end{array}\right)</span></li>
 <li><span class="math inline">\forall i \in [1, n] \quad b_i^n - b_0^n =
 (b_i - b_0)(b_i^{n - 1} + b_i^{n - 2}b_0 + \ldots + b_ib_0^{n - 2} +
@@ -1343,30 +1343,30 @@ b_0^{n - 1})</span></li>
 \begin{array}{cccc} (b_1 - b_0) \cdot 1 &amp; (b_1 -b_0)\cdot(b_1 + b_0)
 &amp; \cdots &amp; (b_1 - b_0)\cdot(b_1^{n - 1} + \ldots + b_0^{ n - 1})
 \\ (b_2 - b_0) \cdot 1 &amp; (b_2 - b_0)\cdot (b_2+b_0)&amp;\cdots &amp;
-(b_2 - b_0)\cdot(b_2^{n -1} + \ldots + b_0^{n - 1}) \\ \vdots &amp;
-\ddots &amp; &amp;\vdots \\ \vdots &amp; &amp; \ddots &amp; \vdots \\
-(b_n - b_0) \cdot 1 &amp; (b_n-b_0)\cdot (b_n + b_0) &amp; \cdots &amp;
-(b_n - b_0) \cdot (b_n^{n -1}+ \ldots + b_0^{n -1})\end{array}\right) =
-(b_n - b_0)\cdot \ldots \cdot(b_1 - b_0) \cdot \det\left (
-\begin{array}{cccc} 1 &amp; b_1 + b_0 &amp; \cdots &amp; b_1^{n - 1} +
-\ldots + b_0^{ n - 1} \\1 &amp; b_2+b_0&amp;\cdots &amp; b_2^{n -1} +
-\ldots + b_0^{n - 1} \\ \vdots &amp; \ddots &amp; &amp;\vdots \\ \vdots
-&amp; &amp; \ddots &amp; \vdots \\ 1 &amp; b_n + b_0 &amp; \cdots &amp;
-b_n^{n -1}+ \ldots + b_0^{n -1}\end{array}\right)</span> per
-multilinearità del determinante</li>
+(b_2 - b_0)\cdot(b_2^{n -1} + \ldots +  b_0^{n - 1}) \\ \vdots &amp;
+\ddots &amp; &amp;\vdots \\ \vdots &amp; &amp; \ddots &amp; \vdots
+\\  (b_n - b_0) \cdot 1 &amp;  (b_n-b_0)\cdot (b_n + b_0) &amp; \cdots
+&amp; (b_n - b_0) \cdot (b_n^{n -1}+ \ldots + b_0^{n
+-1})\end{array}\right) = (b_n - b_0)\cdot \ldots \cdot(b_1 - b_0) \cdot
+\det\left ( \begin{array}{cccc} 1 &amp; b_1 + b_0 &amp; \cdots &amp;
+b_1^{n - 1} + \ldots + b_0^{ n - 1} \\1 &amp; b_2+b_0&amp;\cdots &amp;
+b_2^{n -1} + \ldots +  b_0^{n - 1} \\ \vdots &amp; \ddots &amp;
+&amp;\vdots \\ \vdots &amp; &amp; \ddots &amp; \vdots \\   1 &amp;  b_n
++ b_0 &amp; \cdots &amp; b_n^{n -1}+ \ldots + b_0^{n
+-1}\end{array}\right)</span> per multilinearità del determinante</li>
 <li><span class="math inline">\left( \begin{array}{cccc} 1 &amp; b_1 +
 b_0 &amp; \cdots &amp; b_1^{n - 1} + \ldots + b_0^{ n - 1} \\1 &amp;
-b_2+b_0&amp;\cdots &amp; b_2^{n -1} + \ldots + b_0^{n - 1} \\ \vdots
+b_2+b_0&amp;\cdots &amp; b_2^{n -1} + \ldots +  b_0^{n - 1} \\ \vdots
 &amp; \ddots &amp; &amp;\vdots \\ \vdots &amp; &amp; \ddots &amp; \vdots
-\\ 1 &amp; b_n + b_0 &amp; \cdots &amp; b_n^{n -1}+ \ldots + b_0^{n
+\\   1 &amp;  b_n + b_0 &amp; \cdots &amp; b_n^{n -1}+ \ldots + b_0^{n
 -1}\end{array}\right)\xrightarrow{\left . \begin{subarray}{c}C^2 -= b_0
-\cdot C^1 \\ C^3 -= b_0 \cdot C^1 + b_0 \cdot C^2 \\ \vdots \\ C^n -=
+\cdot C^1 \\ C^3 -= b_0  \cdot C^1 + b_0 \cdot C^2 \\ \vdots \\ C^n -=
 b_0 \cdot C^1 + \ldots + b_0 \cdot C^{n - 1}\end{subarray}\right.} \left
 ( \begin{array}{cccc} 1 &amp; b_1 &amp; \cdots &amp; b_1^{n - 1} \\1
 &amp; b_2 &amp;\cdots &amp; b_2^{n -1} \\ \vdots &amp; \ddots &amp;
-&amp;\vdots \\ \vdots &amp; &amp; \ddots &amp; \vdots \\ 1 &amp; b_n
-&amp; \cdots &amp; b_n^{n -1}\end{array}\right) = V(b_1, \ldots,
-b_n)</span></li>
+&amp;\vdots \\ \vdots &amp; &amp; \ddots &amp; \vdots \\   1
+&amp;  b_n  &amp; \cdots &amp; b_n^{n -1}\end{array}\right) = V(b_1,
+\ldots, b_n)</span></li>
 <li>allora si ha che <span class="math inline">\det(V(b_0, \ldots, b_n))
 = (b_n - b_0) \cdot \ldots \cdot(b_1 - b_0) \cdot \det(V(b_1, \ldots,
 b_n)) = (b_n - b_0) \cdot \ldots \cdot(b_1 - b_0) \cdot (b_n - b_1)
